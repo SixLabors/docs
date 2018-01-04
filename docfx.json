@@ -13,7 +13,64 @@
           ]
         }
       ],
-      "dest": "api",
+      "dest": "api/ImageSharp",
+      "disableGitFeatures": true,
+      "properties": {
+        "TargetFramework": "netstandard2.0"
+      }
+    },
+    {
+      "src": [
+        {
+          "files": [
+            "ext/ImageSharp.Web/src/**.csproj"
+          ],
+          "exclude": [
+            "**/obj/**",
+            "**/bin/**",
+            "docs/**"
+          ]
+        }
+      ],
+      "dest": "api/ImageSharp.Web",
+      "disableGitFeatures": true,
+      "properties": {
+        "TargetFramework": "netstandard2.0"
+      }
+    },
+    {
+      "src": [
+        {
+          "files": [
+            "ext/Fonts/src/**.csproj"
+          ],
+          "exclude": [
+            "**/obj/**",
+            "**/bin/**",
+            "docs/**"
+          ]
+        }
+      ],
+      "dest": "api/Fonts",
+      "disableGitFeatures": true,
+      "properties": {
+        "TargetFramework": "netstandard2.0"
+      }
+    },
+    {
+      "src": [
+        {
+          "files": [
+            "ext/Shapes/src/**.csproj"
+          ],
+          "exclude": [
+            "**/obj/**",
+            "**/bin/**",
+            "docs/**"
+          ]
+        }
+      ],
+      "dest": "api/Shapes",
       "disableGitFeatures": true,
       "properties": {
         "TargetFramework": "netstandard2.0"
@@ -25,7 +82,10 @@
       {
         "files": [
           "api/**.yml",
-          "api/index.md"
+          "api/index.md",
+          "api/**/toc.yml",
+          "api/**/index.md",
+          "api/toc.md"
         ]
       },
       {
@@ -37,7 +97,8 @@
         ],
         "exclude": [
           "obj/**",
-          "docs/**"
+          "docs/**",
+          "README.md"
         ]
       }
     ],

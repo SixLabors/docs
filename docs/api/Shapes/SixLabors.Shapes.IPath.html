@@ -1,0 +1,563 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IPath
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IPath
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="SixLabors.Shapes.IPath">
+  
+  
+  <h1 id="SixLabors_Shapes_IPath" data-uid="SixLabors.Shapes.IPath" class="text-break">Interface IPath
+  </h1>
+  <div class="markdown level0 summary"><p>Represents a logic path that can be drawn</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="SixLabors.Shapes.html">SixLabors.Shapes</a></h6>
+  <h6><strong>Assembly</strong>: SixLabors.Shapes.dll</h6>
+  <h5 id="SixLabors_Shapes_IPath_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IPath</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="SixLabors_Shapes_IPath_Bounds_" data-uid="SixLabors.Shapes.IPath.Bounds*"></a>
+  <h4 id="SixLabors_Shapes_IPath_Bounds" data-uid="SixLabors.Shapes.IPath.Bounds">Bounds</h4>
+  <div class="markdown level1 summary"><p>Gets the bounds enclosing the path</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">RectangleF Bounds { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">RectangleF</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="SixLabors_Shapes_IPath_Length_" data-uid="SixLabors.Shapes.IPath.Length*"></a>
+  <h4 id="SixLabors_Shapes_IPath_Length" data-uid="SixLabors.Shapes.IPath.Length">Length</h4>
+  <div class="markdown level1 summary"><p>Gets the length of the path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">float Length { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="SixLabors_Shapes_IPath_MaxIntersections_" data-uid="SixLabors.Shapes.IPath.MaxIntersections*"></a>
+  <h4 id="SixLabors_Shapes_IPath_MaxIntersections" data-uid="SixLabors.Shapes.IPath.MaxIntersections">MaxIntersections</h4>
+  <div class="markdown level1 summary"><p>Gets the maximum number intersections that a shape can have when testing a line.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int MaxIntersections { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="SixLabors_Shapes_IPath_PathType_" data-uid="SixLabors.Shapes.IPath.PathType*"></a>
+  <h4 id="SixLabors_Shapes_IPath_PathType" data-uid="SixLabors.Shapes.IPath.PathType">PathType</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is closed, open or a composite path with a mixture of open and closed figures.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">PathTypes PathType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Shapes.PathTypes.html">PathTypes</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="SixLabors_Shapes_IPath_AsClosedPath_" data-uid="SixLabors.Shapes.IPath.AsClosedPath*"></a>
+  <h4 id="SixLabors_Shapes_IPath_AsClosedPath" data-uid="SixLabors.Shapes.IPath.AsClosedPath">AsClosedPath()</h4>
+  <div class="markdown level1 summary"><p>Returns this path with all figures closed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IPath AsClosedPath()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Shapes.IPath.html">IPath</a></td>
+        <td><p>Returns the path as a closed path.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="SixLabors_Shapes_IPath_Contains_" data-uid="SixLabors.Shapes.IPath.Contains*"></a>
+  <h4 id="SixLabors_Shapes_IPath_Contains_PointF_" data-uid="SixLabors.Shapes.IPath.Contains(PointF)">Contains(PointF)</h4>
+  <div class="markdown level1 summary"><p>Determines whether the <a class="xref" href="SixLabors.Shapes.IPath.html">IPath</a> contains the specified point</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool Contains(PointF point)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">PointF</span></td>
+        <td><span class="parametername">point</span></td>
+        <td><p>The point.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if the <a class="xref" href="SixLabors.Shapes.IPath.html">IPath</a> contains the specified point; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="SixLabors_Shapes_IPath_Distance_" data-uid="SixLabors.Shapes.IPath.Distance*"></a>
+  <h4 id="SixLabors_Shapes_IPath_Distance_PointF_" data-uid="SixLabors.Shapes.IPath.Distance(PointF)">Distance(PointF)</h4>
+  <div class="markdown level1 summary"><p>Calculates the distance along and away from the path for a specified point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">PointInfo Distance(PointF point)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">PointF</span></td>
+        <td><span class="parametername">point</span></td>
+        <td><p>The point along the path.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Shapes.PointInfo.html">PointInfo</a></td>
+        <td><p>Returns details about the point and its distance away from the path.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="SixLabors_Shapes_IPath_FindIntersections_" data-uid="SixLabors.Shapes.IPath.FindIntersections*"></a>
+  <h4 id="SixLabors_Shapes_IPath_FindIntersections_PointF_PointF_PointF___System_Int32_" data-uid="SixLabors.Shapes.IPath.FindIntersections(PointF,PointF,PointF[],System.Int32)">FindIntersections(PointF, PointF, PointF[], Int32)</h4>
+  <div class="markdown level1 summary"><p>Based on a line described by <code data-dev-comment-type="paramref" class="paramref">start</code> and <code data-dev-comment-type="paramref" class="paramref">end</code>
+populate a buffer for all points on the polygon that the line intersects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int FindIntersections(PointF start, PointF end, PointF[] buffer, int offset)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">PointF</span></td>
+        <td><span class="parametername">start</span></td>
+        <td><p>The start point of the line.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">PointF</span></td>
+        <td><span class="parametername">end</span></td>
+        <td><p>The end point of the line.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">PointF</span>[]</td>
+        <td><span class="parametername">buffer</span></td>
+        <td><p>The buffer that will be populated with intersections.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">offset</span></td>
+        <td><p>The offset within the buffer to start.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The number of intersections populated into the buffer.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="SixLabors_Shapes_IPath_Flatten_" data-uid="SixLabors.Shapes.IPath.Flatten*"></a>
+  <h4 id="SixLabors_Shapes_IPath_Flatten" data-uid="SixLabors.Shapes.IPath.Flatten">Flatten()</h4>
+  <div class="markdown level1 summary"><p>Converts the <a class="xref" href="SixLabors.Shapes.IPath.html">IPath</a> into a simple linear path..</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;ISimplePath&gt; Flatten()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="SixLabors.Shapes.ISimplePath.html">ISimplePath</a>&gt;</td>
+        <td><p>Returns the current <a class="xref" href="SixLabors.Shapes.IPath.html">IPath</a> as simple linear path.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="SixLabors_Shapes_IPath_PointAlongPath_" data-uid="SixLabors.Shapes.IPath.PointAlongPath*"></a>
+  <h4 id="SixLabors_Shapes_IPath_PointAlongPath_System_Single_" data-uid="SixLabors.Shapes.IPath.PointAlongPath(System.Single)">PointAlongPath(Single)</h4>
+  <div class="markdown level1 summary"><p>Calculates the the point a certain distance along a path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">SegmentInfo PointAlongPath(float distanceAlongPath)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">distanceAlongPath</span></td>
+        <td><p>The distance along the path to find details of.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Shapes.SegmentInfo.html">SegmentInfo</a></td>
+        <td><p>Returns details about a point along a path.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="SixLabors_Shapes_IPath_Transform_" data-uid="SixLabors.Shapes.IPath.Transform*"></a>
+  <h4 id="SixLabors_Shapes_IPath_Transform_Matrix3x2_" data-uid="SixLabors.Shapes.IPath.Transform(Matrix3x2)">Transform(Matrix3x2)</h4>
+  <div class="markdown level1 summary"><p>Transforms the path using the specified matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IPath Transform(Matrix3x2 matrix)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Matrix3x2</span></td>
+        <td><span class="parametername">matrix</span></td>
+        <td><p>The matrix.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Shapes.IPath.html">IPath</a></td>
+        <td><p>A new path with the matrix applied to it.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="SixLabors.Shapes.ClipperExtensions.html#SixLabors_Shapes_ClipperExtensions_Clip_SixLabors_Shapes_IPath_IEnumerable_SixLabors_Shapes_IPath__">ClipperExtensions.Clip(IPath, IEnumerable&lt;IPath&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.Shapes.ClipperExtensions.html#SixLabors_Shapes_ClipperExtensions_Clip_SixLabors_Shapes_IPath_SixLabors_Shapes_IPath___">ClipperExtensions.Clip(IPath, IPath[])</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.Shapes.Outliner.html#SixLabors_Shapes_Outliner_GenerateOutline_SixLabors_Shapes_IPath_System_Single_System_Single___">Outliner.GenerateOutline(IPath, Single, Single[])</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.Shapes.Outliner.html#SixLabors_Shapes_Outliner_GenerateOutline_SixLabors_Shapes_IPath_System_Single_System_Single___System_Boolean_">Outliner.GenerateOutline(IPath, Single, Single[], Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.Shapes.Outliner.html#SixLabors_Shapes_Outliner_GenerateOutline_SixLabors_Shapes_IPath_System_Single_">Outliner.GenerateOutline(IPath, Single)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.Shapes.PathExtensions.html#SixLabors_Shapes_PathExtensions_Rotate_SixLabors_Shapes_IPath_System_Single_">PathExtensions.Rotate(IPath, Single)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.Shapes.PathExtensions.html#SixLabors_Shapes_PathExtensions_RotateDegree_SixLabors_Shapes_IPath_System_Single_">PathExtensions.RotateDegree(IPath, Single)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.Shapes.PathExtensions.html#SixLabors_Shapes_PathExtensions_Translate_SixLabors_Shapes_IPath_PointF_">PathExtensions.Translate(IPath, PointF)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.Shapes.PathExtensions.html#SixLabors_Shapes_PathExtensions_Translate_SixLabors_Shapes_IPath_System_Single_System_Single_">PathExtensions.Translate(IPath, Single, Single)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.Shapes.PathExtensions.html#SixLabors_Shapes_PathExtensions_Scale_SixLabors_Shapes_IPath_System_Single_System_Single_">PathExtensions.Scale(IPath, Single, Single)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.Shapes.PathExtensions.html#SixLabors_Shapes_PathExtensions_Scale_SixLabors_Shapes_IPath_System_Single_">PathExtensions.Scale(IPath, Single)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.Shapes.PathExtensions.html#SixLabors_Shapes_PathExtensions_FindIntersections_SixLabors_Shapes_IPath_PointF_PointF_">PathExtensions.FindIntersections(IPath, PointF, PointF)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

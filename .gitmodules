@@ -1,3 +1,12 @@
 [submodule "ext/ImageSharp"]
 	path = ext/ImageSharp
 	url = https://github.com/SixLabors/ImageSharp.git
+[submodule "ext/ImageSharp.Web"]
+	path = ext/ImageSharp.Web
+	url = https://github.com/SixLabors/ImageSharp.Web.git
+[submodule "ext/Fonts"]
+	path = ext/Fonts
+	url = https://github.com/SixLabors/Fonts.git
+[submodule "ext/Shapes"]
+	path = ext/Shapes
+	url = https://github.com/SixLabors/Shapes.git
