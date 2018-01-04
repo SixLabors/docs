@@ -1,0 +1,1032 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class TestImageProvider&lt;TPixel&gt;
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class TestImageProvider&lt;TPixel&gt;
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="SixLabors.ImageSharp.Tests.TestImageProvider`1">
+  
+  
+  <h1 id="SixLabors_ImageSharp_Tests_TestImageProvider_1" data-uid="SixLabors.ImageSharp.Tests.TestImageProvider`1" class="text-break">Class TestImageProvider&lt;TPixel&gt;
+  </h1>
+  <div class="markdown level0 summary"><p>Provides <see cref="!:Image&lt;TPixel>"></see> instances for parametric unit tests.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">TestImageProvider&lt;TPixel&gt;</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="SixLabors.ImageSharp.Tests.ITestImageProvider.html">ITestImageProvider</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="SixLabors.ImageSharp.Tests.html">SixLabors.ImageSharp.Tests</a></h6>
+  <h6><strong>Assembly</strong>: SixLabors.ImageSharp.Sandbox46.dll</h6>
+  <h5 id="SixLabors_ImageSharp_Tests_TestImageProvider_1_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class TestImageProvider&lt;TPixel&gt; : ITestImageProvider where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TPixel</span></td>
+        <td><p>The pixel format of the image</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Tests_TestImageProvider_1_MethodName.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Tests.TestImageProvider%601.MethodName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/tests/ImageSharp.Tests/TestUtilities/ImageProviders/TestImageProvider.cs/#L36">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Tests_TestImageProvider_1_MethodName_" data-uid="SixLabors.ImageSharp.Tests.TestImageProvider`1.MethodName*"></a>
+  <h4 id="SixLabors_ImageSharp_Tests_TestImageProvider_1_MethodName" data-uid="SixLabors.ImageSharp.Tests.TestImageProvider`1.MethodName">MethodName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string MethodName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Tests_TestImageProvider_1_PixelType.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Tests.TestImageProvider%601.PixelType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/tests/ImageSharp.Tests/TestUtilities/ImageProviders/TestImageProvider.cs/#L26">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Tests_TestImageProvider_1_PixelType_" data-uid="SixLabors.ImageSharp.Tests.TestImageProvider`1.PixelType*"></a>
+  <h4 id="SixLabors_ImageSharp_Tests_TestImageProvider_1_PixelType" data-uid="SixLabors.ImageSharp.Tests.TestImageProvider`1.PixelType">PixelType</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PixelTypes PixelType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Tests.PixelTypes.html">PixelTypes</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Tests_TestImageProvider_1_SourceFileOrDescription.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Tests.TestImageProvider%601.SourceFileOrDescription%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/tests/ImageSharp.Tests/TestUtilities/ImageProviders/TestImageProvider.cs/#L28">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Tests_TestImageProvider_1_SourceFileOrDescription_" data-uid="SixLabors.ImageSharp.Tests.TestImageProvider`1.SourceFileOrDescription*"></a>
+  <h4 id="SixLabors_ImageSharp_Tests_TestImageProvider_1_SourceFileOrDescription" data-uid="SixLabors.ImageSharp.Tests.TestImageProvider`1.SourceFileOrDescription">SourceFileOrDescription</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string SourceFileOrDescription { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Tests_TestImageProvider_1_TypeName.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Tests.TestImageProvider%601.TypeName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/tests/ImageSharp.Tests/TestUtilities/ImageProviders/TestImageProvider.cs/#L35">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Tests_TestImageProvider_1_TypeName_" data-uid="SixLabors.ImageSharp.Tests.TestImageProvider`1.TypeName*"></a>
+  <h4 id="SixLabors_ImageSharp_Tests_TestImageProvider_1_TypeName" data-uid="SixLabors.ImageSharp.Tests.TestImageProvider`1.TypeName">TypeName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string TypeName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Tests_TestImageProvider_1_Utility.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Tests.TestImageProvider%601.Utility%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/tests/ImageSharp.Tests/TestUtilities/ImageProviders/TestImageProvider.cs/#L33">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Tests_TestImageProvider_1_Utility_" data-uid="SixLabors.ImageSharp.Tests.TestImageProvider`1.Utility*"></a>
+  <h4 id="SixLabors_ImageSharp_Tests_TestImageProvider_1_Utility" data-uid="SixLabors.ImageSharp.Tests.TestImageProvider`1.Utility">Utility</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ImagingTestCaseUtility Utility { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Tests.ImagingTestCaseUtility.html">ImagingTestCaseUtility</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Tests_TestImageProvider_1_Blank_System_Int32_System_Int32_System_Reflection_MethodInfo_SixLabors_ImageSharp_Tests_PixelTypes_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Tests.TestImageProvider%601.Blank(System.Int32%2CSystem.Int32%2CSystem.Reflection.MethodInfo%2CSixLabors.ImageSharp.Tests.PixelTypes)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/tests/ImageSharp.Tests/TestUtilities/ImageProviders/TestImageProvider.cs/#L45">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Tests_TestImageProvider_1_Blank_" data-uid="SixLabors.ImageSharp.Tests.TestImageProvider`1.Blank*"></a>
+  <h4 id="SixLabors_ImageSharp_Tests_TestImageProvider_1_Blank_System_Int32_System_Int32_System_Reflection_MethodInfo_SixLabors_ImageSharp_Tests_PixelTypes_" data-uid="SixLabors.ImageSharp.Tests.TestImageProvider`1.Blank(System.Int32,System.Int32,System.Reflection.MethodInfo,SixLabors.ImageSharp.Tests.PixelTypes)">Blank(Int32, Int32, MethodInfo, PixelTypes)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TestImageProvider&lt;TPixel&gt; Blank(int width, int height, MethodInfo testMethod = null, PixelTypes pixelTypeOverride = PixelTypes.Undefined)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">width</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">height</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Reflection.MethodInfo</span></td>
+        <td><span class="parametername">testMethod</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Tests.PixelTypes.html">PixelTypes</a></td>
+        <td><span class="parametername">pixelTypeOverride</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Tests.TestImageProvider-1.html">TestImageProvider</a>&lt;TPixel&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Tests_TestImageProvider_1_Deserialize_IXunitSerializationInfo_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Tests.TestImageProvider%601.Deserialize(IXunitSerializationInfo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/tests/ImageSharp.Tests/TestUtilities/ImageProviders/TestImageProvider.cs/#L99">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Tests_TestImageProvider_1_Deserialize_" data-uid="SixLabors.ImageSharp.Tests.TestImageProvider`1.Deserialize*"></a>
+  <h4 id="SixLabors_ImageSharp_Tests_TestImageProvider_1_Deserialize_IXunitSerializationInfo_" data-uid="SixLabors.ImageSharp.Tests.TestImageProvider`1.Deserialize(IXunitSerializationInfo)">Deserialize(IXunitSerializationInfo)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Deserialize(IXunitSerializationInfo info)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IXunitSerializationInfo</span></td>
+        <td><span class="parametername">info</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Tests_TestImageProvider_1_File_System_String_System_Reflection_MethodInfo_SixLabors_ImageSharp_Tests_PixelTypes_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Tests.TestImageProvider%601.File(System.String%2CSystem.Reflection.MethodInfo%2CSixLabors.ImageSharp.Tests.PixelTypes)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/tests/ImageSharp.Tests/TestUtilities/ImageProviders/TestImageProvider.cs/#L52">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Tests_TestImageProvider_1_File_" data-uid="SixLabors.ImageSharp.Tests.TestImageProvider`1.File*"></a>
+  <h4 id="SixLabors_ImageSharp_Tests_TestImageProvider_1_File_System_String_System_Reflection_MethodInfo_SixLabors_ImageSharp_Tests_PixelTypes_" data-uid="SixLabors.ImageSharp.Tests.TestImageProvider`1.File(System.String,System.Reflection.MethodInfo,SixLabors.ImageSharp.Tests.PixelTypes)">File(String, MethodInfo, PixelTypes)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TestImageProvider&lt;TPixel&gt; File(string filePath, MethodInfo testMethod = null, PixelTypes pixelTypeOverride = PixelTypes.Undefined)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">filePath</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Reflection.MethodInfo</span></td>
+        <td><span class="parametername">testMethod</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Tests.PixelTypes.html">PixelTypes</a></td>
+        <td><span class="parametername">pixelTypeOverride</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Tests.TestImageProvider-1.html">TestImageProvider</a>&lt;TPixel&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Tests_TestImageProvider_1_GetFilePathOrNull_SixLabors_ImageSharp_Tests_ITestImageProvider_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Tests.TestImageProvider%601.GetFilePathOrNull(SixLabors.ImageSharp.Tests.ITestImageProvider)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/tests/ImageSharp.Tests/TestUtilities/ImageProviders/FileProvider.cs/#L163">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Tests_TestImageProvider_1_GetFilePathOrNull_" data-uid="SixLabors.ImageSharp.Tests.TestImageProvider`1.GetFilePathOrNull*"></a>
+  <h4 id="SixLabors_ImageSharp_Tests_TestImageProvider_1_GetFilePathOrNull_SixLabors_ImageSharp_Tests_ITestImageProvider_" data-uid="SixLabors.ImageSharp.Tests.TestImageProvider`1.GetFilePathOrNull(SixLabors.ImageSharp.Tests.ITestImageProvider)">GetFilePathOrNull(ITestImageProvider)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetFilePathOrNull(ITestImageProvider provider)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Tests.ITestImageProvider.html">ITestImageProvider</a></td>
+        <td><span class="parametername">provider</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Tests_TestImageProvider_1_GetImage.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Tests.TestImageProvider%601.GetImage%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/tests/ImageSharp.Tests/TestUtilities/ImageProviders/TestImageProvider.cs/#L82">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Tests_TestImageProvider_1_GetImage_" data-uid="SixLabors.ImageSharp.Tests.TestImageProvider`1.GetImage*"></a>
+  <h4 id="SixLabors_ImageSharp_Tests_TestImageProvider_1_GetImage" data-uid="SixLabors.ImageSharp.Tests.TestImageProvider`1.GetImage">GetImage()</h4>
+  <div class="markdown level1 summary"><p>Returns an <see cref="!:Image&lt;TPixel>"></see> instance to the test case with the necessary traits.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract Image&lt;TPixel&gt; GetImage()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Image</span>&lt;TPixel&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Tests_TestImageProvider_1_GetImage_IImageDecoder_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Tests.TestImageProvider%601.GetImage(IImageDecoder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/tests/ImageSharp.Tests/TestUtilities/ImageProviders/TestImageProvider.cs/#L84">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Tests_TestImageProvider_1_GetImage_" data-uid="SixLabors.ImageSharp.Tests.TestImageProvider`1.GetImage*"></a>
+  <h4 id="SixLabors_ImageSharp_Tests_TestImageProvider_1_GetImage_IImageDecoder_" data-uid="SixLabors.ImageSharp.Tests.TestImageProvider`1.GetImage(IImageDecoder)">GetImage(IImageDecoder)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Image&lt;TPixel&gt; GetImage(IImageDecoder decoder)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IImageDecoder</span></td>
+        <td><span class="parametername">decoder</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Image</span>&lt;TPixel&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Tests_TestImageProvider_1_GetImage_System_Action_IImageProcessingContext__0___.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Tests.TestImageProvider%601.GetImage(System.Action%7BIImageProcessingContext%7B%600%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/tests/ImageSharp.Tests/TestUtilities/ImageProviders/TestImageProvider.cs/#L92">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Tests_TestImageProvider_1_GetImage_" data-uid="SixLabors.ImageSharp.Tests.TestImageProvider`1.GetImage*"></a>
+  <h4 id="SixLabors_ImageSharp_Tests_TestImageProvider_1_GetImage_System_Action_IImageProcessingContext__0___" data-uid="SixLabors.ImageSharp.Tests.TestImageProvider`1.GetImage(System.Action{IImageProcessingContext{`0}})">GetImage(Action&lt;IImageProcessingContext&lt;TPixel&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Returns an <see cref="!:Image&lt;TPixel>"></see> instance to the test case with the necessary traits.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Image&lt;TPixel&gt; GetImage(Action&lt;IImageProcessingContext&lt;TPixel&gt;&gt; operationsToApply)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">IImageProcessingContext</span>&lt;TPixel&gt;&gt;</td>
+        <td><span class="parametername">operationsToApply</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Image</span>&lt;TPixel&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Tests_TestImageProvider_1_Init_System_Reflection_MethodInfo_SixLabors_ImageSharp_Tests_PixelTypes_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Tests.TestImageProvider%601.Init(System.Reflection.MethodInfo%2CSixLabors.ImageSharp.Tests.PixelTypes)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/tests/ImageSharp.Tests/TestUtilities/ImageProviders/TestImageProvider.cs/#L138">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Tests_TestImageProvider_1_Init_" data-uid="SixLabors.ImageSharp.Tests.TestImageProvider`1.Init*"></a>
+  <h4 id="SixLabors_ImageSharp_Tests_TestImageProvider_1_Init_System_Reflection_MethodInfo_SixLabors_ImageSharp_Tests_PixelTypes_" data-uid="SixLabors.ImageSharp.Tests.TestImageProvider`1.Init(System.Reflection.MethodInfo,SixLabors.ImageSharp.Tests.PixelTypes)">Init(MethodInfo, PixelTypes)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected TestImageProvider&lt;TPixel&gt; Init(MethodInfo testMethod, PixelTypes pixelTypeOverride)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Reflection.MethodInfo</span></td>
+        <td><span class="parametername">testMethod</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Tests.PixelTypes.html">PixelTypes</a></td>
+        <td><span class="parametername">pixelTypeOverride</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Tests.TestImageProvider-1.html">TestImageProvider</a>&lt;TPixel&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Tests_TestImageProvider_1_Init_System_String_System_String_SixLabors_ImageSharp_Tests_PixelTypes_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Tests.TestImageProvider%601.Init(System.String%2CSystem.String%2CSixLabors.ImageSharp.Tests.PixelTypes)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/tests/ImageSharp.Tests/TestUtilities/ImageProviders/TestImageProvider.cs/#L115">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Tests_TestImageProvider_1_Init_" data-uid="SixLabors.ImageSharp.Tests.TestImageProvider`1.Init*"></a>
+  <h4 id="SixLabors_ImageSharp_Tests_TestImageProvider_1_Init_System_String_System_String_SixLabors_ImageSharp_Tests_PixelTypes_" data-uid="SixLabors.ImageSharp.Tests.TestImageProvider`1.Init(System.String,System.String,SixLabors.ImageSharp.Tests.PixelTypes)">Init(String, String, PixelTypes)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected TestImageProvider&lt;TPixel&gt; Init(string typeName, string methodName, PixelTypes pixelTypeOverride)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">typeName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">methodName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Tests.PixelTypes.html">PixelTypes</a></td>
+        <td><span class="parametername">pixelTypeOverride</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Tests.TestImageProvider-1.html">TestImageProvider</a>&lt;TPixel&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Tests_TestImageProvider_1_Lambda_System_Func_Image__0___System_Reflection_MethodInfo_SixLabors_ImageSharp_Tests_PixelTypes_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Tests.TestImageProvider%601.Lambda(System.Func%7BImage%7B%600%7D%7D%2CSystem.Reflection.MethodInfo%2CSixLabors.ImageSharp.Tests.PixelTypes)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/tests/ImageSharp.Tests/TestUtilities/ImageProviders/TestImageProvider.cs/#L60">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Tests_TestImageProvider_1_Lambda_" data-uid="SixLabors.ImageSharp.Tests.TestImageProvider`1.Lambda*"></a>
+  <h4 id="SixLabors_ImageSharp_Tests_TestImageProvider_1_Lambda_System_Func_Image__0___System_Reflection_MethodInfo_SixLabors_ImageSharp_Tests_PixelTypes_" data-uid="SixLabors.ImageSharp.Tests.TestImageProvider`1.Lambda(System.Func{Image{`0}},System.Reflection.MethodInfo,SixLabors.ImageSharp.Tests.PixelTypes)">Lambda(Func&lt;Image&lt;TPixel&gt;&gt;, MethodInfo, PixelTypes)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TestImageProvider&lt;TPixel&gt; Lambda(Func&lt;Image&lt;TPixel&gt;&gt; factoryFunc, MethodInfo testMethod = null, PixelTypes pixelTypeOverride = PixelTypes.Undefined)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<span class="xref">Image</span>&lt;TPixel&gt;&gt;</td>
+        <td><span class="parametername">factoryFunc</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Reflection.MethodInfo</span></td>
+        <td><span class="parametername">testMethod</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Tests.PixelTypes.html">PixelTypes</a></td>
+        <td><span class="parametername">pixelTypeOverride</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Tests.TestImageProvider-1.html">TestImageProvider</a>&lt;TPixel&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Tests_TestImageProvider_1_Serialize_IXunitSerializationInfo_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Tests.TestImageProvider%601.Serialize(IXunitSerializationInfo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/tests/ImageSharp.Tests/TestUtilities/ImageProviders/TestImageProvider.cs/#L108">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Tests_TestImageProvider_1_Serialize_" data-uid="SixLabors.ImageSharp.Tests.TestImageProvider`1.Serialize*"></a>
+  <h4 id="SixLabors_ImageSharp_Tests_TestImageProvider_1_Serialize_IXunitSerializationInfo_" data-uid="SixLabors.ImageSharp.Tests.TestImageProvider`1.Serialize(IXunitSerializationInfo)">Serialize(IXunitSerializationInfo)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Serialize(IXunitSerializationInfo info)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IXunitSerializationInfo</span></td>
+        <td><span class="parametername">info</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Tests_TestImageProvider_1_Solid_System_Int32_System_Int32_System_Byte_System_Byte_System_Byte_System_Byte_System_Reflection_MethodInfo_SixLabors_ImageSharp_Tests_PixelTypes_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Tests.TestImageProvider%601.Solid(System.Int32%2CSystem.Int32%2CSystem.Byte%2CSystem.Byte%2CSystem.Byte%2CSystem.Byte%2CSystem.Reflection.MethodInfo%2CSixLabors.ImageSharp.Tests.PixelTypes)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/tests/ImageSharp.Tests/TestUtilities/ImageProviders/TestImageProvider.cs/#L66">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Tests_TestImageProvider_1_Solid_" data-uid="SixLabors.ImageSharp.Tests.TestImageProvider`1.Solid*"></a>
+  <h4 id="SixLabors_ImageSharp_Tests_TestImageProvider_1_Solid_System_Int32_System_Int32_System_Byte_System_Byte_System_Byte_System_Byte_System_Reflection_MethodInfo_SixLabors_ImageSharp_Tests_PixelTypes_" data-uid="SixLabors.ImageSharp.Tests.TestImageProvider`1.Solid(System.Int32,System.Int32,System.Byte,System.Byte,System.Byte,System.Byte,System.Reflection.MethodInfo,SixLabors.ImageSharp.Tests.PixelTypes)">Solid(Int32, Int32, Byte, Byte, Byte, Byte, MethodInfo, PixelTypes)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TestImageProvider&lt;TPixel&gt; Solid(int width, int height, byte r, byte g, byte b, byte a = 255, MethodInfo testMethod = null, PixelTypes pixelTypeOverride = PixelTypes.Undefined)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">width</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">height</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span></td>
+        <td><span class="parametername">r</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span></td>
+        <td><span class="parametername">g</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span></td>
+        <td><span class="parametername">b</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span></td>
+        <td><span class="parametername">a</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Reflection.MethodInfo</span></td>
+        <td><span class="parametername">testMethod</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Tests.PixelTypes.html">PixelTypes</a></td>
+        <td><span class="parametername">pixelTypeOverride</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Tests.TestImageProvider-1.html">TestImageProvider</a>&lt;TPixel&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Tests_TestImageProvider_1_TestPattern_System_Int32_System_Int32_System_Reflection_MethodInfo_SixLabors_ImageSharp_Tests_PixelTypes_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Tests.TestImageProvider%601.TestPattern(System.Int32%2CSystem.Int32%2CSystem.Reflection.MethodInfo%2CSixLabors.ImageSharp.Tests.PixelTypes)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/tests/ImageSharp.Tests/TestUtilities/ImageProviders/TestImageProvider.cs/#L38">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Tests_TestImageProvider_1_TestPattern_" data-uid="SixLabors.ImageSharp.Tests.TestImageProvider`1.TestPattern*"></a>
+  <h4 id="SixLabors_ImageSharp_Tests_TestImageProvider_1_TestPattern_System_Int32_System_Int32_System_Reflection_MethodInfo_SixLabors_ImageSharp_Tests_PixelTypes_" data-uid="SixLabors.ImageSharp.Tests.TestImageProvider`1.TestPattern(System.Int32,System.Int32,System.Reflection.MethodInfo,SixLabors.ImageSharp.Tests.PixelTypes)">TestPattern(Int32, Int32, MethodInfo, PixelTypes)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TestImageProvider&lt;TPixel&gt; TestPattern(int width, int height, MethodInfo testMethod = null, PixelTypes pixelTypeOverride = PixelTypes.Undefined)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">width</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">height</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Reflection.MethodInfo</span></td>
+        <td><span class="parametername">testMethod</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Tests.PixelTypes.html">PixelTypes</a></td>
+        <td><span class="parametername">pixelTypeOverride</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Tests.TestImageProvider-1.html">TestImageProvider</a>&lt;TPixel&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Tests_TestImageProvider_1_ToString.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Tests.TestImageProvider%601.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/tests/ImageSharp.Tests/TestUtilities/ImageProviders/TestImageProvider.cs/#L143">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Tests_TestImageProvider_1_ToString_" data-uid="SixLabors.ImageSharp.Tests.TestImageProvider`1.ToString*"></a>
+  <h4 id="SixLabors_ImageSharp_Tests_TestImageProvider_1_ToString" data-uid="SixLabors.ImageSharp.Tests.TestImageProvider`1.ToString">ToString()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.ToString()</span></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Tests.ITestImageProvider.html">ITestImageProvider</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Tests.TestImageExtensions.html#SixLabors_ImageSharp_Tests_TestImageExtensions_GetReferenceOutputImage__1_SixLabors_ImageSharp_Tests_ITestImageProvider_System_Object_System_String_System_Boolean_">TestImageExtensions.GetReferenceOutputImage&lt;TPixel&gt;(ITestImageProvider, Object, String, Boolean)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Tests_TestImageProvider_1.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Tests.TestImageProvider%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/SixLabors/ImageSharp/blob/master/tests/ImageSharp.Tests/TestUtilities/ImageProviders/TestPatternProvider.cs/#L14" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

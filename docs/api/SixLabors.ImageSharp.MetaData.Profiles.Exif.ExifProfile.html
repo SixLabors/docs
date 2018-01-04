@@ -1,0 +1,474 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ExifProfile
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ExifProfile
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="SixLabors.ImageSharp.MetaData.Profiles.Exif.ExifProfile">
+  
+  
+  <h1 id="SixLabors_ImageSharp_MetaData_Profiles_Exif_ExifProfile" data-uid="SixLabors.ImageSharp.MetaData.Profiles.Exif.ExifProfile" class="text-break">Class ExifProfile
+  </h1>
+  <div class="markdown level0 summary"><p>Represents an EXIF profile providing access to the collection of values.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">ExifProfile</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="SixLabors.ImageSharp.MetaData.Profiles.Exif.html">SixLabors.ImageSharp.MetaData.Profiles.Exif</a></h6>
+  <h6><strong>Assembly</strong>: SixLabors.ImageSharp.dll</h6>
+  <h5 id="SixLabors_ImageSharp_MetaData_Profiles_Exif_ExifProfile_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class ExifProfile : object</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="SixLabors_ImageSharp_MetaData_Profiles_Exif_ExifProfile__ctor_" data-uid="SixLabors.ImageSharp.MetaData.Profiles.Exif.ExifProfile.#ctor*"></a>
+  <h4 id="SixLabors_ImageSharp_MetaData_Profiles_Exif_ExifProfile__ctor" data-uid="SixLabors.ImageSharp.MetaData.Profiles.Exif.ExifProfile.#ctor">ExifProfile()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="SixLabors.ImageSharp.MetaData.Profiles.Exif.ExifProfile.html">ExifProfile</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ExifProfile()</code></pre>
+  </div>
+  
+  
+  <a id="SixLabors_ImageSharp_MetaData_Profiles_Exif_ExifProfile__ctor_" data-uid="SixLabors.ImageSharp.MetaData.Profiles.Exif.ExifProfile.#ctor*"></a>
+  <h4 id="SixLabors_ImageSharp_MetaData_Profiles_Exif_ExifProfile__ctor_SixLabors_ImageSharp_MetaData_Profiles_Exif_ExifProfile_" data-uid="SixLabors.ImageSharp.MetaData.Profiles.Exif.ExifProfile.#ctor(SixLabors.ImageSharp.MetaData.Profiles.Exif.ExifProfile)">ExifProfile(ExifProfile)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="SixLabors.ImageSharp.MetaData.Profiles.Exif.ExifProfile.html">ExifProfile</a> class
+by making a copy from another EXIF profile.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ExifProfile(ExifProfile other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.MetaData.Profiles.Exif.ExifProfile.html">ExifProfile</a></td>
+        <td><span class="parametername">other</span></td>
+        <td><p>The other EXIF profile, where the clone should be made from.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="SixLabors_ImageSharp_MetaData_Profiles_Exif_ExifProfile__ctor_" data-uid="SixLabors.ImageSharp.MetaData.Profiles.Exif.ExifProfile.#ctor*"></a>
+  <h4 id="SixLabors_ImageSharp_MetaData_Profiles_Exif_ExifProfile__ctor_System_Byte___" data-uid="SixLabors.ImageSharp.MetaData.Profiles.Exif.ExifProfile.#ctor(System.Byte[])">ExifProfile(Byte[])</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="SixLabors.ImageSharp.MetaData.Profiles.Exif.ExifProfile.html">ExifProfile</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ExifProfile(byte[] data)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">data</span></td>
+        <td><p>The byte array to read the EXIF profile from.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="SixLabors_ImageSharp_MetaData_Profiles_Exif_ExifProfile_InvalidTags_" data-uid="SixLabors.ImageSharp.MetaData.Profiles.Exif.ExifProfile.InvalidTags*"></a>
+  <h4 id="SixLabors_ImageSharp_MetaData_Profiles_Exif_ExifProfile_InvalidTags" data-uid="SixLabors.ImageSharp.MetaData.Profiles.Exif.ExifProfile.InvalidTags">InvalidTags</h4>
+  <div class="markdown level1 summary"><p>Gets the tags that where found but contained an invalid value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;ExifTag&gt; InvalidTags { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="SixLabors.ImageSharp.MetaData.Profiles.Exif.ExifTag.html">ExifTag</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="SixLabors_ImageSharp_MetaData_Profiles_Exif_ExifProfile_Parts_" data-uid="SixLabors.ImageSharp.MetaData.Profiles.Exif.ExifProfile.Parts*"></a>
+  <h4 id="SixLabors_ImageSharp_MetaData_Profiles_Exif_ExifProfile_Parts" data-uid="SixLabors.ImageSharp.MetaData.Profiles.Exif.ExifProfile.Parts">Parts</h4>
+  <div class="markdown level1 summary"><p>Gets or sets which parts will be written when the profile is added to an image.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ExifParts Parts { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.MetaData.Profiles.Exif.ExifParts.html">ExifParts</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="SixLabors_ImageSharp_MetaData_Profiles_Exif_ExifProfile_Values_" data-uid="SixLabors.ImageSharp.MetaData.Profiles.Exif.ExifProfile.Values*"></a>
+  <h4 id="SixLabors_ImageSharp_MetaData_Profiles_Exif_ExifProfile_Values" data-uid="SixLabors.ImageSharp.MetaData.Profiles.Exif.ExifProfile.Values">Values</h4>
+  <div class="markdown level1 summary"><p>Gets the values of this EXIF profile.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;ExifValue&gt; Values { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="SixLabors.ImageSharp.MetaData.Profiles.Exif.ExifValue.html">ExifValue</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="SixLabors_ImageSharp_MetaData_Profiles_Exif_ExifProfile_CreateThumbnail_" data-uid="SixLabors.ImageSharp.MetaData.Profiles.Exif.ExifProfile.CreateThumbnail*"></a>
+  <h4 id="SixLabors_ImageSharp_MetaData_Profiles_Exif_ExifProfile_CreateThumbnail__1" data-uid="SixLabors.ImageSharp.MetaData.Profiles.Exif.ExifProfile.CreateThumbnail``1">CreateThumbnail&lt;TPixel&gt;()</h4>
+  <div class="markdown level1 summary"><p>Returns the thumbnail in the EXIF profile when available.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Image&lt;TPixel&gt; CreateThumbnail&lt;TPixel&gt;()where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image</a>&lt;TPixel&gt;</td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TPixel</span></td>
+        <td><p>The pixel format.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="SixLabors_ImageSharp_MetaData_Profiles_Exif_ExifProfile_GetValue_" data-uid="SixLabors.ImageSharp.MetaData.Profiles.Exif.ExifProfile.GetValue*"></a>
+  <h4 id="SixLabors_ImageSharp_MetaData_Profiles_Exif_ExifProfile_GetValue_SixLabors_ImageSharp_MetaData_Profiles_Exif_ExifTag_" data-uid="SixLabors.ImageSharp.MetaData.Profiles.Exif.ExifProfile.GetValue(SixLabors.ImageSharp.MetaData.Profiles.Exif.ExifTag)">GetValue(ExifTag)</h4>
+  <div class="markdown level1 summary"><p>Returns the value with the specified tag.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ExifValue GetValue(ExifTag tag)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.MetaData.Profiles.Exif.ExifTag.html">ExifTag</a></td>
+        <td><span class="parametername">tag</span></td>
+        <td><p>The tag of the EXIF value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.MetaData.Profiles.Exif.ExifValue.html">ExifValue</a></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.MetaData.Profiles.Exif.ExifValue.html">ExifValue</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="SixLabors_ImageSharp_MetaData_Profiles_Exif_ExifProfile_RemoveValue_" data-uid="SixLabors.ImageSharp.MetaData.Profiles.Exif.ExifProfile.RemoveValue*"></a>
+  <h4 id="SixLabors_ImageSharp_MetaData_Profiles_Exif_ExifProfile_RemoveValue_SixLabors_ImageSharp_MetaData_Profiles_Exif_ExifTag_" data-uid="SixLabors.ImageSharp.MetaData.Profiles.Exif.ExifProfile.RemoveValue(SixLabors.ImageSharp.MetaData.Profiles.Exif.ExifTag)">RemoveValue(ExifTag)</h4>
+  <div class="markdown level1 summary"><p>Removes the value with the specified tag.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RemoveValue(ExifTag tag)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.MetaData.Profiles.Exif.ExifTag.html">ExifTag</a></td>
+        <td><span class="parametername">tag</span></td>
+        <td><p>The tag of the EXIF value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>The <see cref="!:System.Boolean"></see>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="SixLabors_ImageSharp_MetaData_Profiles_Exif_ExifProfile_SetValue_" data-uid="SixLabors.ImageSharp.MetaData.Profiles.Exif.ExifProfile.SetValue*"></a>
+  <h4 id="SixLabors_ImageSharp_MetaData_Profiles_Exif_ExifProfile_SetValue_SixLabors_ImageSharp_MetaData_Profiles_Exif_ExifTag_System_Object_" data-uid="SixLabors.ImageSharp.MetaData.Profiles.Exif.ExifProfile.SetValue(SixLabors.ImageSharp.MetaData.Profiles.Exif.ExifTag,System.Object)">SetValue(ExifTag, Object)</h4>
+  <div class="markdown level1 summary"><p>Sets the value of the specified tag.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetValue(ExifTag tag, object value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.MetaData.Profiles.Exif.ExifTag.html">ExifTag</a></td>
+        <td><span class="parametername">tag</span></td>
+        <td><p>The tag of the EXIF value.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="SixLabors_ImageSharp_MetaData_Profiles_Exif_ExifProfile_ToByteArray_" data-uid="SixLabors.ImageSharp.MetaData.Profiles.Exif.ExifProfile.ToByteArray*"></a>
+  <h4 id="SixLabors_ImageSharp_MetaData_Profiles_Exif_ExifProfile_ToByteArray" data-uid="SixLabors.ImageSharp.MetaData.Profiles.Exif.ExifProfile.ToByteArray">ToByteArray()</h4>
+  <div class="markdown level1 summary"><p>Converts this instance to a byte array.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte[] ToByteArray()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><p>The <span class="xref">byte[]</span></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
