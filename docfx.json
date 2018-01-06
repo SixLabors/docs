@@ -135,7 +135,11 @@
     "overwrite": [
       {
         "files": [
-          "apidoc/**.md"
+          "ext/ImageSharp/apiSpec/**.md",
+          "ext/ImageSharp.Web/apiSpec/**.md",
+          "ext/Fonts/apiSpec/**.md",
+          "ext/Shapes/apiSpec/**.md",
+          "ext/Core/apiSpec/**.md"
         ],
         "exclude": [
           "obj/**",
@@ -146,6 +150,13 @@
     "dest": "docs",
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
+    "fileMetadata":{
+    },
+    "globalMetadata" : {
+      "_gitContribute": {
+        "branch": "master"
+      }
+    },
     "template": [
       "default",
       "templates"
