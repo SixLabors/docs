@@ -10,3 +10,6 @@
 [submodule "ext/Shapes"]
 	path = ext/Shapes
 	url = https://github.com/SixLabors/Shapes.git
+[submodule "ext/Core"]
+	path = ext/Core
+	url = https://github.com/SixLabors/Core.git

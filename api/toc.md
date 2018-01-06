@@ -2,3 +2,4 @@
 # @SixLabors.ImageSharp.Web
 # @SixLabors.Fonts
 # @SixLabors.Shapes
+# @SixLabors.Primitives

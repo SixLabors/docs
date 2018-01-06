@@ -1612,15 +1612,15 @@ references:
   commentId: Overload:SixLabors.ImageSharp.Dithering.Base.OrderedDitherBase.Dither
   fullName: SixLabors.ImageSharp.Dithering.Base.OrderedDitherBase.Dither
   nameWithType: OrderedDitherBase.Dither
-- uid: SixLabors.ImageSharp.Dithering.Base.OrderedDitherBase.Dither``1(SixLabors.ImageSharp.ImageFrame{``0},``0,``0,``0,SixLabors.ImageSharp.Rgba32@,System.Int32,System.Int32,System.Int32)
-  name: Dither<TPixel>(ImageFrame<TPixel>, TPixel, TPixel, TPixel, ref Rgba32, Int32, Int32, Int32)
-  href: api/ImageSharp/SixLabors.ImageSharp.Dithering.Base.OrderedDitherBase.html#SixLabors_ImageSharp_Dithering_Base_OrderedDitherBase_Dither__1_SixLabors_ImageSharp_ImageFrame___0____0___0___0_SixLabors_ImageSharp_Rgba32__System_Int32_System_Int32_System_Int32_
-  commentId: M:SixLabors.ImageSharp.Dithering.Base.OrderedDitherBase.Dither``1(SixLabors.ImageSharp.ImageFrame{``0},``0,``0,``0,SixLabors.ImageSharp.Rgba32@,System.Int32,System.Int32,System.Int32)
-  name.vb: Dither(Of TPixel)(ImageFrame(Of TPixel), TPixel, TPixel, TPixel, ByRef Rgba32, Int32, Int32, Int32)
-  fullName: SixLabors.ImageSharp.Dithering.Base.OrderedDitherBase.Dither<TPixel>(SixLabors.ImageSharp.ImageFrame<TPixel>, TPixel, TPixel, TPixel, ref SixLabors.ImageSharp.Rgba32, System.Int32, System.Int32, System.Int32)
-  fullName.vb: SixLabors.ImageSharp.Dithering.Base.OrderedDitherBase.Dither(Of TPixel)(SixLabors.ImageSharp.ImageFrame(Of TPixel), TPixel, TPixel, TPixel, ByRef SixLabors.ImageSharp.Rgba32, System.Int32, System.Int32, System.Int32)
-  nameWithType: OrderedDitherBase.Dither<TPixel>(ImageFrame<TPixel>, TPixel, TPixel, TPixel, ref Rgba32, Int32, Int32, Int32)
-  nameWithType.vb: OrderedDitherBase.Dither(Of TPixel)(ImageFrame(Of TPixel), TPixel, TPixel, TPixel, ByRef Rgba32, Int32, Int32, Int32)
+- uid: SixLabors.ImageSharp.Dithering.Base.OrderedDitherBase.Dither``1(SixLabors.ImageSharp.ImageFrame{``0},``0,``0,``0,System.Byte[],System.Int32,System.Int32,System.Int32)
+  name: Dither<TPixel>(ImageFrame<TPixel>, TPixel, TPixel, TPixel, Byte[], Int32, Int32, Int32)
+  href: api/ImageSharp/SixLabors.ImageSharp.Dithering.Base.OrderedDitherBase.html#SixLabors_ImageSharp_Dithering_Base_OrderedDitherBase_Dither__1_SixLabors_ImageSharp_ImageFrame___0____0___0___0_System_Byte___System_Int32_System_Int32_System_Int32_
+  commentId: M:SixLabors.ImageSharp.Dithering.Base.OrderedDitherBase.Dither``1(SixLabors.ImageSharp.ImageFrame{``0},``0,``0,``0,System.Byte[],System.Int32,System.Int32,System.Int32)
+  name.vb: Dither(Of TPixel)(ImageFrame(Of TPixel), TPixel, TPixel, TPixel, Byte(), Int32, Int32, Int32)
+  fullName: SixLabors.ImageSharp.Dithering.Base.OrderedDitherBase.Dither<TPixel>(SixLabors.ImageSharp.ImageFrame<TPixel>, TPixel, TPixel, TPixel, System.Byte[], System.Int32, System.Int32, System.Int32)
+  fullName.vb: SixLabors.ImageSharp.Dithering.Base.OrderedDitherBase.Dither(Of TPixel)(SixLabors.ImageSharp.ImageFrame(Of TPixel), TPixel, TPixel, TPixel, System.Byte(), System.Int32, System.Int32, System.Int32)
+  nameWithType: OrderedDitherBase.Dither<TPixel>(ImageFrame<TPixel>, TPixel, TPixel, TPixel, Byte[], Int32, Int32, Int32)
+  nameWithType.vb: OrderedDitherBase.Dither(Of TPixel)(ImageFrame(Of TPixel), TPixel, TPixel, TPixel, Byte(), Int32, Int32, Int32)
 - uid: SixLabors.ImageSharp.Dithering.BayerDither
   name: BayerDither
   href: api/ImageSharp/SixLabors.ImageSharp.Dithering.BayerDither.html
@@ -1717,15 +1717,15 @@ references:
   commentId: Overload:SixLabors.ImageSharp.Dithering.IOrderedDither.Dither
   fullName: SixLabors.ImageSharp.Dithering.IOrderedDither.Dither
   nameWithType: IOrderedDither.Dither
-- uid: SixLabors.ImageSharp.Dithering.IOrderedDither.Dither``1(SixLabors.ImageSharp.ImageFrame{``0},``0,``0,``0,SixLabors.ImageSharp.Rgba32@,System.Int32,System.Int32,System.Int32)
-  name: Dither<TPixel>(ImageFrame<TPixel>, TPixel, TPixel, TPixel, ref Rgba32, Int32, Int32, Int32)
-  href: api/ImageSharp/SixLabors.ImageSharp.Dithering.IOrderedDither.html#SixLabors_ImageSharp_Dithering_IOrderedDither_Dither__1_SixLabors_ImageSharp_ImageFrame___0____0___0___0_SixLabors_ImageSharp_Rgba32__System_Int32_System_Int32_System_Int32_
-  commentId: M:SixLabors.ImageSharp.Dithering.IOrderedDither.Dither``1(SixLabors.ImageSharp.ImageFrame{``0},``0,``0,``0,SixLabors.ImageSharp.Rgba32@,System.Int32,System.Int32,System.Int32)
-  name.vb: Dither(Of TPixel)(ImageFrame(Of TPixel), TPixel, TPixel, TPixel, ByRef Rgba32, Int32, Int32, Int32)
-  fullName: SixLabors.ImageSharp.Dithering.IOrderedDither.Dither<TPixel>(SixLabors.ImageSharp.ImageFrame<TPixel>, TPixel, TPixel, TPixel, ref SixLabors.ImageSharp.Rgba32, System.Int32, System.Int32, System.Int32)
-  fullName.vb: SixLabors.ImageSharp.Dithering.IOrderedDither.Dither(Of TPixel)(SixLabors.ImageSharp.ImageFrame(Of TPixel), TPixel, TPixel, TPixel, ByRef SixLabors.ImageSharp.Rgba32, System.Int32, System.Int32, System.Int32)
-  nameWithType: IOrderedDither.Dither<TPixel>(ImageFrame<TPixel>, TPixel, TPixel, TPixel, ref Rgba32, Int32, Int32, Int32)
-  nameWithType.vb: IOrderedDither.Dither(Of TPixel)(ImageFrame(Of TPixel), TPixel, TPixel, TPixel, ByRef Rgba32, Int32, Int32, Int32)
+- uid: SixLabors.ImageSharp.Dithering.IOrderedDither.Dither``1(SixLabors.ImageSharp.ImageFrame{``0},``0,``0,``0,System.Byte[],System.Int32,System.Int32,System.Int32)
+  name: Dither<TPixel>(ImageFrame<TPixel>, TPixel, TPixel, TPixel, Byte[], Int32, Int32, Int32)
+  href: api/ImageSharp/SixLabors.ImageSharp.Dithering.IOrderedDither.html#SixLabors_ImageSharp_Dithering_IOrderedDither_Dither__1_SixLabors_ImageSharp_ImageFrame___0____0___0___0_System_Byte___System_Int32_System_Int32_System_Int32_
+  commentId: M:SixLabors.ImageSharp.Dithering.IOrderedDither.Dither``1(SixLabors.ImageSharp.ImageFrame{``0},``0,``0,``0,System.Byte[],System.Int32,System.Int32,System.Int32)
+  name.vb: Dither(Of TPixel)(ImageFrame(Of TPixel), TPixel, TPixel, TPixel, Byte(), Int32, Int32, Int32)
+  fullName: SixLabors.ImageSharp.Dithering.IOrderedDither.Dither<TPixel>(SixLabors.ImageSharp.ImageFrame<TPixel>, TPixel, TPixel, TPixel, System.Byte[], System.Int32, System.Int32, System.Int32)
+  fullName.vb: SixLabors.ImageSharp.Dithering.IOrderedDither.Dither(Of TPixel)(SixLabors.ImageSharp.ImageFrame(Of TPixel), TPixel, TPixel, TPixel, System.Byte(), System.Int32, System.Int32, System.Int32)
+  nameWithType: IOrderedDither.Dither<TPixel>(ImageFrame<TPixel>, TPixel, TPixel, TPixel, Byte[], Int32, Int32, Int32)
+  nameWithType.vb: IOrderedDither.Dither(Of TPixel)(ImageFrame(Of TPixel), TPixel, TPixel, TPixel, Byte(), Int32, Int32, Int32)
 - uid: SixLabors.ImageSharp.Dithering.JarvisJudiceNinkeDiffuser
   name: JarvisJudiceNinkeDiffuser
   href: api/ImageSharp/SixLabors.ImageSharp.Dithering.JarvisJudiceNinkeDiffuser.html
@@ -21905,6 +21905,2280 @@ references:
   commentId: Overload:SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.Settings
   fullName: SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.Settings
   nameWithType: PhysicalFileSystemResolver.Settings
+- uid: SixLabors.Primitives
+  name: SixLabors.Primitives
+  href: api/Core/SixLabors.Primitives.html
+  commentId: N:SixLabors.Primitives
+  fullName: SixLabors.Primitives
+  nameWithType: SixLabors.Primitives
+- uid: SixLabors.Primitives.Matrix3x2Extensions
+  name: Matrix3x2Extensions
+  href: api/Core/SixLabors.Primitives.Matrix3x2Extensions.html
+  commentId: T:SixLabors.Primitives.Matrix3x2Extensions
+  fullName: SixLabors.Primitives.Matrix3x2Extensions
+  nameWithType: Matrix3x2Extensions
+- uid: SixLabors.Primitives.Matrix3x2Extensions.CreateRotation(System.Single,SixLabors.Primitives.PointF)
+  name: CreateRotation(Single, PointF)
+  href: api/Core/SixLabors.Primitives.Matrix3x2Extensions.html#SixLabors_Primitives_Matrix3x2Extensions_CreateRotation_System_Single_SixLabors_Primitives_PointF_
+  commentId: M:SixLabors.Primitives.Matrix3x2Extensions.CreateRotation(System.Single,SixLabors.Primitives.PointF)
+  fullName: SixLabors.Primitives.Matrix3x2Extensions.CreateRotation(System.Single, SixLabors.Primitives.PointF)
+  nameWithType: Matrix3x2Extensions.CreateRotation(Single, PointF)
+- uid: SixLabors.Primitives.Matrix3x2Extensions.CreateRotation*
+  name: CreateRotation
+  href: api/Core/SixLabors.Primitives.Matrix3x2Extensions.html#SixLabors_Primitives_Matrix3x2Extensions_CreateRotation_
+  commentId: Overload:SixLabors.Primitives.Matrix3x2Extensions.CreateRotation
+  fullName: SixLabors.Primitives.Matrix3x2Extensions.CreateRotation
+  nameWithType: Matrix3x2Extensions.CreateRotation
+- uid: SixLabors.Primitives.Matrix3x2Extensions.CreateRotationDegrees(System.Single)
+  name: CreateRotationDegrees(Single)
+  href: api/Core/SixLabors.Primitives.Matrix3x2Extensions.html#SixLabors_Primitives_Matrix3x2Extensions_CreateRotationDegrees_System_Single_
+  commentId: M:SixLabors.Primitives.Matrix3x2Extensions.CreateRotationDegrees(System.Single)
+  fullName: SixLabors.Primitives.Matrix3x2Extensions.CreateRotationDegrees(System.Single)
+  nameWithType: Matrix3x2Extensions.CreateRotationDegrees(Single)
+- uid: SixLabors.Primitives.Matrix3x2Extensions.CreateRotationDegrees(System.Single,SixLabors.Primitives.PointF)
+  name: CreateRotationDegrees(Single, PointF)
+  href: api/Core/SixLabors.Primitives.Matrix3x2Extensions.html#SixLabors_Primitives_Matrix3x2Extensions_CreateRotationDegrees_System_Single_SixLabors_Primitives_PointF_
+  commentId: M:SixLabors.Primitives.Matrix3x2Extensions.CreateRotationDegrees(System.Single,SixLabors.Primitives.PointF)
+  fullName: SixLabors.Primitives.Matrix3x2Extensions.CreateRotationDegrees(System.Single, SixLabors.Primitives.PointF)
+  nameWithType: Matrix3x2Extensions.CreateRotationDegrees(Single, PointF)
+- uid: SixLabors.Primitives.Matrix3x2Extensions.CreateRotationDegrees*
+  name: CreateRotationDegrees
+  href: api/Core/SixLabors.Primitives.Matrix3x2Extensions.html#SixLabors_Primitives_Matrix3x2Extensions_CreateRotationDegrees_
+  commentId: Overload:SixLabors.Primitives.Matrix3x2Extensions.CreateRotationDegrees
+  fullName: SixLabors.Primitives.Matrix3x2Extensions.CreateRotationDegrees
+  nameWithType: Matrix3x2Extensions.CreateRotationDegrees
+- uid: SixLabors.Primitives.Matrix3x2Extensions.CreateScale(SixLabors.Primitives.SizeF)
+  name: CreateScale(SizeF)
+  href: api/Core/SixLabors.Primitives.Matrix3x2Extensions.html#SixLabors_Primitives_Matrix3x2Extensions_CreateScale_SixLabors_Primitives_SizeF_
+  commentId: M:SixLabors.Primitives.Matrix3x2Extensions.CreateScale(SixLabors.Primitives.SizeF)
+  fullName: SixLabors.Primitives.Matrix3x2Extensions.CreateScale(SixLabors.Primitives.SizeF)
+  nameWithType: Matrix3x2Extensions.CreateScale(SizeF)
+- uid: SixLabors.Primitives.Matrix3x2Extensions.CreateScale(SixLabors.Primitives.SizeF,SixLabors.Primitives.PointF)
+  name: CreateScale(SizeF, PointF)
+  href: api/Core/SixLabors.Primitives.Matrix3x2Extensions.html#SixLabors_Primitives_Matrix3x2Extensions_CreateScale_SixLabors_Primitives_SizeF_SixLabors_Primitives_PointF_
+  commentId: M:SixLabors.Primitives.Matrix3x2Extensions.CreateScale(SixLabors.Primitives.SizeF,SixLabors.Primitives.PointF)
+  fullName: SixLabors.Primitives.Matrix3x2Extensions.CreateScale(SixLabors.Primitives.SizeF, SixLabors.Primitives.PointF)
+  nameWithType: Matrix3x2Extensions.CreateScale(SizeF, PointF)
+- uid: SixLabors.Primitives.Matrix3x2Extensions.CreateScale(System.Single,SixLabors.Primitives.PointF)
+  name: CreateScale(Single, PointF)
+  href: api/Core/SixLabors.Primitives.Matrix3x2Extensions.html#SixLabors_Primitives_Matrix3x2Extensions_CreateScale_System_Single_SixLabors_Primitives_PointF_
+  commentId: M:SixLabors.Primitives.Matrix3x2Extensions.CreateScale(System.Single,SixLabors.Primitives.PointF)
+  fullName: SixLabors.Primitives.Matrix3x2Extensions.CreateScale(System.Single, SixLabors.Primitives.PointF)
+  nameWithType: Matrix3x2Extensions.CreateScale(Single, PointF)
+- uid: SixLabors.Primitives.Matrix3x2Extensions.CreateScale(System.Single,System.Single,SixLabors.Primitives.PointF)
+  name: CreateScale(Single, Single, PointF)
+  href: api/Core/SixLabors.Primitives.Matrix3x2Extensions.html#SixLabors_Primitives_Matrix3x2Extensions_CreateScale_System_Single_System_Single_SixLabors_Primitives_PointF_
+  commentId: M:SixLabors.Primitives.Matrix3x2Extensions.CreateScale(System.Single,System.Single,SixLabors.Primitives.PointF)
+  fullName: SixLabors.Primitives.Matrix3x2Extensions.CreateScale(System.Single, System.Single, SixLabors.Primitives.PointF)
+  nameWithType: Matrix3x2Extensions.CreateScale(Single, Single, PointF)
+- uid: SixLabors.Primitives.Matrix3x2Extensions.CreateScale*
+  name: CreateScale
+  href: api/Core/SixLabors.Primitives.Matrix3x2Extensions.html#SixLabors_Primitives_Matrix3x2Extensions_CreateScale_
+  commentId: Overload:SixLabors.Primitives.Matrix3x2Extensions.CreateScale
+  fullName: SixLabors.Primitives.Matrix3x2Extensions.CreateScale
+  nameWithType: Matrix3x2Extensions.CreateScale
+- uid: SixLabors.Primitives.Matrix3x2Extensions.CreateSkew(System.Single,System.Single,SixLabors.Primitives.PointF)
+  name: CreateSkew(Single, Single, PointF)
+  href: api/Core/SixLabors.Primitives.Matrix3x2Extensions.html#SixLabors_Primitives_Matrix3x2Extensions_CreateSkew_System_Single_System_Single_SixLabors_Primitives_PointF_
+  commentId: M:SixLabors.Primitives.Matrix3x2Extensions.CreateSkew(System.Single,System.Single,SixLabors.Primitives.PointF)
+  fullName: SixLabors.Primitives.Matrix3x2Extensions.CreateSkew(System.Single, System.Single, SixLabors.Primitives.PointF)
+  nameWithType: Matrix3x2Extensions.CreateSkew(Single, Single, PointF)
+- uid: SixLabors.Primitives.Matrix3x2Extensions.CreateSkew*
+  name: CreateSkew
+  href: api/Core/SixLabors.Primitives.Matrix3x2Extensions.html#SixLabors_Primitives_Matrix3x2Extensions_CreateSkew_
+  commentId: Overload:SixLabors.Primitives.Matrix3x2Extensions.CreateSkew
+  fullName: SixLabors.Primitives.Matrix3x2Extensions.CreateSkew
+  nameWithType: Matrix3x2Extensions.CreateSkew
+- uid: SixLabors.Primitives.Matrix3x2Extensions.CreateSkewDegrees(System.Single,System.Single)
+  name: CreateSkewDegrees(Single, Single)
+  href: api/Core/SixLabors.Primitives.Matrix3x2Extensions.html#SixLabors_Primitives_Matrix3x2Extensions_CreateSkewDegrees_System_Single_System_Single_
+  commentId: M:SixLabors.Primitives.Matrix3x2Extensions.CreateSkewDegrees(System.Single,System.Single)
+  fullName: SixLabors.Primitives.Matrix3x2Extensions.CreateSkewDegrees(System.Single, System.Single)
+  nameWithType: Matrix3x2Extensions.CreateSkewDegrees(Single, Single)
+- uid: SixLabors.Primitives.Matrix3x2Extensions.CreateSkewDegrees(System.Single,System.Single,SixLabors.Primitives.PointF)
+  name: CreateSkewDegrees(Single, Single, PointF)
+  href: api/Core/SixLabors.Primitives.Matrix3x2Extensions.html#SixLabors_Primitives_Matrix3x2Extensions_CreateSkewDegrees_System_Single_System_Single_SixLabors_Primitives_PointF_
+  commentId: M:SixLabors.Primitives.Matrix3x2Extensions.CreateSkewDegrees(System.Single,System.Single,SixLabors.Primitives.PointF)
+  fullName: SixLabors.Primitives.Matrix3x2Extensions.CreateSkewDegrees(System.Single, System.Single, SixLabors.Primitives.PointF)
+  nameWithType: Matrix3x2Extensions.CreateSkewDegrees(Single, Single, PointF)
+- uid: SixLabors.Primitives.Matrix3x2Extensions.CreateSkewDegrees*
+  name: CreateSkewDegrees
+  href: api/Core/SixLabors.Primitives.Matrix3x2Extensions.html#SixLabors_Primitives_Matrix3x2Extensions_CreateSkewDegrees_
+  commentId: Overload:SixLabors.Primitives.Matrix3x2Extensions.CreateSkewDegrees
+  fullName: SixLabors.Primitives.Matrix3x2Extensions.CreateSkewDegrees
+  nameWithType: Matrix3x2Extensions.CreateSkewDegrees
+- uid: SixLabors.Primitives.Matrix3x2Extensions.CreateTranslation(SixLabors.Primitives.PointF)
+  name: CreateTranslation(PointF)
+  href: api/Core/SixLabors.Primitives.Matrix3x2Extensions.html#SixLabors_Primitives_Matrix3x2Extensions_CreateTranslation_SixLabors_Primitives_PointF_
+  commentId: M:SixLabors.Primitives.Matrix3x2Extensions.CreateTranslation(SixLabors.Primitives.PointF)
+  fullName: SixLabors.Primitives.Matrix3x2Extensions.CreateTranslation(SixLabors.Primitives.PointF)
+  nameWithType: Matrix3x2Extensions.CreateTranslation(PointF)
+- uid: SixLabors.Primitives.Matrix3x2Extensions.CreateTranslation*
+  name: CreateTranslation
+  href: api/Core/SixLabors.Primitives.Matrix3x2Extensions.html#SixLabors_Primitives_Matrix3x2Extensions_CreateTranslation_
+  commentId: Overload:SixLabors.Primitives.Matrix3x2Extensions.CreateTranslation
+  fullName: SixLabors.Primitives.Matrix3x2Extensions.CreateTranslation
+  nameWithType: Matrix3x2Extensions.CreateTranslation
+- uid: SixLabors.Primitives.Point
+  name: Point
+  href: api/Core/SixLabors.Primitives.Point.html
+  commentId: T:SixLabors.Primitives.Point
+  fullName: SixLabors.Primitives.Point
+  nameWithType: Point
+- uid: SixLabors.Primitives.Point.#ctor(SixLabors.Primitives.Size)
+  name: Point(Size)
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point__ctor_SixLabors_Primitives_Size_
+  commentId: M:SixLabors.Primitives.Point.#ctor(SixLabors.Primitives.Size)
+  fullName: SixLabors.Primitives.Point.Point(SixLabors.Primitives.Size)
+  nameWithType: Point.Point(Size)
+- uid: SixLabors.Primitives.Point.#ctor(System.Int32)
+  name: Point(Int32)
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point__ctor_System_Int32_
+  commentId: M:SixLabors.Primitives.Point.#ctor(System.Int32)
+  fullName: SixLabors.Primitives.Point.Point(System.Int32)
+  nameWithType: Point.Point(Int32)
+- uid: SixLabors.Primitives.Point.#ctor(System.Int32,System.Int32)
+  name: Point(Int32, Int32)
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point__ctor_System_Int32_System_Int32_
+  commentId: M:SixLabors.Primitives.Point.#ctor(System.Int32,System.Int32)
+  fullName: SixLabors.Primitives.Point.Point(System.Int32, System.Int32)
+  nameWithType: Point.Point(Int32, Int32)
+- uid: SixLabors.Primitives.Point.#ctor*
+  name: Point
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point__ctor_
+  commentId: Overload:SixLabors.Primitives.Point.#ctor
+  fullName: SixLabors.Primitives.Point.Point
+  nameWithType: Point.Point
+- uid: SixLabors.Primitives.Point.Add(SixLabors.Primitives.Point,SixLabors.Primitives.Size)
+  name: Add(Point, Size)
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_Add_SixLabors_Primitives_Point_SixLabors_Primitives_Size_
+  commentId: M:SixLabors.Primitives.Point.Add(SixLabors.Primitives.Point,SixLabors.Primitives.Size)
+  fullName: SixLabors.Primitives.Point.Add(SixLabors.Primitives.Point, SixLabors.Primitives.Size)
+  nameWithType: Point.Add(Point, Size)
+- uid: SixLabors.Primitives.Point.Add*
+  name: Add
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_Add_
+  commentId: Overload:SixLabors.Primitives.Point.Add
+  fullName: SixLabors.Primitives.Point.Add
+  nameWithType: Point.Add
+- uid: SixLabors.Primitives.Point.Ceiling(SixLabors.Primitives.PointF)
+  name: Ceiling(PointF)
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_Ceiling_SixLabors_Primitives_PointF_
+  commentId: M:SixLabors.Primitives.Point.Ceiling(SixLabors.Primitives.PointF)
+  fullName: SixLabors.Primitives.Point.Ceiling(SixLabors.Primitives.PointF)
+  nameWithType: Point.Ceiling(PointF)
+- uid: SixLabors.Primitives.Point.Ceiling*
+  name: Ceiling
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_Ceiling_
+  commentId: Overload:SixLabors.Primitives.Point.Ceiling
+  fullName: SixLabors.Primitives.Point.Ceiling
+  nameWithType: Point.Ceiling
+- uid: SixLabors.Primitives.Point.Empty
+  name: Empty
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_Empty
+  commentId: F:SixLabors.Primitives.Point.Empty
+  fullName: SixLabors.Primitives.Point.Empty
+  nameWithType: Point.Empty
+- uid: SixLabors.Primitives.Point.Equals(SixLabors.Primitives.Point)
+  name: Equals(Point)
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_Equals_SixLabors_Primitives_Point_
+  commentId: M:SixLabors.Primitives.Point.Equals(SixLabors.Primitives.Point)
+  fullName: SixLabors.Primitives.Point.Equals(SixLabors.Primitives.Point)
+  nameWithType: Point.Equals(Point)
+- uid: SixLabors.Primitives.Point.Equals(System.Object)
+  name: Equals(Object)
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_Equals_System_Object_
+  commentId: M:SixLabors.Primitives.Point.Equals(System.Object)
+  fullName: SixLabors.Primitives.Point.Equals(System.Object)
+  nameWithType: Point.Equals(Object)
+- uid: SixLabors.Primitives.Point.Equals*
+  name: Equals
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_Equals_
+  commentId: Overload:SixLabors.Primitives.Point.Equals
+  fullName: SixLabors.Primitives.Point.Equals
+  nameWithType: Point.Equals
+- uid: SixLabors.Primitives.Point.GetHashCode
+  name: GetHashCode()
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_GetHashCode
+  commentId: M:SixLabors.Primitives.Point.GetHashCode
+  fullName: SixLabors.Primitives.Point.GetHashCode()
+  nameWithType: Point.GetHashCode()
+- uid: SixLabors.Primitives.Point.GetHashCode*
+  name: GetHashCode
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_GetHashCode_
+  commentId: Overload:SixLabors.Primitives.Point.GetHashCode
+  fullName: SixLabors.Primitives.Point.GetHashCode
+  nameWithType: Point.GetHashCode
+- uid: SixLabors.Primitives.Point.IsEmpty
+  name: IsEmpty
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_IsEmpty
+  commentId: P:SixLabors.Primitives.Point.IsEmpty
+  fullName: SixLabors.Primitives.Point.IsEmpty
+  nameWithType: Point.IsEmpty
+- uid: SixLabors.Primitives.Point.IsEmpty*
+  name: IsEmpty
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_IsEmpty_
+  commentId: Overload:SixLabors.Primitives.Point.IsEmpty
+  fullName: SixLabors.Primitives.Point.IsEmpty
+  nameWithType: Point.IsEmpty
+- uid: SixLabors.Primitives.Point.Multiply(SixLabors.Primitives.Point,System.Int32)
+  name: Multiply(Point, Int32)
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_Multiply_SixLabors_Primitives_Point_System_Int32_
+  commentId: M:SixLabors.Primitives.Point.Multiply(SixLabors.Primitives.Point,System.Int32)
+  fullName: SixLabors.Primitives.Point.Multiply(SixLabors.Primitives.Point, System.Int32)
+  nameWithType: Point.Multiply(Point, Int32)
+- uid: SixLabors.Primitives.Point.Multiply*
+  name: Multiply
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_Multiply_
+  commentId: Overload:SixLabors.Primitives.Point.Multiply
+  fullName: SixLabors.Primitives.Point.Multiply
+  nameWithType: Point.Multiply
+- uid: SixLabors.Primitives.Point.Offset(SixLabors.Primitives.Point)
+  name: Offset(Point)
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_Offset_SixLabors_Primitives_Point_
+  commentId: M:SixLabors.Primitives.Point.Offset(SixLabors.Primitives.Point)
+  fullName: SixLabors.Primitives.Point.Offset(SixLabors.Primitives.Point)
+  nameWithType: Point.Offset(Point)
+- uid: SixLabors.Primitives.Point.Offset(System.Int32,System.Int32)
+  name: Offset(Int32, Int32)
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_Offset_System_Int32_System_Int32_
+  commentId: M:SixLabors.Primitives.Point.Offset(System.Int32,System.Int32)
+  fullName: SixLabors.Primitives.Point.Offset(System.Int32, System.Int32)
+  nameWithType: Point.Offset(Int32, Int32)
+- uid: SixLabors.Primitives.Point.Offset*
+  name: Offset
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_Offset_
+  commentId: Overload:SixLabors.Primitives.Point.Offset
+  fullName: SixLabors.Primitives.Point.Offset
+  nameWithType: Point.Offset
+- uid: SixLabors.Primitives.Point.op_Addition(SixLabors.Primitives.Point,SixLabors.Primitives.Size)
+  name: Addition(Point, Size)
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_op_Addition_SixLabors_Primitives_Point_SixLabors_Primitives_Size_
+  commentId: M:SixLabors.Primitives.Point.op_Addition(SixLabors.Primitives.Point,SixLabors.Primitives.Size)
+  fullName: SixLabors.Primitives.Point.Addition(SixLabors.Primitives.Point, SixLabors.Primitives.Size)
+  nameWithType: Point.Addition(Point, Size)
+- uid: SixLabors.Primitives.Point.op_Addition*
+  name: Addition
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_op_Addition_
+  commentId: Overload:SixLabors.Primitives.Point.op_Addition
+  fullName: SixLabors.Primitives.Point.Addition
+  nameWithType: Point.Addition
+- uid: SixLabors.Primitives.Point.op_Division(SixLabors.Primitives.Point,System.Int32)
+  name: Division(Point, Int32)
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_op_Division_SixLabors_Primitives_Point_System_Int32_
+  commentId: M:SixLabors.Primitives.Point.op_Division(SixLabors.Primitives.Point,System.Int32)
+  fullName: SixLabors.Primitives.Point.Division(SixLabors.Primitives.Point, System.Int32)
+  nameWithType: Point.Division(Point, Int32)
+- uid: SixLabors.Primitives.Point.op_Division*
+  name: Division
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_op_Division_
+  commentId: Overload:SixLabors.Primitives.Point.op_Division
+  fullName: SixLabors.Primitives.Point.Division
+  nameWithType: Point.Division
+- uid: SixLabors.Primitives.Point.op_Equality(SixLabors.Primitives.Point,SixLabors.Primitives.Point)
+  name: Equality(Point, Point)
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_op_Equality_SixLabors_Primitives_Point_SixLabors_Primitives_Point_
+  commentId: M:SixLabors.Primitives.Point.op_Equality(SixLabors.Primitives.Point,SixLabors.Primitives.Point)
+  fullName: SixLabors.Primitives.Point.Equality(SixLabors.Primitives.Point, SixLabors.Primitives.Point)
+  nameWithType: Point.Equality(Point, Point)
+- uid: SixLabors.Primitives.Point.op_Equality*
+  name: Equality
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_op_Equality_
+  commentId: Overload:SixLabors.Primitives.Point.op_Equality
+  fullName: SixLabors.Primitives.Point.Equality
+  nameWithType: Point.Equality
+- uid: SixLabors.Primitives.Point.op_Explicit(SixLabors.Primitives.Point)~SixLabors.Primitives.Size
+  name: Explicit(Point to Size)
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_op_Explicit_SixLabors_Primitives_Point__SixLabors_Primitives_Size
+  commentId: M:SixLabors.Primitives.Point.op_Explicit(SixLabors.Primitives.Point)~SixLabors.Primitives.Size
+  name.vb: Narrowing(Point to Size)
+  fullName: SixLabors.Primitives.Point.Explicit(SixLabors.Primitives.Point to SixLabors.Primitives.Size)
+  fullName.vb: SixLabors.Primitives.Point.Narrowing(SixLabors.Primitives.Point to SixLabors.Primitives.Size)
+  nameWithType: Point.Explicit(Point to Size)
+  nameWithType.vb: Point.Narrowing(Point to Size)
+- uid: SixLabors.Primitives.Point.op_Explicit*
+  name: Explicit
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_op_Explicit_
+  commentId: Overload:SixLabors.Primitives.Point.op_Explicit
+  name.vb: Narrowing
+  fullName: SixLabors.Primitives.Point.Explicit
+  fullName.vb: SixLabors.Primitives.Point.Narrowing
+  nameWithType: Point.Explicit
+  nameWithType.vb: Point.Narrowing
+- uid: SixLabors.Primitives.Point.op_Implicit(SixLabors.Primitives.Point)~SixLabors.Primitives.PointF
+  name: Implicit(Point to PointF)
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_op_Implicit_SixLabors_Primitives_Point__SixLabors_Primitives_PointF
+  commentId: M:SixLabors.Primitives.Point.op_Implicit(SixLabors.Primitives.Point)~SixLabors.Primitives.PointF
+  name.vb: Widening(Point to PointF)
+  fullName: SixLabors.Primitives.Point.Implicit(SixLabors.Primitives.Point to SixLabors.Primitives.PointF)
+  fullName.vb: SixLabors.Primitives.Point.Widening(SixLabors.Primitives.Point to SixLabors.Primitives.PointF)
+  nameWithType: Point.Implicit(Point to PointF)
+  nameWithType.vb: Point.Widening(Point to PointF)
+- uid: SixLabors.Primitives.Point.op_Implicit(SixLabors.Primitives.Point)~Vector2
+  name: Implicit(Point to Vector2)
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_op_Implicit_SixLabors_Primitives_Point__Vector2
+  commentId: M:SixLabors.Primitives.Point.op_Implicit(SixLabors.Primitives.Point)~Vector2
+  name.vb: Widening(Point to Vector2)
+  fullName: SixLabors.Primitives.Point.Implicit(SixLabors.Primitives.Point to Vector2)
+  fullName.vb: SixLabors.Primitives.Point.Widening(SixLabors.Primitives.Point to Vector2)
+  nameWithType: Point.Implicit(Point to Vector2)
+  nameWithType.vb: Point.Widening(Point to Vector2)
+- uid: SixLabors.Primitives.Point.op_Implicit*
+  name: Implicit
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_op_Implicit_
+  commentId: Overload:SixLabors.Primitives.Point.op_Implicit
+  name.vb: Widening
+  fullName: SixLabors.Primitives.Point.Implicit
+  fullName.vb: SixLabors.Primitives.Point.Widening
+  nameWithType: Point.Implicit
+  nameWithType.vb: Point.Widening
+- uid: SixLabors.Primitives.Point.op_Inequality(SixLabors.Primitives.Point,SixLabors.Primitives.Point)
+  name: Inequality(Point, Point)
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_op_Inequality_SixLabors_Primitives_Point_SixLabors_Primitives_Point_
+  commentId: M:SixLabors.Primitives.Point.op_Inequality(SixLabors.Primitives.Point,SixLabors.Primitives.Point)
+  fullName: SixLabors.Primitives.Point.Inequality(SixLabors.Primitives.Point, SixLabors.Primitives.Point)
+  nameWithType: Point.Inequality(Point, Point)
+- uid: SixLabors.Primitives.Point.op_Inequality*
+  name: Inequality
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_op_Inequality_
+  commentId: Overload:SixLabors.Primitives.Point.op_Inequality
+  fullName: SixLabors.Primitives.Point.Inequality
+  nameWithType: Point.Inequality
+- uid: SixLabors.Primitives.Point.op_Multiply(SixLabors.Primitives.Point,System.Int32)
+  name: Multiply(Point, Int32)
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_op_Multiply_SixLabors_Primitives_Point_System_Int32_
+  commentId: M:SixLabors.Primitives.Point.op_Multiply(SixLabors.Primitives.Point,System.Int32)
+  fullName: SixLabors.Primitives.Point.Multiply(SixLabors.Primitives.Point, System.Int32)
+  nameWithType: Point.Multiply(Point, Int32)
+- uid: SixLabors.Primitives.Point.op_Multiply(System.Int32,SixLabors.Primitives.Point)
+  name: Multiply(Int32, Point)
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_op_Multiply_System_Int32_SixLabors_Primitives_Point_
+  commentId: M:SixLabors.Primitives.Point.op_Multiply(System.Int32,SixLabors.Primitives.Point)
+  fullName: SixLabors.Primitives.Point.Multiply(System.Int32, SixLabors.Primitives.Point)
+  nameWithType: Point.Multiply(Int32, Point)
+- uid: SixLabors.Primitives.Point.op_Multiply*
+  name: Multiply
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_op_Multiply_
+  commentId: Overload:SixLabors.Primitives.Point.op_Multiply
+  fullName: SixLabors.Primitives.Point.Multiply
+  nameWithType: Point.Multiply
+- uid: SixLabors.Primitives.Point.op_Subtraction(SixLabors.Primitives.Point,SixLabors.Primitives.Size)
+  name: Subtraction(Point, Size)
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_op_Subtraction_SixLabors_Primitives_Point_SixLabors_Primitives_Size_
+  commentId: M:SixLabors.Primitives.Point.op_Subtraction(SixLabors.Primitives.Point,SixLabors.Primitives.Size)
+  fullName: SixLabors.Primitives.Point.Subtraction(SixLabors.Primitives.Point, SixLabors.Primitives.Size)
+  nameWithType: Point.Subtraction(Point, Size)
+- uid: SixLabors.Primitives.Point.op_Subtraction*
+  name: Subtraction
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_op_Subtraction_
+  commentId: Overload:SixLabors.Primitives.Point.op_Subtraction
+  fullName: SixLabors.Primitives.Point.Subtraction
+  nameWithType: Point.Subtraction
+- uid: SixLabors.Primitives.Point.op_UnaryNegation(SixLabors.Primitives.Point)
+  name: UnaryNegation(Point)
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_op_UnaryNegation_SixLabors_Primitives_Point_
+  commentId: M:SixLabors.Primitives.Point.op_UnaryNegation(SixLabors.Primitives.Point)
+  fullName: SixLabors.Primitives.Point.UnaryNegation(SixLabors.Primitives.Point)
+  nameWithType: Point.UnaryNegation(Point)
+- uid: SixLabors.Primitives.Point.op_UnaryNegation*
+  name: UnaryNegation
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_op_UnaryNegation_
+  commentId: Overload:SixLabors.Primitives.Point.op_UnaryNegation
+  fullName: SixLabors.Primitives.Point.UnaryNegation
+  nameWithType: Point.UnaryNegation
+- uid: SixLabors.Primitives.Point.Rotate(SixLabors.Primitives.Point,Matrix3x2)
+  name: Rotate(Point, Matrix3x2)
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_Rotate_SixLabors_Primitives_Point_Matrix3x2_
+  commentId: M:SixLabors.Primitives.Point.Rotate(SixLabors.Primitives.Point,Matrix3x2)
+  fullName: SixLabors.Primitives.Point.Rotate(SixLabors.Primitives.Point, Matrix3x2)
+  nameWithType: Point.Rotate(Point, Matrix3x2)
+- uid: SixLabors.Primitives.Point.Rotate*
+  name: Rotate
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_Rotate_
+  commentId: Overload:SixLabors.Primitives.Point.Rotate
+  fullName: SixLabors.Primitives.Point.Rotate
+  nameWithType: Point.Rotate
+- uid: SixLabors.Primitives.Point.Round(SixLabors.Primitives.PointF)
+  name: Round(PointF)
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_Round_SixLabors_Primitives_PointF_
+  commentId: M:SixLabors.Primitives.Point.Round(SixLabors.Primitives.PointF)
+  fullName: SixLabors.Primitives.Point.Round(SixLabors.Primitives.PointF)
+  nameWithType: Point.Round(PointF)
+- uid: SixLabors.Primitives.Point.Round(Vector2)
+  name: Round(Vector2)
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_Round_Vector2_
+  commentId: M:SixLabors.Primitives.Point.Round(Vector2)
+  fullName: SixLabors.Primitives.Point.Round(Vector2)
+  nameWithType: Point.Round(Vector2)
+- uid: SixLabors.Primitives.Point.Round*
+  name: Round
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_Round_
+  commentId: Overload:SixLabors.Primitives.Point.Round
+  fullName: SixLabors.Primitives.Point.Round
+  nameWithType: Point.Round
+- uid: SixLabors.Primitives.Point.Skew(SixLabors.Primitives.Point,Matrix3x2)
+  name: Skew(Point, Matrix3x2)
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_Skew_SixLabors_Primitives_Point_Matrix3x2_
+  commentId: M:SixLabors.Primitives.Point.Skew(SixLabors.Primitives.Point,Matrix3x2)
+  fullName: SixLabors.Primitives.Point.Skew(SixLabors.Primitives.Point, Matrix3x2)
+  nameWithType: Point.Skew(Point, Matrix3x2)
+- uid: SixLabors.Primitives.Point.Skew*
+  name: Skew
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_Skew_
+  commentId: Overload:SixLabors.Primitives.Point.Skew
+  fullName: SixLabors.Primitives.Point.Skew
+  nameWithType: Point.Skew
+- uid: SixLabors.Primitives.Point.Subtract(SixLabors.Primitives.Point,SixLabors.Primitives.Size)
+  name: Subtract(Point, Size)
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_Subtract_SixLabors_Primitives_Point_SixLabors_Primitives_Size_
+  commentId: M:SixLabors.Primitives.Point.Subtract(SixLabors.Primitives.Point,SixLabors.Primitives.Size)
+  fullName: SixLabors.Primitives.Point.Subtract(SixLabors.Primitives.Point, SixLabors.Primitives.Size)
+  nameWithType: Point.Subtract(Point, Size)
+- uid: SixLabors.Primitives.Point.Subtract*
+  name: Subtract
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_Subtract_
+  commentId: Overload:SixLabors.Primitives.Point.Subtract
+  fullName: SixLabors.Primitives.Point.Subtract
+  nameWithType: Point.Subtract
+- uid: SixLabors.Primitives.Point.ToString
+  name: ToString()
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_ToString
+  commentId: M:SixLabors.Primitives.Point.ToString
+  fullName: SixLabors.Primitives.Point.ToString()
+  nameWithType: Point.ToString()
+- uid: SixLabors.Primitives.Point.ToString*
+  name: ToString
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_ToString_
+  commentId: Overload:SixLabors.Primitives.Point.ToString
+  fullName: SixLabors.Primitives.Point.ToString
+  nameWithType: Point.ToString
+- uid: SixLabors.Primitives.Point.Transform(SixLabors.Primitives.Point,Matrix3x2)
+  name: Transform(Point, Matrix3x2)
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_Transform_SixLabors_Primitives_Point_Matrix3x2_
+  commentId: M:SixLabors.Primitives.Point.Transform(SixLabors.Primitives.Point,Matrix3x2)
+  fullName: SixLabors.Primitives.Point.Transform(SixLabors.Primitives.Point, Matrix3x2)
+  nameWithType: Point.Transform(Point, Matrix3x2)
+- uid: SixLabors.Primitives.Point.Transform*
+  name: Transform
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_Transform_
+  commentId: Overload:SixLabors.Primitives.Point.Transform
+  fullName: SixLabors.Primitives.Point.Transform
+  nameWithType: Point.Transform
+- uid: SixLabors.Primitives.Point.Truncate(SixLabors.Primitives.PointF)
+  name: Truncate(PointF)
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_Truncate_SixLabors_Primitives_PointF_
+  commentId: M:SixLabors.Primitives.Point.Truncate(SixLabors.Primitives.PointF)
+  fullName: SixLabors.Primitives.Point.Truncate(SixLabors.Primitives.PointF)
+  nameWithType: Point.Truncate(PointF)
+- uid: SixLabors.Primitives.Point.Truncate*
+  name: Truncate
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_Truncate_
+  commentId: Overload:SixLabors.Primitives.Point.Truncate
+  fullName: SixLabors.Primitives.Point.Truncate
+  nameWithType: Point.Truncate
+- uid: SixLabors.Primitives.Point.X
+  name: X
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_X
+  commentId: P:SixLabors.Primitives.Point.X
+  fullName: SixLabors.Primitives.Point.X
+  nameWithType: Point.X
+- uid: SixLabors.Primitives.Point.X*
+  name: X
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_X_
+  commentId: Overload:SixLabors.Primitives.Point.X
+  fullName: SixLabors.Primitives.Point.X
+  nameWithType: Point.X
+- uid: SixLabors.Primitives.Point.Y
+  name: Y
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_Y
+  commentId: P:SixLabors.Primitives.Point.Y
+  fullName: SixLabors.Primitives.Point.Y
+  nameWithType: Point.Y
+- uid: SixLabors.Primitives.Point.Y*
+  name: Y
+  href: api/Core/SixLabors.Primitives.Point.html#SixLabors_Primitives_Point_Y_
+  commentId: Overload:SixLabors.Primitives.Point.Y
+  fullName: SixLabors.Primitives.Point.Y
+  nameWithType: Point.Y
+- uid: SixLabors.Primitives.PointF
+  name: PointF
+  href: api/Core/SixLabors.Primitives.PointF.html
+  commentId: T:SixLabors.Primitives.PointF
+  fullName: SixLabors.Primitives.PointF
+  nameWithType: PointF
+- uid: SixLabors.Primitives.PointF.#ctor(SixLabors.Primitives.SizeF)
+  name: PointF(SizeF)
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF__ctor_SixLabors_Primitives_SizeF_
+  commentId: M:SixLabors.Primitives.PointF.#ctor(SixLabors.Primitives.SizeF)
+  fullName: SixLabors.Primitives.PointF.PointF(SixLabors.Primitives.SizeF)
+  nameWithType: PointF.PointF(SizeF)
+- uid: SixLabors.Primitives.PointF.#ctor(System.Single,System.Single)
+  name: PointF(Single, Single)
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF__ctor_System_Single_System_Single_
+  commentId: M:SixLabors.Primitives.PointF.#ctor(System.Single,System.Single)
+  fullName: SixLabors.Primitives.PointF.PointF(System.Single, System.Single)
+  nameWithType: PointF.PointF(Single, Single)
+- uid: SixLabors.Primitives.PointF.#ctor*
+  name: PointF
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF__ctor_
+  commentId: Overload:SixLabors.Primitives.PointF.#ctor
+  fullName: SixLabors.Primitives.PointF.PointF
+  nameWithType: PointF.PointF
+- uid: SixLabors.Primitives.PointF.Add(SixLabors.Primitives.PointF,SixLabors.Primitives.PointF)
+  name: Add(PointF, PointF)
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF_Add_SixLabors_Primitives_PointF_SixLabors_Primitives_PointF_
+  commentId: M:SixLabors.Primitives.PointF.Add(SixLabors.Primitives.PointF,SixLabors.Primitives.PointF)
+  fullName: SixLabors.Primitives.PointF.Add(SixLabors.Primitives.PointF, SixLabors.Primitives.PointF)
+  nameWithType: PointF.Add(PointF, PointF)
+- uid: SixLabors.Primitives.PointF.Add(SixLabors.Primitives.PointF,SixLabors.Primitives.SizeF)
+  name: Add(PointF, SizeF)
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF_Add_SixLabors_Primitives_PointF_SixLabors_Primitives_SizeF_
+  commentId: M:SixLabors.Primitives.PointF.Add(SixLabors.Primitives.PointF,SixLabors.Primitives.SizeF)
+  fullName: SixLabors.Primitives.PointF.Add(SixLabors.Primitives.PointF, SixLabors.Primitives.SizeF)
+  nameWithType: PointF.Add(PointF, SizeF)
+- uid: SixLabors.Primitives.PointF.Add*
+  name: Add
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF_Add_
+  commentId: Overload:SixLabors.Primitives.PointF.Add
+  fullName: SixLabors.Primitives.PointF.Add
+  nameWithType: PointF.Add
+- uid: SixLabors.Primitives.PointF.Empty
+  name: Empty
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF_Empty
+  commentId: F:SixLabors.Primitives.PointF.Empty
+  fullName: SixLabors.Primitives.PointF.Empty
+  nameWithType: PointF.Empty
+- uid: SixLabors.Primitives.PointF.Equals(SixLabors.Primitives.PointF)
+  name: Equals(PointF)
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF_Equals_SixLabors_Primitives_PointF_
+  commentId: M:SixLabors.Primitives.PointF.Equals(SixLabors.Primitives.PointF)
+  fullName: SixLabors.Primitives.PointF.Equals(SixLabors.Primitives.PointF)
+  nameWithType: PointF.Equals(PointF)
+- uid: SixLabors.Primitives.PointF.Equals(System.Object)
+  name: Equals(Object)
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF_Equals_System_Object_
+  commentId: M:SixLabors.Primitives.PointF.Equals(System.Object)
+  fullName: SixLabors.Primitives.PointF.Equals(System.Object)
+  nameWithType: PointF.Equals(Object)
+- uid: SixLabors.Primitives.PointF.Equals*
+  name: Equals
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF_Equals_
+  commentId: Overload:SixLabors.Primitives.PointF.Equals
+  fullName: SixLabors.Primitives.PointF.Equals
+  nameWithType: PointF.Equals
+- uid: SixLabors.Primitives.PointF.GetHashCode
+  name: GetHashCode()
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF_GetHashCode
+  commentId: M:SixLabors.Primitives.PointF.GetHashCode
+  fullName: SixLabors.Primitives.PointF.GetHashCode()
+  nameWithType: PointF.GetHashCode()
+- uid: SixLabors.Primitives.PointF.GetHashCode*
+  name: GetHashCode
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF_GetHashCode_
+  commentId: Overload:SixLabors.Primitives.PointF.GetHashCode
+  fullName: SixLabors.Primitives.PointF.GetHashCode
+  nameWithType: PointF.GetHashCode
+- uid: SixLabors.Primitives.PointF.IsEmpty
+  name: IsEmpty
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF_IsEmpty
+  commentId: P:SixLabors.Primitives.PointF.IsEmpty
+  fullName: SixLabors.Primitives.PointF.IsEmpty
+  nameWithType: PointF.IsEmpty
+- uid: SixLabors.Primitives.PointF.IsEmpty*
+  name: IsEmpty
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF_IsEmpty_
+  commentId: Overload:SixLabors.Primitives.PointF.IsEmpty
+  fullName: SixLabors.Primitives.PointF.IsEmpty
+  nameWithType: PointF.IsEmpty
+- uid: SixLabors.Primitives.PointF.Multiply(SixLabors.Primitives.PointF,System.Single)
+  name: Multiply(PointF, Single)
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF_Multiply_SixLabors_Primitives_PointF_System_Single_
+  commentId: M:SixLabors.Primitives.PointF.Multiply(SixLabors.Primitives.PointF,System.Single)
+  fullName: SixLabors.Primitives.PointF.Multiply(SixLabors.Primitives.PointF, System.Single)
+  nameWithType: PointF.Multiply(PointF, Single)
+- uid: SixLabors.Primitives.PointF.Multiply*
+  name: Multiply
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF_Multiply_
+  commentId: Overload:SixLabors.Primitives.PointF.Multiply
+  fullName: SixLabors.Primitives.PointF.Multiply
+  nameWithType: PointF.Multiply
+- uid: SixLabors.Primitives.PointF.Offset(SixLabors.Primitives.PointF)
+  name: Offset(PointF)
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF_Offset_SixLabors_Primitives_PointF_
+  commentId: M:SixLabors.Primitives.PointF.Offset(SixLabors.Primitives.PointF)
+  fullName: SixLabors.Primitives.PointF.Offset(SixLabors.Primitives.PointF)
+  nameWithType: PointF.Offset(PointF)
+- uid: SixLabors.Primitives.PointF.Offset(System.Single,System.Single)
+  name: Offset(Single, Single)
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF_Offset_System_Single_System_Single_
+  commentId: M:SixLabors.Primitives.PointF.Offset(System.Single,System.Single)
+  fullName: SixLabors.Primitives.PointF.Offset(System.Single, System.Single)
+  nameWithType: PointF.Offset(Single, Single)
+- uid: SixLabors.Primitives.PointF.Offset*
+  name: Offset
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF_Offset_
+  commentId: Overload:SixLabors.Primitives.PointF.Offset
+  fullName: SixLabors.Primitives.PointF.Offset
+  nameWithType: PointF.Offset
+- uid: SixLabors.Primitives.PointF.op_Addition(SixLabors.Primitives.PointF,SixLabors.Primitives.PointF)
+  name: Addition(PointF, PointF)
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF_op_Addition_SixLabors_Primitives_PointF_SixLabors_Primitives_PointF_
+  commentId: M:SixLabors.Primitives.PointF.op_Addition(SixLabors.Primitives.PointF,SixLabors.Primitives.PointF)
+  fullName: SixLabors.Primitives.PointF.Addition(SixLabors.Primitives.PointF, SixLabors.Primitives.PointF)
+  nameWithType: PointF.Addition(PointF, PointF)
+- uid: SixLabors.Primitives.PointF.op_Addition(SixLabors.Primitives.PointF,SixLabors.Primitives.SizeF)
+  name: Addition(PointF, SizeF)
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF_op_Addition_SixLabors_Primitives_PointF_SixLabors_Primitives_SizeF_
+  commentId: M:SixLabors.Primitives.PointF.op_Addition(SixLabors.Primitives.PointF,SixLabors.Primitives.SizeF)
+  fullName: SixLabors.Primitives.PointF.Addition(SixLabors.Primitives.PointF, SixLabors.Primitives.SizeF)
+  nameWithType: PointF.Addition(PointF, SizeF)
+- uid: SixLabors.Primitives.PointF.op_Addition*
+  name: Addition
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF_op_Addition_
+  commentId: Overload:SixLabors.Primitives.PointF.op_Addition
+  fullName: SixLabors.Primitives.PointF.Addition
+  nameWithType: PointF.Addition
+- uid: SixLabors.Primitives.PointF.op_Division(SixLabors.Primitives.PointF,System.Single)
+  name: Division(PointF, Single)
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF_op_Division_SixLabors_Primitives_PointF_System_Single_
+  commentId: M:SixLabors.Primitives.PointF.op_Division(SixLabors.Primitives.PointF,System.Single)
+  fullName: SixLabors.Primitives.PointF.Division(SixLabors.Primitives.PointF, System.Single)
+  nameWithType: PointF.Division(PointF, Single)
+- uid: SixLabors.Primitives.PointF.op_Division*
+  name: Division
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF_op_Division_
+  commentId: Overload:SixLabors.Primitives.PointF.op_Division
+  fullName: SixLabors.Primitives.PointF.Division
+  nameWithType: PointF.Division
+- uid: SixLabors.Primitives.PointF.op_Equality(SixLabors.Primitives.PointF,SixLabors.Primitives.PointF)
+  name: Equality(PointF, PointF)
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF_op_Equality_SixLabors_Primitives_PointF_SixLabors_Primitives_PointF_
+  commentId: M:SixLabors.Primitives.PointF.op_Equality(SixLabors.Primitives.PointF,SixLabors.Primitives.PointF)
+  fullName: SixLabors.Primitives.PointF.Equality(SixLabors.Primitives.PointF, SixLabors.Primitives.PointF)
+  nameWithType: PointF.Equality(PointF, PointF)
+- uid: SixLabors.Primitives.PointF.op_Equality*
+  name: Equality
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF_op_Equality_
+  commentId: Overload:SixLabors.Primitives.PointF.op_Equality
+  fullName: SixLabors.Primitives.PointF.Equality
+  nameWithType: PointF.Equality
+- uid: SixLabors.Primitives.PointF.op_Explicit(SixLabors.Primitives.PointF)~SixLabors.Primitives.Point
+  name: Explicit(PointF to Point)
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF_op_Explicit_SixLabors_Primitives_PointF__SixLabors_Primitives_Point
+  commentId: M:SixLabors.Primitives.PointF.op_Explicit(SixLabors.Primitives.PointF)~SixLabors.Primitives.Point
+  name.vb: Narrowing(PointF to Point)
+  fullName: SixLabors.Primitives.PointF.Explicit(SixLabors.Primitives.PointF to SixLabors.Primitives.Point)
+  fullName.vb: SixLabors.Primitives.PointF.Narrowing(SixLabors.Primitives.PointF to SixLabors.Primitives.Point)
+  nameWithType: PointF.Explicit(PointF to Point)
+  nameWithType.vb: PointF.Narrowing(PointF to Point)
+- uid: SixLabors.Primitives.PointF.op_Explicit*
+  name: Explicit
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF_op_Explicit_
+  commentId: Overload:SixLabors.Primitives.PointF.op_Explicit
+  name.vb: Narrowing
+  fullName: SixLabors.Primitives.PointF.Explicit
+  fullName.vb: SixLabors.Primitives.PointF.Narrowing
+  nameWithType: PointF.Explicit
+  nameWithType.vb: PointF.Narrowing
+- uid: SixLabors.Primitives.PointF.op_Implicit(SixLabors.Primitives.PointF)~Vector2
+  name: Implicit(PointF to Vector2)
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF_op_Implicit_SixLabors_Primitives_PointF__Vector2
+  commentId: M:SixLabors.Primitives.PointF.op_Implicit(SixLabors.Primitives.PointF)~Vector2
+  name.vb: Widening(PointF to Vector2)
+  fullName: SixLabors.Primitives.PointF.Implicit(SixLabors.Primitives.PointF to Vector2)
+  fullName.vb: SixLabors.Primitives.PointF.Widening(SixLabors.Primitives.PointF to Vector2)
+  nameWithType: PointF.Implicit(PointF to Vector2)
+  nameWithType.vb: PointF.Widening(PointF to Vector2)
+- uid: SixLabors.Primitives.PointF.op_Implicit(Vector2)~SixLabors.Primitives.PointF
+  name: Implicit(Vector2 to PointF)
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF_op_Implicit_Vector2__SixLabors_Primitives_PointF
+  commentId: M:SixLabors.Primitives.PointF.op_Implicit(Vector2)~SixLabors.Primitives.PointF
+  name.vb: Widening(Vector2 to PointF)
+  fullName: SixLabors.Primitives.PointF.Implicit(Vector2 to SixLabors.Primitives.PointF)
+  fullName.vb: SixLabors.Primitives.PointF.Widening(Vector2 to SixLabors.Primitives.PointF)
+  nameWithType: PointF.Implicit(Vector2 to PointF)
+  nameWithType.vb: PointF.Widening(Vector2 to PointF)
+- uid: SixLabors.Primitives.PointF.op_Implicit*
+  name: Implicit
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF_op_Implicit_
+  commentId: Overload:SixLabors.Primitives.PointF.op_Implicit
+  name.vb: Widening
+  fullName: SixLabors.Primitives.PointF.Implicit
+  fullName.vb: SixLabors.Primitives.PointF.Widening
+  nameWithType: PointF.Implicit
+  nameWithType.vb: PointF.Widening
+- uid: SixLabors.Primitives.PointF.op_Inequality(SixLabors.Primitives.PointF,SixLabors.Primitives.PointF)
+  name: Inequality(PointF, PointF)
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF_op_Inequality_SixLabors_Primitives_PointF_SixLabors_Primitives_PointF_
+  commentId: M:SixLabors.Primitives.PointF.op_Inequality(SixLabors.Primitives.PointF,SixLabors.Primitives.PointF)
+  fullName: SixLabors.Primitives.PointF.Inequality(SixLabors.Primitives.PointF, SixLabors.Primitives.PointF)
+  nameWithType: PointF.Inequality(PointF, PointF)
+- uid: SixLabors.Primitives.PointF.op_Inequality*
+  name: Inequality
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF_op_Inequality_
+  commentId: Overload:SixLabors.Primitives.PointF.op_Inequality
+  fullName: SixLabors.Primitives.PointF.Inequality
+  nameWithType: PointF.Inequality
+- uid: SixLabors.Primitives.PointF.op_Multiply(SixLabors.Primitives.PointF,System.Single)
+  name: Multiply(PointF, Single)
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF_op_Multiply_SixLabors_Primitives_PointF_System_Single_
+  commentId: M:SixLabors.Primitives.PointF.op_Multiply(SixLabors.Primitives.PointF,System.Single)
+  fullName: SixLabors.Primitives.PointF.Multiply(SixLabors.Primitives.PointF, System.Single)
+  nameWithType: PointF.Multiply(PointF, Single)
+- uid: SixLabors.Primitives.PointF.op_Multiply(System.Single,SixLabors.Primitives.PointF)
+  name: Multiply(Single, PointF)
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF_op_Multiply_System_Single_SixLabors_Primitives_PointF_
+  commentId: M:SixLabors.Primitives.PointF.op_Multiply(System.Single,SixLabors.Primitives.PointF)
+  fullName: SixLabors.Primitives.PointF.Multiply(System.Single, SixLabors.Primitives.PointF)
+  nameWithType: PointF.Multiply(Single, PointF)
+- uid: SixLabors.Primitives.PointF.op_Multiply*
+  name: Multiply
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF_op_Multiply_
+  commentId: Overload:SixLabors.Primitives.PointF.op_Multiply
+  fullName: SixLabors.Primitives.PointF.Multiply
+  nameWithType: PointF.Multiply
+- uid: SixLabors.Primitives.PointF.op_Subtraction(SixLabors.Primitives.PointF,SixLabors.Primitives.PointF)
+  name: Subtraction(PointF, PointF)
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF_op_Subtraction_SixLabors_Primitives_PointF_SixLabors_Primitives_PointF_
+  commentId: M:SixLabors.Primitives.PointF.op_Subtraction(SixLabors.Primitives.PointF,SixLabors.Primitives.PointF)
+  fullName: SixLabors.Primitives.PointF.Subtraction(SixLabors.Primitives.PointF, SixLabors.Primitives.PointF)
+  nameWithType: PointF.Subtraction(PointF, PointF)
+- uid: SixLabors.Primitives.PointF.op_Subtraction(SixLabors.Primitives.PointF,SixLabors.Primitives.SizeF)
+  name: Subtraction(PointF, SizeF)
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF_op_Subtraction_SixLabors_Primitives_PointF_SixLabors_Primitives_SizeF_
+  commentId: M:SixLabors.Primitives.PointF.op_Subtraction(SixLabors.Primitives.PointF,SixLabors.Primitives.SizeF)
+  fullName: SixLabors.Primitives.PointF.Subtraction(SixLabors.Primitives.PointF, SixLabors.Primitives.SizeF)
+  nameWithType: PointF.Subtraction(PointF, SizeF)
+- uid: SixLabors.Primitives.PointF.op_Subtraction*
+  name: Subtraction
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF_op_Subtraction_
+  commentId: Overload:SixLabors.Primitives.PointF.op_Subtraction
+  fullName: SixLabors.Primitives.PointF.Subtraction
+  nameWithType: PointF.Subtraction
+- uid: SixLabors.Primitives.PointF.op_UnaryNegation(SixLabors.Primitives.PointF)
+  name: UnaryNegation(PointF)
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF_op_UnaryNegation_SixLabors_Primitives_PointF_
+  commentId: M:SixLabors.Primitives.PointF.op_UnaryNegation(SixLabors.Primitives.PointF)
+  fullName: SixLabors.Primitives.PointF.UnaryNegation(SixLabors.Primitives.PointF)
+  nameWithType: PointF.UnaryNegation(PointF)
+- uid: SixLabors.Primitives.PointF.op_UnaryNegation*
+  name: UnaryNegation
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF_op_UnaryNegation_
+  commentId: Overload:SixLabors.Primitives.PointF.op_UnaryNegation
+  fullName: SixLabors.Primitives.PointF.UnaryNegation
+  nameWithType: PointF.UnaryNegation
+- uid: SixLabors.Primitives.PointF.Rotate(SixLabors.Primitives.PointF,Matrix3x2)
+  name: Rotate(PointF, Matrix3x2)
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF_Rotate_SixLabors_Primitives_PointF_Matrix3x2_
+  commentId: M:SixLabors.Primitives.PointF.Rotate(SixLabors.Primitives.PointF,Matrix3x2)
+  fullName: SixLabors.Primitives.PointF.Rotate(SixLabors.Primitives.PointF, Matrix3x2)
+  nameWithType: PointF.Rotate(PointF, Matrix3x2)
+- uid: SixLabors.Primitives.PointF.Rotate*
+  name: Rotate
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF_Rotate_
+  commentId: Overload:SixLabors.Primitives.PointF.Rotate
+  fullName: SixLabors.Primitives.PointF.Rotate
+  nameWithType: PointF.Rotate
+- uid: SixLabors.Primitives.PointF.Skew(SixLabors.Primitives.PointF,Matrix3x2)
+  name: Skew(PointF, Matrix3x2)
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF_Skew_SixLabors_Primitives_PointF_Matrix3x2_
+  commentId: M:SixLabors.Primitives.PointF.Skew(SixLabors.Primitives.PointF,Matrix3x2)
+  fullName: SixLabors.Primitives.PointF.Skew(SixLabors.Primitives.PointF, Matrix3x2)
+  nameWithType: PointF.Skew(PointF, Matrix3x2)
+- uid: SixLabors.Primitives.PointF.Skew*
+  name: Skew
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF_Skew_
+  commentId: Overload:SixLabors.Primitives.PointF.Skew
+  fullName: SixLabors.Primitives.PointF.Skew
+  nameWithType: PointF.Skew
+- uid: SixLabors.Primitives.PointF.Subtract(SixLabors.Primitives.PointF,SixLabors.Primitives.PointF)
+  name: Subtract(PointF, PointF)
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF_Subtract_SixLabors_Primitives_PointF_SixLabors_Primitives_PointF_
+  commentId: M:SixLabors.Primitives.PointF.Subtract(SixLabors.Primitives.PointF,SixLabors.Primitives.PointF)
+  fullName: SixLabors.Primitives.PointF.Subtract(SixLabors.Primitives.PointF, SixLabors.Primitives.PointF)
+  nameWithType: PointF.Subtract(PointF, PointF)
+- uid: SixLabors.Primitives.PointF.Subtract(SixLabors.Primitives.PointF,SixLabors.Primitives.SizeF)
+  name: Subtract(PointF, SizeF)
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF_Subtract_SixLabors_Primitives_PointF_SixLabors_Primitives_SizeF_
+  commentId: M:SixLabors.Primitives.PointF.Subtract(SixLabors.Primitives.PointF,SixLabors.Primitives.SizeF)
+  fullName: SixLabors.Primitives.PointF.Subtract(SixLabors.Primitives.PointF, SixLabors.Primitives.SizeF)
+  nameWithType: PointF.Subtract(PointF, SizeF)
+- uid: SixLabors.Primitives.PointF.Subtract*
+  name: Subtract
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF_Subtract_
+  commentId: Overload:SixLabors.Primitives.PointF.Subtract
+  fullName: SixLabors.Primitives.PointF.Subtract
+  nameWithType: PointF.Subtract
+- uid: SixLabors.Primitives.PointF.ToString
+  name: ToString()
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF_ToString
+  commentId: M:SixLabors.Primitives.PointF.ToString
+  fullName: SixLabors.Primitives.PointF.ToString()
+  nameWithType: PointF.ToString()
+- uid: SixLabors.Primitives.PointF.ToString*
+  name: ToString
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF_ToString_
+  commentId: Overload:SixLabors.Primitives.PointF.ToString
+  fullName: SixLabors.Primitives.PointF.ToString
+  nameWithType: PointF.ToString
+- uid: SixLabors.Primitives.PointF.Transform(SixLabors.Primitives.PointF,Matrix3x2)
+  name: Transform(PointF, Matrix3x2)
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF_Transform_SixLabors_Primitives_PointF_Matrix3x2_
+  commentId: M:SixLabors.Primitives.PointF.Transform(SixLabors.Primitives.PointF,Matrix3x2)
+  fullName: SixLabors.Primitives.PointF.Transform(SixLabors.Primitives.PointF, Matrix3x2)
+  nameWithType: PointF.Transform(PointF, Matrix3x2)
+- uid: SixLabors.Primitives.PointF.Transform*
+  name: Transform
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF_Transform_
+  commentId: Overload:SixLabors.Primitives.PointF.Transform
+  fullName: SixLabors.Primitives.PointF.Transform
+  nameWithType: PointF.Transform
+- uid: SixLabors.Primitives.PointF.X
+  name: X
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF_X
+  commentId: P:SixLabors.Primitives.PointF.X
+  fullName: SixLabors.Primitives.PointF.X
+  nameWithType: PointF.X
+- uid: SixLabors.Primitives.PointF.X*
+  name: X
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF_X_
+  commentId: Overload:SixLabors.Primitives.PointF.X
+  fullName: SixLabors.Primitives.PointF.X
+  nameWithType: PointF.X
+- uid: SixLabors.Primitives.PointF.Y
+  name: Y
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF_Y
+  commentId: P:SixLabors.Primitives.PointF.Y
+  fullName: SixLabors.Primitives.PointF.Y
+  nameWithType: PointF.Y
+- uid: SixLabors.Primitives.PointF.Y*
+  name: Y
+  href: api/Core/SixLabors.Primitives.PointF.html#SixLabors_Primitives_PointF_Y_
+  commentId: Overload:SixLabors.Primitives.PointF.Y
+  fullName: SixLabors.Primitives.PointF.Y
+  nameWithType: PointF.Y
+- uid: SixLabors.Primitives.Rectangle
+  name: Rectangle
+  href: api/Core/SixLabors.Primitives.Rectangle.html
+  commentId: T:SixLabors.Primitives.Rectangle
+  fullName: SixLabors.Primitives.Rectangle
+  nameWithType: Rectangle
+- uid: SixLabors.Primitives.Rectangle.#ctor(SixLabors.Primitives.Point,SixLabors.Primitives.Size)
+  name: Rectangle(Point, Size)
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle__ctor_SixLabors_Primitives_Point_SixLabors_Primitives_Size_
+  commentId: M:SixLabors.Primitives.Rectangle.#ctor(SixLabors.Primitives.Point,SixLabors.Primitives.Size)
+  fullName: SixLabors.Primitives.Rectangle.Rectangle(SixLabors.Primitives.Point, SixLabors.Primitives.Size)
+  nameWithType: Rectangle.Rectangle(Point, Size)
+- uid: SixLabors.Primitives.Rectangle.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)
+  name: Rectangle(Int32, Int32, Int32, Int32)
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle__ctor_System_Int32_System_Int32_System_Int32_System_Int32_
+  commentId: M:SixLabors.Primitives.Rectangle.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)
+  fullName: SixLabors.Primitives.Rectangle.Rectangle(System.Int32, System.Int32, System.Int32, System.Int32)
+  nameWithType: Rectangle.Rectangle(Int32, Int32, Int32, Int32)
+- uid: SixLabors.Primitives.Rectangle.#ctor*
+  name: Rectangle
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle__ctor_
+  commentId: Overload:SixLabors.Primitives.Rectangle.#ctor
+  fullName: SixLabors.Primitives.Rectangle.Rectangle
+  nameWithType: Rectangle.Rectangle
+- uid: SixLabors.Primitives.Rectangle.Bottom
+  name: Bottom
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_Bottom
+  commentId: P:SixLabors.Primitives.Rectangle.Bottom
+  fullName: SixLabors.Primitives.Rectangle.Bottom
+  nameWithType: Rectangle.Bottom
+- uid: SixLabors.Primitives.Rectangle.Bottom*
+  name: Bottom
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_Bottom_
+  commentId: Overload:SixLabors.Primitives.Rectangle.Bottom
+  fullName: SixLabors.Primitives.Rectangle.Bottom
+  nameWithType: Rectangle.Bottom
+- uid: SixLabors.Primitives.Rectangle.Ceiling(SixLabors.Primitives.RectangleF)
+  name: Ceiling(RectangleF)
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_Ceiling_SixLabors_Primitives_RectangleF_
+  commentId: M:SixLabors.Primitives.Rectangle.Ceiling(SixLabors.Primitives.RectangleF)
+  fullName: SixLabors.Primitives.Rectangle.Ceiling(SixLabors.Primitives.RectangleF)
+  nameWithType: Rectangle.Ceiling(RectangleF)
+- uid: SixLabors.Primitives.Rectangle.Ceiling*
+  name: Ceiling
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_Ceiling_
+  commentId: Overload:SixLabors.Primitives.Rectangle.Ceiling
+  fullName: SixLabors.Primitives.Rectangle.Ceiling
+  nameWithType: Rectangle.Ceiling
+- uid: SixLabors.Primitives.Rectangle.Center(SixLabors.Primitives.Rectangle)
+  name: Center(Rectangle)
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_Center_SixLabors_Primitives_Rectangle_
+  commentId: M:SixLabors.Primitives.Rectangle.Center(SixLabors.Primitives.Rectangle)
+  fullName: SixLabors.Primitives.Rectangle.Center(SixLabors.Primitives.Rectangle)
+  nameWithType: Rectangle.Center(Rectangle)
+- uid: SixLabors.Primitives.Rectangle.Center*
+  name: Center
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_Center_
+  commentId: Overload:SixLabors.Primitives.Rectangle.Center
+  fullName: SixLabors.Primitives.Rectangle.Center
+  nameWithType: Rectangle.Center
+- uid: SixLabors.Primitives.Rectangle.Contains(SixLabors.Primitives.Point)
+  name: Contains(Point)
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_Contains_SixLabors_Primitives_Point_
+  commentId: M:SixLabors.Primitives.Rectangle.Contains(SixLabors.Primitives.Point)
+  fullName: SixLabors.Primitives.Rectangle.Contains(SixLabors.Primitives.Point)
+  nameWithType: Rectangle.Contains(Point)
+- uid: SixLabors.Primitives.Rectangle.Contains(SixLabors.Primitives.Rectangle)
+  name: Contains(Rectangle)
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_Contains_SixLabors_Primitives_Rectangle_
+  commentId: M:SixLabors.Primitives.Rectangle.Contains(SixLabors.Primitives.Rectangle)
+  fullName: SixLabors.Primitives.Rectangle.Contains(SixLabors.Primitives.Rectangle)
+  nameWithType: Rectangle.Contains(Rectangle)
+- uid: SixLabors.Primitives.Rectangle.Contains(System.Int32,System.Int32)
+  name: Contains(Int32, Int32)
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_Contains_System_Int32_System_Int32_
+  commentId: M:SixLabors.Primitives.Rectangle.Contains(System.Int32,System.Int32)
+  fullName: SixLabors.Primitives.Rectangle.Contains(System.Int32, System.Int32)
+  nameWithType: Rectangle.Contains(Int32, Int32)
+- uid: SixLabors.Primitives.Rectangle.Contains*
+  name: Contains
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_Contains_
+  commentId: Overload:SixLabors.Primitives.Rectangle.Contains
+  fullName: SixLabors.Primitives.Rectangle.Contains
+  nameWithType: Rectangle.Contains
+- uid: SixLabors.Primitives.Rectangle.Empty
+  name: Empty
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_Empty
+  commentId: F:SixLabors.Primitives.Rectangle.Empty
+  fullName: SixLabors.Primitives.Rectangle.Empty
+  nameWithType: Rectangle.Empty
+- uid: SixLabors.Primitives.Rectangle.Equals(SixLabors.Primitives.Rectangle)
+  name: Equals(Rectangle)
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_Equals_SixLabors_Primitives_Rectangle_
+  commentId: M:SixLabors.Primitives.Rectangle.Equals(SixLabors.Primitives.Rectangle)
+  fullName: SixLabors.Primitives.Rectangle.Equals(SixLabors.Primitives.Rectangle)
+  nameWithType: Rectangle.Equals(Rectangle)
+- uid: SixLabors.Primitives.Rectangle.Equals(System.Object)
+  name: Equals(Object)
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_Equals_System_Object_
+  commentId: M:SixLabors.Primitives.Rectangle.Equals(System.Object)
+  fullName: SixLabors.Primitives.Rectangle.Equals(System.Object)
+  nameWithType: Rectangle.Equals(Object)
+- uid: SixLabors.Primitives.Rectangle.Equals*
+  name: Equals
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_Equals_
+  commentId: Overload:SixLabors.Primitives.Rectangle.Equals
+  fullName: SixLabors.Primitives.Rectangle.Equals
+  nameWithType: Rectangle.Equals
+- uid: SixLabors.Primitives.Rectangle.FromLTRB(System.Int32,System.Int32,System.Int32,System.Int32)
+  name: FromLTRB(Int32, Int32, Int32, Int32)
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_FromLTRB_System_Int32_System_Int32_System_Int32_System_Int32_
+  commentId: M:SixLabors.Primitives.Rectangle.FromLTRB(System.Int32,System.Int32,System.Int32,System.Int32)
+  fullName: SixLabors.Primitives.Rectangle.FromLTRB(System.Int32, System.Int32, System.Int32, System.Int32)
+  nameWithType: Rectangle.FromLTRB(Int32, Int32, Int32, Int32)
+- uid: SixLabors.Primitives.Rectangle.FromLTRB*
+  name: FromLTRB
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_FromLTRB_
+  commentId: Overload:SixLabors.Primitives.Rectangle.FromLTRB
+  fullName: SixLabors.Primitives.Rectangle.FromLTRB
+  nameWithType: Rectangle.FromLTRB
+- uid: SixLabors.Primitives.Rectangle.GetHashCode
+  name: GetHashCode()
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_GetHashCode
+  commentId: M:SixLabors.Primitives.Rectangle.GetHashCode
+  fullName: SixLabors.Primitives.Rectangle.GetHashCode()
+  nameWithType: Rectangle.GetHashCode()
+- uid: SixLabors.Primitives.Rectangle.GetHashCode*
+  name: GetHashCode
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_GetHashCode_
+  commentId: Overload:SixLabors.Primitives.Rectangle.GetHashCode
+  fullName: SixLabors.Primitives.Rectangle.GetHashCode
+  nameWithType: Rectangle.GetHashCode
+- uid: SixLabors.Primitives.Rectangle.Height
+  name: Height
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_Height
+  commentId: P:SixLabors.Primitives.Rectangle.Height
+  fullName: SixLabors.Primitives.Rectangle.Height
+  nameWithType: Rectangle.Height
+- uid: SixLabors.Primitives.Rectangle.Height*
+  name: Height
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_Height_
+  commentId: Overload:SixLabors.Primitives.Rectangle.Height
+  fullName: SixLabors.Primitives.Rectangle.Height
+  nameWithType: Rectangle.Height
+- uid: SixLabors.Primitives.Rectangle.Inflate(SixLabors.Primitives.Rectangle,System.Int32,System.Int32)
+  name: Inflate(Rectangle, Int32, Int32)
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_Inflate_SixLabors_Primitives_Rectangle_System_Int32_System_Int32_
+  commentId: M:SixLabors.Primitives.Rectangle.Inflate(SixLabors.Primitives.Rectangle,System.Int32,System.Int32)
+  fullName: SixLabors.Primitives.Rectangle.Inflate(SixLabors.Primitives.Rectangle, System.Int32, System.Int32)
+  nameWithType: Rectangle.Inflate(Rectangle, Int32, Int32)
+- uid: SixLabors.Primitives.Rectangle.Inflate(SixLabors.Primitives.Size)
+  name: Inflate(Size)
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_Inflate_SixLabors_Primitives_Size_
+  commentId: M:SixLabors.Primitives.Rectangle.Inflate(SixLabors.Primitives.Size)
+  fullName: SixLabors.Primitives.Rectangle.Inflate(SixLabors.Primitives.Size)
+  nameWithType: Rectangle.Inflate(Size)
+- uid: SixLabors.Primitives.Rectangle.Inflate(System.Int32,System.Int32)
+  name: Inflate(Int32, Int32)
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_Inflate_System_Int32_System_Int32_
+  commentId: M:SixLabors.Primitives.Rectangle.Inflate(System.Int32,System.Int32)
+  fullName: SixLabors.Primitives.Rectangle.Inflate(System.Int32, System.Int32)
+  nameWithType: Rectangle.Inflate(Int32, Int32)
+- uid: SixLabors.Primitives.Rectangle.Inflate*
+  name: Inflate
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_Inflate_
+  commentId: Overload:SixLabors.Primitives.Rectangle.Inflate
+  fullName: SixLabors.Primitives.Rectangle.Inflate
+  nameWithType: Rectangle.Inflate
+- uid: SixLabors.Primitives.Rectangle.Intersect(SixLabors.Primitives.Rectangle)
+  name: Intersect(Rectangle)
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_Intersect_SixLabors_Primitives_Rectangle_
+  commentId: M:SixLabors.Primitives.Rectangle.Intersect(SixLabors.Primitives.Rectangle)
+  fullName: SixLabors.Primitives.Rectangle.Intersect(SixLabors.Primitives.Rectangle)
+  nameWithType: Rectangle.Intersect(Rectangle)
+- uid: SixLabors.Primitives.Rectangle.Intersect(SixLabors.Primitives.Rectangle,SixLabors.Primitives.Rectangle)
+  name: Intersect(Rectangle, Rectangle)
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_Intersect_SixLabors_Primitives_Rectangle_SixLabors_Primitives_Rectangle_
+  commentId: M:SixLabors.Primitives.Rectangle.Intersect(SixLabors.Primitives.Rectangle,SixLabors.Primitives.Rectangle)
+  fullName: SixLabors.Primitives.Rectangle.Intersect(SixLabors.Primitives.Rectangle, SixLabors.Primitives.Rectangle)
+  nameWithType: Rectangle.Intersect(Rectangle, Rectangle)
+- uid: SixLabors.Primitives.Rectangle.Intersect*
+  name: Intersect
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_Intersect_
+  commentId: Overload:SixLabors.Primitives.Rectangle.Intersect
+  fullName: SixLabors.Primitives.Rectangle.Intersect
+  nameWithType: Rectangle.Intersect
+- uid: SixLabors.Primitives.Rectangle.IntersectsWith(SixLabors.Primitives.Rectangle)
+  name: IntersectsWith(Rectangle)
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_IntersectsWith_SixLabors_Primitives_Rectangle_
+  commentId: M:SixLabors.Primitives.Rectangle.IntersectsWith(SixLabors.Primitives.Rectangle)
+  fullName: SixLabors.Primitives.Rectangle.IntersectsWith(SixLabors.Primitives.Rectangle)
+  nameWithType: Rectangle.IntersectsWith(Rectangle)
+- uid: SixLabors.Primitives.Rectangle.IntersectsWith*
+  name: IntersectsWith
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_IntersectsWith_
+  commentId: Overload:SixLabors.Primitives.Rectangle.IntersectsWith
+  fullName: SixLabors.Primitives.Rectangle.IntersectsWith
+  nameWithType: Rectangle.IntersectsWith
+- uid: SixLabors.Primitives.Rectangle.IsEmpty
+  name: IsEmpty
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_IsEmpty
+  commentId: P:SixLabors.Primitives.Rectangle.IsEmpty
+  fullName: SixLabors.Primitives.Rectangle.IsEmpty
+  nameWithType: Rectangle.IsEmpty
+- uid: SixLabors.Primitives.Rectangle.IsEmpty*
+  name: IsEmpty
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_IsEmpty_
+  commentId: Overload:SixLabors.Primitives.Rectangle.IsEmpty
+  fullName: SixLabors.Primitives.Rectangle.IsEmpty
+  nameWithType: Rectangle.IsEmpty
+- uid: SixLabors.Primitives.Rectangle.Left
+  name: Left
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_Left
+  commentId: P:SixLabors.Primitives.Rectangle.Left
+  fullName: SixLabors.Primitives.Rectangle.Left
+  nameWithType: Rectangle.Left
+- uid: SixLabors.Primitives.Rectangle.Left*
+  name: Left
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_Left_
+  commentId: Overload:SixLabors.Primitives.Rectangle.Left
+  fullName: SixLabors.Primitives.Rectangle.Left
+  nameWithType: Rectangle.Left
+- uid: SixLabors.Primitives.Rectangle.Location
+  name: Location
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_Location
+  commentId: P:SixLabors.Primitives.Rectangle.Location
+  fullName: SixLabors.Primitives.Rectangle.Location
+  nameWithType: Rectangle.Location
+- uid: SixLabors.Primitives.Rectangle.Location*
+  name: Location
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_Location_
+  commentId: Overload:SixLabors.Primitives.Rectangle.Location
+  fullName: SixLabors.Primitives.Rectangle.Location
+  nameWithType: Rectangle.Location
+- uid: SixLabors.Primitives.Rectangle.Offset(SixLabors.Primitives.Point)
+  name: Offset(Point)
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_Offset_SixLabors_Primitives_Point_
+  commentId: M:SixLabors.Primitives.Rectangle.Offset(SixLabors.Primitives.Point)
+  fullName: SixLabors.Primitives.Rectangle.Offset(SixLabors.Primitives.Point)
+  nameWithType: Rectangle.Offset(Point)
+- uid: SixLabors.Primitives.Rectangle.Offset(System.Int32,System.Int32)
+  name: Offset(Int32, Int32)
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_Offset_System_Int32_System_Int32_
+  commentId: M:SixLabors.Primitives.Rectangle.Offset(System.Int32,System.Int32)
+  fullName: SixLabors.Primitives.Rectangle.Offset(System.Int32, System.Int32)
+  nameWithType: Rectangle.Offset(Int32, Int32)
+- uid: SixLabors.Primitives.Rectangle.Offset*
+  name: Offset
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_Offset_
+  commentId: Overload:SixLabors.Primitives.Rectangle.Offset
+  fullName: SixLabors.Primitives.Rectangle.Offset
+  nameWithType: Rectangle.Offset
+- uid: SixLabors.Primitives.Rectangle.op_Equality(SixLabors.Primitives.Rectangle,SixLabors.Primitives.Rectangle)
+  name: Equality(Rectangle, Rectangle)
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_op_Equality_SixLabors_Primitives_Rectangle_SixLabors_Primitives_Rectangle_
+  commentId: M:SixLabors.Primitives.Rectangle.op_Equality(SixLabors.Primitives.Rectangle,SixLabors.Primitives.Rectangle)
+  fullName: SixLabors.Primitives.Rectangle.Equality(SixLabors.Primitives.Rectangle, SixLabors.Primitives.Rectangle)
+  nameWithType: Rectangle.Equality(Rectangle, Rectangle)
+- uid: SixLabors.Primitives.Rectangle.op_Equality*
+  name: Equality
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_op_Equality_
+  commentId: Overload:SixLabors.Primitives.Rectangle.op_Equality
+  fullName: SixLabors.Primitives.Rectangle.Equality
+  nameWithType: Rectangle.Equality
+- uid: SixLabors.Primitives.Rectangle.op_Implicit(SixLabors.Primitives.Rectangle)~SixLabors.Primitives.RectangleF
+  name: Implicit(Rectangle to RectangleF)
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_op_Implicit_SixLabors_Primitives_Rectangle__SixLabors_Primitives_RectangleF
+  commentId: M:SixLabors.Primitives.Rectangle.op_Implicit(SixLabors.Primitives.Rectangle)~SixLabors.Primitives.RectangleF
+  name.vb: Widening(Rectangle to RectangleF)
+  fullName: SixLabors.Primitives.Rectangle.Implicit(SixLabors.Primitives.Rectangle to SixLabors.Primitives.RectangleF)
+  fullName.vb: SixLabors.Primitives.Rectangle.Widening(SixLabors.Primitives.Rectangle to SixLabors.Primitives.RectangleF)
+  nameWithType: Rectangle.Implicit(Rectangle to RectangleF)
+  nameWithType.vb: Rectangle.Widening(Rectangle to RectangleF)
+- uid: SixLabors.Primitives.Rectangle.op_Implicit(SixLabors.Primitives.Rectangle)~Vector4
+  name: Implicit(Rectangle to Vector4)
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_op_Implicit_SixLabors_Primitives_Rectangle__Vector4
+  commentId: M:SixLabors.Primitives.Rectangle.op_Implicit(SixLabors.Primitives.Rectangle)~Vector4
+  name.vb: Widening(Rectangle to Vector4)
+  fullName: SixLabors.Primitives.Rectangle.Implicit(SixLabors.Primitives.Rectangle to Vector4)
+  fullName.vb: SixLabors.Primitives.Rectangle.Widening(SixLabors.Primitives.Rectangle to Vector4)
+  nameWithType: Rectangle.Implicit(Rectangle to Vector4)
+  nameWithType.vb: Rectangle.Widening(Rectangle to Vector4)
+- uid: SixLabors.Primitives.Rectangle.op_Implicit*
+  name: Implicit
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_op_Implicit_
+  commentId: Overload:SixLabors.Primitives.Rectangle.op_Implicit
+  name.vb: Widening
+  fullName: SixLabors.Primitives.Rectangle.Implicit
+  fullName.vb: SixLabors.Primitives.Rectangle.Widening
+  nameWithType: Rectangle.Implicit
+  nameWithType.vb: Rectangle.Widening
+- uid: SixLabors.Primitives.Rectangle.op_Inequality(SixLabors.Primitives.Rectangle,SixLabors.Primitives.Rectangle)
+  name: Inequality(Rectangle, Rectangle)
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_op_Inequality_SixLabors_Primitives_Rectangle_SixLabors_Primitives_Rectangle_
+  commentId: M:SixLabors.Primitives.Rectangle.op_Inequality(SixLabors.Primitives.Rectangle,SixLabors.Primitives.Rectangle)
+  fullName: SixLabors.Primitives.Rectangle.Inequality(SixLabors.Primitives.Rectangle, SixLabors.Primitives.Rectangle)
+  nameWithType: Rectangle.Inequality(Rectangle, Rectangle)
+- uid: SixLabors.Primitives.Rectangle.op_Inequality*
+  name: Inequality
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_op_Inequality_
+  commentId: Overload:SixLabors.Primitives.Rectangle.op_Inequality
+  fullName: SixLabors.Primitives.Rectangle.Inequality
+  nameWithType: Rectangle.Inequality
+- uid: SixLabors.Primitives.Rectangle.Right
+  name: Right
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_Right
+  commentId: P:SixLabors.Primitives.Rectangle.Right
+  fullName: SixLabors.Primitives.Rectangle.Right
+  nameWithType: Rectangle.Right
+- uid: SixLabors.Primitives.Rectangle.Right*
+  name: Right
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_Right_
+  commentId: Overload:SixLabors.Primitives.Rectangle.Right
+  fullName: SixLabors.Primitives.Rectangle.Right
+  nameWithType: Rectangle.Right
+- uid: SixLabors.Primitives.Rectangle.Round(SixLabors.Primitives.RectangleF)
+  name: Round(RectangleF)
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_Round_SixLabors_Primitives_RectangleF_
+  commentId: M:SixLabors.Primitives.Rectangle.Round(SixLabors.Primitives.RectangleF)
+  fullName: SixLabors.Primitives.Rectangle.Round(SixLabors.Primitives.RectangleF)
+  nameWithType: Rectangle.Round(RectangleF)
+- uid: SixLabors.Primitives.Rectangle.Round*
+  name: Round
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_Round_
+  commentId: Overload:SixLabors.Primitives.Rectangle.Round
+  fullName: SixLabors.Primitives.Rectangle.Round
+  nameWithType: Rectangle.Round
+- uid: SixLabors.Primitives.Rectangle.Size
+  name: Size
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_Size
+  commentId: P:SixLabors.Primitives.Rectangle.Size
+  fullName: SixLabors.Primitives.Rectangle.Size
+  nameWithType: Rectangle.Size
+- uid: SixLabors.Primitives.Rectangle.Size*
+  name: Size
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_Size_
+  commentId: Overload:SixLabors.Primitives.Rectangle.Size
+  fullName: SixLabors.Primitives.Rectangle.Size
+  nameWithType: Rectangle.Size
+- uid: SixLabors.Primitives.Rectangle.Top
+  name: Top
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_Top
+  commentId: P:SixLabors.Primitives.Rectangle.Top
+  fullName: SixLabors.Primitives.Rectangle.Top
+  nameWithType: Rectangle.Top
+- uid: SixLabors.Primitives.Rectangle.Top*
+  name: Top
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_Top_
+  commentId: Overload:SixLabors.Primitives.Rectangle.Top
+  fullName: SixLabors.Primitives.Rectangle.Top
+  nameWithType: Rectangle.Top
+- uid: SixLabors.Primitives.Rectangle.ToString
+  name: ToString()
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_ToString
+  commentId: M:SixLabors.Primitives.Rectangle.ToString
+  fullName: SixLabors.Primitives.Rectangle.ToString()
+  nameWithType: Rectangle.ToString()
+- uid: SixLabors.Primitives.Rectangle.ToString*
+  name: ToString
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_ToString_
+  commentId: Overload:SixLabors.Primitives.Rectangle.ToString
+  fullName: SixLabors.Primitives.Rectangle.ToString
+  nameWithType: Rectangle.ToString
+- uid: SixLabors.Primitives.Rectangle.Transform(SixLabors.Primitives.Rectangle,Matrix3x2)
+  name: Transform(Rectangle, Matrix3x2)
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_Transform_SixLabors_Primitives_Rectangle_Matrix3x2_
+  commentId: M:SixLabors.Primitives.Rectangle.Transform(SixLabors.Primitives.Rectangle,Matrix3x2)
+  fullName: SixLabors.Primitives.Rectangle.Transform(SixLabors.Primitives.Rectangle, Matrix3x2)
+  nameWithType: Rectangle.Transform(Rectangle, Matrix3x2)
+- uid: SixLabors.Primitives.Rectangle.Transform*
+  name: Transform
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_Transform_
+  commentId: Overload:SixLabors.Primitives.Rectangle.Transform
+  fullName: SixLabors.Primitives.Rectangle.Transform
+  nameWithType: Rectangle.Transform
+- uid: SixLabors.Primitives.Rectangle.Truncate(SixLabors.Primitives.RectangleF)
+  name: Truncate(RectangleF)
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_Truncate_SixLabors_Primitives_RectangleF_
+  commentId: M:SixLabors.Primitives.Rectangle.Truncate(SixLabors.Primitives.RectangleF)
+  fullName: SixLabors.Primitives.Rectangle.Truncate(SixLabors.Primitives.RectangleF)
+  nameWithType: Rectangle.Truncate(RectangleF)
+- uid: SixLabors.Primitives.Rectangle.Truncate*
+  name: Truncate
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_Truncate_
+  commentId: Overload:SixLabors.Primitives.Rectangle.Truncate
+  fullName: SixLabors.Primitives.Rectangle.Truncate
+  nameWithType: Rectangle.Truncate
+- uid: SixLabors.Primitives.Rectangle.Union(SixLabors.Primitives.Rectangle,SixLabors.Primitives.Rectangle)
+  name: Union(Rectangle, Rectangle)
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_Union_SixLabors_Primitives_Rectangle_SixLabors_Primitives_Rectangle_
+  commentId: M:SixLabors.Primitives.Rectangle.Union(SixLabors.Primitives.Rectangle,SixLabors.Primitives.Rectangle)
+  fullName: SixLabors.Primitives.Rectangle.Union(SixLabors.Primitives.Rectangle, SixLabors.Primitives.Rectangle)
+  nameWithType: Rectangle.Union(Rectangle, Rectangle)
+- uid: SixLabors.Primitives.Rectangle.Union*
+  name: Union
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_Union_
+  commentId: Overload:SixLabors.Primitives.Rectangle.Union
+  fullName: SixLabors.Primitives.Rectangle.Union
+  nameWithType: Rectangle.Union
+- uid: SixLabors.Primitives.Rectangle.Width
+  name: Width
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_Width
+  commentId: P:SixLabors.Primitives.Rectangle.Width
+  fullName: SixLabors.Primitives.Rectangle.Width
+  nameWithType: Rectangle.Width
+- uid: SixLabors.Primitives.Rectangle.Width*
+  name: Width
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_Width_
+  commentId: Overload:SixLabors.Primitives.Rectangle.Width
+  fullName: SixLabors.Primitives.Rectangle.Width
+  nameWithType: Rectangle.Width
+- uid: SixLabors.Primitives.Rectangle.X
+  name: X
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_X
+  commentId: P:SixLabors.Primitives.Rectangle.X
+  fullName: SixLabors.Primitives.Rectangle.X
+  nameWithType: Rectangle.X
+- uid: SixLabors.Primitives.Rectangle.X*
+  name: X
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_X_
+  commentId: Overload:SixLabors.Primitives.Rectangle.X
+  fullName: SixLabors.Primitives.Rectangle.X
+  nameWithType: Rectangle.X
+- uid: SixLabors.Primitives.Rectangle.Y
+  name: Y
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_Y
+  commentId: P:SixLabors.Primitives.Rectangle.Y
+  fullName: SixLabors.Primitives.Rectangle.Y
+  nameWithType: Rectangle.Y
+- uid: SixLabors.Primitives.Rectangle.Y*
+  name: Y
+  href: api/Core/SixLabors.Primitives.Rectangle.html#SixLabors_Primitives_Rectangle_Y_
+  commentId: Overload:SixLabors.Primitives.Rectangle.Y
+  fullName: SixLabors.Primitives.Rectangle.Y
+  nameWithType: Rectangle.Y
+- uid: SixLabors.Primitives.RectangleF
+  name: RectangleF
+  href: api/Core/SixLabors.Primitives.RectangleF.html
+  commentId: T:SixLabors.Primitives.RectangleF
+  fullName: SixLabors.Primitives.RectangleF
+  nameWithType: RectangleF
+- uid: SixLabors.Primitives.RectangleF.#ctor(SixLabors.Primitives.PointF,SixLabors.Primitives.SizeF)
+  name: RectangleF(PointF, SizeF)
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF__ctor_SixLabors_Primitives_PointF_SixLabors_Primitives_SizeF_
+  commentId: M:SixLabors.Primitives.RectangleF.#ctor(SixLabors.Primitives.PointF,SixLabors.Primitives.SizeF)
+  fullName: SixLabors.Primitives.RectangleF.RectangleF(SixLabors.Primitives.PointF, SixLabors.Primitives.SizeF)
+  nameWithType: RectangleF.RectangleF(PointF, SizeF)
+- uid: SixLabors.Primitives.RectangleF.#ctor(System.Single,System.Single,System.Single,System.Single)
+  name: RectangleF(Single, Single, Single, Single)
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF__ctor_System_Single_System_Single_System_Single_System_Single_
+  commentId: M:SixLabors.Primitives.RectangleF.#ctor(System.Single,System.Single,System.Single,System.Single)
+  fullName: SixLabors.Primitives.RectangleF.RectangleF(System.Single, System.Single, System.Single, System.Single)
+  nameWithType: RectangleF.RectangleF(Single, Single, Single, Single)
+- uid: SixLabors.Primitives.RectangleF.#ctor*
+  name: RectangleF
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF__ctor_
+  commentId: Overload:SixLabors.Primitives.RectangleF.#ctor
+  fullName: SixLabors.Primitives.RectangleF.RectangleF
+  nameWithType: RectangleF.RectangleF
+- uid: SixLabors.Primitives.RectangleF.Bottom
+  name: Bottom
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_Bottom
+  commentId: P:SixLabors.Primitives.RectangleF.Bottom
+  fullName: SixLabors.Primitives.RectangleF.Bottom
+  nameWithType: RectangleF.Bottom
+- uid: SixLabors.Primitives.RectangleF.Bottom*
+  name: Bottom
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_Bottom_
+  commentId: Overload:SixLabors.Primitives.RectangleF.Bottom
+  fullName: SixLabors.Primitives.RectangleF.Bottom
+  nameWithType: RectangleF.Bottom
+- uid: SixLabors.Primitives.RectangleF.Center(SixLabors.Primitives.RectangleF)
+  name: Center(RectangleF)
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_Center_SixLabors_Primitives_RectangleF_
+  commentId: M:SixLabors.Primitives.RectangleF.Center(SixLabors.Primitives.RectangleF)
+  fullName: SixLabors.Primitives.RectangleF.Center(SixLabors.Primitives.RectangleF)
+  nameWithType: RectangleF.Center(RectangleF)
+- uid: SixLabors.Primitives.RectangleF.Center*
+  name: Center
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_Center_
+  commentId: Overload:SixLabors.Primitives.RectangleF.Center
+  fullName: SixLabors.Primitives.RectangleF.Center
+  nameWithType: RectangleF.Center
+- uid: SixLabors.Primitives.RectangleF.Contains(SixLabors.Primitives.PointF)
+  name: Contains(PointF)
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_Contains_SixLabors_Primitives_PointF_
+  commentId: M:SixLabors.Primitives.RectangleF.Contains(SixLabors.Primitives.PointF)
+  fullName: SixLabors.Primitives.RectangleF.Contains(SixLabors.Primitives.PointF)
+  nameWithType: RectangleF.Contains(PointF)
+- uid: SixLabors.Primitives.RectangleF.Contains(SixLabors.Primitives.RectangleF)
+  name: Contains(RectangleF)
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_Contains_SixLabors_Primitives_RectangleF_
+  commentId: M:SixLabors.Primitives.RectangleF.Contains(SixLabors.Primitives.RectangleF)
+  fullName: SixLabors.Primitives.RectangleF.Contains(SixLabors.Primitives.RectangleF)
+  nameWithType: RectangleF.Contains(RectangleF)
+- uid: SixLabors.Primitives.RectangleF.Contains(System.Single,System.Single)
+  name: Contains(Single, Single)
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_Contains_System_Single_System_Single_
+  commentId: M:SixLabors.Primitives.RectangleF.Contains(System.Single,System.Single)
+  fullName: SixLabors.Primitives.RectangleF.Contains(System.Single, System.Single)
+  nameWithType: RectangleF.Contains(Single, Single)
+- uid: SixLabors.Primitives.RectangleF.Contains*
+  name: Contains
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_Contains_
+  commentId: Overload:SixLabors.Primitives.RectangleF.Contains
+  fullName: SixLabors.Primitives.RectangleF.Contains
+  nameWithType: RectangleF.Contains
+- uid: SixLabors.Primitives.RectangleF.Empty
+  name: Empty
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_Empty
+  commentId: F:SixLabors.Primitives.RectangleF.Empty
+  fullName: SixLabors.Primitives.RectangleF.Empty
+  nameWithType: RectangleF.Empty
+- uid: SixLabors.Primitives.RectangleF.Equals(SixLabors.Primitives.RectangleF)
+  name: Equals(RectangleF)
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_Equals_SixLabors_Primitives_RectangleF_
+  commentId: M:SixLabors.Primitives.RectangleF.Equals(SixLabors.Primitives.RectangleF)
+  fullName: SixLabors.Primitives.RectangleF.Equals(SixLabors.Primitives.RectangleF)
+  nameWithType: RectangleF.Equals(RectangleF)
+- uid: SixLabors.Primitives.RectangleF.Equals(System.Object)
+  name: Equals(Object)
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_Equals_System_Object_
+  commentId: M:SixLabors.Primitives.RectangleF.Equals(System.Object)
+  fullName: SixLabors.Primitives.RectangleF.Equals(System.Object)
+  nameWithType: RectangleF.Equals(Object)
+- uid: SixLabors.Primitives.RectangleF.Equals*
+  name: Equals
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_Equals_
+  commentId: Overload:SixLabors.Primitives.RectangleF.Equals
+  fullName: SixLabors.Primitives.RectangleF.Equals
+  nameWithType: RectangleF.Equals
+- uid: SixLabors.Primitives.RectangleF.FromLTRB(System.Single,System.Single,System.Single,System.Single)
+  name: FromLTRB(Single, Single, Single, Single)
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_FromLTRB_System_Single_System_Single_System_Single_System_Single_
+  commentId: M:SixLabors.Primitives.RectangleF.FromLTRB(System.Single,System.Single,System.Single,System.Single)
+  fullName: SixLabors.Primitives.RectangleF.FromLTRB(System.Single, System.Single, System.Single, System.Single)
+  nameWithType: RectangleF.FromLTRB(Single, Single, Single, Single)
+- uid: SixLabors.Primitives.RectangleF.FromLTRB*
+  name: FromLTRB
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_FromLTRB_
+  commentId: Overload:SixLabors.Primitives.RectangleF.FromLTRB
+  fullName: SixLabors.Primitives.RectangleF.FromLTRB
+  nameWithType: RectangleF.FromLTRB
+- uid: SixLabors.Primitives.RectangleF.GetHashCode
+  name: GetHashCode()
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_GetHashCode
+  commentId: M:SixLabors.Primitives.RectangleF.GetHashCode
+  fullName: SixLabors.Primitives.RectangleF.GetHashCode()
+  nameWithType: RectangleF.GetHashCode()
+- uid: SixLabors.Primitives.RectangleF.GetHashCode*
+  name: GetHashCode
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_GetHashCode_
+  commentId: Overload:SixLabors.Primitives.RectangleF.GetHashCode
+  fullName: SixLabors.Primitives.RectangleF.GetHashCode
+  nameWithType: RectangleF.GetHashCode
+- uid: SixLabors.Primitives.RectangleF.Height
+  name: Height
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_Height
+  commentId: P:SixLabors.Primitives.RectangleF.Height
+  fullName: SixLabors.Primitives.RectangleF.Height
+  nameWithType: RectangleF.Height
+- uid: SixLabors.Primitives.RectangleF.Height*
+  name: Height
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_Height_
+  commentId: Overload:SixLabors.Primitives.RectangleF.Height
+  fullName: SixLabors.Primitives.RectangleF.Height
+  nameWithType: RectangleF.Height
+- uid: SixLabors.Primitives.RectangleF.Inflate(SixLabors.Primitives.RectangleF,System.Single,System.Single)
+  name: Inflate(RectangleF, Single, Single)
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_Inflate_SixLabors_Primitives_RectangleF_System_Single_System_Single_
+  commentId: M:SixLabors.Primitives.RectangleF.Inflate(SixLabors.Primitives.RectangleF,System.Single,System.Single)
+  fullName: SixLabors.Primitives.RectangleF.Inflate(SixLabors.Primitives.RectangleF, System.Single, System.Single)
+  nameWithType: RectangleF.Inflate(RectangleF, Single, Single)
+- uid: SixLabors.Primitives.RectangleF.Inflate(SixLabors.Primitives.SizeF)
+  name: Inflate(SizeF)
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_Inflate_SixLabors_Primitives_SizeF_
+  commentId: M:SixLabors.Primitives.RectangleF.Inflate(SixLabors.Primitives.SizeF)
+  fullName: SixLabors.Primitives.RectangleF.Inflate(SixLabors.Primitives.SizeF)
+  nameWithType: RectangleF.Inflate(SizeF)
+- uid: SixLabors.Primitives.RectangleF.Inflate(System.Single,System.Single)
+  name: Inflate(Single, Single)
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_Inflate_System_Single_System_Single_
+  commentId: M:SixLabors.Primitives.RectangleF.Inflate(System.Single,System.Single)
+  fullName: SixLabors.Primitives.RectangleF.Inflate(System.Single, System.Single)
+  nameWithType: RectangleF.Inflate(Single, Single)
+- uid: SixLabors.Primitives.RectangleF.Inflate*
+  name: Inflate
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_Inflate_
+  commentId: Overload:SixLabors.Primitives.RectangleF.Inflate
+  fullName: SixLabors.Primitives.RectangleF.Inflate
+  nameWithType: RectangleF.Inflate
+- uid: SixLabors.Primitives.RectangleF.Intersect(SixLabors.Primitives.RectangleF)
+  name: Intersect(RectangleF)
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_Intersect_SixLabors_Primitives_RectangleF_
+  commentId: M:SixLabors.Primitives.RectangleF.Intersect(SixLabors.Primitives.RectangleF)
+  fullName: SixLabors.Primitives.RectangleF.Intersect(SixLabors.Primitives.RectangleF)
+  nameWithType: RectangleF.Intersect(RectangleF)
+- uid: SixLabors.Primitives.RectangleF.Intersect(SixLabors.Primitives.RectangleF,SixLabors.Primitives.RectangleF)
+  name: Intersect(RectangleF, RectangleF)
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_Intersect_SixLabors_Primitives_RectangleF_SixLabors_Primitives_RectangleF_
+  commentId: M:SixLabors.Primitives.RectangleF.Intersect(SixLabors.Primitives.RectangleF,SixLabors.Primitives.RectangleF)
+  fullName: SixLabors.Primitives.RectangleF.Intersect(SixLabors.Primitives.RectangleF, SixLabors.Primitives.RectangleF)
+  nameWithType: RectangleF.Intersect(RectangleF, RectangleF)
+- uid: SixLabors.Primitives.RectangleF.Intersect*
+  name: Intersect
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_Intersect_
+  commentId: Overload:SixLabors.Primitives.RectangleF.Intersect
+  fullName: SixLabors.Primitives.RectangleF.Intersect
+  nameWithType: RectangleF.Intersect
+- uid: SixLabors.Primitives.RectangleF.IntersectsWith(SixLabors.Primitives.RectangleF)
+  name: IntersectsWith(RectangleF)
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_IntersectsWith_SixLabors_Primitives_RectangleF_
+  commentId: M:SixLabors.Primitives.RectangleF.IntersectsWith(SixLabors.Primitives.RectangleF)
+  fullName: SixLabors.Primitives.RectangleF.IntersectsWith(SixLabors.Primitives.RectangleF)
+  nameWithType: RectangleF.IntersectsWith(RectangleF)
+- uid: SixLabors.Primitives.RectangleF.IntersectsWith*
+  name: IntersectsWith
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_IntersectsWith_
+  commentId: Overload:SixLabors.Primitives.RectangleF.IntersectsWith
+  fullName: SixLabors.Primitives.RectangleF.IntersectsWith
+  nameWithType: RectangleF.IntersectsWith
+- uid: SixLabors.Primitives.RectangleF.IsEmpty
+  name: IsEmpty
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_IsEmpty
+  commentId: P:SixLabors.Primitives.RectangleF.IsEmpty
+  fullName: SixLabors.Primitives.RectangleF.IsEmpty
+  nameWithType: RectangleF.IsEmpty
+- uid: SixLabors.Primitives.RectangleF.IsEmpty*
+  name: IsEmpty
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_IsEmpty_
+  commentId: Overload:SixLabors.Primitives.RectangleF.IsEmpty
+  fullName: SixLabors.Primitives.RectangleF.IsEmpty
+  nameWithType: RectangleF.IsEmpty
+- uid: SixLabors.Primitives.RectangleF.Left
+  name: Left
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_Left
+  commentId: P:SixLabors.Primitives.RectangleF.Left
+  fullName: SixLabors.Primitives.RectangleF.Left
+  nameWithType: RectangleF.Left
+- uid: SixLabors.Primitives.RectangleF.Left*
+  name: Left
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_Left_
+  commentId: Overload:SixLabors.Primitives.RectangleF.Left
+  fullName: SixLabors.Primitives.RectangleF.Left
+  nameWithType: RectangleF.Left
+- uid: SixLabors.Primitives.RectangleF.Location
+  name: Location
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_Location
+  commentId: P:SixLabors.Primitives.RectangleF.Location
+  fullName: SixLabors.Primitives.RectangleF.Location
+  nameWithType: RectangleF.Location
+- uid: SixLabors.Primitives.RectangleF.Location*
+  name: Location
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_Location_
+  commentId: Overload:SixLabors.Primitives.RectangleF.Location
+  fullName: SixLabors.Primitives.RectangleF.Location
+  nameWithType: RectangleF.Location
+- uid: SixLabors.Primitives.RectangleF.Offset(SixLabors.Primitives.PointF)
+  name: Offset(PointF)
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_Offset_SixLabors_Primitives_PointF_
+  commentId: M:SixLabors.Primitives.RectangleF.Offset(SixLabors.Primitives.PointF)
+  fullName: SixLabors.Primitives.RectangleF.Offset(SixLabors.Primitives.PointF)
+  nameWithType: RectangleF.Offset(PointF)
+- uid: SixLabors.Primitives.RectangleF.Offset(System.Single,System.Single)
+  name: Offset(Single, Single)
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_Offset_System_Single_System_Single_
+  commentId: M:SixLabors.Primitives.RectangleF.Offset(System.Single,System.Single)
+  fullName: SixLabors.Primitives.RectangleF.Offset(System.Single, System.Single)
+  nameWithType: RectangleF.Offset(Single, Single)
+- uid: SixLabors.Primitives.RectangleF.Offset*
+  name: Offset
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_Offset_
+  commentId: Overload:SixLabors.Primitives.RectangleF.Offset
+  fullName: SixLabors.Primitives.RectangleF.Offset
+  nameWithType: RectangleF.Offset
+- uid: SixLabors.Primitives.RectangleF.op_Equality(SixLabors.Primitives.RectangleF,SixLabors.Primitives.RectangleF)
+  name: Equality(RectangleF, RectangleF)
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_op_Equality_SixLabors_Primitives_RectangleF_SixLabors_Primitives_RectangleF_
+  commentId: M:SixLabors.Primitives.RectangleF.op_Equality(SixLabors.Primitives.RectangleF,SixLabors.Primitives.RectangleF)
+  fullName: SixLabors.Primitives.RectangleF.Equality(SixLabors.Primitives.RectangleF, SixLabors.Primitives.RectangleF)
+  nameWithType: RectangleF.Equality(RectangleF, RectangleF)
+- uid: SixLabors.Primitives.RectangleF.op_Equality*
+  name: Equality
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_op_Equality_
+  commentId: Overload:SixLabors.Primitives.RectangleF.op_Equality
+  fullName: SixLabors.Primitives.RectangleF.Equality
+  nameWithType: RectangleF.Equality
+- uid: SixLabors.Primitives.RectangleF.op_Explicit(SixLabors.Primitives.RectangleF)~SixLabors.Primitives.Rectangle
+  name: Explicit(RectangleF to Rectangle)
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_op_Explicit_SixLabors_Primitives_RectangleF__SixLabors_Primitives_Rectangle
+  commentId: M:SixLabors.Primitives.RectangleF.op_Explicit(SixLabors.Primitives.RectangleF)~SixLabors.Primitives.Rectangle
+  name.vb: Narrowing(RectangleF to Rectangle)
+  fullName: SixLabors.Primitives.RectangleF.Explicit(SixLabors.Primitives.RectangleF to SixLabors.Primitives.Rectangle)
+  fullName.vb: SixLabors.Primitives.RectangleF.Narrowing(SixLabors.Primitives.RectangleF to SixLabors.Primitives.Rectangle)
+  nameWithType: RectangleF.Explicit(RectangleF to Rectangle)
+  nameWithType.vb: RectangleF.Narrowing(RectangleF to Rectangle)
+- uid: SixLabors.Primitives.RectangleF.op_Explicit*
+  name: Explicit
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_op_Explicit_
+  commentId: Overload:SixLabors.Primitives.RectangleF.op_Explicit
+  name.vb: Narrowing
+  fullName: SixLabors.Primitives.RectangleF.Explicit
+  fullName.vb: SixLabors.Primitives.RectangleF.Narrowing
+  nameWithType: RectangleF.Explicit
+  nameWithType.vb: RectangleF.Narrowing
+- uid: SixLabors.Primitives.RectangleF.op_Inequality(SixLabors.Primitives.RectangleF,SixLabors.Primitives.RectangleF)
+  name: Inequality(RectangleF, RectangleF)
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_op_Inequality_SixLabors_Primitives_RectangleF_SixLabors_Primitives_RectangleF_
+  commentId: M:SixLabors.Primitives.RectangleF.op_Inequality(SixLabors.Primitives.RectangleF,SixLabors.Primitives.RectangleF)
+  fullName: SixLabors.Primitives.RectangleF.Inequality(SixLabors.Primitives.RectangleF, SixLabors.Primitives.RectangleF)
+  nameWithType: RectangleF.Inequality(RectangleF, RectangleF)
+- uid: SixLabors.Primitives.RectangleF.op_Inequality*
+  name: Inequality
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_op_Inequality_
+  commentId: Overload:SixLabors.Primitives.RectangleF.op_Inequality
+  fullName: SixLabors.Primitives.RectangleF.Inequality
+  nameWithType: RectangleF.Inequality
+- uid: SixLabors.Primitives.RectangleF.Right
+  name: Right
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_Right
+  commentId: P:SixLabors.Primitives.RectangleF.Right
+  fullName: SixLabors.Primitives.RectangleF.Right
+  nameWithType: RectangleF.Right
+- uid: SixLabors.Primitives.RectangleF.Right*
+  name: Right
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_Right_
+  commentId: Overload:SixLabors.Primitives.RectangleF.Right
+  fullName: SixLabors.Primitives.RectangleF.Right
+  nameWithType: RectangleF.Right
+- uid: SixLabors.Primitives.RectangleF.Size
+  name: Size
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_Size
+  commentId: P:SixLabors.Primitives.RectangleF.Size
+  fullName: SixLabors.Primitives.RectangleF.Size
+  nameWithType: RectangleF.Size
+- uid: SixLabors.Primitives.RectangleF.Size*
+  name: Size
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_Size_
+  commentId: Overload:SixLabors.Primitives.RectangleF.Size
+  fullName: SixLabors.Primitives.RectangleF.Size
+  nameWithType: RectangleF.Size
+- uid: SixLabors.Primitives.RectangleF.Top
+  name: Top
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_Top
+  commentId: P:SixLabors.Primitives.RectangleF.Top
+  fullName: SixLabors.Primitives.RectangleF.Top
+  nameWithType: RectangleF.Top
+- uid: SixLabors.Primitives.RectangleF.Top*
+  name: Top
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_Top_
+  commentId: Overload:SixLabors.Primitives.RectangleF.Top
+  fullName: SixLabors.Primitives.RectangleF.Top
+  nameWithType: RectangleF.Top
+- uid: SixLabors.Primitives.RectangleF.ToString
+  name: ToString()
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_ToString
+  commentId: M:SixLabors.Primitives.RectangleF.ToString
+  fullName: SixLabors.Primitives.RectangleF.ToString()
+  nameWithType: RectangleF.ToString()
+- uid: SixLabors.Primitives.RectangleF.ToString*
+  name: ToString
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_ToString_
+  commentId: Overload:SixLabors.Primitives.RectangleF.ToString
+  fullName: SixLabors.Primitives.RectangleF.ToString
+  nameWithType: RectangleF.ToString
+- uid: SixLabors.Primitives.RectangleF.Transform(SixLabors.Primitives.RectangleF,Matrix3x2)
+  name: Transform(RectangleF, Matrix3x2)
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_Transform_SixLabors_Primitives_RectangleF_Matrix3x2_
+  commentId: M:SixLabors.Primitives.RectangleF.Transform(SixLabors.Primitives.RectangleF,Matrix3x2)
+  fullName: SixLabors.Primitives.RectangleF.Transform(SixLabors.Primitives.RectangleF, Matrix3x2)
+  nameWithType: RectangleF.Transform(RectangleF, Matrix3x2)
+- uid: SixLabors.Primitives.RectangleF.Transform*
+  name: Transform
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_Transform_
+  commentId: Overload:SixLabors.Primitives.RectangleF.Transform
+  fullName: SixLabors.Primitives.RectangleF.Transform
+  nameWithType: RectangleF.Transform
+- uid: SixLabors.Primitives.RectangleF.Union(SixLabors.Primitives.RectangleF,SixLabors.Primitives.RectangleF)
+  name: Union(RectangleF, RectangleF)
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_Union_SixLabors_Primitives_RectangleF_SixLabors_Primitives_RectangleF_
+  commentId: M:SixLabors.Primitives.RectangleF.Union(SixLabors.Primitives.RectangleF,SixLabors.Primitives.RectangleF)
+  fullName: SixLabors.Primitives.RectangleF.Union(SixLabors.Primitives.RectangleF, SixLabors.Primitives.RectangleF)
+  nameWithType: RectangleF.Union(RectangleF, RectangleF)
+- uid: SixLabors.Primitives.RectangleF.Union*
+  name: Union
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_Union_
+  commentId: Overload:SixLabors.Primitives.RectangleF.Union
+  fullName: SixLabors.Primitives.RectangleF.Union
+  nameWithType: RectangleF.Union
+- uid: SixLabors.Primitives.RectangleF.Width
+  name: Width
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_Width
+  commentId: P:SixLabors.Primitives.RectangleF.Width
+  fullName: SixLabors.Primitives.RectangleF.Width
+  nameWithType: RectangleF.Width
+- uid: SixLabors.Primitives.RectangleF.Width*
+  name: Width
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_Width_
+  commentId: Overload:SixLabors.Primitives.RectangleF.Width
+  fullName: SixLabors.Primitives.RectangleF.Width
+  nameWithType: RectangleF.Width
+- uid: SixLabors.Primitives.RectangleF.X
+  name: X
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_X
+  commentId: P:SixLabors.Primitives.RectangleF.X
+  fullName: SixLabors.Primitives.RectangleF.X
+  nameWithType: RectangleF.X
+- uid: SixLabors.Primitives.RectangleF.X*
+  name: X
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_X_
+  commentId: Overload:SixLabors.Primitives.RectangleF.X
+  fullName: SixLabors.Primitives.RectangleF.X
+  nameWithType: RectangleF.X
+- uid: SixLabors.Primitives.RectangleF.Y
+  name: Y
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_Y
+  commentId: P:SixLabors.Primitives.RectangleF.Y
+  fullName: SixLabors.Primitives.RectangleF.Y
+  nameWithType: RectangleF.Y
+- uid: SixLabors.Primitives.RectangleF.Y*
+  name: Y
+  href: api/Core/SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_Y_
+  commentId: Overload:SixLabors.Primitives.RectangleF.Y
+  fullName: SixLabors.Primitives.RectangleF.Y
+  nameWithType: RectangleF.Y
+- uid: SixLabors.Primitives.Size
+  name: Size
+  href: api/Core/SixLabors.Primitives.Size.html
+  commentId: T:SixLabors.Primitives.Size
+  fullName: SixLabors.Primitives.Size
+  nameWithType: Size
+- uid: SixLabors.Primitives.Size.#ctor(SixLabors.Primitives.Point)
+  name: Size(Point)
+  href: api/Core/SixLabors.Primitives.Size.html#SixLabors_Primitives_Size__ctor_SixLabors_Primitives_Point_
+  commentId: M:SixLabors.Primitives.Size.#ctor(SixLabors.Primitives.Point)
+  fullName: SixLabors.Primitives.Size.Size(SixLabors.Primitives.Point)
+  nameWithType: Size.Size(Point)
+- uid: SixLabors.Primitives.Size.#ctor(SixLabors.Primitives.Size)
+  name: Size(Size)
+  href: api/Core/SixLabors.Primitives.Size.html#SixLabors_Primitives_Size__ctor_SixLabors_Primitives_Size_
+  commentId: M:SixLabors.Primitives.Size.#ctor(SixLabors.Primitives.Size)
+  fullName: SixLabors.Primitives.Size.Size(SixLabors.Primitives.Size)
+  nameWithType: Size.Size(Size)
+- uid: SixLabors.Primitives.Size.#ctor(System.Int32)
+  name: Size(Int32)
+  href: api/Core/SixLabors.Primitives.Size.html#SixLabors_Primitives_Size__ctor_System_Int32_
+  commentId: M:SixLabors.Primitives.Size.#ctor(System.Int32)
+  fullName: SixLabors.Primitives.Size.Size(System.Int32)
+  nameWithType: Size.Size(Int32)
+- uid: SixLabors.Primitives.Size.#ctor(System.Int32,System.Int32)
+  name: Size(Int32, Int32)
+  href: api/Core/SixLabors.Primitives.Size.html#SixLabors_Primitives_Size__ctor_System_Int32_System_Int32_
+  commentId: M:SixLabors.Primitives.Size.#ctor(System.Int32,System.Int32)
+  fullName: SixLabors.Primitives.Size.Size(System.Int32, System.Int32)
+  nameWithType: Size.Size(Int32, Int32)
+- uid: SixLabors.Primitives.Size.#ctor*
+  name: Size
+  href: api/Core/SixLabors.Primitives.Size.html#SixLabors_Primitives_Size__ctor_
+  commentId: Overload:SixLabors.Primitives.Size.#ctor
+  fullName: SixLabors.Primitives.Size.Size
+  nameWithType: Size.Size
+- uid: SixLabors.Primitives.Size.Add(SixLabors.Primitives.Size,SixLabors.Primitives.Size)
+  name: Add(Size, Size)
+  href: api/Core/SixLabors.Primitives.Size.html#SixLabors_Primitives_Size_Add_SixLabors_Primitives_Size_SixLabors_Primitives_Size_
+  commentId: M:SixLabors.Primitives.Size.Add(SixLabors.Primitives.Size,SixLabors.Primitives.Size)
+  fullName: SixLabors.Primitives.Size.Add(SixLabors.Primitives.Size, SixLabors.Primitives.Size)
+  nameWithType: Size.Add(Size, Size)
+- uid: SixLabors.Primitives.Size.Add*
+  name: Add
+  href: api/Core/SixLabors.Primitives.Size.html#SixLabors_Primitives_Size_Add_
+  commentId: Overload:SixLabors.Primitives.Size.Add
+  fullName: SixLabors.Primitives.Size.Add
+  nameWithType: Size.Add
+- uid: SixLabors.Primitives.Size.Ceiling(SixLabors.Primitives.SizeF)
+  name: Ceiling(SizeF)
+  href: api/Core/SixLabors.Primitives.Size.html#SixLabors_Primitives_Size_Ceiling_SixLabors_Primitives_SizeF_
+  commentId: M:SixLabors.Primitives.Size.Ceiling(SixLabors.Primitives.SizeF)
+  fullName: SixLabors.Primitives.Size.Ceiling(SixLabors.Primitives.SizeF)
+  nameWithType: Size.Ceiling(SizeF)
+- uid: SixLabors.Primitives.Size.Ceiling*
+  name: Ceiling
+  href: api/Core/SixLabors.Primitives.Size.html#SixLabors_Primitives_Size_Ceiling_
+  commentId: Overload:SixLabors.Primitives.Size.Ceiling
+  fullName: SixLabors.Primitives.Size.Ceiling
+  nameWithType: Size.Ceiling
+- uid: SixLabors.Primitives.Size.Empty
+  name: Empty
+  href: api/Core/SixLabors.Primitives.Size.html#SixLabors_Primitives_Size_Empty
+  commentId: F:SixLabors.Primitives.Size.Empty
+  fullName: SixLabors.Primitives.Size.Empty
+  nameWithType: Size.Empty
+- uid: SixLabors.Primitives.Size.Equals(SixLabors.Primitives.Size)
+  name: Equals(Size)
+  href: api/Core/SixLabors.Primitives.Size.html#SixLabors_Primitives_Size_Equals_SixLabors_Primitives_Size_
+  commentId: M:SixLabors.Primitives.Size.Equals(SixLabors.Primitives.Size)
+  fullName: SixLabors.Primitives.Size.Equals(SixLabors.Primitives.Size)
+  nameWithType: Size.Equals(Size)
+- uid: SixLabors.Primitives.Size.Equals(System.Object)
+  name: Equals(Object)
+  href: api/Core/SixLabors.Primitives.Size.html#SixLabors_Primitives_Size_Equals_System_Object_
+  commentId: M:SixLabors.Primitives.Size.Equals(System.Object)
+  fullName: SixLabors.Primitives.Size.Equals(System.Object)
+  nameWithType: Size.Equals(Object)
+- uid: SixLabors.Primitives.Size.Equals*
+  name: Equals
+  href: api/Core/SixLabors.Primitives.Size.html#SixLabors_Primitives_Size_Equals_
+  commentId: Overload:SixLabors.Primitives.Size.Equals
+  fullName: SixLabors.Primitives.Size.Equals
+  nameWithType: Size.Equals
+- uid: SixLabors.Primitives.Size.GetHashCode
+  name: GetHashCode()
+  href: api/Core/SixLabors.Primitives.Size.html#SixLabors_Primitives_Size_GetHashCode
+  commentId: M:SixLabors.Primitives.Size.GetHashCode
+  fullName: SixLabors.Primitives.Size.GetHashCode()
+  nameWithType: Size.GetHashCode()
+- uid: SixLabors.Primitives.Size.GetHashCode*
+  name: GetHashCode
+  href: api/Core/SixLabors.Primitives.Size.html#SixLabors_Primitives_Size_GetHashCode_
+  commentId: Overload:SixLabors.Primitives.Size.GetHashCode
+  fullName: SixLabors.Primitives.Size.GetHashCode
+  nameWithType: Size.GetHashCode
+- uid: SixLabors.Primitives.Size.Height
+  name: Height
+  href: api/Core/SixLabors.Primitives.Size.html#SixLabors_Primitives_Size_Height
+  commentId: P:SixLabors.Primitives.Size.Height
+  fullName: SixLabors.Primitives.Size.Height
+  nameWithType: Size.Height
+- uid: SixLabors.Primitives.Size.Height*
+  name: Height
+  href: api/Core/SixLabors.Primitives.Size.html#SixLabors_Primitives_Size_Height_
+  commentId: Overload:SixLabors.Primitives.Size.Height
+  fullName: SixLabors.Primitives.Size.Height
+  nameWithType: Size.Height
+- uid: SixLabors.Primitives.Size.IsEmpty
+  name: IsEmpty
+  href: api/Core/SixLabors.Primitives.Size.html#SixLabors_Primitives_Size_IsEmpty
+  commentId: P:SixLabors.Primitives.Size.IsEmpty
+  fullName: SixLabors.Primitives.Size.IsEmpty
+  nameWithType: Size.IsEmpty
+- uid: SixLabors.Primitives.Size.IsEmpty*
+  name: IsEmpty
+  href: api/Core/SixLabors.Primitives.Size.html#SixLabors_Primitives_Size_IsEmpty_
+  commentId: Overload:SixLabors.Primitives.Size.IsEmpty
+  fullName: SixLabors.Primitives.Size.IsEmpty
+  nameWithType: Size.IsEmpty
+- uid: SixLabors.Primitives.Size.op_Addition(SixLabors.Primitives.Size,SixLabors.Primitives.Size)
+  name: Addition(Size, Size)
+  href: api/Core/SixLabors.Primitives.Size.html#SixLabors_Primitives_Size_op_Addition_SixLabors_Primitives_Size_SixLabors_Primitives_Size_
+  commentId: M:SixLabors.Primitives.Size.op_Addition(SixLabors.Primitives.Size,SixLabors.Primitives.Size)
+  fullName: SixLabors.Primitives.Size.Addition(SixLabors.Primitives.Size, SixLabors.Primitives.Size)
+  nameWithType: Size.Addition(Size, Size)
+- uid: SixLabors.Primitives.Size.op_Addition*
+  name: Addition
+  href: api/Core/SixLabors.Primitives.Size.html#SixLabors_Primitives_Size_op_Addition_
+  commentId: Overload:SixLabors.Primitives.Size.op_Addition
+  fullName: SixLabors.Primitives.Size.Addition
+  nameWithType: Size.Addition
+- uid: SixLabors.Primitives.Size.op_Division(SixLabors.Primitives.Size,System.Int32)
+  name: Division(Size, Int32)
+  href: api/Core/SixLabors.Primitives.Size.html#SixLabors_Primitives_Size_op_Division_SixLabors_Primitives_Size_System_Int32_
+  commentId: M:SixLabors.Primitives.Size.op_Division(SixLabors.Primitives.Size,System.Int32)
+  fullName: SixLabors.Primitives.Size.Division(SixLabors.Primitives.Size, System.Int32)
+  nameWithType: Size.Division(Size, Int32)
+- uid: SixLabors.Primitives.Size.op_Division(SixLabors.Primitives.Size,System.Single)
+  name: Division(Size, Single)
+  href: api/Core/SixLabors.Primitives.Size.html#SixLabors_Primitives_Size_op_Division_SixLabors_Primitives_Size_System_Single_
+  commentId: M:SixLabors.Primitives.Size.op_Division(SixLabors.Primitives.Size,System.Single)
+  fullName: SixLabors.Primitives.Size.Division(SixLabors.Primitives.Size, System.Single)
+  nameWithType: Size.Division(Size, Single)
+- uid: SixLabors.Primitives.Size.op_Division*
+  name: Division
+  href: api/Core/SixLabors.Primitives.Size.html#SixLabors_Primitives_Size_op_Division_
+  commentId: Overload:SixLabors.Primitives.Size.op_Division
+  fullName: SixLabors.Primitives.Size.Division
+  nameWithType: Size.Division
+- uid: SixLabors.Primitives.Size.op_Equality(SixLabors.Primitives.Size,SixLabors.Primitives.Size)
+  name: Equality(Size, Size)
+  href: api/Core/SixLabors.Primitives.Size.html#SixLabors_Primitives_Size_op_Equality_SixLabors_Primitives_Size_SixLabors_Primitives_Size_
+  commentId: M:SixLabors.Primitives.Size.op_Equality(SixLabors.Primitives.Size,SixLabors.Primitives.Size)
+  fullName: SixLabors.Primitives.Size.Equality(SixLabors.Primitives.Size, SixLabors.Primitives.Size)
+  nameWithType: Size.Equality(Size, Size)
+- uid: SixLabors.Primitives.Size.op_Equality*
+  name: Equality
+  href: api/Core/SixLabors.Primitives.Size.html#SixLabors_Primitives_Size_op_Equality_
+  commentId: Overload:SixLabors.Primitives.Size.op_Equality
+  fullName: SixLabors.Primitives.Size.Equality
+  nameWithType: Size.Equality
+- uid: SixLabors.Primitives.Size.op_Explicit(SixLabors.Primitives.Size)~SixLabors.Primitives.Point
+  name: Explicit(Size to Point)
+  href: api/Core/SixLabors.Primitives.Size.html#SixLabors_Primitives_Size_op_Explicit_SixLabors_Primitives_Size__SixLabors_Primitives_Point
+  commentId: M:SixLabors.Primitives.Size.op_Explicit(SixLabors.Primitives.Size)~SixLabors.Primitives.Point
+  name.vb: Narrowing(Size to Point)
+  fullName: SixLabors.Primitives.Size.Explicit(SixLabors.Primitives.Size to SixLabors.Primitives.Point)
+  fullName.vb: SixLabors.Primitives.Size.Narrowing(SixLabors.Primitives.Size to SixLabors.Primitives.Point)
+  nameWithType: Size.Explicit(Size to Point)
+  nameWithType.vb: Size.Narrowing(Size to Point)
+- uid: SixLabors.Primitives.Size.op_Explicit*
+  name: Explicit
+  href: api/Core/SixLabors.Primitives.Size.html#SixLabors_Primitives_Size_op_Explicit_
+  commentId: Overload:SixLabors.Primitives.Size.op_Explicit
+  name.vb: Narrowing
+  fullName: SixLabors.Primitives.Size.Explicit
+  fullName.vb: SixLabors.Primitives.Size.Narrowing
+  nameWithType: Size.Explicit
+  nameWithType.vb: Size.Narrowing
+- uid: SixLabors.Primitives.Size.op_Implicit(SixLabors.Primitives.Size)~SixLabors.Primitives.SizeF
+  name: Implicit(Size to SizeF)
+  href: api/Core/SixLabors.Primitives.Size.html#SixLabors_Primitives_Size_op_Implicit_SixLabors_Primitives_Size__SixLabors_Primitives_SizeF
+  commentId: M:SixLabors.Primitives.Size.op_Implicit(SixLabors.Primitives.Size)~SixLabors.Primitives.SizeF
+  name.vb: Widening(Size to SizeF)
+  fullName: SixLabors.Primitives.Size.Implicit(SixLabors.Primitives.Size to SixLabors.Primitives.SizeF)
+  fullName.vb: SixLabors.Primitives.Size.Widening(SixLabors.Primitives.Size to SixLabors.Primitives.SizeF)
+  nameWithType: Size.Implicit(Size to SizeF)
+  nameWithType.vb: Size.Widening(Size to SizeF)
+- uid: SixLabors.Primitives.Size.op_Implicit*
+  name: Implicit
+  href: api/Core/SixLabors.Primitives.Size.html#SixLabors_Primitives_Size_op_Implicit_
+  commentId: Overload:SixLabors.Primitives.Size.op_Implicit
+  name.vb: Widening
+  fullName: SixLabors.Primitives.Size.Implicit
+  fullName.vb: SixLabors.Primitives.Size.Widening
+  nameWithType: Size.Implicit
+  nameWithType.vb: Size.Widening
+- uid: SixLabors.Primitives.Size.op_Inequality(SixLabors.Primitives.Size,SixLabors.Primitives.Size)
+  name: Inequality(Size, Size)
+  href: api/Core/SixLabors.Primitives.Size.html#SixLabors_Primitives_Size_op_Inequality_SixLabors_Primitives_Size_SixLabors_Primitives_Size_
+  commentId: M:SixLabors.Primitives.Size.op_Inequality(SixLabors.Primitives.Size,SixLabors.Primitives.Size)
+  fullName: SixLabors.Primitives.Size.Inequality(SixLabors.Primitives.Size, SixLabors.Primitives.Size)
+  nameWithType: Size.Inequality(Size, Size)
+- uid: SixLabors.Primitives.Size.op_Inequality*
+  name: Inequality
+  href: api/Core/SixLabors.Primitives.Size.html#SixLabors_Primitives_Size_op_Inequality_
+  commentId: Overload:SixLabors.Primitives.Size.op_Inequality
+  fullName: SixLabors.Primitives.Size.Inequality
+  nameWithType: Size.Inequality
+- uid: SixLabors.Primitives.Size.op_Multiply(SixLabors.Primitives.Size,System.Int32)
+  name: Multiply(Size, Int32)
+  href: api/Core/SixLabors.Primitives.Size.html#SixLabors_Primitives_Size_op_Multiply_SixLabors_Primitives_Size_System_Int32_
+  commentId: M:SixLabors.Primitives.Size.op_Multiply(SixLabors.Primitives.Size,System.Int32)
+  fullName: SixLabors.Primitives.Size.Multiply(SixLabors.Primitives.Size, System.Int32)
+  nameWithType: Size.Multiply(Size, Int32)
+- uid: SixLabors.Primitives.Size.op_Multiply(SixLabors.Primitives.Size,System.Single)
+  name: Multiply(Size, Single)
+  href: api/Core/SixLabors.Primitives.Size.html#SixLabors_Primitives_Size_op_Multiply_SixLabors_Primitives_Size_System_Single_
+  commentId: M:SixLabors.Primitives.Size.op_Multiply(SixLabors.Primitives.Size,System.Single)
+  fullName: SixLabors.Primitives.Size.Multiply(SixLabors.Primitives.Size, System.Single)
+  nameWithType: Size.Multiply(Size, Single)
+- uid: SixLabors.Primitives.Size.op_Multiply(System.Int32,SixLabors.Primitives.Size)
+  name: Multiply(Int32, Size)
+  href: api/Core/SixLabors.Primitives.Size.html#SixLabors_Primitives_Size_op_Multiply_System_Int32_SixLabors_Primitives_Size_
+  commentId: M:SixLabors.Primitives.Size.op_Multiply(System.Int32,SixLabors.Primitives.Size)
+  fullName: SixLabors.Primitives.Size.Multiply(System.Int32, SixLabors.Primitives.Size)
+  nameWithType: Size.Multiply(Int32, Size)
+- uid: SixLabors.Primitives.Size.op_Multiply(System.Single,SixLabors.Primitives.Size)
+  name: Multiply(Single, Size)
+  href: api/Core/SixLabors.Primitives.Size.html#SixLabors_Primitives_Size_op_Multiply_System_Single_SixLabors_Primitives_Size_
+  commentId: M:SixLabors.Primitives.Size.op_Multiply(System.Single,SixLabors.Primitives.Size)
+  fullName: SixLabors.Primitives.Size.Multiply(System.Single, SixLabors.Primitives.Size)
+  nameWithType: Size.Multiply(Single, Size)
+- uid: SixLabors.Primitives.Size.op_Multiply*
+  name: Multiply
+  href: api/Core/SixLabors.Primitives.Size.html#SixLabors_Primitives_Size_op_Multiply_
+  commentId: Overload:SixLabors.Primitives.Size.op_Multiply
+  fullName: SixLabors.Primitives.Size.Multiply
+  nameWithType: Size.Multiply
+- uid: SixLabors.Primitives.Size.op_Subtraction(SixLabors.Primitives.Size,SixLabors.Primitives.Size)
+  name: Subtraction(Size, Size)
+  href: api/Core/SixLabors.Primitives.Size.html#SixLabors_Primitives_Size_op_Subtraction_SixLabors_Primitives_Size_SixLabors_Primitives_Size_
+  commentId: M:SixLabors.Primitives.Size.op_Subtraction(SixLabors.Primitives.Size,SixLabors.Primitives.Size)
+  fullName: SixLabors.Primitives.Size.Subtraction(SixLabors.Primitives.Size, SixLabors.Primitives.Size)
+  nameWithType: Size.Subtraction(Size, Size)
+- uid: SixLabors.Primitives.Size.op_Subtraction*
+  name: Subtraction
+  href: api/Core/SixLabors.Primitives.Size.html#SixLabors_Primitives_Size_op_Subtraction_
+  commentId: Overload:SixLabors.Primitives.Size.op_Subtraction
+  fullName: SixLabors.Primitives.Size.Subtraction
+  nameWithType: Size.Subtraction
+- uid: SixLabors.Primitives.Size.Round(SixLabors.Primitives.SizeF)
+  name: Round(SizeF)
+  href: api/Core/SixLabors.Primitives.Size.html#SixLabors_Primitives_Size_Round_SixLabors_Primitives_SizeF_
+  commentId: M:SixLabors.Primitives.Size.Round(SixLabors.Primitives.SizeF)
+  fullName: SixLabors.Primitives.Size.Round(SixLabors.Primitives.SizeF)
+  nameWithType: Size.Round(SizeF)
+- uid: SixLabors.Primitives.Size.Round*
+  name: Round
+  href: api/Core/SixLabors.Primitives.Size.html#SixLabors_Primitives_Size_Round_
+  commentId: Overload:SixLabors.Primitives.Size.Round
+  fullName: SixLabors.Primitives.Size.Round
+  nameWithType: Size.Round
+- uid: SixLabors.Primitives.Size.Subtract(SixLabors.Primitives.Size,SixLabors.Primitives.Size)
+  name: Subtract(Size, Size)
+  href: api/Core/SixLabors.Primitives.Size.html#SixLabors_Primitives_Size_Subtract_SixLabors_Primitives_Size_SixLabors_Primitives_Size_
+  commentId: M:SixLabors.Primitives.Size.Subtract(SixLabors.Primitives.Size,SixLabors.Primitives.Size)
+  fullName: SixLabors.Primitives.Size.Subtract(SixLabors.Primitives.Size, SixLabors.Primitives.Size)
+  nameWithType: Size.Subtract(Size, Size)
+- uid: SixLabors.Primitives.Size.Subtract*
+  name: Subtract
+  href: api/Core/SixLabors.Primitives.Size.html#SixLabors_Primitives_Size_Subtract_
+  commentId: Overload:SixLabors.Primitives.Size.Subtract
+  fullName: SixLabors.Primitives.Size.Subtract
+  nameWithType: Size.Subtract
+- uid: SixLabors.Primitives.Size.ToString
+  name: ToString()
+  href: api/Core/SixLabors.Primitives.Size.html#SixLabors_Primitives_Size_ToString
+  commentId: M:SixLabors.Primitives.Size.ToString
+  fullName: SixLabors.Primitives.Size.ToString()
+  nameWithType: Size.ToString()
+- uid: SixLabors.Primitives.Size.ToString*
+  name: ToString
+  href: api/Core/SixLabors.Primitives.Size.html#SixLabors_Primitives_Size_ToString_
+  commentId: Overload:SixLabors.Primitives.Size.ToString
+  fullName: SixLabors.Primitives.Size.ToString
+  nameWithType: Size.ToString
+- uid: SixLabors.Primitives.Size.Transform(SixLabors.Primitives.Size,Matrix3x2)
+  name: Transform(Size, Matrix3x2)
+  href: api/Core/SixLabors.Primitives.Size.html#SixLabors_Primitives_Size_Transform_SixLabors_Primitives_Size_Matrix3x2_
+  commentId: M:SixLabors.Primitives.Size.Transform(SixLabors.Primitives.Size,Matrix3x2)
+  fullName: SixLabors.Primitives.Size.Transform(SixLabors.Primitives.Size, Matrix3x2)
+  nameWithType: Size.Transform(Size, Matrix3x2)
+- uid: SixLabors.Primitives.Size.Transform*
+  name: Transform
+  href: api/Core/SixLabors.Primitives.Size.html#SixLabors_Primitives_Size_Transform_
+  commentId: Overload:SixLabors.Primitives.Size.Transform
+  fullName: SixLabors.Primitives.Size.Transform
+  nameWithType: Size.Transform
+- uid: SixLabors.Primitives.Size.Truncate(SixLabors.Primitives.SizeF)
+  name: Truncate(SizeF)
+  href: api/Core/SixLabors.Primitives.Size.html#SixLabors_Primitives_Size_Truncate_SixLabors_Primitives_SizeF_
+  commentId: M:SixLabors.Primitives.Size.Truncate(SixLabors.Primitives.SizeF)
+  fullName: SixLabors.Primitives.Size.Truncate(SixLabors.Primitives.SizeF)
+  nameWithType: Size.Truncate(SizeF)
+- uid: SixLabors.Primitives.Size.Truncate*
+  name: Truncate
+  href: api/Core/SixLabors.Primitives.Size.html#SixLabors_Primitives_Size_Truncate_
+  commentId: Overload:SixLabors.Primitives.Size.Truncate
+  fullName: SixLabors.Primitives.Size.Truncate
+  nameWithType: Size.Truncate
+- uid: SixLabors.Primitives.Size.Width
+  name: Width
+  href: api/Core/SixLabors.Primitives.Size.html#SixLabors_Primitives_Size_Width
+  commentId: P:SixLabors.Primitives.Size.Width
+  fullName: SixLabors.Primitives.Size.Width
+  nameWithType: Size.Width
+- uid: SixLabors.Primitives.Size.Width*
+  name: Width
+  href: api/Core/SixLabors.Primitives.Size.html#SixLabors_Primitives_Size_Width_
+  commentId: Overload:SixLabors.Primitives.Size.Width
+  fullName: SixLabors.Primitives.Size.Width
+  nameWithType: Size.Width
+- uid: SixLabors.Primitives.SizeF
+  name: SizeF
+  href: api/Core/SixLabors.Primitives.SizeF.html
+  commentId: T:SixLabors.Primitives.SizeF
+  fullName: SixLabors.Primitives.SizeF
+  nameWithType: SizeF
+- uid: SixLabors.Primitives.SizeF.#ctor(SixLabors.Primitives.PointF)
+  name: SizeF(PointF)
+  href: api/Core/SixLabors.Primitives.SizeF.html#SixLabors_Primitives_SizeF__ctor_SixLabors_Primitives_PointF_
+  commentId: M:SixLabors.Primitives.SizeF.#ctor(SixLabors.Primitives.PointF)
+  fullName: SixLabors.Primitives.SizeF.SizeF(SixLabors.Primitives.PointF)
+  nameWithType: SizeF.SizeF(PointF)
+- uid: SixLabors.Primitives.SizeF.#ctor(SixLabors.Primitives.SizeF)
+  name: SizeF(SizeF)
+  href: api/Core/SixLabors.Primitives.SizeF.html#SixLabors_Primitives_SizeF__ctor_SixLabors_Primitives_SizeF_
+  commentId: M:SixLabors.Primitives.SizeF.#ctor(SixLabors.Primitives.SizeF)
+  fullName: SixLabors.Primitives.SizeF.SizeF(SixLabors.Primitives.SizeF)
+  nameWithType: SizeF.SizeF(SizeF)
+- uid: SixLabors.Primitives.SizeF.#ctor(System.Single,System.Single)
+  name: SizeF(Single, Single)
+  href: api/Core/SixLabors.Primitives.SizeF.html#SixLabors_Primitives_SizeF__ctor_System_Single_System_Single_
+  commentId: M:SixLabors.Primitives.SizeF.#ctor(System.Single,System.Single)
+  fullName: SixLabors.Primitives.SizeF.SizeF(System.Single, System.Single)
+  nameWithType: SizeF.SizeF(Single, Single)
+- uid: SixLabors.Primitives.SizeF.#ctor*
+  name: SizeF
+  href: api/Core/SixLabors.Primitives.SizeF.html#SixLabors_Primitives_SizeF__ctor_
+  commentId: Overload:SixLabors.Primitives.SizeF.#ctor
+  fullName: SixLabors.Primitives.SizeF.SizeF
+  nameWithType: SizeF.SizeF
+- uid: SixLabors.Primitives.SizeF.Add(SixLabors.Primitives.SizeF,SixLabors.Primitives.SizeF)
+  name: Add(SizeF, SizeF)
+  href: api/Core/SixLabors.Primitives.SizeF.html#SixLabors_Primitives_SizeF_Add_SixLabors_Primitives_SizeF_SixLabors_Primitives_SizeF_
+  commentId: M:SixLabors.Primitives.SizeF.Add(SixLabors.Primitives.SizeF,SixLabors.Primitives.SizeF)
+  fullName: SixLabors.Primitives.SizeF.Add(SixLabors.Primitives.SizeF, SixLabors.Primitives.SizeF)
+  nameWithType: SizeF.Add(SizeF, SizeF)
+- uid: SixLabors.Primitives.SizeF.Add*
+  name: Add
+  href: api/Core/SixLabors.Primitives.SizeF.html#SixLabors_Primitives_SizeF_Add_
+  commentId: Overload:SixLabors.Primitives.SizeF.Add
+  fullName: SixLabors.Primitives.SizeF.Add
+  nameWithType: SizeF.Add
+- uid: SixLabors.Primitives.SizeF.Empty
+  name: Empty
+  href: api/Core/SixLabors.Primitives.SizeF.html#SixLabors_Primitives_SizeF_Empty
+  commentId: F:SixLabors.Primitives.SizeF.Empty
+  fullName: SixLabors.Primitives.SizeF.Empty
+  nameWithType: SizeF.Empty
+- uid: SixLabors.Primitives.SizeF.Equals(SixLabors.Primitives.SizeF)
+  name: Equals(SizeF)
+  href: api/Core/SixLabors.Primitives.SizeF.html#SixLabors_Primitives_SizeF_Equals_SixLabors_Primitives_SizeF_
+  commentId: M:SixLabors.Primitives.SizeF.Equals(SixLabors.Primitives.SizeF)
+  fullName: SixLabors.Primitives.SizeF.Equals(SixLabors.Primitives.SizeF)
+  nameWithType: SizeF.Equals(SizeF)
+- uid: SixLabors.Primitives.SizeF.Equals(System.Object)
+  name: Equals(Object)
+  href: api/Core/SixLabors.Primitives.SizeF.html#SixLabors_Primitives_SizeF_Equals_System_Object_
+  commentId: M:SixLabors.Primitives.SizeF.Equals(System.Object)
+  fullName: SixLabors.Primitives.SizeF.Equals(System.Object)
+  nameWithType: SizeF.Equals(Object)
+- uid: SixLabors.Primitives.SizeF.Equals*
+  name: Equals
+  href: api/Core/SixLabors.Primitives.SizeF.html#SixLabors_Primitives_SizeF_Equals_
+  commentId: Overload:SixLabors.Primitives.SizeF.Equals
+  fullName: SixLabors.Primitives.SizeF.Equals
+  nameWithType: SizeF.Equals
+- uid: SixLabors.Primitives.SizeF.GetHashCode
+  name: GetHashCode()
+  href: api/Core/SixLabors.Primitives.SizeF.html#SixLabors_Primitives_SizeF_GetHashCode
+  commentId: M:SixLabors.Primitives.SizeF.GetHashCode
+  fullName: SixLabors.Primitives.SizeF.GetHashCode()
+  nameWithType: SizeF.GetHashCode()
+- uid: SixLabors.Primitives.SizeF.GetHashCode*
+  name: GetHashCode
+  href: api/Core/SixLabors.Primitives.SizeF.html#SixLabors_Primitives_SizeF_GetHashCode_
+  commentId: Overload:SixLabors.Primitives.SizeF.GetHashCode
+  fullName: SixLabors.Primitives.SizeF.GetHashCode
+  nameWithType: SizeF.GetHashCode
+- uid: SixLabors.Primitives.SizeF.Height
+  name: Height
+  href: api/Core/SixLabors.Primitives.SizeF.html#SixLabors_Primitives_SizeF_Height
+  commentId: P:SixLabors.Primitives.SizeF.Height
+  fullName: SixLabors.Primitives.SizeF.Height
+  nameWithType: SizeF.Height
+- uid: SixLabors.Primitives.SizeF.Height*
+  name: Height
+  href: api/Core/SixLabors.Primitives.SizeF.html#SixLabors_Primitives_SizeF_Height_
+  commentId: Overload:SixLabors.Primitives.SizeF.Height
+  fullName: SixLabors.Primitives.SizeF.Height
+  nameWithType: SizeF.Height
+- uid: SixLabors.Primitives.SizeF.IsEmpty
+  name: IsEmpty
+  href: api/Core/SixLabors.Primitives.SizeF.html#SixLabors_Primitives_SizeF_IsEmpty
+  commentId: P:SixLabors.Primitives.SizeF.IsEmpty
+  fullName: SixLabors.Primitives.SizeF.IsEmpty
+  nameWithType: SizeF.IsEmpty
+- uid: SixLabors.Primitives.SizeF.IsEmpty*
+  name: IsEmpty
+  href: api/Core/SixLabors.Primitives.SizeF.html#SixLabors_Primitives_SizeF_IsEmpty_
+  commentId: Overload:SixLabors.Primitives.SizeF.IsEmpty
+  fullName: SixLabors.Primitives.SizeF.IsEmpty
+  nameWithType: SizeF.IsEmpty
+- uid: SixLabors.Primitives.SizeF.op_Addition(SixLabors.Primitives.SizeF,SixLabors.Primitives.SizeF)
+  name: Addition(SizeF, SizeF)
+  href: api/Core/SixLabors.Primitives.SizeF.html#SixLabors_Primitives_SizeF_op_Addition_SixLabors_Primitives_SizeF_SixLabors_Primitives_SizeF_
+  commentId: M:SixLabors.Primitives.SizeF.op_Addition(SixLabors.Primitives.SizeF,SixLabors.Primitives.SizeF)
+  fullName: SixLabors.Primitives.SizeF.Addition(SixLabors.Primitives.SizeF, SixLabors.Primitives.SizeF)
+  nameWithType: SizeF.Addition(SizeF, SizeF)
+- uid: SixLabors.Primitives.SizeF.op_Addition*
+  name: Addition
+  href: api/Core/SixLabors.Primitives.SizeF.html#SixLabors_Primitives_SizeF_op_Addition_
+  commentId: Overload:SixLabors.Primitives.SizeF.op_Addition
+  fullName: SixLabors.Primitives.SizeF.Addition
+  nameWithType: SizeF.Addition
+- uid: SixLabors.Primitives.SizeF.op_Division(SixLabors.Primitives.SizeF,System.Single)
+  name: Division(SizeF, Single)
+  href: api/Core/SixLabors.Primitives.SizeF.html#SixLabors_Primitives_SizeF_op_Division_SixLabors_Primitives_SizeF_System_Single_
+  commentId: M:SixLabors.Primitives.SizeF.op_Division(SixLabors.Primitives.SizeF,System.Single)
+  fullName: SixLabors.Primitives.SizeF.Division(SixLabors.Primitives.SizeF, System.Single)
+  nameWithType: SizeF.Division(SizeF, Single)
+- uid: SixLabors.Primitives.SizeF.op_Division*
+  name: Division
+  href: api/Core/SixLabors.Primitives.SizeF.html#SixLabors_Primitives_SizeF_op_Division_
+  commentId: Overload:SixLabors.Primitives.SizeF.op_Division
+  fullName: SixLabors.Primitives.SizeF.Division
+  nameWithType: SizeF.Division
+- uid: SixLabors.Primitives.SizeF.op_Equality(SixLabors.Primitives.SizeF,SixLabors.Primitives.SizeF)
+  name: Equality(SizeF, SizeF)
+  href: api/Core/SixLabors.Primitives.SizeF.html#SixLabors_Primitives_SizeF_op_Equality_SixLabors_Primitives_SizeF_SixLabors_Primitives_SizeF_
+  commentId: M:SixLabors.Primitives.SizeF.op_Equality(SixLabors.Primitives.SizeF,SixLabors.Primitives.SizeF)
+  fullName: SixLabors.Primitives.SizeF.Equality(SixLabors.Primitives.SizeF, SixLabors.Primitives.SizeF)
+  nameWithType: SizeF.Equality(SizeF, SizeF)
+- uid: SixLabors.Primitives.SizeF.op_Equality*
+  name: Equality
+  href: api/Core/SixLabors.Primitives.SizeF.html#SixLabors_Primitives_SizeF_op_Equality_
+  commentId: Overload:SixLabors.Primitives.SizeF.op_Equality
+  fullName: SixLabors.Primitives.SizeF.Equality
+  nameWithType: SizeF.Equality
+- uid: SixLabors.Primitives.SizeF.op_Explicit(SixLabors.Primitives.SizeF)~SixLabors.Primitives.PointF
+  name: Explicit(SizeF to PointF)
+  href: api/Core/SixLabors.Primitives.SizeF.html#SixLabors_Primitives_SizeF_op_Explicit_SixLabors_Primitives_SizeF__SixLabors_Primitives_PointF
+  commentId: M:SixLabors.Primitives.SizeF.op_Explicit(SixLabors.Primitives.SizeF)~SixLabors.Primitives.PointF
+  name.vb: Narrowing(SizeF to PointF)
+  fullName: SixLabors.Primitives.SizeF.Explicit(SixLabors.Primitives.SizeF to SixLabors.Primitives.PointF)
+  fullName.vb: SixLabors.Primitives.SizeF.Narrowing(SixLabors.Primitives.SizeF to SixLabors.Primitives.PointF)
+  nameWithType: SizeF.Explicit(SizeF to PointF)
+  nameWithType.vb: SizeF.Narrowing(SizeF to PointF)
+- uid: SixLabors.Primitives.SizeF.op_Explicit(SixLabors.Primitives.SizeF)~SixLabors.Primitives.Size
+  name: Explicit(SizeF to Size)
+  href: api/Core/SixLabors.Primitives.SizeF.html#SixLabors_Primitives_SizeF_op_Explicit_SixLabors_Primitives_SizeF__SixLabors_Primitives_Size
+  commentId: M:SixLabors.Primitives.SizeF.op_Explicit(SixLabors.Primitives.SizeF)~SixLabors.Primitives.Size
+  name.vb: Narrowing(SizeF to Size)
+  fullName: SixLabors.Primitives.SizeF.Explicit(SixLabors.Primitives.SizeF to SixLabors.Primitives.Size)
+  fullName.vb: SixLabors.Primitives.SizeF.Narrowing(SixLabors.Primitives.SizeF to SixLabors.Primitives.Size)
+  nameWithType: SizeF.Explicit(SizeF to Size)
+  nameWithType.vb: SizeF.Narrowing(SizeF to Size)
+- uid: SixLabors.Primitives.SizeF.op_Explicit*
+  name: Explicit
+  href: api/Core/SixLabors.Primitives.SizeF.html#SixLabors_Primitives_SizeF_op_Explicit_
+  commentId: Overload:SixLabors.Primitives.SizeF.op_Explicit
+  name.vb: Narrowing
+  fullName: SixLabors.Primitives.SizeF.Explicit
+  fullName.vb: SixLabors.Primitives.SizeF.Narrowing
+  nameWithType: SizeF.Explicit
+  nameWithType.vb: SizeF.Narrowing
+- uid: SixLabors.Primitives.SizeF.op_Implicit(SixLabors.Primitives.SizeF)~Vector2
+  name: Implicit(SizeF to Vector2)
+  href: api/Core/SixLabors.Primitives.SizeF.html#SixLabors_Primitives_SizeF_op_Implicit_SixLabors_Primitives_SizeF__Vector2
+  commentId: M:SixLabors.Primitives.SizeF.op_Implicit(SixLabors.Primitives.SizeF)~Vector2
+  name.vb: Widening(SizeF to Vector2)
+  fullName: SixLabors.Primitives.SizeF.Implicit(SixLabors.Primitives.SizeF to Vector2)
+  fullName.vb: SixLabors.Primitives.SizeF.Widening(SixLabors.Primitives.SizeF to Vector2)
+  nameWithType: SizeF.Implicit(SizeF to Vector2)
+  nameWithType.vb: SizeF.Widening(SizeF to Vector2)
+- uid: SixLabors.Primitives.SizeF.op_Implicit*
+  name: Implicit
+  href: api/Core/SixLabors.Primitives.SizeF.html#SixLabors_Primitives_SizeF_op_Implicit_
+  commentId: Overload:SixLabors.Primitives.SizeF.op_Implicit
+  name.vb: Widening
+  fullName: SixLabors.Primitives.SizeF.Implicit
+  fullName.vb: SixLabors.Primitives.SizeF.Widening
+  nameWithType: SizeF.Implicit
+  nameWithType.vb: SizeF.Widening
+- uid: SixLabors.Primitives.SizeF.op_Inequality(SixLabors.Primitives.SizeF,SixLabors.Primitives.SizeF)
+  name: Inequality(SizeF, SizeF)
+  href: api/Core/SixLabors.Primitives.SizeF.html#SixLabors_Primitives_SizeF_op_Inequality_SixLabors_Primitives_SizeF_SixLabors_Primitives_SizeF_
+  commentId: M:SixLabors.Primitives.SizeF.op_Inequality(SixLabors.Primitives.SizeF,SixLabors.Primitives.SizeF)
+  fullName: SixLabors.Primitives.SizeF.Inequality(SixLabors.Primitives.SizeF, SixLabors.Primitives.SizeF)
+  nameWithType: SizeF.Inequality(SizeF, SizeF)
+- uid: SixLabors.Primitives.SizeF.op_Inequality*
+  name: Inequality
+  href: api/Core/SixLabors.Primitives.SizeF.html#SixLabors_Primitives_SizeF_op_Inequality_
+  commentId: Overload:SixLabors.Primitives.SizeF.op_Inequality
+  fullName: SixLabors.Primitives.SizeF.Inequality
+  nameWithType: SizeF.Inequality
+- uid: SixLabors.Primitives.SizeF.op_Multiply(SixLabors.Primitives.SizeF,System.Single)
+  name: Multiply(SizeF, Single)
+  href: api/Core/SixLabors.Primitives.SizeF.html#SixLabors_Primitives_SizeF_op_Multiply_SixLabors_Primitives_SizeF_System_Single_
+  commentId: M:SixLabors.Primitives.SizeF.op_Multiply(SixLabors.Primitives.SizeF,System.Single)
+  fullName: SixLabors.Primitives.SizeF.Multiply(SixLabors.Primitives.SizeF, System.Single)
+  nameWithType: SizeF.Multiply(SizeF, Single)
+- uid: SixLabors.Primitives.SizeF.op_Multiply(System.Single,SixLabors.Primitives.SizeF)
+  name: Multiply(Single, SizeF)
+  href: api/Core/SixLabors.Primitives.SizeF.html#SixLabors_Primitives_SizeF_op_Multiply_System_Single_SixLabors_Primitives_SizeF_
+  commentId: M:SixLabors.Primitives.SizeF.op_Multiply(System.Single,SixLabors.Primitives.SizeF)
+  fullName: SixLabors.Primitives.SizeF.Multiply(System.Single, SixLabors.Primitives.SizeF)
+  nameWithType: SizeF.Multiply(Single, SizeF)
+- uid: SixLabors.Primitives.SizeF.op_Multiply*
+  name: Multiply
+  href: api/Core/SixLabors.Primitives.SizeF.html#SixLabors_Primitives_SizeF_op_Multiply_
+  commentId: Overload:SixLabors.Primitives.SizeF.op_Multiply
+  fullName: SixLabors.Primitives.SizeF.Multiply
+  nameWithType: SizeF.Multiply
+- uid: SixLabors.Primitives.SizeF.op_Subtraction(SixLabors.Primitives.SizeF,SixLabors.Primitives.SizeF)
+  name: Subtraction(SizeF, SizeF)
+  href: api/Core/SixLabors.Primitives.SizeF.html#SixLabors_Primitives_SizeF_op_Subtraction_SixLabors_Primitives_SizeF_SixLabors_Primitives_SizeF_
+  commentId: M:SixLabors.Primitives.SizeF.op_Subtraction(SixLabors.Primitives.SizeF,SixLabors.Primitives.SizeF)
+  fullName: SixLabors.Primitives.SizeF.Subtraction(SixLabors.Primitives.SizeF, SixLabors.Primitives.SizeF)
+  nameWithType: SizeF.Subtraction(SizeF, SizeF)
+- uid: SixLabors.Primitives.SizeF.op_Subtraction*
+  name: Subtraction
+  href: api/Core/SixLabors.Primitives.SizeF.html#SixLabors_Primitives_SizeF_op_Subtraction_
+  commentId: Overload:SixLabors.Primitives.SizeF.op_Subtraction
+  fullName: SixLabors.Primitives.SizeF.Subtraction
+  nameWithType: SizeF.Subtraction
+- uid: SixLabors.Primitives.SizeF.Subtract(SixLabors.Primitives.SizeF,SixLabors.Primitives.SizeF)
+  name: Subtract(SizeF, SizeF)
+  href: api/Core/SixLabors.Primitives.SizeF.html#SixLabors_Primitives_SizeF_Subtract_SixLabors_Primitives_SizeF_SixLabors_Primitives_SizeF_
+  commentId: M:SixLabors.Primitives.SizeF.Subtract(SixLabors.Primitives.SizeF,SixLabors.Primitives.SizeF)
+  fullName: SixLabors.Primitives.SizeF.Subtract(SixLabors.Primitives.SizeF, SixLabors.Primitives.SizeF)
+  nameWithType: SizeF.Subtract(SizeF, SizeF)
+- uid: SixLabors.Primitives.SizeF.Subtract*
+  name: Subtract
+  href: api/Core/SixLabors.Primitives.SizeF.html#SixLabors_Primitives_SizeF_Subtract_
+  commentId: Overload:SixLabors.Primitives.SizeF.Subtract
+  fullName: SixLabors.Primitives.SizeF.Subtract
+  nameWithType: SizeF.Subtract
+- uid: SixLabors.Primitives.SizeF.ToString
+  name: ToString()
+  href: api/Core/SixLabors.Primitives.SizeF.html#SixLabors_Primitives_SizeF_ToString
+  commentId: M:SixLabors.Primitives.SizeF.ToString
+  fullName: SixLabors.Primitives.SizeF.ToString()
+  nameWithType: SizeF.ToString()
+- uid: SixLabors.Primitives.SizeF.ToString*
+  name: ToString
+  href: api/Core/SixLabors.Primitives.SizeF.html#SixLabors_Primitives_SizeF_ToString_
+  commentId: Overload:SixLabors.Primitives.SizeF.ToString
+  fullName: SixLabors.Primitives.SizeF.ToString
+  nameWithType: SizeF.ToString
+- uid: SixLabors.Primitives.SizeF.Transform(SixLabors.Primitives.SizeF,Matrix3x2)
+  name: Transform(SizeF, Matrix3x2)
+  href: api/Core/SixLabors.Primitives.SizeF.html#SixLabors_Primitives_SizeF_Transform_SixLabors_Primitives_SizeF_Matrix3x2_
+  commentId: M:SixLabors.Primitives.SizeF.Transform(SixLabors.Primitives.SizeF,Matrix3x2)
+  fullName: SixLabors.Primitives.SizeF.Transform(SixLabors.Primitives.SizeF, Matrix3x2)
+  nameWithType: SizeF.Transform(SizeF, Matrix3x2)
+- uid: SixLabors.Primitives.SizeF.Transform*
+  name: Transform
+  href: api/Core/SixLabors.Primitives.SizeF.html#SixLabors_Primitives_SizeF_Transform_
+  commentId: Overload:SixLabors.Primitives.SizeF.Transform
+  fullName: SixLabors.Primitives.SizeF.Transform
+  nameWithType: SizeF.Transform
+- uid: SixLabors.Primitives.SizeF.Width
+  name: Width
+  href: api/Core/SixLabors.Primitives.SizeF.html#SixLabors_Primitives_SizeF_Width
+  commentId: P:SixLabors.Primitives.SizeF.Width
+  fullName: SixLabors.Primitives.SizeF.Width
+  nameWithType: SizeF.Width
+- uid: SixLabors.Primitives.SizeF.Width*
+  name: Width
+  href: api/Core/SixLabors.Primitives.SizeF.html#SixLabors_Primitives_SizeF_Width_
+  commentId: Overload:SixLabors.Primitives.SizeF.Width
+  fullName: SixLabors.Primitives.SizeF.Width
+  nameWithType: SizeF.Width
 - uid: SixLabors.Shapes
   name: SixLabors.Shapes
   href: api/Shapes/SixLabors.Shapes.html
@@ -23306,6 +25580,12 @@ references:
   commentId: Overload:SixLabors.Shapes.PathCollection.GetEnumerator
   fullName: SixLabors.Shapes.PathCollection.GetEnumerator
   nameWithType: PathCollection.GetEnumerator
+- uid: SixLabors.Shapes.PathCollection.paths
+  name: paths
+  href: api/Shapes/SixLabors.Shapes.PathCollection.html#SixLabors_Shapes_PathCollection_paths
+  commentId: F:SixLabors.Shapes.PathCollection.paths
+  fullName: SixLabors.Shapes.PathCollection.paths
+  nameWithType: PathCollection.paths
 - uid: SixLabors.Shapes.PathCollection.Transform(Matrix3x2)
   name: Transform(Matrix3x2)
   href: api/Shapes/SixLabors.Shapes.PathCollection.html#SixLabors_Shapes_PathCollection_Transform_Matrix3x2_
@@ -23696,361 +25976,361 @@ references:
   commentId: F:SixLabors.Shapes.PolygonClipper.ClippingType.Subject
   fullName: SixLabors.Shapes.PolygonClipper.ClippingType.Subject
   nameWithType: ClippingType.Subject
-- uid: SixLabors.Shapes.RectangularPolygon
-  name: RectangularPolygon
-  href: api/Shapes/SixLabors.Shapes.RectangularPolygon.html
-  commentId: T:SixLabors.Shapes.RectangularPolygon
-  fullName: SixLabors.Shapes.RectangularPolygon
-  nameWithType: RectangularPolygon
-- uid: SixLabors.Shapes.RectangularPolygon.#ctor(PointF,PointF)
-  name: RectangularPolygon(PointF, PointF)
-  href: api/Shapes/SixLabors.Shapes.RectangularPolygon.html#SixLabors_Shapes_RectangularPolygon__ctor_PointF_PointF_
-  commentId: M:SixLabors.Shapes.RectangularPolygon.#ctor(PointF,PointF)
-  fullName: SixLabors.Shapes.RectangularPolygon.RectangularPolygon(PointF, PointF)
-  nameWithType: RectangularPolygon.RectangularPolygon(PointF, PointF)
-- uid: SixLabors.Shapes.RectangularPolygon.#ctor(PointF,SizeF)
-  name: RectangularPolygon(PointF, SizeF)
-  href: api/Shapes/SixLabors.Shapes.RectangularPolygon.html#SixLabors_Shapes_RectangularPolygon__ctor_PointF_SizeF_
-  commentId: M:SixLabors.Shapes.RectangularPolygon.#ctor(PointF,SizeF)
-  fullName: SixLabors.Shapes.RectangularPolygon.RectangularPolygon(PointF, SizeF)
-  nameWithType: RectangularPolygon.RectangularPolygon(PointF, SizeF)
-- uid: SixLabors.Shapes.RectangularPolygon.#ctor(RectangleF)
-  name: RectangularPolygon(RectangleF)
-  href: api/Shapes/SixLabors.Shapes.RectangularPolygon.html#SixLabors_Shapes_RectangularPolygon__ctor_RectangleF_
-  commentId: M:SixLabors.Shapes.RectangularPolygon.#ctor(RectangleF)
-  fullName: SixLabors.Shapes.RectangularPolygon.RectangularPolygon(RectangleF)
-  nameWithType: RectangularPolygon.RectangularPolygon(RectangleF)
-- uid: SixLabors.Shapes.RectangularPolygon.#ctor(System.Single,System.Single,System.Single,System.Single)
-  name: RectangularPolygon(Single, Single, Single, Single)
-  href: api/Shapes/SixLabors.Shapes.RectangularPolygon.html#SixLabors_Shapes_RectangularPolygon__ctor_System_Single_System_Single_System_Single_System_Single_
-  commentId: M:SixLabors.Shapes.RectangularPolygon.#ctor(System.Single,System.Single,System.Single,System.Single)
-  fullName: SixLabors.Shapes.RectangularPolygon.RectangularPolygon(System.Single, System.Single, System.Single, System.Single)
-  nameWithType: RectangularPolygon.RectangularPolygon(Single, Single, Single, Single)
-- uid: SixLabors.Shapes.RectangularPolygon.#ctor*
-  name: RectangularPolygon
-  href: api/Shapes/SixLabors.Shapes.RectangularPolygon.html#SixLabors_Shapes_RectangularPolygon__ctor_
-  commentId: Overload:SixLabors.Shapes.RectangularPolygon.#ctor
-  fullName: SixLabors.Shapes.RectangularPolygon.RectangularPolygon
-  nameWithType: RectangularPolygon.RectangularPolygon
-- uid: SixLabors.Shapes.RectangularPolygon.Bottom
+- uid: SixLabors.Shapes.RectangularePolygon
+  name: RectangularePolygon
+  href: api/Shapes/SixLabors.Shapes.RectangularePolygon.html
+  commentId: T:SixLabors.Shapes.RectangularePolygon
+  fullName: SixLabors.Shapes.RectangularePolygon
+  nameWithType: RectangularePolygon
+- uid: SixLabors.Shapes.RectangularePolygon.#ctor(PointF,PointF)
+  name: RectangularePolygon(PointF, PointF)
+  href: api/Shapes/SixLabors.Shapes.RectangularePolygon.html#SixLabors_Shapes_RectangularePolygon__ctor_PointF_PointF_
+  commentId: M:SixLabors.Shapes.RectangularePolygon.#ctor(PointF,PointF)
+  fullName: SixLabors.Shapes.RectangularePolygon.RectangularePolygon(PointF, PointF)
+  nameWithType: RectangularePolygon.RectangularePolygon(PointF, PointF)
+- uid: SixLabors.Shapes.RectangularePolygon.#ctor(PointF,SizeF)
+  name: RectangularePolygon(PointF, SizeF)
+  href: api/Shapes/SixLabors.Shapes.RectangularePolygon.html#SixLabors_Shapes_RectangularePolygon__ctor_PointF_SizeF_
+  commentId: M:SixLabors.Shapes.RectangularePolygon.#ctor(PointF,SizeF)
+  fullName: SixLabors.Shapes.RectangularePolygon.RectangularePolygon(PointF, SizeF)
+  nameWithType: RectangularePolygon.RectangularePolygon(PointF, SizeF)
+- uid: SixLabors.Shapes.RectangularePolygon.#ctor(RectangleF)
+  name: RectangularePolygon(RectangleF)
+  href: api/Shapes/SixLabors.Shapes.RectangularePolygon.html#SixLabors_Shapes_RectangularePolygon__ctor_RectangleF_
+  commentId: M:SixLabors.Shapes.RectangularePolygon.#ctor(RectangleF)
+  fullName: SixLabors.Shapes.RectangularePolygon.RectangularePolygon(RectangleF)
+  nameWithType: RectangularePolygon.RectangularePolygon(RectangleF)
+- uid: SixLabors.Shapes.RectangularePolygon.#ctor(System.Single,System.Single,System.Single,System.Single)
+  name: RectangularePolygon(Single, Single, Single, Single)
+  href: api/Shapes/SixLabors.Shapes.RectangularePolygon.html#SixLabors_Shapes_RectangularePolygon__ctor_System_Single_System_Single_System_Single_System_Single_
+  commentId: M:SixLabors.Shapes.RectangularePolygon.#ctor(System.Single,System.Single,System.Single,System.Single)
+  fullName: SixLabors.Shapes.RectangularePolygon.RectangularePolygon(System.Single, System.Single, System.Single, System.Single)
+  nameWithType: RectangularePolygon.RectangularePolygon(Single, Single, Single, Single)
+- uid: SixLabors.Shapes.RectangularePolygon.#ctor*
+  name: RectangularePolygon
+  href: api/Shapes/SixLabors.Shapes.RectangularePolygon.html#SixLabors_Shapes_RectangularePolygon__ctor_
+  commentId: Overload:SixLabors.Shapes.RectangularePolygon.#ctor
+  fullName: SixLabors.Shapes.RectangularePolygon.RectangularePolygon
+  nameWithType: RectangularePolygon.RectangularePolygon
+- uid: SixLabors.Shapes.RectangularePolygon.Bottom
   name: Bottom
-  href: api/Shapes/SixLabors.Shapes.RectangularPolygon.html#SixLabors_Shapes_RectangularPolygon_Bottom
-  commentId: P:SixLabors.Shapes.RectangularPolygon.Bottom
-  fullName: SixLabors.Shapes.RectangularPolygon.Bottom
-  nameWithType: RectangularPolygon.Bottom
-- uid: SixLabors.Shapes.RectangularPolygon.Bottom*
+  href: api/Shapes/SixLabors.Shapes.RectangularePolygon.html#SixLabors_Shapes_RectangularePolygon_Bottom
+  commentId: P:SixLabors.Shapes.RectangularePolygon.Bottom
+  fullName: SixLabors.Shapes.RectangularePolygon.Bottom
+  nameWithType: RectangularePolygon.Bottom
+- uid: SixLabors.Shapes.RectangularePolygon.Bottom*
   name: Bottom
-  href: api/Shapes/SixLabors.Shapes.RectangularPolygon.html#SixLabors_Shapes_RectangularPolygon_Bottom_
-  commentId: Overload:SixLabors.Shapes.RectangularPolygon.Bottom
-  fullName: SixLabors.Shapes.RectangularPolygon.Bottom
-  nameWithType: RectangularPolygon.Bottom
-- uid: SixLabors.Shapes.RectangularPolygon.Center
+  href: api/Shapes/SixLabors.Shapes.RectangularePolygon.html#SixLabors_Shapes_RectangularePolygon_Bottom_
+  commentId: Overload:SixLabors.Shapes.RectangularePolygon.Bottom
+  fullName: SixLabors.Shapes.RectangularePolygon.Bottom
+  nameWithType: RectangularePolygon.Bottom
+- uid: SixLabors.Shapes.RectangularePolygon.Center
   name: Center
-  href: api/Shapes/SixLabors.Shapes.RectangularPolygon.html#SixLabors_Shapes_RectangularPolygon_Center
-  commentId: P:SixLabors.Shapes.RectangularPolygon.Center
-  fullName: SixLabors.Shapes.RectangularPolygon.Center
-  nameWithType: RectangularPolygon.Center
-- uid: SixLabors.Shapes.RectangularPolygon.Center*
+  href: api/Shapes/SixLabors.Shapes.RectangularePolygon.html#SixLabors_Shapes_RectangularePolygon_Center
+  commentId: P:SixLabors.Shapes.RectangularePolygon.Center
+  fullName: SixLabors.Shapes.RectangularePolygon.Center
+  nameWithType: RectangularePolygon.Center
+- uid: SixLabors.Shapes.RectangularePolygon.Center*
   name: Center
-  href: api/Shapes/SixLabors.Shapes.RectangularPolygon.html#SixLabors_Shapes_RectangularPolygon_Center_
-  commentId: Overload:SixLabors.Shapes.RectangularPolygon.Center
-  fullName: SixLabors.Shapes.RectangularPolygon.Center
-  nameWithType: RectangularPolygon.Center
-- uid: SixLabors.Shapes.RectangularPolygon.Contains(PointF)
+  href: api/Shapes/SixLabors.Shapes.RectangularePolygon.html#SixLabors_Shapes_RectangularePolygon_Center_
+  commentId: Overload:SixLabors.Shapes.RectangularePolygon.Center
+  fullName: SixLabors.Shapes.RectangularePolygon.Center
+  nameWithType: RectangularePolygon.Center
+- uid: SixLabors.Shapes.RectangularePolygon.Contains(PointF)
   name: Contains(PointF)
-  href: api/Shapes/SixLabors.Shapes.RectangularPolygon.html#SixLabors_Shapes_RectangularPolygon_Contains_PointF_
-  commentId: M:SixLabors.Shapes.RectangularPolygon.Contains(PointF)
-  fullName: SixLabors.Shapes.RectangularPolygon.Contains(PointF)
-  nameWithType: RectangularPolygon.Contains(PointF)
-- uid: SixLabors.Shapes.RectangularPolygon.Contains*
+  href: api/Shapes/SixLabors.Shapes.RectangularePolygon.html#SixLabors_Shapes_RectangularePolygon_Contains_PointF_
+  commentId: M:SixLabors.Shapes.RectangularePolygon.Contains(PointF)
+  fullName: SixLabors.Shapes.RectangularePolygon.Contains(PointF)
+  nameWithType: RectangularePolygon.Contains(PointF)
+- uid: SixLabors.Shapes.RectangularePolygon.Contains*
   name: Contains
-  href: api/Shapes/SixLabors.Shapes.RectangularPolygon.html#SixLabors_Shapes_RectangularPolygon_Contains_
-  commentId: Overload:SixLabors.Shapes.RectangularPolygon.Contains
-  fullName: SixLabors.Shapes.RectangularPolygon.Contains
-  nameWithType: RectangularPolygon.Contains
-- uid: SixLabors.Shapes.RectangularPolygon.Distance(PointF)
+  href: api/Shapes/SixLabors.Shapes.RectangularePolygon.html#SixLabors_Shapes_RectangularePolygon_Contains_
+  commentId: Overload:SixLabors.Shapes.RectangularePolygon.Contains
+  fullName: SixLabors.Shapes.RectangularePolygon.Contains
+  nameWithType: RectangularePolygon.Contains
+- uid: SixLabors.Shapes.RectangularePolygon.Distance(PointF)
   name: Distance(PointF)
-  href: api/Shapes/SixLabors.Shapes.RectangularPolygon.html#SixLabors_Shapes_RectangularPolygon_Distance_PointF_
-  commentId: M:SixLabors.Shapes.RectangularPolygon.Distance(PointF)
-  fullName: SixLabors.Shapes.RectangularPolygon.Distance(PointF)
-  nameWithType: RectangularPolygon.Distance(PointF)
-- uid: SixLabors.Shapes.RectangularPolygon.Distance*
+  href: api/Shapes/SixLabors.Shapes.RectangularePolygon.html#SixLabors_Shapes_RectangularePolygon_Distance_PointF_
+  commentId: M:SixLabors.Shapes.RectangularePolygon.Distance(PointF)
+  fullName: SixLabors.Shapes.RectangularePolygon.Distance(PointF)
+  nameWithType: RectangularePolygon.Distance(PointF)
+- uid: SixLabors.Shapes.RectangularePolygon.Distance*
   name: Distance
-  href: api/Shapes/SixLabors.Shapes.RectangularPolygon.html#SixLabors_Shapes_RectangularPolygon_Distance_
-  commentId: Overload:SixLabors.Shapes.RectangularPolygon.Distance
-  fullName: SixLabors.Shapes.RectangularPolygon.Distance
-  nameWithType: RectangularPolygon.Distance
-- uid: SixLabors.Shapes.RectangularPolygon.FindIntersections(PointF,PointF,PointF[],System.Int32)
+  href: api/Shapes/SixLabors.Shapes.RectangularePolygon.html#SixLabors_Shapes_RectangularePolygon_Distance_
+  commentId: Overload:SixLabors.Shapes.RectangularePolygon.Distance
+  fullName: SixLabors.Shapes.RectangularePolygon.Distance
+  nameWithType: RectangularePolygon.Distance
+- uid: SixLabors.Shapes.RectangularePolygon.FindIntersections(PointF,PointF,PointF[],System.Int32)
   name: FindIntersections(PointF, PointF, PointF[], Int32)
-  href: api/Shapes/SixLabors.Shapes.RectangularPolygon.html#SixLabors_Shapes_RectangularPolygon_FindIntersections_PointF_PointF_PointF___System_Int32_
-  commentId: M:SixLabors.Shapes.RectangularPolygon.FindIntersections(PointF,PointF,PointF[],System.Int32)
+  href: api/Shapes/SixLabors.Shapes.RectangularePolygon.html#SixLabors_Shapes_RectangularePolygon_FindIntersections_PointF_PointF_PointF___System_Int32_
+  commentId: M:SixLabors.Shapes.RectangularePolygon.FindIntersections(PointF,PointF,PointF[],System.Int32)
   name.vb: FindIntersections(PointF, PointF, PointF(), Int32)
-  fullName: SixLabors.Shapes.RectangularPolygon.FindIntersections(PointF, PointF, PointF[], System.Int32)
-  fullName.vb: SixLabors.Shapes.RectangularPolygon.FindIntersections(PointF, PointF, PointF(), System.Int32)
-  nameWithType: RectangularPolygon.FindIntersections(PointF, PointF, PointF[], Int32)
-  nameWithType.vb: RectangularPolygon.FindIntersections(PointF, PointF, PointF(), Int32)
-- uid: SixLabors.Shapes.RectangularPolygon.FindIntersections*
+  fullName: SixLabors.Shapes.RectangularePolygon.FindIntersections(PointF, PointF, PointF[], System.Int32)
+  fullName.vb: SixLabors.Shapes.RectangularePolygon.FindIntersections(PointF, PointF, PointF(), System.Int32)
+  nameWithType: RectangularePolygon.FindIntersections(PointF, PointF, PointF[], Int32)
+  nameWithType.vb: RectangularePolygon.FindIntersections(PointF, PointF, PointF(), Int32)
+- uid: SixLabors.Shapes.RectangularePolygon.FindIntersections*
   name: FindIntersections
-  href: api/Shapes/SixLabors.Shapes.RectangularPolygon.html#SixLabors_Shapes_RectangularPolygon_FindIntersections_
-  commentId: Overload:SixLabors.Shapes.RectangularPolygon.FindIntersections
-  fullName: SixLabors.Shapes.RectangularPolygon.FindIntersections
-  nameWithType: RectangularPolygon.FindIntersections
-- uid: SixLabors.Shapes.RectangularPolygon.Flatten
+  href: api/Shapes/SixLabors.Shapes.RectangularePolygon.html#SixLabors_Shapes_RectangularePolygon_FindIntersections_
+  commentId: Overload:SixLabors.Shapes.RectangularePolygon.FindIntersections
+  fullName: SixLabors.Shapes.RectangularePolygon.FindIntersections
+  nameWithType: RectangularePolygon.FindIntersections
+- uid: SixLabors.Shapes.RectangularePolygon.Flatten
   name: Flatten()
-  href: api/Shapes/SixLabors.Shapes.RectangularPolygon.html#SixLabors_Shapes_RectangularPolygon_Flatten
-  commentId: M:SixLabors.Shapes.RectangularPolygon.Flatten
-  fullName: SixLabors.Shapes.RectangularPolygon.Flatten()
-  nameWithType: RectangularPolygon.Flatten()
-- uid: SixLabors.Shapes.RectangularPolygon.Flatten*
+  href: api/Shapes/SixLabors.Shapes.RectangularePolygon.html#SixLabors_Shapes_RectangularePolygon_Flatten
+  commentId: M:SixLabors.Shapes.RectangularePolygon.Flatten
+  fullName: SixLabors.Shapes.RectangularePolygon.Flatten()
+  nameWithType: RectangularePolygon.Flatten()
+- uid: SixLabors.Shapes.RectangularePolygon.Flatten*
   name: Flatten
-  href: api/Shapes/SixLabors.Shapes.RectangularPolygon.html#SixLabors_Shapes_RectangularPolygon_Flatten_
-  commentId: Overload:SixLabors.Shapes.RectangularPolygon.Flatten
-  fullName: SixLabors.Shapes.RectangularPolygon.Flatten
-  nameWithType: RectangularPolygon.Flatten
-- uid: SixLabors.Shapes.RectangularPolygon.Height
+  href: api/Shapes/SixLabors.Shapes.RectangularePolygon.html#SixLabors_Shapes_RectangularePolygon_Flatten_
+  commentId: Overload:SixLabors.Shapes.RectangularePolygon.Flatten
+  fullName: SixLabors.Shapes.RectangularePolygon.Flatten
+  nameWithType: RectangularePolygon.Flatten
+- uid: SixLabors.Shapes.RectangularePolygon.Height
   name: Height
-  href: api/Shapes/SixLabors.Shapes.RectangularPolygon.html#SixLabors_Shapes_RectangularPolygon_Height
-  commentId: P:SixLabors.Shapes.RectangularPolygon.Height
-  fullName: SixLabors.Shapes.RectangularPolygon.Height
-  nameWithType: RectangularPolygon.Height
-- uid: SixLabors.Shapes.RectangularPolygon.Height*
+  href: api/Shapes/SixLabors.Shapes.RectangularePolygon.html#SixLabors_Shapes_RectangularePolygon_Height
+  commentId: P:SixLabors.Shapes.RectangularePolygon.Height
+  fullName: SixLabors.Shapes.RectangularePolygon.Height
+  nameWithType: RectangularePolygon.Height
+- uid: SixLabors.Shapes.RectangularePolygon.Height*
   name: Height
-  href: api/Shapes/SixLabors.Shapes.RectangularPolygon.html#SixLabors_Shapes_RectangularPolygon_Height_
-  commentId: Overload:SixLabors.Shapes.RectangularPolygon.Height
-  fullName: SixLabors.Shapes.RectangularPolygon.Height
-  nameWithType: RectangularPolygon.Height
-- uid: SixLabors.Shapes.RectangularPolygon.Left
+  href: api/Shapes/SixLabors.Shapes.RectangularePolygon.html#SixLabors_Shapes_RectangularePolygon_Height_
+  commentId: Overload:SixLabors.Shapes.RectangularePolygon.Height
+  fullName: SixLabors.Shapes.RectangularePolygon.Height
+  nameWithType: RectangularePolygon.Height
+- uid: SixLabors.Shapes.RectangularePolygon.Left
   name: Left
-  href: api/Shapes/SixLabors.Shapes.RectangularPolygon.html#SixLabors_Shapes_RectangularPolygon_Left
-  commentId: P:SixLabors.Shapes.RectangularPolygon.Left
-  fullName: SixLabors.Shapes.RectangularPolygon.Left
-  nameWithType: RectangularPolygon.Left
-- uid: SixLabors.Shapes.RectangularPolygon.Left*
+  href: api/Shapes/SixLabors.Shapes.RectangularePolygon.html#SixLabors_Shapes_RectangularePolygon_Left
+  commentId: P:SixLabors.Shapes.RectangularePolygon.Left
+  fullName: SixLabors.Shapes.RectangularePolygon.Left
+  nameWithType: RectangularePolygon.Left
+- uid: SixLabors.Shapes.RectangularePolygon.Left*
   name: Left
-  href: api/Shapes/SixLabors.Shapes.RectangularPolygon.html#SixLabors_Shapes_RectangularPolygon_Left_
-  commentId: Overload:SixLabors.Shapes.RectangularPolygon.Left
-  fullName: SixLabors.Shapes.RectangularPolygon.Left
-  nameWithType: RectangularPolygon.Left
-- uid: SixLabors.Shapes.RectangularPolygon.Location
+  href: api/Shapes/SixLabors.Shapes.RectangularePolygon.html#SixLabors_Shapes_RectangularePolygon_Left_
+  commentId: Overload:SixLabors.Shapes.RectangularePolygon.Left
+  fullName: SixLabors.Shapes.RectangularePolygon.Left
+  nameWithType: RectangularePolygon.Left
+- uid: SixLabors.Shapes.RectangularePolygon.Location
   name: Location
-  href: api/Shapes/SixLabors.Shapes.RectangularPolygon.html#SixLabors_Shapes_RectangularPolygon_Location
-  commentId: P:SixLabors.Shapes.RectangularPolygon.Location
-  fullName: SixLabors.Shapes.RectangularPolygon.Location
-  nameWithType: RectangularPolygon.Location
-- uid: SixLabors.Shapes.RectangularPolygon.Location*
+  href: api/Shapes/SixLabors.Shapes.RectangularePolygon.html#SixLabors_Shapes_RectangularePolygon_Location
+  commentId: P:SixLabors.Shapes.RectangularePolygon.Location
+  fullName: SixLabors.Shapes.RectangularePolygon.Location
+  nameWithType: RectangularePolygon.Location
+- uid: SixLabors.Shapes.RectangularePolygon.Location*
   name: Location
-  href: api/Shapes/SixLabors.Shapes.RectangularPolygon.html#SixLabors_Shapes_RectangularPolygon_Location_
-  commentId: Overload:SixLabors.Shapes.RectangularPolygon.Location
-  fullName: SixLabors.Shapes.RectangularPolygon.Location
-  nameWithType: RectangularPolygon.Location
-- uid: SixLabors.Shapes.RectangularPolygon.PointAlongPath(System.Single)
+  href: api/Shapes/SixLabors.Shapes.RectangularePolygon.html#SixLabors_Shapes_RectangularePolygon_Location_
+  commentId: Overload:SixLabors.Shapes.RectangularePolygon.Location
+  fullName: SixLabors.Shapes.RectangularePolygon.Location
+  nameWithType: RectangularePolygon.Location
+- uid: SixLabors.Shapes.RectangularePolygon.PointAlongPath(System.Single)
   name: PointAlongPath(Single)
-  href: api/Shapes/SixLabors.Shapes.RectangularPolygon.html#SixLabors_Shapes_RectangularPolygon_PointAlongPath_System_Single_
-  commentId: M:SixLabors.Shapes.RectangularPolygon.PointAlongPath(System.Single)
-  fullName: SixLabors.Shapes.RectangularPolygon.PointAlongPath(System.Single)
-  nameWithType: RectangularPolygon.PointAlongPath(Single)
-- uid: SixLabors.Shapes.RectangularPolygon.PointAlongPath*
+  href: api/Shapes/SixLabors.Shapes.RectangularePolygon.html#SixLabors_Shapes_RectangularePolygon_PointAlongPath_System_Single_
+  commentId: M:SixLabors.Shapes.RectangularePolygon.PointAlongPath(System.Single)
+  fullName: SixLabors.Shapes.RectangularePolygon.PointAlongPath(System.Single)
+  nameWithType: RectangularePolygon.PointAlongPath(Single)
+- uid: SixLabors.Shapes.RectangularePolygon.PointAlongPath*
   name: PointAlongPath
-  href: api/Shapes/SixLabors.Shapes.RectangularPolygon.html#SixLabors_Shapes_RectangularPolygon_PointAlongPath_
-  commentId: Overload:SixLabors.Shapes.RectangularPolygon.PointAlongPath
-  fullName: SixLabors.Shapes.RectangularPolygon.PointAlongPath
-  nameWithType: RectangularPolygon.PointAlongPath
-- uid: SixLabors.Shapes.RectangularPolygon.Right
+  href: api/Shapes/SixLabors.Shapes.RectangularePolygon.html#SixLabors_Shapes_RectangularePolygon_PointAlongPath_
+  commentId: Overload:SixLabors.Shapes.RectangularePolygon.PointAlongPath
+  fullName: SixLabors.Shapes.RectangularePolygon.PointAlongPath
+  nameWithType: RectangularePolygon.PointAlongPath
+- uid: SixLabors.Shapes.RectangularePolygon.Right
   name: Right
-  href: api/Shapes/SixLabors.Shapes.RectangularPolygon.html#SixLabors_Shapes_RectangularPolygon_Right
-  commentId: P:SixLabors.Shapes.RectangularPolygon.Right
-  fullName: SixLabors.Shapes.RectangularPolygon.Right
-  nameWithType: RectangularPolygon.Right
-- uid: SixLabors.Shapes.RectangularPolygon.Right*
+  href: api/Shapes/SixLabors.Shapes.RectangularePolygon.html#SixLabors_Shapes_RectangularePolygon_Right
+  commentId: P:SixLabors.Shapes.RectangularePolygon.Right
+  fullName: SixLabors.Shapes.RectangularePolygon.Right
+  nameWithType: RectangularePolygon.Right
+- uid: SixLabors.Shapes.RectangularePolygon.Right*
   name: Right
-  href: api/Shapes/SixLabors.Shapes.RectangularPolygon.html#SixLabors_Shapes_RectangularPolygon_Right_
-  commentId: Overload:SixLabors.Shapes.RectangularPolygon.Right
-  fullName: SixLabors.Shapes.RectangularPolygon.Right
-  nameWithType: RectangularPolygon.Right
-- uid: SixLabors.Shapes.RectangularPolygon.SixLabors#Shapes#IPath#AsClosedPath
+  href: api/Shapes/SixLabors.Shapes.RectangularePolygon.html#SixLabors_Shapes_RectangularePolygon_Right_
+  commentId: Overload:SixLabors.Shapes.RectangularePolygon.Right
+  fullName: SixLabors.Shapes.RectangularePolygon.Right
+  nameWithType: RectangularePolygon.Right
+- uid: SixLabors.Shapes.RectangularePolygon.SixLabors#Shapes#IPath#AsClosedPath
   name: IPath.AsClosedPath()
-  href: api/Shapes/SixLabors.Shapes.RectangularPolygon.html#SixLabors_Shapes_RectangularPolygon_SixLabors_Shapes_IPath_AsClosedPath
-  commentId: M:SixLabors.Shapes.RectangularPolygon.SixLabors#Shapes#IPath#AsClosedPath
+  href: api/Shapes/SixLabors.Shapes.RectangularePolygon.html#SixLabors_Shapes_RectangularePolygon_SixLabors_Shapes_IPath_AsClosedPath
+  commentId: M:SixLabors.Shapes.RectangularePolygon.SixLabors#Shapes#IPath#AsClosedPath
   name.vb: SixLabors.Shapes.IPath.AsClosedPath()
-  fullName: SixLabors.Shapes.RectangularPolygon.SixLabors.Shapes.IPath.AsClosedPath()
-  nameWithType: RectangularPolygon.IPath.AsClosedPath()
-  nameWithType.vb: RectangularPolygon.SixLabors.Shapes.IPath.AsClosedPath()
-- uid: SixLabors.Shapes.RectangularPolygon.SixLabors#Shapes#IPath#AsClosedPath*
+  fullName: SixLabors.Shapes.RectangularePolygon.SixLabors.Shapes.IPath.AsClosedPath()
+  nameWithType: RectangularePolygon.IPath.AsClosedPath()
+  nameWithType.vb: RectangularePolygon.SixLabors.Shapes.IPath.AsClosedPath()
+- uid: SixLabors.Shapes.RectangularePolygon.SixLabors#Shapes#IPath#AsClosedPath*
   name: IPath.AsClosedPath
-  href: api/Shapes/SixLabors.Shapes.RectangularPolygon.html#SixLabors_Shapes_RectangularPolygon_SixLabors_Shapes_IPath_AsClosedPath_
-  commentId: Overload:SixLabors.Shapes.RectangularPolygon.SixLabors#Shapes#IPath#AsClosedPath
+  href: api/Shapes/SixLabors.Shapes.RectangularePolygon.html#SixLabors_Shapes_RectangularePolygon_SixLabors_Shapes_IPath_AsClosedPath_
+  commentId: Overload:SixLabors.Shapes.RectangularePolygon.SixLabors#Shapes#IPath#AsClosedPath
   name.vb: SixLabors.Shapes.IPath.AsClosedPath
-  fullName: SixLabors.Shapes.RectangularPolygon.SixLabors.Shapes.IPath.AsClosedPath
-  nameWithType: RectangularPolygon.IPath.AsClosedPath
-  nameWithType.vb: RectangularPolygon.SixLabors.Shapes.IPath.AsClosedPath
-- uid: SixLabors.Shapes.RectangularPolygon.SixLabors#Shapes#IPath#Bounds
+  fullName: SixLabors.Shapes.RectangularePolygon.SixLabors.Shapes.IPath.AsClosedPath
+  nameWithType: RectangularePolygon.IPath.AsClosedPath
+  nameWithType.vb: RectangularePolygon.SixLabors.Shapes.IPath.AsClosedPath
+- uid: SixLabors.Shapes.RectangularePolygon.SixLabors#Shapes#IPath#Bounds
   name: IPath.Bounds
-  href: api/Shapes/SixLabors.Shapes.RectangularPolygon.html#SixLabors_Shapes_RectangularPolygon_SixLabors_Shapes_IPath_Bounds
-  commentId: P:SixLabors.Shapes.RectangularPolygon.SixLabors#Shapes#IPath#Bounds
+  href: api/Shapes/SixLabors.Shapes.RectangularePolygon.html#SixLabors_Shapes_RectangularePolygon_SixLabors_Shapes_IPath_Bounds
+  commentId: P:SixLabors.Shapes.RectangularePolygon.SixLabors#Shapes#IPath#Bounds
   name.vb: SixLabors.Shapes.IPath.Bounds
-  fullName: SixLabors.Shapes.RectangularPolygon.SixLabors.Shapes.IPath.Bounds
-  nameWithType: RectangularPolygon.IPath.Bounds
-  nameWithType.vb: RectangularPolygon.SixLabors.Shapes.IPath.Bounds
-- uid: SixLabors.Shapes.RectangularPolygon.SixLabors#Shapes#IPath#Bounds*
+  fullName: SixLabors.Shapes.RectangularePolygon.SixLabors.Shapes.IPath.Bounds
+  nameWithType: RectangularePolygon.IPath.Bounds
+  nameWithType.vb: RectangularePolygon.SixLabors.Shapes.IPath.Bounds
+- uid: SixLabors.Shapes.RectangularePolygon.SixLabors#Shapes#IPath#Bounds*
   name: IPath.Bounds
-  href: api/Shapes/SixLabors.Shapes.RectangularPolygon.html#SixLabors_Shapes_RectangularPolygon_SixLabors_Shapes_IPath_Bounds_
-  commentId: Overload:SixLabors.Shapes.RectangularPolygon.SixLabors#Shapes#IPath#Bounds
+  href: api/Shapes/SixLabors.Shapes.RectangularePolygon.html#SixLabors_Shapes_RectangularePolygon_SixLabors_Shapes_IPath_Bounds_
+  commentId: Overload:SixLabors.Shapes.RectangularePolygon.SixLabors#Shapes#IPath#Bounds
   name.vb: SixLabors.Shapes.IPath.Bounds
-  fullName: SixLabors.Shapes.RectangularPolygon.SixLabors.Shapes.IPath.Bounds
-  nameWithType: RectangularPolygon.IPath.Bounds
-  nameWithType.vb: RectangularPolygon.SixLabors.Shapes.IPath.Bounds
-- uid: SixLabors.Shapes.RectangularPolygon.SixLabors#Shapes#IPath#Length
+  fullName: SixLabors.Shapes.RectangularePolygon.SixLabors.Shapes.IPath.Bounds
+  nameWithType: RectangularePolygon.IPath.Bounds
+  nameWithType.vb: RectangularePolygon.SixLabors.Shapes.IPath.Bounds
+- uid: SixLabors.Shapes.RectangularePolygon.SixLabors#Shapes#IPath#Length
   name: IPath.Length
-  href: api/Shapes/SixLabors.Shapes.RectangularPolygon.html#SixLabors_Shapes_RectangularPolygon_SixLabors_Shapes_IPath_Length
-  commentId: P:SixLabors.Shapes.RectangularPolygon.SixLabors#Shapes#IPath#Length
+  href: api/Shapes/SixLabors.Shapes.RectangularePolygon.html#SixLabors_Shapes_RectangularePolygon_SixLabors_Shapes_IPath_Length
+  commentId: P:SixLabors.Shapes.RectangularePolygon.SixLabors#Shapes#IPath#Length
   name.vb: SixLabors.Shapes.IPath.Length
-  fullName: SixLabors.Shapes.RectangularPolygon.SixLabors.Shapes.IPath.Length
-  nameWithType: RectangularPolygon.IPath.Length
-  nameWithType.vb: RectangularPolygon.SixLabors.Shapes.IPath.Length
-- uid: SixLabors.Shapes.RectangularPolygon.SixLabors#Shapes#IPath#Length*
+  fullName: SixLabors.Shapes.RectangularePolygon.SixLabors.Shapes.IPath.Length
+  nameWithType: RectangularePolygon.IPath.Length
+  nameWithType.vb: RectangularePolygon.SixLabors.Shapes.IPath.Length
+- uid: SixLabors.Shapes.RectangularePolygon.SixLabors#Shapes#IPath#Length*
   name: IPath.Length
-  href: api/Shapes/SixLabors.Shapes.RectangularPolygon.html#SixLabors_Shapes_RectangularPolygon_SixLabors_Shapes_IPath_Length_
-  commentId: Overload:SixLabors.Shapes.RectangularPolygon.SixLabors#Shapes#IPath#Length
+  href: api/Shapes/SixLabors.Shapes.RectangularePolygon.html#SixLabors_Shapes_RectangularePolygon_SixLabors_Shapes_IPath_Length_
+  commentId: Overload:SixLabors.Shapes.RectangularePolygon.SixLabors#Shapes#IPath#Length
   name.vb: SixLabors.Shapes.IPath.Length
-  fullName: SixLabors.Shapes.RectangularPolygon.SixLabors.Shapes.IPath.Length
-  nameWithType: RectangularPolygon.IPath.Length
-  nameWithType.vb: RectangularPolygon.SixLabors.Shapes.IPath.Length
-- uid: SixLabors.Shapes.RectangularPolygon.SixLabors#Shapes#IPath#MaxIntersections
+  fullName: SixLabors.Shapes.RectangularePolygon.SixLabors.Shapes.IPath.Length
+  nameWithType: RectangularePolygon.IPath.Length
+  nameWithType.vb: RectangularePolygon.SixLabors.Shapes.IPath.Length
+- uid: SixLabors.Shapes.RectangularePolygon.SixLabors#Shapes#IPath#MaxIntersections
   name: IPath.MaxIntersections
-  href: api/Shapes/SixLabors.Shapes.RectangularPolygon.html#SixLabors_Shapes_RectangularPolygon_SixLabors_Shapes_IPath_MaxIntersections
-  commentId: P:SixLabors.Shapes.RectangularPolygon.SixLabors#Shapes#IPath#MaxIntersections
+  href: api/Shapes/SixLabors.Shapes.RectangularePolygon.html#SixLabors_Shapes_RectangularePolygon_SixLabors_Shapes_IPath_MaxIntersections
+  commentId: P:SixLabors.Shapes.RectangularePolygon.SixLabors#Shapes#IPath#MaxIntersections
   name.vb: SixLabors.Shapes.IPath.MaxIntersections
-  fullName: SixLabors.Shapes.RectangularPolygon.SixLabors.Shapes.IPath.MaxIntersections
-  nameWithType: RectangularPolygon.IPath.MaxIntersections
-  nameWithType.vb: RectangularPolygon.SixLabors.Shapes.IPath.MaxIntersections
-- uid: SixLabors.Shapes.RectangularPolygon.SixLabors#Shapes#IPath#MaxIntersections*
+  fullName: SixLabors.Shapes.RectangularePolygon.SixLabors.Shapes.IPath.MaxIntersections
+  nameWithType: RectangularePolygon.IPath.MaxIntersections
+  nameWithType.vb: RectangularePolygon.SixLabors.Shapes.IPath.MaxIntersections
+- uid: SixLabors.Shapes.RectangularePolygon.SixLabors#Shapes#IPath#MaxIntersections*
   name: IPath.MaxIntersections
-  href: api/Shapes/SixLabors.Shapes.RectangularPolygon.html#SixLabors_Shapes_RectangularPolygon_SixLabors_Shapes_IPath_MaxIntersections_
-  commentId: Overload:SixLabors.Shapes.RectangularPolygon.SixLabors#Shapes#IPath#MaxIntersections
+  href: api/Shapes/SixLabors.Shapes.RectangularePolygon.html#SixLabors_Shapes_RectangularePolygon_SixLabors_Shapes_IPath_MaxIntersections_
+  commentId: Overload:SixLabors.Shapes.RectangularePolygon.SixLabors#Shapes#IPath#MaxIntersections
   name.vb: SixLabors.Shapes.IPath.MaxIntersections
-  fullName: SixLabors.Shapes.RectangularPolygon.SixLabors.Shapes.IPath.MaxIntersections
-  nameWithType: RectangularPolygon.IPath.MaxIntersections
-  nameWithType.vb: RectangularPolygon.SixLabors.Shapes.IPath.MaxIntersections
-- uid: SixLabors.Shapes.RectangularPolygon.SixLabors#Shapes#IPath#PathType
+  fullName: SixLabors.Shapes.RectangularePolygon.SixLabors.Shapes.IPath.MaxIntersections
+  nameWithType: RectangularePolygon.IPath.MaxIntersections
+  nameWithType.vb: RectangularePolygon.SixLabors.Shapes.IPath.MaxIntersections
+- uid: SixLabors.Shapes.RectangularePolygon.SixLabors#Shapes#IPath#PathType
   name: IPath.PathType
-  href: api/Shapes/SixLabors.Shapes.RectangularPolygon.html#SixLabors_Shapes_RectangularPolygon_SixLabors_Shapes_IPath_PathType
-  commentId: P:SixLabors.Shapes.RectangularPolygon.SixLabors#Shapes#IPath#PathType
+  href: api/Shapes/SixLabors.Shapes.RectangularePolygon.html#SixLabors_Shapes_RectangularePolygon_SixLabors_Shapes_IPath_PathType
+  commentId: P:SixLabors.Shapes.RectangularePolygon.SixLabors#Shapes#IPath#PathType
   name.vb: SixLabors.Shapes.IPath.PathType
-  fullName: SixLabors.Shapes.RectangularPolygon.SixLabors.Shapes.IPath.PathType
-  nameWithType: RectangularPolygon.IPath.PathType
-  nameWithType.vb: RectangularPolygon.SixLabors.Shapes.IPath.PathType
-- uid: SixLabors.Shapes.RectangularPolygon.SixLabors#Shapes#IPath#PathType*
+  fullName: SixLabors.Shapes.RectangularePolygon.SixLabors.Shapes.IPath.PathType
+  nameWithType: RectangularePolygon.IPath.PathType
+  nameWithType.vb: RectangularePolygon.SixLabors.Shapes.IPath.PathType
+- uid: SixLabors.Shapes.RectangularePolygon.SixLabors#Shapes#IPath#PathType*
   name: IPath.PathType
-  href: api/Shapes/SixLabors.Shapes.RectangularPolygon.html#SixLabors_Shapes_RectangularPolygon_SixLabors_Shapes_IPath_PathType_
-  commentId: Overload:SixLabors.Shapes.RectangularPolygon.SixLabors#Shapes#IPath#PathType
+  href: api/Shapes/SixLabors.Shapes.RectangularePolygon.html#SixLabors_Shapes_RectangularePolygon_SixLabors_Shapes_IPath_PathType_
+  commentId: Overload:SixLabors.Shapes.RectangularePolygon.SixLabors#Shapes#IPath#PathType
   name.vb: SixLabors.Shapes.IPath.PathType
-  fullName: SixLabors.Shapes.RectangularPolygon.SixLabors.Shapes.IPath.PathType
-  nameWithType: RectangularPolygon.IPath.PathType
-  nameWithType.vb: RectangularPolygon.SixLabors.Shapes.IPath.PathType
-- uid: SixLabors.Shapes.RectangularPolygon.SixLabors#Shapes#ISimplePath#IsClosed
+  fullName: SixLabors.Shapes.RectangularePolygon.SixLabors.Shapes.IPath.PathType
+  nameWithType: RectangularePolygon.IPath.PathType
+  nameWithType.vb: RectangularePolygon.SixLabors.Shapes.IPath.PathType
+- uid: SixLabors.Shapes.RectangularePolygon.SixLabors#Shapes#ISimplePath#IsClosed
   name: ISimplePath.IsClosed
-  href: api/Shapes/SixLabors.Shapes.RectangularPolygon.html#SixLabors_Shapes_RectangularPolygon_SixLabors_Shapes_ISimplePath_IsClosed
-  commentId: P:SixLabors.Shapes.RectangularPolygon.SixLabors#Shapes#ISimplePath#IsClosed
+  href: api/Shapes/SixLabors.Shapes.RectangularePolygon.html#SixLabors_Shapes_RectangularePolygon_SixLabors_Shapes_ISimplePath_IsClosed
+  commentId: P:SixLabors.Shapes.RectangularePolygon.SixLabors#Shapes#ISimplePath#IsClosed
   name.vb: SixLabors.Shapes.ISimplePath.IsClosed
-  fullName: SixLabors.Shapes.RectangularPolygon.SixLabors.Shapes.ISimplePath.IsClosed
-  nameWithType: RectangularPolygon.ISimplePath.IsClosed
-  nameWithType.vb: RectangularPolygon.SixLabors.Shapes.ISimplePath.IsClosed
-- uid: SixLabors.Shapes.RectangularPolygon.SixLabors#Shapes#ISimplePath#IsClosed*
+  fullName: SixLabors.Shapes.RectangularePolygon.SixLabors.Shapes.ISimplePath.IsClosed
+  nameWithType: RectangularePolygon.ISimplePath.IsClosed
+  nameWithType.vb: RectangularePolygon.SixLabors.Shapes.ISimplePath.IsClosed
+- uid: SixLabors.Shapes.RectangularePolygon.SixLabors#Shapes#ISimplePath#IsClosed*
   name: ISimplePath.IsClosed
-  href: api/Shapes/SixLabors.Shapes.RectangularPolygon.html#SixLabors_Shapes_RectangularPolygon_SixLabors_Shapes_ISimplePath_IsClosed_
-  commentId: Overload:SixLabors.Shapes.RectangularPolygon.SixLabors#Shapes#ISimplePath#IsClosed
+  href: api/Shapes/SixLabors.Shapes.RectangularePolygon.html#SixLabors_Shapes_RectangularePolygon_SixLabors_Shapes_ISimplePath_IsClosed_
+  commentId: Overload:SixLabors.Shapes.RectangularePolygon.SixLabors#Shapes#ISimplePath#IsClosed
   name.vb: SixLabors.Shapes.ISimplePath.IsClosed
-  fullName: SixLabors.Shapes.RectangularPolygon.SixLabors.Shapes.ISimplePath.IsClosed
-  nameWithType: RectangularPolygon.ISimplePath.IsClosed
-  nameWithType.vb: RectangularPolygon.SixLabors.Shapes.ISimplePath.IsClosed
-- uid: SixLabors.Shapes.RectangularPolygon.SixLabors#Shapes#ISimplePath#Points
+  fullName: SixLabors.Shapes.RectangularePolygon.SixLabors.Shapes.ISimplePath.IsClosed
+  nameWithType: RectangularePolygon.ISimplePath.IsClosed
+  nameWithType.vb: RectangularePolygon.SixLabors.Shapes.ISimplePath.IsClosed
+- uid: SixLabors.Shapes.RectangularePolygon.SixLabors#Shapes#ISimplePath#Points
   name: ISimplePath.Points
-  href: api/Shapes/SixLabors.Shapes.RectangularPolygon.html#SixLabors_Shapes_RectangularPolygon_SixLabors_Shapes_ISimplePath_Points
-  commentId: P:SixLabors.Shapes.RectangularPolygon.SixLabors#Shapes#ISimplePath#Points
+  href: api/Shapes/SixLabors.Shapes.RectangularePolygon.html#SixLabors_Shapes_RectangularePolygon_SixLabors_Shapes_ISimplePath_Points
+  commentId: P:SixLabors.Shapes.RectangularePolygon.SixLabors#Shapes#ISimplePath#Points
   name.vb: SixLabors.Shapes.ISimplePath.Points
-  fullName: SixLabors.Shapes.RectangularPolygon.SixLabors.Shapes.ISimplePath.Points
-  nameWithType: RectangularPolygon.ISimplePath.Points
-  nameWithType.vb: RectangularPolygon.SixLabors.Shapes.ISimplePath.Points
-- uid: SixLabors.Shapes.RectangularPolygon.SixLabors#Shapes#ISimplePath#Points*
+  fullName: SixLabors.Shapes.RectangularePolygon.SixLabors.Shapes.ISimplePath.Points
+  nameWithType: RectangularePolygon.ISimplePath.Points
+  nameWithType.vb: RectangularePolygon.SixLabors.Shapes.ISimplePath.Points
+- uid: SixLabors.Shapes.RectangularePolygon.SixLabors#Shapes#ISimplePath#Points*
   name: ISimplePath.Points
-  href: api/Shapes/SixLabors.Shapes.RectangularPolygon.html#SixLabors_Shapes_RectangularPolygon_SixLabors_Shapes_ISimplePath_Points_
-  commentId: Overload:SixLabors.Shapes.RectangularPolygon.SixLabors#Shapes#ISimplePath#Points
+  href: api/Shapes/SixLabors.Shapes.RectangularePolygon.html#SixLabors_Shapes_RectangularePolygon_SixLabors_Shapes_ISimplePath_Points_
+  commentId: Overload:SixLabors.Shapes.RectangularePolygon.SixLabors#Shapes#ISimplePath#Points
   name.vb: SixLabors.Shapes.ISimplePath.Points
-  fullName: SixLabors.Shapes.RectangularPolygon.SixLabors.Shapes.ISimplePath.Points
-  nameWithType: RectangularPolygon.ISimplePath.Points
-  nameWithType.vb: RectangularPolygon.SixLabors.Shapes.ISimplePath.Points
-- uid: SixLabors.Shapes.RectangularPolygon.Size
+  fullName: SixLabors.Shapes.RectangularePolygon.SixLabors.Shapes.ISimplePath.Points
+  nameWithType: RectangularePolygon.ISimplePath.Points
+  nameWithType.vb: RectangularePolygon.SixLabors.Shapes.ISimplePath.Points
+- uid: SixLabors.Shapes.RectangularePolygon.Size
   name: Size
-  href: api/Shapes/SixLabors.Shapes.RectangularPolygon.html#SixLabors_Shapes_RectangularPolygon_Size
-  commentId: P:SixLabors.Shapes.RectangularPolygon.Size
-  fullName: SixLabors.Shapes.RectangularPolygon.Size
-  nameWithType: RectangularPolygon.Size
-- uid: SixLabors.Shapes.RectangularPolygon.Size*
+  href: api/Shapes/SixLabors.Shapes.RectangularePolygon.html#SixLabors_Shapes_RectangularePolygon_Size
+  commentId: P:SixLabors.Shapes.RectangularePolygon.Size
+  fullName: SixLabors.Shapes.RectangularePolygon.Size
+  nameWithType: RectangularePolygon.Size
+- uid: SixLabors.Shapes.RectangularePolygon.Size*
   name: Size
-  href: api/Shapes/SixLabors.Shapes.RectangularPolygon.html#SixLabors_Shapes_RectangularPolygon_Size_
-  commentId: Overload:SixLabors.Shapes.RectangularPolygon.Size
-  fullName: SixLabors.Shapes.RectangularPolygon.Size
-  nameWithType: RectangularPolygon.Size
-- uid: SixLabors.Shapes.RectangularPolygon.Top
+  href: api/Shapes/SixLabors.Shapes.RectangularePolygon.html#SixLabors_Shapes_RectangularePolygon_Size_
+  commentId: Overload:SixLabors.Shapes.RectangularePolygon.Size
+  fullName: SixLabors.Shapes.RectangularePolygon.Size
+  nameWithType: RectangularePolygon.Size
+- uid: SixLabors.Shapes.RectangularePolygon.Top
   name: Top
-  href: api/Shapes/SixLabors.Shapes.RectangularPolygon.html#SixLabors_Shapes_RectangularPolygon_Top
-  commentId: P:SixLabors.Shapes.RectangularPolygon.Top
-  fullName: SixLabors.Shapes.RectangularPolygon.Top
-  nameWithType: RectangularPolygon.Top
-- uid: SixLabors.Shapes.RectangularPolygon.Top*
+  href: api/Shapes/SixLabors.Shapes.RectangularePolygon.html#SixLabors_Shapes_RectangularePolygon_Top
+  commentId: P:SixLabors.Shapes.RectangularePolygon.Top
+  fullName: SixLabors.Shapes.RectangularePolygon.Top
+  nameWithType: RectangularePolygon.Top
+- uid: SixLabors.Shapes.RectangularePolygon.Top*
   name: Top
-  href: api/Shapes/SixLabors.Shapes.RectangularPolygon.html#SixLabors_Shapes_RectangularPolygon_Top_
-  commentId: Overload:SixLabors.Shapes.RectangularPolygon.Top
-  fullName: SixLabors.Shapes.RectangularPolygon.Top
-  nameWithType: RectangularPolygon.Top
-- uid: SixLabors.Shapes.RectangularPolygon.Transform(Matrix3x2)
+  href: api/Shapes/SixLabors.Shapes.RectangularePolygon.html#SixLabors_Shapes_RectangularePolygon_Top_
+  commentId: Overload:SixLabors.Shapes.RectangularePolygon.Top
+  fullName: SixLabors.Shapes.RectangularePolygon.Top
+  nameWithType: RectangularePolygon.Top
+- uid: SixLabors.Shapes.RectangularePolygon.Transform(Matrix3x2)
   name: Transform(Matrix3x2)
-  href: api/Shapes/SixLabors.Shapes.RectangularPolygon.html#SixLabors_Shapes_RectangularPolygon_Transform_Matrix3x2_
-  commentId: M:SixLabors.Shapes.RectangularPolygon.Transform(Matrix3x2)
-  fullName: SixLabors.Shapes.RectangularPolygon.Transform(Matrix3x2)
-  nameWithType: RectangularPolygon.Transform(Matrix3x2)
-- uid: SixLabors.Shapes.RectangularPolygon.Transform*
+  href: api/Shapes/SixLabors.Shapes.RectangularePolygon.html#SixLabors_Shapes_RectangularePolygon_Transform_Matrix3x2_
+  commentId: M:SixLabors.Shapes.RectangularePolygon.Transform(Matrix3x2)
+  fullName: SixLabors.Shapes.RectangularePolygon.Transform(Matrix3x2)
+  nameWithType: RectangularePolygon.Transform(Matrix3x2)
+- uid: SixLabors.Shapes.RectangularePolygon.Transform*
   name: Transform
-  href: api/Shapes/SixLabors.Shapes.RectangularPolygon.html#SixLabors_Shapes_RectangularPolygon_Transform_
-  commentId: Overload:SixLabors.Shapes.RectangularPolygon.Transform
-  fullName: SixLabors.Shapes.RectangularPolygon.Transform
-  nameWithType: RectangularPolygon.Transform
-- uid: SixLabors.Shapes.RectangularPolygon.Width
+  href: api/Shapes/SixLabors.Shapes.RectangularePolygon.html#SixLabors_Shapes_RectangularePolygon_Transform_
+  commentId: Overload:SixLabors.Shapes.RectangularePolygon.Transform
+  fullName: SixLabors.Shapes.RectangularePolygon.Transform
+  nameWithType: RectangularePolygon.Transform
+- uid: SixLabors.Shapes.RectangularePolygon.Width
   name: Width
-  href: api/Shapes/SixLabors.Shapes.RectangularPolygon.html#SixLabors_Shapes_RectangularPolygon_Width
-  commentId: P:SixLabors.Shapes.RectangularPolygon.Width
-  fullName: SixLabors.Shapes.RectangularPolygon.Width
-  nameWithType: RectangularPolygon.Width
-- uid: SixLabors.Shapes.RectangularPolygon.Width*
+  href: api/Shapes/SixLabors.Shapes.RectangularePolygon.html#SixLabors_Shapes_RectangularePolygon_Width
+  commentId: P:SixLabors.Shapes.RectangularePolygon.Width
+  fullName: SixLabors.Shapes.RectangularePolygon.Width
+  nameWithType: RectangularePolygon.Width
+- uid: SixLabors.Shapes.RectangularePolygon.Width*
   name: Width
-  href: api/Shapes/SixLabors.Shapes.RectangularPolygon.html#SixLabors_Shapes_RectangularPolygon_Width_
-  commentId: Overload:SixLabors.Shapes.RectangularPolygon.Width
-  fullName: SixLabors.Shapes.RectangularPolygon.Width
-  nameWithType: RectangularPolygon.Width
-- uid: SixLabors.Shapes.RectangularPolygon.X
+  href: api/Shapes/SixLabors.Shapes.RectangularePolygon.html#SixLabors_Shapes_RectangularePolygon_Width_
+  commentId: Overload:SixLabors.Shapes.RectangularePolygon.Width
+  fullName: SixLabors.Shapes.RectangularePolygon.Width
+  nameWithType: RectangularePolygon.Width
+- uid: SixLabors.Shapes.RectangularePolygon.X
   name: X
-  href: api/Shapes/SixLabors.Shapes.RectangularPolygon.html#SixLabors_Shapes_RectangularPolygon_X
-  commentId: P:SixLabors.Shapes.RectangularPolygon.X
-  fullName: SixLabors.Shapes.RectangularPolygon.X
-  nameWithType: RectangularPolygon.X
-- uid: SixLabors.Shapes.RectangularPolygon.X*
+  href: api/Shapes/SixLabors.Shapes.RectangularePolygon.html#SixLabors_Shapes_RectangularePolygon_X
+  commentId: P:SixLabors.Shapes.RectangularePolygon.X
+  fullName: SixLabors.Shapes.RectangularePolygon.X
+  nameWithType: RectangularePolygon.X
+- uid: SixLabors.Shapes.RectangularePolygon.X*
   name: X
-  href: api/Shapes/SixLabors.Shapes.RectangularPolygon.html#SixLabors_Shapes_RectangularPolygon_X_
-  commentId: Overload:SixLabors.Shapes.RectangularPolygon.X
-  fullName: SixLabors.Shapes.RectangularPolygon.X
-  nameWithType: RectangularPolygon.X
-- uid: SixLabors.Shapes.RectangularPolygon.Y
+  href: api/Shapes/SixLabors.Shapes.RectangularePolygon.html#SixLabors_Shapes_RectangularePolygon_X_
+  commentId: Overload:SixLabors.Shapes.RectangularePolygon.X
+  fullName: SixLabors.Shapes.RectangularePolygon.X
+  nameWithType: RectangularePolygon.X
+- uid: SixLabors.Shapes.RectangularePolygon.Y
   name: Y
-  href: api/Shapes/SixLabors.Shapes.RectangularPolygon.html#SixLabors_Shapes_RectangularPolygon_Y
-  commentId: P:SixLabors.Shapes.RectangularPolygon.Y
-  fullName: SixLabors.Shapes.RectangularPolygon.Y
-  nameWithType: RectangularPolygon.Y
-- uid: SixLabors.Shapes.RectangularPolygon.Y*
+  href: api/Shapes/SixLabors.Shapes.RectangularePolygon.html#SixLabors_Shapes_RectangularePolygon_Y
+  commentId: P:SixLabors.Shapes.RectangularePolygon.Y
+  fullName: SixLabors.Shapes.RectangularePolygon.Y
+  nameWithType: RectangularePolygon.Y
+- uid: SixLabors.Shapes.RectangularePolygon.Y*
   name: Y
-  href: api/Shapes/SixLabors.Shapes.RectangularPolygon.html#SixLabors_Shapes_RectangularPolygon_Y_
-  commentId: Overload:SixLabors.Shapes.RectangularPolygon.Y
-  fullName: SixLabors.Shapes.RectangularPolygon.Y
-  nameWithType: RectangularPolygon.Y
+  href: api/Shapes/SixLabors.Shapes.RectangularePolygon.html#SixLabors_Shapes_RectangularePolygon_Y_
+  commentId: Overload:SixLabors.Shapes.RectangularePolygon.Y
+  fullName: SixLabors.Shapes.RectangularePolygon.Y
+  nameWithType: RectangularePolygon.Y
 - uid: SixLabors.Shapes.RegularPolygon
   name: RegularPolygon
   href: api/Shapes/SixLabors.Shapes.RegularPolygon.html

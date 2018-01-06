@@ -75,6 +75,25 @@
       "properties": {
         "TargetFramework": "netstandard2.0"
       }
+    },
+    {
+      "src": [
+        {
+          "files": [
+            "ext/Core/src/**.csproj"
+          ],
+          "exclude": [
+            "**/obj/**",
+            "**/bin/**",
+            "docs/**"
+          ]
+        }
+      ],
+      "dest": "api/Core",
+      "disableGitFeatures": false,
+      "properties": {
+        "TargetFramework": "netstandard2.0"
+      }
     }
   ],
   "build": {

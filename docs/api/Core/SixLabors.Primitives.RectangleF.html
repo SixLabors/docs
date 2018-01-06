@@ -1,0 +1,1666 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Struct RectangleF
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Struct RectangleF
+   ">
+    <meta name="generator" content="docfx 2.29.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.png">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="" width="40">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="SixLabors.Primitives.RectangleF">
+  
+  
+  <h1 id="SixLabors_Primitives_RectangleF" data-uid="SixLabors.Primitives.RectangleF" class="text-break">Struct RectangleF
+  </h1>
+  <div class="markdown level0 summary"><p>Stores a set of four single precision floating points that represent the location and size of a rectangle.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">IEquatable</span>&lt;<a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a>&gt;</div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="SixLabors.Primitives.html">SixLabors.Primitives</a></h6>
+  <h6><strong>Assembly</strong>: SixLabors.Core.dll</h6>
+  <h5 id="SixLabors_Primitives_RectangleF_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public struct RectangleF : IEquatable&lt;RectangleF&gt;</code></pre>
+  </div>
+  <h5 id="SixLabors_Primitives_RectangleF_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>This struct is fully mutable. This is done (against the guidelines) for the sake of performance,
+as it avoids the need to create new values for modification operations.</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Core/new/702944449e4b6f7e570216bac9bfb4efa8cc0706/apiSpec/new?filename=SixLabors_Primitives_RectangleF__ctor_SixLabors_Primitives_PointF_SixLabors_Primitives_SizeF_.md&amp;value=---%0Auid%3A%20SixLabors.Primitives.RectangleF.%23ctor(SixLabors.Primitives.PointF%2CSixLabors.Primitives.SizeF)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Core/blob/702944449e4b6f7e570216bac9bfb4efa8cc0706/src/SixLabors.Core/Primitives/RectangleF.cs/#L49">View Source</a>
+  </span>
+  <a id="SixLabors_Primitives_RectangleF__ctor_" data-uid="SixLabors.Primitives.RectangleF.#ctor*"></a>
+  <h4 id="SixLabors_Primitives_RectangleF__ctor_SixLabors_Primitives_PointF_SixLabors_Primitives_SizeF_" data-uid="SixLabors.Primitives.RectangleF.#ctor(SixLabors.Primitives.PointF,SixLabors.Primitives.SizeF)">RectangleF(PointF, SizeF)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a> struct.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RectangleF(PointF point, SizeF size)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Primitives.PointF.html">PointF</a></td>
+        <td><span class="parametername">point</span></td>
+        <td><p>The <a class="xref" href="SixLabors.Primitives.Point.html">Point</a> which specifies the rectangles point in a two-dimensional plane.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SixLabors.Primitives.SizeF.html">SizeF</a></td>
+        <td><span class="parametername">size</span></td>
+        <td><p>The <a class="xref" href="SixLabors.Primitives.RectangleF.html#SixLabors_Primitives_RectangleF_Size">Size</a> which specifies the rectangles height and width.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Core/new/702944449e4b6f7e570216bac9bfb4efa8cc0706/apiSpec/new?filename=SixLabors_Primitives_RectangleF__ctor_System_Single_System_Single_System_Single_System_Single_.md&amp;value=---%0Auid%3A%20SixLabors.Primitives.RectangleF.%23ctor(System.Single%2CSystem.Single%2CSystem.Single%2CSystem.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Core/blob/702944449e4b6f7e570216bac9bfb4efa8cc0706/src/SixLabors.Core/Primitives/RectangleF.cs/#L32">View Source</a>
+  </span>
+  <a id="SixLabors_Primitives_RectangleF__ctor_" data-uid="SixLabors.Primitives.RectangleF.#ctor*"></a>
+  <h4 id="SixLabors_Primitives_RectangleF__ctor_System_Single_System_Single_System_Single_System_Single_" data-uid="SixLabors.Primitives.RectangleF.#ctor(System.Single,System.Single,System.Single,System.Single)">RectangleF(Single, Single, Single, Single)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a> struct.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RectangleF(float x, float y, float width, float height)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">x</span></td>
+        <td><p>The horizontal position of the rectangle.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">y</span></td>
+        <td><p>The vertical position of the rectangle.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">width</span></td>
+        <td><p>The width of the rectangle.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">height</span></td>
+        <td><p>The height of the rectangle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Core/new/702944449e4b6f7e570216bac9bfb4efa8cc0706/apiSpec/new?filename=SixLabors_Primitives_RectangleF_Empty.md&amp;value=---%0Auid%3A%20SixLabors.Primitives.RectangleF.Empty%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Core/blob/702944449e4b6f7e570216bac9bfb4efa8cc0706/src/SixLabors.Core/Primitives/RectangleF.cs/#L23">View Source</a>
+  </span>
+  <h4 id="SixLabors_Primitives_RectangleF_Empty" data-uid="SixLabors.Primitives.RectangleF.Empty">Empty</h4>
+  <div class="markdown level1 summary"><p>Represents a <a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a> that has X, Y, Width, and Height values set to zero.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly RectangleF Empty</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Core/new/702944449e4b6f7e570216bac9bfb4efa8cc0706/apiSpec/new?filename=SixLabors_Primitives_RectangleF_Bottom.md&amp;value=---%0Auid%3A%20SixLabors.Primitives.RectangleF.Bottom%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Core/blob/702944449e4b6f7e570216bac9bfb4efa8cc0706/src/SixLabors.Core/Primitives/RectangleF.cs/#L144">View Source</a>
+  </span>
+  <a id="SixLabors_Primitives_RectangleF_Bottom_" data-uid="SixLabors.Primitives.RectangleF.Bottom*"></a>
+  <h4 id="SixLabors_Primitives_RectangleF_Bottom" data-uid="SixLabors.Primitives.RectangleF.Bottom">Bottom</h4>
+  <div class="markdown level1 summary"><p>Gets the y-coordinate of the bottom edge of this <a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Bottom { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Core/new/702944449e4b6f7e570216bac9bfb4efa8cc0706/apiSpec/new?filename=SixLabors_Primitives_RectangleF_Height.md&amp;value=---%0Auid%3A%20SixLabors.Primitives.RectangleF.Height%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Core/blob/702944449e4b6f7e570216bac9bfb4efa8cc0706/src/SixLabors.Core/Primitives/RectangleF.cs/#L75">View Source</a>
+  </span>
+  <a id="SixLabors_Primitives_RectangleF_Height_" data-uid="SixLabors.Primitives.RectangleF.Height*"></a>
+  <h4 id="SixLabors_Primitives_RectangleF_Height" data-uid="SixLabors.Primitives.RectangleF.Height">Height</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the height of this <a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Height { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Core/new/702944449e4b6f7e570216bac9bfb4efa8cc0706/apiSpec/new?filename=SixLabors_Primitives_RectangleF_IsEmpty.md&amp;value=---%0Auid%3A%20SixLabors.Primitives.RectangleF.IsEmpty%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Core/blob/702944449e4b6f7e570216bac9bfb4efa8cc0706/src/SixLabors.Core/Primitives/RectangleF.cs/#L114">View Source</a>
+  </span>
+  <a id="SixLabors_Primitives_RectangleF_IsEmpty_" data-uid="SixLabors.Primitives.RectangleF.IsEmpty*"></a>
+  <h4 id="SixLabors_Primitives_RectangleF_IsEmpty" data-uid="SixLabors.Primitives.RectangleF.IsEmpty">IsEmpty</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this <a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a> is empty.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsEmpty { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Core/new/702944449e4b6f7e570216bac9bfb4efa8cc0706/apiSpec/new?filename=SixLabors_Primitives_RectangleF_Left.md&amp;value=---%0Auid%3A%20SixLabors.Primitives.RectangleF.Left%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Core/blob/702944449e4b6f7e570216bac9bfb4efa8cc0706/src/SixLabors.Core/Primitives/RectangleF.cs/#L156">View Source</a>
+  </span>
+  <a id="SixLabors_Primitives_RectangleF_Left_" data-uid="SixLabors.Primitives.RectangleF.Left*"></a>
+  <h4 id="SixLabors_Primitives_RectangleF_Left" data-uid="SixLabors.Primitives.RectangleF.Left">Left</h4>
+  <div class="markdown level1 summary"><p>Gets the x-coordinate of the left edge of this <a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Left { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Core/new/702944449e4b6f7e570216bac9bfb4efa8cc0706/apiSpec/new?filename=SixLabors_Primitives_RectangleF_Location.md&amp;value=---%0Auid%3A%20SixLabors.Primitives.RectangleF.Location%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Core/blob/702944449e4b6f7e570216bac9bfb4efa8cc0706/src/SixLabors.Core/Primitives/RectangleF.cs/#L80">View Source</a>
+  </span>
+  <a id="SixLabors_Primitives_RectangleF_Location_" data-uid="SixLabors.Primitives.RectangleF.Location*"></a>
+  <h4 id="SixLabors_Primitives_RectangleF_Location" data-uid="SixLabors.Primitives.RectangleF.Location">Location</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the coordinates of the upper-left corner of the rectangular region represented by this <a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PointF Location { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Primitives.PointF.html">PointF</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Core/new/702944449e4b6f7e570216bac9bfb4efa8cc0706/apiSpec/new?filename=SixLabors_Primitives_RectangleF_Right.md&amp;value=---%0Auid%3A%20SixLabors.Primitives.RectangleF.Right%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Core/blob/702944449e4b6f7e570216bac9bfb4efa8cc0706/src/SixLabors.Core/Primitives/RectangleF.cs/#L132">View Source</a>
+  </span>
+  <a id="SixLabors_Primitives_RectangleF_Right_" data-uid="SixLabors.Primitives.RectangleF.Right*"></a>
+  <h4 id="SixLabors_Primitives_RectangleF_Right" data-uid="SixLabors.Primitives.RectangleF.Right">Right</h4>
+  <div class="markdown level1 summary"><p>Gets the x-coordinate of the right edge of this <a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Right { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Core/new/702944449e4b6f7e570216bac9bfb4efa8cc0706/apiSpec/new?filename=SixLabors_Primitives_RectangleF_Size.md&amp;value=---%0Auid%3A%20SixLabors.Primitives.RectangleF.Size%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Core/blob/702944449e4b6f7e570216bac9bfb4efa8cc0706/src/SixLabors.Core/Primitives/RectangleF.cs/#L97">View Source</a>
+  </span>
+  <a id="SixLabors_Primitives_RectangleF_Size_" data-uid="SixLabors.Primitives.RectangleF.Size*"></a>
+  <h4 id="SixLabors_Primitives_RectangleF_Size" data-uid="SixLabors.Primitives.RectangleF.Size">Size</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the size of this <a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SizeF Size { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Primitives.SizeF.html">SizeF</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Core/new/702944449e4b6f7e570216bac9bfb4efa8cc0706/apiSpec/new?filename=SixLabors_Primitives_RectangleF_Top.md&amp;value=---%0Auid%3A%20SixLabors.Primitives.RectangleF.Top%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Core/blob/702944449e4b6f7e570216bac9bfb4efa8cc0706/src/SixLabors.Core/Primitives/RectangleF.cs/#L120">View Source</a>
+  </span>
+  <a id="SixLabors_Primitives_RectangleF_Top_" data-uid="SixLabors.Primitives.RectangleF.Top*"></a>
+  <h4 id="SixLabors_Primitives_RectangleF_Top" data-uid="SixLabors.Primitives.RectangleF.Top">Top</h4>
+  <div class="markdown level1 summary"><p>Gets the y-coordinate of the top edge of this <a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Top { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Core/new/702944449e4b6f7e570216bac9bfb4efa8cc0706/apiSpec/new?filename=SixLabors_Primitives_RectangleF_Width.md&amp;value=---%0Auid%3A%20SixLabors.Primitives.RectangleF.Width%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Core/blob/702944449e4b6f7e570216bac9bfb4efa8cc0706/src/SixLabors.Core/Primitives/RectangleF.cs/#L70">View Source</a>
+  </span>
+  <a id="SixLabors_Primitives_RectangleF_Width_" data-uid="SixLabors.Primitives.RectangleF.Width*"></a>
+  <h4 id="SixLabors_Primitives_RectangleF_Width" data-uid="SixLabors.Primitives.RectangleF.Width">Width</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the width of this <a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Width { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Core/new/702944449e4b6f7e570216bac9bfb4efa8cc0706/apiSpec/new?filename=SixLabors_Primitives_RectangleF_X.md&amp;value=---%0Auid%3A%20SixLabors.Primitives.RectangleF.X%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Core/blob/702944449e4b6f7e570216bac9bfb4efa8cc0706/src/SixLabors.Core/Primitives/RectangleF.cs/#L60">View Source</a>
+  </span>
+  <a id="SixLabors_Primitives_RectangleF_X_" data-uid="SixLabors.Primitives.RectangleF.X*"></a>
+  <h4 id="SixLabors_Primitives_RectangleF_X" data-uid="SixLabors.Primitives.RectangleF.X">X</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the x-coordinate of this <a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float X { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Core/new/702944449e4b6f7e570216bac9bfb4efa8cc0706/apiSpec/new?filename=SixLabors_Primitives_RectangleF_Y.md&amp;value=---%0Auid%3A%20SixLabors.Primitives.RectangleF.Y%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Core/blob/702944449e4b6f7e570216bac9bfb4efa8cc0706/src/SixLabors.Core/Primitives/RectangleF.cs/#L65">View Source</a>
+  </span>
+  <a id="SixLabors_Primitives_RectangleF_Y_" data-uid="SixLabors.Primitives.RectangleF.Y*"></a>
+  <h4 id="SixLabors_Primitives_RectangleF_Y" data-uid="SixLabors.Primitives.RectangleF.Y">Y</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the y-coordinate of this <a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Y { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Core/new/702944449e4b6f7e570216bac9bfb4efa8cc0706/apiSpec/new?filename=SixLabors_Primitives_RectangleF_Center_SixLabors_Primitives_RectangleF_.md&amp;value=---%0Auid%3A%20SixLabors.Primitives.RectangleF.Center(SixLabors.Primitives.RectangleF)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Core/blob/702944449e4b6f7e570216bac9bfb4efa8cc0706/src/SixLabors.Core/Primitives/RectangleF.cs/#L211">View Source</a>
+  </span>
+  <a id="SixLabors_Primitives_RectangleF_Center_" data-uid="SixLabors.Primitives.RectangleF.Center*"></a>
+  <h4 id="SixLabors_Primitives_RectangleF_Center_SixLabors_Primitives_RectangleF_" data-uid="SixLabors.Primitives.RectangleF.Center(SixLabors.Primitives.RectangleF)">Center(RectangleF)</h4>
+  <div class="markdown level1 summary"><p>Returns the center point of the given <a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PointF Center(RectangleF rectangle)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a></td>
+        <td><span class="parametername">rectangle</span></td>
+        <td><p>The rectangle</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Primitives.PointF.html">PointF</a></td>
+        <td><p>The <a class="xref" href="SixLabors.Primitives.Point.html">Point</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Core/new/702944449e4b6f7e570216bac9bfb4efa8cc0706/apiSpec/new?filename=SixLabors_Primitives_RectangleF_Contains_SixLabors_Primitives_PointF_.md&amp;value=---%0Auid%3A%20SixLabors.Primitives.RectangleF.Contains(SixLabors.Primitives.PointF)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Core/blob/702944449e4b6f7e570216bac9bfb4efa8cc0706/src/SixLabors.Core/Primitives/RectangleF.cs/#L334">View Source</a>
+  </span>
+  <a id="SixLabors_Primitives_RectangleF_Contains_" data-uid="SixLabors.Primitives.RectangleF.Contains*"></a>
+  <h4 id="SixLabors_Primitives_RectangleF_Contains_SixLabors_Primitives_PointF_" data-uid="SixLabors.Primitives.RectangleF.Contains(SixLabors.Primitives.PointF)">Contains(PointF)</h4>
+  <div class="markdown level1 summary"><p>Determines if the specified point is contained within the rectangular region defined by this <a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a> .</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Contains(PointF point)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Primitives.PointF.html">PointF</a></td>
+        <td><span class="parametername">point</span></td>
+        <td><p>The point</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>The <see cref="!:System.Boolean"></see></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Core/new/702944449e4b6f7e570216bac9bfb4efa8cc0706/apiSpec/new?filename=SixLabors_Primitives_RectangleF_Contains_SixLabors_Primitives_RectangleF_.md&amp;value=---%0Auid%3A%20SixLabors.Primitives.RectangleF.Contains(SixLabors.Primitives.RectangleF)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Core/blob/702944449e4b6f7e570216bac9bfb4efa8cc0706/src/SixLabors.Core/Primitives/RectangleF.cs/#L343">View Source</a>
+  </span>
+  <a id="SixLabors_Primitives_RectangleF_Contains_" data-uid="SixLabors.Primitives.RectangleF.Contains*"></a>
+  <h4 id="SixLabors_Primitives_RectangleF_Contains_SixLabors_Primitives_RectangleF_" data-uid="SixLabors.Primitives.RectangleF.Contains(SixLabors.Primitives.RectangleF)">Contains(RectangleF)</h4>
+  <div class="markdown level1 summary"><p>Determines if the rectangular region represented by <code data-dev-comment-type="paramref" class="paramref">rectangle</code> is entirely contained
+within the rectangular region represented by this <a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a> .</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Contains(RectangleF rectangle)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a></td>
+        <td><span class="parametername">rectangle</span></td>
+        <td><p>The rectangle</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>The <see cref="!:System.Boolean"></see></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Core/new/702944449e4b6f7e570216bac9bfb4efa8cc0706/apiSpec/new?filename=SixLabors_Primitives_RectangleF_Contains_System_Single_System_Single_.md&amp;value=---%0Auid%3A%20SixLabors.Primitives.RectangleF.Contains(System.Single%2CSystem.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Core/blob/702944449e4b6f7e570216bac9bfb4efa8cc0706/src/SixLabors.Core/Primitives/RectangleF.cs/#L326">View Source</a>
+  </span>
+  <a id="SixLabors_Primitives_RectangleF_Contains_" data-uid="SixLabors.Primitives.RectangleF.Contains*"></a>
+  <h4 id="SixLabors_Primitives_RectangleF_Contains_System_Single_System_Single_" data-uid="SixLabors.Primitives.RectangleF.Contains(System.Single,System.Single)">Contains(Single, Single)</h4>
+  <div class="markdown level1 summary"><p>Determines if the specfied point is contained within the rectangular region defined by
+this <a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Contains(float x, float y)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">x</span></td>
+        <td><p>The x-coordinate of the given point.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">y</span></td>
+        <td><p>The y-coordinate of the given point.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>The <see cref="!:System.Boolean"></see></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Core/new/702944449e4b6f7e570216bac9bfb4efa8cc0706/apiSpec/new?filename=SixLabors_Primitives_RectangleF_Equals_SixLabors_Primitives_RectangleF_.md&amp;value=---%0Auid%3A%20SixLabors.Primitives.RectangleF.Equals(SixLabors.Primitives.RectangleF)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Core/blob/702944449e4b6f7e570216bac9bfb4efa8cc0706/src/SixLabors.Core/Primitives/RectangleF.cs/#L391">View Source</a>
+  </span>
+  <a id="SixLabors_Primitives_RectangleF_Equals_" data-uid="SixLabors.Primitives.RectangleF.Equals*"></a>
+  <h4 id="SixLabors_Primitives_RectangleF_Equals_SixLabors_Primitives_RectangleF_" data-uid="SixLabors.Primitives.RectangleF.Equals(SixLabors.Primitives.RectangleF)">Equals(RectangleF)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(RectangleF other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Core/new/702944449e4b6f7e570216bac9bfb4efa8cc0706/apiSpec/new?filename=SixLabors_Primitives_RectangleF_Equals_System_Object_.md&amp;value=---%0Auid%3A%20SixLabors.Primitives.RectangleF.Equals(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Core/blob/702944449e4b6f7e570216bac9bfb4efa8cc0706/src/SixLabors.Core/Primitives/RectangleF.cs/#L388">View Source</a>
+  </span>
+  <a id="SixLabors_Primitives_RectangleF_Equals_" data-uid="SixLabors.Primitives.RectangleF.Equals*"></a>
+  <h4 id="SixLabors_Primitives_RectangleF_Equals_System_Object_" data-uid="SixLabors.Primitives.RectangleF.Equals(System.Object)">Equals(Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Core/new/702944449e4b6f7e570216bac9bfb4efa8cc0706/apiSpec/new?filename=SixLabors_Primitives_RectangleF_FromLTRB_System_Single_System_Single_System_Single_System_Single_.md&amp;value=---%0Auid%3A%20SixLabors.Primitives.RectangleF.FromLTRB(System.Single%2CSystem.Single%2CSystem.Single%2CSystem.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Core/blob/702944449e4b6f7e570216bac9bfb4efa8cc0706/src/SixLabors.Core/Primitives/RectangleF.cs/#L201">View Source</a>
+  </span>
+  <a id="SixLabors_Primitives_RectangleF_FromLTRB_" data-uid="SixLabors.Primitives.RectangleF.FromLTRB*"></a>
+  <h4 id="SixLabors_Primitives_RectangleF_FromLTRB_System_Single_System_Single_System_Single_System_Single_" data-uid="SixLabors.Primitives.RectangleF.FromLTRB(System.Single,System.Single,System.Single,System.Single)">FromLTRB(Single, Single, Single, Single)</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a> with the specified location and size. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RectangleF FromLTRB(float left, float top, float right, float bottom)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">left</span></td>
+        <td><p>The left coordinate of the rectangle</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">top</span></td>
+        <td><p>The top coordinate of the rectangle</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">right</span></td>
+        <td><p>The right coordinate of the rectangle</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">bottom</span></td>
+        <td><p>The bottom coordinate of the rectangle</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a></td>
+        <td><p>The <a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Core/new/702944449e4b6f7e570216bac9bfb4efa8cc0706/apiSpec/new?filename=SixLabors_Primitives_RectangleF_GetHashCode.md&amp;value=---%0Auid%3A%20SixLabors.Primitives.RectangleF.GetHashCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Core/blob/702944449e4b6f7e570216bac9bfb4efa8cc0706/src/SixLabors.Core/Primitives/RectangleF.cs/#L379">View Source</a>
+  </span>
+  <a id="SixLabors_Primitives_RectangleF_GetHashCode_" data-uid="SixLabors.Primitives.RectangleF.GetHashCode*"></a>
+  <h4 id="SixLabors_Primitives_RectangleF_GetHashCode" data-uid="SixLabors.Primitives.RectangleF.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Core/new/702944449e4b6f7e570216bac9bfb4efa8cc0706/apiSpec/new?filename=SixLabors_Primitives_RectangleF_Inflate_SixLabors_Primitives_RectangleF_System_Single_System_Single_.md&amp;value=---%0Auid%3A%20SixLabors.Primitives.RectangleF.Inflate(SixLabors.Primitives.RectangleF%2CSystem.Single%2CSystem.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Core/blob/702944449e4b6f7e570216bac9bfb4efa8cc0706/src/SixLabors.Core/Primitives/RectangleF.cs/#L244">View Source</a>
+  </span>
+  <a id="SixLabors_Primitives_RectangleF_Inflate_" data-uid="SixLabors.Primitives.RectangleF.Inflate*"></a>
+  <h4 id="SixLabors_Primitives_RectangleF_Inflate_SixLabors_Primitives_RectangleF_System_Single_System_Single_" data-uid="SixLabors.Primitives.RectangleF.Inflate(SixLabors.Primitives.RectangleF,System.Single,System.Single)">Inflate(RectangleF, Single, Single)</h4>
+  <div class="markdown level1 summary"><p>Creates a <a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a> that is inflated by the specified amount.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RectangleF Inflate(RectangleF rectangle, float x, float y)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a></td>
+        <td><span class="parametername">rectangle</span></td>
+        <td><p>The rectangle</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">x</span></td>
+        <td><p>The amount to inflate the width by</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">y</span></td>
+        <td><p>The amount to inflate the height by</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a></td>
+        <td><p>A new <a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Core/new/702944449e4b6f7e570216bac9bfb4efa8cc0706/apiSpec/new?filename=SixLabors_Primitives_RectangleF_Inflate_SixLabors_Primitives_SizeF_.md&amp;value=---%0Auid%3A%20SixLabors.Primitives.RectangleF.Inflate(SixLabors.Primitives.SizeF)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Core/blob/702944449e4b6f7e570216bac9bfb4efa8cc0706/src/SixLabors.Core/Primitives/RectangleF.cs/#L316">View Source</a>
+  </span>
+  <a id="SixLabors_Primitives_RectangleF_Inflate_" data-uid="SixLabors.Primitives.RectangleF.Inflate*"></a>
+  <h4 id="SixLabors_Primitives_RectangleF_Inflate_SixLabors_Primitives_SizeF_" data-uid="SixLabors.Primitives.RectangleF.Inflate(SixLabors.Primitives.SizeF)">Inflate(SizeF)</h4>
+  <div class="markdown level1 summary"><p>Inflates this <a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a> by the specified amount.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Inflate(SizeF size)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Primitives.SizeF.html">SizeF</a></td>
+        <td><span class="parametername">size</span></td>
+        <td><p>The size</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Core/new/702944449e4b6f7e570216bac9bfb4efa8cc0706/apiSpec/new?filename=SixLabors_Primitives_RectangleF_Inflate_System_Single_System_Single_.md&amp;value=---%0Auid%3A%20SixLabors.Primitives.RectangleF.Inflate(System.Single%2CSystem.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Core/blob/702944449e4b6f7e570216bac9bfb4efa8cc0706/src/SixLabors.Core/Primitives/RectangleF.cs/#L302">View Source</a>
+  </span>
+  <a id="SixLabors_Primitives_RectangleF_Inflate_" data-uid="SixLabors.Primitives.RectangleF.Inflate*"></a>
+  <h4 id="SixLabors_Primitives_RectangleF_Inflate_System_Single_System_Single_" data-uid="SixLabors.Primitives.RectangleF.Inflate(System.Single,System.Single)">Inflate(Single, Single)</h4>
+  <div class="markdown level1 summary"><p>Inflates this <a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a> by the specified amount.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Inflate(float width, float height)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">width</span></td>
+        <td><p>The width</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">height</span></td>
+        <td><p>The height</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Core/new/702944449e4b6f7e570216bac9bfb4efa8cc0706/apiSpec/new?filename=SixLabors_Primitives_RectangleF_Intersect_SixLabors_Primitives_RectangleF_.md&amp;value=---%0Auid%3A%20SixLabors.Primitives.RectangleF.Intersect(SixLabors.Primitives.RectangleF)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Core/blob/702944449e4b6f7e570216bac9bfb4efa8cc0706/src/SixLabors.Core/Primitives/RectangleF.cs/#L286">View Source</a>
+  </span>
+  <a id="SixLabors_Primitives_RectangleF_Intersect_" data-uid="SixLabors.Primitives.RectangleF.Intersect*"></a>
+  <h4 id="SixLabors_Primitives_RectangleF_Intersect_SixLabors_Primitives_RectangleF_" data-uid="SixLabors.Primitives.RectangleF.Intersect(SixLabors.Primitives.RectangleF)">Intersect(RectangleF)</h4>
+  <div class="markdown level1 summary"><p>Creates a RectangleF that represents the intersection between this RectangleF and the <code data-dev-comment-type="paramref" class="paramref">rectangle</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Intersect(RectangleF rectangle)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a></td>
+        <td><span class="parametername">rectangle</span></td>
+        <td><p>The rectangle</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Core/new/702944449e4b6f7e570216bac9bfb4efa8cc0706/apiSpec/new?filename=SixLabors_Primitives_RectangleF_Intersect_SixLabors_Primitives_RectangleF_SixLabors_Primitives_RectangleF_.md&amp;value=---%0Auid%3A%20SixLabors.Primitives.RectangleF.Intersect(SixLabors.Primitives.RectangleF%2CSixLabors.Primitives.RectangleF)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Core/blob/702944449e4b6f7e570216bac9bfb4efa8cc0706/src/SixLabors.Core/Primitives/RectangleF.cs/#L221">View Source</a>
+  </span>
+  <a id="SixLabors_Primitives_RectangleF_Intersect_" data-uid="SixLabors.Primitives.RectangleF.Intersect*"></a>
+  <h4 id="SixLabors_Primitives_RectangleF_Intersect_SixLabors_Primitives_RectangleF_SixLabors_Primitives_RectangleF_" data-uid="SixLabors.Primitives.RectangleF.Intersect(SixLabors.Primitives.RectangleF,SixLabors.Primitives.RectangleF)">Intersect(RectangleF, RectangleF)</h4>
+  <div class="markdown level1 summary"><p>Creates a rectangle that represents the intersection between <code data-dev-comment-type="paramref" class="paramref">a</code> and
+<code data-dev-comment-type="paramref" class="paramref">b</code>. If there is no intersection, an empty rectangle is returned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RectangleF Intersect(RectangleF a, RectangleF b)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a></td>
+        <td><span class="parametername">a</span></td>
+        <td><p>The first rectangle</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a></td>
+        <td><span class="parametername">b</span></td>
+        <td><p>The second rectangle</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a></td>
+        <td><p>The <a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Core/new/702944449e4b6f7e570216bac9bfb4efa8cc0706/apiSpec/new?filename=SixLabors_Primitives_RectangleF_IntersectsWith_SixLabors_Primitives_RectangleF_.md&amp;value=---%0Auid%3A%20SixLabors.Primitives.RectangleF.IntersectsWith(SixLabors.Primitives.RectangleF)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Core/blob/702944449e4b6f7e570216bac9bfb4efa8cc0706/src/SixLabors.Core/Primitives/RectangleF.cs/#L354">View Source</a>
+  </span>
+  <a id="SixLabors_Primitives_RectangleF_IntersectsWith_" data-uid="SixLabors.Primitives.RectangleF.IntersectsWith*"></a>
+  <h4 id="SixLabors_Primitives_RectangleF_IntersectsWith_SixLabors_Primitives_RectangleF_" data-uid="SixLabors.Primitives.RectangleF.IntersectsWith(SixLabors.Primitives.RectangleF)">IntersectsWith(RectangleF)</h4>
+  <div class="markdown level1 summary"><p>Determines if the specfied <a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a> intersects the rectangular region defined by
+this <a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IntersectsWith(RectangleF rectangle)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a></td>
+        <td><span class="parametername">rectangle</span></td>
+        <td><p>The other Rectange </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>The <see cref="!:System.Boolean"></see></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Core/new/702944449e4b6f7e570216bac9bfb4efa8cc0706/apiSpec/new?filename=SixLabors_Primitives_RectangleF_Offset_SixLabors_Primitives_PointF_.md&amp;value=---%0Auid%3A%20SixLabors.Primitives.RectangleF.Offset(SixLabors.Primitives.PointF)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Core/blob/702944449e4b6f7e570216bac9bfb4efa8cc0706/src/SixLabors.Core/Primitives/RectangleF.cs/#L363">View Source</a>
+  </span>
+  <a id="SixLabors_Primitives_RectangleF_Offset_" data-uid="SixLabors.Primitives.RectangleF.Offset*"></a>
+  <h4 id="SixLabors_Primitives_RectangleF_Offset_SixLabors_Primitives_PointF_" data-uid="SixLabors.Primitives.RectangleF.Offset(SixLabors.Primitives.PointF)">Offset(PointF)</h4>
+  <div class="markdown level1 summary"><p>Adjusts the location of this rectangle by the specified amount.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Offset(PointF point)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Primitives.PointF.html">PointF</a></td>
+        <td><span class="parametername">point</span></td>
+        <td><p>The point</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Core/new/702944449e4b6f7e570216bac9bfb4efa8cc0706/apiSpec/new?filename=SixLabors_Primitives_RectangleF_Offset_System_Single_System_Single_.md&amp;value=---%0Auid%3A%20SixLabors.Primitives.RectangleF.Offset(System.Single%2CSystem.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Core/blob/702944449e4b6f7e570216bac9bfb4efa8cc0706/src/SixLabors.Core/Primitives/RectangleF.cs/#L371">View Source</a>
+  </span>
+  <a id="SixLabors_Primitives_RectangleF_Offset_" data-uid="SixLabors.Primitives.RectangleF.Offset*"></a>
+  <h4 id="SixLabors_Primitives_RectangleF_Offset_System_Single_System_Single_" data-uid="SixLabors.Primitives.RectangleF.Offset(System.Single,System.Single)">Offset(Single, Single)</h4>
+  <div class="markdown level1 summary"><p>Adjusts the location of this rectangle by the specified amount.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Offset(float dx, float dy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">dx</span></td>
+        <td><p>The amount to offset the x-coordinate.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">dy</span></td>
+        <td><p>The amount to offset the y-coordinate.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Core/new/702944449e4b6f7e570216bac9bfb4efa8cc0706/apiSpec/new?filename=SixLabors_Primitives_RectangleF_ToString.md&amp;value=---%0Auid%3A%20SixLabors.Primitives.RectangleF.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Core/blob/702944449e4b6f7e570216bac9bfb4efa8cc0706/src/SixLabors.Core/Primitives/RectangleF.cs/#L382">View Source</a>
+  </span>
+  <a id="SixLabors_Primitives_RectangleF_ToString_" data-uid="SixLabors.Primitives.RectangleF.ToString*"></a>
+  <h4 id="SixLabors_Primitives_RectangleF_ToString" data-uid="SixLabors.Primitives.RectangleF.ToString">ToString()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Core/new/702944449e4b6f7e570216bac9bfb4efa8cc0706/apiSpec/new?filename=SixLabors_Primitives_RectangleF_Transform_SixLabors_Primitives_RectangleF_Matrix3x2_.md&amp;value=---%0Auid%3A%20SixLabors.Primitives.RectangleF.Transform(SixLabors.Primitives.RectangleF%2CMatrix3x2)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Core/blob/702944449e4b6f7e570216bac9bfb4efa8cc0706/src/SixLabors.Core/Primitives/RectangleF.cs/#L258">View Source</a>
+  </span>
+  <a id="SixLabors_Primitives_RectangleF_Transform_" data-uid="SixLabors.Primitives.RectangleF.Transform*"></a>
+  <h4 id="SixLabors_Primitives_RectangleF_Transform_SixLabors_Primitives_RectangleF_Matrix3x2_" data-uid="SixLabors.Primitives.RectangleF.Transform(SixLabors.Primitives.RectangleF,Matrix3x2)">Transform(RectangleF, Matrix3x2)</h4>
+  <div class="markdown level1 summary"><p>Transforms a rectangle by the given matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RectangleF Transform(RectangleF rectangle, Matrix3x2 matrix)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a></td>
+        <td><span class="parametername">rectangle</span></td>
+        <td><p>The source rectangle.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Matrix3x2</span></td>
+        <td><span class="parametername">matrix</span></td>
+        <td><p>The transformation matrix.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a></td>
+        <td><p>A transformed rectangle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Core/new/702944449e4b6f7e570216bac9bfb4efa8cc0706/apiSpec/new?filename=SixLabors_Primitives_RectangleF_Union_SixLabors_Primitives_RectangleF_SixLabors_Primitives_RectangleF_.md&amp;value=---%0Auid%3A%20SixLabors.Primitives.RectangleF.Union(SixLabors.Primitives.RectangleF%2CSixLabors.Primitives.RectangleF)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Core/blob/702944449e4b6f7e570216bac9bfb4efa8cc0706/src/SixLabors.Core/Primitives/RectangleF.cs/#L271">View Source</a>
+  </span>
+  <a id="SixLabors_Primitives_RectangleF_Union_" data-uid="SixLabors.Primitives.RectangleF.Union*"></a>
+  <h4 id="SixLabors_Primitives_RectangleF_Union_SixLabors_Primitives_RectangleF_SixLabors_Primitives_RectangleF_" data-uid="SixLabors.Primitives.RectangleF.Union(SixLabors.Primitives.RectangleF,SixLabors.Primitives.RectangleF)">Union(RectangleF, RectangleF)</h4>
+  <div class="markdown level1 summary"><p>Creates a rectangle that represents the union between <code data-dev-comment-type="paramref" class="paramref">a</code> and <code data-dev-comment-type="paramref" class="paramref">b</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RectangleF Union(RectangleF a, RectangleF b)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a></td>
+        <td><span class="parametername">a</span></td>
+        <td><p>The first rectangle</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a></td>
+        <td><span class="parametername">b</span></td>
+        <td><p>The second rectangle</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a></td>
+        <td><p>The <a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="operators">Operators
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Core/new/702944449e4b6f7e570216bac9bfb4efa8cc0706/apiSpec/new?filename=SixLabors_Primitives_RectangleF_op_Equality_SixLabors_Primitives_RectangleF_SixLabors_Primitives_RectangleF_.md&amp;value=---%0Auid%3A%20SixLabors.Primitives.RectangleF.op_Equality(SixLabors.Primitives.RectangleF%2CSixLabors.Primitives.RectangleF)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Core/blob/702944449e4b6f7e570216bac9bfb4efa8cc0706/src/SixLabors.Core/Primitives/RectangleF.cs/#L180">View Source</a>
+  </span>
+  <a id="SixLabors_Primitives_RectangleF_op_Equality_" data-uid="SixLabors.Primitives.RectangleF.op_Equality*"></a>
+  <h4 id="SixLabors_Primitives_RectangleF_op_Equality_SixLabors_Primitives_RectangleF_SixLabors_Primitives_RectangleF_" data-uid="SixLabors.Primitives.RectangleF.op_Equality(SixLabors.Primitives.RectangleF,SixLabors.Primitives.RectangleF)">Equality(RectangleF, RectangleF)</h4>
+  <div class="markdown level1 summary"><p>Compares two <a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a> objects for equality.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(RectangleF left, RectangleF right)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a></td>
+        <td><span class="parametername">left</span></td>
+        <td><p>The <a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a> on the left side of the operand.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a></td>
+        <td><span class="parametername">right</span></td>
+        <td><p>The <a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a> on the right side of the operand.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the current left is equal to the <code data-dev-comment-type="paramref" class="paramref">right</code> parameter; otherwise, false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Core/new/702944449e4b6f7e570216bac9bfb4efa8cc0706/apiSpec/new?filename=SixLabors_Primitives_RectangleF_op_Explicit_SixLabors_Primitives_RectangleF__SixLabors_Primitives_Rectangle.md&amp;value=---%0Auid%3A%20SixLabors.Primitives.RectangleF.op_Explicit(SixLabors.Primitives.RectangleF)~SixLabors.Primitives.Rectangle%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Core/blob/702944449e4b6f7e570216bac9bfb4efa8cc0706/src/SixLabors.Core/Primitives/RectangleF.cs/#L169">View Source</a>
+  </span>
+  <a id="SixLabors_Primitives_RectangleF_op_Explicit_" data-uid="SixLabors.Primitives.RectangleF.op_Explicit*"></a>
+  <h4 id="SixLabors_Primitives_RectangleF_op_Explicit_SixLabors_Primitives_RectangleF__SixLabors_Primitives_Rectangle" data-uid="SixLabors.Primitives.RectangleF.op_Explicit(SixLabors.Primitives.RectangleF)~SixLabors.Primitives.Rectangle">Explicit(RectangleF to Rectangle)</h4>
+  <div class="markdown level1 summary"><p>Creates a <a class="xref" href="SixLabors.Primitives.Rectangle.html">Rectangle</a> with the coordinates of the specified <a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a> by truncating each coordinate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static explicit operator Rectangle(RectangleF rectangle)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a></td>
+        <td><span class="parametername">rectangle</span></td>
+        <td><p>The rectangle</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Primitives.Rectangle.html">Rectangle</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Core/new/702944449e4b6f7e570216bac9bfb4efa8cc0706/apiSpec/new?filename=SixLabors_Primitives_RectangleF_op_Inequality_SixLabors_Primitives_RectangleF_SixLabors_Primitives_RectangleF_.md&amp;value=---%0Auid%3A%20SixLabors.Primitives.RectangleF.op_Inequality(SixLabors.Primitives.RectangleF%2CSixLabors.Primitives.RectangleF)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Core/blob/702944449e4b6f7e570216bac9bfb4efa8cc0706/src/SixLabors.Core/Primitives/RectangleF.cs/#L191">View Source</a>
+  </span>
+  <a id="SixLabors_Primitives_RectangleF_op_Inequality_" data-uid="SixLabors.Primitives.RectangleF.op_Inequality*"></a>
+  <h4 id="SixLabors_Primitives_RectangleF_op_Inequality_SixLabors_Primitives_RectangleF_SixLabors_Primitives_RectangleF_" data-uid="SixLabors.Primitives.RectangleF.op_Inequality(SixLabors.Primitives.RectangleF,SixLabors.Primitives.RectangleF)">Inequality(RectangleF, RectangleF)</h4>
+  <div class="markdown level1 summary"><p>Compares two <a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a> objects for inequality.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(RectangleF left, RectangleF right)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a></td>
+        <td><span class="parametername">left</span></td>
+        <td><p>The <a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a> on the left side of the operand.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a></td>
+        <td><span class="parametername">right</span></td>
+        <td><p>The <a class="xref" href="SixLabors.Primitives.RectangleF.html">RectangleF</a> on the right side of the operand.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the current left is unequal to the <code data-dev-comment-type="paramref" class="paramref">right</code> parameter; otherwise, false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">IEquatable&lt;&gt;</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/SixLabors/Core/new/702944449e4b6f7e570216bac9bfb4efa8cc0706/apiSpec/new?filename=SixLabors_Primitives_RectangleF.md&amp;value=---%0Auid%3A%20SixLabors.Primitives.RectangleF%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/SixLabors/Core/blob/702944449e4b6f7e570216bac9bfb4efa8cc0706/src/SixLabors.Core/Primitives/RectangleF.cs/#L18" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © Six Labors<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
