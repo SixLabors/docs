@@ -1,4 +1,4 @@
-# This is the **HOMEPAGE**.
-Refer to [Markdown](http://daringfireball.net/projects/markdown/) for how to write markdown files.
-## Quick Start Notes:
-1. Add images to the *images* folder if the file is referencing an image.
+# Welcome to Six Labors documentation!
+
+You can find tutorials, examples and API details covings all of Six Labors projects. This includes SixLabors.ImageSharp, SixLabors.ImageSharp.Web, SixLabors.Shape and SixLabors.Fonts.
+

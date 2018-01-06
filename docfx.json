@@ -14,7 +14,7 @@
         }
       ],
       "dest": "api/ImageSharp",
-      "disableGitFeatures": true,
+      "disableGitFeatures": false,
       "properties": {
         "TargetFramework": "netstandard2.0"
       }
@@ -33,7 +33,7 @@
         }
       ],
       "dest": "api/ImageSharp.Web",
-      "disableGitFeatures": true,
+      "disableGitFeatures": false,
       "properties": {
         "TargetFramework": "netstandard2.0"
       }
@@ -52,7 +52,7 @@
         }
       ],
       "dest": "api/Fonts",
-      "disableGitFeatures": true,
+      "disableGitFeatures": false,
       "properties": {
         "TargetFramework": "netstandard2.0"
       }
@@ -71,7 +71,7 @@
         }
       ],
       "dest": "api/Shapes",
-      "disableGitFeatures": true,
+      "disableGitFeatures": false,
       "properties": {
         "TargetFramework": "netstandard2.0"
       }
@@ -128,12 +128,13 @@
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
     "template": [
-      "default"
+      "default",
+      "templates"
     ],
     "postProcessors": [],
     "noLangKeyword": false,
     "keepFileLink": false,
     "cleanupCacheHistory": false,
-    "disableGitFeatures": true
+    "disableGitFeatures": false
   }
 }

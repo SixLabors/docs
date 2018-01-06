@@ -1,15 +1,17 @@
 {
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
     "version": "2.0.0",
     "tasks": [
         {
-            "taskName": "build",
-            "command": "dotnet",
+            "label": "run",
             "type": "process",
+            "isBackground": true,
+            "command": "docfx",
             "args": [
-                "build",
-                "${workspaceFolder}/ext/ImageSharp/samples/AvatarWithRoundedCorner/AvatarWithRoundedCorner.csproj"
+                "--serve"
             ],
-            "problemMatcher": "$msCompile"
+            "problemMatcher":"$msCompile"
         }
     ]
 }
