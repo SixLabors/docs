@@ -17,7 +17,7 @@ using (Image<Rgba32> image = Image.Load("foo.jpg")) //open the file and detect t
 ```c#
 int width = 640;
 int height = 480;
-using(Image<Rgba32> = new Image<Rgba32>(width, height)) // creates a new image with all the pixels set as transparent 
+using(Image<Rgba32> image = new Image<Rgba32>(width, height)) // creates a new image with all the pixels set as transparent 
 {
  // do your drawing in here...
 } // dispose - releasing memory into a memory pool ready for the next image you wish to process
