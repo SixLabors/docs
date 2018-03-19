@@ -27,4 +27,4 @@ using(Image<Rgba32> image = new Image<Rgba32>(width, height)) // creates a new i
 ```
 
 ### Why is [](xref:SixLabors.ImageSharp.Image`1?displayProperty=name) a generic class?
-Check out the [Pixel Formats](PixelFormats.md) article for the answer!
+An image is essentially a **generic 2D array of pixels** stored in a contigous memory block. Check out the [Pixel Formats](PixelFormats.md) article for more details!
