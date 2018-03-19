@@ -8,6 +8,13 @@ Examples and explanatory documentation about our API.
 ### [API documentation](api/index.md)
 Detailed documentation for the entire API available across our projects.
 
+### [Examples repository](https://github.com/SixLabors/Samples)
+We have implemented short self-contained sample projects for a few specific use cases, including:
+- [Avatar with rounded corners](https://github.com/SixLabors/Samples/tree/master/ImageSharp/AvatarWithRoundedCorner)
+- [Draw watermark on image](https://github.com/SixLabors/Samples/tree/master/ImageSharp/DrawWaterMarkOnImage)
+- [Change default encoder options](https://github.com/SixLabors/Samples/tree/master/ImageSharp/ChangeDefaultEncoderOptions)
+- [Draw text along a path](https://github.com/SixLabors/Samples/tree/master/ImageSharp/DrawingTextAlongAPath)
+
 # SixLabors Projects
 Our graphics libraries are split into different projects. They cover different concerns separately, but there is strong cohesion.
 
