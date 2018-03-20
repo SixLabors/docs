@@ -1,270 +1,339 @@
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css");
+/* @import url("https://use.fontawesome.com/releases/v5.0.8/css/regular.css");
+@import url("https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css"); */
 
-/* Clickability fix for selector on sm devices */
-@media (min-width: 768px) and (max-width: 991px) {
-  article h1:first-of-type:before {
-    height: 0;
-    margin-top: 0;
-  }  
+
+/***
+ * TYPOGRAPHY
+ ***/
+
+html,
+body {
+    font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.2;
+    font-size: 100%;
 }
 
-#search {
-  border: none;
+h1,
+h2,
+h3 {
+    font-weight: 200;
+    text-decoration: none;
+    color: #40064e;
+    line-height: 1.15;
 }
 
-.fa-code {
-  font-size: 19px;
+h1 {
+    font-size: 3rem;
+    margin: 1rem 0
 }
 
-.sidetoc,
-body .toc,
-.sidefilter,
-.sidetoggle { 
-  background-color: #f9fbe7; 
+h2 {
+    font-size: 2rem;
+    margin: 1.34rem 0
 }
 
-.sidenav,
-.toc-toggle {
-  padding: 0;
+h3 {
+    font-size: 1.5rem;
+    margin: 1.245rem 0;
 }
 
-.sidetoggle {
-  padding-bottom: 15px;
+a,
+.a {
+    color: #337ab7;
+    text-decoration: none;
 }
 
-/* Remove center align from Navbar and Collapsible section */
-.collapse.in,
-.collapsing {
-  text-align: unset;
+a:hover,
+a:hover .a,
+a:focus,
+a:focus .a {
+    color: #23527c;
+    text-decoration: underline;
 }
 
-article h4 {
-  border-bottom: none;
+.a {
+    text-transform: uppercase
 }
 
-@media (min-width: 768px) {
-  .sidetoc, .sidefilter {
-    margin-left: -15px;
-  }
+
+/***
+ * MAIN NAVIGATION
+ ***/
+
+header {
+    box-shadow: 0 0 8px rgba(0, 0, 0, .12), 0 -2px 8px rgba(0, 0, 0, .24)
 }
 
-@media (max-width: 767px) {
-  .navbar-collapse {
-    text-align: center !important;
-  }
-
-  .navbar-collapse li .active {
-    border-radius: 20px;
-  }
+#logo {
+    width: 160px;
+    height: 50px;
+    margin-right: 1rem;
 }
 
-/* Collapsible Sections
-   ------------------------------------------------------- */
-.expander:after {
-    font-family: 'Glyphicons Halflings';
-    content: "\e260";
-    margin-left: 5px;
-    color: grey;
-    font-size: small;
+.navbar-inverse {
+    background-color: #085ba7;
+    border-color: #085ba7;
 }
 
-.expander.collapsed:after {
-    content: "\e259";
-}
-
-/* Floating buttons
-   ------------------------------------------------------- */
-.fab {
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    padding: 11px 0 0 0;
+.navbar-default {
+    background-color: #FFF;
     border: none;
-    outline: none;
+}
+
+.navbar-inverse .navbar-nav>li>a,
+.navbar-inverse .navbar-text {
     color: #FFF;
-    border-radius: 100%;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    transition:.3s;
 }
 
-.fab:hover {
-    transform: scale(1.1);
+
+/* Fix loss of drop shadow by overriding DocFX "static"*/
+
+@media only screen and (max-width: 768px) {
+    header {
+        position: relative;
+    }
 }
 
-.fab + .fab {
-  margin-right: 15px;
-}
-
-.contribution-panel {
-    z-index: 1000;
-    position: fixed;
-    right: 30px;
-    top: 70px;
-}
-
-/* Bootstrap docs like sidebar
-   ------------------------------------------------------- */
-.affix h5 {
-  display: none;
-}
-
-/* active & hover links */
-.affix ul > li > a:hover,
-.affix ul > li.active > a,
-.affix ul > li > a:focus {
-  color: #563d7c;                 
-  text-decoration: none;          
-  background-color: transparent;  
-  border-left-color: #563d7c; 
-}
-
-/* all active links */
-.affix ul > li.active > a, 
-.affix ul > li.active:hover > a,
-.affix ul > li.active:focus >a {
-    font-weight: 700;
-}
-
-/* nested active links */
-.affix ul ul > li.active > a, 
-.affix ul ul > li.active:hover > a,
-.affix ul ul > li.active:focus > a {
-    font-weight: 500;
-}
-
-/* all links */
-.affix ul > li > a {
-  color: #999;
-  border-left: 2px solid transparent;
-  padding: 4px 20px;
-  font-size: 13px;
-  font-weight: 400;
-}
-
-/* nested links */
-.affix ul ul > li > a {
-  padding-top: 1px;
-  padding-bottom: 1px;
-  padding-left: 30px;
-  font-size: 12px;
-}
-
-/* hide inactive nested list */
-.affix ul ul {
-  display: none;
-}
-
-/* show active nested list */
-.affix ul > li.active > ul {
-  display: block;
-}
-
-.affix > ul > li > a:before {
-  content: '';
-}
-
-.affix ul ul > li > a:before {
-  content: '';
-}
-
-/* Navbar Hamburger
-   ------------------------------------------------------- */
 .icon-bar {
     transition: 0.4s;
 }
 
-/* Rotate first bar */
-.change .icon-bar:nth-of-type(2) {
-    transform: rotate(-45deg) translate(-4px, 5px) ;
+[aria-expanded="true"] .icon-bar:nth-of-type(2) {
+    /* Rotate first bar */
+    transform: rotate(-45deg) translate(-4px, 5px);
 }
 
-/* Fade out the second bar */
-.change .icon-bar:nth-of-type(3) {
+[aria-expanded="true"] .icon-bar:nth-of-type(3) {
+    /* Fade out the second bar */
     opacity: 0;
 }
 
-/* Rotate last bar */
-.change .icon-bar:nth-of-type(4) {
-    transform: rotate(45deg) translate(-4px, -5px) ;
+[aria-expanded="true"] .icon-bar:nth-of-type(4) {
+    /* Rotate last bar */
+    transform: rotate(45deg) translate(-4px, -5px);
 }
 
-/* Custom Navbar
-   ------------------------------------------------------- */
-.navbar-inverse {
-  background-color: #085ba7;
-  opacity: 0.95;
-  border-color: #085ba7;
-}
-.navbar-inverse .navbar-brand {
-  color: #ffffff;
-}
-.navbar-inverse .navbar-brand:hover,
-.navbar-inverse .navbar-brand:focus {
-  color: #ecdbff;
-}
-.navbar-inverse .navbar-text {
-  color: #ffffff;
-}
-.navbar-inverse .navbar-nav > li > a {
-  color: #ffffff;
-}
-.navbar-inverse .navbar-nav > li > a:hover,
-.navbar-inverse .navbar-nav > li > a:focus {
-  color: #ecdbff;
-}
-.navbar-inverse .navbar-nav > .active > a,
-.navbar-inverse .navbar-nav > .active > a:hover,
-.navbar-inverse .navbar-nav > .active > a:focus {
-  color: #ecdbff;
-  background-color: #085ba7;
-}
-.navbar-inverse .navbar-nav > .open > a,
-.navbar-inverse .navbar-nav > .open > a:hover,
-.navbar-inverse .navbar-nav > .open > a:focus {
-  color: #ecdbff;
-  background-color: #085ba7;
-}
-.navbar-inverse .navbar-toggle {
-  border-color: #085ba7;
-}
-.navbar-inverse .navbar-toggle:hover,
-.navbar-inverse .navbar-toggle:focus {
-  background-color: #085ba7;
-}
-.navbar-inverse .navbar-toggle .icon-bar {
-  background-color: #ffffff;
-}
-.navbar-inverse .navbar-collapse,
-.navbar-inverse .navbar-form {
-  border: none;
-}
-.navbar-inverse .navbar-link {
-  color: #ffffff;
-}
-.navbar-inverse .navbar-link:hover {
-  color: #ecdbff;
+.collapse.in,
+.collapsing {
+    text-align: unset;
 }
 
-@media (max-width: 767px) {
-  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
-    color: #ffffff;
-  }
-  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover,
-  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #ecdbff;
-  }
-  .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a,
-  .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:hover,
-  .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:focus {
-    color: #ecdbff;
-    background-color: #085ba7;
-  }
+
+/***
+ * SIDE NAVIGATION
+ ***/
+
+.sidefilter {
+    background-color: #FFF;
+    padding: 15px 0;
+    border: none;
 }
 
-.navbar-brand svg {
-  width: 150px;
-  height: 50px;
+.toc-filter {
+    border-radius: 0;
+    background: #FFF;
+    color: inherit;
+    padding: 0;
+    position: relative;
+    margin: 0;
 }
-.navbar-brand svg #sixlabors-logo-text{
-  fill: white;
+
+.toc-filter>input {
+    border: 1px solid #dcdcdc;
+    color: inherit;
+    font-size: .875rem;
+    height: 36px;
+    line-height: 1.8;
+    padding: 0 10px 0 20px;
+}
+
+.toc-filter>input:focus {
+    outline: #3b99fc solid 1px;
+}
+
+.sidetoc {
+    background-color: #FFF;
+    border: none;
+}
+
+.toc {
+    margin: 0;
+    padding: 0;
+}
+
+.toc ul {
+    font-size: inherit;
+    margin: 0;
+}
+
+
+/* Prevent double scroll bar */
+
+body .toc {
+    background-color: #FFF;
+    overflow-x: initial;
+}
+
+.toc .level1>li {
+    font-weight: bold;
+    margin-top: 2px;
+    position: relative;
+    font-size: 15px;
+}
+
+toc .nav>li>a {
+    font-weight: normal;
+    color: inherit;
+    padding: 5px 0 0 15px;
+    margin: 0;
+}
+
+.toc .nav>li>.expand-stub::before,
+.toc .nav>li.active>.expand-stub::before,
+.toc .nav>li.filtered>.expand-stub::before {
+    /*DOCFX selectors far too specific!*/
+    content: "\f054"!important;
+    position: absolute;
+    z-index: 1;
+    left: 15px;
+    top: 9px;
+    font-size: .75rem;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+
+.toc .nav>li.active>.expand-stub::before {
+    color: #FFF;
+}
+
+.toc .nav>li.in>.expand-stub::before,
+.toc .nav>li.in.active>.expand-stub::before,
+.toc .nav>li>.expand-stub.in::before {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.toc a {
+    font-weight: normal;
+}
+
+.toc .nav>li>a {
+    padding: 5px 5px 5px 18px;
+    margin: 0;
+}
+
+.toc .nav .level2 a {
+    padding-left: 5px;
+}
+
+.toc .nav>li>a:hover,
+.toc .nav>li>a:focus {
+    color: #23527c;
+    text-decoration: underline;
+}
+
+.toc .nav>li.in.active>a:hover,
+.toc .nav>li.in.active>a:focus {
+    color: #FFF;
+    background-color: #e30183;
+    text-decoration: none;
+}
+
+.toc .nav>li.active>a {
+    color: #fff;
+    background-color: #40064e;
+}
+
+
+/***
+ * API ARTICLE
+ ***/
+
+article span.small.pull-right {
+    /* The styling for these is mental and causes odd offsets all over the place*/
+    display: none;
+}
+
+article h4 {
+    border-bottom: none;
+}
+
+.code-like,
+code,
+kbd,
+pre,
+samp {
+    -moz-osx-font-smoothing: auto;
+    -webkit-font-smoothing: auto;
+    font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, sans-serif;
+}
+
+pre {
+    word-break: unset;
+    word-wrap: unset;
+    overflow-x: auto;
+}
+
+pre code {
+    word-wrap: normal;
+    white-space: pre;
+}
+
+
+/***
+ * AFFIX NAVIGATION
+ ***/
+
+.contribution a::before {
+    /*Edit*/
+    content: "\f044";
+}
+
+.contribution li+li a::before {
+    /*Github*/
+    content: "\f09b";
+}
+
+.sideaffix>div.contribution>ul>li>a.contribution-link {
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.affix ul>li.active>a {
+    color: #337ab7;
+}
+
+.affix .level2>li.active>a {
+    text-decoration: underline;
+}
+
+.affix ul ul>li>a:before {
+    content: "";
+}
+
+.nav>li>a:focus,
+.nav>li>a:hover {
+    text-decoration: underline;
+}
+
+
+/***
+ * FONTAWESOME
+ ***/
+
+.expand-stub,
+.contribution a {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+
+.expand-stub::before,
+.contribution a::before {
+    margin-right: 4px;
+    font-family: "Font Awesome\ 5 Free", "Font Awesome\ 5 Brands";
 }
