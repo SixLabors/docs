@@ -10,7 +10,7 @@ In this very basic example you are actually utilizing a bunch of core ImageSharp
 ```c#
 using (Image<Rgba32> image = Image.Load("foo.jpg")) //open the file and detect the file type and decode it
 {
- // image is now in a file format agnositic structure in memory as a series of Rgba32 pixels
+ // image is now in a file format agnostic structure in memory as a series of Rgba32 pixels
  image.Mutate(ctx=>ctx.Resize(image.Width / 2, image.Height / 2)); // resize the image in place and return it for chaining
  image.Save("bar.jpg"); // based on the file extension pick an encoder then encode and write the data to disk
 } // dispose - releasing memory into a memory pool ready for the next image you wish to process
@@ -27,4 +27,4 @@ using(Image<Rgba32> image = new Image<Rgba32>(width, height)) // creates a new i
 ```
 
 ### Why is [](xref:SixLabors.ImageSharp.Image`1?displayProperty=name) a generic class?
-An image is essentially a **generic 2D array of pixels** stored in a contigous memory block. Check out the [Pixel Formats](PixelFormats.md) article for more details!
+An image is essentially a **generic 2D array of pixels** stored in a contiguous memory block. Check out the [Pixel Formats](PixelFormats.md) article for more details!
