@@ -2,8 +2,8 @@
 git submodule update --init
 
 Get-ChildItem ./ext -Directory | ForEach-Object {
-    #$path = $_.FullName
-    #git -C "$path" fetch
+    $path = $_.FullName
+    git -C "$path" fetch
 }
 
 docfx
