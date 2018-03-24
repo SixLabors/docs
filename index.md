@@ -3,23 +3,27 @@
 You can find tutorials, examples and API details covering all Six Labors projects.
 
 ### [Articles](articles/intro.md)
-Examples and explanatory documentation about our API.
+Examples and explanatory documentation about our API. This is the recommended place to go for newbies.
 
 ### [API documentation](api/index.md)
 Detailed documentation for the entire API available across our projects.
 
 ### [Examples repository](https://github.com/SixLabors/Samples)
 We have implemented short self-contained sample projects for a few specific use cases, including:
-- [Avatar with rounded corners](https://github.com/SixLabors/Samples/tree/master/ImageSharp/AvatarWithRoundedCorner)
-- [Draw watermark on image](https://github.com/SixLabors/Samples/tree/master/ImageSharp/DrawWaterMarkOnImage)
-- [Change default encoder options](https://github.com/SixLabors/Samples/tree/master/ImageSharp/ChangeDefaultEncoderOptions)
-- [Draw text along a path](https://github.com/SixLabors/Samples/tree/master/ImageSharp/DrawingTextAlongAPath)
+1. [Avatar with rounded corners](https://github.com/SixLabors/Samples/tree/master/ImageSharp/AvatarWithRoundedCorner)<br/>
+  Crops rounded corners of a source image leaving a nice rounded avatar.
+2. [Draw watermark on image](https://github.com/SixLabors/Samples/tree/master/ImageSharp/DrawWaterMarkOnImage)<br/>
+  Draw water mark over an image automaticaly scaling the font size to fill the avalible space.
+3. [Change default encoder options](https://github.com/SixLabors/Samples/tree/master/ImageSharp/ChangeDefaultEncoderOptions)<br/>
+  Provides an example on how you go about switching out the registered encoder for a file format and changing its default options in the process.
+4. [Draw text along a path](https://github.com/SixLabors/Samples/tree/master/ImageSharp/DrawingTextAlongAPath)<br/>
+  Draw some text following the contours of a path.
 
 # SixLabors Projects
-Our graphics libraries are split into different projects. They cover different concerns separately, but there is strong cohesion.
+Our graphics libraries are split into different projects. They cover different concerns separately, but there is strong cohesion in order to provide the best developer experience.
 
 ### [SixLabors.Core](https://github.com/SixLabors/Core)
-Common classes and structs used aross our projects including [](xref:SixLabors.Primitives)
+Common classes and structs used across our projects including [](xref:SixLabors.Primitives).
 
 ### [SixLabors.ImageSharp](https://github.com/SixLabors/ImageSharp)
 - Contains the generic [](xref:SixLabirs.Image`1?displayProperty=name) class, PixelFormats, Configuration, and other core functionality.

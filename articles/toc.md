@@ -6,7 +6,4 @@
 ## [Drawing]()
 ## [Advanced pixel operations](ImageSharp/PixelManipulation.md)
 ## [Configuration]()
-## [Memory Management]()
-### [Loading/saving raw pixel data]()
-### [Saving raw pixel data]()
-### [Efficient pixel manipulation]()
+## [Memory Management](ImageSharp/MemoryManagement.md)
