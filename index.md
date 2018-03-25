@@ -1,9 +1,9 @@
 # Welcome to Six Labors documentation!
 
-You can find tutorials, examples and API details covering all Six Labors projects.
+We aim to provide modern, incredibly powerful yet beautifully simple cross-platform graphics libraries. Built against .NET Standard, our libraries can be used in device, cloud, and embedded/IoT scenarios. You can find tutorials, examples and API details covering all Six Labors projects.
 
 ### [Articles](articles/intro.md)
-Examples and explanatory documentation about our API. This is the recommended place to go for newbies.
+Examples, quick-start guides and FAQ-s about our API. **This is the recommended place to go for newcomers.**
 
 ### [API documentation](api/index.md)
 Detailed documentation for the entire API available across our projects.
