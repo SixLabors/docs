@@ -5,7 +5,7 @@ We aim to provide modern, cross-platform, incredibly powerful yet beautifully si
 You can find tutorials, examples and API details covering all Six Labors projects.
 
 ### [Articles](articles/intro.md)
-Examples, quick-start guides and FAQ-s about our API. **This is the recommended place to go for newcomers.**
+Examples, quick-start guides and FAQ-s about our API. **This is the recommended place to go for newcomers.** (Or at least it would be - as soon as we manage to finish all topics.)
 
 ### [API documentation](api/index.md)
 Detailed documentation for the entire API available across our projects.
@@ -28,7 +28,7 @@ Our graphics libraries are split into different projects. They cover different c
 Common classes and structs used across our projects including [](xref:SixLabors.Primitives).
 
 ### [SixLabors.ImageSharp](https://github.com/SixLabors/ImageSharp)
-- Contains the generic [](xref:SixLabirs.Image`1?displayProperty=name) class, PixelFormats, Configuration, and other core functionality.
+- Contains the generic [](xref:SixLabors.Image`1?displayProperty=name) class, PixelFormats, Configuration, and other core functionality.
 - The [](xref:SixLabors.ImageSharp.Formats.IImageFormat?displayProperty=name) interface, Jpeg, Png, Bmp, and Gif formats.
 - The image processor infrastructure, `.Mutate()` and `.Clone()`
   - Transform methods like Resize, Crop, Skew, Rotate - Anything that alters the dimensions of the image.
