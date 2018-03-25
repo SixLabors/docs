@@ -72,22 +72,29 @@
 <h1 id="getting-started-with-imagesharp">Getting started with ImageSharp</h1>
 
 <p>So you&#39;ve gone and added the ImageSharp packages and you&#39;ve been left with the question &quot;so what to I do now?&quot; hopefully some of these snippets can answer that question for you, or at least get you started.</p>
-<h2 id="how-do-i-open-a-jpg-scale-it-by-half-and-save-it-again-as-a-jpg">How do I open a jpg scale it by half and save it again as a jpg?</h2>
-<p>This is our standard go to sample.</p>
+<h3 id="scaling-a-jpeg-by-half-and-save-it-again-as-a-jpg">Scaling a jpeg by half and save it again as a jpg</h3>
+<p>In this very basic example you are actually utilizing a bunch of core ImageSharp features:</p>
+<ul>
+<li><a href="PixelFormats.html">Pixel Formats</a> by using <code>Rgba32</code></li>
+<li><a href="ImageFormats.html">Image Formats</a> by loading and saving a jpeg image</li>
+<li><a href="Processing.html">Image Processors</a> by calling <code>Mutate()</code> and <code>Resize()</code></li>
+</ul>
 <pre><code class="lang-c#">using (Image&lt;Rgba32&gt; image = Image.Load(&quot;foo.jpg&quot;)) //open the file and detect the file type and decode it
 {
- // image is now in a file format agnositic structure in memory as a series of Rgba32 pixels
+ // image is now in a file format agnostic structure in memory as a series of Rgba32 pixels
  image.Mutate(ctx=&gt;ctx.Resize(image.Width / 2, image.Height / 2)); // resize the image in place and return it for chaining
  image.Save(&quot;bar.jpg&quot;); // based on the file extension pick an encoder then encode and write the data to disk
 } // dispose - releasing memory into a memory pool ready for the next image you wish to process
-</code></pre><h2 id="how-do-i-create-a-blank-image-for-drawing-on">How do I create a blank image for drawing on?</h2>
+</code></pre><h3 id="how-do-i-create-a-blank-image-for-drawing-on">How do I create a blank image for drawing on?</h3>
 <pre><code class="lang-c#">int width = 640;
 int height = 480;
 using(Image&lt;Rgba32&gt; image = new Image&lt;Rgba32&gt;(width, height)) // creates a new image with all the pixels set as transparent 
 {
  // do your drawing in here...
 } // dispose - releasing memory into a memory pool ready for the next image you wish to process
-</code></pre>
+</code></pre><h3 id="why-is-xrefsixlaborsimagesharpimage1displaypropertyname-a-generic-class">Why is <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> a generic class?</h3>
+<p>An image is essentially a <strong>generic 2D array of pixels</strong> stored in a contiguous memory block. Check out the <a href="PixelFormats.html">Pixel Formats</a> article for more details!</p>
+
 </article>
           </div>
           

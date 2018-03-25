@@ -1,0 +1,490 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ArrayPoolMemoryManager
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ArrayPoolMemoryManager
+   ">
+    <meta name="generator" content="docfx 2.32.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.png">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="SixLabors.ImageSharp.Memory.ArrayPoolMemoryManager">
+  
+  
+  <h1 id="SixLabors_ImageSharp_Memory_ArrayPoolMemoryManager" data-uid="SixLabors.ImageSharp.Memory.ArrayPoolMemoryManager" class="text-break">Class ArrayPoolMemoryManager
+  </h1>
+  <div class="markdown level0 summary"><p>Contains <span class="xref">SixLabors.ImageSharp.Memory.ArrayPoolMemoryManager.Buffer`1</span> and <span class="xref">SixLabors.ImageSharp.Memory.ArrayPoolMemoryManager.ManagedByteBuffer</span></p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="SixLabors.ImageSharp.Memory.MemoryManager.html">MemoryManager</a></div>
+    <div class="level2"><span class="xref">ArrayPoolMemoryManager</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="SixLabors.ImageSharp.Memory.html">SixLabors.ImageSharp.Memory</a></h6>
+  <h6><strong>Assembly</strong>: SixLabors.ImageSharp.dll</h6>
+  <h5 id="SixLabors_ImageSharp_Memory_ArrayPoolMemoryManager_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ArrayPoolMemoryManager : MemoryManager</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Memory_ArrayPoolMemoryManager__ctor.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Memory.ArrayPoolMemoryManager.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/d75ddd8a882be8422127d56a3498e363a3c344f1/src/ImageSharp/Memory/ArrayPoolMemoryManager.cs/#L31">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Memory_ArrayPoolMemoryManager__ctor_" data-uid="SixLabors.ImageSharp.Memory.ArrayPoolMemoryManager.#ctor*"></a>
+  <h4 id="SixLabors_ImageSharp_Memory_ArrayPoolMemoryManager__ctor" data-uid="SixLabors.ImageSharp.Memory.ArrayPoolMemoryManager.#ctor">ArrayPoolMemoryManager()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="SixLabors.ImageSharp.Memory.ArrayPoolMemoryManager.html">ArrayPoolMemoryManager</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ArrayPoolMemoryManager()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Memory_ArrayPoolMemoryManager__ctor_System_Int32_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Memory.ArrayPoolMemoryManager.%23ctor(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/d75ddd8a882be8422127d56a3498e363a3c344f1/src/ImageSharp/Memory/ArrayPoolMemoryManager.cs/#L40">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Memory_ArrayPoolMemoryManager__ctor_" data-uid="SixLabors.ImageSharp.Memory.ArrayPoolMemoryManager.#ctor*"></a>
+  <h4 id="SixLabors_ImageSharp_Memory_ArrayPoolMemoryManager__ctor_System_Int32_" data-uid="SixLabors.ImageSharp.Memory.ArrayPoolMemoryManager.#ctor(System.Int32)">ArrayPoolMemoryManager(Int32)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="SixLabors.ImageSharp.Memory.ArrayPoolMemoryManager.html">ArrayPoolMemoryManager</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ArrayPoolMemoryManager(int maxPoolSizeInBytes)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">maxPoolSizeInBytes</span></td>
+        <td><p>The maximum size of pooled arrays. Arrays over the thershold are gonna be always allocated.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Memory_ArrayPoolMemoryManager__ctor_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Memory.ArrayPoolMemoryManager.%23ctor(System.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/d75ddd8a882be8422127d56a3498e363a3c344f1/src/ImageSharp/Memory/ArrayPoolMemoryManager.cs/#L50">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Memory_ArrayPoolMemoryManager__ctor_" data-uid="SixLabors.ImageSharp.Memory.ArrayPoolMemoryManager.#ctor*"></a>
+  <h4 id="SixLabors_ImageSharp_Memory_ArrayPoolMemoryManager__ctor_System_Int32_System_Int32_" data-uid="SixLabors.ImageSharp.Memory.ArrayPoolMemoryManager.#ctor(System.Int32,System.Int32)">ArrayPoolMemoryManager(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="SixLabors.ImageSharp.Memory.ArrayPoolMemoryManager.html">ArrayPoolMemoryManager</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ArrayPoolMemoryManager(int maxPoolSizeInBytes, int poolSelectorThresholdInBytes)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">maxPoolSizeInBytes</span></td>
+        <td><p>The maximum size of pooled arrays. Arrays over the thershold are gonna be always allocated.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">poolSelectorThresholdInBytes</span></td>
+        <td><p>Arrays over this threshold will be pooled in <span class="xref">SixLabors.ImageSharp.Memory.ArrayPoolMemoryManager.largeArrayPool</span> which has less buckets for memory safety.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Memory_ArrayPoolMemoryManager__ctor_System_Int32_System_Int32_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Memory.ArrayPoolMemoryManager.%23ctor(System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/d75ddd8a882be8422127d56a3498e363a3c344f1/src/ImageSharp/Memory/ArrayPoolMemoryManager.cs/#L62">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Memory_ArrayPoolMemoryManager__ctor_" data-uid="SixLabors.ImageSharp.Memory.ArrayPoolMemoryManager.#ctor*"></a>
+  <h4 id="SixLabors_ImageSharp_Memory_ArrayPoolMemoryManager__ctor_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="SixLabors.ImageSharp.Memory.ArrayPoolMemoryManager.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">ArrayPoolMemoryManager(Int32, Int32, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="SixLabors.ImageSharp.Memory.ArrayPoolMemoryManager.html">ArrayPoolMemoryManager</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ArrayPoolMemoryManager(int maxPoolSizeInBytes, int poolSelectorThresholdInBytes, int maxArraysPerBucketLargePool, int maxArraysPerBucketNormalPool)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">maxPoolSizeInBytes</span></td>
+        <td><p>The maximum size of pooled arrays. Arrays over the thershold are gonna be always allocated.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">poolSelectorThresholdInBytes</span></td>
+        <td><p>The threshold to pool arrays in <span class="xref">SixLabors.ImageSharp.Memory.ArrayPoolMemoryManager.largeArrayPool</span> which has less buckets for memory safety.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">maxArraysPerBucketLargePool</span></td>
+        <td><p>Max arrays per bucket for the large array pool</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">maxArraysPerBucketNormalPool</span></td>
+        <td><p>Max arrays per bucket for the normal array pool</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Memory_ArrayPoolMemoryManager_MaxPoolSizeInBytes.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Memory.ArrayPoolMemoryManager.MaxPoolSizeInBytes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/d75ddd8a882be8422127d56a3498e363a3c344f1/src/ImageSharp/Memory/ArrayPoolMemoryManager.cs/#L78">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Memory_ArrayPoolMemoryManager_MaxPoolSizeInBytes_" data-uid="SixLabors.ImageSharp.Memory.ArrayPoolMemoryManager.MaxPoolSizeInBytes*"></a>
+  <h4 id="SixLabors_ImageSharp_Memory_ArrayPoolMemoryManager_MaxPoolSizeInBytes" data-uid="SixLabors.ImageSharp.Memory.ArrayPoolMemoryManager.MaxPoolSizeInBytes">MaxPoolSizeInBytes</h4>
+  <div class="markdown level1 summary"><p>Gets the maximum size of pooled arrays in bytes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MaxPoolSizeInBytes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Memory_ArrayPoolMemoryManager_PoolSelectorThresholdInBytes.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Memory.ArrayPoolMemoryManager.PoolSelectorThresholdInBytes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/d75ddd8a882be8422127d56a3498e363a3c344f1/src/ImageSharp/Memory/ArrayPoolMemoryManager.cs/#L83">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Memory_ArrayPoolMemoryManager_PoolSelectorThresholdInBytes_" data-uid="SixLabors.ImageSharp.Memory.ArrayPoolMemoryManager.PoolSelectorThresholdInBytes*"></a>
+  <h4 id="SixLabors_ImageSharp_Memory_ArrayPoolMemoryManager_PoolSelectorThresholdInBytes" data-uid="SixLabors.ImageSharp.Memory.ArrayPoolMemoryManager.PoolSelectorThresholdInBytes">PoolSelectorThresholdInBytes</h4>
+  <div class="markdown level1 summary"><p>Gets the threshold to pool arrays in <span class="xref">SixLabors.ImageSharp.Memory.ArrayPoolMemoryManager.largeArrayPool</span> which has less buckets for memory safety.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int PoolSelectorThresholdInBytes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Memory_ArrayPoolMemoryManager_CreateDefault.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Memory.ArrayPoolMemoryManager.CreateDefault%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/d75ddd8a882be8422127d56a3498e363a3c344f1/src/ImageSharp/Memory/ArrayPoolMemoryManager.CommonFactoryMethods.cs/#L35">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Memory_ArrayPoolMemoryManager_CreateDefault_" data-uid="SixLabors.ImageSharp.Memory.ArrayPoolMemoryManager.CreateDefault*"></a>
+  <h4 id="SixLabors_ImageSharp_Memory_ArrayPoolMemoryManager_CreateDefault" data-uid="SixLabors.ImageSharp.Memory.ArrayPoolMemoryManager.CreateDefault">CreateDefault()</h4>
+  <div class="markdown level1 summary"><p>This is the default. Should be good for most use cases.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ArrayPoolMemoryManager CreateDefault()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Memory.ArrayPoolMemoryManager.html">ArrayPoolMemoryManager</a></td>
+        <td><p>The memory manager</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Memory_ArrayPoolMemoryManager_CreateWithAggressivePooling.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Memory.ArrayPoolMemoryManager.CreateWithAggressivePooling%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/d75ddd8a882be8422127d56a3498e363a3c344f1/src/ImageSharp/Memory/ArrayPoolMemoryManager.CommonFactoryMethods.cs/#L66">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Memory_ArrayPoolMemoryManager_CreateWithAggressivePooling_" data-uid="SixLabors.ImageSharp.Memory.ArrayPoolMemoryManager.CreateWithAggressivePooling*"></a>
+  <h4 id="SixLabors_ImageSharp_Memory_ArrayPoolMemoryManager_CreateWithAggressivePooling" data-uid="SixLabors.ImageSharp.Memory.ArrayPoolMemoryManager.CreateWithAggressivePooling">CreateWithAggressivePooling()</h4>
+  <div class="markdown level1 summary"><p>RAM is not an issue for me, gimme maximum througput!</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ArrayPoolMemoryManager CreateWithAggressivePooling()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Memory.ArrayPoolMemoryManager.html">ArrayPoolMemoryManager</a></td>
+        <td><p>The memory manager</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Memory_ArrayPoolMemoryManager_CreateWithMinimalPooling.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Memory.ArrayPoolMemoryManager.CreateWithMinimalPooling%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/d75ddd8a882be8422127d56a3498e363a3c344f1/src/ImageSharp/Memory/ArrayPoolMemoryManager.CommonFactoryMethods.cs/#L57">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Memory_ArrayPoolMemoryManager_CreateWithMinimalPooling_" data-uid="SixLabors.ImageSharp.Memory.ArrayPoolMemoryManager.CreateWithMinimalPooling*"></a>
+  <h4 id="SixLabors_ImageSharp_Memory_ArrayPoolMemoryManager_CreateWithMinimalPooling" data-uid="SixLabors.ImageSharp.Memory.ArrayPoolMemoryManager.CreateWithMinimalPooling">CreateWithMinimalPooling()</h4>
+  <div class="markdown level1 summary"><p>Only pool small buffers like image rows.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ArrayPoolMemoryManager CreateWithMinimalPooling()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Memory.ArrayPoolMemoryManager.html">ArrayPoolMemoryManager</a></td>
+        <td><p>The memory manager</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Memory_ArrayPoolMemoryManager_CreateWithModeratePooling.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Memory.ArrayPoolMemoryManager.CreateWithModeratePooling%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/d75ddd8a882be8422127d56a3498e363a3c344f1/src/ImageSharp/Memory/ArrayPoolMemoryManager.CommonFactoryMethods.cs/#L48">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Memory_ArrayPoolMemoryManager_CreateWithModeratePooling_" data-uid="SixLabors.ImageSharp.Memory.ArrayPoolMemoryManager.CreateWithModeratePooling*"></a>
+  <h4 id="SixLabors_ImageSharp_Memory_ArrayPoolMemoryManager_CreateWithModeratePooling" data-uid="SixLabors.ImageSharp.Memory.ArrayPoolMemoryManager.CreateWithModeratePooling">CreateWithModeratePooling()</h4>
+  <div class="markdown level1 summary"><p>For environments with limited memory capabilities. Only small images are pooled, which can result in reduced througput.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ArrayPoolMemoryManager CreateWithModeratePooling()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Memory.ArrayPoolMemoryManager.html">ArrayPoolMemoryManager</a></td>
+        <td><p>The memory manager</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Memory_ArrayPoolMemoryManager_ReleaseRetainedResources.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Memory.ArrayPoolMemoryManager.ReleaseRetainedResources%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/d75ddd8a882be8422127d56a3498e363a3c344f1/src/ImageSharp/Memory/ArrayPoolMemoryManager.cs/#L86">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Memory_ArrayPoolMemoryManager_ReleaseRetainedResources_" data-uid="SixLabors.ImageSharp.Memory.ArrayPoolMemoryManager.ReleaseRetainedResources*"></a>
+  <h4 id="SixLabors_ImageSharp_Memory_ArrayPoolMemoryManager_ReleaseRetainedResources" data-uid="SixLabors.ImageSharp.Memory.ArrayPoolMemoryManager.ReleaseRetainedResources">ReleaseRetainedResources()</h4>
+  <div class="markdown level1 summary"><p>Releases all retained resources not being in use.
+Eg: by resetting array pools and letting GC to free the arrays.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void ReleaseRetainedResources()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="SixLabors.ImageSharp.Memory.MemoryManager.html#SixLabors_ImageSharp_Memory_MemoryManager_ReleaseRetainedResources">MemoryManager.ReleaseRetainedResources()</a></div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Memory_ArrayPoolMemoryManager.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Memory.ArrayPoolMemoryManager%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/SixLabors/ImageSharp/blob/d75ddd8a882be8422127d56a3498e363a3c344f1/src/ImageSharp/Memory/ArrayPoolMemoryManager.cs/#L12" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © Six Labors<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

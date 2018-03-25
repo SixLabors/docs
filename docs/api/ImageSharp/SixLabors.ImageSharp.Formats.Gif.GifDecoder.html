@@ -85,12 +85,13 @@
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="SixLabors.ImageSharp.Formats.IImageDecoder.html">IImageDecoder</a></div>
+    <div><a class="xref" href="SixLabors.ImageSharp.Formats.IImageInfoDetector.html">IImageInfoDetector</a></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="SixLabors.ImageSharp.Formats.Gif.html">SixLabors.ImageSharp.Formats.Gif</a></h6>
   <h6><strong>Assembly</strong>: SixLabors.ImageSharp.dll</h6>
   <h5 id="SixLabors_ImageSharp_Formats_Gif_GifDecoder_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class GifDecoder : object, IImageDecoder, IGifDecoderOptions</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class GifDecoder : object, IImageDecoder, IGifDecoderOptions, IImageInfoDetector</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -99,7 +100,7 @@
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Formats_Gif_GifDecoder_DecodingMode.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Formats.Gif.GifDecoder.DecodingMode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/31dd601202b8e9f2dba4c849daa800b1efd50b62/src/ImageSharp/Formats/Gif/GifDecoder.cs/#L30">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/d75ddd8a882be8422127d56a3498e363a3c344f1/src/ImageSharp/Formats/Gif/GifDecoder.cs/#L28">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Formats_Gif_GifDecoder_DecodingMode_" data-uid="SixLabors.ImageSharp.Formats.Gif.GifDecoder.DecodingMode*"></a>
   <h4 id="SixLabors_ImageSharp_Formats_Gif_GifDecoder_DecodingMode" data-uid="SixLabors.ImageSharp.Formats.Gif.GifDecoder.DecodingMode">DecodingMode</h4>
@@ -130,7 +131,7 @@
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Formats_Gif_GifDecoder_IgnoreMetadata.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Formats.Gif.GifDecoder.IgnoreMetadata%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/31dd601202b8e9f2dba4c849daa800b1efd50b62/src/ImageSharp/Formats/Gif/GifDecoder.cs/#L20">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/d75ddd8a882be8422127d56a3498e363a3c344f1/src/ImageSharp/Formats/Gif/GifDecoder.cs/#L18">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Formats_Gif_GifDecoder_IgnoreMetadata_" data-uid="SixLabors.ImageSharp.Formats.Gif.GifDecoder.IgnoreMetadata*"></a>
   <h4 id="SixLabors_ImageSharp_Formats_Gif_GifDecoder_IgnoreMetadata" data-uid="SixLabors.ImageSharp.Formats.Gif.GifDecoder.IgnoreMetadata">IgnoreMetadata</h4>
@@ -161,7 +162,7 @@
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Formats_Gif_GifDecoder_TextEncoding.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Formats.Gif.GifDecoder.TextEncoding%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/31dd601202b8e9f2dba4c849daa800b1efd50b62/src/ImageSharp/Formats/Gif/GifDecoder.cs/#L25">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/d75ddd8a882be8422127d56a3498e363a3c344f1/src/ImageSharp/Formats/Gif/GifDecoder.cs/#L23">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Formats_Gif_GifDecoder_TextEncoding_" data-uid="SixLabors.ImageSharp.Formats.Gif.GifDecoder.TextEncoding*"></a>
   <h4 id="SixLabors_ImageSharp_Formats_Gif_GifDecoder_TextEncoding" data-uid="SixLabors.ImageSharp.Formats.Gif.GifDecoder.TextEncoding">TextEncoding</h4>
@@ -194,11 +195,12 @@
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Formats_Gif_GifDecoder_Decode__1_SixLabors_ImageSharp_Configuration_Stream_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Formats.Gif.GifDecoder.Decode%60%601(SixLabors.ImageSharp.Configuration%2CStream)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/31dd601202b8e9f2dba4c849daa800b1efd50b62/src/ImageSharp/Formats/Gif/GifDecoder.cs/#L33">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/d75ddd8a882be8422127d56a3498e363a3c344f1/src/ImageSharp/Formats/Gif/GifDecoder.cs/#L31">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Formats_Gif_GifDecoder_Decode_" data-uid="SixLabors.ImageSharp.Formats.Gif.GifDecoder.Decode*"></a>
   <h4 id="SixLabors_ImageSharp_Formats_Gif_GifDecoder_Decode__1_SixLabors_ImageSharp_Configuration_Stream_" data-uid="SixLabors.ImageSharp.Formats.Gif.GifDecoder.Decode``1(SixLabors.ImageSharp.Configuration,Stream)">Decode&lt;TPixel&gt;(Configuration, Stream)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Decodes the image from the specified stream to the <a class="xref" href="SixLabors.ImageSharp.ImageFrame-1.html">ImageFrame&lt;TPixel&gt;</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -217,12 +219,14 @@
       <tr>
         <td><a class="xref" href="SixLabors.ImageSharp.Configuration.html">Configuration</a></td>
         <td><span class="parametername">configuration</span></td>
-        <td></td>
+        <td><p>The configuration for the image.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">Stream</span></td>
         <td><span class="parametername">stream</span></td>
-        <td></td>
+        <td><p>The <see cref="!:Stream"></see> containing image data.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -237,7 +241,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image</a>&lt;TPixel&gt;</td>
-        <td></td>
+        <td><p>The decoded image</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -252,13 +257,73 @@
     <tbody>
       <tr>
         <td><span class="parametername">TPixel</span></td>
-        <td></td>
+        <td><p>The pixel format.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Formats_Gif_GifDecoder_Identify_SixLabors_ImageSharp_Configuration_Stream_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Formats.Gif.GifDecoder.Identify(SixLabors.ImageSharp.Configuration%2CStream)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/d75ddd8a882be8422127d56a3498e363a3c344f1/src/ImageSharp/Formats/Gif/GifDecoder.cs/#L39">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Formats_Gif_GifDecoder_Identify_" data-uid="SixLabors.ImageSharp.Formats.Gif.GifDecoder.Identify*"></a>
+  <h4 id="SixLabors_ImageSharp_Formats_Gif_GifDecoder_Identify_SixLabors_ImageSharp_Configuration_Stream_" data-uid="SixLabors.ImageSharp.Formats.Gif.GifDecoder.Identify(SixLabors.ImageSharp.Configuration,Stream)">Identify(Configuration, Stream)</h4>
+  <div class="markdown level1 summary"><p>Reads the raw image information from the specified stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IImageInfo Identify(Configuration configuration, Stream stream)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Configuration.html">Configuration</a></td>
+        <td><span class="parametername">configuration</span></td>
+        <td><p>The configuration for the image.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Stream</span></td>
+        <td><span class="parametername">stream</span></td>
+        <td><p>The <see cref="!:Stream"></see> containing image data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.IImageInfo.html">IImageInfo</a></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Formats.PixelTypeInfo.html">PixelTypeInfo</a> object</p>
+</td>
       </tr>
     </tbody>
   </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="SixLabors.ImageSharp.Formats.IImageDecoder.html">IImageDecoder</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Formats.IImageInfoDetector.html">IImageInfoDetector</a>
   </div>
 </article>
           </div>
@@ -271,7 +336,7 @@
                     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Formats_Gif_GifDecoder.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Formats.Gif.GifDecoder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/SixLabors/ImageSharp/blob/31dd601202b8e9f2dba4c849daa800b1efd50b62/src/ImageSharp/Formats/Gif/GifDecoder.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/SixLabors/ImageSharp/blob/d75ddd8a882be8422127d56a3498e363a3c344f1/src/ImageSharp/Formats/Gif/GifDecoder.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

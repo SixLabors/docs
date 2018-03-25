@@ -64,7 +64,51 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="welcome-to-six-labors-documentation">Welcome to Six Labors documentation!</h1>
 
-<p>You can find tutorials, examples and API details covings all of Six Labors projects. This includes SixLabors.ImageSharp, SixLabors.ImageSharp.Web, SixLabors.Shape and SixLabors.Fonts.</p>
+<p>We aim to provide modern, cross-platform, incredibly powerful yet beautifully simple graphics libraries. Built against .NET Standard, our libraries can be used in device, cloud, and embedded/IoT scenarios.</p>
+<p>You can find tutorials, examples and API details covering all Six Labors projects.</p>
+<h3 id="articlesarticlesintromd"><a href="articles/intro.html">Articles</a></h3>
+<p>Examples, quick-start guides and FAQ-s about our API. <strong>This is the recommended place to go for newcomers.</strong></p>
+<h3 id="api-documentationapiindexmd"><a href="api/index.html">API documentation</a></h3>
+<p>Detailed documentation for the entire API available across our projects.</p>
+<h3 id="examples-repositoryhttpsgithubcomsixlaborssamples"><a href="https://github.com/SixLabors/Samples">Examples repository</a></h3>
+<p>We have implemented short self-contained sample projects for a few specific use cases, including:</p>
+<ol>
+<li><a href="https://github.com/SixLabors/Samples/tree/master/ImageSharp/AvatarWithRoundedCorner">Avatar with rounded corners</a><br>
+Crops rounded corners of a source image leaving a nice rounded avatar.</li>
+<li><a href="https://github.com/SixLabors/Samples/tree/master/ImageSharp/DrawWaterMarkOnImage">Draw watermark on image</a><br>
+Draw water mark over an image automaticaly scaling the font size to fill the avalible space.</li>
+<li><a href="https://github.com/SixLabors/Samples/tree/master/ImageSharp/ChangeDefaultEncoderOptions">Change default encoder options</a><br>
+Provides an example on how you go about switching out the registered encoder for a file format and changing its default options in the process.</li>
+<li><a href="https://github.com/SixLabors/Samples/tree/master/ImageSharp/DrawingTextAlongAPath">Draw text along a path</a><br>
+Draw some text following the contours of a path.</li>
+</ol>
+<h1 id="sixlabors-projects">SixLabors Projects</h1>
+<p>Our graphics libraries are split into different projects. They cover different concerns separately, but there is strong cohesion in order to provide the best developer experience.</p>
+<h3 id="sixlaborscorehttpsgithubcomsixlaborscore"><a href="https://github.com/SixLabors/Core">SixLabors.Core</a></h3>
+<p>Common classes and structs used across our projects including <a class="xref" href="api/Core/SixLabors.Primitives.html">SixLabors.Primitives</a>.</p>
+<h3 id="sixlaborsimagesharphttpsgithubcomsixlaborsimagesharp"><a href="https://github.com/SixLabors/ImageSharp">SixLabors.ImageSharp</a></h3>
+<ul>
+<li>Contains the generic <a href="xref:SixLabirs.Image`1?displayProperty=name"></a> class, PixelFormats, Configuration, and other core functionality.</li>
+<li>The <a class="xref" href="api/ImageSharp/SixLabors.ImageSharp.Formats.IImageFormat.html">IImageFormat</a> interface, Jpeg, Png, Bmp, and Gif formats.</li>
+<li>The image processor infrastructure, <code>.Mutate()</code> and <code>.Clone()</code><ul>
+<li>Transform methods like Resize, Crop, Skew, Rotate - Anything that alters the dimensions of the image.</li>
+<li>Non-transform methods like Gaussian Blur, Pixelate, Edge Detection - Anything that maintains the original image dimensions.</li>
+</ul>
+</li>
+</ul>
+<h3 id="sixlaborsshapeshttpsgithubcomsixlaborsshapes"><a href="https://github.com/SixLabors/Shapes">SixLabors.Shapes</a></h3>
+<p>Net standard geometry/shape manipulation library, can be used to instantiate various shapes allowing operations like merge, split, intersections etc.
+The SixLabors.Drawing library is based on Shapes.</p>
+<h3 id="sixlaborsfontshttpsgithubcomsixlaborsfonts"><a href="https://github.com/SixLabors/Fonts">SixLabors.Fonts</a></h3>
+<p>Font loading and drawing library. Text drawing in <code>SixLabors.ImageSharp.Drawing</code> is based on this library.</p>
+<h3 id="sixlaborsimagesharpdrawing">SixLabors.ImageSharp.Drawing</h3>
+<ul>
+<li>Brushes and various drawing algorithms, including drawing images.</li>
+<li>Various vector drawing methods for drawing paths, polygons etc.</li>
+<li>Text drawing (based on <a href="https://github.com/SixLabors/Fonts">SixLabors.Fonts</a>)</li>
+</ul>
+<h3 id="sixlaborsimagesharpwebhttpsgithubcomsixlaborsimagesharpweb"><a href="https://github.com/SixLabors/ImageSharp.Web">SixLabors.ImageSharp.Web</a></h3>
+<p>ASP.NET-Core middleware for image manipulation.</p>
 
 </article>
           </div>

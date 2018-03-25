@@ -78,111 +78,13 @@
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
   </h3>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.BicubicResampler.html">BicubicResampler</a></h4>
-      <section><p>The function implements the bicubic kernel algorithm W(x) as described on
-<a href="https://en.wikipedia.org/wiki/Bicubic_interpolation#Bicubic_convolution_algorithm">Wikipedia</a>
-A commonly used algorithm within imageprocessing that preserves sharpness better than triangle interpolation.</p>
-</section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.BoxResampler.html">BoxResampler</a></h4>
-      <section><p>The function implements the box algorithm. Similar to nearest neighbor when upscaling.
-When downscaling the pixels will average, merging together.</p>
-</section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.CatmullRomResampler.html">CatmullRomResampler</a></h4>
-      <section><p>The Catmull-Rom filter is a well known standard Cubic Filter often used as a interpolation function.
-This filter produces a reasonably sharp edge, but without a the pronounced gradient change on large
-scale image enlargements that a &apos;Lagrange&apos; filter can produce.
-<a href="http://www.imagemagick.org/Usage/filter/#cubic_bc">http://www.imagemagick.org/Usage/filter/#cubic_bc</a></p>
-</section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.HermiteResampler.html">HermiteResampler</a></h4>
-      <section><p>The Hermite filter is type of smoothed triangular interpolation Filter,
-This filter rounds off strong edges while preserving flat &apos;color levels&apos; in the original image.
-<a href="http://www.imagemagick.org/Usage/filter/#cubic_bc">http://www.imagemagick.org/Usage/filter/#cubic_bc</a></p>
-</section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.Lanczos2Resampler.html">Lanczos2Resampler</a></h4>
-      <section><p>The function implements the Lanczos kernel algorithm as described on
-<a href="https://en.wikipedia.org/wiki/Lanczos_resampling#Algorithm">Wikipedia</a>
-with a radius of 2 pixels.</p>
-</section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.Lanczos3Resampler.html">Lanczos3Resampler</a></h4>
-      <section><p>The function implements the Lanczos kernel algorithm as described on
-<a href="https://en.wikipedia.org/wiki/Lanczos_resampling#Algorithm">Wikipedia</a>
-with a radius of 3 pixels.</p>
-</section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.Lanczos5Resampler.html">Lanczos5Resampler</a></h4>
-      <section><p>The function implements the Lanczos kernel algorithm as described on
-<a href="https://en.wikipedia.org/wiki/Lanczos_resampling#Algorithm">Wikipedia</a>
-with a radius of 5 pixels.</p>
-</section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.Lanczos8Resampler.html">Lanczos8Resampler</a></h4>
-      <section><p>The function implements the Lanczos kernel algorithm as described on
-<a href="https://en.wikipedia.org/wiki/Lanczos_resampling#Algorithm">Wikipedia</a>
-with a radius of 8 pixels.</p>
-</section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.MitchellNetravaliResampler.html">MitchellNetravaliResampler</a></h4>
-      <section><p>The function implements the mitchell algorithm as described on
-<a href="https://de.wikipedia.org/wiki/Mitchell-Netravali-Filter">Wikipedia</a></p>
-</section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.NearestNeighborResampler.html">NearestNeighborResampler</a></h4>
-      <section><p>The function implements the nearest neighbor algorithm. This uses an unscaled filter
-which will select the closest pixel to the new pixels position.</p>
-</section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.ResizeOptions.html">ResizeOptions</a></h4>
-      <section><p>The resize options for resizing images against certain modes.</p>
-</section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.RobidouxResampler.html">RobidouxResampler</a></h4>
-      <section><p>The function implements the Robidoux algorithm.
-<a href="http://www.imagemagick.org/Usage/filter/#robidoux">http://www.imagemagick.org/Usage/filter/#robidoux</a></p>
-</section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.RobidouxSharpResampler.html">RobidouxSharpResampler</a></h4>
-      <section><p>The function implements the Robidoux Sharp algorithm.
-<a href="http://www.imagemagick.org/Usage/filter/#robidoux">http://www.imagemagick.org/Usage/filter/#robidoux</a></p>
-</section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.SplineResampler.html">SplineResampler</a></h4>
-      <section><p>The function implements the spline algorithm.
-<a href="http://www.imagemagick.org/Usage/filter/#cubic_bc">http://www.imagemagick.org/Usage/filter/#cubic_bc</a></p>
-</section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.TriangleResampler.html">TriangleResampler</a></h4>
-      <section><p>The function implements the triangle (bilinear) algorithm.
-Bilinear interpolation can be used where perfect image transformation with pixel matching is impossible,
-so that one can calculate and assign appropriate intensity values to pixels.</p>
-</section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.WelchResampler.html">WelchResampler</a></h4>
-      <section><p>The function implements the welch algorithm.
-<a href="http://www.imagemagick.org/Usage/filter/">http://www.imagemagick.org/Usage/filter/</a></p>
+      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.ProcessingExtensions.html">ProcessingExtensions</a></h4>
+      <section><p>Adds extensions that allow the processing of images to the <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> type.</p>
 </section>
     <h3 id="interfaces">Interfaces
   </h3>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.IEdgeDetectorProcessor.html">IEdgeDetectorProcessor</a></h4>
-      <section><p>Provides properties and methods allowing the detection of edges within an image.</p>
-</section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.IEdgeDetectorProcessor-1.html">IEdgeDetectorProcessor&lt;TPixel&gt;</a></h4>
-      <section><p>Provides properties and methods allowing the detection of edges within an image.</p>
-</section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.IResampler.html">IResampler</a></h4>
-      <section><p>Encapsulates an interpolation algorithm for resampling images.</p>
-</section>
-    <h3 id="enums">Enums
-  </h3>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.AnchorPosition.html">AnchorPosition</a></h4>
-      <section><p>Enumerated anchor positions to apply to resized images.</p>
-</section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.ColorBlindness.html">ColorBlindness</a></h4>
-      <section><p>Enumerates the various types of defined color blindness filters.</p>
-</section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.EdgeDetection.html">EdgeDetection</a></h4>
-      <section><p>Enumerates the various types of defined edge detection filters.</p>
-</section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.FlipType.html">FlipType</a></h4>
-      <section><p>Provides enumeration over how a image should be flipped.</p>
-</section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.GrayscaleMode.html">GrayscaleMode</a></h4>
-      <section><p>Enumerates the various types of defined Grayscale filters.</p>
-</section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.ResizeMode.html">ResizeMode</a></h4>
-      <section><p>Enumerated resize modes to apply to resized images.</p>
-</section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.RotateType.html">RotateType</a></h4>
-      <section><p>Provides enumeration over how the image should be rotated.</p>
+      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext&lt;TPixel&gt;</a></h4>
+      <section><p>An interface to queue up image operations to apply to an image.</p>
 </section>
 </article>
           </div>
