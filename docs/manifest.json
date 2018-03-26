@@ -4425,10 +4425,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/ImageSharp/MemoryManagement.html",
-          "hash": "p7ASj4y6Cm+3CpJA0aYHJw=="
+          "hash": "hHdE2Aq5fEz8lZz7RKroOQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -4497,10 +4497,10 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "M2SoeCA/1J/OdFtmXXkL2w=="
+          "hash": "JtDaGXQX1KMbMb4w4n5C1Q=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -4528,11 +4528,11 @@
           "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "ManagedReferenceDocumentProcessor": {
+        "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build"
         },
-        "ConceptualDocumentProcessor": {
+        "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build"
         }
