@@ -76,23 +76,27 @@
 <ul>
 <li>Less pressure on GC, because buffers are being reused most of the time</li>
 <li>Reduced <a href="https://blogs.msdn.microsoft.com/maoni/2016/05/31/large-object-heap-uncovered-from-an-old-msdn-article/">LOH fragmentation</a></li>
-<li>When working with unclean buffers is acceptable, we can spare on GC-s array cleaning behavior too
-Summary: pooling helps us to <em>reduce CPU work and increase throughput by the cost of a larger memory footprint.</em></li>
+<li>When working with unclean buffers is acceptable, we can spare on GC-s array cleaning behavior too</li>
 </ul>
+<p><strong>Summary</strong>: pooling helps us to <em>reduce CPU work and increase throughput for the cost of a larger memory footprint.</em></p>
 <h3 id="working-in-memory-constrained-environments">Working in memory constrained environments</h3>
 <p>Sometimes having ~300 MB memory footprint is not an option. Let&#39;s mention a few cases:</p>
 <ul>
 <li>When horizontal scaling is achieved by having multiple memory constrained containers in a cloud environment.</li>
 <li>Mobile applications.</li>
 </ul>
-<p>Before scaling down pooling behavior because of unwanted <code>OutOfMemoryException</code>-s in a cloud or desktop environment, make sure that you are running your service in a <strong>64 bit process</strong>!</p>
+<p>Before scaling down pooling behavior because of unwanted <code>OutOfMemoryException</code>-s in a cloud or desktop environment:</p>
+<ul>
+<li>Keep in mind that image processing is a <em>memory intensive</em> application! This may affect your scaling strategy. We don&#39;t recommend using containers with 1 GB or smaller memory limit!</li>
+<li>Make sure that you are running your service in a <strong>64 bit process</strong>!</li>
+</ul>
 <p>There are several pre-defined factory methods to create an <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Memory.ArrayPoolMemoryManager.html">ArrayPoolMemoryManager</a> instance for memory constrained environments. For example <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Memory.ArrayPoolMemoryManager.html#SixLabors_ImageSharp_Memory_ArrayPoolMemoryManager_CreateWithModeratePooling">ArrayPoolMemoryManager.CreateWithModeratePooling</a> might be suitable in most constrained situations:</p>
 <pre><code class="lang-cs">Configuration.Default.MemoryManager = ArrayPoolMemoryManager.CreateWithModeratePooling();
 </code></pre><p>Of course, you may also configure a MemoryManager on your own <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Configuration.html">Configuration</a> instance.</p>
 <p>You can find <a href="https://github.com/SixLabors/ImageSharp/pull/475">benchmark results in the original PR</a> which may help to select you a configuration, but they are bit outdated, because our throughput got better since then!</p>
 <h3 id="releasing-pools-programatically">Releasing pools programatically</h3>
-<p>If your application uses ImageSharp sporadically (eg. generating some images on startup, or on other non-frequent use-cases), you may want to release the retained pools:</p>
-<pre><code class="lang-cs">Configuration.Default.ReleaseRetainedResources();
+<p>If your application uses ImageSharp sporadically (eg. generating some images on startup, or on other non-frequent use-cases), you may want to release the retained pools using <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Memory.MemoryManager.html#SixLabors_ImageSharp_Memory_MemoryManager_ReleaseRetainedResources">ReleaseRetainedResources</a>:</p>
+<pre><code class="lang-cs">Configuration.Default.MemoryManager.ReleaseRetainedResources();
 </code></pre><h3 id="using-multiple-memorymanager-instances-in-the-same-process">Using multiple MemoryManager instances in the same process</h3>
 <p>You need to create and maintain your own <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Configuration.html">Configuration</a> instance, setting a specific MemoryManager on it. It&#39;s possible to pass custom Configuration instances to methods accross our whole API.</p>
 
