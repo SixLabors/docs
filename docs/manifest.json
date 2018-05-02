@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "C:/development/github/SixLabors/docs",
+  "source_base_path": "C:/dev/ImageSharp/docs/docs",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -4397,14 +4397,26 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/ImageSharp/Configuration.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/ImageSharp/Configuration.html",
+          "hash": "mzAUazX+AkSVLKknt0QcTg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/ImageSharp/GettingStarted.md",
       "output": {
         ".html": {
           "relative_path": "articles/ImageSharp/GettingStarted.html",
-          "hash": "1wuXwr8DFfXKHw21m3nrXQ=="
+          "hash": "miB/KkcoJivOfjpMJqI7Mg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -4413,10 +4425,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/ImageSharp/ImageFormats.html",
-          "hash": "YvJEHr+Un58DICcANYjB0g=="
+          "hash": "NSmk2pkWBdymb2gdiufQxg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -4425,10 +4437,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/ImageSharp/MemoryManagement.html",
-          "hash": "hHdE2Aq5fEz8lZz7RKroOQ=="
+          "hash": "w55E7jNV0xnaiLDe1lc+/g=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -4437,10 +4449,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/ImageSharp/PixelFormats.html",
-          "hash": "g5BrDxplPFyqKiywtXAiBg=="
+          "hash": "kQ8FGTR/+vmcVeZbRHgo1g=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -4452,7 +4464,7 @@
           "hash": "DbVqg1sMP2gH9tJH44OtqA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -4464,7 +4476,7 @@
           "hash": "sZSpiqcqhsiHYoZsAwAOYw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -4476,7 +4488,7 @@
           "hash": "4UH+PYUH6m2gpIziBbHgyw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -4485,7 +4497,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "xzK4dTuqs3icExjj4dUWsw=="
+          "hash": "9DaOS3rjeKTVSPTxZ0++0w=="
         }
       },
       "is_incremental": false,
@@ -4528,11 +4540,11 @@
           "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "ManagedReferenceDocumentProcessor": {
+        "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build"
         },
-        "ConceptualDocumentProcessor": {
+        "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build"
         }

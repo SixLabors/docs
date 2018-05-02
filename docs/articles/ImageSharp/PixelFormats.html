@@ -72,8 +72,9 @@
 <h1 id="pixel-formats">Pixel Formats</h1>
 
 <h3 id="why-is-xrefsixlaborsimagesharpimage1displaypropertyname-a-generic-class">Why is <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> a generic class?</h3>
-<p>We are supporting multiple pixel formats just like <code>System.Drawing</code> does. However, unlike their closed <a href="https://docs.microsoft.com/en-us/dotnet/api/system.drawing.imaging.pixelformat">PixelFormat</a> enumeration, our solution is extensible.
-A pixel is basically a small value object (struct), describing the color at a given point according to a pixel model we call Pixel Format / Pixel Type. An image is essentially a <strong>generic 2D array of pixels</strong> stored in a contiguous memory block.</p>
+<p>We are supporting multiple pixel formats just like <em>System.Drawing</em> does. However, unlike their closed <a href="https://docs.microsoft.com/en-us/dotnet/api/system.drawing.imaging.pixelformat">PixelFormat</a> enumeration, our solution is extensible.
+A pixel is basically a small value object (struct), describing the color at a given point according to a pixel model we call Pixel Format / Pixel Type. <code>Image&lt;TPixel&gt;</code> represents pixel graphic bitmap stored as a <strong>generic, contigous memory block</strong> of pixels, having the size <code>image.Width * image.Height</code>. 
+In case of multi-frame images (usually decoded from gifs) multiple bitmaps are stored in <code>image.Frames</code> as <code>ImageFrame&lt;TPixel&gt;</code> instances.</p>
 <h3 id="ok-how-do-i-create-an-image-using-a-pixel-format-other-than-rgba32">Ok, how do I create an image using a pixel format other, than <code>Rgba32</code>?</h3>
 <p>Have a look at the various pixel types available under <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.PixelFormats.html#structs">SixLabors.ImageSharp.PixelFormats</a>! After picking the pixel type of your choice, use it as a generic argument for <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a>, eg. by instantiating <code>Image&lt;Bgr24&gt;</code>.</p>
 <h3 id="can-i-define-my-own-pixel-type">Can I define my own pixel type?</h3>

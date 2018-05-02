@@ -26,5 +26,15 @@ using(Image<Rgba32> image = new Image<Rgba32>(width, height)) // creates a new i
 } // dispose - releasing memory into a memory pool ready for the next image you wish to process
 ```
 
+### API Style
+The easiest way to work with ImageSharp is to utilize our extension methods:
+- @"SixLabors.ImageSharp.ImageExtensions" for basic stuff
+- @"SixLabors.ImageSharp.Processing.ProcessingExtensions" for `Mutate()` and `Clone()`
+- @"SixLabors.ImageSharp.Processing.Transforms.ResizeExtensions" for various `Resize(...)` overloads
+- @"SixLabors.ImageSharp.Processing.Drawing.FillRegionExtensions" for `Fill(...)` overloads
+etc.
+
+Since `beta-3` we have well-organized nested namespaces, so don't forget to import the namespace of the extension class you want to work with!
+
 ### Why is [](xref:SixLabors.ImageSharp.Image`1?displayProperty=name) a generic class?
 An image is essentially a **generic 2D array of pixels** stored in a contiguous memory block. Check out the [Pixel Formats](PixelFormats.md) article for more details!

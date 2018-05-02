@@ -2,8 +2,9 @@
 
 ### Why is [](xref:SixLabors.ImageSharp.Image`1?displayProperty=name) a generic class?
 
-We are supporting multiple pixel formats just like `System.Drawing` does. However, unlike their closed [PixelFormat](https://docs.microsoft.com/en-us/dotnet/api/system.drawing.imaging.pixelformat) enumeration, our solution is extensible.
-A pixel is basically a small value object (struct), describing the color at a given point according to a pixel model we call Pixel Format / Pixel Type. An image is essentially a **generic 2D array of pixels** stored in a contiguous memory block.
+We are supporting multiple pixel formats just like *System.Drawing* does. However, unlike their closed [PixelFormat](https://docs.microsoft.com/en-us/dotnet/api/system.drawing.imaging.pixelformat) enumeration, our solution is extensible.
+A pixel is basically a small value object (struct), describing the color at a given point according to a pixel model we call Pixel Format / Pixel Type. `Image<TPixel>` represents pixel graphic bitmap stored as a **generic, contigous memory block** of pixels, having the size `image.Width * image.Height`. 
+In case of multi-frame images (usually decoded from gifs) multiple bitmaps are stored in `image.Frames` as `ImageFrame<TPixel>` instances.
 
 ### Ok, how do I create an image using a pixel format other, than `Rgba32`?
 

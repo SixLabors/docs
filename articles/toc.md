@@ -5,5 +5,5 @@
 ## [Processing images](ImageSharp/Processing.md)
 ## [Drawing]()
 ## [Advanced pixel operations](ImageSharp/PixelManipulation.md)
-## [Configuration]()
+## [Configuration](ImageSharp/Configuration.md)
 ## [Memory Management](ImageSharp/MemoryManagement.md)
