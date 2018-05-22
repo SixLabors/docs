@@ -1,7 +1,7 @@
 #Image Formats
 
-### How do I sve an image in it's original format after performing an operation?
-@"SixLabors.ImageSharp.Image`1?displayProperty=name" (and [](xref:SixLabors.ImageSharp.ImageFrame`1?displayProperty=name)) represents raw bitmap data, stored in a contigos memory block. It does not "remember" the original image format.
+### How do I save an image in it's original format after performing an operation?
+@"SixLabors.ImageSharp.Image`1?displayProperty=name" (and [](xref:SixLabors.ImageSharp.ImageFrame`1?displayProperty=name)) represents raw bitmap data, stored in a contiguous memory block. It does not "remember" the original image format.
 ImageSharp identifies image formats (Jpeg, Png, Gif etc.) by [](xref:SixLabors.ImageSharp.Formats.IImageFormat?displayProperty=name) instances. There are several overloads of [Image.Load](xref:SixLabors.ImageSharp.Image) capable of returning the format as an `out` parameter. It's possible to pass it to `image.Save` after performing the operation:
 
 ```C#
@@ -62,7 +62,7 @@ var encoder = new JpegEncoder()
 image.Save(encoder);
 ```
 
-Best qualit Jpeg / largest filesize:
+Best quality Jpeg / largest filesize:
 ```C#
 image.Save(new JpegEncoder()
 {
