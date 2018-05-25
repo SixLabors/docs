@@ -71,8 +71,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="image-formats">Image Formats</h1>
 
-<h3 id="how-do-i-sve-an-image-in-its-original-format-after-performing-an-operation">How do I sve an image in it&#39;s original format after performing an operation?</h3>
-<p><a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> (and <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.ImageFrame-1.html">ImageFrame&lt;TPixel&gt;</a>) represents raw bitmap data, stored in a contigos memory block. It does not &quot;remember&quot; the original image format.
+<h3 id="how-do-i-save-an-image-in-its-original-format-after-performing-an-operation">How do I save an image in it&#39;s original format after performing an operation?</h3>
+<p><a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> (and <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.ImageFrame-1.html">ImageFrame&lt;TPixel&gt;</a>) represents raw bitmap data, stored in a contiguous memory block. It does not &quot;remember&quot; the original image format.
 ImageSharp identifies image formats (Jpeg, Png, Gif etc.) by <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Formats.IImageFormat.html">IImageFormat</a> instances. There are several overloads of <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Image.html">Image.Load</a> capable of returning the format as an <code>out</code> parameter. It&#39;s possible to pass it to <code>image.Save</code> after performing the operation:</p>
 <pre><code class="lang-C#">IImageFormat format;
 
@@ -93,7 +93,7 @@ using (var image = Image.Load(inputStream, out format))
 <ul>
 <li><a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Formats.IImageDecoder.html">IImageDecoder</a> is responsible for decoding streams (and files) in into <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> instances. ImageSharp can <strong>auto-detect</strong> the image formats of streams/files based on their headers, selecting the correct <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Formats.IImageFormat.html">IImageFormat</a> (and thus <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Formats.IImageDecoder.html">IImageDecoder</a>). This logic is implemented by <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Formats.IImageFormatDetector.html">IImageFormatDetector</a>-s.</li>
 <li><a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Formats.IImageEncoder.html">IImageEncoder</a> is responsible for writing <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> into a stream using a given format.</li>
-<li>Decoders/encoders and <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Formats.IImageFormatDetector.html">IImageFormatDetector</a>-s are mapped to image formats in  <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Configuration.html#SixLabors_ImageSharp_Configuration_ImageFormatsManager">ImageFormatsManager</a>. It&#39;s possible to register new formats, or drop existing ones. See <a href="Configuration.html">Configuration</a> for more details.</li>
+<li>Decoders/encoders and <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Formats.IImageFormatDetector.html">IImageFormatDetector</a>-s are mapped to image formats in  @&quot;SixLabors.ImageSharp.Configuration.ImageFormatsManager?displayProperty=name&quot;. It&#39;s possible to register new formats, or drop existing ones. See <a href="Configuration.html">Configuration</a> for more details.</li>
 </ul>
 <h3 id="metadata-only-decoding">Metadata-only decoding</h3>
 <p>Sometimes it&#39;s worth to efficiently decode image metadata ignoring the memory and CPU heavy pixel information inside the stream. ImageSharp allows this by using one of the several <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Image.html">Image.Identify</a> overloads:</p>
@@ -101,7 +101,7 @@ using (var image = Image.Load(inputStream, out format))
 {
     Console.WriteLine($&quot;{imageInfo.Width}x{imageInfo.Height} | BPP: {imageInfo.PixelType.BitsPerPixel}&quot;);
 }
-</code></pre><p>See <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.IImageInfo.html">IImageInfo</a> for more details about the identification result. Notice that <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> also implements <code>IImageInfo</code>!</p>
+</code></pre><p>See @&quot;SixLabors.ImageSharp.IImageInfo?displayProperty=name&quot; for more details about the identification result. Notice that <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> also implements <code>IImageInfo</code>!</p>
 <h3 id="working-with-encoders">Working with encoders</h3>
 <p>Image formats are usually defined by complex standards allowing multiple representations for the same image. ImageSharp allows parameterizing the encoding process:
 <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Formats.IImageEncoder.html">IImageEncoder</a> implementations are stateless, lightweigh <strong>parametric</strong> objects. This means that if you want to encode a Png in a specific way (eg. changing the compression level), you need to new-up a custom <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Formats.Png.PngEncoder.html">PngEncoder</a> instance.</p>
@@ -125,7 +125,7 @@ using (var image = Image.Load(inputStream, out format))
     IgnoreMetadata = true
 };
 image.Save(encoder);
-</code></pre><p>Best qualit Jpeg / largest filesize:</p>
+</code></pre><p>Best quality Jpeg / largest filesize:</p>
 <pre><code class="lang-C#">image.Save(new JpegEncoder()
 {
     Quality = 100
