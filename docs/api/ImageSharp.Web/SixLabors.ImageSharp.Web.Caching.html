@@ -82,14 +82,16 @@
       <section><p>The async key lock prevents multiple asynchronous threads acting upon the same object with the given key at the same time.
 It is designed so that it does not block unique requests allowing a high throughput.</p>
 </section>
+      <h4><a class="xref" href="SixLabors.ImageSharp.Web.Caching.CacheHash.html">CacheHash</a></h4>
+      <section><p>Creates hashed keys for the given inputs hashing them to string of length ranging from 2 to 64.
+Hashed keys are the result of the SHA256 computation of the input value for the given length.
+This ensures low collision rates with a shorter file name.</p>
+</section>
       <h4><a class="xref" href="SixLabors.ImageSharp.Web.Caching.PhysicalFileSystemCache.html">PhysicalFileSystemCache</a></h4>
       <section><p>Implements a physical file system based cache.</p>
 </section>
     <h3 id="structs">Structs
   </h3>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Web.Caching.CachedBuffer.html">CachedBuffer</a></h4>
-      <section><p>Encapulates the cached image buffer and length.</p>
-</section>
       <h4><a class="xref" href="SixLabors.ImageSharp.Web.Caching.CachedInfo.html">CachedInfo</a></h4>
       <section><p>Contains information about a cached image instance</p>
 </section>
@@ -99,9 +101,11 @@ It is designed so that it does not block unique requests allowing a high through
       <section><p>Defines a contract that allows the prevention of multiple asynchronous threads acting upon the same object with the given
 key at the same time</p>
 </section>
+      <h4><a class="xref" href="SixLabors.ImageSharp.Web.Caching.ICacheHash.html">ICacheHash</a></h4>
+      <section><p>Defines a contract that allows the creation of hashed file names for storing cached images.</p>
+</section>
       <h4><a class="xref" href="SixLabors.ImageSharp.Web.Caching.IImageCache.html">IImageCache</a></h4>
-      <section><p>Specifies the contract for caching images.
-TODO: Do we add cleanup to this? Scalable caches probably shouldn&apos;t do so.</p>
+      <section><p>Specifies the contract for caching images.</p>
 </section>
 </article>
           </div>

@@ -74,7 +74,7 @@
   
   <h1 id="SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddleware" data-uid="SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddleware" class="text-break">Class ImageSharpMiddleware
   </h1>
-  <div class="markdown level0 summary"><p>Middleware for handling the processing of images via a URI querystring API.</p>
+  <div class="markdown level0 summary"><p>Middleware for handling the processing of images via image requests.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -92,19 +92,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddleware__ctor_RequestDelegate_IOptions_SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddlewareOptions__ILoggerFactory_SixLabors_ImageSharp_Web_Commands_IUriParser_IEnumerable_SixLabors_ImageSharp_Web_Resolvers_IImageResolver__IEnumerable_SixLabors_ImageSharp_Web_Processors_IImageWebProcessor__SixLabors_ImageSharp_Web_Caching_IImageCache_SixLabors_ImageSharp_Web_Caching_IAsyncKeyLock_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddleware.%23ctor(RequestDelegate%2CIOptions%7BSixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions%7D%2CILoggerFactory%2CSixLabors.ImageSharp.Web.Commands.IUriParser%2CIEnumerable%7BSixLabors.ImageSharp.Web.Resolvers.IImageResolver%7D%2CIEnumerable%7BSixLabors.ImageSharp.Web.Processors.IImageWebProcessor%7D%2CSixLabors.ImageSharp.Web.Caching.IImageCache%2CSixLabors.ImageSharp.Web.Caching.IAsyncKeyLock)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddleware__ctor_RequestDelegate_IOptions_SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddlewareOptions__ILoggerFactory_SixLabors_ImageSharp_Web_Memory_IBufferManager_SixLabors_ImageSharp_Web_Commands_IRequestParser_IEnumerable_SixLabors_ImageSharp_Web_Resolvers_IImageResolver__IEnumerable_SixLabors_ImageSharp_Web_Processors_IImageWebProcessor__SixLabors_ImageSharp_Web_Caching_IImageCache_SixLabors_ImageSharp_Web_Caching_ICacheHash_SixLabors_ImageSharp_Web_Caching_IAsyncKeyLock_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddleware.%23ctor(RequestDelegate%2CIOptions%7BSixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions%7D%2CILoggerFactory%2CSixLabors.ImageSharp.Web.Memory.IBufferManager%2CSixLabors.ImageSharp.Web.Commands.IRequestParser%2CIEnumerable%7BSixLabors.ImageSharp.Web.Resolvers.IImageResolver%7D%2CIEnumerable%7BSixLabors.ImageSharp.Web.Processors.IImageWebProcessor%7D%2CSixLabors.ImageSharp.Web.Caching.IImageCache%2CSixLabors.ImageSharp.Web.Caching.ICacheHash%2CSixLabors.ImageSharp.Web.Caching.IAsyncKeyLock)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/afa120163a515e4b4a17ab7ab03a46d16709b670/src/ImageSharp.Web/Middleware/ImageSharpMiddleware.cs/#L83">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/master/src/ImageSharp.Web/Middleware/ImageSharpMiddleware.cs/#L95">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddleware__ctor_" data-uid="SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddleware.#ctor*"></a>
-  <h4 id="SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddleware__ctor_RequestDelegate_IOptions_SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddlewareOptions__ILoggerFactory_SixLabors_ImageSharp_Web_Commands_IUriParser_IEnumerable_SixLabors_ImageSharp_Web_Resolvers_IImageResolver__IEnumerable_SixLabors_ImageSharp_Web_Processors_IImageWebProcessor__SixLabors_ImageSharp_Web_Caching_IImageCache_SixLabors_ImageSharp_Web_Caching_IAsyncKeyLock_" data-uid="SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddleware.#ctor(RequestDelegate,IOptions{SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions},ILoggerFactory,SixLabors.ImageSharp.Web.Commands.IUriParser,IEnumerable{SixLabors.ImageSharp.Web.Resolvers.IImageResolver},IEnumerable{SixLabors.ImageSharp.Web.Processors.IImageWebProcessor},SixLabors.ImageSharp.Web.Caching.IImageCache,SixLabors.ImageSharp.Web.Caching.IAsyncKeyLock)">ImageSharpMiddleware(RequestDelegate, IOptions&lt;ImageSharpMiddlewareOptions&gt;, ILoggerFactory, IUriParser, IEnumerable&lt;IImageResolver&gt;, IEnumerable&lt;IImageWebProcessor&gt;, IImageCache, IAsyncKeyLock)</h4>
+  <h4 id="SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddleware__ctor_RequestDelegate_IOptions_SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddlewareOptions__ILoggerFactory_SixLabors_ImageSharp_Web_Memory_IBufferManager_SixLabors_ImageSharp_Web_Commands_IRequestParser_IEnumerable_SixLabors_ImageSharp_Web_Resolvers_IImageResolver__IEnumerable_SixLabors_ImageSharp_Web_Processors_IImageWebProcessor__SixLabors_ImageSharp_Web_Caching_IImageCache_SixLabors_ImageSharp_Web_Caching_ICacheHash_SixLabors_ImageSharp_Web_Caching_IAsyncKeyLock_" data-uid="SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddleware.#ctor(RequestDelegate,IOptions{SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions},ILoggerFactory,SixLabors.ImageSharp.Web.Memory.IBufferManager,SixLabors.ImageSharp.Web.Commands.IRequestParser,IEnumerable{SixLabors.ImageSharp.Web.Resolvers.IImageResolver},IEnumerable{SixLabors.ImageSharp.Web.Processors.IImageWebProcessor},SixLabors.ImageSharp.Web.Caching.IImageCache,SixLabors.ImageSharp.Web.Caching.ICacheHash,SixLabors.ImageSharp.Web.Caching.IAsyncKeyLock)">ImageSharpMiddleware(RequestDelegate, IOptions&lt;ImageSharpMiddlewareOptions&gt;, ILoggerFactory, IBufferManager, IRequestParser, IEnumerable&lt;IImageResolver&gt;, IEnumerable&lt;IImageWebProcessor&gt;, IImageCache, ICacheHash, IAsyncKeyLock)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddleware.html">ImageSharpMiddleware</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ImageSharpMiddleware(RequestDelegate next, IOptions&lt;ImageSharpMiddlewareOptions&gt; options, ILoggerFactory loggerFactory, IUriParser uriParser, IEnumerable&lt;IImageResolver&gt; resolvers, IEnumerable&lt;IImageWebProcessor&gt; processors, IImageCache cache, IAsyncKeyLock asyncKeyLock)</code></pre>
+    <pre><code class="lang-csharp hljs">public ImageSharpMiddleware(RequestDelegate next, IOptions&lt;ImageSharpMiddlewareOptions&gt; options, ILoggerFactory loggerFactory, IBufferManager bufferManager, IRequestParser requestParser, IEnumerable&lt;IImageResolver&gt; resolvers, IEnumerable&lt;IImageWebProcessor&gt; processors, IImageCache cache, ICacheHash cacheHash, IAsyncKeyLock asyncKeyLock)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -135,9 +135,15 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Web.Commands.IUriParser.html">IUriParser</a></td>
-        <td><span class="parametername">uriParser</span></td>
-        <td><p>An <a class="xref" href="SixLabors.ImageSharp.Web.Commands.IUriParser.html">IUriParser</a> instance used to parse URI&apos;s for commands</p>
+        <td><a class="xref" href="SixLabors.ImageSharp.Web.Memory.IBufferManager.html">IBufferManager</a></td>
+        <td><span class="parametername">bufferManager</span></td>
+        <td><p>An <a class="xref" href="SixLabors.ImageSharp.Web.Memory.IBufferManager.html">IBufferManager</a> instance used to allocate arrays transporting encoded image data</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Web.Commands.IRequestParser.html">IRequestParser</a></td>
+        <td><span class="parametername">requestParser</span></td>
+        <td><p>An <a class="xref" href="SixLabors.ImageSharp.Web.Commands.IRequestParser.html">IRequestParser</a> instance used to parse image requests for commands</p>
 </td>
       </tr>
       <tr>
@@ -159,6 +165,12 @@
 </td>
       </tr>
       <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Web.Caching.ICacheHash.html">ICacheHash</a></td>
+        <td><span class="parametername">cacheHash</span></td>
+        <td><p>An <a class="xref" href="SixLabors.ImageSharp.Web.Caching.ICacheHash.html">ICacheHash</a>instance used for calculating cached file names</p>
+</td>
+      </tr>
+      <tr>
         <td><a class="xref" href="SixLabors.ImageSharp.Web.Caching.IAsyncKeyLock.html">IAsyncKeyLock</a></td>
         <td><span class="parametername">asyncKeyLock</span></td>
         <td><p>An <a class="xref" href="SixLabors.ImageSharp.Web.Caching.IAsyncKeyLock.html">IAsyncKeyLock</a> instance used for providing locking during processing</p>
@@ -173,7 +185,7 @@
     <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddleware_Invoke_HttpContext_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddleware.Invoke(HttpContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/afa120163a515e4b4a17ab7ab03a46d16709b670/src/ImageSharp.Web/Middleware/ImageSharpMiddleware.cs/#L126">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/master/src/ImageSharp.Web/Middleware/ImageSharpMiddleware.cs/#L144">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddleware_Invoke_" data-uid="SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddleware.Invoke*"></a>
   <h4 id="SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddleware_Invoke_HttpContext_" data-uid="SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddleware.Invoke(HttpContext)">Invoke(HttpContext)</h4>
@@ -229,7 +241,7 @@
                     <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddleware.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddleware%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/afa120163a515e4b4a17ab7ab03a46d16709b670/src/ImageSharp.Web/Middleware/ImageSharpMiddleware.cs/#L25" class="contribution-link">View Source</a>
+                    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/master/src/ImageSharp.Web/Middleware/ImageSharpMiddleware.cs/#L25" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

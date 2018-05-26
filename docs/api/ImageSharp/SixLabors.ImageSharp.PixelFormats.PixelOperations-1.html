@@ -112,7 +112,7 @@ for pixel buffers of type <code data-dev-comment-type="typeparamref" class="type
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PixelFormats_PixelOperations_1_Instance.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PixelFormats.PixelOperations%601.Instance%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/31dd601202b8e9f2dba4c849daa800b1efd50b62/src/ImageSharp/PixelFormats/PixelOperations{TPixel}.cs/#L21">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/PixelOperations{TPixel}.cs/#L22">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_PixelFormats_PixelOperations_1_Instance_" data-uid="SixLabors.ImageSharp.PixelFormats.PixelOperations`1.Instance*"></a>
   <h4 id="SixLabors_ImageSharp_PixelFormats_PixelOperations_1_Instance" data-uid="SixLabors.ImageSharp.PixelFormats.PixelOperations`1.Instance">Instance</h4>
@@ -142,20 +142,20 @@ for pixel buffers of type <code data-dev-comment-type="typeparamref" class="type
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PixelFormats_PixelOperations_1_GuardSpans__2_Span___0__System_String_Span___1__System_String_System_Int32_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PixelFormats.PixelOperations%601.GuardSpans%60%602(Span%7B%60%600%7D%2CSystem.String%2CSpan%7B%60%601%7D%2CSystem.String%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PixelFormats_PixelOperations_1_GuardSpans__2_ReadOnlySpan___0__System_String_Span___1__System_String_System_Int32_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PixelFormats.PixelOperations%601.GuardSpans%60%602(ReadOnlySpan%7B%60%600%7D%2CSystem.String%2CSpan%7B%60%601%7D%2CSystem.String%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/31dd601202b8e9f2dba4c849daa800b1efd50b62/src/ImageSharp/PixelFormats/PixelOperations{TPixel}.cs/#L76">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/PixelOperations{TPixel}.cs/#L119">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_PixelFormats_PixelOperations_1_GuardSpans_" data-uid="SixLabors.ImageSharp.PixelFormats.PixelOperations`1.GuardSpans*"></a>
-  <h4 id="SixLabors_ImageSharp_PixelFormats_PixelOperations_1_GuardSpans__2_Span___0__System_String_Span___1__System_String_System_Int32_" data-uid="SixLabors.ImageSharp.PixelFormats.PixelOperations`1.GuardSpans``2(Span{``0},System.String,Span{``1},System.String,System.Int32)">GuardSpans&lt;TSource, TDest&gt;(Span&lt;TSource&gt;, String, Span&lt;TDest&gt;, String, Int32)</h4>
-  <div class="markdown level1 summary"><p>Verifies that the given &apos;source&apos; and &apos;dest&apos; spans are at least of &apos;minLength&apos; size.
+  <h4 id="SixLabors_ImageSharp_PixelFormats_PixelOperations_1_GuardSpans__2_ReadOnlySpan___0__System_String_Span___1__System_String_System_Int32_" data-uid="SixLabors.ImageSharp.PixelFormats.PixelOperations`1.GuardSpans``2(ReadOnlySpan{``0},System.String,Span{``1},System.String,System.Int32)">GuardSpans&lt;TSource, TDest&gt;(ReadOnlySpan&lt;TSource&gt;, String, Span&lt;TDest&gt;, String, Int32)</h4>
+  <div class="markdown level1 summary"><p>Verifies that the given &apos;source&apos; and &apos;destination&apos; spans are at least of &apos;minLength&apos; size.
 Throwing an <see cref="!:ArgumentException"></see> if the condition is not met.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected static void GuardSpans&lt;TSource, TDest&gt;(Span&lt;TSource&gt; source, string sourceParamName, Span&lt;TDest&gt; dest, string destParamName, int minLength)</code></pre>
+    <pre><code class="lang-csharp hljs">protected static void GuardSpans&lt;TSource, TDest&gt;(ReadOnlySpan&lt;TSource&gt; source, string sourceParamName, Span&lt;TDest&gt; destination, string destinationParamName, int minLength)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -168,7 +168,7 @@ Throwing an <see cref="!:ArgumentException"></see> if the condition is not met.<
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Span</span>&lt;TSource&gt;</td>
+        <td><span class="xref">ReadOnlySpan</span>&lt;TSource&gt;</td>
         <td><span class="parametername">source</span></td>
         <td><p>The source span</p>
 </td>
@@ -181,13 +181,13 @@ Throwing an <see cref="!:ArgumentException"></see> if the condition is not met.<
       </tr>
       <tr>
         <td><span class="xref">Span</span>&lt;TDest&gt;</td>
-        <td><span class="parametername">dest</span></td>
+        <td><span class="parametername">destination</span></td>
         <td><p>The destination span</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">destParamName</span></td>
+        <td><span class="parametername">destinationParamName</span></td>
         <td><p>The destination parameter name</p>
 </td>
       </tr>
@@ -231,7 +231,7 @@ Throwing an <see cref="!:ArgumentException"></see> if the condition is not met.<
                     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PixelFormats_PixelOperations_1.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PixelFormats.PixelOperations%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/SixLabors/ImageSharp/blob/31dd601202b8e9f2dba4c849daa800b1efd50b62/src/ImageSharp/PixelFormats/PixelOperations{TPixel}.PixelBenders.cs/#L11" class="contribution-link">View Source</a>
+                    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/PixelOperations{TPixel}.PixelBenders.cs/#L11" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
