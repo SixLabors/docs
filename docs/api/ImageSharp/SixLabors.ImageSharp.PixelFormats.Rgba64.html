@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Struct Rgba64
    ">
-    <meta name="generator" content="docfx 2.32.2.0">
+    <meta name="generator" content="docfx 2.37.0.0">
     
     <link rel="shortcut icon" href="../../favicon.png">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -23,7 +23,7 @@
     
     
   </head>
-  <body data-spy="scroll" data-target="#affix">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -74,7 +74,7 @@
   
   <h1 id="SixLabors_ImageSharp_PixelFormats_Rgba64" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64" class="text-break">Struct Rgba64
   </h1>
-  <div class="markdown level0 summary"><p>Packed pixel type containing four 16-bit unsigned normalized values ranging from 0 to 1.
+  <div class="markdown level0 summary"><p>Packed pixel type containing four 16-bit unsigned normalized values ranging from 0 to 635535.
 <p>
 Ranges from [0, 0, 0, 0] to [1, 1, 1, 1] in vector form.
 </p></p>
@@ -100,7 +100,7 @@ Ranges from [0, 0, 0, 0] to [1, 1, 1, 1] in vector form.
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PixelFormats_Rgba64__ctor_System_Single_System_Single_System_Single_System_Single_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PixelFormats.Rgba64.%23ctor(System.Single%2CSystem.Single%2CSystem.Single%2CSystem.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L25">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L65">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_PixelFormats_Rgba64__ctor_" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.#ctor*"></a>
   <h4 id="SixLabors_ImageSharp_PixelFormats_Rgba64__ctor_System_Single_System_Single_System_Single_System_Single_" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.#ctor(System.Single,System.Single,System.Single,System.Single)">Rgba64(Single, Single, Single, Single)</h4>
@@ -109,7 +109,7 @@ Ranges from [0, 0, 0, 0] to [1, 1, 1, 1] in vector form.
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Rgba64(float x, float y, float z, float w)</code></pre>
+    <pre><code class="lang-csharp hljs">public Rgba64(float r, float g, float b, float a)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -123,26 +123,112 @@ Ranges from [0, 0, 0, 0] to [1, 1, 1, 1] in vector form.
     <tbody>
       <tr>
         <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">x</span></td>
-        <td><p>The x-component</p>
+        <td><span class="parametername">r</span></td>
+        <td><p>The red component.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">y</span></td>
-        <td><p>The y-component</p>
+        <td><span class="parametername">g</span></td>
+        <td><p>The green component.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">z</span></td>
-        <td><p>The z-component</p>
+        <td><span class="parametername">b</span></td>
+        <td><p>The blue component.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">w</span></td>
-        <td><p>The w-component</p>
+        <td><span class="parametername">a</span></td>
+        <td><p>The alpha component.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PixelFormats_Rgba64__ctor_System_UInt16_System_UInt16_System_UInt16_System_UInt16_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PixelFormats.Rgba64.%23ctor(System.UInt16%2CSystem.UInt16%2CSystem.UInt16%2CSystem.UInt16)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L49">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_PixelFormats_Rgba64__ctor_" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.#ctor*"></a>
+  <h4 id="SixLabors_ImageSharp_PixelFormats_Rgba64__ctor_System_UInt16_System_UInt16_System_UInt16_System_UInt16_" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.#ctor(System.UInt16,System.UInt16,System.UInt16,System.UInt16)">Rgba64(UInt16, UInt16, UInt16, UInt16)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="SixLabors.ImageSharp.PixelFormats.Rgba64.html">Rgba64</a> struct.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Rgba64(ushort r, ushort g, ushort b, ushort a)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt16</span></td>
+        <td><span class="parametername">r</span></td>
+        <td><p>The red component.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt16</span></td>
+        <td><span class="parametername">g</span></td>
+        <td><p>The green component.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt16</span></td>
+        <td><span class="parametername">b</span></td>
+        <td><p>The blue component.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt16</span></td>
+        <td><span class="parametername">a</span></td>
+        <td><p>The alpha component.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PixelFormats_Rgba64__ctor_System_UInt64_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PixelFormats.Rgba64.%23ctor(System.UInt64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L87">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_PixelFormats_Rgba64__ctor_" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.#ctor*"></a>
+  <h4 id="SixLabors_ImageSharp_PixelFormats_Rgba64__ctor_System_UInt64_" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.#ctor(System.UInt64)">Rgba64(UInt64)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="SixLabors.ImageSharp.PixelFormats.Rgba64.html">Rgba64</a> struct.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Rgba64(ulong packed)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">packed</span></td>
+        <td><p>The packed value.</p>
 </td>
       </tr>
     </tbody>
@@ -152,7 +238,7 @@ Ranges from [0, 0, 0, 0] to [1, 1, 1, 1] in vector form.
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PixelFormats_Rgba64__ctor_Vector4_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PixelFormats.Rgba64.%23ctor(Vector4)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L34">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L78">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_PixelFormats_Rgba64__ctor_" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.#ctor*"></a>
   <h4 id="SixLabors_ImageSharp_PixelFormats_Rgba64__ctor_Vector4_" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.#ctor(Vector4)">Rgba64(Vector4)</h4>
@@ -181,6 +267,128 @@ Ranges from [0, 0, 0, 0] to [1, 1, 1, 1] in vector form.
       </tr>
     </tbody>
   </table>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PixelFormats_Rgba64_A.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PixelFormats.Rgba64.A%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L40">View Source</a>
+  </span>
+  <h4 id="SixLabors_ImageSharp_PixelFormats_Rgba64_A" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.A">A</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the alpha component.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ushort A</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt16</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PixelFormats_Rgba64_B.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PixelFormats.Rgba64.B%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L35">View Source</a>
+  </span>
+  <h4 id="SixLabors_ImageSharp_PixelFormats_Rgba64_B" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.B">B</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the blue component.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ushort B</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt16</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PixelFormats_Rgba64_G.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PixelFormats.Rgba64.G%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L30">View Source</a>
+  </span>
+  <h4 id="SixLabors_ImageSharp_PixelFormats_Rgba64_G" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.G">G</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the green component.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ushort G</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt16</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PixelFormats_Rgba64_R.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PixelFormats.Rgba64.R%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L25">View Source</a>
+  </span>
+  <h4 id="SixLabors_ImageSharp_PixelFormats_Rgba64_R" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.R">R</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the red component.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ushort R</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt16</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
@@ -188,7 +396,7 @@ Ranges from [0, 0, 0, 0] to [1, 1, 1, 1] in vector form.
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PixelFormats_Rgba64_PackedValue.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PixelFormats.Rgba64.PackedValue%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L40">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L107">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_PixelFormats_Rgba64_PackedValue_" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.PackedValue*"></a>
   <h4 id="SixLabors_ImageSharp_PixelFormats_Rgba64_PackedValue" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.PackedValue">PackedValue</h4>
@@ -213,6 +421,37 @@ Ranges from [0, 0, 0, 0] to [1, 1, 1, 1] in vector form.
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PixelFormats_Rgba64_Rgb.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PixelFormats.Rgba64.Rgb%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L97">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_PixelFormats_Rgba64_Rgb_" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.Rgb*"></a>
+  <h4 id="SixLabors_ImageSharp_PixelFormats_Rgba64_Rgb" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.Rgb">Rgb</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the RGB components of this struct as <a class="xref" href="SixLabors.ImageSharp.PixelFormats.Rgb48.html">Rgb48</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Rgb48 Rgb { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.PixelFormats.Rgb48.html">Rgb48</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
@@ -220,7 +459,7 @@ Ranges from [0, 0, 0, 0] to [1, 1, 1, 1] in vector form.
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PixelFormats_Rgba64_CreatePixelOperations.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PixelFormats.Rgba64.CreatePixelOperations%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L79">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L153">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_PixelFormats_Rgba64_CreatePixelOperations_" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.CreatePixelOperations*"></a>
   <h4 id="SixLabors_ImageSharp_PixelFormats_Rgba64_CreatePixelOperations" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.CreatePixelOperations">CreatePixelOperations()</h4>
@@ -250,7 +489,7 @@ Ranges from [0, 0, 0, 0] to [1, 1, 1, 1] in vector form.
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PixelFormats_Rgba64_Equals_SixLabors_ImageSharp_PixelFormats_Rgba64_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PixelFormats.Rgba64.Equals(SixLabors.ImageSharp.PixelFormats.Rgba64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L194">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L284">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_PixelFormats_Rgba64_Equals_" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.Equals*"></a>
   <h4 id="SixLabors_ImageSharp_PixelFormats_Rgba64_Equals_SixLabors_ImageSharp_PixelFormats_Rgba64_" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.Equals(SixLabors.ImageSharp.PixelFormats.Rgba64)">Equals(Rgba64)</h4>
@@ -297,7 +536,7 @@ Ranges from [0, 0, 0, 0] to [1, 1, 1, 1] in vector form.
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PixelFormats_Rgba64_Equals_System_Object_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PixelFormats.Rgba64.Equals(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L188">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L278">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_PixelFormats_Rgba64_Equals_" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.Equals*"></a>
   <h4 id="SixLabors_ImageSharp_PixelFormats_Rgba64_Equals_System_Object_" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.Equals(System.Object)">Equals(Object)</h4>
@@ -344,7 +583,7 @@ Ranges from [0, 0, 0, 0] to [1, 1, 1, 1] in vector form.
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PixelFormats_Rgba64_GetHashCode.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PixelFormats.Rgba64.GetHashCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L207">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L297">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_PixelFormats_Rgba64_GetHashCode_" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.GetHashCode*"></a>
   <h4 id="SixLabors_ImageSharp_PixelFormats_Rgba64_GetHashCode" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.GetHashCode">GetHashCode()</h4>
@@ -374,7 +613,7 @@ Ranges from [0, 0, 0, 0] to [1, 1, 1, 1] in vector form.
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PixelFormats_Rgba64_PackFromArgb32_SixLabors_ImageSharp_PixelFormats_Argb32_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PixelFormats.Rgba64.PackFromArgb32(SixLabors.ImageSharp.PixelFormats.Argb32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L121">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L195">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_PixelFormats_Rgba64_PackFromArgb32_" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.PackFromArgb32*"></a>
   <h4 id="SixLabors_ImageSharp_PixelFormats_Rgba64_PackFromArgb32_SixLabors_ImageSharp_PixelFormats_Argb32_" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.PackFromArgb32(SixLabors.ImageSharp.PixelFormats.Argb32)">PackFromArgb32(Argb32)</h4>
@@ -408,7 +647,7 @@ Ranges from [0, 0, 0, 0] to [1, 1, 1, 1] in vector form.
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PixelFormats_Rgba64_PackFromBgra32_SixLabors_ImageSharp_PixelFormats_Bgra32_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PixelFormats.Rgba64.PackFromBgra32(SixLabors.ImageSharp.PixelFormats.Bgra32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L128">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L202">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_PixelFormats_Rgba64_PackFromBgra32_" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.PackFromBgra32*"></a>
   <h4 id="SixLabors_ImageSharp_PixelFormats_Rgba64_PackFromBgra32_SixLabors_ImageSharp_PixelFormats_Bgra32_" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.PackFromBgra32(SixLabors.ImageSharp.PixelFormats.Bgra32)">PackFromBgra32(Bgra32)</h4>
@@ -439,10 +678,44 @@ Ranges from [0, 0, 0, 0] to [1, 1, 1, 1] in vector form.
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PixelFormats_Rgba64_PackFromRgb48_SixLabors_ImageSharp_PixelFormats_Rgb48_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PixelFormats.Rgba64.PackFromRgb48(SixLabors.ImageSharp.PixelFormats.Rgb48)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L233">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_PixelFormats_Rgba64_PackFromRgb48_" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.PackFromRgb48*"></a>
+  <h4 id="SixLabors_ImageSharp_PixelFormats_Rgba64_PackFromRgb48_SixLabors_ImageSharp_PixelFormats_Rgb48_" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.PackFromRgb48(SixLabors.ImageSharp.PixelFormats.Rgb48)">PackFromRgb48(Rgb48)</h4>
+  <div class="markdown level1 summary"><p>Packs the pixel from an <a class="xref" href="SixLabors.ImageSharp.PixelFormats.Rgb48.html">Rgb48</a> value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PackFromRgb48(Rgb48 source)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.PixelFormats.Rgb48.html">Rgb48</a></td>
+        <td><span class="parametername">source</span></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.PixelFormats.Rgb48.html">Rgb48</a> value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PixelFormats_Rgba64_PackFromRgba32_SixLabors_ImageSharp_PixelFormats_Rgba32_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PixelFormats.Rgba64.PackFromRgba32(SixLabors.ImageSharp.PixelFormats.Rgba32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L114">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L188">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_PixelFormats_Rgba64_PackFromRgba32_" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.PackFromRgba32*"></a>
   <h4 id="SixLabors_ImageSharp_PixelFormats_Rgba64_PackFromRgba32_SixLabors_ImageSharp_PixelFormats_Rgba32_" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.PackFromRgba32(SixLabors.ImageSharp.PixelFormats.Rgba32)">PackFromRgba32(Rgba32)</h4>
@@ -473,10 +746,44 @@ Ranges from [0, 0, 0, 0] to [1, 1, 1, 1] in vector form.
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PixelFormats_Rgba64_PackFromRgba64_SixLabors_ImageSharp_PixelFormats_Rgba64_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PixelFormats.Rgba64.PackFromRgba64(SixLabors.ImageSharp.PixelFormats.Rgba64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L209">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_PixelFormats_Rgba64_PackFromRgba64_" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.PackFromRgba64*"></a>
+  <h4 id="SixLabors_ImageSharp_PixelFormats_Rgba64_PackFromRgba64_SixLabors_ImageSharp_PixelFormats_Rgba64_" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.PackFromRgba64(SixLabors.ImageSharp.PixelFormats.Rgba64)">PackFromRgba64(Rgba64)</h4>
+  <div class="markdown level1 summary"><p>Packs the pixel from an <a class="xref" href="SixLabors.ImageSharp.PixelFormats.Rgba64.html">Rgba64</a> value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PackFromRgba64(Rgba64 source)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.PixelFormats.Rgba64.html">Rgba64</a></td>
+        <td><span class="parametername">source</span></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.PixelFormats.Rgba64.html">Rgba64</a> value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PixelFormats_Rgba64_PackFromScaledVector4_Vector4_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PixelFormats.Rgba64.PackFromScaledVector4(Vector4)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L82">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L156">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_PixelFormats_Rgba64_PackFromScaledVector4_" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.PackFromScaledVector4*"></a>
   <h4 id="SixLabors_ImageSharp_PixelFormats_Rgba64_PackFromScaledVector4_Vector4_" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.PackFromScaledVector4(Vector4)">PackFromScaledVector4(Vector4)</h4>
@@ -510,7 +817,7 @@ Ranges from [0, 0, 0, 0] to [1, 1, 1, 1] in vector form.
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PixelFormats_Rgba64_PackFromVector4_Vector4_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PixelFormats.Rgba64.PackFromVector4(Vector4)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L107">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L177">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_PixelFormats_Rgba64_PackFromVector4_" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.PackFromVector4*"></a>
   <h4 id="SixLabors_ImageSharp_PixelFormats_Rgba64_PackFromVector4_Vector4_" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.PackFromVector4(Vector4)">PackFromVector4(Vector4)</h4>
@@ -544,7 +851,7 @@ Ranges from [0, 0, 0, 0] to [1, 1, 1, 1] in vector form.
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PixelFormats_Rgba64_ToArgb32_SixLabors_ImageSharp_PixelFormats_Argb32__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PixelFormats.Rgba64.ToArgb32(SixLabors.ImageSharp.PixelFormats.Argb32%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L156">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L249">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_PixelFormats_Rgba64_ToArgb32_" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.ToArgb32*"></a>
   <h4 id="SixLabors_ImageSharp_PixelFormats_Rgba64_ToArgb32_SixLabors_ImageSharp_PixelFormats_Argb32__" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.ToArgb32(SixLabors.ImageSharp.PixelFormats.Argb32@)">ToArgb32(ref Argb32)</h4>
@@ -578,7 +885,7 @@ Ranges from [0, 0, 0, 0] to [1, 1, 1, 1] in vector form.
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PixelFormats_Rgba64_ToBgr24_SixLabors_ImageSharp_PixelFormats_Bgr24__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PixelFormats.Rgba64.ToBgr24(SixLabors.ImageSharp.PixelFormats.Bgr24%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L167">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L259">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_PixelFormats_Rgba64_ToBgr24_" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.ToBgr24*"></a>
   <h4 id="SixLabors_ImageSharp_PixelFormats_Rgba64_ToBgr24_SixLabors_ImageSharp_PixelFormats_Bgr24__" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.ToBgr24(SixLabors.ImageSharp.PixelFormats.Bgr24@)">ToBgr24(ref Bgr24)</h4>
@@ -612,7 +919,7 @@ Ranges from [0, 0, 0, 0] to [1, 1, 1, 1] in vector form.
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PixelFormats_Rgba64_ToBgra32_SixLabors_ImageSharp_PixelFormats_Bgra32__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PixelFormats.Rgba64.ToBgra32(SixLabors.ImageSharp.PixelFormats.Bgra32%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L177">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L268">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_PixelFormats_Rgba64_ToBgra32_" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.ToBgra32*"></a>
   <h4 id="SixLabors_ImageSharp_PixelFormats_Rgba64_ToBgra32_SixLabors_ImageSharp_PixelFormats_Bgra32__" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.ToBgra32(SixLabors.ImageSharp.PixelFormats.Bgra32@)">ToBgra32(ref Bgra32)</h4>
@@ -646,7 +953,7 @@ Ranges from [0, 0, 0, 0] to [1, 1, 1, 1] in vector form.
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PixelFormats_Rgba64_ToRgb24_SixLabors_ImageSharp_PixelFormats_Rgb24__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PixelFormats.Rgba64.ToRgb24(SixLabors.ImageSharp.PixelFormats.Rgb24%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L135">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L213">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_PixelFormats_Rgba64_ToRgb24_" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.ToRgb24*"></a>
   <h4 id="SixLabors_ImageSharp_PixelFormats_Rgba64_ToRgb24_SixLabors_ImageSharp_PixelFormats_Rgb24__" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.ToRgb24(SixLabors.ImageSharp.PixelFormats.Rgb24@)">ToRgb24(ref Rgb24)</h4>
@@ -677,10 +984,44 @@ Ranges from [0, 0, 0, 0] to [1, 1, 1, 1] in vector form.
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PixelFormats_Rgba64_ToRgb48_SixLabors_ImageSharp_PixelFormats_Rgb48__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PixelFormats.Rgba64.ToRgb48(SixLabors.ImageSharp.PixelFormats.Rgb48%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L241">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_PixelFormats_Rgba64_ToRgb48_" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.ToRgb48*"></a>
+  <h4 id="SixLabors_ImageSharp_PixelFormats_Rgba64_ToRgb48_SixLabors_ImageSharp_PixelFormats_Rgb48__" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.ToRgb48(SixLabors.ImageSharp.PixelFormats.Rgb48@)">ToRgb48(ref Rgb48)</h4>
+  <div class="markdown level1 summary"><p>Converts the pixel to <a class="xref" href="SixLabors.ImageSharp.PixelFormats.Rgb48.html">Rgb48</a> format.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ToRgb48(ref Rgb48 dest)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.PixelFormats.Rgb48.html">Rgb48</a></td>
+        <td><span class="parametername">dest</span></td>
+        <td><p>The destination pixel to write to</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PixelFormats_Rgba64_ToRgba32_SixLabors_ImageSharp_PixelFormats_Rgba32__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PixelFormats.Rgba64.ToRgba32(SixLabors.ImageSharp.PixelFormats.Rgba32%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L145">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L222">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_PixelFormats_Rgba64_ToRgba32_" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.ToRgba32*"></a>
   <h4 id="SixLabors_ImageSharp_PixelFormats_Rgba64_ToRgba32_SixLabors_ImageSharp_PixelFormats_Rgba32__" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.ToRgba32(SixLabors.ImageSharp.PixelFormats.Rgba32@)">ToRgba32(ref Rgba32)</h4>
@@ -711,10 +1052,44 @@ Ranges from [0, 0, 0, 0] to [1, 1, 1, 1] in vector form.
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PixelFormats_Rgba64_ToRgba64_SixLabors_ImageSharp_PixelFormats_Rgba64__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PixelFormats.Rgba64.ToRgba64(SixLabors.ImageSharp.PixelFormats.Rgba64%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L245">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_PixelFormats_Rgba64_ToRgba64_" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.ToRgba64*"></a>
+  <h4 id="SixLabors_ImageSharp_PixelFormats_Rgba64_ToRgba64_SixLabors_ImageSharp_PixelFormats_Rgba64__" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.ToRgba64(SixLabors.ImageSharp.PixelFormats.Rgba64@)">ToRgba64(ref Rgba64)</h4>
+  <div class="markdown level1 summary"><p>Converts the pixel to <a class="xref" href="SixLabors.ImageSharp.PixelFormats.Rgba64.html">Rgba64</a> format.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ToRgba64(ref Rgba64 dest)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.PixelFormats.Rgba64.html">Rgba64</a></td>
+        <td><span class="parametername">dest</span></td>
+        <td><p>The destination pixel to write to</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PixelFormats_Rgba64_ToScaledVector4.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PixelFormats.Rgba64.ToScaledVector4%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L89">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L163">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_PixelFormats_Rgba64_ToScaledVector4_" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.ToScaledVector4*"></a>
   <h4 id="SixLabors_ImageSharp_PixelFormats_Rgba64_ToScaledVector4" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.ToScaledVector4">ToScaledVector4()</h4>
@@ -748,7 +1123,7 @@ The vector components are typically expanded in least to greatest significance o
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PixelFormats_Rgba64_ToString.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PixelFormats.Rgba64.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L201">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L291">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_PixelFormats_Rgba64_ToString_" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.ToString*"></a>
   <h4 id="SixLabors_ImageSharp_PixelFormats_Rgba64_ToString" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.ToString">ToString()</h4>
@@ -778,7 +1153,7 @@ The vector components are typically expanded in least to greatest significance o
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PixelFormats_Rgba64_ToVector4.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PixelFormats.Rgba64.ToVector4%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L96">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L170">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_PixelFormats_Rgba64_ToVector4_" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.ToVector4*"></a>
   <h4 id="SixLabors_ImageSharp_PixelFormats_Rgba64_ToVector4" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.ToVector4">ToVector4()</h4>
@@ -813,7 +1188,7 @@ The vector components are typically expanded in least to greatest significance o
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PixelFormats_Rgba64_op_Equality_SixLabors_ImageSharp_PixelFormats_Rgba64_SixLabors_ImageSharp_PixelFormats_Rgba64_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PixelFormats.Rgba64.op_Equality(SixLabors.ImageSharp.PixelFormats.Rgba64%2CSixLabors.ImageSharp.PixelFormats.Rgba64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L54">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L128">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_PixelFormats_Rgba64_op_Equality_" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.op_Equality*"></a>
   <h4 id="SixLabors_ImageSharp_PixelFormats_Rgba64_op_Equality_SixLabors_ImageSharp_PixelFormats_Rgba64_SixLabors_ImageSharp_PixelFormats_Rgba64_" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.op_Equality(SixLabors.ImageSharp.PixelFormats.Rgba64,SixLabors.ImageSharp.PixelFormats.Rgba64)">Equality(Rgba64, Rgba64)</h4>
@@ -869,7 +1244,7 @@ The vector components are typically expanded in least to greatest significance o
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PixelFormats_Rgba64_op_Inequality_SixLabors_ImageSharp_PixelFormats_Rgba64_SixLabors_ImageSharp_PixelFormats_Rgba64_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PixelFormats.Rgba64.op_Inequality(SixLabors.ImageSharp.PixelFormats.Rgba64%2CSixLabors.ImageSharp.PixelFormats.Rgba64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L72">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L146">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_PixelFormats_Rgba64_op_Inequality_" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.op_Inequality*"></a>
   <h4 id="SixLabors_ImageSharp_PixelFormats_Rgba64_op_Inequality_SixLabors_ImageSharp_PixelFormats_Rgba64_SixLabors_ImageSharp_PixelFormats_Rgba64_" data-uid="SixLabors.ImageSharp.PixelFormats.Rgba64.op_Inequality(SixLabors.ImageSharp.PixelFormats.Rgba64,SixLabors.ImageSharp.PixelFormats.Rgba64)">Inequality(Rgba64, Rgba64)</h4>
@@ -944,7 +1319,7 @@ The vector components are typically expanded in least to greatest significance o
                     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PixelFormats_Rgba64.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PixelFormats.Rgba64%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L16" class="contribution-link">View Source</a>
+                    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/PixelFormats/Rgba64.cs/#L17" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

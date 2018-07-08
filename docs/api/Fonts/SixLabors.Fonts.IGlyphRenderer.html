@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Interface IGlyphRenderer
    ">
-    <meta name="generator" content="docfx 2.32.2.0">
+    <meta name="generator" content="docfx 2.37.0.0">
     
     <link rel="shortcut icon" href="../../favicon.png">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -23,7 +23,7 @@
     
     
   </head>
-  <body data-spy="scroll" data-target="#affix">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -103,19 +103,19 @@
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/Fonts/new/master/apiSpec/new?filename=SixLabors_Fonts_IGlyphRenderer_BeginGlyph_RectangleF_System_Int32_.md&amp;value=---%0Auid%3A%20SixLabors.Fonts.IGlyphRenderer.BeginGlyph(RectangleF%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/Fonts/new/master/apiSpec/new?filename=SixLabors_Fonts_IGlyphRenderer_BeginGlyph_RectangleF_SixLabors_Fonts_GlyphRendererParameters_.md&amp;value=---%0Auid%3A%20SixLabors.Fonts.IGlyphRenderer.BeginGlyph(RectangleF%2CSixLabors.Fonts.GlyphRendererParameters)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/SixLabors/Fonts/blob/master/src/SixLabors.Fonts/IGlyphRenderer.cs/#L61">View Source</a>
   </span>
   <a id="SixLabors_Fonts_IGlyphRenderer_BeginGlyph_" data-uid="SixLabors.Fonts.IGlyphRenderer.BeginGlyph*"></a>
-  <h4 id="SixLabors_Fonts_IGlyphRenderer_BeginGlyph_RectangleF_System_Int32_" data-uid="SixLabors.Fonts.IGlyphRenderer.BeginGlyph(RectangleF,System.Int32)">BeginGlyph(RectangleF, Int32)</h4>
+  <h4 id="SixLabors_Fonts_IGlyphRenderer_BeginGlyph_RectangleF_SixLabors_Fonts_GlyphRendererParameters_" data-uid="SixLabors.Fonts.IGlyphRenderer.BeginGlyph(RectangleF,SixLabors.Fonts.GlyphRendererParameters)">BeginGlyph(RectangleF, GlyphRendererParameters)</h4>
   <div class="markdown level1 summary"><p>Begins the glyph.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool BeginGlyph(RectangleF bounds, int cacheKey)</code></pre>
+    <pre><code class="lang-csharp hljs">bool BeginGlyph(RectangleF bounds, GlyphRendererParameters paramaters)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -134,9 +134,9 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">cacheKey</span></td>
-        <td><p>The a key that uniquely represents a version of a glyph in at particular font size, font family, font style and DPI.</p>
+        <td><a class="xref" href="SixLabors.Fonts.GlyphRendererParameters.html">GlyphRendererParameters</a></td>
+        <td><span class="parametername">paramaters</span></td>
+        <td><p>The set of paramaters that uniquely represents a version of a glyph in at particular font size, font family, font style and DPI.</p>
 </td>
       </tr>
     </tbody>
