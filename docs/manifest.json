@@ -4488,7 +4488,7 @@
           "hash": "YDq9JLDA+xEXnPilhipBEA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -4497,7 +4497,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/ImageSharp/GettingStarted.html",
-          "hash": "q967lXZdmirWX1MSC1GeVg=="
+          "hash": "w659lgaqdkigsouZRKK2tQ=="
         }
       },
       "is_incremental": false,
@@ -4512,7 +4512,7 @@
           "hash": "dINgB+kEZp10SF+iitmAmg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -4524,7 +4524,7 @@
           "hash": "GCQ/oRp4Ujpf69AuufM2iQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -4536,7 +4536,7 @@
           "hash": "iYKTvnVTdZW3DOfDLxrhWw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -4548,7 +4548,7 @@
           "hash": "Iab0KQDPk7FwRANOA+t14w=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -4560,7 +4560,7 @@
           "hash": "ztoNZCBZMyAe6A+1MPp9Sg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -4572,7 +4572,7 @@
           "hash": "oerdEpMLtxeRvmvWp/NupQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -4627,11 +4627,11 @@
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "ManagedReferenceDocumentProcessor": {
+        "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build"
         },
-        "ConceptualDocumentProcessor": {
+        "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build"
         }

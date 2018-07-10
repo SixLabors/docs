@@ -33,11 +33,17 @@ The easiest way to work with ImageSharp is to utilize our extension methods:
 - All the processing extensions (eg. `Resize(...)`) are living within the @"SixLabors.ImageSharp.Processing" namespace. 
 If you want to do image processing work, make sure you are `using` this namespace in your code!
 
-### Performance
-Achieving near to native performance is a major goal of the SixLabors team; we are constantly working on improvements. If you are running on RyuJIT, common use cases are "only" 1-3 times slower than GDI+ (aka. `System.Drawing` on Windows). If performance gap reported by your benchmarks is significantly larger, it can be a sign that essential SIMD optimizations are not utilized.
-
-- Check the value of [`Vector.IsHardwareAccelerated`](https://docs.microsoft.com/en-us/dotnet/api/system.numerics.vector.ishardwareaccelerated?view=netcore-2.1&viewFallbackFrom=netstandard-2.0#System_Numerics_Vector_IsHardwareAccelerated). If the output is false, it means there is no SIMD support in your runtime!
-- Make sure your code runs on 64bit! Older .NET Framework versions are using the legacy runtime on 32 bits, with no built-in SIMD support.
-
 ### Why is [](xref:SixLabors.ImageSharp.Image`1?displayProperty=name) a generic class?
 An image is essentially a **generic 2D array of pixels** stored in a contiguous memory block. Check out the [Pixel Formats](PixelFormats.md) article for more details!
+
+### Performance
+Achieving near-to-native performance is a major goal for the SixLabors team, and thanks to the improvements brought by the RyuJIT runtime, it's no longer mission impossible. We are constantly working on improvements.
+
+At the moment it's pretty hard to define fair benchmarks comparing GDI+ (aka. `System.Drawing` on Windows) and ImageSharp, because of the differences between the algorithms being used. Generally speaking, we are more feature rich, producing better quality. We hope we can match the corresponging algorithm parameters, and present some very specific benchmark results soon.
+
+If you are experienceing a significant performance gap between System.Drawing and ImageSharp for basic use-cases, there is a high chance that essential SIMD optimizations are not utilized. 
+
+A few troubleshooting steps to try:
+
+- Check the value of [Vector.IsHardwareAccelerated](https://docs.microsoft.com/en-us/dotnet/api/system.numerics.vector.ishardwareaccelerated?view=netcore-2.1&viewFallbackFrom=netstandard-2.0#System_Numerics_Vector_IsHardwareAccelerated). If the output is false, it means there is no SIMD support in your runtime!
+- Make sure your code runs on 64bit! Older .NET Framework versions are using the legacy runtime on 32 bits, having no built-in SIMD support.
