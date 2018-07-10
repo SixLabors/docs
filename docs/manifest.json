@@ -4488,7 +4488,7 @@
           "hash": "YDq9JLDA+xEXnPilhipBEA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -4497,10 +4497,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/ImageSharp/GettingStarted.html",
-          "hash": "0xp6W47Rufn5rE/ahvELJw=="
+          "hash": "q967lXZdmirWX1MSC1GeVg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -4512,7 +4512,7 @@
           "hash": "dINgB+kEZp10SF+iitmAmg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -4536,19 +4536,7 @@
           "hash": "iYKTvnVTdZW3DOfDLxrhWw=="
         }
       },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/ImageSharp/PixelManipulation.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/ImageSharp/PixelManipulation.html",
-          "hash": "hak42EWyhBX/lCP3j24FuA=="
-        }
-      },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -4560,7 +4548,19 @@
           "hash": "Iab0KQDPk7FwRANOA+t14w=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/ImageSharp/WorkingWithPixelBuffers.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/ImageSharp/WorkingWithPixelBuffers.html",
+          "hash": "ztoNZCBZMyAe6A+1MPp9Sg=="
+        }
+      },
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -4572,7 +4572,7 @@
           "hash": "oerdEpMLtxeRvmvWp/NupQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -4581,7 +4581,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "9DaOS3rjeKTVSPTxZ0++0w=="
+          "hash": "K4+jfKSxAJwppYVMr4xDnA=="
         }
       },
       "is_incremental": false,
