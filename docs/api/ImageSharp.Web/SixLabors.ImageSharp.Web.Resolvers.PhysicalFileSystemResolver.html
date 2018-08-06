@@ -96,19 +96,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_Resolvers_PhysicalFileSystemResolver__ctor_IHostingEnvironment_SixLabors_ImageSharp_Web_Memory_IBufferManager_IOptions_SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddlewareOptions__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.%23ctor(IHostingEnvironment%2CSixLabors.ImageSharp.Web.Memory.IBufferManager%2CIOptions%7BSixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_Resolvers_PhysicalFileSystemResolver__ctor_IOptions_SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddlewareOptions__IHostingEnvironment_SixLabors_ImageSharp_Web_Memory_IBufferManager_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.%23ctor(IOptions%7BSixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions%7D%2CIHostingEnvironment%2CSixLabors.ImageSharp.Web.Memory.IBufferManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/master/src/ImageSharp.Web/Resolvers/PhysicalFileSystemResolver.cs/#L46">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/4b2f219cf0a3aa3bcdb68465609066ff2c21eb6b/src/ImageSharp.Web/Resolvers/PhysicalFileSystemResolver.cs/#L46">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Web_Resolvers_PhysicalFileSystemResolver__ctor_" data-uid="SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.#ctor*"></a>
-  <h4 id="SixLabors_ImageSharp_Web_Resolvers_PhysicalFileSystemResolver__ctor_IHostingEnvironment_SixLabors_ImageSharp_Web_Memory_IBufferManager_IOptions_SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddlewareOptions__" data-uid="SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.#ctor(IHostingEnvironment,SixLabors.ImageSharp.Web.Memory.IBufferManager,IOptions{SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions})">PhysicalFileSystemResolver(IHostingEnvironment, IBufferManager, IOptions&lt;ImageSharpMiddlewareOptions&gt;)</h4>
+  <h4 id="SixLabors_ImageSharp_Web_Resolvers_PhysicalFileSystemResolver__ctor_IOptions_SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddlewareOptions__IHostingEnvironment_SixLabors_ImageSharp_Web_Memory_IBufferManager_" data-uid="SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.#ctor(IOptions{SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions},IHostingEnvironment,SixLabors.ImageSharp.Web.Memory.IBufferManager)">PhysicalFileSystemResolver(IOptions&lt;ImageSharpMiddlewareOptions&gt;, IHostingEnvironment, IBufferManager)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.html">PhysicalFileSystemResolver</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PhysicalFileSystemResolver(IHostingEnvironment environment, IBufferManager bufferManager, IOptions&lt;ImageSharpMiddlewareOptions&gt; options)</code></pre>
+    <pre><code class="lang-csharp hljs">public PhysicalFileSystemResolver(IOptions&lt;ImageSharpMiddlewareOptions&gt; options, IHostingEnvironment environment, IBufferManager bufferManager)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -121,21 +121,21 @@
     </thead>
     <tbody>
       <tr>
+        <td><span class="xref">IOptions</span>&lt;<a class="xref" href="SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.html">ImageSharpMiddlewareOptions</a>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The middleware configuration options.</p>
+</td>
+      </tr>
+      <tr>
         <td><span class="xref">IHostingEnvironment</span></td>
         <td><span class="parametername">environment</span></td>
-        <td><p>The <see cref="!:IHostingEnvironment"></see> used by this middleware</p>
+        <td><p>The <see cref="!:IHostingEnvironment"></see> used by this middleware.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="SixLabors.ImageSharp.Web.Memory.IBufferManager.html">IBufferManager</a></td>
         <td><span class="parametername">bufferManager</span></td>
-        <td><p>An <a class="xref" href="SixLabors.ImageSharp.Web.Memory.IBufferManager.html">IBufferManager</a> instance used to allocate arrays transporting encoded image data</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">IOptions</span>&lt;<a class="xref" href="SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.html">ImageSharpMiddlewareOptions</a>&gt;</td>
-        <td><span class="parametername">options</span></td>
-        <td><p>The middleware configuration options</p>
+        <td><p>An <a class="xref" href="SixLabors.ImageSharp.Web.Memory.IBufferManager.html">IBufferManager</a> instance used to allocate arrays transporting encoded image data.</p>
 </td>
       </tr>
     </tbody>
@@ -147,7 +147,7 @@
     <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_Resolvers_PhysicalFileSystemResolver_Match.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.Match%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/master/src/ImageSharp.Web/Resolvers/PhysicalFileSystemResolver.cs/#L58">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/4b2f219cf0a3aa3bcdb68465609066ff2c21eb6b/src/ImageSharp.Web/Resolvers/PhysicalFileSystemResolver.cs/#L58">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Web_Resolvers_PhysicalFileSystemResolver_Match_" data-uid="SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.Match*"></a>
   <h4 id="SixLabors_ImageSharp_Web_Resolvers_PhysicalFileSystemResolver_Match" data-uid="SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.Match">Match</h4>
@@ -178,7 +178,7 @@
     <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_Resolvers_PhysicalFileSystemResolver_Settings.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.Settings%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/master/src/ImageSharp.Web/Resolvers/PhysicalFileSystemResolver.cs/#L61">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/4b2f219cf0a3aa3bcdb68465609066ff2c21eb6b/src/ImageSharp.Web/Resolvers/PhysicalFileSystemResolver.cs/#L61">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Web_Resolvers_PhysicalFileSystemResolver_Settings_" data-uid="SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.Settings*"></a>
   <h4 id="SixLabors_ImageSharp_Web_Resolvers_PhysicalFileSystemResolver_Settings" data-uid="SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.Settings">Settings</h4>
@@ -208,19 +208,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_Resolvers_PhysicalFileSystemResolver_IsValidRequestAsync_HttpContext_ILogger_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.IsValidRequestAsync(HttpContext%2CILogger)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_Resolvers_PhysicalFileSystemResolver_IsValidRequestAsync_HttpContext_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.IsValidRequestAsync(HttpContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/master/src/ImageSharp.Web/Resolvers/PhysicalFileSystemResolver.cs/#L64">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/4b2f219cf0a3aa3bcdb68465609066ff2c21eb6b/src/ImageSharp.Web/Resolvers/PhysicalFileSystemResolver.cs/#L64">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Web_Resolvers_PhysicalFileSystemResolver_IsValidRequestAsync_" data-uid="SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.IsValidRequestAsync*"></a>
-  <h4 id="SixLabors_ImageSharp_Web_Resolvers_PhysicalFileSystemResolver_IsValidRequestAsync_HttpContext_ILogger_" data-uid="SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.IsValidRequestAsync(HttpContext,ILogger)">IsValidRequestAsync(HttpContext, ILogger)</h4>
+  <h4 id="SixLabors_ImageSharp_Web_Resolvers_PhysicalFileSystemResolver_IsValidRequestAsync_HttpContext_" data-uid="SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.IsValidRequestAsync(HttpContext)">IsValidRequestAsync(HttpContext)</h4>
   <div class="markdown level1 summary"><p>Gets a value indicating whether the current request passes sanitizing rules.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; IsValidRequestAsync(HttpContext context, ILogger logger)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; IsValidRequestAsync(HttpContext context)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -235,13 +235,7 @@
       <tr>
         <td><span class="xref">HttpContext</span></td>
         <td><span class="parametername">context</span></td>
-        <td><p>The current HTTP request context</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">ILogger</span></td>
-        <td><span class="parametername">logger</span></td>
-        <td><p>The type used for performing logging.</p>
+        <td><p>The current HTTP request context.</p>
 </td>
       </tr>
     </tbody>
@@ -264,19 +258,19 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_Resolvers_PhysicalFileSystemResolver_ResolveImageAsync_HttpContext_ILogger_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.ResolveImageAsync(HttpContext%2CILogger)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_Resolvers_PhysicalFileSystemResolver_ResolveImageAsync_HttpContext_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.ResolveImageAsync(HttpContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/master/src/ImageSharp.Web/Resolvers/PhysicalFileSystemResolver.cs/#L70">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/4b2f219cf0a3aa3bcdb68465609066ff2c21eb6b/src/ImageSharp.Web/Resolvers/PhysicalFileSystemResolver.cs/#L70">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Web_Resolvers_PhysicalFileSystemResolver_ResolveImageAsync_" data-uid="SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.ResolveImageAsync*"></a>
-  <h4 id="SixLabors_ImageSharp_Web_Resolvers_PhysicalFileSystemResolver_ResolveImageAsync_HttpContext_ILogger_" data-uid="SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.ResolveImageAsync(HttpContext,ILogger)">ResolveImageAsync(HttpContext, ILogger)</h4>
+  <h4 id="SixLabors_ImageSharp_Web_Resolvers_PhysicalFileSystemResolver_ResolveImageAsync_HttpContext_" data-uid="SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.ResolveImageAsync(HttpContext)">ResolveImageAsync(HttpContext)</h4>
   <div class="markdown level1 summary"><p>Resolves the image in an asynchronous manner.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;IByteBuffer&gt; ResolveImageAsync(HttpContext context, ILogger logger)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;IByteBuffer&gt; ResolveImageAsync(HttpContext context)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -291,13 +285,7 @@
       <tr>
         <td><span class="xref">HttpContext</span></td>
         <td><span class="parametername">context</span></td>
-        <td><p>The current HTTP request context</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">ILogger</span></td>
-        <td><span class="parametername">logger</span></td>
-        <td><p>The type used for performing logging.</p>
+        <td><p>The current HTTP request context.</p>
 </td>
       </tr>
     </tbody>
@@ -313,7 +301,7 @@
     <tbody>
       <tr>
         <td><span class="xref">Task</span>&lt;<a class="xref" href="SixLabors.ImageSharp.Web.Memory.IByteBuffer.html">IByteBuffer</a>&gt;</td>
-        <td><p>The <span class="xref">Task{IByteBuffer}</span></p>
+        <td><p>The <span class="xref">Task{IByteBuffer}</span>.</p>
 </td>
       </tr>
     </tbody>
@@ -333,7 +321,7 @@
                     <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_Resolvers_PhysicalFileSystemResolver.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/master/src/ImageSharp.Web/Resolvers/PhysicalFileSystemResolver.cs/#L23" class="contribution-link">View Source</a>
+                    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/4b2f219cf0a3aa3bcdb68465609066ff2c21eb6b/src/ImageSharp.Web/Resolvers/PhysicalFileSystemResolver.cs/#L23" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

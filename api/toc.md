@@ -3,3 +3,4 @@
 # @SixLabors.Fonts
 # @SixLabors.Shapes
 # @SixLabors.Primitives
+# @SixLabors.Memory

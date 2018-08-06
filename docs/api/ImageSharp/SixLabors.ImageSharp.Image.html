@@ -3975,6 +3975,532 @@
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Image_WrapMemory__1_IMemoryOwner___0__System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Image.WrapMemory%60%601(IMemoryOwner%7B%60%600%7D%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/Image.WrapMemory.cs/#L142">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Image_WrapMemory_" data-uid="SixLabors.ImageSharp.Image.WrapMemory*"></a>
+  <h4 id="SixLabors_ImageSharp_Image_WrapMemory__1_IMemoryOwner___0__System_Int32_System_Int32_" data-uid="SixLabors.ImageSharp.Image.WrapMemory``1(IMemoryOwner{``0},System.Int32,System.Int32)">WrapMemory&lt;TPixel&gt;(IMemoryOwner&lt;TPixel&gt;, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Wraps an existing contigous memory area of &apos;width&apos;x&apos;height&apos; pixels,
+allowing to view/manipulate it as an ImageSharp <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> instance.
+The ownership of the <code data-dev-comment-type="paramref" class="paramref">pixelMemoryOwner</code> is being transfered to the new <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> instance,
+meaning that the caller is not allowed to dispose <code data-dev-comment-type="paramref" class="paramref">pixelMemoryOwner</code>.
+It will be disposed together with the result image.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Image&lt;TPixel&gt; WrapMemory&lt;TPixel&gt;(IMemoryOwner&lt;TPixel&gt; pixelMemoryOwner, int width, int height)
+    where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IMemoryOwner</span>&lt;TPixel&gt;</td>
+        <td><span class="parametername">pixelMemoryOwner</span></td>
+        <td><p>The <see cref="!:IMemoryOwner&lt;T>"></see> that is being transfered to the image</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">width</span></td>
+        <td><p>The width of the memory image</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">height</span></td>
+        <td><p>The height of the memory image</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image</a>&lt;TPixel&gt;</td>
+        <td><p>An <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> instance</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TPixel</span></td>
+        <td><p>The pixel type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Image_WrapMemory__1_SixLabors_ImageSharp_Configuration_IMemoryOwner___0__System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Image.WrapMemory%60%601(SixLabors.ImageSharp.Configuration%2CIMemoryOwner%7B%60%600%7D%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/Image.WrapMemory.cs/#L120">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Image_WrapMemory_" data-uid="SixLabors.ImageSharp.Image.WrapMemory*"></a>
+  <h4 id="SixLabors_ImageSharp_Image_WrapMemory__1_SixLabors_ImageSharp_Configuration_IMemoryOwner___0__System_Int32_System_Int32_" data-uid="SixLabors.ImageSharp.Image.WrapMemory``1(SixLabors.ImageSharp.Configuration,IMemoryOwner{``0},System.Int32,System.Int32)">WrapMemory&lt;TPixel&gt;(Configuration, IMemoryOwner&lt;TPixel&gt;, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Wraps an existing contigous memory area of &apos;width&apos;x&apos;height&apos; pixels,
+allowing to view/manipulate it as an ImageSharp <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> instance.
+The ownership of the <code data-dev-comment-type="paramref" class="paramref">pixelMemoryOwner</code> is being transfered to the new <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> instance,
+meaning that the caller is not allowed to dispose <code data-dev-comment-type="paramref" class="paramref">pixelMemoryOwner</code>.
+It will be disposed together with the result image.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Image&lt;TPixel&gt; WrapMemory&lt;TPixel&gt;(Configuration config, IMemoryOwner&lt;TPixel&gt; pixelMemoryOwner, int width, int height)
+    where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Configuration.html">Configuration</a></td>
+        <td><span class="parametername">config</span></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Configuration.html">Configuration</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">IMemoryOwner</span>&lt;TPixel&gt;</td>
+        <td><span class="parametername">pixelMemoryOwner</span></td>
+        <td><p>The <see cref="!:IMemoryOwner&lt;T>"></see> that is being transfered to the image</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">width</span></td>
+        <td><p>The width of the memory image</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">height</span></td>
+        <td><p>The height of the memory image</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image</a>&lt;TPixel&gt;</td>
+        <td><p>An <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> instance</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TPixel</span></td>
+        <td><p>The pixel type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Image_WrapMemory__1_SixLabors_ImageSharp_Configuration_IMemoryOwner___0__System_Int32_System_Int32_SixLabors_ImageSharp_MetaData_ImageMetaData_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Image.WrapMemory%60%601(SixLabors.ImageSharp.Configuration%2CIMemoryOwner%7B%60%600%7D%2CSystem.Int32%2CSystem.Int32%2CSixLabors.ImageSharp.MetaData.ImageMetaData)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/Image.WrapMemory.cs/#L95">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Image_WrapMemory_" data-uid="SixLabors.ImageSharp.Image.WrapMemory*"></a>
+  <h4 id="SixLabors_ImageSharp_Image_WrapMemory__1_SixLabors_ImageSharp_Configuration_IMemoryOwner___0__System_Int32_System_Int32_SixLabors_ImageSharp_MetaData_ImageMetaData_" data-uid="SixLabors.ImageSharp.Image.WrapMemory``1(SixLabors.ImageSharp.Configuration,IMemoryOwner{``0},System.Int32,System.Int32,SixLabors.ImageSharp.MetaData.ImageMetaData)">WrapMemory&lt;TPixel&gt;(Configuration, IMemoryOwner&lt;TPixel&gt;, Int32, Int32, ImageMetaData)</h4>
+  <div class="markdown level1 summary"><p>Wraps an existing contigous memory area of &apos;width&apos;x&apos;height&apos; pixels,
+allowing to view/manipulate it as an ImageSharp <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> instance.
+The ownership of the <code data-dev-comment-type="paramref" class="paramref">pixelMemoryOwner</code> is being transfered to the new <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> instance,
+meaning that the caller is not allowed to dispose <code data-dev-comment-type="paramref" class="paramref">pixelMemoryOwner</code>.
+It will be disposed together with the result image.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Image&lt;TPixel&gt; WrapMemory&lt;TPixel&gt;(Configuration config, IMemoryOwner&lt;TPixel&gt; pixelMemoryOwner, int width, int height, ImageMetaData metaData)
+    where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Configuration.html">Configuration</a></td>
+        <td><span class="parametername">config</span></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Configuration.html">Configuration</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">IMemoryOwner</span>&lt;TPixel&gt;</td>
+        <td><span class="parametername">pixelMemoryOwner</span></td>
+        <td><p>The <see cref="!:IMemoryOwner&lt;T>"></see> that is being transfered to the image</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">width</span></td>
+        <td><p>The width of the memory image</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">height</span></td>
+        <td><p>The height of the memory image</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.MetaData.ImageMetaData.html">ImageMetaData</a></td>
+        <td><span class="parametername">metaData</span></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.MetaData.ImageMetaData.html">ImageMetaData</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image</a>&lt;TPixel&gt;</td>
+        <td><p>An <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> instance</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TPixel</span></td>
+        <td><p>The pixel type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Image_WrapMemory__1_SixLabors_ImageSharp_Configuration_SixLabors_ImageSharp_Memory___0__System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Image.WrapMemory%60%601(SixLabors.ImageSharp.Configuration%2CSixLabors.ImageSharp.Memory%7B%60%600%7D%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/Image.WrapMemory.cs/#L52">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Image_WrapMemory_" data-uid="SixLabors.ImageSharp.Image.WrapMemory*"></a>
+  <h4 id="SixLabors_ImageSharp_Image_WrapMemory__1_SixLabors_ImageSharp_Configuration_SixLabors_ImageSharp_Memory___0__System_Int32_System_Int32_" data-uid="SixLabors.ImageSharp.Image.WrapMemory``1(SixLabors.ImageSharp.Configuration,SixLabors.ImageSharp.Memory{``0},System.Int32,System.Int32)">WrapMemory&lt;TPixel&gt;(Configuration, Memory&lt;TPixel&gt;, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Wraps an existing contigous memory area of &apos;width&apos;x&apos;height&apos; pixels,
+allowing to view/manipulate it as an ImageSharp <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Image&lt;TPixel&gt; WrapMemory&lt;TPixel&gt;(Configuration config, Memory&lt;TPixel&gt; pixelMemory, int width, int height)
+    where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Configuration.html">Configuration</a></td>
+        <td><span class="parametername">config</span></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Configuration.html">Configuration</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">SixLabors.ImageSharp.Memory</span>&lt;TPixel&gt;</td>
+        <td><span class="parametername">pixelMemory</span></td>
+        <td><p>The pixel memory</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">width</span></td>
+        <td><p>The width of the memory image</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">height</span></td>
+        <td><p>The height of the memory image</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image</a>&lt;TPixel&gt;</td>
+        <td><p>An <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> instance</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TPixel</span></td>
+        <td><p>The pixel type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Image_WrapMemory__1_SixLabors_ImageSharp_Configuration_SixLabors_ImageSharp_Memory___0__System_Int32_System_Int32_SixLabors_ImageSharp_MetaData_ImageMetaData_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Image.WrapMemory%60%601(SixLabors.ImageSharp.Configuration%2CSixLabors.ImageSharp.Memory%7B%60%600%7D%2CSystem.Int32%2CSystem.Int32%2CSixLabors.ImageSharp.MetaData.ImageMetaData)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/Image.WrapMemory.cs/#L30">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Image_WrapMemory_" data-uid="SixLabors.ImageSharp.Image.WrapMemory*"></a>
+  <h4 id="SixLabors_ImageSharp_Image_WrapMemory__1_SixLabors_ImageSharp_Configuration_SixLabors_ImageSharp_Memory___0__System_Int32_System_Int32_SixLabors_ImageSharp_MetaData_ImageMetaData_" data-uid="SixLabors.ImageSharp.Image.WrapMemory``1(SixLabors.ImageSharp.Configuration,SixLabors.ImageSharp.Memory{``0},System.Int32,System.Int32,SixLabors.ImageSharp.MetaData.ImageMetaData)">WrapMemory&lt;TPixel&gt;(Configuration, Memory&lt;TPixel&gt;, Int32, Int32, ImageMetaData)</h4>
+  <div class="markdown level1 summary"><p>Wraps an existing contigous memory area of &apos;width&apos;x&apos;height&apos; pixels,
+allowing to view/manipulate it as an ImageSharp <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Image&lt;TPixel&gt; WrapMemory&lt;TPixel&gt;(Configuration config, Memory&lt;TPixel&gt; pixelMemory, int width, int height, ImageMetaData metaData)
+    where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Configuration.html">Configuration</a></td>
+        <td><span class="parametername">config</span></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Configuration.html">Configuration</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">SixLabors.ImageSharp.Memory</span>&lt;TPixel&gt;</td>
+        <td><span class="parametername">pixelMemory</span></td>
+        <td><p>The pixel memory</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">width</span></td>
+        <td><p>The width of the memory image</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">height</span></td>
+        <td><p>The height of the memory image</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.MetaData.ImageMetaData.html">ImageMetaData</a></td>
+        <td><span class="parametername">metaData</span></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.MetaData.ImageMetaData.html">ImageMetaData</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image</a>&lt;TPixel&gt;</td>
+        <td><p>An <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> instance</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TPixel</span></td>
+        <td><p>The pixel type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Image_WrapMemory__1_SixLabors_ImageSharp_Memory___0__System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Image.WrapMemory%60%601(SixLabors.ImageSharp.Memory%7B%60%600%7D%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/Image.WrapMemory.cs/#L72">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Image_WrapMemory_" data-uid="SixLabors.ImageSharp.Image.WrapMemory*"></a>
+  <h4 id="SixLabors_ImageSharp_Image_WrapMemory__1_SixLabors_ImageSharp_Memory___0__System_Int32_System_Int32_" data-uid="SixLabors.ImageSharp.Image.WrapMemory``1(SixLabors.ImageSharp.Memory{``0},System.Int32,System.Int32)">WrapMemory&lt;TPixel&gt;(Memory&lt;TPixel&gt;, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Wraps an existing contigous memory area of &apos;width&apos;x&apos;height&apos; pixels,
+allowing to view/manipulate it as an ImageSharp <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> instance.
+The memory is being observed, the caller remains responsible for managing it&apos;s lifecycle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Image&lt;TPixel&gt; WrapMemory&lt;TPixel&gt;(Memory&lt;TPixel&gt; pixelMemory, int width, int height)
+    where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">SixLabors.ImageSharp.Memory</span>&lt;TPixel&gt;</td>
+        <td><span class="parametername">pixelMemory</span></td>
+        <td><p>The pixel memory</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">width</span></td>
+        <td><p>The width of the memory image</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">height</span></td>
+        <td><p>The height of the memory image</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image</a>&lt;TPixel&gt;</td>
+        <td><p>An <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> instance</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TPixel</span></td>
+        <td><p>The pixel type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           
@@ -3986,7 +4512,7 @@
                     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Image.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Image%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/Image.WrapMemory.cs/#L14" class="contribution-link">View Source</a>
+                    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/Image.WrapMemory.cs/#L17" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

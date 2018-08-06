@@ -1625,6 +1625,19 @@ references:
   isSpec: "True"
   fullName: SixLabors.ImageSharp.Configuration.ImageFormatsManager
   nameWithType: Configuration.ImageFormatsManager
+- uid: SixLabors.ImageSharp.Configuration.MaxDegreeOfParallelism
+  name: MaxDegreeOfParallelism
+  href: api/ImageSharp/SixLabors.ImageSharp.Configuration.html#SixLabors_ImageSharp_Configuration_MaxDegreeOfParallelism
+  commentId: P:SixLabors.ImageSharp.Configuration.MaxDegreeOfParallelism
+  fullName: SixLabors.ImageSharp.Configuration.MaxDegreeOfParallelism
+  nameWithType: Configuration.MaxDegreeOfParallelism
+- uid: SixLabors.ImageSharp.Configuration.MaxDegreeOfParallelism*
+  name: MaxDegreeOfParallelism
+  href: api/ImageSharp/SixLabors.ImageSharp.Configuration.html#SixLabors_ImageSharp_Configuration_MaxDegreeOfParallelism_
+  commentId: Overload:SixLabors.ImageSharp.Configuration.MaxDegreeOfParallelism
+  isSpec: "True"
+  fullName: SixLabors.ImageSharp.Configuration.MaxDegreeOfParallelism
+  nameWithType: Configuration.MaxDegreeOfParallelism
 - uid: SixLabors.ImageSharp.Configuration.MemoryAllocator
   name: MemoryAllocator
   href: api/ImageSharp/SixLabors.ImageSharp.Configuration.html#SixLabors_ImageSharp_Configuration_MemoryAllocator
@@ -1638,19 +1651,6 @@ references:
   isSpec: "True"
   fullName: SixLabors.ImageSharp.Configuration.MemoryAllocator
   nameWithType: Configuration.MemoryAllocator
-- uid: SixLabors.ImageSharp.Configuration.ParallelOptions
-  name: ParallelOptions
-  href: api/ImageSharp/SixLabors.ImageSharp.Configuration.html#SixLabors_ImageSharp_Configuration_ParallelOptions
-  commentId: P:SixLabors.ImageSharp.Configuration.ParallelOptions
-  fullName: SixLabors.ImageSharp.Configuration.ParallelOptions
-  nameWithType: Configuration.ParallelOptions
-- uid: SixLabors.ImageSharp.Configuration.ParallelOptions*
-  name: ParallelOptions
-  href: api/ImageSharp/SixLabors.ImageSharp.Configuration.html#SixLabors_ImageSharp_Configuration_ParallelOptions_
-  commentId: Overload:SixLabors.ImageSharp.Configuration.ParallelOptions
-  isSpec: "True"
-  fullName: SixLabors.ImageSharp.Configuration.ParallelOptions
-  nameWithType: Configuration.ParallelOptions
 - uid: SixLabors.ImageSharp.Configuration.ReadOrigin
   name: ReadOrigin
   href: api/ImageSharp/SixLabors.ImageSharp.Configuration.html#SixLabors_ImageSharp_Configuration_ReadOrigin
@@ -3680,6 +3680,67 @@ references:
   fullName.vb: SixLabors.ImageSharp.Image.LoadPixelData(Of TPixel)(System.Byte(), System.Int32, System.Int32)
   nameWithType: Image.LoadPixelData<TPixel>(Byte[], Int32, Int32)
   nameWithType.vb: Image.LoadPixelData(Of TPixel)(Byte(), Int32, Int32)
+- uid: SixLabors.ImageSharp.Image.WrapMemory*
+  name: WrapMemory
+  href: api/ImageSharp/SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_WrapMemory_
+  commentId: Overload:SixLabors.ImageSharp.Image.WrapMemory
+  isSpec: "True"
+  fullName: SixLabors.ImageSharp.Image.WrapMemory
+  nameWithType: Image.WrapMemory
+- uid: SixLabors.ImageSharp.Image.WrapMemory``1(IMemoryOwner{``0},System.Int32,System.Int32)
+  name: WrapMemory<TPixel>(IMemoryOwner<TPixel>, Int32, Int32)
+  href: api/ImageSharp/SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_WrapMemory__1_IMemoryOwner___0__System_Int32_System_Int32_
+  commentId: M:SixLabors.ImageSharp.Image.WrapMemory``1(IMemoryOwner{``0},System.Int32,System.Int32)
+  name.vb: WrapMemory(Of TPixel)(IMemoryOwner(Of TPixel), Int32, Int32)
+  fullName: SixLabors.ImageSharp.Image.WrapMemory<TPixel>(IMemoryOwner<TPixel>, System.Int32, System.Int32)
+  fullName.vb: SixLabors.ImageSharp.Image.WrapMemory(Of TPixel)(IMemoryOwner(Of TPixel), System.Int32, System.Int32)
+  nameWithType: Image.WrapMemory<TPixel>(IMemoryOwner<TPixel>, Int32, Int32)
+  nameWithType.vb: Image.WrapMemory(Of TPixel)(IMemoryOwner(Of TPixel), Int32, Int32)
+- uid: SixLabors.ImageSharp.Image.WrapMemory``1(SixLabors.ImageSharp.Configuration,IMemoryOwner{``0},System.Int32,System.Int32)
+  name: WrapMemory<TPixel>(Configuration, IMemoryOwner<TPixel>, Int32, Int32)
+  href: api/ImageSharp/SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_WrapMemory__1_SixLabors_ImageSharp_Configuration_IMemoryOwner___0__System_Int32_System_Int32_
+  commentId: M:SixLabors.ImageSharp.Image.WrapMemory``1(SixLabors.ImageSharp.Configuration,IMemoryOwner{``0},System.Int32,System.Int32)
+  name.vb: WrapMemory(Of TPixel)(Configuration, IMemoryOwner(Of TPixel), Int32, Int32)
+  fullName: SixLabors.ImageSharp.Image.WrapMemory<TPixel>(SixLabors.ImageSharp.Configuration, IMemoryOwner<TPixel>, System.Int32, System.Int32)
+  fullName.vb: SixLabors.ImageSharp.Image.WrapMemory(Of TPixel)(SixLabors.ImageSharp.Configuration, IMemoryOwner(Of TPixel), System.Int32, System.Int32)
+  nameWithType: Image.WrapMemory<TPixel>(Configuration, IMemoryOwner<TPixel>, Int32, Int32)
+  nameWithType.vb: Image.WrapMemory(Of TPixel)(Configuration, IMemoryOwner(Of TPixel), Int32, Int32)
+- uid: SixLabors.ImageSharp.Image.WrapMemory``1(SixLabors.ImageSharp.Configuration,IMemoryOwner{``0},System.Int32,System.Int32,SixLabors.ImageSharp.MetaData.ImageMetaData)
+  name: WrapMemory<TPixel>(Configuration, IMemoryOwner<TPixel>, Int32, Int32, ImageMetaData)
+  href: api/ImageSharp/SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_WrapMemory__1_SixLabors_ImageSharp_Configuration_IMemoryOwner___0__System_Int32_System_Int32_SixLabors_ImageSharp_MetaData_ImageMetaData_
+  commentId: M:SixLabors.ImageSharp.Image.WrapMemory``1(SixLabors.ImageSharp.Configuration,IMemoryOwner{``0},System.Int32,System.Int32,SixLabors.ImageSharp.MetaData.ImageMetaData)
+  name.vb: WrapMemory(Of TPixel)(Configuration, IMemoryOwner(Of TPixel), Int32, Int32, ImageMetaData)
+  fullName: SixLabors.ImageSharp.Image.WrapMemory<TPixel>(SixLabors.ImageSharp.Configuration, IMemoryOwner<TPixel>, System.Int32, System.Int32, SixLabors.ImageSharp.MetaData.ImageMetaData)
+  fullName.vb: SixLabors.ImageSharp.Image.WrapMemory(Of TPixel)(SixLabors.ImageSharp.Configuration, IMemoryOwner(Of TPixel), System.Int32, System.Int32, SixLabors.ImageSharp.MetaData.ImageMetaData)
+  nameWithType: Image.WrapMemory<TPixel>(Configuration, IMemoryOwner<TPixel>, Int32, Int32, ImageMetaData)
+  nameWithType.vb: Image.WrapMemory(Of TPixel)(Configuration, IMemoryOwner(Of TPixel), Int32, Int32, ImageMetaData)
+- uid: SixLabors.ImageSharp.Image.WrapMemory``1(SixLabors.ImageSharp.Configuration,SixLabors.ImageSharp.Memory{``0},System.Int32,System.Int32)
+  name: WrapMemory<TPixel>(Configuration, Memory<TPixel>, Int32, Int32)
+  href: api/ImageSharp/SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_WrapMemory__1_SixLabors_ImageSharp_Configuration_SixLabors_ImageSharp_Memory___0__System_Int32_System_Int32_
+  commentId: M:SixLabors.ImageSharp.Image.WrapMemory``1(SixLabors.ImageSharp.Configuration,SixLabors.ImageSharp.Memory{``0},System.Int32,System.Int32)
+  name.vb: WrapMemory(Of TPixel)(Configuration, Memory(Of TPixel), Int32, Int32)
+  fullName: SixLabors.ImageSharp.Image.WrapMemory<TPixel>(SixLabors.ImageSharp.Configuration, SixLabors.ImageSharp.Memory<TPixel>, System.Int32, System.Int32)
+  fullName.vb: SixLabors.ImageSharp.Image.WrapMemory(Of TPixel)(SixLabors.ImageSharp.Configuration, SixLabors.ImageSharp.Memory(Of TPixel), System.Int32, System.Int32)
+  nameWithType: Image.WrapMemory<TPixel>(Configuration, Memory<TPixel>, Int32, Int32)
+  nameWithType.vb: Image.WrapMemory(Of TPixel)(Configuration, Memory(Of TPixel), Int32, Int32)
+- uid: SixLabors.ImageSharp.Image.WrapMemory``1(SixLabors.ImageSharp.Configuration,SixLabors.ImageSharp.Memory{``0},System.Int32,System.Int32,SixLabors.ImageSharp.MetaData.ImageMetaData)
+  name: WrapMemory<TPixel>(Configuration, Memory<TPixel>, Int32, Int32, ImageMetaData)
+  href: api/ImageSharp/SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_WrapMemory__1_SixLabors_ImageSharp_Configuration_SixLabors_ImageSharp_Memory___0__System_Int32_System_Int32_SixLabors_ImageSharp_MetaData_ImageMetaData_
+  commentId: M:SixLabors.ImageSharp.Image.WrapMemory``1(SixLabors.ImageSharp.Configuration,SixLabors.ImageSharp.Memory{``0},System.Int32,System.Int32,SixLabors.ImageSharp.MetaData.ImageMetaData)
+  name.vb: WrapMemory(Of TPixel)(Configuration, Memory(Of TPixel), Int32, Int32, ImageMetaData)
+  fullName: SixLabors.ImageSharp.Image.WrapMemory<TPixel>(SixLabors.ImageSharp.Configuration, SixLabors.ImageSharp.Memory<TPixel>, System.Int32, System.Int32, SixLabors.ImageSharp.MetaData.ImageMetaData)
+  fullName.vb: SixLabors.ImageSharp.Image.WrapMemory(Of TPixel)(SixLabors.ImageSharp.Configuration, SixLabors.ImageSharp.Memory(Of TPixel), System.Int32, System.Int32, SixLabors.ImageSharp.MetaData.ImageMetaData)
+  nameWithType: Image.WrapMemory<TPixel>(Configuration, Memory<TPixel>, Int32, Int32, ImageMetaData)
+  nameWithType.vb: Image.WrapMemory(Of TPixel)(Configuration, Memory(Of TPixel), Int32, Int32, ImageMetaData)
+- uid: SixLabors.ImageSharp.Image.WrapMemory``1(SixLabors.ImageSharp.Memory{``0},System.Int32,System.Int32)
+  name: WrapMemory<TPixel>(Memory<TPixel>, Int32, Int32)
+  href: api/ImageSharp/SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_WrapMemory__1_SixLabors_ImageSharp_Memory___0__System_Int32_System_Int32_
+  commentId: M:SixLabors.ImageSharp.Image.WrapMemory``1(SixLabors.ImageSharp.Memory{``0},System.Int32,System.Int32)
+  name.vb: WrapMemory(Of TPixel)(Memory(Of TPixel), Int32, Int32)
+  fullName: SixLabors.ImageSharp.Image.WrapMemory<TPixel>(SixLabors.ImageSharp.Memory<TPixel>, System.Int32, System.Int32)
+  fullName.vb: SixLabors.ImageSharp.Image.WrapMemory(Of TPixel)(SixLabors.ImageSharp.Memory(Of TPixel), System.Int32, System.Int32)
+  nameWithType: Image.WrapMemory<TPixel>(Memory<TPixel>, Int32, Int32)
+  nameWithType.vb: Image.WrapMemory(Of TPixel)(Memory(Of TPixel), Int32, Int32)
 - uid: SixLabors.ImageSharp.Image`1
   name: Image<TPixel>
   href: api/ImageSharp/SixLabors.ImageSharp.Image-1.html
@@ -4707,6 +4768,19 @@ references:
   isSpec: "True"
   fullName: SixLabors.ImageSharp.MetaData.ImageMetaData.RepeatCount
   nameWithType: ImageMetaData.RepeatCount
+- uid: SixLabors.ImageSharp.MetaData.ImageMetaData.ResolutionUnits
+  name: ResolutionUnits
+  href: api/ImageSharp/SixLabors.ImageSharp.MetaData.ImageMetaData.html#SixLabors_ImageSharp_MetaData_ImageMetaData_ResolutionUnits
+  commentId: P:SixLabors.ImageSharp.MetaData.ImageMetaData.ResolutionUnits
+  fullName: SixLabors.ImageSharp.MetaData.ImageMetaData.ResolutionUnits
+  nameWithType: ImageMetaData.ResolutionUnits
+- uid: SixLabors.ImageSharp.MetaData.ImageMetaData.ResolutionUnits*
+  name: ResolutionUnits
+  href: api/ImageSharp/SixLabors.ImageSharp.MetaData.ImageMetaData.html#SixLabors_ImageSharp_MetaData_ImageMetaData_ResolutionUnits_
+  commentId: Overload:SixLabors.ImageSharp.MetaData.ImageMetaData.ResolutionUnits
+  isSpec: "True"
+  fullName: SixLabors.ImageSharp.MetaData.ImageMetaData.ResolutionUnits
+  nameWithType: ImageMetaData.ResolutionUnits
 - uid: SixLabors.ImageSharp.MetaData.ImageMetaData.VerticalResolution
   name: VerticalResolution
   href: api/ImageSharp/SixLabors.ImageSharp.MetaData.ImageMetaData.html#SixLabors_ImageSharp_MetaData_ImageMetaData_VerticalResolution
@@ -4836,6 +4910,36 @@ references:
   isSpec: "True"
   fullName: SixLabors.ImageSharp.MetaData.ImageProperty.Value
   nameWithType: ImageProperty.Value
+- uid: SixLabors.ImageSharp.MetaData.PixelResolutionUnit
+  name: PixelResolutionUnit
+  href: api/ImageSharp/SixLabors.ImageSharp.MetaData.PixelResolutionUnit.html
+  commentId: T:SixLabors.ImageSharp.MetaData.PixelResolutionUnit
+  fullName: SixLabors.ImageSharp.MetaData.PixelResolutionUnit
+  nameWithType: PixelResolutionUnit
+- uid: SixLabors.ImageSharp.MetaData.PixelResolutionUnit.AspectRatio
+  name: AspectRatio
+  href: api/ImageSharp/SixLabors.ImageSharp.MetaData.PixelResolutionUnit.html#SixLabors_ImageSharp_MetaData_PixelResolutionUnit_AspectRatio
+  commentId: F:SixLabors.ImageSharp.MetaData.PixelResolutionUnit.AspectRatio
+  fullName: SixLabors.ImageSharp.MetaData.PixelResolutionUnit.AspectRatio
+  nameWithType: PixelResolutionUnit.AspectRatio
+- uid: SixLabors.ImageSharp.MetaData.PixelResolutionUnit.PixelsPerCentimeter
+  name: PixelsPerCentimeter
+  href: api/ImageSharp/SixLabors.ImageSharp.MetaData.PixelResolutionUnit.html#SixLabors_ImageSharp_MetaData_PixelResolutionUnit_PixelsPerCentimeter
+  commentId: F:SixLabors.ImageSharp.MetaData.PixelResolutionUnit.PixelsPerCentimeter
+  fullName: SixLabors.ImageSharp.MetaData.PixelResolutionUnit.PixelsPerCentimeter
+  nameWithType: PixelResolutionUnit.PixelsPerCentimeter
+- uid: SixLabors.ImageSharp.MetaData.PixelResolutionUnit.PixelsPerInch
+  name: PixelsPerInch
+  href: api/ImageSharp/SixLabors.ImageSharp.MetaData.PixelResolutionUnit.html#SixLabors_ImageSharp_MetaData_PixelResolutionUnit_PixelsPerInch
+  commentId: F:SixLabors.ImageSharp.MetaData.PixelResolutionUnit.PixelsPerInch
+  fullName: SixLabors.ImageSharp.MetaData.PixelResolutionUnit.PixelsPerInch
+  nameWithType: PixelResolutionUnit.PixelsPerInch
+- uid: SixLabors.ImageSharp.MetaData.PixelResolutionUnit.PixelsPerMeter
+  name: PixelsPerMeter
+  href: api/ImageSharp/SixLabors.ImageSharp.MetaData.PixelResolutionUnit.html#SixLabors_ImageSharp_MetaData_PixelResolutionUnit_PixelsPerMeter
+  commentId: F:SixLabors.ImageSharp.MetaData.PixelResolutionUnit.PixelsPerMeter
+  fullName: SixLabors.ImageSharp.MetaData.PixelResolutionUnit.PixelsPerMeter
+  nameWithType: PixelResolutionUnit.PixelsPerMeter
 - uid: SixLabors.ImageSharp.MetaData.Profiles.Exif
   name: SixLabors.ImageSharp.MetaData.Profiles.Exif
   href: api/ImageSharp/SixLabors.ImageSharp.MetaData.Profiles.Exif.html
@@ -7120,22 +7224,6 @@ references:
   isSpec: "True"
   fullName: SixLabors.ImageSharp.MetaData.Profiles.Icc.IccProfile.Entries
   nameWithType: IccProfile.Entries
-- uid: SixLabors.ImageSharp.MetaData.Profiles.Icc.IccProfile.Extend(System.Byte[])
-  name: Extend(Byte[])
-  href: api/ImageSharp/SixLabors.ImageSharp.MetaData.Profiles.Icc.IccProfile.html#SixLabors_ImageSharp_MetaData_Profiles_Icc_IccProfile_Extend_System_Byte___
-  commentId: M:SixLabors.ImageSharp.MetaData.Profiles.Icc.IccProfile.Extend(System.Byte[])
-  name.vb: Extend(Byte())
-  fullName: SixLabors.ImageSharp.MetaData.Profiles.Icc.IccProfile.Extend(System.Byte[])
-  fullName.vb: SixLabors.ImageSharp.MetaData.Profiles.Icc.IccProfile.Extend(System.Byte())
-  nameWithType: IccProfile.Extend(Byte[])
-  nameWithType.vb: IccProfile.Extend(Byte())
-- uid: SixLabors.ImageSharp.MetaData.Profiles.Icc.IccProfile.Extend*
-  name: Extend
-  href: api/ImageSharp/SixLabors.ImageSharp.MetaData.Profiles.Icc.IccProfile.html#SixLabors_ImageSharp_MetaData_Profiles_Icc_IccProfile_Extend_
-  commentId: Overload:SixLabors.ImageSharp.MetaData.Profiles.Icc.IccProfile.Extend
-  isSpec: "True"
-  fullName: SixLabors.ImageSharp.MetaData.Profiles.Icc.IccProfile.Extend
-  nameWithType: IccProfile.Extend
 - uid: SixLabors.ImageSharp.MetaData.Profiles.Icc.IccProfile.Header
   name: Header
   href: api/ImageSharp/SixLabors.ImageSharp.MetaData.Profiles.Icc.IccProfile.html#SixLabors_ImageSharp_MetaData_Profiles_Icc_IccProfile_Header
@@ -23866,6 +23954,37 @@ references:
   commentId: F:SixLabors.ImageSharp.Processing.GrayscaleMode.Bt709
   fullName: SixLabors.ImageSharp.Processing.GrayscaleMode.Bt709
   nameWithType: GrayscaleMode.Bt709
+- uid: SixLabors.ImageSharp.Processing.HistogramEqualizationExtension
+  name: HistogramEqualizationExtension
+  href: api/ImageSharp/SixLabors.ImageSharp.Processing.HistogramEqualizationExtension.html
+  commentId: T:SixLabors.ImageSharp.Processing.HistogramEqualizationExtension
+  fullName: SixLabors.ImageSharp.Processing.HistogramEqualizationExtension
+  nameWithType: HistogramEqualizationExtension
+- uid: SixLabors.ImageSharp.Processing.HistogramEqualizationExtension.HistogramEqualization*
+  name: HistogramEqualization
+  href: api/ImageSharp/SixLabors.ImageSharp.Processing.HistogramEqualizationExtension.html#SixLabors_ImageSharp_Processing_HistogramEqualizationExtension_HistogramEqualization_
+  commentId: Overload:SixLabors.ImageSharp.Processing.HistogramEqualizationExtension.HistogramEqualization
+  isSpec: "True"
+  fullName: SixLabors.ImageSharp.Processing.HistogramEqualizationExtension.HistogramEqualization
+  nameWithType: HistogramEqualizationExtension.HistogramEqualization
+- uid: SixLabors.ImageSharp.Processing.HistogramEqualizationExtension.HistogramEqualization``1(SixLabors.ImageSharp.Processing.IImageProcessingContext{``0})
+  name: HistogramEqualization<TPixel>(IImageProcessingContext<TPixel>)
+  href: api/ImageSharp/SixLabors.ImageSharp.Processing.HistogramEqualizationExtension.html#SixLabors_ImageSharp_Processing_HistogramEqualizationExtension_HistogramEqualization__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__
+  commentId: M:SixLabors.ImageSharp.Processing.HistogramEqualizationExtension.HistogramEqualization``1(SixLabors.ImageSharp.Processing.IImageProcessingContext{``0})
+  name.vb: HistogramEqualization(Of TPixel)(IImageProcessingContext(Of TPixel))
+  fullName: SixLabors.ImageSharp.Processing.HistogramEqualizationExtension.HistogramEqualization<TPixel>(SixLabors.ImageSharp.Processing.IImageProcessingContext<TPixel>)
+  fullName.vb: SixLabors.ImageSharp.Processing.HistogramEqualizationExtension.HistogramEqualization(Of TPixel)(SixLabors.ImageSharp.Processing.IImageProcessingContext(Of TPixel))
+  nameWithType: HistogramEqualizationExtension.HistogramEqualization<TPixel>(IImageProcessingContext<TPixel>)
+  nameWithType.vb: HistogramEqualizationExtension.HistogramEqualization(Of TPixel)(IImageProcessingContext(Of TPixel))
+- uid: SixLabors.ImageSharp.Processing.HistogramEqualizationExtension.HistogramEqualization``1(SixLabors.ImageSharp.Processing.IImageProcessingContext{``0},System.Int32)
+  name: HistogramEqualization<TPixel>(IImageProcessingContext<TPixel>, Int32)
+  href: api/ImageSharp/SixLabors.ImageSharp.Processing.HistogramEqualizationExtension.html#SixLabors_ImageSharp_Processing_HistogramEqualizationExtension_HistogramEqualization__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__System_Int32_
+  commentId: M:SixLabors.ImageSharp.Processing.HistogramEqualizationExtension.HistogramEqualization``1(SixLabors.ImageSharp.Processing.IImageProcessingContext{``0},System.Int32)
+  name.vb: HistogramEqualization(Of TPixel)(IImageProcessingContext(Of TPixel), Int32)
+  fullName: SixLabors.ImageSharp.Processing.HistogramEqualizationExtension.HistogramEqualization<TPixel>(SixLabors.ImageSharp.Processing.IImageProcessingContext<TPixel>, System.Int32)
+  fullName.vb: SixLabors.ImageSharp.Processing.HistogramEqualizationExtension.HistogramEqualization(Of TPixel)(SixLabors.ImageSharp.Processing.IImageProcessingContext(Of TPixel), System.Int32)
+  nameWithType: HistogramEqualizationExtension.HistogramEqualization<TPixel>(IImageProcessingContext<TPixel>, Int32)
+  nameWithType.vb: HistogramEqualizationExtension.HistogramEqualization(Of TPixel)(IImageProcessingContext(Of TPixel), Int32)
 - uid: SixLabors.ImageSharp.Processing.HueExtensions
   name: HueExtensions
   href: api/ImageSharp/SixLabors.ImageSharp.Processing.HueExtensions.html
@@ -26343,13 +26462,13 @@ references:
   fullName.vb: SixLabors.ImageSharp.Processing.Processors.Quantization.QuantizedFrame(Of TPixel)
   nameWithType: QuantizedFrame<TPixel>
   nameWithType.vb: QuantizedFrame(Of TPixel)
-- uid: SixLabors.ImageSharp.Processing.Processors.Quantization.QuantizedFrame`1.#ctor(SixLabors.Memory.MemoryAllocator,System.Int32,System.Int32,`0[])
+- uid: SixLabors.ImageSharp.Processing.Processors.Quantization.QuantizedFrame`1.#ctor(MemoryAllocator,System.Int32,System.Int32,`0[])
   name: QuantizedFrame(MemoryAllocator, Int32, Int32, TPixel[])
-  href: api/ImageSharp/SixLabors.ImageSharp.Processing.Processors.Quantization.QuantizedFrame-1.html#SixLabors_ImageSharp_Processing_Processors_Quantization_QuantizedFrame_1__ctor_SixLabors_Memory_MemoryAllocator_System_Int32_System_Int32__0___
-  commentId: M:SixLabors.ImageSharp.Processing.Processors.Quantization.QuantizedFrame`1.#ctor(SixLabors.Memory.MemoryAllocator,System.Int32,System.Int32,`0[])
+  href: api/ImageSharp/SixLabors.ImageSharp.Processing.Processors.Quantization.QuantizedFrame-1.html#SixLabors_ImageSharp_Processing_Processors_Quantization_QuantizedFrame_1__ctor_MemoryAllocator_System_Int32_System_Int32__0___
+  commentId: M:SixLabors.ImageSharp.Processing.Processors.Quantization.QuantizedFrame`1.#ctor(MemoryAllocator,System.Int32,System.Int32,`0[])
   name.vb: QuantizedFrame(MemoryAllocator, Int32, Int32, TPixel())
-  fullName: SixLabors.ImageSharp.Processing.Processors.Quantization.QuantizedFrame<TPixel>.QuantizedFrame(SixLabors.Memory.MemoryAllocator, System.Int32, System.Int32, TPixel[])
-  fullName.vb: SixLabors.ImageSharp.Processing.Processors.Quantization.QuantizedFrame(Of TPixel).QuantizedFrame(SixLabors.Memory.MemoryAllocator, System.Int32, System.Int32, TPixel())
+  fullName: SixLabors.ImageSharp.Processing.Processors.Quantization.QuantizedFrame<TPixel>.QuantizedFrame(MemoryAllocator, System.Int32, System.Int32, TPixel[])
+  fullName.vb: SixLabors.ImageSharp.Processing.Processors.Quantization.QuantizedFrame(Of TPixel).QuantizedFrame(MemoryAllocator, System.Int32, System.Int32, TPixel())
   nameWithType: QuantizedFrame<TPixel>.QuantizedFrame(MemoryAllocator, Int32, Int32, TPixel[])
   nameWithType.vb: QuantizedFrame(Of TPixel).QuantizedFrame(MemoryAllocator, Int32, Int32, TPixel())
 - uid: SixLabors.ImageSharp.Processing.Processors.Quantization.QuantizedFrame`1.#ctor*
@@ -29778,12 +29897,12 @@ references:
   commentId: T:SixLabors.ImageSharp.Web.Resolvers.IImageResolver
   fullName: SixLabors.ImageSharp.Web.Resolvers.IImageResolver
   nameWithType: IImageResolver
-- uid: SixLabors.ImageSharp.Web.Resolvers.IImageResolver.IsValidRequestAsync(HttpContext,ILogger)
-  name: IsValidRequestAsync(HttpContext, ILogger)
-  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Resolvers.IImageResolver.html#SixLabors_ImageSharp_Web_Resolvers_IImageResolver_IsValidRequestAsync_HttpContext_ILogger_
-  commentId: M:SixLabors.ImageSharp.Web.Resolvers.IImageResolver.IsValidRequestAsync(HttpContext,ILogger)
-  fullName: SixLabors.ImageSharp.Web.Resolvers.IImageResolver.IsValidRequestAsync(HttpContext, ILogger)
-  nameWithType: IImageResolver.IsValidRequestAsync(HttpContext, ILogger)
+- uid: SixLabors.ImageSharp.Web.Resolvers.IImageResolver.IsValidRequestAsync(HttpContext)
+  name: IsValidRequestAsync(HttpContext)
+  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Resolvers.IImageResolver.html#SixLabors_ImageSharp_Web_Resolvers_IImageResolver_IsValidRequestAsync_HttpContext_
+  commentId: M:SixLabors.ImageSharp.Web.Resolvers.IImageResolver.IsValidRequestAsync(HttpContext)
+  fullName: SixLabors.ImageSharp.Web.Resolvers.IImageResolver.IsValidRequestAsync(HttpContext)
+  nameWithType: IImageResolver.IsValidRequestAsync(HttpContext)
 - uid: SixLabors.ImageSharp.Web.Resolvers.IImageResolver.IsValidRequestAsync*
   name: IsValidRequestAsync
   href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Resolvers.IImageResolver.html#SixLabors_ImageSharp_Web_Resolvers_IImageResolver_IsValidRequestAsync_
@@ -29804,12 +29923,12 @@ references:
   isSpec: "True"
   fullName: SixLabors.ImageSharp.Web.Resolvers.IImageResolver.Match
   nameWithType: IImageResolver.Match
-- uid: SixLabors.ImageSharp.Web.Resolvers.IImageResolver.ResolveImageAsync(HttpContext,ILogger)
-  name: ResolveImageAsync(HttpContext, ILogger)
-  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Resolvers.IImageResolver.html#SixLabors_ImageSharp_Web_Resolvers_IImageResolver_ResolveImageAsync_HttpContext_ILogger_
-  commentId: M:SixLabors.ImageSharp.Web.Resolvers.IImageResolver.ResolveImageAsync(HttpContext,ILogger)
-  fullName: SixLabors.ImageSharp.Web.Resolvers.IImageResolver.ResolveImageAsync(HttpContext, ILogger)
-  nameWithType: IImageResolver.ResolveImageAsync(HttpContext, ILogger)
+- uid: SixLabors.ImageSharp.Web.Resolvers.IImageResolver.ResolveImageAsync(HttpContext)
+  name: ResolveImageAsync(HttpContext)
+  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Resolvers.IImageResolver.html#SixLabors_ImageSharp_Web_Resolvers_IImageResolver_ResolveImageAsync_HttpContext_
+  commentId: M:SixLabors.ImageSharp.Web.Resolvers.IImageResolver.ResolveImageAsync(HttpContext)
+  fullName: SixLabors.ImageSharp.Web.Resolvers.IImageResolver.ResolveImageAsync(HttpContext)
+  nameWithType: IImageResolver.ResolveImageAsync(HttpContext)
 - uid: SixLabors.ImageSharp.Web.Resolvers.IImageResolver.ResolveImageAsync*
   name: ResolveImageAsync
   href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Resolvers.IImageResolver.html#SixLabors_ImageSharp_Web_Resolvers_IImageResolver_ResolveImageAsync_
@@ -29836,15 +29955,15 @@ references:
   commentId: T:SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver
   fullName: SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver
   nameWithType: PhysicalFileSystemResolver
-- uid: SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.#ctor(IHostingEnvironment,SixLabors.ImageSharp.Web.Memory.IBufferManager,IOptions{SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions})
-  name: PhysicalFileSystemResolver(IHostingEnvironment, IBufferManager, IOptions<ImageSharpMiddlewareOptions>)
-  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.html#SixLabors_ImageSharp_Web_Resolvers_PhysicalFileSystemResolver__ctor_IHostingEnvironment_SixLabors_ImageSharp_Web_Memory_IBufferManager_IOptions_SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddlewareOptions__
-  commentId: M:SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.#ctor(IHostingEnvironment,SixLabors.ImageSharp.Web.Memory.IBufferManager,IOptions{SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions})
-  name.vb: PhysicalFileSystemResolver(IHostingEnvironment, IBufferManager, IOptions(Of ImageSharpMiddlewareOptions))
-  fullName: SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.PhysicalFileSystemResolver(IHostingEnvironment, SixLabors.ImageSharp.Web.Memory.IBufferManager, IOptions<SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions>)
-  fullName.vb: SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.PhysicalFileSystemResolver(IHostingEnvironment, SixLabors.ImageSharp.Web.Memory.IBufferManager, IOptions(Of SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions))
-  nameWithType: PhysicalFileSystemResolver.PhysicalFileSystemResolver(IHostingEnvironment, IBufferManager, IOptions<ImageSharpMiddlewareOptions>)
-  nameWithType.vb: PhysicalFileSystemResolver.PhysicalFileSystemResolver(IHostingEnvironment, IBufferManager, IOptions(Of ImageSharpMiddlewareOptions))
+- uid: SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.#ctor(IOptions{SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions},IHostingEnvironment,SixLabors.ImageSharp.Web.Memory.IBufferManager)
+  name: PhysicalFileSystemResolver(IOptions<ImageSharpMiddlewareOptions>, IHostingEnvironment, IBufferManager)
+  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.html#SixLabors_ImageSharp_Web_Resolvers_PhysicalFileSystemResolver__ctor_IOptions_SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddlewareOptions__IHostingEnvironment_SixLabors_ImageSharp_Web_Memory_IBufferManager_
+  commentId: M:SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.#ctor(IOptions{SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions},IHostingEnvironment,SixLabors.ImageSharp.Web.Memory.IBufferManager)
+  name.vb: PhysicalFileSystemResolver(IOptions(Of ImageSharpMiddlewareOptions), IHostingEnvironment, IBufferManager)
+  fullName: SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.PhysicalFileSystemResolver(IOptions<SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions>, IHostingEnvironment, SixLabors.ImageSharp.Web.Memory.IBufferManager)
+  fullName.vb: SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.PhysicalFileSystemResolver(IOptions(Of SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions), IHostingEnvironment, SixLabors.ImageSharp.Web.Memory.IBufferManager)
+  nameWithType: PhysicalFileSystemResolver.PhysicalFileSystemResolver(IOptions<ImageSharpMiddlewareOptions>, IHostingEnvironment, IBufferManager)
+  nameWithType.vb: PhysicalFileSystemResolver.PhysicalFileSystemResolver(IOptions(Of ImageSharpMiddlewareOptions), IHostingEnvironment, IBufferManager)
 - uid: SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.#ctor*
   name: PhysicalFileSystemResolver
   href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.html#SixLabors_ImageSharp_Web_Resolvers_PhysicalFileSystemResolver__ctor_
@@ -29852,12 +29971,12 @@ references:
   isSpec: "True"
   fullName: SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.PhysicalFileSystemResolver
   nameWithType: PhysicalFileSystemResolver.PhysicalFileSystemResolver
-- uid: SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.IsValidRequestAsync(HttpContext,ILogger)
-  name: IsValidRequestAsync(HttpContext, ILogger)
-  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.html#SixLabors_ImageSharp_Web_Resolvers_PhysicalFileSystemResolver_IsValidRequestAsync_HttpContext_ILogger_
-  commentId: M:SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.IsValidRequestAsync(HttpContext,ILogger)
-  fullName: SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.IsValidRequestAsync(HttpContext, ILogger)
-  nameWithType: PhysicalFileSystemResolver.IsValidRequestAsync(HttpContext, ILogger)
+- uid: SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.IsValidRequestAsync(HttpContext)
+  name: IsValidRequestAsync(HttpContext)
+  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.html#SixLabors_ImageSharp_Web_Resolvers_PhysicalFileSystemResolver_IsValidRequestAsync_HttpContext_
+  commentId: M:SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.IsValidRequestAsync(HttpContext)
+  fullName: SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.IsValidRequestAsync(HttpContext)
+  nameWithType: PhysicalFileSystemResolver.IsValidRequestAsync(HttpContext)
 - uid: SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.IsValidRequestAsync*
   name: IsValidRequestAsync
   href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.html#SixLabors_ImageSharp_Web_Resolvers_PhysicalFileSystemResolver_IsValidRequestAsync_
@@ -29878,12 +29997,12 @@ references:
   isSpec: "True"
   fullName: SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.Match
   nameWithType: PhysicalFileSystemResolver.Match
-- uid: SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.ResolveImageAsync(HttpContext,ILogger)
-  name: ResolveImageAsync(HttpContext, ILogger)
-  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.html#SixLabors_ImageSharp_Web_Resolvers_PhysicalFileSystemResolver_ResolveImageAsync_HttpContext_ILogger_
-  commentId: M:SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.ResolveImageAsync(HttpContext,ILogger)
-  fullName: SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.ResolveImageAsync(HttpContext, ILogger)
-  nameWithType: PhysicalFileSystemResolver.ResolveImageAsync(HttpContext, ILogger)
+- uid: SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.ResolveImageAsync(HttpContext)
+  name: ResolveImageAsync(HttpContext)
+  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.html#SixLabors_ImageSharp_Web_Resolvers_PhysicalFileSystemResolver_ResolveImageAsync_HttpContext_
+  commentId: M:SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.ResolveImageAsync(HttpContext)
+  fullName: SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.ResolveImageAsync(HttpContext)
+  nameWithType: PhysicalFileSystemResolver.ResolveImageAsync(HttpContext)
 - uid: SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.ResolveImageAsync*
   name: ResolveImageAsync
   href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.html#SixLabors_ImageSharp_Web_Resolvers_PhysicalFileSystemResolver_ResolveImageAsync_
@@ -29906,163 +30025,287 @@ references:
   nameWithType: PhysicalFileSystemResolver.Settings
 - uid: SixLabors.Memory
   name: SixLabors.Memory
-  href: api/ImageSharp/SixLabors.Memory.html
+  href: api/Core/SixLabors.Memory.html
   commentId: N:SixLabors.Memory
   fullName: SixLabors.Memory
   nameWithType: SixLabors.Memory
+- uid: SixLabors.Memory.AllocationOptions
+  name: AllocationOptions
+  href: api/Core/SixLabors.Memory.AllocationOptions.html
+  commentId: T:SixLabors.Memory.AllocationOptions
+  fullName: SixLabors.Memory.AllocationOptions
+  nameWithType: AllocationOptions
+- uid: SixLabors.Memory.AllocationOptions.Clean
+  name: Clean
+  href: api/Core/SixLabors.Memory.AllocationOptions.html#SixLabors_Memory_AllocationOptions_Clean
+  commentId: F:SixLabors.Memory.AllocationOptions.Clean
+  fullName: SixLabors.Memory.AllocationOptions.Clean
+  nameWithType: AllocationOptions.Clean
+- uid: SixLabors.Memory.AllocationOptions.None
+  name: None
+  href: api/Core/SixLabors.Memory.AllocationOptions.html#SixLabors_Memory_AllocationOptions_None
+  commentId: F:SixLabors.Memory.AllocationOptions.None
+  fullName: SixLabors.Memory.AllocationOptions.None
+  nameWithType: AllocationOptions.None
 - uid: SixLabors.Memory.ArrayPoolMemoryAllocator
   name: ArrayPoolMemoryAllocator
-  href: api/ImageSharp/SixLabors.Memory.ArrayPoolMemoryAllocator.html
+  href: api/Core/SixLabors.Memory.ArrayPoolMemoryAllocator.html
   commentId: T:SixLabors.Memory.ArrayPoolMemoryAllocator
   fullName: SixLabors.Memory.ArrayPoolMemoryAllocator
   nameWithType: ArrayPoolMemoryAllocator
 - uid: SixLabors.Memory.ArrayPoolMemoryAllocator.#ctor
   name: ArrayPoolMemoryAllocator()
-  href: api/ImageSharp/SixLabors.Memory.ArrayPoolMemoryAllocator.html#SixLabors_Memory_ArrayPoolMemoryAllocator__ctor
+  href: api/Core/SixLabors.Memory.ArrayPoolMemoryAllocator.html#SixLabors_Memory_ArrayPoolMemoryAllocator__ctor
   commentId: M:SixLabors.Memory.ArrayPoolMemoryAllocator.#ctor
   fullName: SixLabors.Memory.ArrayPoolMemoryAllocator.ArrayPoolMemoryAllocator()
   nameWithType: ArrayPoolMemoryAllocator.ArrayPoolMemoryAllocator()
 - uid: SixLabors.Memory.ArrayPoolMemoryAllocator.#ctor(System.Int32)
   name: ArrayPoolMemoryAllocator(Int32)
-  href: api/ImageSharp/SixLabors.Memory.ArrayPoolMemoryAllocator.html#SixLabors_Memory_ArrayPoolMemoryAllocator__ctor_System_Int32_
+  href: api/Core/SixLabors.Memory.ArrayPoolMemoryAllocator.html#SixLabors_Memory_ArrayPoolMemoryAllocator__ctor_System_Int32_
   commentId: M:SixLabors.Memory.ArrayPoolMemoryAllocator.#ctor(System.Int32)
   fullName: SixLabors.Memory.ArrayPoolMemoryAllocator.ArrayPoolMemoryAllocator(System.Int32)
   nameWithType: ArrayPoolMemoryAllocator.ArrayPoolMemoryAllocator(Int32)
 - uid: SixLabors.Memory.ArrayPoolMemoryAllocator.#ctor(System.Int32,System.Int32)
   name: ArrayPoolMemoryAllocator(Int32, Int32)
-  href: api/ImageSharp/SixLabors.Memory.ArrayPoolMemoryAllocator.html#SixLabors_Memory_ArrayPoolMemoryAllocator__ctor_System_Int32_System_Int32_
+  href: api/Core/SixLabors.Memory.ArrayPoolMemoryAllocator.html#SixLabors_Memory_ArrayPoolMemoryAllocator__ctor_System_Int32_System_Int32_
   commentId: M:SixLabors.Memory.ArrayPoolMemoryAllocator.#ctor(System.Int32,System.Int32)
   fullName: SixLabors.Memory.ArrayPoolMemoryAllocator.ArrayPoolMemoryAllocator(System.Int32, System.Int32)
   nameWithType: ArrayPoolMemoryAllocator.ArrayPoolMemoryAllocator(Int32, Int32)
 - uid: SixLabors.Memory.ArrayPoolMemoryAllocator.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)
   name: ArrayPoolMemoryAllocator(Int32, Int32, Int32, Int32)
-  href: api/ImageSharp/SixLabors.Memory.ArrayPoolMemoryAllocator.html#SixLabors_Memory_ArrayPoolMemoryAllocator__ctor_System_Int32_System_Int32_System_Int32_System_Int32_
+  href: api/Core/SixLabors.Memory.ArrayPoolMemoryAllocator.html#SixLabors_Memory_ArrayPoolMemoryAllocator__ctor_System_Int32_System_Int32_System_Int32_System_Int32_
   commentId: M:SixLabors.Memory.ArrayPoolMemoryAllocator.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)
   fullName: SixLabors.Memory.ArrayPoolMemoryAllocator.ArrayPoolMemoryAllocator(System.Int32, System.Int32, System.Int32, System.Int32)
   nameWithType: ArrayPoolMemoryAllocator.ArrayPoolMemoryAllocator(Int32, Int32, Int32, Int32)
 - uid: SixLabors.Memory.ArrayPoolMemoryAllocator.#ctor*
   name: ArrayPoolMemoryAllocator
-  href: api/ImageSharp/SixLabors.Memory.ArrayPoolMemoryAllocator.html#SixLabors_Memory_ArrayPoolMemoryAllocator__ctor_
+  href: api/Core/SixLabors.Memory.ArrayPoolMemoryAllocator.html#SixLabors_Memory_ArrayPoolMemoryAllocator__ctor_
   commentId: Overload:SixLabors.Memory.ArrayPoolMemoryAllocator.#ctor
   isSpec: "True"
   fullName: SixLabors.Memory.ArrayPoolMemoryAllocator.ArrayPoolMemoryAllocator
   nameWithType: ArrayPoolMemoryAllocator.ArrayPoolMemoryAllocator
+- uid: SixLabors.Memory.ArrayPoolMemoryAllocator.Allocate*
+  name: Allocate
+  href: api/Core/SixLabors.Memory.ArrayPoolMemoryAllocator.html#SixLabors_Memory_ArrayPoolMemoryAllocator_Allocate_
+  commentId: Overload:SixLabors.Memory.ArrayPoolMemoryAllocator.Allocate
+  isSpec: "True"
+  fullName: SixLabors.Memory.ArrayPoolMemoryAllocator.Allocate
+  nameWithType: ArrayPoolMemoryAllocator.Allocate
+- uid: SixLabors.Memory.ArrayPoolMemoryAllocator.Allocate``1(System.Int32,SixLabors.Memory.AllocationOptions)
+  name: Allocate<T>(Int32, AllocationOptions)
+  href: api/Core/SixLabors.Memory.ArrayPoolMemoryAllocator.html#SixLabors_Memory_ArrayPoolMemoryAllocator_Allocate__1_System_Int32_SixLabors_Memory_AllocationOptions_
+  commentId: M:SixLabors.Memory.ArrayPoolMemoryAllocator.Allocate``1(System.Int32,SixLabors.Memory.AllocationOptions)
+  name.vb: Allocate(Of T)(Int32, AllocationOptions)
+  fullName: SixLabors.Memory.ArrayPoolMemoryAllocator.Allocate<T>(System.Int32, SixLabors.Memory.AllocationOptions)
+  fullName.vb: SixLabors.Memory.ArrayPoolMemoryAllocator.Allocate(Of T)(System.Int32, SixLabors.Memory.AllocationOptions)
+  nameWithType: ArrayPoolMemoryAllocator.Allocate<T>(Int32, AllocationOptions)
+  nameWithType.vb: ArrayPoolMemoryAllocator.Allocate(Of T)(Int32, AllocationOptions)
+- uid: SixLabors.Memory.ArrayPoolMemoryAllocator.AllocateManagedByteBuffer(System.Int32,SixLabors.Memory.AllocationOptions)
+  name: AllocateManagedByteBuffer(Int32, AllocationOptions)
+  href: api/Core/SixLabors.Memory.ArrayPoolMemoryAllocator.html#SixLabors_Memory_ArrayPoolMemoryAllocator_AllocateManagedByteBuffer_System_Int32_SixLabors_Memory_AllocationOptions_
+  commentId: M:SixLabors.Memory.ArrayPoolMemoryAllocator.AllocateManagedByteBuffer(System.Int32,SixLabors.Memory.AllocationOptions)
+  fullName: SixLabors.Memory.ArrayPoolMemoryAllocator.AllocateManagedByteBuffer(System.Int32, SixLabors.Memory.AllocationOptions)
+  nameWithType: ArrayPoolMemoryAllocator.AllocateManagedByteBuffer(Int32, AllocationOptions)
+- uid: SixLabors.Memory.ArrayPoolMemoryAllocator.AllocateManagedByteBuffer*
+  name: AllocateManagedByteBuffer
+  href: api/Core/SixLabors.Memory.ArrayPoolMemoryAllocator.html#SixLabors_Memory_ArrayPoolMemoryAllocator_AllocateManagedByteBuffer_
+  commentId: Overload:SixLabors.Memory.ArrayPoolMemoryAllocator.AllocateManagedByteBuffer
+  isSpec: "True"
+  fullName: SixLabors.Memory.ArrayPoolMemoryAllocator.AllocateManagedByteBuffer
+  nameWithType: ArrayPoolMemoryAllocator.AllocateManagedByteBuffer
 - uid: SixLabors.Memory.ArrayPoolMemoryAllocator.CreateDefault
   name: CreateDefault()
-  href: api/ImageSharp/SixLabors.Memory.ArrayPoolMemoryAllocator.html#SixLabors_Memory_ArrayPoolMemoryAllocator_CreateDefault
+  href: api/Core/SixLabors.Memory.ArrayPoolMemoryAllocator.html#SixLabors_Memory_ArrayPoolMemoryAllocator_CreateDefault
   commentId: M:SixLabors.Memory.ArrayPoolMemoryAllocator.CreateDefault
   fullName: SixLabors.Memory.ArrayPoolMemoryAllocator.CreateDefault()
   nameWithType: ArrayPoolMemoryAllocator.CreateDefault()
 - uid: SixLabors.Memory.ArrayPoolMemoryAllocator.CreateDefault*
   name: CreateDefault
-  href: api/ImageSharp/SixLabors.Memory.ArrayPoolMemoryAllocator.html#SixLabors_Memory_ArrayPoolMemoryAllocator_CreateDefault_
+  href: api/Core/SixLabors.Memory.ArrayPoolMemoryAllocator.html#SixLabors_Memory_ArrayPoolMemoryAllocator_CreateDefault_
   commentId: Overload:SixLabors.Memory.ArrayPoolMemoryAllocator.CreateDefault
   isSpec: "True"
   fullName: SixLabors.Memory.ArrayPoolMemoryAllocator.CreateDefault
   nameWithType: ArrayPoolMemoryAllocator.CreateDefault
 - uid: SixLabors.Memory.ArrayPoolMemoryAllocator.CreateWithAggressivePooling
   name: CreateWithAggressivePooling()
-  href: api/ImageSharp/SixLabors.Memory.ArrayPoolMemoryAllocator.html#SixLabors_Memory_ArrayPoolMemoryAllocator_CreateWithAggressivePooling
+  href: api/Core/SixLabors.Memory.ArrayPoolMemoryAllocator.html#SixLabors_Memory_ArrayPoolMemoryAllocator_CreateWithAggressivePooling
   commentId: M:SixLabors.Memory.ArrayPoolMemoryAllocator.CreateWithAggressivePooling
   fullName: SixLabors.Memory.ArrayPoolMemoryAllocator.CreateWithAggressivePooling()
   nameWithType: ArrayPoolMemoryAllocator.CreateWithAggressivePooling()
 - uid: SixLabors.Memory.ArrayPoolMemoryAllocator.CreateWithAggressivePooling*
   name: CreateWithAggressivePooling
-  href: api/ImageSharp/SixLabors.Memory.ArrayPoolMemoryAllocator.html#SixLabors_Memory_ArrayPoolMemoryAllocator_CreateWithAggressivePooling_
+  href: api/Core/SixLabors.Memory.ArrayPoolMemoryAllocator.html#SixLabors_Memory_ArrayPoolMemoryAllocator_CreateWithAggressivePooling_
   commentId: Overload:SixLabors.Memory.ArrayPoolMemoryAllocator.CreateWithAggressivePooling
   isSpec: "True"
   fullName: SixLabors.Memory.ArrayPoolMemoryAllocator.CreateWithAggressivePooling
   nameWithType: ArrayPoolMemoryAllocator.CreateWithAggressivePooling
 - uid: SixLabors.Memory.ArrayPoolMemoryAllocator.CreateWithMinimalPooling
   name: CreateWithMinimalPooling()
-  href: api/ImageSharp/SixLabors.Memory.ArrayPoolMemoryAllocator.html#SixLabors_Memory_ArrayPoolMemoryAllocator_CreateWithMinimalPooling
+  href: api/Core/SixLabors.Memory.ArrayPoolMemoryAllocator.html#SixLabors_Memory_ArrayPoolMemoryAllocator_CreateWithMinimalPooling
   commentId: M:SixLabors.Memory.ArrayPoolMemoryAllocator.CreateWithMinimalPooling
   fullName: SixLabors.Memory.ArrayPoolMemoryAllocator.CreateWithMinimalPooling()
   nameWithType: ArrayPoolMemoryAllocator.CreateWithMinimalPooling()
 - uid: SixLabors.Memory.ArrayPoolMemoryAllocator.CreateWithMinimalPooling*
   name: CreateWithMinimalPooling
-  href: api/ImageSharp/SixLabors.Memory.ArrayPoolMemoryAllocator.html#SixLabors_Memory_ArrayPoolMemoryAllocator_CreateWithMinimalPooling_
+  href: api/Core/SixLabors.Memory.ArrayPoolMemoryAllocator.html#SixLabors_Memory_ArrayPoolMemoryAllocator_CreateWithMinimalPooling_
   commentId: Overload:SixLabors.Memory.ArrayPoolMemoryAllocator.CreateWithMinimalPooling
   isSpec: "True"
   fullName: SixLabors.Memory.ArrayPoolMemoryAllocator.CreateWithMinimalPooling
   nameWithType: ArrayPoolMemoryAllocator.CreateWithMinimalPooling
 - uid: SixLabors.Memory.ArrayPoolMemoryAllocator.CreateWithModeratePooling
   name: CreateWithModeratePooling()
-  href: api/ImageSharp/SixLabors.Memory.ArrayPoolMemoryAllocator.html#SixLabors_Memory_ArrayPoolMemoryAllocator_CreateWithModeratePooling
+  href: api/Core/SixLabors.Memory.ArrayPoolMemoryAllocator.html#SixLabors_Memory_ArrayPoolMemoryAllocator_CreateWithModeratePooling
   commentId: M:SixLabors.Memory.ArrayPoolMemoryAllocator.CreateWithModeratePooling
   fullName: SixLabors.Memory.ArrayPoolMemoryAllocator.CreateWithModeratePooling()
   nameWithType: ArrayPoolMemoryAllocator.CreateWithModeratePooling()
 - uid: SixLabors.Memory.ArrayPoolMemoryAllocator.CreateWithModeratePooling*
   name: CreateWithModeratePooling
-  href: api/ImageSharp/SixLabors.Memory.ArrayPoolMemoryAllocator.html#SixLabors_Memory_ArrayPoolMemoryAllocator_CreateWithModeratePooling_
+  href: api/Core/SixLabors.Memory.ArrayPoolMemoryAllocator.html#SixLabors_Memory_ArrayPoolMemoryAllocator_CreateWithModeratePooling_
   commentId: Overload:SixLabors.Memory.ArrayPoolMemoryAllocator.CreateWithModeratePooling
   isSpec: "True"
   fullName: SixLabors.Memory.ArrayPoolMemoryAllocator.CreateWithModeratePooling
   nameWithType: ArrayPoolMemoryAllocator.CreateWithModeratePooling
 - uid: SixLabors.Memory.ArrayPoolMemoryAllocator.MaxPoolSizeInBytes
   name: MaxPoolSizeInBytes
-  href: api/ImageSharp/SixLabors.Memory.ArrayPoolMemoryAllocator.html#SixLabors_Memory_ArrayPoolMemoryAllocator_MaxPoolSizeInBytes
+  href: api/Core/SixLabors.Memory.ArrayPoolMemoryAllocator.html#SixLabors_Memory_ArrayPoolMemoryAllocator_MaxPoolSizeInBytes
   commentId: P:SixLabors.Memory.ArrayPoolMemoryAllocator.MaxPoolSizeInBytes
   fullName: SixLabors.Memory.ArrayPoolMemoryAllocator.MaxPoolSizeInBytes
   nameWithType: ArrayPoolMemoryAllocator.MaxPoolSizeInBytes
 - uid: SixLabors.Memory.ArrayPoolMemoryAllocator.MaxPoolSizeInBytes*
   name: MaxPoolSizeInBytes
-  href: api/ImageSharp/SixLabors.Memory.ArrayPoolMemoryAllocator.html#SixLabors_Memory_ArrayPoolMemoryAllocator_MaxPoolSizeInBytes_
+  href: api/Core/SixLabors.Memory.ArrayPoolMemoryAllocator.html#SixLabors_Memory_ArrayPoolMemoryAllocator_MaxPoolSizeInBytes_
   commentId: Overload:SixLabors.Memory.ArrayPoolMemoryAllocator.MaxPoolSizeInBytes
   isSpec: "True"
   fullName: SixLabors.Memory.ArrayPoolMemoryAllocator.MaxPoolSizeInBytes
   nameWithType: ArrayPoolMemoryAllocator.MaxPoolSizeInBytes
 - uid: SixLabors.Memory.ArrayPoolMemoryAllocator.PoolSelectorThresholdInBytes
   name: PoolSelectorThresholdInBytes
-  href: api/ImageSharp/SixLabors.Memory.ArrayPoolMemoryAllocator.html#SixLabors_Memory_ArrayPoolMemoryAllocator_PoolSelectorThresholdInBytes
+  href: api/Core/SixLabors.Memory.ArrayPoolMemoryAllocator.html#SixLabors_Memory_ArrayPoolMemoryAllocator_PoolSelectorThresholdInBytes
   commentId: P:SixLabors.Memory.ArrayPoolMemoryAllocator.PoolSelectorThresholdInBytes
   fullName: SixLabors.Memory.ArrayPoolMemoryAllocator.PoolSelectorThresholdInBytes
   nameWithType: ArrayPoolMemoryAllocator.PoolSelectorThresholdInBytes
 - uid: SixLabors.Memory.ArrayPoolMemoryAllocator.PoolSelectorThresholdInBytes*
   name: PoolSelectorThresholdInBytes
-  href: api/ImageSharp/SixLabors.Memory.ArrayPoolMemoryAllocator.html#SixLabors_Memory_ArrayPoolMemoryAllocator_PoolSelectorThresholdInBytes_
+  href: api/Core/SixLabors.Memory.ArrayPoolMemoryAllocator.html#SixLabors_Memory_ArrayPoolMemoryAllocator_PoolSelectorThresholdInBytes_
   commentId: Overload:SixLabors.Memory.ArrayPoolMemoryAllocator.PoolSelectorThresholdInBytes
   isSpec: "True"
   fullName: SixLabors.Memory.ArrayPoolMemoryAllocator.PoolSelectorThresholdInBytes
   nameWithType: ArrayPoolMemoryAllocator.PoolSelectorThresholdInBytes
 - uid: SixLabors.Memory.ArrayPoolMemoryAllocator.ReleaseRetainedResources
   name: ReleaseRetainedResources()
-  href: api/ImageSharp/SixLabors.Memory.ArrayPoolMemoryAllocator.html#SixLabors_Memory_ArrayPoolMemoryAllocator_ReleaseRetainedResources
+  href: api/Core/SixLabors.Memory.ArrayPoolMemoryAllocator.html#SixLabors_Memory_ArrayPoolMemoryAllocator_ReleaseRetainedResources
   commentId: M:SixLabors.Memory.ArrayPoolMemoryAllocator.ReleaseRetainedResources
   fullName: SixLabors.Memory.ArrayPoolMemoryAllocator.ReleaseRetainedResources()
   nameWithType: ArrayPoolMemoryAllocator.ReleaseRetainedResources()
 - uid: SixLabors.Memory.ArrayPoolMemoryAllocator.ReleaseRetainedResources*
   name: ReleaseRetainedResources
-  href: api/ImageSharp/SixLabors.Memory.ArrayPoolMemoryAllocator.html#SixLabors_Memory_ArrayPoolMemoryAllocator_ReleaseRetainedResources_
+  href: api/Core/SixLabors.Memory.ArrayPoolMemoryAllocator.html#SixLabors_Memory_ArrayPoolMemoryAllocator_ReleaseRetainedResources_
   commentId: Overload:SixLabors.Memory.ArrayPoolMemoryAllocator.ReleaseRetainedResources
   isSpec: "True"
   fullName: SixLabors.Memory.ArrayPoolMemoryAllocator.ReleaseRetainedResources
   nameWithType: ArrayPoolMemoryAllocator.ReleaseRetainedResources
+- uid: SixLabors.Memory.IManagedByteBuffer
+  name: IManagedByteBuffer
+  href: api/Core/SixLabors.Memory.IManagedByteBuffer.html
+  commentId: T:SixLabors.Memory.IManagedByteBuffer
+  fullName: SixLabors.Memory.IManagedByteBuffer
+  nameWithType: IManagedByteBuffer
+- uid: SixLabors.Memory.IManagedByteBuffer.Array
+  name: Array
+  href: api/Core/SixLabors.Memory.IManagedByteBuffer.html#SixLabors_Memory_IManagedByteBuffer_Array
+  commentId: P:SixLabors.Memory.IManagedByteBuffer.Array
+  fullName: SixLabors.Memory.IManagedByteBuffer.Array
+  nameWithType: IManagedByteBuffer.Array
+- uid: SixLabors.Memory.IManagedByteBuffer.Array*
+  name: Array
+  href: api/Core/SixLabors.Memory.IManagedByteBuffer.html#SixLabors_Memory_IManagedByteBuffer_Array_
+  commentId: Overload:SixLabors.Memory.IManagedByteBuffer.Array
+  isSpec: "True"
+  fullName: SixLabors.Memory.IManagedByteBuffer.Array
+  nameWithType: IManagedByteBuffer.Array
 - uid: SixLabors.Memory.MemoryAllocator
   name: MemoryAllocator
-  href: api/ImageSharp/SixLabors.Memory.MemoryAllocator.html
+  href: api/Core/SixLabors.Memory.MemoryAllocator.html
   commentId: T:SixLabors.Memory.MemoryAllocator
   fullName: SixLabors.Memory.MemoryAllocator
   nameWithType: MemoryAllocator
+- uid: SixLabors.Memory.MemoryAllocator.Allocate*
+  name: Allocate
+  href: api/Core/SixLabors.Memory.MemoryAllocator.html#SixLabors_Memory_MemoryAllocator_Allocate_
+  commentId: Overload:SixLabors.Memory.MemoryAllocator.Allocate
+  isSpec: "True"
+  fullName: SixLabors.Memory.MemoryAllocator.Allocate
+  nameWithType: MemoryAllocator.Allocate
+- uid: SixLabors.Memory.MemoryAllocator.Allocate``1(System.Int32,SixLabors.Memory.AllocationOptions)
+  name: Allocate<T>(Int32, AllocationOptions)
+  href: api/Core/SixLabors.Memory.MemoryAllocator.html#SixLabors_Memory_MemoryAllocator_Allocate__1_System_Int32_SixLabors_Memory_AllocationOptions_
+  commentId: M:SixLabors.Memory.MemoryAllocator.Allocate``1(System.Int32,SixLabors.Memory.AllocationOptions)
+  name.vb: Allocate(Of T)(Int32, AllocationOptions)
+  fullName: SixLabors.Memory.MemoryAllocator.Allocate<T>(System.Int32, SixLabors.Memory.AllocationOptions)
+  fullName.vb: SixLabors.Memory.MemoryAllocator.Allocate(Of T)(System.Int32, SixLabors.Memory.AllocationOptions)
+  nameWithType: MemoryAllocator.Allocate<T>(Int32, AllocationOptions)
+  nameWithType.vb: MemoryAllocator.Allocate(Of T)(Int32, AllocationOptions)
+- uid: SixLabors.Memory.MemoryAllocator.AllocateManagedByteBuffer(System.Int32,SixLabors.Memory.AllocationOptions)
+  name: AllocateManagedByteBuffer(Int32, AllocationOptions)
+  href: api/Core/SixLabors.Memory.MemoryAllocator.html#SixLabors_Memory_MemoryAllocator_AllocateManagedByteBuffer_System_Int32_SixLabors_Memory_AllocationOptions_
+  commentId: M:SixLabors.Memory.MemoryAllocator.AllocateManagedByteBuffer(System.Int32,SixLabors.Memory.AllocationOptions)
+  fullName: SixLabors.Memory.MemoryAllocator.AllocateManagedByteBuffer(System.Int32, SixLabors.Memory.AllocationOptions)
+  nameWithType: MemoryAllocator.AllocateManagedByteBuffer(Int32, AllocationOptions)
+- uid: SixLabors.Memory.MemoryAllocator.AllocateManagedByteBuffer*
+  name: AllocateManagedByteBuffer
+  href: api/Core/SixLabors.Memory.MemoryAllocator.html#SixLabors_Memory_MemoryAllocator_AllocateManagedByteBuffer_
+  commentId: Overload:SixLabors.Memory.MemoryAllocator.AllocateManagedByteBuffer
+  isSpec: "True"
+  fullName: SixLabors.Memory.MemoryAllocator.AllocateManagedByteBuffer
+  nameWithType: MemoryAllocator.AllocateManagedByteBuffer
 - uid: SixLabors.Memory.MemoryAllocator.ReleaseRetainedResources
   name: ReleaseRetainedResources()
-  href: api/ImageSharp/SixLabors.Memory.MemoryAllocator.html#SixLabors_Memory_MemoryAllocator_ReleaseRetainedResources
+  href: api/Core/SixLabors.Memory.MemoryAllocator.html#SixLabors_Memory_MemoryAllocator_ReleaseRetainedResources
   commentId: M:SixLabors.Memory.MemoryAllocator.ReleaseRetainedResources
   fullName: SixLabors.Memory.MemoryAllocator.ReleaseRetainedResources()
   nameWithType: MemoryAllocator.ReleaseRetainedResources()
 - uid: SixLabors.Memory.MemoryAllocator.ReleaseRetainedResources*
   name: ReleaseRetainedResources
-  href: api/ImageSharp/SixLabors.Memory.MemoryAllocator.html#SixLabors_Memory_MemoryAllocator_ReleaseRetainedResources_
+  href: api/Core/SixLabors.Memory.MemoryAllocator.html#SixLabors_Memory_MemoryAllocator_ReleaseRetainedResources_
   commentId: Overload:SixLabors.Memory.MemoryAllocator.ReleaseRetainedResources
   isSpec: "True"
   fullName: SixLabors.Memory.MemoryAllocator.ReleaseRetainedResources
   nameWithType: MemoryAllocator.ReleaseRetainedResources
 - uid: SixLabors.Memory.SimpleGcMemoryAllocator
   name: SimpleGcMemoryAllocator
-  href: api/ImageSharp/SixLabors.Memory.SimpleGcMemoryAllocator.html
+  href: api/Core/SixLabors.Memory.SimpleGcMemoryAllocator.html
   commentId: T:SixLabors.Memory.SimpleGcMemoryAllocator
   fullName: SixLabors.Memory.SimpleGcMemoryAllocator
   nameWithType: SimpleGcMemoryAllocator
+- uid: SixLabors.Memory.SimpleGcMemoryAllocator.Allocate*
+  name: Allocate
+  href: api/Core/SixLabors.Memory.SimpleGcMemoryAllocator.html#SixLabors_Memory_SimpleGcMemoryAllocator_Allocate_
+  commentId: Overload:SixLabors.Memory.SimpleGcMemoryAllocator.Allocate
+  isSpec: "True"
+  fullName: SixLabors.Memory.SimpleGcMemoryAllocator.Allocate
+  nameWithType: SimpleGcMemoryAllocator.Allocate
+- uid: SixLabors.Memory.SimpleGcMemoryAllocator.Allocate``1(System.Int32,SixLabors.Memory.AllocationOptions)
+  name: Allocate<T>(Int32, AllocationOptions)
+  href: api/Core/SixLabors.Memory.SimpleGcMemoryAllocator.html#SixLabors_Memory_SimpleGcMemoryAllocator_Allocate__1_System_Int32_SixLabors_Memory_AllocationOptions_
+  commentId: M:SixLabors.Memory.SimpleGcMemoryAllocator.Allocate``1(System.Int32,SixLabors.Memory.AllocationOptions)
+  name.vb: Allocate(Of T)(Int32, AllocationOptions)
+  fullName: SixLabors.Memory.SimpleGcMemoryAllocator.Allocate<T>(System.Int32, SixLabors.Memory.AllocationOptions)
+  fullName.vb: SixLabors.Memory.SimpleGcMemoryAllocator.Allocate(Of T)(System.Int32, SixLabors.Memory.AllocationOptions)
+  nameWithType: SimpleGcMemoryAllocator.Allocate<T>(Int32, AllocationOptions)
+  nameWithType.vb: SimpleGcMemoryAllocator.Allocate(Of T)(Int32, AllocationOptions)
+- uid: SixLabors.Memory.SimpleGcMemoryAllocator.AllocateManagedByteBuffer(System.Int32,SixLabors.Memory.AllocationOptions)
+  name: AllocateManagedByteBuffer(Int32, AllocationOptions)
+  href: api/Core/SixLabors.Memory.SimpleGcMemoryAllocator.html#SixLabors_Memory_SimpleGcMemoryAllocator_AllocateManagedByteBuffer_System_Int32_SixLabors_Memory_AllocationOptions_
+  commentId: M:SixLabors.Memory.SimpleGcMemoryAllocator.AllocateManagedByteBuffer(System.Int32,SixLabors.Memory.AllocationOptions)
+  fullName: SixLabors.Memory.SimpleGcMemoryAllocator.AllocateManagedByteBuffer(System.Int32, SixLabors.Memory.AllocationOptions)
+  nameWithType: SimpleGcMemoryAllocator.AllocateManagedByteBuffer(Int32, AllocationOptions)
+- uid: SixLabors.Memory.SimpleGcMemoryAllocator.AllocateManagedByteBuffer*
+  name: AllocateManagedByteBuffer
+  href: api/Core/SixLabors.Memory.SimpleGcMemoryAllocator.html#SixLabors_Memory_SimpleGcMemoryAllocator_AllocateManagedByteBuffer_
+  commentId: Overload:SixLabors.Memory.SimpleGcMemoryAllocator.AllocateManagedByteBuffer
+  isSpec: "True"
+  fullName: SixLabors.Memory.SimpleGcMemoryAllocator.AllocateManagedByteBuffer
+  nameWithType: SimpleGcMemoryAllocator.AllocateManagedByteBuffer
 - uid: SixLabors.Primitives
   name: SixLabors.Primitives
   href: api/Core/SixLabors.Primitives.html
