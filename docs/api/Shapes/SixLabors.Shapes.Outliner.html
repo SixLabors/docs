@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Outliner
    ">
-    <meta name="generator" content="docfx 2.32.2.0">
+    <meta name="generator" content="docfx 2.37.0.0">
     
     <link rel="shortcut icon" href="../../favicon.png">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -23,7 +23,7 @@
     
     
   </head>
-  <body data-spy="scroll" data-target="#affix">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -95,7 +95,7 @@
     <a href="https://github.com/SixLabors/Shapes/new/master/apiSpec/new?filename=SixLabors_Shapes_Outliner_GenerateOutline_SixLabors_Shapes_IPath_System_Single_.md&amp;value=---%0Auid%3A%20SixLabors.Shapes.Outliner.GenerateOutline(SixLabors.Shapes.IPath%2CSystem.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/Shapes/blob/master/src/SixLabors.Shapes/Outliner.cs/#L139">View Source</a>
+    <a href="https://github.com/SixLabors/Shapes/blob/d8a645d9cc22731c512469cbd7bd8a696e7931c4/src/SixLabors.Shapes/Outliner.cs/#L161">View Source</a>
   </span>
   <a id="SixLabors_Shapes_Outliner_GenerateOutline_" data-uid="SixLabors.Shapes.Outliner.GenerateOutline*"></a>
   <h4 id="SixLabors_Shapes_Outliner_GenerateOutline_SixLabors_Shapes_IPath_System_Single_" data-uid="SixLabors.Shapes.Outliner.GenerateOutline(SixLabors.Shapes.IPath,System.Single)">GenerateOutline(IPath, Single)</h4>
@@ -148,10 +148,140 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Shapes/new/master/apiSpec/new?filename=SixLabors_Shapes_Outliner_GenerateOutline_SixLabors_Shapes_IPath_System_Single_ReadOnlySpan_System_Single__.md&amp;value=---%0Auid%3A%20SixLabors.Shapes.Outliner.GenerateOutline(SixLabors.Shapes.IPath%2CSystem.Single%2CReadOnlySpan%7BSystem.Single%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Shapes/blob/d8a645d9cc22731c512469cbd7bd8a696e7931c4/src/SixLabors.Shapes/Outliner.cs/#L37">View Source</a>
+  </span>
+  <a id="SixLabors_Shapes_Outliner_GenerateOutline_" data-uid="SixLabors.Shapes.Outliner.GenerateOutline*"></a>
+  <h4 id="SixLabors_Shapes_Outliner_GenerateOutline_SixLabors_Shapes_IPath_System_Single_ReadOnlySpan_System_Single__" data-uid="SixLabors.Shapes.Outliner.GenerateOutline(SixLabors.Shapes.IPath,System.Single,ReadOnlySpan{System.Single})">GenerateOutline(IPath, Single, ReadOnlySpan&lt;Single&gt;)</h4>
+  <div class="markdown level1 summary"><p>Generates a outline of the path with alternating on and off segments based on the pattern.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IPath GenerateOutline(this IPath path, float width, ReadOnlySpan&lt;float&gt; pattern)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Shapes.IPath.html">IPath</a></td>
+        <td><span class="parametername">path</span></td>
+        <td><p>the path to outline</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">width</span></td>
+        <td><p>The final width outline</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">ReadOnlySpan</span>&lt;<span class="xref">System.Single</span>&gt;</td>
+        <td><span class="parametername">pattern</span></td>
+        <td><p>The pattern made of multiples of the width.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Shapes.IPath.html">IPath</a></td>
+        <td><p>A new path representing the outline.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Shapes/new/master/apiSpec/new?filename=SixLabors_Shapes_Outliner_GenerateOutline_SixLabors_Shapes_IPath_System_Single_ReadOnlySpan_System_Single__System_Boolean_.md&amp;value=---%0Auid%3A%20SixLabors.Shapes.Outliner.GenerateOutline(SixLabors.Shapes.IPath%2CSystem.Single%2CReadOnlySpan%7BSystem.Single%7D%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Shapes/blob/d8a645d9cc22731c512469cbd7bd8a696e7931c4/src/SixLabors.Shapes/Outliner.cs/#L61">View Source</a>
+  </span>
+  <a id="SixLabors_Shapes_Outliner_GenerateOutline_" data-uid="SixLabors.Shapes.Outliner.GenerateOutline*"></a>
+  <h4 id="SixLabors_Shapes_Outliner_GenerateOutline_SixLabors_Shapes_IPath_System_Single_ReadOnlySpan_System_Single__System_Boolean_" data-uid="SixLabors.Shapes.Outliner.GenerateOutline(SixLabors.Shapes.IPath,System.Single,ReadOnlySpan{System.Single},System.Boolean)">GenerateOutline(IPath, Single, ReadOnlySpan&lt;Single&gt;, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Generates a outline of the path with alternating on and off segments based on the pattern.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IPath GenerateOutline(this IPath path, float width, ReadOnlySpan&lt;float&gt; pattern, bool startOff)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Shapes.IPath.html">IPath</a></td>
+        <td><span class="parametername">path</span></td>
+        <td><p>the path to outline</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">width</span></td>
+        <td><p>The final width outline</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">ReadOnlySpan</span>&lt;<span class="xref">System.Single</span>&gt;</td>
+        <td><span class="parametername">pattern</span></td>
+        <td><p>The pattern made of multiples of the width.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">startOff</span></td>
+        <td><p>Weather the first item in the pattern is on or off.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Shapes.IPath.html">IPath</a></td>
+        <td><p>A new path representing the outline.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/SixLabors/Shapes/new/master/apiSpec/new?filename=SixLabors_Shapes_Outliner_GenerateOutline_SixLabors_Shapes_IPath_System_Single_System_Single___.md&amp;value=---%0Auid%3A%20SixLabors.Shapes.Outliner.GenerateOutline(SixLabors.Shapes.IPath%2CSystem.Single%2CSystem.Single%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/Shapes/blob/master/src/SixLabors.Shapes/Outliner.cs/#L26">View Source</a>
+    <a href="https://github.com/SixLabors/Shapes/blob/d8a645d9cc22731c512469cbd7bd8a696e7931c4/src/SixLabors.Shapes/Outliner.cs/#L27">View Source</a>
   </span>
   <a id="SixLabors_Shapes_Outliner_GenerateOutline_" data-uid="SixLabors.Shapes.Outliner.GenerateOutline*"></a>
   <h4 id="SixLabors_Shapes_Outliner_GenerateOutline_SixLabors_Shapes_IPath_System_Single_System_Single___" data-uid="SixLabors.Shapes.Outliner.GenerateOutline(SixLabors.Shapes.IPath,System.Single,System.Single[])">GenerateOutline(IPath, Single, Single[])</h4>
@@ -213,7 +343,7 @@
     <a href="https://github.com/SixLabors/Shapes/new/master/apiSpec/new?filename=SixLabors_Shapes_Outliner_GenerateOutline_SixLabors_Shapes_IPath_System_Single_System_Single___System_Boolean_.md&amp;value=---%0Auid%3A%20SixLabors.Shapes.Outliner.GenerateOutline(SixLabors.Shapes.IPath%2CSystem.Single%2CSystem.Single%5B%5D%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/Shapes/blob/master/src/SixLabors.Shapes/Outliner.cs/#L39">View Source</a>
+    <a href="https://github.com/SixLabors/Shapes/blob/d8a645d9cc22731c512469cbd7bd8a696e7931c4/src/SixLabors.Shapes/Outliner.cs/#L50">View Source</a>
   </span>
   <a id="SixLabors_Shapes_Outliner_GenerateOutline_" data-uid="SixLabors.Shapes.Outliner.GenerateOutline*"></a>
   <h4 id="SixLabors_Shapes_Outliner_GenerateOutline_SixLabors_Shapes_IPath_System_Single_System_Single___System_Boolean_" data-uid="SixLabors.Shapes.Outliner.GenerateOutline(SixLabors.Shapes.IPath,System.Single,System.Single[],System.Boolean)">GenerateOutline(IPath, Single, Single[], Boolean)</h4>
@@ -287,7 +417,7 @@
                     <a href="https://github.com/SixLabors/Shapes/new/master/apiSpec/new?filename=SixLabors_Shapes_Outliner.md&amp;value=---%0Auid%3A%20SixLabors.Shapes.Outliner%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/SixLabors/Shapes/blob/master/src/SixLabors.Shapes/Outliner.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/SixLabors/Shapes/blob/d8a645d9cc22731c512469cbd7bd8a696e7931c4/src/SixLabors.Shapes/Outliner.cs/#L16" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

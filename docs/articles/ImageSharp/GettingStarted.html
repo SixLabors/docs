@@ -9,7 +9,7 @@
     <title>Getting started with ImageSharp </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Getting started with ImageSharp ">
-    <meta name="generator" content="docfx 2.32.2.0">
+    <meta name="generator" content="docfx 2.37.0.0">
     
     <link rel="shortcut icon" href="../../favicon.png">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -96,14 +96,21 @@ using(Image&lt;Rgba32&gt; image = new Image&lt;Rgba32&gt;(width, height)) // cre
 <p>The easiest way to work with ImageSharp is to utilize our extension methods:</p>
 <ul>
 <li><a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.ImageExtensions.html">ImageExtensions</a> for basic stuff</li>
-<li><a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Processing.ProcessingExtensions.html">ProcessingExtensions</a> for <code>Mutate()</code> and <code>Clone()</code></li>
-<li><a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Processing.Transforms.ResizeExtensions.html">ResizeExtensions</a> for various <code>Resize(...)</code> overloads</li>
-<li><a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Processing.Drawing.FillRegionExtensions.html">FillRegionExtensions</a> for <code>Fill(...)</code> overloads
-etc.</li>
+<li><a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Processing.ProcessingExtensions.html">ProcessingExtensions</a> for <code>Mutate()</code> and <code>Clone()</code> </li>
+<li>All the processing extensions (eg. <code>Resize(...)</code>) are living within the <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Processing.html">SixLabors.ImageSharp.Processing</a> namespace. 
+If you want to do image processing work, make sure you are <code>using</code> this namespace in your code!</li>
 </ul>
-<p>Since <code>beta-3</code> we have well-organized nested namespaces, so don&#39;t forget to import the namespace of the extension class you want to work with!</p>
 <h3 id="why-is-xrefsixlaborsimagesharpimage1displaypropertyname-a-generic-class">Why is <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> a generic class?</h3>
 <p>An image is essentially a <strong>generic 2D array of pixels</strong> stored in a contiguous memory block. Check out the <a href="PixelFormats.html">Pixel Formats</a> article for more details!</p>
+<h3 id="performance">Performance</h3>
+<p>Achieving near-to-native performance is a major goal for the SixLabors team, and thanks to the improvements brought by the RyuJIT runtime, it&#39;s no longer mission impossible. We are constantly working on improvements.</p>
+<p>At the moment it&#39;s pretty hard to define fair benchmarks comparing GDI+ (aka. <code>System.Drawing</code> on Windows) and ImageSharp, because of the differences between the algorithms being used. Generally speaking, we are more feature rich, producing better quality. We hope we can match the corresponding algorithm parameters, and present some very specific benchmark results soon.</p>
+<p>If you are experienceing a significant performance gap between System.Drawing and ImageSharp for basic use-cases, there is a high chance that essential SIMD optimizations are not utilized. </p>
+<p>A few troubleshooting steps to try:</p>
+<ul>
+<li>Check the value of <a href="https://docs.microsoft.com/en-us/dotnet/api/system.numerics.vector.ishardwareaccelerated?view=netcore-2.1&amp;viewFallbackFrom=netstandard-2.0#System_Numerics_Vector_IsHardwareAccelerated">Vector.IsHardwareAccelerated</a>. If the output is false, it means there is no SIMD support in your runtime!</li>
+<li>Make sure your code runs on 64bit! Older .NET Framework versions are using the legacy runtime on 32 bits, having no built-in SIMD support.</li>
+</ul>
 
 </article>
           </div>

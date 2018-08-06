@@ -9,7 +9,7 @@
     <title>Advanced Pixel Manipulation </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Advanced Pixel Manipulation ">
-    <meta name="generator" content="docfx 2.32.2.0">
+    <meta name="generator" content="docfx 2.37.0.0">
     
     <link rel="shortcut icon" href="../../favicon.png">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -71,17 +71,74 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="advanced-pixel-manipulation">Advanced Pixel Manipulation</h1>
 
-<h3 id="setting-individual-pixels-using-the-indexer">Setting individual pixels using the indexer</h3>
-<p>TODO</p>
-<h3 id="loading-raw-pixel-data">Loading raw pixel data</h3>
-<p>TODO</p>
-<h3 id="saving-raw-pixel-data">Saving raw pixel data</h3>
-<p>TODO</p>
+<h3 id="setting-individual-pixels-using-indexers">Setting individual pixels using indexers</h3>
+<p>A very basic and readable way for manipulating individual pixels is to use the indexer either on <code>Image&lt;T&gt;</code> or <code>ImageFrame&lt;T&gt;</code>:</p>
+<pre><code class="lang-C#">using (Image&lt;Rgba32&gt; image = new Image&lt;Rgba32&gt;(400, 400))
+{
+    image[200, 200] = Rgba32.White; // also works on ImageFrame&lt;T&gt;
+}
+</code></pre><p>The idexer is much faster than the <code>.GetPixel(x, y)</code> and <code>.SetPixel(x,y)</code> methods of <code>System.Drawing</code> but, it&#39;s still quite slow.</p>
 <h3 id="efficient-pixel-manipulation">Efficient pixel manipulation</h3>
-<p>TODO</p>
-<h4 id="getrowspanidx--getrowmemory"><code>GetRowSpan(idx)</code> / <code>GetRowMemory()</code></h4>
-<p>TODO</p>
+<p>If you want to achieve killer speed in your own low-level pixel manipulation routines, you need to utilize extension methods within the <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Advanced.AdvancedImageExtensions.html">AdvancedImageExtensions</a> class. These methods are using the <a href="https://www.codemag.com/Article/1807051/Introducing-.NET-Core-2.1-Flagship-Types-Span-T-and-Memory-T">brand-new <code>Span&lt;T&gt;</code>-based memory manipulation primitives</a> from <a href="https://www.nuget.org/packages/System.Memory/">System.Memory</a>, providing a fast, yet safe low-level solution to manipulate pixel data.</p>
+<p>This is how you can implement efficient row-by-row pixel manipulation:</p>
+<pre><code class="lang-C#">using SixLabors.ImageSharp.Advanced;
 
+// ...
+
+using (Image&lt;Rgba32&gt; image = new Image&lt;Rgba32&gt;(400, 400))
+{
+    for (int y = 0; y &lt; image.Height; y++)
+    {
+        Span&lt;Rgba32&gt; pixelRowSpan = image.GetPixelRowSpan(y);
+        for (int x = 0; x &lt; image.Width; x++)
+        {
+            pixelRowSpan[x] = new Rgba32(x/255, y/255, 50, 255);
+        }
+    }
+}
+</code></pre><h3 id="spant-limitations"><code>Span&lt;T&gt;</code> limitations</h3>
+<p>Please be aware that <strong><code>Span&lt;T&gt;</code> has a very specific limitation</strong>: it is a stack-only type! Read the <em>Is There Anything Span Can’t Do?!</em> section in <a href="https://www.codemag.com/Article/1807051/Introducing-.NET-Core-2.1-Flagship-Types-Span-T-and-Memory-T">this article</a> for more details.
+A short summary of the limitations:</p>
+<ul>
+<li>Span can only live on the execution stack.</li>
+<li>Span cannot be boxed or put on the heap.</li>
+<li>Span cannot be used as a generic type argument.</li>
+<li>Span cannot be an instance field of a type that itself is not stack-only.</li>
+<li>Span cannot be used within asynchronous methods.</li>
+</ul>
+<p><strong>Non-conformant code:</strong></p>
+<pre><code class="lang-C#">Span&lt;Rgba32&gt; span = image.GetRowSpan(y);
+
+await Task.Run(() =&gt;
+    {   
+        // ☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠
+        // ☠☠☠ BANG! YOU HAVE CAPTURED A SPAN ON THE HEAP! ☠☠☠
+
+        for (int i = 0; i &lt; span.Length; i++)
+        {
+            span[i] = /* ... */;
+        }
+    });
+</code></pre><h3 id="exporting-raw-pixel-data-from-an-imaget">Exporting raw pixel data from an <code>Image&lt;T&gt;</code></h3>
+<p>You can use <code>image.GetPixelSpan()</code> to access the whole contigous pixel buffer, eg. to copy the pixel data into an array:</p>
+<pre><code class="lang-C#">Rgba32[] pixelArray = image.GetPixelSpan().ToArray();
+</code></pre><p>Or:</p>
+<pre><code class="lang-C#">Rgba32[] pixelArray = /* your pixel buffer being reused */
+image.GetPixelSpan().CopyTo(pixelArray);
+</code></pre><p>Or:</p>
+<pre><code class="lang-C#">byte[] rgbaBytes = MemoryMarshal.AsBytes(image.GetPixelSpan()).ToArray();
+</code></pre><h3 id="loading-raw-pixel-data-into-an-imaget">Loading raw pixel data into an <code>Image&lt;T&gt;</code></h3>
+<pre><code class="lang-C#">Rgba32[] rgbaData = GetMyRgbaArray();
+using (var image = Image.LoadPixelData(rgbaData))
+{
+    // Work with image
+}
+</code></pre><pre><code class="lang-C#">byte[] rgbaBytes = GetMyRgbaBytes();
+using (var image = Image.LoadPixelData&lt;Rgba32&gt;(rgbaBytes))
+{
+    // Work with image
+}
+</code></pre>
 </article>
           </div>
           

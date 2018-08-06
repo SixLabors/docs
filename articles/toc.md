@@ -4,6 +4,6 @@
 ## [Image Formats](ImageSharp/ImageFormats.md)
 ## [Processing images](ImageSharp/Processing.md)
 ## [Drawing]()
-## [Advanced pixel operations](ImageSharp/PixelManipulation.md)
+## [Working with pixel buffers](ImageSharp/WorkingWithPixelBuffers.md)
 ## [Configuration](ImageSharp/Configuration.md)
 ## [Memory Management](ImageSharp/MemoryManagement.md)
