@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class QueryCollectionRequestParser
    ">
-    <meta name="generator" content="docfx 2.37.0.0">
+    <meta name="generator" content="docfx 2.40.1.0">
     
     <link rel="shortcut icon" href="../../favicon.png">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -86,23 +86,47 @@
     <h5>Implements</h5>
     <div><a class="xref" href="SixLabors.ImageSharp.Web.Commands.IRequestParser.html">IRequestParser</a></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="SixLabors.ImageSharp.Web.Commands.html">SixLabors.ImageSharp.Web.Commands</a></h6>
   <h6><strong>Assembly</strong>: SixLabors.ImageSharp.Web.dll</h6>
   <h5 id="SixLabors_ImageSharp_Web_Commands_QueryCollectionRequestParser_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class QueryCollectionRequestParser : object, IRequestParser</code></pre>
+    <pre><code class="lang-csharp hljs">public class QueryCollectionRequestParser : IRequestParser</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_Commands_QueryCollectionRequestParser_ParseRequestCommands_HttpContext_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.Commands.QueryCollectionRequestParser.ParseRequestCommands(HttpContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_Commands_QueryCollectionRequestParser_ParseRequestCommands_Microsoft_AspNetCore_Http_HttpContext_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.Commands.QueryCollectionRequestParser.ParseRequestCommands(Microsoft.AspNetCore.Http.HttpContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/4b2f219cf0a3aa3bcdb68465609066ff2c21eb6b/src/ImageSharp.Web/Commands/QueryCollectionRequestParser.cs/#L18">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/8da968c85b225632c140ce24af8dcc4e7b6dc76a/src/ImageSharp.Web/Commands/QueryCollectionRequestParser.cs/#L18">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Web_Commands_QueryCollectionRequestParser_ParseRequestCommands_" data-uid="SixLabors.ImageSharp.Web.Commands.QueryCollectionRequestParser.ParseRequestCommands*"></a>
-  <h4 id="SixLabors_ImageSharp_Web_Commands_QueryCollectionRequestParser_ParseRequestCommands_HttpContext_" data-uid="SixLabors.ImageSharp.Web.Commands.QueryCollectionRequestParser.ParseRequestCommands(HttpContext)">ParseRequestCommands(HttpContext)</h4>
+  <h4 id="SixLabors_ImageSharp_Web_Commands_QueryCollectionRequestParser_ParseRequestCommands_Microsoft_AspNetCore_Http_HttpContext_" data-uid="SixLabors.ImageSharp.Web.Commands.QueryCollectionRequestParser.ParseRequestCommands(Microsoft.AspNetCore.Http.HttpContext)">ParseRequestCommands(HttpContext)</h4>
   <div class="markdown level1 summary"><p>Returns a collection of commands from the current request.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -121,7 +145,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">HttpContext</span></td>
+        <td><span class="xref">Microsoft.AspNetCore.Http.HttpContext</span></td>
         <td><span class="parametername">context</span></td>
         <td><p>Encapsulates all HTTP-specific information about an individual HTTP request.</p>
 </td>
@@ -138,8 +162,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
-        <td><p>The <see cref="!:IDictionary&lt;TKey,TValue>"></see>.</p>
+        <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td><p>The <span class="xref">System.Collections.Generic.IDictionary&lt;TKey, TValue&gt;</span>.</p>
 </td>
       </tr>
     </tbody>
@@ -159,7 +183,7 @@
                     <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_Commands_QueryCollectionRequestParser.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.Commands.QueryCollectionRequestParser%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/4b2f219cf0a3aa3bcdb68465609066ff2c21eb6b/src/ImageSharp.Web/Commands/QueryCollectionRequestParser.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/8da968c85b225632c140ce24af8dcc4e7b6dc76a/src/ImageSharp.Web/Commands/QueryCollectionRequestParser.cs/#L15" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

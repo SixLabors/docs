@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "C:/dev/ImageSharp/docs/2",
+  "source_base_path": "C:/development/github/SixLabors/docs",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Core/SixLabors.Memory.AllocationOptions.html",
-          "hash": "/rwRIiHrNxOfqxtcIal8EA=="
+          "hash": "Y9LFrNBtVenKM1t3y76ZiQ=="
         }
       },
       "is_incremental": true,
@@ -21,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Core/SixLabors.Memory.ArrayPoolMemoryAllocator.html",
-          "hash": "fVBPxxdF2p0mWVQ9bACd2Q=="
+          "hash": "x22sCiU4JfgIcJLQ7sWC/w=="
         }
       },
       "is_incremental": true,
@@ -33,7 +33,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Core/SixLabors.Memory.IManagedByteBuffer.html",
-          "hash": "UqbQSgygwX7Ap+a78UvZJA=="
+          "hash": "3MtLFwhzyJGa/K/mXSf19w=="
         }
       },
       "is_incremental": true,
@@ -45,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Core/SixLabors.Memory.MemoryAllocator.html",
-          "hash": "jcaT8wdyFhnobEp06tDsGw=="
+          "hash": "wa9028SqN1rZ0Q9bMOHNKw=="
         }
       },
       "is_incremental": true,
@@ -57,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Core/SixLabors.Memory.SimpleGcMemoryAllocator.html",
-          "hash": "ybwoI8OCeDXUDdl9ZZhSvQ=="
+          "hash": "eZqHYUOJQsdK7xYksVKv4w=="
         }
       },
       "is_incremental": true,
@@ -69,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Core/SixLabors.Memory.html",
-          "hash": "Aaf2DbdV4HiqX1/IaikseA=="
+          "hash": "jzCAxoMg6pKHUadXvVENPA=="
         }
       },
       "is_incremental": true,
@@ -81,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Core/SixLabors.Primitives.Matrix3x2Extensions.html",
-          "hash": "HcK3Uok1PBXUAWC8sPJZow=="
+          "hash": "51xss/eHW3daXR4m9739Jw=="
         }
       },
       "is_incremental": true,
@@ -93,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Core/SixLabors.Primitives.Point.html",
-          "hash": "dmnqT4EWyinj90PtLEdbrQ=="
+          "hash": "YKBcw2ysO1C4HZNr70iBDw=="
         }
       },
       "is_incremental": true,
@@ -105,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Core/SixLabors.Primitives.PointF.html",
-          "hash": "HxRrqVmA+0Yly8jMfymV2g=="
+          "hash": "BoA4QlHg/p/iwV3Ge0d+oQ=="
         }
       },
       "is_incremental": true,
@@ -117,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Core/SixLabors.Primitives.Rectangle.html",
-          "hash": "AJptotugTgmkO2DLr81vmg=="
+          "hash": "/EABR2S6bqZl9xgCzL5L2A=="
         }
       },
       "is_incremental": true,
@@ -129,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Core/SixLabors.Primitives.RectangleF.html",
-          "hash": "7szyAFXKww8ESvJik0HHDQ=="
+          "hash": "26xXPh/DPlZs9vbbarVGCg=="
         }
       },
       "is_incremental": true,
@@ -141,7 +141,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Core/SixLabors.Primitives.Size.html",
-          "hash": "r/CX3TeTLfGbmAbvuQ9Gmw=="
+          "hash": "3X6rV6vAq/7qR0WpYRK/bQ=="
         }
       },
       "is_incremental": true,
@@ -153,7 +153,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Core/SixLabors.Primitives.SizeF.html",
-          "hash": "71/rxNIO7gWtc2ZP012zcQ=="
+          "hash": "i7z3ys+BF6evpVVRPe5wgg=="
         }
       },
       "is_incremental": true,
@@ -165,7 +165,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Core/SixLabors.Primitives.html",
-          "hash": "/dND4zp0Qp0gDxOntt++fg=="
+          "hash": "lbZaI2QJWp3HsiXjTUN4Yg=="
         }
       },
       "is_incremental": true,
@@ -189,7 +189,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Fonts/SixLabors.Fonts.Exceptions.FontException.html",
-          "hash": "4GEFhSxYrsmvT5j/0ZB1oA=="
+          "hash": "cQXBEMmaQkRFygWUcQptWQ=="
         }
       },
       "is_incremental": true,
@@ -201,7 +201,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Fonts/SixLabors.Fonts.Exceptions.FontFamilyNotFoundException.html",
-          "hash": "nrDdMC3Y1uMxYsDbSPbPNw=="
+          "hash": "lzT4yPBYjNiE312iE8ZFqg=="
         }
       },
       "is_incremental": true,
@@ -213,7 +213,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Fonts/SixLabors.Fonts.Exceptions.InvalidFontFileException.html",
-          "hash": "leXJxqEX5d1vUQUF80mofQ=="
+          "hash": "kFjV/h9zgLUhKFdBGb7EsQ=="
         }
       },
       "is_incremental": true,
@@ -225,7 +225,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Fonts/SixLabors.Fonts.Exceptions.InvalidFontTableException.html",
-          "hash": "MFzE52a9znHC8cDXmGnWSg=="
+          "hash": "SJzrDpF8uRNML3YhuHieNQ=="
         }
       },
       "is_incremental": true,
@@ -237,7 +237,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Fonts/SixLabors.Fonts.Exceptions.html",
-          "hash": "MYB09YxVSvdcN+WEKead5A=="
+          "hash": "JHfK+fQIQ+cpCvnPyzeO9A=="
         }
       },
       "is_incremental": true,
@@ -249,7 +249,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Fonts/SixLabors.Fonts.Font.html",
-          "hash": "SWm/RBBBBdZlgg6M7BgbSQ=="
+          "hash": "TcQLDjY+JikwJDVJ2/kQpg=="
         }
       },
       "is_incremental": true,
@@ -261,7 +261,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Fonts/SixLabors.Fonts.FontCollection.html",
-          "hash": "lBNpa8JmjBuBBfGHJxGV9Q=="
+          "hash": "Dv9xGPGqDVmdlOVhoFbIsg=="
         }
       },
       "is_incremental": true,
@@ -273,7 +273,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Fonts/SixLabors.Fonts.FontDescription.html",
-          "hash": "GYdpXNHLW3TdytqnRuyM/w=="
+          "hash": "8NbilWunAwEl5Yc1tpp59A=="
         }
       },
       "is_incremental": true,
@@ -285,7 +285,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Fonts/SixLabors.Fonts.FontFamily.html",
-          "hash": "RWWe1B+lTebE9GJv3HlZ2w=="
+          "hash": "IDqyZmV3AUJ7df7keR8KfA=="
         }
       },
       "is_incremental": true,
@@ -297,7 +297,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Fonts/SixLabors.Fonts.FontFamilyCollectionExtensions.html",
-          "hash": "1Pr8nA3SOgJjZNNdMDz88w=="
+          "hash": "Plmti4qleo8z0blTJmXBIQ=="
         }
       },
       "is_incremental": true,
@@ -309,7 +309,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Fonts/SixLabors.Fonts.FontStyle.html",
-          "hash": "iZKOq3EWCVspCTpjLCldqw=="
+          "hash": "xyOYL+zrFuXEoVMwbcKwxQ=="
         }
       },
       "is_incremental": true,
@@ -321,7 +321,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Fonts/SixLabors.Fonts.GlyphMetric.html",
-          "hash": "lQMAAROajDZdL4QvBov8uQ=="
+          "hash": "5GbNmokSIeb+nfAxvh4QPw=="
         }
       },
       "is_incremental": true,
@@ -333,7 +333,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Fonts/SixLabors.Fonts.GlyphRendererParameters.html",
-          "hash": "wCA7Aorpu+28UN2nbVIgFg=="
+          "hash": "jOOis7bD/RB7DZPwq+aNiQ=="
         }
       },
       "is_incremental": true,
@@ -345,7 +345,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Fonts/SixLabors.Fonts.HorizontalAlignment.html",
-          "hash": "9nAyl+yPCOegZGuUAeedSA=="
+          "hash": "b2iIX5Iff+Tc+3e83QuGEA=="
         }
       },
       "is_incremental": true,
@@ -357,7 +357,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Fonts/SixLabors.Fonts.IFontCollection.html",
-          "hash": "5ZotFamFJlDVtEqSm2ggFA=="
+          "hash": "rZrXPNV+Ow35gVE+Iwxgqg=="
         }
       },
       "is_incremental": true,
@@ -369,7 +369,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Fonts/SixLabors.Fonts.IGlyphRenderer.html",
-          "hash": "abpv1c2pZfBc4nIkB8P9Cg=="
+          "hash": "RyxtMczzX2zQYc3IpWqGaQ=="
         }
       },
       "is_incremental": true,
@@ -381,7 +381,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Fonts/SixLabors.Fonts.IGlyphRendererExtensions.html",
-          "hash": "nvUnXnJDzMXtFJzml42btQ=="
+          "hash": "X8k21uoP4q99m6LhaWvvtQ=="
         }
       },
       "is_incremental": true,
@@ -393,7 +393,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Fonts/SixLabors.Fonts.IReadOnlyFontCollection.html",
-          "hash": "Gu7Z1mzWRoDXrHAHbtCAdA=="
+          "hash": "DO/Ih43ABwZ/sWyVxsAlpQ=="
         }
       },
       "is_incremental": true,
@@ -405,7 +405,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Fonts/SixLabors.Fonts.IReadonlyFontCollectionExtensions.html",
-          "hash": "1Bx9yw9co+QHAwbTirsb/w=="
+          "hash": "oyN9oDSBnM0CeCDtsy5l6g=="
         }
       },
       "is_incremental": true,
@@ -417,7 +417,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Fonts/SixLabors.Fonts.RendererOptions.html",
-          "hash": "RlrheIUaq4ENtXwiYYBCPw=="
+          "hash": "qEA8MFXoUHSrbYb0XgLV8A=="
         }
       },
       "is_incremental": true,
@@ -429,7 +429,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Fonts/SixLabors.Fonts.SystemFonts.html",
-          "hash": "kkYTGi6qHorO5vZRq6Cj/g=="
+          "hash": "ZOBj6dV3J3UkG8uRxtvykg=="
         }
       },
       "is_incremental": true,
@@ -441,7 +441,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Fonts/SixLabors.Fonts.TextMeasurer.html",
-          "hash": "WVaAGEdDhj8D1TljFRqs3Q=="
+          "hash": "fjx6GRorlVRY6RQAC2pMYg=="
         }
       },
       "is_incremental": true,
@@ -453,7 +453,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Fonts/SixLabors.Fonts.TextRenderer.html",
-          "hash": "7Qd07qNd52h4DQ6EFf70pg=="
+          "hash": "fX/yQ22PZlBYHSCz0aUKzA=="
         }
       },
       "is_incremental": true,
@@ -465,7 +465,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Fonts/SixLabors.Fonts.VerticalAlignment.html",
-          "hash": "eruzzPPD4YR03XwBE3MtAg=="
+          "hash": "OlxwXM3xtuq1cVvUx7il1g=="
         }
       },
       "is_incremental": true,
@@ -477,7 +477,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Fonts/SixLabors.Fonts.html",
-          "hash": "1rzQZZSIvB2y+X3rlNcdfw=="
+          "hash": "4xR8x8vyouiGB8asYz+iGQ=="
         }
       },
       "is_incremental": true,
@@ -497,23 +497,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.Caching.AsyncKeyLock.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.Caching.AsyncKeyLock.html",
-          "hash": "BpEzlIt9ILW/U+KdLMKXNA=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.Caching.CacheHash.yml",
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.Caching.CacheHash.html",
-          "hash": "U+OKThAhU/U7rHyAzdqsUg=="
+          "hash": "yoPtT8mDwx86bY9SAUhd3A=="
         }
       },
       "is_incremental": true,
@@ -525,7 +513,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.Caching.CachedInfo.html",
-          "hash": "Fbu3c5HhyE5EzyWJ0OsiAw=="
+          "hash": "kOqHO9otZIqWTt/64Iylnw=="
         }
       },
       "is_incremental": true,
@@ -537,7 +525,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.Caching.IAsyncKeyLock.html",
-          "hash": "lfj7+uwIsLQ182ZuTwRdmw=="
+          "hash": "5mHo30PktwDJDHDJahziyg=="
         }
       },
       "is_incremental": true,
@@ -549,7 +537,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.Caching.ICacheHash.html",
-          "hash": "ZWAzDE2AXcrKZ/HuhvT/HA=="
+          "hash": "vxZbJAUGNpgjUZDn+uNang=="
         }
       },
       "is_incremental": true,
@@ -561,7 +549,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.Caching.IImageCache.html",
-          "hash": "94bRETqTRpy9J4ok6N8Gvg=="
+          "hash": "OviNko0shaIDahR33z7mYg=="
         }
       },
       "is_incremental": true,
@@ -573,7 +561,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.Caching.PhysicalFileSystemCache.html",
-          "hash": "BgYQjxwVJ6hGeNFIBbFaFg=="
+          "hash": "j5h+UTSwUYTXKG60ZCCGVg=="
         }
       },
       "is_incremental": true,
@@ -585,7 +573,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.Caching.html",
-          "hash": "pnojeFDaB8z0igXDmIDkGA=="
+          "hash": "b96BiS6CSBRxtgjijInOIQ=="
         }
       },
       "is_incremental": true,
@@ -597,7 +585,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.Commands.CommandParser.html",
-          "hash": "C4A7esrYNZFUCrI0Oj3fPw=="
+          "hash": "VUTdY3vJT5McMY4Yug5B+w=="
         }
       },
       "is_incremental": true,
@@ -609,7 +597,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.Commands.Converters.CommandConverter.html",
-          "hash": "jHYA0LX3ZOAOzbt+/05c7w=="
+          "hash": "JfJwkkeyLElEtUlaDRDw/A=="
         }
       },
       "is_incremental": true,
@@ -621,7 +609,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.Commands.Converters.ICommandConverter.html",
-          "hash": "1sagk/nUXd/fa9inJsYNnA=="
+          "hash": "/Bj52fwXQfkDoadu+a665A=="
         }
       },
       "is_incremental": true,
@@ -633,7 +621,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.Commands.Converters.html",
-          "hash": "ytWF0dKzqAHYtTPe9sIgNQ=="
+          "hash": "nSV1bihLHXfMrQB2j8xlsw=="
         }
       },
       "is_incremental": true,
@@ -645,7 +633,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.Commands.DictionaryExtensions.html",
-          "hash": "4Xk/xZfO2Ea9CohegXEf7A=="
+          "hash": "eC8lJOYeBmHMxSM+0mEOcQ=="
         }
       },
       "is_incremental": true,
@@ -657,7 +645,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.Commands.IRequestParser.html",
-          "hash": "GaUf3hZq3yCAWh9LBTGWJw=="
+          "hash": "FfxxM6x+XBNLzL9JEOm0Ow=="
         }
       },
       "is_incremental": true,
@@ -669,7 +657,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.Commands.QueryCollectionRequestParser.html",
-          "hash": "cfXg1/oUei+UBCPYEM2AgA=="
+          "hash": "scn5jYFzWxSwkjv2kDLs7Q=="
         }
       },
       "is_incremental": true,
@@ -681,7 +669,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.Commands.html",
-          "hash": "yYoe2UJoCAnTHIfFmqQKEw=="
+          "hash": "iA5fgrNBGDMOvncliq76UA=="
         }
       },
       "is_incremental": true,
@@ -693,7 +681,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.DependencyInjection.ApplicationBuilderExtensions.html",
-          "hash": "Zo6Hp3ovuamMMpD3B3whmA=="
+          "hash": "YGfMmvIWdSDvl645gFDAlQ=="
         }
       },
       "is_incremental": true,
@@ -705,7 +693,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpBuilder.html",
-          "hash": "4Tepchn6Cbz8wZjy46kDpQ=="
+          "hash": "RhaGWMuIo9QoLCLsmJR1cg=="
         }
       },
       "is_incremental": true,
@@ -717,7 +705,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpCoreBuilder.html",
-          "hash": "Kgnl4VzJimtXka794H7E0A=="
+          "hash": "jBo3ZSdERgGkgurHMKc5vQ=="
         }
       },
       "is_incremental": true,
@@ -729,7 +717,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpConfiguration.html",
-          "hash": "N58HdYrqmNAtwjrOwAvVzQ=="
+          "hash": "zMXloVx36o2/WYL7JQ+IFA=="
         }
       },
       "is_incremental": true,
@@ -741,7 +729,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.html",
-          "hash": "r85G19f6iOQpuCwpLNF8qA=="
+          "hash": "OnsHfNQFV+5YOYEkUQXlcA=="
         }
       },
       "is_incremental": true,
@@ -753,7 +741,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.DependencyInjection.ServiceCollectionExtensions.html",
-          "hash": "S/ZETM377MXCIfLoXr/s2Q=="
+          "hash": "D0D39/OC6G0Rr561pNTb9g=="
         }
       },
       "is_incremental": true,
@@ -765,7 +753,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.DependencyInjection.html",
-          "hash": "HeWez7gCtfaLWjnHf6Vang=="
+          "hash": "IA6O/Lfkpw5KOAHz/IxChg=="
         }
       },
       "is_incremental": true,
@@ -777,7 +765,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.FormattedImage.html",
-          "hash": "fj8qI7jUGItUumKcfxGpUg=="
+          "hash": "/6T2h5hJ0PtPYj6DjeexLw=="
         }
       },
       "is_incremental": true,
@@ -785,11 +773,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.Helpers.FormatHelpers.yml",
+      "source_relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.Helpers.FormatHelper.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.Helpers.FormatHelpers.html",
-          "hash": "Cvy+QXKJgkLXIC/om3/Mcw=="
+          "relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.Helpers.FormatHelper.html",
+          "hash": "eJGksRHH1p48GU41emUT0Q=="
         }
       },
       "is_incremental": true,
@@ -801,7 +789,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.Helpers.html",
-          "hash": "JB0zj6tCCY6cVBOkOySHwQ=="
+          "hash": "6sp394KJSDikCsZeAfdqag=="
         }
       },
       "is_incremental": true,
@@ -809,47 +797,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.Memory.IBufferManager.yml",
+      "source_relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.Middleware.ImageCommandContext.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.Memory.IBufferManager.html",
-          "hash": "CZt33ocWexmDpEz9XgaBVQ=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.Memory.IByteBuffer.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.Memory.IByteBuffer.html",
-          "hash": "SxkMYbD+mioxwX8b+r2KOw=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.Memory.PooledBufferManager.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.Memory.PooledBufferManager.html",
-          "hash": "8nlSkqp4ifMzZld6BlQVYQ=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.Memory.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.Memory.html",
-          "hash": "K+qfl/mRH7YIertkQItSyA=="
+          "relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.Middleware.ImageCommandContext.html",
+          "hash": "jaUGob4GaqxHEepq6TkdQg=="
         }
       },
       "is_incremental": true,
@@ -861,7 +813,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.Middleware.ImageProcessingContext.html",
-          "hash": "YB/7JBe7XeZjEiuBtfr0TQ=="
+          "hash": "xa5hh1SX4VBOx4rFKW9pWA=="
         }
       },
       "is_incremental": true,
@@ -873,7 +825,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddleware.html",
-          "hash": "fibpHAugM4WN7sVWmKipLg=="
+          "hash": "TENojbDpFkDes8cxA2xFkw=="
         }
       },
       "is_incremental": true,
@@ -885,19 +837,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.html",
-          "hash": "SE1IuiT63k3mXiwhJlrR2Q=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.Middleware.ImageValidationContext.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.Middleware.ImageValidationContext.html",
-          "hash": "AcbDE60PshIa3U9Fr313xw=="
+          "hash": "OCXAhPZ5r8EH0WdlaoA8vg=="
         }
       },
       "is_incremental": true,
@@ -909,7 +849,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.Middleware.html",
-          "hash": "U9sjlvpsmIdp4GLNHnZWdw=="
+          "hash": "g1ieP8ra6X5OKKpA9RtDqQ=="
         }
       },
       "is_incremental": true,
@@ -921,7 +861,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.Processors.BackgroundColorWebProcessor.html",
-          "hash": "KrLhspaSPlBPY4pAt+vOQA=="
+          "hash": "R/XVGtfN1EBC68eTDVSMhA=="
         }
       },
       "is_incremental": true,
@@ -933,7 +873,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.Processors.FormatWebProcessor.html",
-          "hash": "s9550BBqw6QCmcHrK6HWXA=="
+          "hash": "Kr+eD/apgbFObOIJA+O2PA=="
         }
       },
       "is_incremental": true,
@@ -945,7 +885,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.Processors.IImageWebProcessor.html",
-          "hash": "kn85Otg90uM35CtEuojP0A=="
+          "hash": "NrpQW0cuxZb8rylDCHWy/A=="
         }
       },
       "is_incremental": true,
@@ -957,7 +897,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.Processors.ResizeWebProcessor.html",
-          "hash": "7rECYH7SLl+sX/a5K4loog=="
+          "hash": "6jTZ2EMprmKbuLnToMbUjg=="
         }
       },
       "is_incremental": true,
@@ -969,7 +909,43 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.Processors.html",
-          "hash": "ZOx1Fo/xnRYCyM0MZ0GTgg=="
+          "hash": "nbZmMrIAqV4iaF+qN7JGqw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.Providers.IImageProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.Providers.IImageProvider.html",
+          "hash": "n6MhOhyEFeIywzQkiOU6MQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider.html",
+          "hash": "mCiHc4ZXmMSw8unEZbcPew=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.Providers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.Providers.html",
+          "hash": "D+CG19fH+8pZsU7CDg8+Lw=="
         }
       },
       "is_incremental": true,
@@ -981,7 +957,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.Resolvers.IImageResolver.html",
-          "hash": "y5Fdao+s+U+B3Ihel3W7Ag=="
+          "hash": "IJqRM/qbLKa8SAiDiPIxPA=="
         }
       },
       "is_incremental": true,
@@ -993,7 +969,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.html",
-          "hash": "sCgWIz/6f2PsV/Suu9zJ9w=="
+          "hash": "pWxvAmHe/0RHzgXBKyLuVg=="
         }
       },
       "is_incremental": true,
@@ -1005,7 +981,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.Resolvers.html",
-          "hash": "kSssg2VzTadOb1dBufZ19A=="
+          "hash": "gdDa+PxN2n5tDz9PyldqFA=="
         }
       },
       "is_incremental": true,
@@ -1017,7 +993,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp.Web/SixLabors.ImageSharp.Web.html",
-          "hash": "Mi+74gJ9vVsKOi8933Xjmw=="
+          "hash": "ZE81wEu6TCUEGdcQAou5UA=="
         }
       },
       "is_incremental": true,
@@ -1029,7 +1005,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp.Web/toc.html",
-          "hash": "5PHKy65qXzsHkn7hw2JUAQ=="
+          "hash": "3yYHC6K/IYfL0bu4RPevyA=="
         }
       },
       "is_incremental": false,
@@ -1041,7 +1017,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Advanced.AdvancedImageExtensions.html",
-          "hash": "SrZpZYcSm8M34zV2kjYL9w=="
+          "hash": "Q7k67ugGzTKvljT5OWgHJg=="
         }
       },
       "is_incremental": true,
@@ -1053,7 +1029,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Advanced.html",
-          "hash": "sUFhwT0riIcmUosEcHhcYA=="
+          "hash": "KiKeKS+8DjArNVTcqdpcTA=="
         }
       },
       "is_incremental": true,
@@ -1065,7 +1041,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Configuration.html",
-          "hash": "/vbXaLbRWIbRC4XsxRZKuA=="
+          "hash": "rOzr+h2Lqiqb7AMzhIfb+g=="
         }
       },
       "is_incremental": true,
@@ -1077,7 +1053,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Formats.Bmp.BmpBitsPerPixel.html",
-          "hash": "N130sZ/jP9Aa1rzIq+kjfA=="
+          "hash": "VKaWYbdSw4JIt/7Eg5Jt+w=="
         }
       },
       "is_incremental": true,
@@ -1089,7 +1065,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Formats.Bmp.BmpConfigurationModule.html",
-          "hash": "4y4u68KABz8sK1l+L9iRjQ=="
+          "hash": "sSrlfCWR0emq9eQYZmQCvQ=="
         }
       },
       "is_incremental": true,
@@ -1101,7 +1077,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Formats.Bmp.BmpDecoder.html",
-          "hash": "Y0a+gaJ8SmEOsk+74RXOqw=="
+          "hash": "brUdoDdFnSYfKXQY/McN/w=="
         }
       },
       "is_incremental": true,
@@ -1113,7 +1089,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Formats.Bmp.BmpEncoder.html",
-          "hash": "mUM8dDmPVoek/owppzvmHA=="
+          "hash": "s1hsUHdpRNdCQh2ARFtvHw=="
         }
       },
       "is_incremental": true,
@@ -1125,7 +1101,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Formats.Bmp.BmpImageFormatDetector.html",
-          "hash": "4ubiVj33GRjBLRJyu2nkZQ=="
+          "hash": "LsYlRJ5kXQwJpJeJSeLnHQ=="
         }
       },
       "is_incremental": true,
@@ -1137,7 +1113,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Formats.Bmp.html",
-          "hash": "24DwnooCGIOa2y6UxlY2vw=="
+          "hash": "0v6jfT9pJSMokG+na8bOGQ=="
         }
       },
       "is_incremental": true,
@@ -1149,7 +1125,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Formats.Gif.DisposalMethod.html",
-          "hash": "0H5J3sBZNg1xF2pGTP21jg=="
+          "hash": "WZxAL7H73ry6C7+y2MaUjw=="
         }
       },
       "is_incremental": true,
@@ -1161,7 +1137,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Formats.Gif.FrameDecodingMode.html",
-          "hash": "YQ5ZI/uOXLZoKBVeta0vHw=="
+          "hash": "b3YAIhP1XPODXAG37bofDg=="
         }
       },
       "is_incremental": true,
@@ -1173,7 +1149,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Formats.Gif.GifColorTableMode.html",
-          "hash": "UPAer1WseY30eL2cNsSlIQ=="
+          "hash": "IrojNFWczIe9jPJif+uJqQ=="
         }
       },
       "is_incremental": true,
@@ -1185,7 +1161,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Formats.Gif.GifConfigurationModule.html",
-          "hash": "hGU/x6EegL4tJbRSm1PhoQ=="
+          "hash": "eJnYV/NjZ/2Mp6eiI9+x9g=="
         }
       },
       "is_incremental": true,
@@ -1197,7 +1173,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Formats.Gif.GifDecoder.html",
-          "hash": "XyeEmAUEWpPk4PuQEi1KAg=="
+          "hash": "/WTchnrQMX50wpwoUuiXfw=="
         }
       },
       "is_incremental": true,
@@ -1209,7 +1185,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Formats.Gif.GifEncoder.html",
-          "hash": "xY6KTXkxXWKRWbasW1Khhg=="
+          "hash": "pkjAIx1W+UzlEfji4r2VzQ=="
         }
       },
       "is_incremental": true,
@@ -1221,7 +1197,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Formats.Gif.GifImageFormatDetector.html",
-          "hash": "lVlHABxGXv9tBLHbZLLlVA=="
+          "hash": "4eBrU2Z4eKDg2lLGuM4Upw=="
         }
       },
       "is_incremental": true,
@@ -1233,7 +1209,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Formats.Gif.IGifExtension.html",
-          "hash": "OEAIaqElIlGNRxGBgjenCw=="
+          "hash": "xx6Xf56gohUEyO+2FGTkuA=="
         }
       },
       "is_incremental": true,
@@ -1245,7 +1221,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Formats.Gif.html",
-          "hash": "6Faa6XaLkeGz0YZ04atzPQ=="
+          "hash": "/3cZPrN5rxsc3+s9uRaVnA=="
         }
       },
       "is_incremental": true,
@@ -1257,7 +1233,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Formats.IImageDecoder.html",
-          "hash": "ZrFlizsnRe0TFLiuYFUI0A=="
+          "hash": "12UjPWSh2KppfGZGdX6zGw=="
         }
       },
       "is_incremental": true,
@@ -1269,7 +1245,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Formats.IImageEncoder.html",
-          "hash": "1HKsXl6l5Lk9HwILrOvDPA=="
+          "hash": "XQumR9uFAOF0p3CTr5strg=="
         }
       },
       "is_incremental": true,
@@ -1281,7 +1257,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Formats.IImageFormat.html",
-          "hash": "pIEEVn98ZH09CdAciSKQcw=="
+          "hash": "z73sO4ycNQQ1zl2isHa5rA=="
         }
       },
       "is_incremental": true,
@@ -1293,7 +1269,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Formats.IImageFormatDetector.html",
-          "hash": "SFRDO0KBVPqRprV+xGalkA=="
+          "hash": "W3h4Q5Fp5XC/20wgi+N1+Q=="
         }
       },
       "is_incremental": true,
@@ -1305,7 +1281,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Formats.IImageInfoDetector.html",
-          "hash": "mTD6jsuJwz1IMzyKClrkcQ=="
+          "hash": "/b07YfKD4j08GUVGT864VA=="
         }
       },
       "is_incremental": true,
@@ -1317,7 +1293,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Formats.ImageFormatManager.html",
-          "hash": "6t6EvhQ3dCYF2Rl0DZHxcA=="
+          "hash": "NhXqkbo/i5MwxgnMWef0Aw=="
         }
       },
       "is_incremental": true,
@@ -1329,7 +1305,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Formats.Jpeg.JpegConfigurationModule.html",
-          "hash": "6PYcKlKi4yJY7HXleSmavg=="
+          "hash": "jokB24MXgwuVt5hpcYijgw=="
         }
       },
       "is_incremental": true,
@@ -1341,7 +1317,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Formats.Jpeg.JpegDecoder.html",
-          "hash": "Fd9fFCfAErxChuTywJSreQ=="
+          "hash": "XhsC+c4Eq3LrkVLY2+580w=="
         }
       },
       "is_incremental": true,
@@ -1353,7 +1329,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Formats.Jpeg.JpegEncoder.html",
-          "hash": "9N3TPL2ug8edytVlPqZhpA=="
+          "hash": "38nVm8k8Man4BqZakFoSRg=="
         }
       },
       "is_incremental": true,
@@ -1365,7 +1341,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Formats.Jpeg.JpegImageFormatDetector.html",
-          "hash": "RQrFN0zVBZny2RlF8UQJ/Q=="
+          "hash": "XgPZG/q/sftC7iDAw+cbFA=="
         }
       },
       "is_incremental": true,
@@ -1377,7 +1353,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Formats.Jpeg.JpegSubsample.html",
-          "hash": "OM+x/uIPNqpeZqLnDBjv5A=="
+          "hash": "bCXGZdgPzpwMqcX/xNMM2A=="
         }
       },
       "is_incremental": true,
@@ -1389,7 +1365,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Formats.Jpeg.html",
-          "hash": "IuwMh/SQLc/vNHs4K2O6EQ=="
+          "hash": "u4v+g3bEYimx1sEJlGZsBQ=="
         }
       },
       "is_incremental": true,
@@ -1401,7 +1377,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Formats.PixelTypeInfo.html",
-          "hash": "RTLXfhgM4wQkPljP3hPfbg=="
+          "hash": "M+iwgbJC+TIsxEOArrk+Pg=="
         }
       },
       "is_incremental": true,
@@ -1413,7 +1389,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Formats.Png.PngBitDepth.html",
-          "hash": "MqpARO22bSu6WGdJRiTB7g=="
+          "hash": "LjZ0cxzDHK5Qv/OtCWxA/Q=="
         }
       },
       "is_incremental": true,
@@ -1425,7 +1401,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Formats.Png.PngColorType.html",
-          "hash": "ykGzLu9y2Xj1z3fQrxkBLw=="
+          "hash": "/Ce/V+tfDIVYKY7hYBR8rQ=="
         }
       },
       "is_incremental": true,
@@ -1437,7 +1413,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Formats.Png.PngConfigurationModule.html",
-          "hash": "xEsBVm3LeFaQBbh4Mvoq4A=="
+          "hash": "m+LpfMJvvdSel5d52gnzkQ=="
         }
       },
       "is_incremental": true,
@@ -1449,7 +1425,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Formats.Png.PngDecoder.html",
-          "hash": "zyECcX7ailBzJtfz3+zFtA=="
+          "hash": "xrFyKi6MvPfD8QH5/xWQvA=="
         }
       },
       "is_incremental": true,
@@ -1461,7 +1437,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Formats.Png.PngEncoder.html",
-          "hash": "86UBFvb4Cha0rmW4wNpcFA=="
+          "hash": "VnhxT+foRgtNVRX1Ylz3zg=="
         }
       },
       "is_incremental": true,
@@ -1473,7 +1449,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Formats.Png.PngImageFormatDetector.html",
-          "hash": "Km5gX/IzZ6gnzv8R6qcDNw=="
+          "hash": "hTJjaWctKcxuWoa6+Yw3Bw=="
         }
       },
       "is_incremental": true,
@@ -1485,7 +1461,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Formats.Png.html",
-          "hash": "HSNG3dUZV8ZqKNkY9IS+sw=="
+          "hash": "kwRDhuvwGfs67YqvvExBSg=="
         }
       },
       "is_incremental": true,
@@ -1497,7 +1473,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Formats.PngFilterMethod.html",
-          "hash": "Fh0E5X/hPf73sPML2YVhNA=="
+          "hash": "atM0Hu3nGKcJsmpjD/wGiw=="
         }
       },
       "is_incremental": true,
@@ -1509,7 +1485,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Formats.html",
-          "hash": "YQqNQz5woIt9s7sfnN7d2g=="
+          "hash": "gFj4lBLVIf2Y6LOqNJkL/w=="
         }
       },
       "is_incremental": true,
@@ -1521,7 +1497,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.GraphicsOptions.html",
-          "hash": "sWguusPZ3WjBTFjdBineAg=="
+          "hash": "NE27qrs9O35/ydzUGhyCbg=="
         }
       },
       "is_incremental": true,
@@ -1533,7 +1509,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.IConfigurationModule.html",
-          "hash": "y3gLJdWmr6pc0HYhBDLktg=="
+          "hash": "oKaEWcaHTVxbC1/jUYMbRg=="
         }
       },
       "is_incremental": true,
@@ -1545,7 +1521,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.IImage.html",
-          "hash": "J/k7Hr927IMit9O+1xwX8w=="
+          "hash": "FErhajkxjwBIqGnIW5o+KA=="
         }
       },
       "is_incremental": true,
@@ -1557,7 +1533,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.IImageInfo.html",
-          "hash": "NW0OxBvJcSmhqBgl9dTvyA=="
+          "hash": "yxZsKBWJVC8BQfkKQ+5edQ=="
         }
       },
       "is_incremental": true,
@@ -1569,7 +1545,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Image-1.html",
-          "hash": "IQf/hh8zXaHzEk56scVo6g=="
+          "hash": "PFKAJGjcYMlAJKX+yfsBzA=="
         }
       },
       "is_incremental": true,
@@ -1581,7 +1557,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Image.html",
-          "hash": "YlgPJT8UijKv+WeoqB+yMg=="
+          "hash": "ayMhmkLGJEn12suULCtXzw=="
         }
       },
       "is_incremental": true,
@@ -1593,7 +1569,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.ImageExtensions.html",
-          "hash": "RTgEegdFvGjPO8Df0unx7w=="
+          "hash": "ZPwpdqj1z7yR9EOBBNv5Kg=="
         }
       },
       "is_incremental": true,
@@ -1605,7 +1581,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.ImageFormatException.html",
-          "hash": "s6J2rf/0G8sB55Ox2Qyorw=="
+          "hash": "40tAQcNUJzEgXEj9PQV/1g=="
         }
       },
       "is_incremental": true,
@@ -1617,7 +1593,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.ImageFormats.html",
-          "hash": "YevxLQJsKJ2siVlDO3LGPg=="
+          "hash": "liFuNuUcSHNBESPNoUR+Gw=="
         }
       },
       "is_incremental": true,
@@ -1629,7 +1605,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.ImageFrame-1.html",
-          "hash": "BDJcsUm8AW7OCCnZ8/93zA=="
+          "hash": "xEYEQg2LJ+6c5ysb0pA2vg=="
         }
       },
       "is_incremental": true,
@@ -1641,7 +1617,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.ImageFrameCollection-1.html",
-          "hash": "KyTlIC6y70tCyYDLmRuBCw=="
+          "hash": "9i16gNCbhTNtgi3iv+kidQ=="
         }
       },
       "is_incremental": true,
@@ -1653,7 +1629,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.ImageInfoExtensions.html",
-          "hash": "oMjaC1zFnCKq6h+8G2CfGQ=="
+          "hash": "VjFvFsk450PCDqe1ZQeL0g=="
         }
       },
       "is_incremental": true,
@@ -1665,7 +1641,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.ImageProcessingException.html",
-          "hash": "G4k2/xBnu4d38/VTMwtv6w=="
+          "hash": "WoYoiB7uO5OU7tbgIbq3nw=="
         }
       },
       "is_incremental": true,
@@ -1677,7 +1653,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.MetaData.ImageFrameMetaData.html",
-          "hash": "uGOu/1y+XOrRbEf8gq93nQ=="
+          "hash": "ixiuFzYb0yaWpy8+x1HEsQ=="
         }
       },
       "is_incremental": true,
@@ -1689,7 +1665,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.MetaData.ImageMetaData.html",
-          "hash": "tljyfgNFYK95nH0/PFVIHQ=="
+          "hash": "IV9cBrCIO8HatlwPugzMCA=="
         }
       },
       "is_incremental": true,
@@ -1701,7 +1677,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.MetaData.ImageProperty.html",
-          "hash": "5ENbmU0Ga/L0eJIqABXmXQ=="
+          "hash": "F4ufW/Op6ERnC4ALCk0XKQ=="
         }
       },
       "is_incremental": true,
@@ -1713,7 +1689,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.MetaData.PixelResolutionUnit.html",
-          "hash": "ghCg8p3A63c4Lr+BwQ2n+g=="
+          "hash": "yq9ANsJYIATNFlO3YDQg6Q=="
         }
       },
       "is_incremental": true,
@@ -1725,7 +1701,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.MetaData.Profiles.Exif.ExifDataType.html",
-          "hash": "QPvcJ6POpx+6MWxRe5tlnw=="
+          "hash": "CG4Jr7wIcfOtu6DPZXpOMw=="
         }
       },
       "is_incremental": true,
@@ -1737,7 +1713,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.MetaData.Profiles.Exif.ExifParts.html",
-          "hash": "Ir0uDF/BHITweiInI3r3DA=="
+          "hash": "qoL3THk1mtFw+bG6bDGZNQ=="
         }
       },
       "is_incremental": true,
@@ -1749,7 +1725,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.MetaData.Profiles.Exif.ExifProfile.html",
-          "hash": "jeaCxqppYFNLgMPdl8mKGg=="
+          "hash": "2cuOy3HQIN+fPkgA0sWobA=="
         }
       },
       "is_incremental": true,
@@ -1761,7 +1737,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.MetaData.Profiles.Exif.ExifTag.html",
-          "hash": "pjhiYp03NIK62FXPt6emig=="
+          "hash": "lw+/BUPfixrzTvPR++SAng=="
         }
       },
       "is_incremental": true,
@@ -1773,7 +1749,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.MetaData.Profiles.Exif.ExifValue.html",
-          "hash": "tKk0WwKQ5f/hjVfWjyQCeA=="
+          "hash": "44vLZ91LmWmpkKKjYSr3+A=="
         }
       },
       "is_incremental": true,
@@ -1785,7 +1761,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.MetaData.Profiles.Exif.html",
-          "hash": "YGx9+IwNbK7+3dA57ymcvQ=="
+          "hash": "+ln2pIgXpd9jaOw2kPkEHg=="
         }
       },
       "is_incremental": true,
@@ -1797,7 +1773,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.MetaData.Profiles.Icc.IccColorSpaceType.html",
-          "hash": "aOsdLDwYympVOKPac3d9sA=="
+          "hash": "P4s9akHZWeXJX3W3Aw36yA=="
         }
       },
       "is_incremental": true,
@@ -1809,7 +1785,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.MetaData.Profiles.Icc.IccDeviceAttribute.html",
-          "hash": "xRiYkNM/2qEb10cFWdwd2w=="
+          "hash": "15Yo+ymUe+4q5IyyyrMA0Q=="
         }
       },
       "is_incremental": true,
@@ -1821,7 +1797,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.MetaData.Profiles.Icc.IccPrimaryPlatformType.html",
-          "hash": "Lnq3ezhM/p89NMlPwdoVUA=="
+          "hash": "rEpoRRbNFu2qH6xQ/AS4hA=="
         }
       },
       "is_incremental": true,
@@ -1833,7 +1809,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.MetaData.Profiles.Icc.IccProfile.html",
-          "hash": "WFlOVOqt1HtuoCoRNn8QxA=="
+          "hash": "rsawzNhHlyYTXNqEsRj/IQ=="
         }
       },
       "is_incremental": true,
@@ -1845,7 +1821,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.MetaData.Profiles.Icc.IccProfileClass.html",
-          "hash": "ejPizBX8KbOkS0QHdVo84A=="
+          "hash": "szaaDjqvslMlKWM050dETA=="
         }
       },
       "is_incremental": true,
@@ -1857,7 +1833,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.MetaData.Profiles.Icc.IccProfileFlag.html",
-          "hash": "FEHi5zH2miBACOwiNtF3DA=="
+          "hash": "0X1Cc/qVHiXVLicDzI/KPQ=="
         }
       },
       "is_incremental": true,
@@ -1869,7 +1845,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.MetaData.Profiles.Icc.IccProfileHeader.html",
-          "hash": "fehd9vHxrKSSHn/ra7Y2dA=="
+          "hash": "bJz1pC8yBTQIEXt3hAMhFQ=="
         }
       },
       "is_incremental": true,
@@ -1881,7 +1857,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.MetaData.Profiles.Icc.IccProfileId.html",
-          "hash": "rQQ1fygYw7HzqruG6wYiYA=="
+          "hash": "MMkqvbeoOu6zxBfPXt/dyQ=="
         }
       },
       "is_incremental": true,
@@ -1893,7 +1869,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.MetaData.Profiles.Icc.IccProfileTag.html",
-          "hash": "umDBQX+RdpllNJuyN7/esA=="
+          "hash": "3B53W7ixqIdFus0T58sSFw=="
         }
       },
       "is_incremental": true,
@@ -1905,7 +1881,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.MetaData.Profiles.Icc.IccRenderingIntent.html",
-          "hash": "IIQ3fHQ9iMgjAlD5H4p9LQ=="
+          "hash": "M3zHGtGguW7ZTZlKI8KM/w=="
         }
       },
       "is_incremental": true,
@@ -1917,7 +1893,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.MetaData.Profiles.Icc.IccTagDataEntry.html",
-          "hash": "DuRzpHJYadfhqEZOoGZ43Q=="
+          "hash": "ccuAQGDEEiLVKCr2bv9Whg=="
         }
       },
       "is_incremental": true,
@@ -1929,7 +1905,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.MetaData.Profiles.Icc.IccTypeSignature.html",
-          "hash": "GWnAI0m3QbtX8yLdGB77Pw=="
+          "hash": "5KgwdvMAMTBAjR2ZQ7zqAA=="
         }
       },
       "is_incremental": true,
@@ -1941,7 +1917,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.MetaData.Profiles.Icc.IccVersion.html",
-          "hash": "DEHITQ5mMLVoUDFzrzgpew=="
+          "hash": "VFWeNLGC/+rrExcycgdJFw=="
         }
       },
       "is_incremental": true,
@@ -1953,7 +1929,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.MetaData.Profiles.Icc.InvalidIccProfileException.html",
-          "hash": "fZCRGpykuLkhwod43NKpCA=="
+          "hash": "Y2FKf2v/W/esZvbin/Bo3w=="
         }
       },
       "is_incremental": true,
@@ -1965,7 +1941,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.MetaData.Profiles.Icc.html",
-          "hash": "fmUzSN1MVH5fF2tTO9liyA=="
+          "hash": "blJW4IN64/huO7KQzNLUTg=="
         }
       },
       "is_incremental": true,
@@ -1977,7 +1953,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.MetaData.html",
-          "hash": "yQ9iJC+2V9uplbuppAn51g=="
+          "hash": "6dECOtUsxdFKoe8GE4Tb4Q=="
         }
       },
       "is_incremental": true,
@@ -1989,7 +1965,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.PixelFormats.Alpha8.html",
-          "hash": "jqaNGSOctDLQ6nh3E+omxA=="
+          "hash": "gzvyq39qvFIyxfV7E63bpg=="
         }
       },
       "is_incremental": true,
@@ -2001,7 +1977,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.PixelFormats.Argb32.html",
-          "hash": "7jUJkrRtN+Vc4CUG2lWAiw=="
+          "hash": "rgSIwHUIG4MjpKUZHuJTzA=="
         }
       },
       "is_incremental": true,
@@ -2013,7 +1989,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.PixelFormats.Bgr24.html",
-          "hash": "Df6k4O1+d3DAEyz7gmCBRg=="
+          "hash": "u4GHTUuZ/PU3jZi1soxVOQ=="
         }
       },
       "is_incremental": true,
@@ -2025,7 +2001,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.PixelFormats.Bgr565.html",
-          "hash": "Tp4b9OtV912tUWIRe4fzDA=="
+          "hash": "YLd+sYafVuzDmsEZCRI1Tw=="
         }
       },
       "is_incremental": true,
@@ -2037,7 +2013,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.PixelFormats.Bgra32.html",
-          "hash": "+MSkAzCIn0fioRLO8ZXVIw=="
+          "hash": "6mhrihbNqPghENi/vW+yhA=="
         }
       },
       "is_incremental": true,
@@ -2049,7 +2025,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.PixelFormats.Bgra4444.html",
-          "hash": "JTmQA4GJ7PDWhxzl9UwC9A=="
+          "hash": "Z4egSM5o+hJRc017aBcmPA=="
         }
       },
       "is_incremental": true,
@@ -2061,7 +2037,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.PixelFormats.Bgra5551.html",
-          "hash": "pBr8zB7lY9ycj4QB8LrI8w=="
+          "hash": "LfcXa2Y4Dv6XUVbKUzi0qw=="
         }
       },
       "is_incremental": true,
@@ -2073,7 +2049,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.PixelFormats.Byte4.html",
-          "hash": "wvtoNMK5x72/bxAxf/E/ug=="
+          "hash": "kZCbNlO2iq8PEEj4ain6Eg=="
         }
       },
       "is_incremental": true,
@@ -2085,7 +2061,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.PixelFormats.ColorBuilder-1.html",
-          "hash": "cDOlesw05IEkKNhtUT05Ug=="
+          "hash": "W9MfBo7TDQxACiuFIO3kQg=="
         }
       },
       "is_incremental": true,
@@ -2097,7 +2073,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.PixelFormats.ColorConstants.html",
-          "hash": "QZAZljoGk4rCMHbvSAF9Sg=="
+          "hash": "9x2Cehjbvwgyl1aGE/5WAA=="
         }
       },
       "is_incremental": true,
@@ -2109,7 +2085,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.PixelFormats.HalfSingle.html",
-          "hash": "KOxQK2faXI4UGXKZJRWHWQ=="
+          "hash": "fBUme4WCL8eZAkJ0uJnhGg=="
         }
       },
       "is_incremental": true,
@@ -2121,7 +2097,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.PixelFormats.HalfVector2.html",
-          "hash": "rZU7tXdpQ5wq/H21aBEKWQ=="
+          "hash": "D9dAs/JKegSPQTJtc1aDng=="
         }
       },
       "is_incremental": true,
@@ -2133,7 +2109,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.PixelFormats.HalfVector4.html",
-          "hash": "WdPuzbRM45ZFt/3mpmns2Q=="
+          "hash": "fA4MBRd9m4UTdV9oG9raFw=="
         }
       },
       "is_incremental": true,
@@ -2145,7 +2121,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.PixelFormats.IPackedVector-1.html",
-          "hash": "Qt1xfPJ+qIPSCKi18S95BA=="
+          "hash": "QzAsFpQfCHujP3OUwpNP6w=="
         }
       },
       "is_incremental": true,
@@ -2157,7 +2133,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.PixelFormats.IPixel-1.html",
-          "hash": "sH809YBTwJ7ct011nKsUEA=="
+          "hash": "OwKAt7QpUg3hi6ghYwHi/Q=="
         }
       },
       "is_incremental": true,
@@ -2169,7 +2145,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.PixelFormats.IPixel.html",
-          "hash": "6wShWx8tEHowxBsGwTdkMg=="
+          "hash": "tvA4M+3FjalTDHORWYvQ3A=="
         }
       },
       "is_incremental": true,
@@ -2181,7 +2157,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.PixelFormats.NamedColors-1.html",
-          "hash": "1nvbCaIaaeOyk3npcNoKXA=="
+          "hash": "CD/KW0kloY07IhW4KfFDRA=="
         }
       },
       "is_incremental": true,
@@ -2193,7 +2169,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.PixelFormats.NormalizedByte2.html",
-          "hash": "sRvjU2unpNDxvCxYyUuMVg=="
+          "hash": "hI1AJBlOLKIIB+H0MgQIWw=="
         }
       },
       "is_incremental": true,
@@ -2205,7 +2181,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.PixelFormats.NormalizedByte4.html",
-          "hash": "oeaS8FBgzqINP6Qon+TZLg=="
+          "hash": "glhYqX2layV3hb9kmoM9MA=="
         }
       },
       "is_incremental": true,
@@ -2217,7 +2193,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.PixelFormats.NormalizedShort2.html",
-          "hash": "rP8YTl9eyMWxXwpyJuZvQw=="
+          "hash": "pK2pzgclsIuH+KUoOwk5ag=="
         }
       },
       "is_incremental": true,
@@ -2229,7 +2205,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.PixelFormats.NormalizedShort4.html",
-          "hash": "9iqziNhpj8qZ8bVx/85kYQ=="
+          "hash": "1V3L6by5BOSAadAAmeJcKA=="
         }
       },
       "is_incremental": true,
@@ -2241,7 +2217,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.PixelFormats.PixelBlenderMode.html",
-          "hash": "Suf7wpvg2yOfx4Q7xsqo6Q=="
+          "hash": "CMwabjcK3irNurPZD8mlFQ=="
         }
       },
       "is_incremental": true,
@@ -2253,7 +2229,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.PixelFormats.PixelOperations-1.html",
-          "hash": "xVl1BzVyV5YQS2AXHmjylQ=="
+          "hash": "Tr0KE/flD/+v1jkxo5PSFQ=="
         }
       },
       "is_incremental": true,
@@ -2265,7 +2241,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.PixelFormats.Rg32.html",
-          "hash": "1HaoRGDCIq/iigzlw42A0g=="
+          "hash": "bVHP9KSQ2GGelfl7aG2FgA=="
         }
       },
       "is_incremental": true,
@@ -2277,7 +2253,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.PixelFormats.Rgb24.html",
-          "hash": "X7gPBFhg5zVgMM0H2PZ/Jw=="
+          "hash": "RlTKbJ1nhHa6bRsJbwNKLg=="
         }
       },
       "is_incremental": true,
@@ -2289,7 +2265,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.PixelFormats.Rgb48.html",
-          "hash": "bjALwSYxxnBRPK4hi1cBjw=="
+          "hash": "juZwlfz3CEvEB/UdGZlz0A=="
         }
       },
       "is_incremental": true,
@@ -2301,7 +2277,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.PixelFormats.Rgba1010102.html",
-          "hash": "cPdeLkyZPQmETZK2U6a38w=="
+          "hash": "mlib4n/P/E2yf0VL1D70rQ=="
         }
       },
       "is_incremental": true,
@@ -2313,7 +2289,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.PixelFormats.Rgba32.html",
-          "hash": "EGYJXI+Ae3lBRj0pj0EaTw=="
+          "hash": "O+p4NR+ZnMEN9CFSLUYJPg=="
         }
       },
       "is_incremental": true,
@@ -2325,7 +2301,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.PixelFormats.Rgba64.html",
-          "hash": "JCPO8i/3LNh8Ew/TjeFwKA=="
+          "hash": "PL5pYoFbqxVasU8I05RvBQ=="
         }
       },
       "is_incremental": true,
@@ -2337,7 +2313,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.PixelFormats.RgbaVector.html",
-          "hash": "zbaMNrYE8NuWCjrPdPX1LQ=="
+          "hash": "KsKQttJCVTT4ddfA116Vvg=="
         }
       },
       "is_incremental": true,
@@ -2349,7 +2325,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.PixelFormats.Short2.html",
-          "hash": "oimT0Xeeiu4dfl1x/LBETw=="
+          "hash": "ZQl3xE4V29vpqbeYJSEorw=="
         }
       },
       "is_incremental": true,
@@ -2361,7 +2337,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.PixelFormats.Short4.html",
-          "hash": "1FIkR8GajhU+fq+RT/jdjQ=="
+          "hash": "mlUg+oapIALs8m9df2vuFQ=="
         }
       },
       "is_incremental": true,
@@ -2373,7 +2349,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.PixelFormats.html",
-          "hash": "rvmFWHXKr1/87zR6HLhQbg=="
+          "hash": "g9ULYHZBTEaVsS/PmrZOVw=="
         }
       },
       "is_incremental": true,
@@ -2385,7 +2361,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Primitives.DenseMatrix-1.html",
-          "hash": "wRKJ/0kFrlOXYeWknIyuNA=="
+          "hash": "DgI/WdRX3iSZ6MTLmkCC4Q=="
         }
       },
       "is_incremental": true,
@@ -2397,7 +2373,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Primitives.Rational.html",
-          "hash": "iGCk4UGp/sZYHTaNxNTVRA=="
+          "hash": "FUVJ85nWsENvSG8RM+4dgg=="
         }
       },
       "is_incremental": true,
@@ -2409,7 +2385,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Primitives.Region.html",
-          "hash": "IcdmngAasRyCsVObZjOHmg=="
+          "hash": "wxeG+jTDyyE0hB4CQcoSzA=="
         }
       },
       "is_incremental": true,
@@ -2421,7 +2397,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Primitives.SignedRational.html",
-          "hash": "i2oRjcOkqni4Kc4xilGbhg=="
+          "hash": "da3zm3nuwzEXPeXZ9KeQ8w=="
         }
       },
       "is_incremental": true,
@@ -2433,7 +2409,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Primitives.html",
-          "hash": "5mRCB2grcnsDh+f5XVT9EQ=="
+          "hash": "vUoI4Y0sgsCSkoi2xeEaIw=="
         }
       },
       "is_incremental": true,
@@ -2445,7 +2421,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.AnchorPositionMode.html",
-          "hash": "KCggW/nASrKEx8mK/PKDIA=="
+          "hash": "BexsYR+M+gzjKRvoReBd/w=="
         }
       },
       "is_incremental": true,
@@ -2457,7 +2433,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.AutoOrientExtensions.html",
-          "hash": "uCVWVs2xo2guyM6V9ewjyA=="
+          "hash": "p4dlFF5vG2sDOVpGmQbMWg=="
         }
       },
       "is_incremental": true,
@@ -2469,7 +2445,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.BackgroundColorExtensions.html",
-          "hash": "wVeALogl5v7ia1P1ll7VZA=="
+          "hash": "JmTv8KSOE9yJ5lPBivarZA=="
         }
       },
       "is_incremental": true,
@@ -2481,7 +2457,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.BinaryDiffuseExtensions.html",
-          "hash": "y8PI2DNjs+hFxD8A1TAP/w=="
+          "hash": "4f4RmXIaZFs/LbMdPw+BQw=="
         }
       },
       "is_incremental": true,
@@ -2493,7 +2469,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.BinaryDitherExtensions.html",
-          "hash": "rEVMVKTV6IhEXRbc8kRTfA=="
+          "hash": "EAmdXdJ+HCdn50dnq4jc/w=="
         }
       },
       "is_incremental": true,
@@ -2505,7 +2481,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.BinaryThresholdExtensions.html",
-          "hash": "2y1SnIEA78GU2CqJmY2esA=="
+          "hash": "JowsDf1OEqhZR5fAz6Cipw=="
         }
       },
       "is_incremental": true,
@@ -2517,7 +2493,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.BlackWhiteExtensions.html",
-          "hash": "LzeDYkMzLnA0wEu3aWYR7g=="
+          "hash": "0JardVH4Yqj3RhAS7bDNxw=="
         }
       },
       "is_incremental": true,
@@ -2529,7 +2505,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.BoxBlurExtensions.html",
-          "hash": "CHtxtvjP7pdPeD64a6FBNA=="
+          "hash": "1QilgVZB2jFcAXPL2L7QRg=="
         }
       },
       "is_incremental": true,
@@ -2541,7 +2517,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.BrightnessExtensions.html",
-          "hash": "F/UdKEGcRMxl2C/JuU+sBA=="
+          "hash": "cYNkWg5Cv17wO7tajmlmng=="
         }
       },
       "is_incremental": true,
@@ -2553,7 +2529,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.BrushApplicator-1.html",
-          "hash": "AlumeucKSSPyGwI35RyjaQ=="
+          "hash": "e48zso5OibiKaDfLPMuaAg=="
         }
       },
       "is_incremental": true,
@@ -2565,7 +2541,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.Brushes.html",
-          "hash": "qkWOZveRCpcyHSXvg9VIoA=="
+          "hash": "udw+rwd7aVX7hZIQqM+TwQ=="
         }
       },
       "is_incremental": true,
@@ -2577,7 +2553,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.ColorBlindnessExtensions.html",
-          "hash": "s70b3iaPSDmCTTP/GoTeFg=="
+          "hash": "g7b0pjwdNmmKicVxuYM00A=="
         }
       },
       "is_incremental": true,
@@ -2589,7 +2565,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.ColorBlindnessMode.html",
-          "hash": "AO8fIdawqvqTWXgLRN7JCA=="
+          "hash": "9+k/rBjR26kbmAOwL9gD9g=="
         }
       },
       "is_incremental": true,
@@ -2601,7 +2577,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.ColorStop-1.html",
-          "hash": "H4VJlO2S6vPFgxYkTnWWmQ=="
+          "hash": "T2badfba2oObziB7HoVDMg=="
         }
       },
       "is_incremental": true,
@@ -2613,7 +2589,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.ContrastExtensions.html",
-          "hash": "pzNvv4wcTscfl8QtIO/2kg=="
+          "hash": "Vjr4jEEUFQRa+td9//0XAQ=="
         }
       },
       "is_incremental": true,
@@ -2625,7 +2601,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.CropExtensions.html",
-          "hash": "mSBrHzN1uapF3YINIpY5PA=="
+          "hash": "WN1r4EW/r4YyFdoEBKl88g=="
         }
       },
       "is_incremental": true,
@@ -2637,7 +2613,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.DetectEdgesExtensions.html",
-          "hash": "vNtlDihhIvgM8nGeXY3qKw=="
+          "hash": "8Vkacc628BXRwVzZYEwP5g=="
         }
       },
       "is_incremental": true,
@@ -2649,7 +2625,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.DitherExtensions.html",
-          "hash": "WILGXFedE7OvbgXmnxBmoQ=="
+          "hash": "YB/krtgAbdSmOcQt6adcyA=="
         }
       },
       "is_incremental": true,
@@ -2661,7 +2637,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.Dithering.DiffuseExtensions.html",
-          "hash": "PhN9QGh2cykNE6wzBxFHsQ=="
+          "hash": "tZaclrbJuAWgSOO+0Z4+0w=="
         }
       },
       "is_incremental": true,
@@ -2673,7 +2649,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.Dithering.html",
-          "hash": "9i6y+GnFUBoMogi6dCcNIg=="
+          "hash": "FGLLpl8hcE7FDRMnMUrQVg=="
         }
       },
       "is_incremental": true,
@@ -2685,7 +2661,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.DrawBezierExtensions.html",
-          "hash": "5t0RdLUNr5hjS3NnVyCHmg=="
+          "hash": "xSq472PMYfhz66j2ynVY8A=="
         }
       },
       "is_incremental": true,
@@ -2697,7 +2673,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.DrawImageExtensions.html",
-          "hash": "EPRQMUO95y0VA8znmkAkVw=="
+          "hash": "1U1Z1nXSYVWphT2rDpt+bw=="
         }
       },
       "is_incremental": true,
@@ -2709,7 +2685,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.DrawLineExtensions.html",
-          "hash": "18gUCwwwjfSJHp78O5IE9A=="
+          "hash": "bOJzeqlVzF3OnMU+3uIUPw=="
         }
       },
       "is_incremental": true,
@@ -2721,7 +2697,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.DrawPathCollectionExtensions.html",
-          "hash": "Zn8uzH0JW8krGnwZeB6PBw=="
+          "hash": "qB/AmC0HfKQSTfFixtAaxw=="
         }
       },
       "is_incremental": true,
@@ -2733,7 +2709,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.DrawPathExtensions.html",
-          "hash": "8zDXdiQvjadgWgZwC1mkxw=="
+          "hash": "OvTNkMTXk9PSyqnm1fkF/Q=="
         }
       },
       "is_incremental": true,
@@ -2745,7 +2721,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.DrawPolygonExtensions.html",
-          "hash": "R+TzHFMEE/E2bwncQ9hJnA=="
+          "hash": "j4aMz/tzQieYkb76H8vgow=="
         }
       },
       "is_incremental": true,
@@ -2757,7 +2733,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.DrawRectangleExtensions.html",
-          "hash": "GACKU+Sj2QuzPJJ40NxlZQ=="
+          "hash": "HrtiywFweHdtnvcbZQLSjA=="
         }
       },
       "is_incremental": true,
@@ -2769,7 +2745,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.DrawTextExtensions.html",
-          "hash": "TCbs1LoOAKLVk8o4A4sIfQ=="
+          "hash": "RJErcjwEYr+OhfjdOhDlCA=="
         }
       },
       "is_incremental": true,
@@ -2781,7 +2757,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.EdgeDetectionOperators.html",
-          "hash": "nRCscD0SCNw05xMMH5xFzw=="
+          "hash": "agEe6fnlDCfoKxy3+FpasA=="
         }
       },
       "is_incremental": true,
@@ -2793,7 +2769,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.EllipticGradientBrush-1.html",
-          "hash": "axJlfXvt1KFEKQR6bYW/DQ=="
+          "hash": "a757aZHlNLzWX5nRwQKEsg=="
         }
       },
       "is_incremental": true,
@@ -2805,7 +2781,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.EntropyCropExtensions.html",
-          "hash": "neejpYsAD7rSI61QiGU/Cg=="
+          "hash": "9kqfzsbV0UIpDF+q0c97tA=="
         }
       },
       "is_incremental": true,
@@ -2817,7 +2793,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.FillPathBuilderExtensions.html",
-          "hash": "cB6l13I0jepFODCsyzBPgQ=="
+          "hash": "qxYWuuZzDDFIsrMD8uIxvQ=="
         }
       },
       "is_incremental": true,
@@ -2829,7 +2805,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.FillPathCollectionExtensions.html",
-          "hash": "UFoM80TU3t0E6rPay3ZQzw=="
+          "hash": "bEVykh9oFMZco6lkM5TYHQ=="
         }
       },
       "is_incremental": true,
@@ -2841,7 +2817,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.FillPathExtensions.html",
-          "hash": "++uRq+4UEqYOdc+FG2Glzw=="
+          "hash": "cn7zRdrZj26LjTnkJ7uTKw=="
         }
       },
       "is_incremental": true,
@@ -2853,7 +2829,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.FillPolygonExtensions.html",
-          "hash": "OGXhpL4+tVe14ma3jCL8kQ=="
+          "hash": "sLVZqjKOFbrYmDkMwggW4Q=="
         }
       },
       "is_incremental": true,
@@ -2865,7 +2841,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.FillRectangleExtensions.html",
-          "hash": "+9wMyvDUTvxrxRkrYLxxxw=="
+          "hash": "FruRObvkbrxzG608WzQz2Q=="
         }
       },
       "is_incremental": true,
@@ -2877,7 +2853,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.FillRegionExtensions.html",
-          "hash": "GvTgj8oW1Bq4W7fTrljS9g=="
+          "hash": "KNpP5Bt8XVU/eNV/FikKtA=="
         }
       },
       "is_incremental": true,
@@ -2889,7 +2865,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.FilterExtensions.html",
-          "hash": "jjcL9aivv6In3mscnoWevA=="
+          "hash": "IZt7uYxJvnjEk5zFr6Ei6g=="
         }
       },
       "is_incremental": true,
@@ -2901,7 +2877,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.FlipExtensions.html",
-          "hash": "c3JG51Qart7Xph3k3ytCvQ=="
+          "hash": "+q5QL+gF2sJvLR0I2/sabQ=="
         }
       },
       "is_incremental": true,
@@ -2913,7 +2889,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.FlipMode.html",
-          "hash": "2XPyiXymjM+F9QnUJvRqnw=="
+          "hash": "bU1msRhH6LDc7nVImAYvyg=="
         }
       },
       "is_incremental": true,
@@ -2925,7 +2901,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.GaussianBlurExtensions.html",
-          "hash": "MD7cRnnxHMS1fgiwebpnAw=="
+          "hash": "yYwybI5vfgysYUxUmBC3yw=="
         }
       },
       "is_incremental": true,
@@ -2937,7 +2913,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.GaussianSharpenExtensions.html",
-          "hash": "p5rEo/gQhl7IIfg9VDqRbg=="
+          "hash": "4BazglAhYAGvhhmCM4DVhQ=="
         }
       },
       "is_incremental": true,
@@ -2949,7 +2925,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.GlowExtensions.html",
-          "hash": "cOagcdSm8Kyy4SkZxOilXg=="
+          "hash": "ThWT4cH+qqUfDV5UzZT3Kg=="
         }
       },
       "is_incremental": true,
@@ -2961,7 +2937,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.GradientBrushBase-1.GradientBrushApplicatorBase.html",
-          "hash": "IywTSIK2+sr4tGhccohrbA=="
+          "hash": "xvKuZfnSDTZx1FjM+E5J0w=="
         }
       },
       "is_incremental": true,
@@ -2973,7 +2949,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.GradientBrushBase-1.html",
-          "hash": "mWEl7t8ale4j+LhzM33lVA=="
+          "hash": "GlBSONYEKAd2E4jVXKZzTg=="
         }
       },
       "is_incremental": true,
@@ -2985,7 +2961,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.GradientRepetitionMode.html",
-          "hash": "o2jn1q4+zIxFOzHga8abmg=="
+          "hash": "opgvtttQgkJDDV41tGCGJQ=="
         }
       },
       "is_incremental": true,
@@ -2997,7 +2973,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.GrayscaleExtensions.html",
-          "hash": "xpB9Wlv1eroFveij3kUuVw=="
+          "hash": "9KyspUB+yNs/KQJtxofBeQ=="
         }
       },
       "is_incremental": true,
@@ -3009,7 +2985,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.GrayscaleMode.html",
-          "hash": "FPXPq9bZTLa+iTTCl5saLA=="
+          "hash": "S8AATjdEgmUgyn3CaIsU1w=="
         }
       },
       "is_incremental": true,
@@ -3021,7 +2997,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.HistogramEqualizationExtension.html",
-          "hash": "MiPqEDVguj8zbTjMlvud1g=="
+          "hash": "0laGE0pQaMXJ2LTKSn29+g=="
         }
       },
       "is_incremental": true,
@@ -3033,7 +3009,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.HueExtensions.html",
-          "hash": "dfVqk890XfZd8+/kzpoNuQ=="
+          "hash": "kxDGWseqP0ARAbXCzF+QSg=="
         }
       },
       "is_incremental": true,
@@ -3045,7 +3021,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.IBrush-1.html",
-          "hash": "JZfl9tGCtTKVbrwdutkhbA=="
+          "hash": "FLnN+EJTjlkHZbtTgJY8/Q=="
         }
       },
       "is_incremental": true,
@@ -3057,7 +3033,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html",
-          "hash": "0hWjcjoVUCRlrkLFjZ9kHA=="
+          "hash": "BTTs7/CkjB8eo83e6Uds8A=="
         }
       },
       "is_incremental": true,
@@ -3069,7 +3045,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.IPen-1.html",
-          "hash": "fWIXmpApmjLf98YhMCLLyg=="
+          "hash": "xXQaU/bFxAW3WXEFF0xmgw=="
         }
       },
       "is_incremental": true,
@@ -3081,7 +3057,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.IPen.html",
-          "hash": "CbCVEsTt0HpRqP7wiWFWYw=="
+          "hash": "/Qi4Y5PKBoF8CjX9ndVIeg=="
         }
       },
       "is_incremental": true,
@@ -3093,7 +3069,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.ImageBrush-1.html",
-          "hash": "snbAorQ2dkiw4C4TrPn5uQ=="
+          "hash": "yegyqRmFoFGHsGjz/rZqAg=="
         }
       },
       "is_incremental": true,
@@ -3105,7 +3081,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.InvertExtensions.html",
-          "hash": "pCGQp3H2V8iBpglTQd2vsw=="
+          "hash": "9SR416NFMwYi458sg3v2UA=="
         }
       },
       "is_incremental": true,
@@ -3117,7 +3093,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.KnownDiffusers.html",
-          "hash": "0ZVumkY+Sr89TYW/J+SJDQ=="
+          "hash": "Rh8W0d6ypLABu5QdpXlU5g=="
         }
       },
       "is_incremental": true,
@@ -3129,7 +3105,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.KnownDitherers.html",
-          "hash": "V4uaXCT1iP7YT2tN5CWPrw=="
+          "hash": "cJ4OHZHaTMTDWLVGzl4a2A=="
         }
       },
       "is_incremental": true,
@@ -3141,7 +3117,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.KnownFilterMatrices.html",
-          "hash": "K9xDRt6OYd6dU+UHxt6jvg=="
+          "hash": "kGUMKfUKzstZSCaVD866bw=="
         }
       },
       "is_incremental": true,
@@ -3153,7 +3129,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.KnownQuantizers.html",
-          "hash": "sejpo+grUE6LXHzPk85C5A=="
+          "hash": "PgDxsWu5TCav6V2/U9uJ/w=="
         }
       },
       "is_incremental": true,
@@ -3165,7 +3141,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.KnownResamplers.html",
-          "hash": "2nzE1CSTYz4pdbJL48i5/Q=="
+          "hash": "kf4w3cvmpYrw/1lDoUae0w=="
         }
       },
       "is_incremental": true,
@@ -3177,7 +3153,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.KodachromeExtensions.html",
-          "hash": "hWwRjWm9s+IIlUfYPlNxNg=="
+          "hash": "zhjZUEGuWbCb9MkKClLjww=="
         }
       },
       "is_incremental": true,
@@ -3189,7 +3165,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.LinearGradientBrush-1.html",
-          "hash": "+whxSAxLJX02Xuu+eeAwRA=="
+          "hash": "XsF2TS5/TI/Miow4NoyvUg=="
         }
       },
       "is_incremental": true,
@@ -3201,7 +3177,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.LomographExtensions.html",
-          "hash": "1FV6/KY3JGDjbzd7HlHKkQ=="
+          "hash": "WkWr+PqVgF5Dl76k7ZXkdA=="
         }
       },
       "is_incremental": true,
@@ -3213,7 +3189,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.OilPaintExtensions.html",
-          "hash": "jXOe0YfOIvnMOPTVY+DG5A=="
+          "hash": "ec1LWH8fSjTjJC/ZYsFviQ=="
         }
       },
       "is_incremental": true,
@@ -3225,7 +3201,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.OpacityExtensions.html",
-          "hash": "Pp2YmNCpagP5O9OqekjlFg=="
+          "hash": "IgT5YXs6gCDVWzdp0ehYIA=="
         }
       },
       "is_incremental": true,
@@ -3237,7 +3213,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.PadExtensions.html",
-          "hash": "vhlyVdkc5zKU0FVEDH+xVg=="
+          "hash": "hs0YS3wjQvDgRTwlVmCNYw=="
         }
       },
       "is_incremental": true,
@@ -3249,7 +3225,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.PatternBrush-1.html",
-          "hash": "qB2yuSxSjN08tDyQ6U3yTw=="
+          "hash": "9M+M1hpy0+uq2BeuXCCE/A=="
         }
       },
       "is_incremental": true,
@@ -3261,7 +3237,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.Pen-1.html",
-          "hash": "sa17IZggoMW1WaPB4ZhQRA=="
+          "hash": "aSVhyv7ODbDj+VgAzofVtw=="
         }
       },
       "is_incremental": true,
@@ -3273,7 +3249,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.Pens.html",
-          "hash": "xn76jNx871qUqyVzVAFZPA=="
+          "hash": "6wc1mB9ln8IFWCzIhTBELg=="
         }
       },
       "is_incremental": true,
@@ -3285,7 +3261,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.PixelateExtensions.html",
-          "hash": "Z17imn/+POImxKkMWGSykA=="
+          "hash": "5JzC1d1OrAl49kt6FBH4Lw=="
         }
       },
       "is_incremental": true,
@@ -3297,7 +3273,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.PolaroidExtensions.html",
-          "hash": "WpkIcoFlPDTuMfkK9lDkGQ=="
+          "hash": "aNVg1Ox5wfm1fq69Si+VVQ=="
         }
       },
       "is_incremental": true,
@@ -3309,7 +3285,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.ProcessingExtensions.html",
-          "hash": "PSWctwRC8Laz5zGBWnEQ5Q=="
+          "hash": "fke5apX658WMfNi/rAY5ww=="
         }
       },
       "is_incremental": true,
@@ -3321,7 +3297,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.Processors.Convolution.IEdgeDetectorProcessor-1.html",
-          "hash": "NCW5xKScOeMp+XsyJnmWrA=="
+          "hash": "LM+ZW0sRei7Ois8xwodRdg=="
         }
       },
       "is_incremental": true,
@@ -3333,7 +3309,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.Processors.Convolution.IEdgeDetectorProcessor.html",
-          "hash": "UBoBOlT4xPoHCqo3+qGd7Q=="
+          "hash": "eqJg1RqmXCnDCMF85rFJVw=="
         }
       },
       "is_incremental": true,
@@ -3345,7 +3321,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.Processors.Convolution.html",
-          "hash": "iY341oeM6MK1ykwlJPQYRA=="
+          "hash": "x6RLaGBkKLvZnGmhrDuAZw=="
         }
       },
       "is_incremental": true,
@@ -3357,7 +3333,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.Processors.Dithering.AtkinsonDiffuser.html",
-          "hash": "0h486lFkTUsVEchMt0ZLiA=="
+          "hash": "DVqpP+gvVZT+lgsi5E+Pzg=="
         }
       },
       "is_incremental": true,
@@ -3369,7 +3345,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.Processors.Dithering.BayerDither2x2.html",
-          "hash": "o7QmpwP+gsKPEqw6V6gxdQ=="
+          "hash": "j9Tx+JdHYI/sBBL5+oYAKQ=="
         }
       },
       "is_incremental": true,
@@ -3381,7 +3357,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.Processors.Dithering.BayerDither4x4.html",
-          "hash": "jYP9JUQGXLUjP4BG3a11Tw=="
+          "hash": "sDEFRkDtadfbKM112EStpA=="
         }
       },
       "is_incremental": true,
@@ -3393,7 +3369,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.Processors.Dithering.BayerDither8x8.html",
-          "hash": "sCPtSEEyuIu9ObBvlRpMkQ=="
+          "hash": "AGANqqcTE7AeqvYbn9hPEA=="
         }
       },
       "is_incremental": true,
@@ -3405,7 +3381,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.Processors.Dithering.BurksDiffuser.html",
-          "hash": "yDiClnWCVdmHtWZv8CVJXg=="
+          "hash": "TYEnhgaHYgcPsVbmJ823Uw=="
         }
       },
       "is_incremental": true,
@@ -3417,7 +3393,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.Processors.Dithering.ErrorDiffuserBase.html",
-          "hash": "pbdbIQWNwHOl2ariPGtxBA=="
+          "hash": "Hfy00+m03Tbi1WdK09cpgQ=="
         }
       },
       "is_incremental": true,
@@ -3429,7 +3405,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.Processors.Dithering.FloydSteinbergDiffuser.html",
-          "hash": "ibk3iWtL4ifBvdUre/iukg=="
+          "hash": "Pm9qUwpNTJ8VQBahRaDJZw=="
         }
       },
       "is_incremental": true,
@@ -3441,7 +3417,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.Processors.Dithering.IErrorDiffuser.html",
-          "hash": "8e51emcHtVhfYq7tVSlz7Q=="
+          "hash": "recqRHfEKSR458+SbF3Iew=="
         }
       },
       "is_incremental": true,
@@ -3453,7 +3429,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.Processors.Dithering.IOrderedDither.html",
-          "hash": "gzRGb4Gs80kKQFfc0DBOdg=="
+          "hash": "RJEeIZ1dmG91djspNWvc+Q=="
         }
       },
       "is_incremental": true,
@@ -3465,7 +3441,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.Processors.Dithering.JarvisJudiceNinkeDiffuser.html",
-          "hash": "K9B0/t9wMaRIacLNH09wwQ=="
+          "hash": "Tb+JtH4vlWbRERShhJuptw=="
         }
       },
       "is_incremental": true,
@@ -3477,7 +3453,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.Processors.Dithering.OrderedDither.html",
-          "hash": "Bv2jUUDyrPvEHTSvtL3kDA=="
+          "hash": "Uq7+T1Odj1YKXahMlvzPXw=="
         }
       },
       "is_incremental": true,
@@ -3489,7 +3465,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.Processors.Dithering.OrderedDither3x3.html",
-          "hash": "Xx+GubeLnSzZ3ZxjMeDUqQ=="
+          "hash": "GQoGTn69ncx4K5BL0Cgx3g=="
         }
       },
       "is_incremental": true,
@@ -3501,7 +3477,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.Processors.Dithering.Sierra2Diffuser.html",
-          "hash": "BgeUXsgUFMxap1yawUsa3w=="
+          "hash": "9r36HYEl/c8x/Ig2N/LWkg=="
         }
       },
       "is_incremental": true,
@@ -3513,7 +3489,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.Processors.Dithering.Sierra3Diffuser.html",
-          "hash": "dHU6r1n9IrtCrh5y2EdhXg=="
+          "hash": "qkwSr7GyB5AUQGcNbrsX7A=="
         }
       },
       "is_incremental": true,
@@ -3525,7 +3501,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.Processors.Dithering.SierraLiteDiffuser.html",
-          "hash": "m+HFNB/EINyAHF6B8FooxA=="
+          "hash": "t929RvqlO391XTyxWrqyoQ=="
         }
       },
       "is_incremental": true,
@@ -3537,7 +3513,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.Processors.Dithering.StevensonArceDiffuser.html",
-          "hash": "PHBnbhwE364iAqxav6ZN7Q=="
+          "hash": "DP9CSZvt5flB9O1zCsZCjg=="
         }
       },
       "is_incremental": true,
@@ -3549,7 +3525,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.Processors.Dithering.StuckiDiffuser.html",
-          "hash": "bKsnMXLj5c9rodwJzNsn4w=="
+          "hash": "jmVInXIrbIm11z2OyAJ6Fg=="
         }
       },
       "is_incremental": true,
@@ -3561,7 +3537,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.Processors.Dithering.html",
-          "hash": "R4WW/xQlLI/JfW4sTzx6qg=="
+          "hash": "lzt3c6q4EGMWzJMqCympxw=="
         }
       },
       "is_incremental": true,
@@ -3573,7 +3549,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.Processors.IImageProcessor-1.html",
-          "hash": "1q53Y+HjmLqjowe9ps7YkQ=="
+          "hash": "NXTxUp67MWdhFbE2iDrFmQ=="
         }
       },
       "is_incremental": true,
@@ -3585,7 +3561,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.Processors.Quantization.FrameQuantizerBase-1.html",
-          "hash": "XH2svhqtKlz29Ps9ermf7Q=="
+          "hash": "WXWjSc8X3dKnvh5xCH6fHg=="
         }
       },
       "is_incremental": true,
@@ -3597,7 +3573,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.Processors.Quantization.IFrameQuantizer-1.html",
-          "hash": "3iS/FfHjzd0wGdp75M0Xhw=="
+          "hash": "nPORIxqsWILgr4JFjJcgrg=="
         }
       },
       "is_incremental": true,
@@ -3609,7 +3585,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.Processors.Quantization.IQuantizer.html",
-          "hash": "+U5+mgaMsR56Ur/INemh9A=="
+          "hash": "pRtNdIjD7Kl3ZLhZzbHN9Q=="
         }
       },
       "is_incremental": true,
@@ -3621,7 +3597,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.Processors.Quantization.OctreeQuantizer.html",
-          "hash": "4Ae3HcDkBrIQOZLZ71s6PQ=="
+          "hash": "C1n064h5Q/dyCItOOVh1vQ=="
         }
       },
       "is_incremental": true,
@@ -3633,7 +3609,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.Processors.Quantization.PaletteQuantizer.html",
-          "hash": "Ls4UKnZ0i/6xEDZ2nBfy0A=="
+          "hash": "yCHUzADBVQsb+kJu1G/wkw=="
         }
       },
       "is_incremental": true,
@@ -3645,7 +3621,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.Processors.Quantization.QuantizedFrame-1.html",
-          "hash": "eoOVzv/9iEPYjWHBC5l8hA=="
+          "hash": "3GWo3F/IRdrBB2DFu4x3ww=="
         }
       },
       "is_incremental": true,
@@ -3657,7 +3633,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.Processors.Quantization.WuQuantizer.html",
-          "hash": "XiJRD2hshUQAIF0TZjn/aA=="
+          "hash": "/h34rGCyt7ENEljBLl3IEA=="
         }
       },
       "is_incremental": true,
@@ -3669,7 +3645,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.Processors.Quantization.html",
-          "hash": "66Wsw50t2Z9I7/gKzQjtsQ=="
+          "hash": "jIQlqbXIaUobxAPGDQxaAQ=="
         }
       },
       "is_incremental": true,
@@ -3681,7 +3657,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.Processors.Transforms.BicubicResampler.html",
-          "hash": "yb+Q4RziA6eZeWacjHRq5Q=="
+          "hash": "F8ELSo/NbZwzpE6MwvnDJg=="
         }
       },
       "is_incremental": true,
@@ -3693,7 +3669,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.Processors.Transforms.BoxResampler.html",
-          "hash": "Ow8Aa4aDQodrw102csLXCA=="
+          "hash": "O7a4q9xTWgkMrvxe96GiSw=="
         }
       },
       "is_incremental": true,
@@ -3705,7 +3681,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.Processors.Transforms.CatmullRomResampler.html",
-          "hash": "vE6z0NCA9FSHkgY2nsOjlA=="
+          "hash": "6EtySsge+/4Ma8iR6JN1IA=="
         }
       },
       "is_incremental": true,
@@ -3717,7 +3693,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.Processors.Transforms.HermiteResampler.html",
-          "hash": "seFsywmOJF1PDsi/WeSagA=="
+          "hash": "p4ldGTD2nPG8Lw4r82z+BA=="
         }
       },
       "is_incremental": true,
@@ -3729,7 +3705,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.Processors.Transforms.IResampler.html",
-          "hash": "s7e4aO6eMKMIWTCf/SH95g=="
+          "hash": "e23Wks18rxOaQUU2eFWbRQ=="
         }
       },
       "is_incremental": true,
@@ -3741,7 +3717,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.Processors.Transforms.Lanczos2Resampler.html",
-          "hash": "LuH4p+HqBpU2//b9PQ4S4w=="
+          "hash": "U43/E8SlUdKvpt+5kb74kw=="
         }
       },
       "is_incremental": true,
@@ -3753,7 +3729,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.Processors.Transforms.Lanczos3Resampler.html",
-          "hash": "VZMxpXD6FfOkYJQjEjms1g=="
+          "hash": "9JMNccm0fbyuBq/KofZpig=="
         }
       },
       "is_incremental": true,
@@ -3765,7 +3741,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.Processors.Transforms.Lanczos5Resampler.html",
-          "hash": "mBSivfnSwANvbPm/OJ/glw=="
+          "hash": "xFgMkzCtUwVOYTFEnj+yWA=="
         }
       },
       "is_incremental": true,
@@ -3777,7 +3753,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.Processors.Transforms.Lanczos8Resampler.html",
-          "hash": "m2ODZz7ulTOhzRa+w5QeLQ=="
+          "hash": "yrE5c8I3hwZ53IEzXUS6QA=="
         }
       },
       "is_incremental": true,
@@ -3789,7 +3765,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.Processors.Transforms.MitchellNetravaliResampler.html",
-          "hash": "VlmxjRWWpjw42j2PfzGbnQ=="
+          "hash": "8niWkjVuFxjBzLttEVU0dw=="
         }
       },
       "is_incremental": true,
@@ -3801,7 +3777,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.Processors.Transforms.NearestNeighborResampler.html",
-          "hash": "0P8lm9SM9SxiweRFET81KA=="
+          "hash": "cdb6I1O0Dq3f3g2OqWyG3w=="
         }
       },
       "is_incremental": true,
@@ -3813,7 +3789,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.Processors.Transforms.RobidouxResampler.html",
-          "hash": "NR9zBBChBgdpW1GyEx8UmA=="
+          "hash": "xsRRrdRmUrixOeLtQ2xDtA=="
         }
       },
       "is_incremental": true,
@@ -3825,7 +3801,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.Processors.Transforms.RobidouxSharpResampler.html",
-          "hash": "6SY2SBzB7aG6CZqWS0/uBg=="
+          "hash": "ppVa3ZpFUExHPOUTYstdHw=="
         }
       },
       "is_incremental": true,
@@ -3837,7 +3813,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.Processors.Transforms.SplineResampler.html",
-          "hash": "63Z0+QIHadohBrVUYVJR6Q=="
+          "hash": "WVK+zmVWr0ziEj6eBaDgKg=="
         }
       },
       "is_incremental": true,
@@ -3849,7 +3825,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.Processors.Transforms.TriangleResampler.html",
-          "hash": "HPC1zJHU4ITlFaIG6h2jFQ=="
+          "hash": "wfO0TdOGWeXZ169cePRC7g=="
         }
       },
       "is_incremental": true,
@@ -3861,7 +3837,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.Processors.Transforms.WelchResampler.html",
-          "hash": "oyGTap1YFA6WA7AKzdXvNw=="
+          "hash": "+vMWXTpwokDPi1vKSZSQjg=="
         }
       },
       "is_incremental": true,
@@ -3873,7 +3849,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.Processors.Transforms.html",
-          "hash": "R/NvLYgGg9WA2cXcGum6Sg=="
+          "hash": "WrRzwudsNdOu+/rE7qqUaw=="
         }
       },
       "is_incremental": true,
@@ -3885,7 +3861,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.Processors.html",
-          "hash": "H7a7AsI5UCtQy7LJ2FoGyg=="
+          "hash": "0LdBdqhBYt5Ff4kvDy/frw=="
         }
       },
       "is_incremental": true,
@@ -3897,7 +3873,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.ProjectiveTransformHelper.html",
-          "hash": "0VOVhkjjGk2//efNQA93+A=="
+          "hash": "fRbLqlwNVOiEumrvrmM8mg=="
         }
       },
       "is_incremental": true,
@@ -3909,7 +3885,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.QuantizeExtensions.html",
-          "hash": "fYHsqq9ZQEXJKefEGRACUg=="
+          "hash": "Frq4N/twbpQJ8mNWq3XFVg=="
         }
       },
       "is_incremental": true,
@@ -3921,7 +3897,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.RadialGradientBrush-1.html",
-          "hash": "cqTRFD3n6oEsEV9XGT1kpQ=="
+          "hash": "MNxJiTYEdxRbveNBjD9NQg=="
         }
       },
       "is_incremental": true,
@@ -3933,7 +3909,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.RecolorBrush-1.html",
-          "hash": "fo3dRzvL48iUxLY7Fi6+MQ=="
+          "hash": "dxhw6XgLxBN68M2h0E/RUA=="
         }
       },
       "is_incremental": true,
@@ -3945,7 +3921,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.ResizeExtensions.html",
-          "hash": "bM5rr7WJNHE8wmvhUfHwGQ=="
+          "hash": "Z6SAqiMatso5uCmd0A5Ynw=="
         }
       },
       "is_incremental": true,
@@ -3957,7 +3933,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.ResizeMode.html",
-          "hash": "CLPor2Xf3E+ZD7Yo+lsdQQ=="
+          "hash": "NDe3PusHa2IpQNzLTMh4nw=="
         }
       },
       "is_incremental": true,
@@ -3969,7 +3945,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.ResizeOptions.html",
-          "hash": "SOh7t6AWhk8NsX5zqFDaSg=="
+          "hash": "4JptjsGuS/SsuoBvEzGtSg=="
         }
       },
       "is_incremental": true,
@@ -3981,7 +3957,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.RotateExtensions.html",
-          "hash": "gYHgGh2UnLbC37JUJrYpZw=="
+          "hash": "36+Sy31/mbWIv8kJZPeK0A=="
         }
       },
       "is_incremental": true,
@@ -3993,7 +3969,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.RotateFlipExtensions.html",
-          "hash": "OMDC7IeVq1J+EPBEGBHGOw=="
+          "hash": "UIx+gobjkEFLfQXYH8jejQ=="
         }
       },
       "is_incremental": true,
@@ -4005,7 +3981,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.RotateMode.html",
-          "hash": "iYYl2830hasu+Sa0BAif9w=="
+          "hash": "LipKFB2e33GZuEjuRQ48mQ=="
         }
       },
       "is_incremental": true,
@@ -4017,7 +3993,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.SaturateExtensions.html",
-          "hash": "TxQWIAJN/PGOR+jM9RpM2Q=="
+          "hash": "ljCe5RhMgzOec8TGx2cqGg=="
         }
       },
       "is_incremental": true,
@@ -4029,7 +4005,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.SepiaExtensions.html",
-          "hash": "vsnpfhKhHchI+bddVUdj7Q=="
+          "hash": "31YBgvTB3cK/oLpPBY0v4A=="
         }
       },
       "is_incremental": true,
@@ -4041,7 +4017,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.SkewExtensions.html",
-          "hash": "QUVfGV2ulKDdiQcnkQQ0Hg=="
+          "hash": "ohi6jU7azge9KDbDMD/QxQ=="
         }
       },
       "is_incremental": true,
@@ -4053,7 +4029,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.SolidBrush-1.html",
-          "hash": "DpGKWINhLFfBQFra1Gy0Ew=="
+          "hash": "liDcmazDJcR0T4RAyVs2nQ=="
         }
       },
       "is_incremental": true,
@@ -4065,7 +4041,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.TaperCorner.html",
-          "hash": "RjFGzcQjFwR7T31bZXjrtw=="
+          "hash": "ry3QUyhY2C0zC5skuTfDeQ=="
         }
       },
       "is_incremental": true,
@@ -4077,7 +4053,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.TaperSide.html",
-          "hash": "Bt9V5fqrlTgyuy1Ougkufw=="
+          "hash": "WgYV7A7o1u3HX3aB8H9Z6w=="
         }
       },
       "is_incremental": true,
@@ -4089,7 +4065,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.TextGraphicsOptions.html",
-          "hash": "+YUkmXy1UPdTx9jvoCRqnA=="
+          "hash": "nR3h4ud3GOD8nPHmm7r8NA=="
         }
       },
       "is_incremental": true,
@@ -4101,7 +4077,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.TransformExtensions.html",
-          "hash": "gGOFHIhLTuR01wgrjNJ4Tg=="
+          "hash": "V2PvMxE//5sz7VIG1CuofA=="
         }
       },
       "is_incremental": true,
@@ -4113,7 +4089,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.VignetteExtensions.html",
-          "hash": "nM6Q/glfRj8/hO52uro45Q=="
+          "hash": "O83FzglTECBrE/1AYMBN6w=="
         }
       },
       "is_incremental": true,
@@ -4125,7 +4101,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.html",
-          "hash": "LGWhWNoGdxolemDmSnHlqQ=="
+          "hash": "MH1BwdHIpdbD/EW2Kq+Htg=="
         }
       },
       "is_incremental": true,
@@ -4137,7 +4113,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.ReadOrigin.html",
-          "hash": "2gVe/H0DFyln5TuaXyk3dA=="
+          "hash": "SALhObscae11M5HhVB0E0g=="
         }
       },
       "is_incremental": true,
@@ -4149,7 +4125,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ImageSharp/SixLabors.ImageSharp.html",
-          "hash": "XX0HByxDA/NEBVwYxe1xow=="
+          "hash": "eN4xNEZhxtEr9MOyyt1Jvg=="
         }
       },
       "is_incremental": true,
@@ -4173,7 +4149,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Shapes/SixLabors.Shapes.ClipperExtensions.html",
-          "hash": "EkLQurdZnsSkopm4iMykOw=="
+          "hash": "N6Cr/wBy70s1dteIRudwCw=="
         }
       },
       "is_incremental": true,
@@ -4185,7 +4161,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Shapes/SixLabors.Shapes.ComplexPolygon.html",
-          "hash": "BrxFh5xTePqhFehpERgf8A=="
+          "hash": "8S3KWanX2etxZHOiak4FWw=="
         }
       },
       "is_incremental": true,
@@ -4197,7 +4173,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Shapes/SixLabors.Shapes.CubicBezierLineSegment.html",
-          "hash": "4LqSKsjD+WwckBguDVr/nA=="
+          "hash": "rFdTPMrhwEW8KJscuXYBxA=="
         }
       },
       "is_incremental": true,
@@ -4209,7 +4185,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Shapes/SixLabors.Shapes.EllipsePolygon.html",
-          "hash": "PcNlWpVITWX+C8moJkcWYQ=="
+          "hash": "k14anGrIZ7CwTMnxlo22ZQ=="
         }
       },
       "is_incremental": true,
@@ -4221,7 +4197,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Shapes/SixLabors.Shapes.ILineSegment.html",
-          "hash": "hLlJ2M25yvlK/fG9alRuWA=="
+          "hash": "/Yw/ix8it/Bg6mxMjfzZ/w=="
         }
       },
       "is_incremental": true,
@@ -4233,7 +4209,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Shapes/SixLabors.Shapes.IPath.html",
-          "hash": "Ext7Staaba4duXdJZkKsAg=="
+          "hash": "V7gLzBZDb5s3iYrSHcjKvw=="
         }
       },
       "is_incremental": true,
@@ -4245,7 +4221,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Shapes/SixLabors.Shapes.IPathCollection.html",
-          "hash": "kGLmDBW1/w4FGKxLdKhd5w=="
+          "hash": "Cwnowy+rke+t5DaNFibBqQ=="
         }
       },
       "is_incremental": true,
@@ -4257,7 +4233,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Shapes/SixLabors.Shapes.ISimplePath.html",
-          "hash": "NCrFKvhd2VCF+w0gOsENlw=="
+          "hash": "6xc5MFA07nhulubAvKV+cw=="
         }
       },
       "is_incremental": true,
@@ -4269,7 +4245,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Shapes/SixLabors.Shapes.LinearLineSegment.html",
-          "hash": "LTZauUsFKENYIEOQqDiVww=="
+          "hash": "28E55cIjkT5HSnSj7Wkdcg=="
         }
       },
       "is_incremental": true,
@@ -4281,7 +4257,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Shapes/SixLabors.Shapes.Outliner.html",
-          "hash": "TV3Cim8uiec8Mf3CUJJbPw=="
+          "hash": "YB97+xM4txNUr3DwYiEEfw=="
         }
       },
       "is_incremental": true,
@@ -4293,7 +4269,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Shapes/SixLabors.Shapes.Path.html",
-          "hash": "5P1sTYf+6czIZFWtzRC+WA=="
+          "hash": "vQ7u6WcPYEbPsWkUwbPL4w=="
         }
       },
       "is_incremental": true,
@@ -4305,7 +4281,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Shapes/SixLabors.Shapes.PathBuilder.html",
-          "hash": "ic4qt8En21gyDg6RFltbig=="
+          "hash": "LU/2PXhfTfbfVXpyM/YVoQ=="
         }
       },
       "is_incremental": true,
@@ -4317,7 +4293,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Shapes/SixLabors.Shapes.PathCollection.html",
-          "hash": "c9izXRTrSI88pa+FNjirUA=="
+          "hash": "1RYak7iLT/vuZubb4ZGiMw=="
         }
       },
       "is_incremental": true,
@@ -4329,7 +4305,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Shapes/SixLabors.Shapes.PathExtensions.html",
-          "hash": "/AV1ALrRsfE/F1iITkfF8g=="
+          "hash": "RWWlGmsYXXaaGhPod36qlQ=="
         }
       },
       "is_incremental": true,
@@ -4341,7 +4317,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Shapes/SixLabors.Shapes.PathTypes.html",
-          "hash": "1vKX6QCYaxMi/26/+CrvjA=="
+          "hash": "xjsINcxBlHUiTmAWr7/o/A=="
         }
       },
       "is_incremental": true,
@@ -4353,7 +4329,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Shapes/SixLabors.Shapes.PointInfo.html",
-          "hash": "ek4Q5IePpehvyJfS4TOXGw=="
+          "hash": "hSy4To9FVcTZbCiXqoIdrw=="
         }
       },
       "is_incremental": true,
@@ -4365,7 +4341,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Shapes/SixLabors.Shapes.Polygon.html",
-          "hash": "4jG9PjvfjZCszxyNHa1qww=="
+          "hash": "0hrjD0IgOowHI4r7PApbJA=="
         }
       },
       "is_incremental": true,
@@ -4377,7 +4353,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Shapes/SixLabors.Shapes.PolygonClipper.ClippablePath.html",
-          "hash": "7v9pKTQE05T9lKzHE4cUrQ=="
+          "hash": "VWRDVHzpxZXCjNnyggtxBA=="
         }
       },
       "is_incremental": true,
@@ -4389,7 +4365,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Shapes/SixLabors.Shapes.PolygonClipper.Clipper.html",
-          "hash": "p1pIKKimuOkJftHKzeHJvQ=="
+          "hash": "cw61NCjGJaGcOdUy9Alruw=="
         }
       },
       "is_incremental": true,
@@ -4401,7 +4377,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Shapes/SixLabors.Shapes.PolygonClipper.ClippingType.html",
-          "hash": "lOONVDqBLfBNJPIrg6Kzfw=="
+          "hash": "x4X6lJg6e9eI8SpAsLK3iQ=="
         }
       },
       "is_incremental": true,
@@ -4413,7 +4389,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Shapes/SixLabors.Shapes.PolygonClipper.html",
-          "hash": "DoeZZmQwkvKQT8XW+1fVCQ=="
+          "hash": "ftttnDV12tzbE60KDh1H4Q=="
         }
       },
       "is_incremental": true,
@@ -4425,7 +4401,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Shapes/SixLabors.Shapes.RectangularPolygon.html",
-          "hash": "M7EYtni00/m+MFf7UnIzVg=="
+          "hash": "ve0jxG9BuSTZyTg4tOyp6A=="
         }
       },
       "is_incremental": true,
@@ -4437,7 +4413,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Shapes/SixLabors.Shapes.RegularPolygon.html",
-          "hash": "trpXoZ0htD8nKgTH60pcGQ=="
+          "hash": "k0rq+Hu5Cyt9TB8Jef4DBg=="
         }
       },
       "is_incremental": true,
@@ -4449,7 +4425,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Shapes/SixLabors.Shapes.SegmentInfo.html",
-          "hash": "9UzVxYzAG3OSQJU/veS9Fw=="
+          "hash": "1zav6w9KY3M2g8A/Hm7EGw=="
         }
       },
       "is_incremental": true,
@@ -4461,7 +4437,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Shapes/SixLabors.Shapes.Star.html",
-          "hash": "dMHBKh4yjsYzh1uXwyxsuw=="
+          "hash": "I7s4cy1HRMnybx7OIcmRZA=="
         }
       },
       "is_incremental": true,
@@ -4473,7 +4449,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Shapes/SixLabors.Shapes.TextBuilder.html",
-          "hash": "sY7197Q7jt8qUiriKAOcOA=="
+          "hash": "pmgQkZu+Iw+8uaYnZC68Qw=="
         }
       },
       "is_incremental": true,
@@ -4485,7 +4461,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Shapes/SixLabors.Shapes.html",
-          "hash": "RYL4kgYlt9YbLySjXBOh0g=="
+          "hash": "b1dsoZuXJHiN93UuRvs04A=="
         }
       },
       "is_incremental": true,
@@ -4509,7 +4485,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "QRNvlI45mTCSWodD5whBlw=="
+          "hash": "ygRAVfOACLL/seW8CYpNmg=="
         }
       },
       "is_incremental": true,
@@ -4533,7 +4509,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/ImageSharp/Configuration.html",
-          "hash": "YDq9JLDA+xEXnPilhipBEA=="
+          "hash": "qKHQujikJH2F2fOApN+ejg=="
         }
       },
       "is_incremental": true,
@@ -4545,7 +4521,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/ImageSharp/GettingStarted.html",
-          "hash": "iYfUGKEIVgFpQhO4V40+HA=="
+          "hash": "gfHHrjfaus43Nu9OWBgBzw=="
         }
       },
       "is_incremental": true,
@@ -4557,7 +4533,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/ImageSharp/ImageFormats.html",
-          "hash": "dINgB+kEZp10SF+iitmAmg=="
+          "hash": "b6ElVfw7AGLq3m9vmY2psw=="
         }
       },
       "is_incremental": true,
@@ -4569,7 +4545,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/ImageSharp/MemoryManagement.html",
-          "hash": "/JSKEDtNO/M00Rp2oFPYsA=="
+          "hash": "ljNbNkvvuCIeGmSSnpj0TQ=="
         }
       },
       "is_incremental": true,
@@ -4581,7 +4557,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/ImageSharp/PixelFormats.html",
-          "hash": "iYKTvnVTdZW3DOfDLxrhWw=="
+          "hash": "cUzoEUWVgYhxr4csTr4fCQ=="
         }
       },
       "is_incremental": true,
@@ -4593,7 +4569,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/ImageSharp/Processing.html",
-          "hash": "Iab0KQDPk7FwRANOA+t14w=="
+          "hash": "SnbcFzQv3lLf22+ElXs7PQ=="
         }
       },
       "is_incremental": true,
@@ -4605,7 +4581,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/ImageSharp/WorkingWithPixelBuffers.html",
-          "hash": "ztoNZCBZMyAe6A+1MPp9Sg=="
+          "hash": "e+ccOTIgklmoyy8mjY8uCA=="
         }
       },
       "is_incremental": true,
@@ -4617,7 +4593,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/intro.html",
-          "hash": "oerdEpMLtxeRvmvWp/NupQ=="
+          "hash": "mK/ZxUV9C+70gywqnY/zeQ=="
         }
       },
       "is_incremental": true,
@@ -4644,7 +4620,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "cynEOJQxcv00OwHggm/6UQ=="
+          "hash": "TWllISDDgeCPtv/AN30yVg=="
         }
       },
       "is_incremental": true,
@@ -4670,17 +4646,17 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build"
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
+          "incrementalPhase": "build"
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }
