@@ -74,10 +74,10 @@
   
   <h1 id="SixLabors_ImageSharp_Processing_Processors_Quantization_PaletteQuantizer" data-uid="SixLabors.ImageSharp.Processing.Processors.Quantization.PaletteQuantizer" class="text-break">Class PaletteQuantizer
   </h1>
-  <div class="markdown level0 summary"><p>Allows the quantization of images pixels using web safe colors defined in the CSS Color Module Level 4.
-<a href="http://msdn.microsoft.com/en-us/library/aa479306.aspx">http://msdn.microsoft.com/en-us/library/aa479306.aspx</a> Override this class to provide your own palette.
+  <div class="markdown level0 summary"><p>Allows the quantization of images pixels using color palettes.
+Override this class to provide your own palette.
 <p>
-By default the quantizer uses <a class="xref" href="SixLabors.ImageSharp.Processing.KnownDiffusers.html#SixLabors_ImageSharp_Processing_KnownDiffusers_FloydSteinberg">FloydSteinberg</a> dithering and the <a class="xref" href="SixLabors.ImageSharp.PixelFormats.NamedColors-1.html#SixLabors_ImageSharp_PixelFormats_NamedColors_1_WebSafePalette">WebSafePalette</a>
+By default the quantizer uses <a class="xref" href="SixLabors.ImageSharp.Processing.KnownDiffusers.html#SixLabors_ImageSharp_Processing_KnownDiffusers_FloydSteinberg">FloydSteinberg</a> dithering.
 </p></p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -85,6 +85,8 @@ By default the quantizer uses <a class="xref" href="SixLabors.ImageSharp.Process
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">PaletteQuantizer</span></div>
+      <div class="level2"><a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Quantization.WebSafePaletteQuantizer.html">WebSafePaletteQuantizer</a></div>
+      <div class="level2"><a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Quantization.WernerPaletteQuantizer.html">WernerPaletteQuantizer</a></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
@@ -94,7 +96,7 @@ By default the quantizer uses <a class="xref" href="SixLabors.ImageSharp.Process
   <h6><strong>Assembly</strong>: SixLabors.ImageSharp.dll</h6>
   <h5 id="SixLabors_ImageSharp_Processing_Processors_Quantization_PaletteQuantizer_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class PaletteQuantizer : object, IQuantizer</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class PaletteQuantizer : object, IQuantizer</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -103,7 +105,7 @@ By default the quantizer uses <a class="xref" href="SixLabors.ImageSharp.Process
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Quantization_PaletteQuantizer__ctor.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Quantization.PaletteQuantizer.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/afa2a1bb20a7f8ad7a42c956b96615c23e7eae12/src/ImageSharp/Processing/Processors/Quantization/PaletteQuantizer.cs/#L22">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/Processing/Processors/Quantization/PaletteQuantizer.cs/#L22">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_Processors_Quantization_PaletteQuantizer__ctor_" data-uid="SixLabors.ImageSharp.Processing.Processors.Quantization.PaletteQuantizer.#ctor*"></a>
   <h4 id="SixLabors_ImageSharp_Processing_Processors_Quantization_PaletteQuantizer__ctor" data-uid="SixLabors.ImageSharp.Processing.Processors.Quantization.PaletteQuantizer.#ctor">PaletteQuantizer()</h4>
@@ -112,14 +114,14 @@ By default the quantizer uses <a class="xref" href="SixLabors.ImageSharp.Process
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PaletteQuantizer()</code></pre>
+    <pre><code class="lang-csharp hljs">protected PaletteQuantizer()</code></pre>
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Quantization_PaletteQuantizer__ctor_SixLabors_ImageSharp_Processing_Processors_Dithering_IErrorDiffuser_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Quantization.PaletteQuantizer.%23ctor(SixLabors.ImageSharp.Processing.Processors.Dithering.IErrorDiffuser)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/afa2a1bb20a7f8ad7a42c956b96615c23e7eae12/src/ImageSharp/Processing/Processors/Quantization/PaletteQuantizer.cs/#L40">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/Processing/Processors/Quantization/PaletteQuantizer.cs/#L40">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_Processors_Quantization_PaletteQuantizer__ctor_" data-uid="SixLabors.ImageSharp.Processing.Processors.Quantization.PaletteQuantizer.#ctor*"></a>
   <h4 id="SixLabors_ImageSharp_Processing_Processors_Quantization_PaletteQuantizer__ctor_SixLabors_ImageSharp_Processing_Processors_Dithering_IErrorDiffuser_" data-uid="SixLabors.ImageSharp.Processing.Processors.Quantization.PaletteQuantizer.#ctor(SixLabors.ImageSharp.Processing.Processors.Dithering.IErrorDiffuser)">PaletteQuantizer(IErrorDiffuser)</h4>
@@ -128,7 +130,7 @@ By default the quantizer uses <a class="xref" href="SixLabors.ImageSharp.Process
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PaletteQuantizer(IErrorDiffuser diffuser)</code></pre>
+    <pre><code class="lang-csharp hljs">protected PaletteQuantizer(IErrorDiffuser diffuser)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -153,7 +155,7 @@ By default the quantizer uses <a class="xref" href="SixLabors.ImageSharp.Process
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Quantization_PaletteQuantizer__ctor_System_Boolean_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Quantization.PaletteQuantizer.%23ctor(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/afa2a1bb20a7f8ad7a42c956b96615c23e7eae12/src/ImageSharp/Processing/Processors/Quantization/PaletteQuantizer.cs/#L31">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/Processing/Processors/Quantization/PaletteQuantizer.cs/#L31">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_Processors_Quantization_PaletteQuantizer__ctor_" data-uid="SixLabors.ImageSharp.Processing.Processors.Quantization.PaletteQuantizer.#ctor*"></a>
   <h4 id="SixLabors_ImageSharp_Processing_Processors_Quantization_PaletteQuantizer__ctor_System_Boolean_" data-uid="SixLabors.ImageSharp.Processing.Processors.Quantization.PaletteQuantizer.#ctor(System.Boolean)">PaletteQuantizer(Boolean)</h4>
@@ -162,7 +164,7 @@ By default the quantizer uses <a class="xref" href="SixLabors.ImageSharp.Process
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PaletteQuantizer(bool dither)</code></pre>
+    <pre><code class="lang-csharp hljs">protected PaletteQuantizer(bool dither)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -189,12 +191,11 @@ By default the quantizer uses <a class="xref" href="SixLabors.ImageSharp.Process
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Quantization_PaletteQuantizer_Diffuser.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Quantization.PaletteQuantizer.Diffuser%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/afa2a1bb20a7f8ad7a42c956b96615c23e7eae12/src/ImageSharp/Processing/Processors/Quantization/PaletteQuantizer.cs/#L46">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/Processing/Processors/Quantization/PaletteQuantizer.cs/#L43">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_Processors_Quantization_PaletteQuantizer_Diffuser_" data-uid="SixLabors.ImageSharp.Processing.Processors.Quantization.PaletteQuantizer.Diffuser*"></a>
   <h4 id="SixLabors_ImageSharp_Processing_Processors_Quantization_PaletteQuantizer_Diffuser" data-uid="SixLabors.ImageSharp.Processing.Processors.Quantization.PaletteQuantizer.Diffuser">Diffuser</h4>
-  <div class="markdown level1 summary"><p>Gets the error diffusion algorithm to apply to the output image.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -219,21 +220,116 @@ By default the quantizer uses <a class="xref" href="SixLabors.ImageSharp.Process
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Quantization_PaletteQuantizer_CreateFrameQuantizer__1.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Quantization.PaletteQuantizer.CreateFrameQuantizer%60%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Quantization_PaletteQuantizer_CreateFrameQuantizer__1_SixLabors_ImageSharp_Configuration_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Quantization.PaletteQuantizer.CreateFrameQuantizer%60%601(SixLabors.ImageSharp.Configuration)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/afa2a1bb20a7f8ad7a42c956b96615c23e7eae12/src/ImageSharp/Processing/Processors/Quantization/PaletteQuantizer.cs/#L49">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/Processing/Processors/Quantization/PaletteQuantizer.cs/#L46">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_Processors_Quantization_PaletteQuantizer_CreateFrameQuantizer_" data-uid="SixLabors.ImageSharp.Processing.Processors.Quantization.PaletteQuantizer.CreateFrameQuantizer*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_Processors_Quantization_PaletteQuantizer_CreateFrameQuantizer__1" data-uid="SixLabors.ImageSharp.Processing.Processors.Quantization.PaletteQuantizer.CreateFrameQuantizer``1">CreateFrameQuantizer&lt;TPixel&gt;()</h4>
-  <div class="markdown level1 summary"><p>Creates the generic frame quantizer</p>
+  <h4 id="SixLabors_ImageSharp_Processing_Processors_Quantization_PaletteQuantizer_CreateFrameQuantizer__1_SixLabors_ImageSharp_Configuration_" data-uid="SixLabors.ImageSharp.Processing.Processors.Quantization.PaletteQuantizer.CreateFrameQuantizer``1(SixLabors.ImageSharp.Configuration)">CreateFrameQuantizer&lt;TPixel&gt;(Configuration)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract IFrameQuantizer&lt;TPixel&gt; CreateFrameQuantizer&lt;TPixel&gt;(Configuration configuration)
+
+    where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Configuration.html">Configuration</a></td>
+        <td><span class="parametername">configuration</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Quantization.IFrameQuantizer-1.html">IFrameQuantizer</a>&lt;TPixel&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TPixel</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Quantization_PaletteQuantizer_CreateFrameQuantizer__1_SixLabors_ImageSharp_Configuration___0___System_Int32_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Quantization.PaletteQuantizer.CreateFrameQuantizer%60%601(SixLabors.ImageSharp.Configuration%2C%60%600%5B%5D%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/Processing/Processors/Quantization/PaletteQuantizer.cs/#L61">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Processing_Processors_Quantization_PaletteQuantizer_CreateFrameQuantizer_" data-uid="SixLabors.ImageSharp.Processing.Processors.Quantization.PaletteQuantizer.CreateFrameQuantizer*"></a>
+  <h4 id="SixLabors_ImageSharp_Processing_Processors_Quantization_PaletteQuantizer_CreateFrameQuantizer__1_SixLabors_ImageSharp_Configuration___0___System_Int32_" data-uid="SixLabors.ImageSharp.Processing.Processors.Quantization.PaletteQuantizer.CreateFrameQuantizer``1(SixLabors.ImageSharp.Configuration,``0[],System.Int32)">CreateFrameQuantizer&lt;TPixel&gt;(Configuration, TPixel[], Int32)</h4>
+  <div class="markdown level1 summary"><p>Creates the generic frame quantizer.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual IFrameQuantizer&lt;TPixel&gt; CreateFrameQuantizer&lt;TPixel&gt;()
+    <pre><code class="lang-csharp hljs">protected IFrameQuantizer&lt;TPixel&gt; CreateFrameQuantizer&lt;TPixel&gt;(Configuration configuration, TPixel[] palette, int maxColors)
+
     where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Configuration.html">Configuration</a></td>
+        <td><span class="parametername">configuration</span></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Configuration.html">Configuration</a> to configure internal operations.</p>
+</td>
+      </tr>
+      <tr>
+        <td>TPixel[]</td>
+        <td><span class="parametername">palette</span></td>
+        <td><p>The color palette.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">maxColors</span></td>
+        <td><p>The maximum number of colors to hold in the color palette.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -268,19 +364,19 @@ By default the quantizer uses <a class="xref" href="SixLabors.ImageSharp.Process
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Quantization_PaletteQuantizer_CreateFrameQuantizer__1_Func___0____.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Quantization.PaletteQuantizer.CreateFrameQuantizer%60%601(Func%7B%60%600%5B%5D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Quantization_PaletteQuantizer_CreateFrameQuantizer__1_SixLabors_ImageSharp_Configuration_System_Int32_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Quantization.PaletteQuantizer.CreateFrameQuantizer%60%601(SixLabors.ImageSharp.Configuration%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/afa2a1bb20a7f8ad7a42c956b96615c23e7eae12/src/ImageSharp/Processing/Processors/Quantization/PaletteQuantizer.cs/#L59">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/Processing/Processors/Quantization/PaletteQuantizer.cs/#L50">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_Processors_Quantization_PaletteQuantizer_CreateFrameQuantizer_" data-uid="SixLabors.ImageSharp.Processing.Processors.Quantization.PaletteQuantizer.CreateFrameQuantizer*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_Processors_Quantization_PaletteQuantizer_CreateFrameQuantizer__1_Func___0____" data-uid="SixLabors.ImageSharp.Processing.Processors.Quantization.PaletteQuantizer.CreateFrameQuantizer``1(Func{``0[]})">CreateFrameQuantizer&lt;TPixel&gt;(Func&lt;TPixel[]&gt;)</h4>
-  <div class="markdown level1 summary"><p>Gets the palette to use to quantize the image.</p>
-</div>
+  <h4 id="SixLabors_ImageSharp_Processing_Processors_Quantization_PaletteQuantizer_CreateFrameQuantizer__1_SixLabors_ImageSharp_Configuration_System_Int32_" data-uid="SixLabors.ImageSharp.Processing.Processors.Quantization.PaletteQuantizer.CreateFrameQuantizer``1(SixLabors.ImageSharp.Configuration,System.Int32)">CreateFrameQuantizer&lt;TPixel&gt;(Configuration, Int32)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IFrameQuantizer&lt;TPixel&gt; CreateFrameQuantizer&lt;TPixel&gt;(Func&lt;TPixel[]&gt; paletteFunction)
+    <pre><code class="lang-csharp hljs">public abstract IFrameQuantizer&lt;TPixel&gt; CreateFrameQuantizer&lt;TPixel&gt;(Configuration configuration, int maxColors)
+
     where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -294,10 +390,14 @@ By default the quantizer uses <a class="xref" href="SixLabors.ImageSharp.Process
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Func</span>&lt;TPixel[]&gt;</td>
-        <td><span class="parametername">paletteFunction</span></td>
-        <td><p>The method to return the palette.</p>
-</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Configuration.html">Configuration</a></td>
+        <td><span class="parametername">configuration</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">maxColors</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -312,8 +412,7 @@ By default the quantizer uses <a class="xref" href="SixLabors.ImageSharp.Process
     <tbody>
       <tr>
         <td><a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Quantization.IFrameQuantizer-1.html">IFrameQuantizer</a>&lt;TPixel&gt;</td>
-        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Quantization.IFrameQuantizer-1.html">IFrameQuantizer&lt;TPixel&gt;</a></p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -328,8 +427,7 @@ By default the quantizer uses <a class="xref" href="SixLabors.ImageSharp.Process
     <tbody>
       <tr>
         <td><span class="parametername">TPixel</span></td>
-        <td><p>The pixel format.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -348,7 +446,7 @@ By default the quantizer uses <a class="xref" href="SixLabors.ImageSharp.Process
                     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Quantization_PaletteQuantizer.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Quantization.PaletteQuantizer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/SixLabors/ImageSharp/blob/afa2a1bb20a7f8ad7a42c956b96615c23e7eae12/src/ImageSharp/Processing/Processors/Quantization/PaletteQuantizer.cs/#L17" class="contribution-link">View Source</a>
+                    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/Processing/Processors/Quantization/PaletteQuantizer.cs/#L17" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

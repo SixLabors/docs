@@ -82,11 +82,15 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">ImageMetaData</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="SixLabors.ImageSharp.IDeepCloneable-1.html">IDeepCloneable</a>&lt;<a class="xref" href="SixLabors.ImageSharp.MetaData.ImageMetaData.html">ImageMetaData</a>&gt;</div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="SixLabors.ImageSharp.MetaData.html">SixLabors.ImageSharp.MetaData</a></h6>
   <h6><strong>Assembly</strong>: SixLabors.ImageSharp.dll</h6>
   <h5 id="SixLabors_ImageSharp_MetaData_ImageMetaData_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class ImageMetaData : object</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ImageMetaData : object, IDeepCloneable&lt;ImageMetaData&gt;</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -95,7 +99,7 @@
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_MetaData_ImageMetaData_DefaultHorizontalResolution.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.MetaData.ImageMetaData.DefaultHorizontalResolution%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/afa2a1bb20a7f8ad7a42c956b96615c23e7eae12/src/ImageSharp/MetaData/ImageMetaData.cs/#L19">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/MetaData/ImageMetaData.cs/#L20">View Source</a>
   </span>
   <h4 id="SixLabors_ImageSharp_MetaData_ImageMetaData_DefaultHorizontalResolution" data-uid="SixLabors.ImageSharp.MetaData.ImageMetaData.DefaultHorizontalResolution">DefaultHorizontalResolution</h4>
   <div class="markdown level1 summary"><p>The default horizontal resolution value (dots per inch) in x direction.
@@ -123,10 +127,41 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_MetaData_ImageMetaData_DefaultPixelResolutionUnits.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.MetaData.ImageMetaData.DefaultPixelResolutionUnits%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/MetaData/ImageMetaData.cs/#L32">View Source</a>
+  </span>
+  <h4 id="SixLabors_ImageSharp_MetaData_ImageMetaData_DefaultPixelResolutionUnits" data-uid="SixLabors.ImageSharp.MetaData.ImageMetaData.DefaultPixelResolutionUnits">DefaultPixelResolutionUnits</h4>
+  <div class="markdown level1 summary"><p>The default pixel resolution units.
+<remarks>The default value is <a class="xref" href="SixLabors.ImageSharp.MetaData.PixelResolutionUnit.html#SixLabors_ImageSharp_MetaData_PixelResolutionUnit_PixelsPerInch">PixelsPerInch</a>.</remarks></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const PixelResolutionUnit DefaultPixelResolutionUnits = default(PixelResolutionUnit)</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.MetaData.PixelResolutionUnit.html">PixelResolutionUnit</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_MetaData_ImageMetaData_DefaultVerticalResolution.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.MetaData.ImageMetaData.DefaultVerticalResolution%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/afa2a1bb20a7f8ad7a42c956b96615c23e7eae12/src/ImageSharp/MetaData/ImageMetaData.cs/#L25">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/MetaData/ImageMetaData.cs/#L26">View Source</a>
   </span>
   <h4 id="SixLabors_ImageSharp_MetaData_ImageMetaData_DefaultVerticalResolution" data-uid="SixLabors.ImageSharp.MetaData.ImageMetaData.DefaultVerticalResolution">DefaultVerticalResolution</h4>
   <div class="markdown level1 summary"><p>The default vertical resolution value (dots per inch) in y direction.
@@ -159,7 +194,7 @@
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_MetaData_ImageMetaData_ExifProfile.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.MetaData.ImageMetaData.ExifProfile%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/afa2a1bb20a7f8ad7a42c956b96615c23e7eae12/src/ImageSharp/MetaData/ImageMetaData.cs/#L115">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/MetaData/ImageMetaData.cs/#L123">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_MetaData_ImageMetaData_ExifProfile_" data-uid="SixLabors.ImageSharp.MetaData.ImageMetaData.ExifProfile*"></a>
   <h4 id="SixLabors_ImageSharp_MetaData_ImageMetaData_ExifProfile" data-uid="SixLabors.ImageSharp.MetaData.ImageMetaData.ExifProfile">ExifProfile</h4>
@@ -190,7 +225,7 @@
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_MetaData_ImageMetaData_HorizontalResolution.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.MetaData.ImageMetaData.HorizontalResolution%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/afa2a1bb20a7f8ad7a42c956b96615c23e7eae12/src/ImageSharp/MetaData/ImageMetaData.cs/#L72">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/MetaData/ImageMetaData.cs/#L80">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_MetaData_ImageMetaData_HorizontalResolution_" data-uid="SixLabors.ImageSharp.MetaData.ImageMetaData.HorizontalResolution*"></a>
   <h4 id="SixLabors_ImageSharp_MetaData_ImageMetaData_HorizontalResolution" data-uid="SixLabors.ImageSharp.MetaData.ImageMetaData.HorizontalResolution">HorizontalResolution</h4>
@@ -223,7 +258,7 @@ It is defined as the number of dots per inch and should be an positive value.</p
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_MetaData_ImageMetaData_IccProfile.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.MetaData.ImageMetaData.IccProfile%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/afa2a1bb20a7f8ad7a42c956b96615c23e7eae12/src/ImageSharp/MetaData/ImageMetaData.cs/#L120">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/MetaData/ImageMetaData.cs/#L128">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_MetaData_ImageMetaData_IccProfile_" data-uid="SixLabors.ImageSharp.MetaData.ImageMetaData.IccProfile*"></a>
   <h4 id="SixLabors_ImageSharp_MetaData_ImageMetaData_IccProfile" data-uid="SixLabors.ImageSharp.MetaData.ImageMetaData.IccProfile">IccProfile</h4>
@@ -254,7 +289,7 @@ It is defined as the number of dots per inch and should be an positive value.</p
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_MetaData_ImageMetaData_Properties.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.MetaData.ImageMetaData.Properties%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/afa2a1bb20a7f8ad7a42c956b96615c23e7eae12/src/ImageSharp/MetaData/ImageMetaData.cs/#L125">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/MetaData/ImageMetaData.cs/#L133">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_MetaData_ImageMetaData_Properties_" data-uid="SixLabors.ImageSharp.MetaData.ImageMetaData.Properties*"></a>
   <h4 id="SixLabors_ImageSharp_MetaData_ImageMetaData_Properties" data-uid="SixLabors.ImageSharp.MetaData.ImageMetaData.Properties">Properties</h4>
@@ -282,42 +317,10 @@ It is defined as the number of dots per inch and should be an positive value.</p
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_MetaData_ImageMetaData_RepeatCount.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.MetaData.ImageMetaData.RepeatCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/afa2a1bb20a7f8ad7a42c956b96615c23e7eae12/src/ImageSharp/MetaData/ImageMetaData.cs/#L131">View Source</a>
-  </span>
-  <a id="SixLabors_ImageSharp_MetaData_ImageMetaData_RepeatCount_" data-uid="SixLabors.ImageSharp.MetaData.ImageMetaData.RepeatCount*"></a>
-  <h4 id="SixLabors_ImageSharp_MetaData_ImageMetaData_RepeatCount" data-uid="SixLabors.ImageSharp.MetaData.ImageMetaData.RepeatCount">RepeatCount</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the number of times any animation is repeated.
-<remarks>0 means to repeat indefinitely.</remarks></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ushort RepeatCount { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.UInt16</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_MetaData_ImageMetaData_ResolutionUnits.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.MetaData.ImageMetaData.ResolutionUnits%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/afa2a1bb20a7f8ad7a42c956b96615c23e7eae12/src/ImageSharp/MetaData/ImageMetaData.cs/#L110">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/MetaData/ImageMetaData.cs/#L118">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_MetaData_ImageMetaData_ResolutionUnits_" data-uid="SixLabors.ImageSharp.MetaData.ImageMetaData.ResolutionUnits*"></a>
   <h4 id="SixLabors_ImageSharp_MetaData_ImageMetaData_ResolutionUnits" data-uid="SixLabors.ImageSharp.MetaData.ImageMetaData.ResolutionUnits">ResolutionUnits</h4>
@@ -352,7 +355,7 @@ It is defined as the number of dots per inch and should be an positive value.</p
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_MetaData_ImageMetaData_VerticalResolution.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.MetaData.ImageMetaData.VerticalResolution%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/afa2a1bb20a7f8ad7a42c956b96615c23e7eae12/src/ImageSharp/MetaData/ImageMetaData.cs/#L90">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/MetaData/ImageMetaData.cs/#L98">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_MetaData_ImageMetaData_VerticalResolution_" data-uid="SixLabors.ImageSharp.MetaData.ImageMetaData.VerticalResolution*"></a>
   <h4 id="SixLabors_ImageSharp_MetaData_ImageMetaData_VerticalResolution" data-uid="SixLabors.ImageSharp.MetaData.ImageMetaData.VerticalResolution">VerticalResolution</h4>
@@ -384,19 +387,18 @@ It is defined as the number of dots per inch and should be an positive value.</p
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_MetaData_ImageMetaData_Clone.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.MetaData.ImageMetaData.Clone%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_MetaData_ImageMetaData_DeepClone.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.MetaData.ImageMetaData.DeepClone%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/afa2a1bb20a7f8ad7a42c956b96615c23e7eae12/src/ImageSharp/MetaData/ImageMetaData.cs/#L160">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/MetaData/ImageMetaData.cs/#L157">View Source</a>
   </span>
-  <a id="SixLabors_ImageSharp_MetaData_ImageMetaData_Clone_" data-uid="SixLabors.ImageSharp.MetaData.ImageMetaData.Clone*"></a>
-  <h4 id="SixLabors_ImageSharp_MetaData_ImageMetaData_Clone" data-uid="SixLabors.ImageSharp.MetaData.ImageMetaData.Clone">Clone()</h4>
-  <div class="markdown level1 summary"><p>Clones this into a new instance</p>
-</div>
+  <a id="SixLabors_ImageSharp_MetaData_ImageMetaData_DeepClone_" data-uid="SixLabors.ImageSharp.MetaData.ImageMetaData.DeepClone*"></a>
+  <h4 id="SixLabors_ImageSharp_MetaData_ImageMetaData_DeepClone" data-uid="SixLabors.ImageSharp.MetaData.ImageMetaData.DeepClone">DeepClone()</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ImageMetaData Clone()</code></pre>
+    <pre><code class="lang-csharp hljs">public ImageMetaData DeepClone()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -409,11 +411,82 @@ It is defined as the number of dots per inch and should be an positive value.</p
     <tbody>
       <tr>
         <td><a class="xref" href="SixLabors.ImageSharp.MetaData.ImageMetaData.html">ImageMetaData</a></td>
-        <td><p>The cloned metadata instance</p>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_MetaData_ImageMetaData_GetFormatMetaData__1_SixLabors_ImageSharp_Formats_IImageFormat___0__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.MetaData.ImageMetaData.GetFormatMetaData%60%601(SixLabors.ImageSharp.Formats.IImageFormat%7B%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/MetaData/ImageMetaData.cs/#L143">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_MetaData_ImageMetaData_GetFormatMetaData_" data-uid="SixLabors.ImageSharp.MetaData.ImageMetaData.GetFormatMetaData*"></a>
+  <h4 id="SixLabors_ImageSharp_MetaData_ImageMetaData_GetFormatMetaData__1_SixLabors_ImageSharp_Formats_IImageFormat___0__" data-uid="SixLabors.ImageSharp.MetaData.ImageMetaData.GetFormatMetaData``1(SixLabors.ImageSharp.Formats.IImageFormat{``0})">GetFormatMetaData&lt;TFormatMetaData&gt;(IImageFormat&lt;TFormatMetaData&gt;)</h4>
+  <div class="markdown level1 summary"><p>Gets the metadata value associated with the specified key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TFormatMetaData GetFormatMetaData&lt;TFormatMetaData&gt;(IImageFormat&lt;TFormatMetaData&gt; key)
+
+    where TFormatMetaData : class, IDeepCloneable</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Formats.IImageFormat-1.html">IImageFormat</a>&lt;TFormatMetaData&gt;</td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The key of the value to get.</p>
 </td>
       </tr>
     </tbody>
   </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TFormatMetaData</span></td>
+        <td><p>The <code data-dev-comment-type="typeparamref" class="typeparamref">TFormatMetaData</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TFormatMetaData</span></td>
+        <td><p>The type of metadata.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.IDeepCloneable-1.html">IDeepCloneable&lt;T&gt;</a>
+  </div>
 </article>
           </div>
           
@@ -425,7 +498,7 @@ It is defined as the number of dots per inch and should be an positive value.</p
                     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_MetaData_ImageMetaData.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.MetaData.ImageMetaData%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/SixLabors/ImageSharp/blob/afa2a1bb20a7f8ad7a42c956b96615c23e7eae12/src/ImageSharp/MetaData/ImageMetaData.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/MetaData/ImageMetaData.cs/#L14" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

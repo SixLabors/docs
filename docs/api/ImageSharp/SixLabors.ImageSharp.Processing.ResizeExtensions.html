@@ -95,7 +95,7 @@
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_ResizeExtensions_Resize__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__SixLabors_ImageSharp_Processing_ResizeOptions_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.ResizeExtensions.Resize%60%601(SixLabors.ImageSharp.Processing.IImageProcessingContext%7B%60%600%7D%2CSixLabors.ImageSharp.Processing.ResizeOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/afa2a1bb20a7f8ad7a42c956b96615c23e7eae12/src/ImageSharp/Processing/ResizeExtensions.cs/#L23">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/Processing/ResizeExtensions.cs/#L23">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_ResizeExtensions_Resize_" data-uid="SixLabors.ImageSharp.Processing.ResizeExtensions.Resize*"></a>
   <h4 id="SixLabors_ImageSharp_Processing_ResizeExtensions_Resize__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__SixLabors_ImageSharp_Processing_ResizeOptions_" data-uid="SixLabors.ImageSharp.Processing.ResizeExtensions.Resize``1(SixLabors.ImageSharp.Processing.IImageProcessingContext{``0},SixLabors.ImageSharp.Processing.ResizeOptions)">Resize&lt;TPixel&gt;(IImageProcessingContext&lt;TPixel&gt;, ResizeOptions)</h4>
@@ -105,6 +105,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IImageProcessingContext&lt;TPixel&gt; Resize&lt;TPixel&gt;(this IImageProcessingContext&lt;TPixel&gt; source, ResizeOptions options)
+
     where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -164,14 +165,14 @@
     </tbody>
   </table>
   <h5 id="SixLabors_ImageSharp_Processing_ResizeExtensions_Resize__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__SixLabors_ImageSharp_Processing_ResizeOptions__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Passing zero for one of height or width within the resize options will automatically preserve the aspect ratio of the original image</p>
+  <div class="markdown level1 remarks"><p>Passing zero for one of height or width within the resize options will automatically preserve the aspect ratio of the original image or the nearest possible ratio.</p>
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_ResizeExtensions_Resize__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__Size_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.ResizeExtensions.Resize%60%601(SixLabors.ImageSharp.Processing.IImageProcessingContext%7B%60%600%7D%2CSize)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/afa2a1bb20a7f8ad7a42c956b96615c23e7eae12/src/ImageSharp/Processing/ResizeExtensions.cs/#L35">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/Processing/ResizeExtensions.cs/#L35">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_ResizeExtensions_Resize_" data-uid="SixLabors.ImageSharp.Processing.ResizeExtensions.Resize*"></a>
   <h4 id="SixLabors_ImageSharp_Processing_ResizeExtensions_Resize__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__Size_" data-uid="SixLabors.ImageSharp.Processing.ResizeExtensions.Resize``1(SixLabors.ImageSharp.Processing.IImageProcessingContext{``0},Size)">Resize&lt;TPixel&gt;(IImageProcessingContext&lt;TPixel&gt;, Size)</h4>
@@ -181,6 +182,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IImageProcessingContext&lt;TPixel&gt; Resize&lt;TPixel&gt;(this IImageProcessingContext&lt;TPixel&gt; source, Size size)
+
     where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -240,14 +242,14 @@
     </tbody>
   </table>
   <h5 id="SixLabors_ImageSharp_Processing_ResizeExtensions_Resize__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__Size__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Passing zero for one of height or width will automatically preserve the aspect ratio of the original image</p>
+  <div class="markdown level1 remarks"><p>Passing zero for one of height or width will automatically preserve the aspect ratio of the original image or the nearest possible ratio.</p>
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_ResizeExtensions_Resize__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__Size_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_System_Boolean_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.ResizeExtensions.Resize%60%601(SixLabors.ImageSharp.Processing.IImageProcessingContext%7B%60%600%7D%2CSize%2CSixLabors.ImageSharp.Processing.Processors.Transforms.IResampler%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/afa2a1bb20a7f8ad7a42c956b96615c23e7eae12/src/ImageSharp/Processing/ResizeExtensions.cs/#L103">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/Processing/ResizeExtensions.cs/#L103">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_ResizeExtensions_Resize_" data-uid="SixLabors.ImageSharp.Processing.ResizeExtensions.Resize*"></a>
   <h4 id="SixLabors_ImageSharp_Processing_ResizeExtensions_Resize__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__Size_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_System_Boolean_" data-uid="SixLabors.ImageSharp.Processing.ResizeExtensions.Resize``1(SixLabors.ImageSharp.Processing.IImageProcessingContext{``0},Size,SixLabors.ImageSharp.Processing.Processors.Transforms.IResampler,System.Boolean)">Resize&lt;TPixel&gt;(IImageProcessingContext&lt;TPixel&gt;, Size, IResampler, Boolean)</h4>
@@ -257,6 +259,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IImageProcessingContext&lt;TPixel&gt; Resize&lt;TPixel&gt;(this IImageProcessingContext&lt;TPixel&gt; source, Size size, IResampler sampler, bool compand)
+
     where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -328,14 +331,14 @@
     </tbody>
   </table>
   <h5 id="SixLabors_ImageSharp_Processing_ResizeExtensions_Resize__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__Size_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_System_Boolean__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Passing zero for one of height or width will automatically preserve the aspect ratio of the original image</p>
+  <div class="markdown level1 remarks"><p>Passing zero for one of height or width will automatically preserve the aspect ratio of the original image or the nearest possible ratio.</p>
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_ResizeExtensions_Resize__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__Size_System_Boolean_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.ResizeExtensions.Resize%60%601(SixLabors.ImageSharp.Processing.IImageProcessingContext%7B%60%600%7D%2CSize%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/afa2a1bb20a7f8ad7a42c956b96615c23e7eae12/src/ImageSharp/Processing/ResizeExtensions.cs/#L48">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/Processing/ResizeExtensions.cs/#L48">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_ResizeExtensions_Resize_" data-uid="SixLabors.ImageSharp.Processing.ResizeExtensions.Resize*"></a>
   <h4 id="SixLabors_ImageSharp_Processing_ResizeExtensions_Resize__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__Size_System_Boolean_" data-uid="SixLabors.ImageSharp.Processing.ResizeExtensions.Resize``1(SixLabors.ImageSharp.Processing.IImageProcessingContext{``0},Size,System.Boolean)">Resize&lt;TPixel&gt;(IImageProcessingContext&lt;TPixel&gt;, Size, Boolean)</h4>
@@ -345,6 +348,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IImageProcessingContext&lt;TPixel&gt; Resize&lt;TPixel&gt;(this IImageProcessingContext&lt;TPixel&gt; source, Size size, bool compand)
+
     where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -410,14 +414,14 @@
     </tbody>
   </table>
   <h5 id="SixLabors_ImageSharp_Processing_ResizeExtensions_Resize__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__Size_System_Boolean__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Passing zero for one of height or width will automatically preserve the aspect ratio of the original image</p>
+  <div class="markdown level1 remarks"><p>Passing zero for one of height or width will automatically preserve the aspect ratio of the original image or the nearest possible ratio.</p>
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_ResizeExtensions_Resize__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.ResizeExtensions.Resize%60%601(SixLabors.ImageSharp.Processing.IImageProcessingContext%7B%60%600%7D%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/afa2a1bb20a7f8ad7a42c956b96615c23e7eae12/src/ImageSharp/Processing/ResizeExtensions.cs/#L61">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/Processing/ResizeExtensions.cs/#L61">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_ResizeExtensions_Resize_" data-uid="SixLabors.ImageSharp.Processing.ResizeExtensions.Resize*"></a>
   <h4 id="SixLabors_ImageSharp_Processing_ResizeExtensions_Resize__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__System_Int32_System_Int32_" data-uid="SixLabors.ImageSharp.Processing.ResizeExtensions.Resize``1(SixLabors.ImageSharp.Processing.IImageProcessingContext{``0},System.Int32,System.Int32)">Resize&lt;TPixel&gt;(IImageProcessingContext&lt;TPixel&gt;, Int32, Int32)</h4>
@@ -427,6 +431,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IImageProcessingContext&lt;TPixel&gt; Resize&lt;TPixel&gt;(this IImageProcessingContext&lt;TPixel&gt; source, int width, int height)
+
     where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -492,14 +497,14 @@
     </tbody>
   </table>
   <h5 id="SixLabors_ImageSharp_Processing_ResizeExtensions_Resize__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__System_Int32_System_Int32__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Passing zero for one of height or width will automatically preserve the aspect ratio of the original image</p>
+  <div class="markdown level1 remarks"><p>Passing zero for one of height or width will automatically preserve the aspect ratio of the original image or the nearest possible ratio.</p>
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_ResizeExtensions_Resize__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__System_Int32_System_Int32_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.ResizeExtensions.Resize%60%601(SixLabors.ImageSharp.Processing.IImageProcessingContext%7B%60%600%7D%2CSystem.Int32%2CSystem.Int32%2CSixLabors.ImageSharp.Processing.Processors.Transforms.IResampler)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/afa2a1bb20a7f8ad7a42c956b96615c23e7eae12/src/ImageSharp/Processing/ResizeExtensions.cs/#L89">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/Processing/ResizeExtensions.cs/#L89">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_ResizeExtensions_Resize_" data-uid="SixLabors.ImageSharp.Processing.ResizeExtensions.Resize*"></a>
   <h4 id="SixLabors_ImageSharp_Processing_ResizeExtensions_Resize__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__System_Int32_System_Int32_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_" data-uid="SixLabors.ImageSharp.Processing.ResizeExtensions.Resize``1(SixLabors.ImageSharp.Processing.IImageProcessingContext{``0},System.Int32,System.Int32,SixLabors.ImageSharp.Processing.Processors.Transforms.IResampler)">Resize&lt;TPixel&gt;(IImageProcessingContext&lt;TPixel&gt;, Int32, Int32, IResampler)</h4>
@@ -509,6 +514,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IImageProcessingContext&lt;TPixel&gt; Resize&lt;TPixel&gt;(this IImageProcessingContext&lt;TPixel&gt; source, int width, int height, IResampler sampler)
+
     where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -580,14 +586,14 @@
     </tbody>
   </table>
   <h5 id="SixLabors_ImageSharp_Processing_ResizeExtensions_Resize__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__System_Int32_System_Int32_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Passing zero for one of height or width will automatically preserve the aspect ratio of the original image</p>
+  <div class="markdown level1 remarks"><p>Passing zero for one of height or width will automatically preserve the aspect ratio of the original image or the nearest possible ratio.</p>
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_ResizeExtensions_Resize__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__System_Int32_System_Int32_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_Rectangle_Rectangle_System_Boolean_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.ResizeExtensions.Resize%60%601(SixLabors.ImageSharp.Processing.IImageProcessingContext%7B%60%600%7D%2CSystem.Int32%2CSystem.Int32%2CSixLabors.ImageSharp.Processing.Processors.Transforms.IResampler%2CRectangle%2CRectangle%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/afa2a1bb20a7f8ad7a42c956b96615c23e7eae12/src/ImageSharp/Processing/ResizeExtensions.cs/#L140">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/Processing/ResizeExtensions.cs/#L140">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_ResizeExtensions_Resize_" data-uid="SixLabors.ImageSharp.Processing.ResizeExtensions.Resize*"></a>
   <h4 id="SixLabors_ImageSharp_Processing_ResizeExtensions_Resize__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__System_Int32_System_Int32_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_Rectangle_Rectangle_System_Boolean_" data-uid="SixLabors.ImageSharp.Processing.ResizeExtensions.Resize``1(SixLabors.ImageSharp.Processing.IImageProcessingContext{``0},System.Int32,System.Int32,SixLabors.ImageSharp.Processing.Processors.Transforms.IResampler,Rectangle,Rectangle,System.Boolean)">Resize&lt;TPixel&gt;(IImageProcessingContext&lt;TPixel&gt;, Int32, Int32, IResampler, Rectangle, Rectangle, Boolean)</h4>
@@ -598,6 +604,7 @@ source rectangle.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IImageProcessingContext&lt;TPixel&gt; Resize&lt;TPixel&gt;(this IImageProcessingContext&lt;TPixel&gt; source, int width, int height, IResampler sampler, Rectangle sourceRectangle, Rectangle targetRectangle, bool compand)
+
     where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -687,14 +694,14 @@ source rectangle.</p>
     </tbody>
   </table>
   <h5 id="SixLabors_ImageSharp_Processing_ResizeExtensions_Resize__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__System_Int32_System_Int32_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_Rectangle_Rectangle_System_Boolean__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Passing zero for one of height or width will automatically preserve the aspect ratio of the original image</p>
+  <div class="markdown level1 remarks"><p>Passing zero for one of height or width will automatically preserve the aspect ratio of the original image or the nearest possible ratio.</p>
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_ResizeExtensions_Resize__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__System_Int32_System_Int32_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_Rectangle_System_Boolean_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.ResizeExtensions.Resize%60%601(SixLabors.ImageSharp.Processing.IImageProcessingContext%7B%60%600%7D%2CSystem.Int32%2CSystem.Int32%2CSixLabors.ImageSharp.Processing.Processors.Transforms.IResampler%2CRectangle%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/afa2a1bb20a7f8ad7a42c956b96615c23e7eae12/src/ImageSharp/Processing/ResizeExtensions.cs/#L165">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/Processing/ResizeExtensions.cs/#L165">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_ResizeExtensions_Resize_" data-uid="SixLabors.ImageSharp.Processing.ResizeExtensions.Resize*"></a>
   <h4 id="SixLabors_ImageSharp_Processing_ResizeExtensions_Resize__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__System_Int32_System_Int32_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_Rectangle_System_Boolean_" data-uid="SixLabors.ImageSharp.Processing.ResizeExtensions.Resize``1(SixLabors.ImageSharp.Processing.IImageProcessingContext{``0},System.Int32,System.Int32,SixLabors.ImageSharp.Processing.Processors.Transforms.IResampler,Rectangle,System.Boolean)">Resize&lt;TPixel&gt;(IImageProcessingContext&lt;TPixel&gt;, Int32, Int32, IResampler, Rectangle, Boolean)</h4>
@@ -704,6 +711,7 @@ source rectangle.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IImageProcessingContext&lt;TPixel&gt; Resize&lt;TPixel&gt;(this IImageProcessingContext&lt;TPixel&gt; source, int width, int height, IResampler sampler, Rectangle targetRectangle, bool compand)
+
     where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -787,14 +795,14 @@ source rectangle.</p>
     </tbody>
   </table>
   <h5 id="SixLabors_ImageSharp_Processing_ResizeExtensions_Resize__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__System_Int32_System_Int32_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_Rectangle_System_Boolean__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Passing zero for one of height or width will automatically preserve the aspect ratio of the original image</p>
+  <div class="markdown level1 remarks"><p>Passing zero for one of height or width will automatically preserve the aspect ratio of the original image or the nearest possible ratio.</p>
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_ResizeExtensions_Resize__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__System_Int32_System_Int32_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_System_Boolean_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.ResizeExtensions.Resize%60%601(SixLabors.ImageSharp.Processing.IImageProcessingContext%7B%60%600%7D%2CSystem.Int32%2CSystem.Int32%2CSixLabors.ImageSharp.Processing.Processors.Transforms.IResampler%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/afa2a1bb20a7f8ad7a42c956b96615c23e7eae12/src/ImageSharp/Processing/ResizeExtensions.cs/#L118">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/Processing/ResizeExtensions.cs/#L118">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_ResizeExtensions_Resize_" data-uid="SixLabors.ImageSharp.Processing.ResizeExtensions.Resize*"></a>
   <h4 id="SixLabors_ImageSharp_Processing_ResizeExtensions_Resize__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__System_Int32_System_Int32_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_System_Boolean_" data-uid="SixLabors.ImageSharp.Processing.ResizeExtensions.Resize``1(SixLabors.ImageSharp.Processing.IImageProcessingContext{``0},System.Int32,System.Int32,SixLabors.ImageSharp.Processing.Processors.Transforms.IResampler,System.Boolean)">Resize&lt;TPixel&gt;(IImageProcessingContext&lt;TPixel&gt;, Int32, Int32, IResampler, Boolean)</h4>
@@ -804,6 +812,7 @@ source rectangle.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IImageProcessingContext&lt;TPixel&gt; Resize&lt;TPixel&gt;(this IImageProcessingContext&lt;TPixel&gt; source, int width, int height, IResampler sampler, bool compand)
+
     where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -881,14 +890,14 @@ source rectangle.</p>
     </tbody>
   </table>
   <h5 id="SixLabors_ImageSharp_Processing_ResizeExtensions_Resize__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__System_Int32_System_Int32_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_System_Boolean__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Passing zero for one of height or width will automatically preserve the aspect ratio of the original image</p>
+  <div class="markdown level1 remarks"><p>Passing zero for one of height or width will automatically preserve the aspect ratio of the original image or the nearest possible ratio.</p>
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_ResizeExtensions_Resize__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__System_Int32_System_Int32_System_Boolean_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.ResizeExtensions.Resize%60%601(SixLabors.ImageSharp.Processing.IImageProcessingContext%7B%60%600%7D%2CSystem.Int32%2CSystem.Int32%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/afa2a1bb20a7f8ad7a42c956b96615c23e7eae12/src/ImageSharp/Processing/ResizeExtensions.cs/#L75">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/Processing/ResizeExtensions.cs/#L75">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_ResizeExtensions_Resize_" data-uid="SixLabors.ImageSharp.Processing.ResizeExtensions.Resize*"></a>
   <h4 id="SixLabors_ImageSharp_Processing_ResizeExtensions_Resize__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__System_Int32_System_Int32_System_Boolean_" data-uid="SixLabors.ImageSharp.Processing.ResizeExtensions.Resize``1(SixLabors.ImageSharp.Processing.IImageProcessingContext{``0},System.Int32,System.Int32,System.Boolean)">Resize&lt;TPixel&gt;(IImageProcessingContext&lt;TPixel&gt;, Int32, Int32, Boolean)</h4>
@@ -898,6 +907,7 @@ source rectangle.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IImageProcessingContext&lt;TPixel&gt; Resize&lt;TPixel&gt;(this IImageProcessingContext&lt;TPixel&gt; source, int width, int height, bool compand)
+
     where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -969,7 +979,7 @@ source rectangle.</p>
     </tbody>
   </table>
   <h5 id="SixLabors_ImageSharp_Processing_ResizeExtensions_Resize__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__System_Int32_System_Int32_System_Boolean__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Passing zero for one of height or width will automatically preserve the aspect ratio of the original image</p>
+  <div class="markdown level1 remarks"><p>Passing zero for one of height or width will automatically preserve the aspect ratio of the original image or the nearest possible ratio.</p>
 </div>
 </article>
           </div>
@@ -982,7 +992,7 @@ source rectangle.</p>
                     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_ResizeExtensions.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.ResizeExtensions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/SixLabors/ImageSharp/blob/afa2a1bb20a7f8ad7a42c956b96615c23e7eae12/src/ImageSharp/Processing/ResizeExtensions.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/Processing/ResizeExtensions.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

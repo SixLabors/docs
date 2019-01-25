@@ -1,0 +1,254 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class AotCompilerTools
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class AotCompilerTools
+   ">
+    <meta name="generator" content="docfx 2.40.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.png">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="SixLabors.ImageSharp.Advanced.AotCompilerTools">
+  
+  
+  <h1 id="SixLabors_ImageSharp_Advanced_AotCompilerTools" data-uid="SixLabors.ImageSharp.Advanced.AotCompilerTools" class="text-break">Class AotCompilerTools
+  </h1>
+  <div class="markdown level0 summary"><p>Unlike traditional Mono/.NET, code on the iPhone is statically compiled ahead of time instead of being
+compiled on demand by a JIT compiler. This means there are a few limitations with respect to generics,
+these are caused because not every possible generic instantiation can be determined up front at compile time.
+The Aot Compiler is designed to overcome the limitations of this compiler.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">AotCompilerTools</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="SixLabors.ImageSharp.Advanced.html">SixLabors.ImageSharp.Advanced</a></h6>
+  <h6><strong>Assembly</strong>: SixLabors.ImageSharp.dll</h6>
+  <h5 id="SixLabors_ImageSharp_Advanced_AotCompilerTools_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class AotCompilerTools : object</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Advanced_AotCompilerTools_Seed__1.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Advanced.AotCompilerTools.Seed%60%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/Advanced/AotCompilerTools.cs/#L36">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Advanced_AotCompilerTools_Seed_" data-uid="SixLabors.ImageSharp.Advanced.AotCompilerTools.Seed*"></a>
+  <h4 id="SixLabors_ImageSharp_Advanced_AotCompilerTools_Seed__1" data-uid="SixLabors.ImageSharp.Advanced.AotCompilerTools.Seed``1">Seed&lt;TPixel&gt;()</h4>
+  <div class="markdown level1 summary"><p>Seeds the compiler using the given pixel format.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Seed&lt;TPixel&gt;()
+
+    where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TPixel</span></td>
+        <td><p>The pixel format.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Advanced_AotCompilerTools_Seed__2.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Advanced.AotCompilerTools.Seed%60%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/Advanced/AotCompilerTools.cs/#L59">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Advanced_AotCompilerTools_Seed_" data-uid="SixLabors.ImageSharp.Advanced.AotCompilerTools.Seed*"></a>
+  <h4 id="SixLabors_ImageSharp_Advanced_AotCompilerTools_Seed__2" data-uid="SixLabors.ImageSharp.Advanced.AotCompilerTools.Seed``2">Seed&lt;TPixel, TPixel2&gt;()</h4>
+  <div class="markdown level1 summary"><p>Seeds the compiler using the given pixel formats.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Seed&lt;TPixel, TPixel2&gt;()
+
+    where TPixel : struct, IPixel&lt;TPixel&gt; where TPixel2 : struct, IPixel&lt;TPixel2&gt;</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TPixel</span></td>
+        <td><p>The first pixel format.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TPixel2</span></td>
+        <td><p>The second pixel format.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Advanced_AotCompilerTools_Seed__3.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Advanced.AotCompilerTools.Seed%60%603%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/Advanced/AotCompilerTools.cs/#L73">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Advanced_AotCompilerTools_Seed_" data-uid="SixLabors.ImageSharp.Advanced.AotCompilerTools.Seed*"></a>
+  <h4 id="SixLabors_ImageSharp_Advanced_AotCompilerTools_Seed__3" data-uid="SixLabors.ImageSharp.Advanced.AotCompilerTools.Seed``3">Seed&lt;TPixel, TPixel2, TPixel3&gt;()</h4>
+  <div class="markdown level1 summary"><p>Seeds the compiler using the given pixel formats.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Seed&lt;TPixel, TPixel2, TPixel3&gt;()
+
+    where TPixel : struct, IPixel&lt;TPixel&gt; where TPixel2 : struct, IPixel&lt;TPixel2&gt; where TPixel3 : struct, IPixel&lt;TPixel3&gt;</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TPixel</span></td>
+        <td><p>The first pixel format.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TPixel2</span></td>
+        <td><p>The second pixel format.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TPixel3</span></td>
+        <td><p>The third pixel format.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Advanced_AotCompilerTools.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Advanced.AotCompilerTools%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/Advanced/AotCompilerTools.cs/#L19" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © Six Labors<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

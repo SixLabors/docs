@@ -104,7 +104,7 @@ phosphors or colorants of a monitor to applications and utilities</p>
         <td><p>This is an optional tag which specifies the laydown order in which colorants
 will be printed on an n-colorant device. The laydown order may be the same
 as the channel generation order listed in the colorantTableTag or the channel
-order of a colour encoding type such as CMYK, in which case this tag is not
+order of a color encoding type such as CMYK, in which case this tag is not
 needed. When this is not the case (for example, ink-towers sometimes use
 the order KCMY), this tag may be used to specify the laydown order of the
 colorants</p>
@@ -153,25 +153,25 @@ this profile is valid. This type is not supported.</p>
       </tr>
       <tr>
         <td id="SixLabors_ImageSharp_MetaData_Profiles_Icc_IccTypeSignature_Lut16">Lut16</td>
-        <td><p>This structure represents a colour transform using tables with 16-bit
+        <td><p>This structure represents a color transform using tables with 16-bit
 precision. This type contains four processing elements: a 3 × 3 matrix
-(which shall be the identity matrix unless the input colour space is
+(which shall be the identity matrix unless the input color space is
 PCSXYZ), a set of one-dimensional input tables, a multi-dimensional
 lookup table, and a set of one-dimensional output tables</p>
 </td>
       </tr>
       <tr>
         <td id="SixLabors_ImageSharp_MetaData_Profiles_Icc_IccTypeSignature_Lut8">Lut8</td>
-        <td><p>This structure represents a colour transform using tables of 8-bit
+        <td><p>This structure represents a color transform using tables of 8-bit
 precision. This type contains four processing elements: a 3 × 3 matrix
-(which shall be the identity matrix unless the input colour space is
+(which shall be the identity matrix unless the input color space is
 PCSXYZ), a set of one-dimensional input tables, a multi-dimensional
 lookup table, and a set of one-dimensional output tables.</p>
 </td>
       </tr>
       <tr>
         <td id="SixLabors_ImageSharp_MetaData_Profiles_Icc_IccTypeSignature_LutAToB">LutAToB</td>
-        <td><p>This structure represents a colour transform. The type contains up
+        <td><p>This structure represents a color transform. The type contains up
 to five processing elements which are stored in the AToBTag tag
 in the following order: a set of one-dimensional curves, a 3 × 3
 matrix with offset terms, a set of one-dimensional curves, a
@@ -181,7 +181,7 @@ output curves</p>
       </tr>
       <tr>
         <td id="SixLabors_ImageSharp_MetaData_Profiles_Icc_IccTypeSignature_LutBToA">LutBToA</td>
-        <td><p>This structure represents a colour transform. The type contains
+        <td><p>This structure represents a color transform. The type contains
 up to five processing elements which are stored in the BToATag
 in the following order: a set of one-dimensional curves, a 3 × 3
 matrix with offset terms, a set of one-dimensional curves, a
@@ -205,7 +205,7 @@ language and region the string is for.</p>
       </tr>
       <tr>
         <td id="SixLabors_ImageSharp_MetaData_Profiles_Icc_IccTypeSignature_MultiProcessElements">MultiProcessElements</td>
-        <td><p>This structure represents a colour transform, containing a sequence
+        <td><p>This structure represents a color transform, containing a sequence
 of processing elements. The processing elements contained in the
 structure are defined in the structure itself, allowing for a flexible
 structure. Currently supported processing elements are: a set of one
@@ -222,15 +222,15 @@ number of times in the structure.</p>
       </tr>
       <tr>
         <td id="SixLabors_ImageSharp_MetaData_Profiles_Icc_IccTypeSignature_NamedColor2">NamedColor2</td>
-        <td><p>This type is a count value and array of structures that provide colour
-coordinates for colour names. For each named colour, a PCS and optional
-device representation of the colour are given. Both representations are
+        <td><p>This type is a count value and array of structures that provide color
+coordinates for color names. For each named color, a PCS and optional
+device representation of the color are given. Both representations are
 16-bit values and PCS values shall be relative colorimetric. The device
-representation corresponds to the header’s &quot;data colour space&quot; field.
+representation corresponds to the header’s &quot;data color space&quot; field.
 This representation should be consistent with the &quot;number of device
 coordinates&quot; field in the namedColor2Type. If this field is 0, device
 coordinates are not provided. The PCS representation corresponds to the
-header&apos;s PCS field. The PCS representation is always provided. Colour
+header&apos;s PCS field. The PCS representation is always provided. Color
 names are fixed-length, 32-byte fields including null termination. In
 order to maintain maximum portability, it is strongly recommended that
 special characters of the 7-bit ASCII set not be used.</p>
@@ -267,7 +267,7 @@ lut16Type, lutAToBType, lutBToAType or multiProcessElementsType tags
 so that corrections can be made for variation in the device without
 having to produce a new profile. The mechanism can be used by applications
 to allow users with relatively inexpensive and readily available
-instrumentation to apply corrections to individual output colour
+instrumentation to apply corrections to individual output color
 channels in order to achieve consistent results.</p>
 </td>
       </tr>
@@ -366,7 +366,7 @@ used for the UCR and BG</p>
                     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_MetaData_Profiles_Icc_IccTypeSignature.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.MetaData.Profiles.Icc.IccTypeSignature%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/SixLabors/ImageSharp/blob/afa2a1bb20a7f8ad7a42c956b96615c23e7eae12/src/ImageSharp/MetaData/Profiles/ICC/Enums/IccTypeSignature.cs/#L9" class="contribution-link">View Source</a>
+                    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/MetaData/Profiles/ICC/Enums/IccTypeSignature.cs/#L9" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
