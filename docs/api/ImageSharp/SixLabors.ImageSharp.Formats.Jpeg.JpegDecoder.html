@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class JpegDecoder
    ">
-    <meta name="generator" content="docfx 2.40.1.0">
+    <meta name="generator" content="docfx 2.43.3.0">
     
     <link rel="shortcut icon" href="../../favicon.png">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -137,12 +137,12 @@
   </span>
   <a id="SixLabors_ImageSharp_Formats_Jpeg_JpegDecoder_Decode_" data-uid="SixLabors.ImageSharp.Formats.Jpeg.JpegDecoder.Decode*"></a>
   <h4 id="SixLabors_ImageSharp_Formats_Jpeg_JpegDecoder_Decode__1_SixLabors_ImageSharp_Configuration_Stream_" data-uid="SixLabors.ImageSharp.Formats.Jpeg.JpegDecoder.Decode``1(SixLabors.ImageSharp.Configuration,Stream)">Decode&lt;TPixel&gt;(Configuration, Stream)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Decodes the image from the specified stream to the <a class="xref" href="SixLabors.ImageSharp.ImageFrame-1.html">ImageFrame&lt;TPixel&gt;</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Image&lt;TPixel&gt; Decode&lt;TPixel&gt;(Configuration configuration, Stream stream)
-
     where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -158,12 +158,14 @@
       <tr>
         <td><a class="xref" href="SixLabors.ImageSharp.Configuration.html">Configuration</a></td>
         <td><span class="parametername">configuration</span></td>
-        <td></td>
+        <td><p>The configuration for the image.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">Stream</span></td>
         <td><span class="parametername">stream</span></td>
-        <td></td>
+        <td><p>The <see cref="!:Stream"></see> containing image data.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -178,7 +180,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image</a>&lt;TPixel&gt;</td>
-        <td></td>
+        <td><p>The decoded image</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -193,7 +196,8 @@
     <tbody>
       <tr>
         <td><span class="parametername">TPixel</span></td>
-        <td></td>
+        <td><p>The pixel format.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -206,7 +210,8 @@
   </span>
   <a id="SixLabors_ImageSharp_Formats_Jpeg_JpegDecoder_Identify_" data-uid="SixLabors.ImageSharp.Formats.Jpeg.JpegDecoder.Identify*"></a>
   <h4 id="SixLabors_ImageSharp_Formats_Jpeg_JpegDecoder_Identify_SixLabors_ImageSharp_Configuration_Stream_" data-uid="SixLabors.ImageSharp.Formats.Jpeg.JpegDecoder.Identify(SixLabors.ImageSharp.Configuration,Stream)">Identify(Configuration, Stream)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Reads the raw image information from the specified stream.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -225,12 +230,14 @@
       <tr>
         <td><a class="xref" href="SixLabors.ImageSharp.Configuration.html">Configuration</a></td>
         <td><span class="parametername">configuration</span></td>
-        <td></td>
+        <td><p>The configuration for the image.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">Stream</span></td>
         <td><span class="parametername">stream</span></td>
-        <td></td>
+        <td><p>The <see cref="!:Stream"></see> containing image data.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -245,7 +252,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="SixLabors.ImageSharp.IImageInfo.html">IImageInfo</a></td>
-        <td></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Formats.PixelTypeInfo.html">PixelTypeInfo</a> object</p>
+</td>
       </tr>
     </tbody>
   </table>

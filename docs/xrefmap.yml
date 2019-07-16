@@ -36217,13 +36217,13 @@ references:
   commentId: T:SixLabors.ImageSharp.Web.Caching.CacheHash
   fullName: SixLabors.ImageSharp.Web.Caching.CacheHash
   nameWithType: CacheHash
-- uid: SixLabors.ImageSharp.Web.Caching.CacheHash.#ctor(Microsoft.Extensions.Options.IOptions{SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions},SixLabors.Memory.MemoryAllocator)
+- uid: SixLabors.ImageSharp.Web.Caching.CacheHash.#ctor(IOptions{SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions},MemoryAllocator)
   name: CacheHash(IOptions<ImageSharpMiddlewareOptions>, MemoryAllocator)
-  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Caching.CacheHash.html#SixLabors_ImageSharp_Web_Caching_CacheHash__ctor_Microsoft_Extensions_Options_IOptions_SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddlewareOptions__SixLabors_Memory_MemoryAllocator_
-  commentId: M:SixLabors.ImageSharp.Web.Caching.CacheHash.#ctor(Microsoft.Extensions.Options.IOptions{SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions},SixLabors.Memory.MemoryAllocator)
+  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Caching.CacheHash.html#SixLabors_ImageSharp_Web_Caching_CacheHash__ctor_IOptions_SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddlewareOptions__MemoryAllocator_
+  commentId: M:SixLabors.ImageSharp.Web.Caching.CacheHash.#ctor(IOptions{SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions},MemoryAllocator)
   name.vb: CacheHash(IOptions(Of ImageSharpMiddlewareOptions), MemoryAllocator)
-  fullName: SixLabors.ImageSharp.Web.Caching.CacheHash.CacheHash(Microsoft.Extensions.Options.IOptions<SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions>, SixLabors.Memory.MemoryAllocator)
-  fullName.vb: SixLabors.ImageSharp.Web.Caching.CacheHash.CacheHash(Microsoft.Extensions.Options.IOptions(Of SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions), SixLabors.Memory.MemoryAllocator)
+  fullName: SixLabors.ImageSharp.Web.Caching.CacheHash.CacheHash(IOptions<SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions>, MemoryAllocator)
+  fullName.vb: SixLabors.ImageSharp.Web.Caching.CacheHash.CacheHash(IOptions(Of SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions), MemoryAllocator)
   nameWithType: CacheHash.CacheHash(IOptions<ImageSharpMiddlewareOptions>, MemoryAllocator)
   nameWithType.vb: CacheHash.CacheHash(IOptions(Of ImageSharpMiddlewareOptions), MemoryAllocator)
 - uid: SixLabors.ImageSharp.Web.Caching.CacheHash.#ctor*
@@ -36284,11 +36284,11 @@ references:
   isSpec: "True"
   fullName: SixLabors.ImageSharp.Web.Caching.IImageCache.GetAsync
   nameWithType: IImageCache.GetAsync
-- uid: SixLabors.ImageSharp.Web.Caching.IImageCache.SetAsync(System.String,System.IO.Stream,SixLabors.ImageSharp.Web.ImageMetaData)
+- uid: SixLabors.ImageSharp.Web.Caching.IImageCache.SetAsync(System.String,Stream,SixLabors.ImageSharp.Web.ImageMetaData)
   name: SetAsync(String, Stream, ImageMetaData)
-  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Caching.IImageCache.html#SixLabors_ImageSharp_Web_Caching_IImageCache_SetAsync_System_String_System_IO_Stream_SixLabors_ImageSharp_Web_ImageMetaData_
-  commentId: M:SixLabors.ImageSharp.Web.Caching.IImageCache.SetAsync(System.String,System.IO.Stream,SixLabors.ImageSharp.Web.ImageMetaData)
-  fullName: SixLabors.ImageSharp.Web.Caching.IImageCache.SetAsync(System.String, System.IO.Stream, SixLabors.ImageSharp.Web.ImageMetaData)
+  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Caching.IImageCache.html#SixLabors_ImageSharp_Web_Caching_IImageCache_SetAsync_System_String_Stream_SixLabors_ImageSharp_Web_ImageMetaData_
+  commentId: M:SixLabors.ImageSharp.Web.Caching.IImageCache.SetAsync(System.String,Stream,SixLabors.ImageSharp.Web.ImageMetaData)
+  fullName: SixLabors.ImageSharp.Web.Caching.IImageCache.SetAsync(System.String, Stream, SixLabors.ImageSharp.Web.ImageMetaData)
   nameWithType: IImageCache.SetAsync(String, Stream, ImageMetaData)
 - uid: SixLabors.ImageSharp.Web.Caching.IImageCache.SetAsync*
   name: SetAsync
@@ -36316,13 +36316,13 @@ references:
   commentId: T:SixLabors.ImageSharp.Web.Caching.PhysicalFileSystemCache
   fullName: SixLabors.ImageSharp.Web.Caching.PhysicalFileSystemCache
   nameWithType: PhysicalFileSystemCache
-- uid: SixLabors.ImageSharp.Web.Caching.PhysicalFileSystemCache.#ctor(Microsoft.AspNetCore.Hosting.IHostingEnvironment,SixLabors.Memory.MemoryAllocator,Microsoft.Extensions.Options.IOptions{SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions})
+- uid: SixLabors.ImageSharp.Web.Caching.PhysicalFileSystemCache.#ctor(IHostingEnvironment,MemoryAllocator,IOptions{SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions})
   name: PhysicalFileSystemCache(IHostingEnvironment, MemoryAllocator, IOptions<ImageSharpMiddlewareOptions>)
-  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Caching.PhysicalFileSystemCache.html#SixLabors_ImageSharp_Web_Caching_PhysicalFileSystemCache__ctor_Microsoft_AspNetCore_Hosting_IHostingEnvironment_SixLabors_Memory_MemoryAllocator_Microsoft_Extensions_Options_IOptions_SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddlewareOptions__
-  commentId: M:SixLabors.ImageSharp.Web.Caching.PhysicalFileSystemCache.#ctor(Microsoft.AspNetCore.Hosting.IHostingEnvironment,SixLabors.Memory.MemoryAllocator,Microsoft.Extensions.Options.IOptions{SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions})
+  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Caching.PhysicalFileSystemCache.html#SixLabors_ImageSharp_Web_Caching_PhysicalFileSystemCache__ctor_IHostingEnvironment_MemoryAllocator_IOptions_SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddlewareOptions__
+  commentId: M:SixLabors.ImageSharp.Web.Caching.PhysicalFileSystemCache.#ctor(IHostingEnvironment,MemoryAllocator,IOptions{SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions})
   name.vb: PhysicalFileSystemCache(IHostingEnvironment, MemoryAllocator, IOptions(Of ImageSharpMiddlewareOptions))
-  fullName: SixLabors.ImageSharp.Web.Caching.PhysicalFileSystemCache.PhysicalFileSystemCache(Microsoft.AspNetCore.Hosting.IHostingEnvironment, SixLabors.Memory.MemoryAllocator, Microsoft.Extensions.Options.IOptions<SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions>)
-  fullName.vb: SixLabors.ImageSharp.Web.Caching.PhysicalFileSystemCache.PhysicalFileSystemCache(Microsoft.AspNetCore.Hosting.IHostingEnvironment, SixLabors.Memory.MemoryAllocator, Microsoft.Extensions.Options.IOptions(Of SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions))
+  fullName: SixLabors.ImageSharp.Web.Caching.PhysicalFileSystemCache.PhysicalFileSystemCache(IHostingEnvironment, MemoryAllocator, IOptions<SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions>)
+  fullName.vb: SixLabors.ImageSharp.Web.Caching.PhysicalFileSystemCache.PhysicalFileSystemCache(IHostingEnvironment, MemoryAllocator, IOptions(Of SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions))
   nameWithType: PhysicalFileSystemCache.PhysicalFileSystemCache(IHostingEnvironment, MemoryAllocator, IOptions<ImageSharpMiddlewareOptions>)
   nameWithType.vb: PhysicalFileSystemCache.PhysicalFileSystemCache(IHostingEnvironment, MemoryAllocator, IOptions(Of ImageSharpMiddlewareOptions))
 - uid: SixLabors.ImageSharp.Web.Caching.PhysicalFileSystemCache.#ctor*
@@ -36363,11 +36363,11 @@ references:
   isSpec: "True"
   fullName: SixLabors.ImageSharp.Web.Caching.PhysicalFileSystemCache.GetAsync
   nameWithType: PhysicalFileSystemCache.GetAsync
-- uid: SixLabors.ImageSharp.Web.Caching.PhysicalFileSystemCache.SetAsync(System.String,System.IO.Stream,SixLabors.ImageSharp.Web.ImageMetaData)
+- uid: SixLabors.ImageSharp.Web.Caching.PhysicalFileSystemCache.SetAsync(System.String,Stream,SixLabors.ImageSharp.Web.ImageMetaData)
   name: SetAsync(String, Stream, ImageMetaData)
-  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Caching.PhysicalFileSystemCache.html#SixLabors_ImageSharp_Web_Caching_PhysicalFileSystemCache_SetAsync_System_String_System_IO_Stream_SixLabors_ImageSharp_Web_ImageMetaData_
-  commentId: M:SixLabors.ImageSharp.Web.Caching.PhysicalFileSystemCache.SetAsync(System.String,System.IO.Stream,SixLabors.ImageSharp.Web.ImageMetaData)
-  fullName: SixLabors.ImageSharp.Web.Caching.PhysicalFileSystemCache.SetAsync(System.String, System.IO.Stream, SixLabors.ImageSharp.Web.ImageMetaData)
+  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Caching.PhysicalFileSystemCache.html#SixLabors_ImageSharp_Web_Caching_PhysicalFileSystemCache_SetAsync_System_String_Stream_SixLabors_ImageSharp_Web_ImageMetaData_
+  commentId: M:SixLabors.ImageSharp.Web.Caching.PhysicalFileSystemCache.SetAsync(System.String,Stream,SixLabors.ImageSharp.Web.ImageMetaData)
+  fullName: SixLabors.ImageSharp.Web.Caching.PhysicalFileSystemCache.SetAsync(System.String, Stream, SixLabors.ImageSharp.Web.ImageMetaData)
   nameWithType: PhysicalFileSystemCache.SetAsync(String, Stream, ImageMetaData)
 - uid: SixLabors.ImageSharp.Web.Caching.PhysicalFileSystemCache.SetAsync*
   name: SetAsync
@@ -36401,11 +36401,11 @@ references:
   commentId: T:SixLabors.ImageSharp.Web.Commands.CommandParser
   fullName: SixLabors.ImageSharp.Web.Commands.CommandParser
   nameWithType: CommandParser
-- uid: SixLabors.ImageSharp.Web.Commands.CommandParser.AddConverter(System.Type,System.Type)
+- uid: SixLabors.ImageSharp.Web.Commands.CommandParser.AddConverter(Type,Type)
   name: AddConverter(Type, Type)
-  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Commands.CommandParser.html#SixLabors_ImageSharp_Web_Commands_CommandParser_AddConverter_System_Type_System_Type_
-  commentId: M:SixLabors.ImageSharp.Web.Commands.CommandParser.AddConverter(System.Type,System.Type)
-  fullName: SixLabors.ImageSharp.Web.Commands.CommandParser.AddConverter(System.Type, System.Type)
+  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Commands.CommandParser.html#SixLabors_ImageSharp_Web_Commands_CommandParser_AddConverter_Type_Type_
+  commentId: M:SixLabors.ImageSharp.Web.Commands.CommandParser.AddConverter(Type,Type)
+  fullName: SixLabors.ImageSharp.Web.Commands.CommandParser.AddConverter(Type, Type)
   nameWithType: CommandParser.AddConverter(Type, Type)
 - uid: SixLabors.ImageSharp.Web.Commands.CommandParser.AddConverter*
   name: AddConverter
@@ -36443,13 +36443,13 @@ references:
   fullName.vb: SixLabors.ImageSharp.Web.Commands.CommandParser.ParseValue(Of T)(System.String)
   nameWithType: CommandParser.ParseValue<T>(String)
   nameWithType.vb: CommandParser.ParseValue(Of T)(String)
-- uid: SixLabors.ImageSharp.Web.Commands.CommandParser.ParseValue``1(System.String,System.Globalization.CultureInfo)
+- uid: SixLabors.ImageSharp.Web.Commands.CommandParser.ParseValue``1(System.String,CultureInfo)
   name: ParseValue<T>(String, CultureInfo)
-  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Commands.CommandParser.html#SixLabors_ImageSharp_Web_Commands_CommandParser_ParseValue__1_System_String_System_Globalization_CultureInfo_
-  commentId: M:SixLabors.ImageSharp.Web.Commands.CommandParser.ParseValue``1(System.String,System.Globalization.CultureInfo)
+  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Commands.CommandParser.html#SixLabors_ImageSharp_Web_Commands_CommandParser_ParseValue__1_System_String_CultureInfo_
+  commentId: M:SixLabors.ImageSharp.Web.Commands.CommandParser.ParseValue``1(System.String,CultureInfo)
   name.vb: ParseValue(Of T)(String, CultureInfo)
-  fullName: SixLabors.ImageSharp.Web.Commands.CommandParser.ParseValue<T>(System.String, System.Globalization.CultureInfo)
-  fullName.vb: SixLabors.ImageSharp.Web.Commands.CommandParser.ParseValue(Of T)(System.String, System.Globalization.CultureInfo)
+  fullName: SixLabors.ImageSharp.Web.Commands.CommandParser.ParseValue<T>(System.String, CultureInfo)
+  fullName.vb: SixLabors.ImageSharp.Web.Commands.CommandParser.ParseValue(Of T)(System.String, CultureInfo)
   nameWithType: CommandParser.ParseValue<T>(String, CultureInfo)
   nameWithType.vb: CommandParser.ParseValue(Of T)(String, CultureInfo)
 - uid: SixLabors.ImageSharp.Web.Commands.Converters
@@ -36464,11 +36464,11 @@ references:
   commentId: T:SixLabors.ImageSharp.Web.Commands.Converters.CommandConverter
   fullName: SixLabors.ImageSharp.Web.Commands.Converters.CommandConverter
   nameWithType: CommandConverter
-- uid: SixLabors.ImageSharp.Web.Commands.Converters.CommandConverter.ConvertFrom(System.Globalization.CultureInfo,System.String,System.Type)
+- uid: SixLabors.ImageSharp.Web.Commands.Converters.CommandConverter.ConvertFrom(CultureInfo,System.String,Type)
   name: ConvertFrom(CultureInfo, String, Type)
-  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Commands.Converters.CommandConverter.html#SixLabors_ImageSharp_Web_Commands_Converters_CommandConverter_ConvertFrom_System_Globalization_CultureInfo_System_String_System_Type_
-  commentId: M:SixLabors.ImageSharp.Web.Commands.Converters.CommandConverter.ConvertFrom(System.Globalization.CultureInfo,System.String,System.Type)
-  fullName: SixLabors.ImageSharp.Web.Commands.Converters.CommandConverter.ConvertFrom(System.Globalization.CultureInfo, System.String, System.Type)
+  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Commands.Converters.CommandConverter.html#SixLabors_ImageSharp_Web_Commands_Converters_CommandConverter_ConvertFrom_CultureInfo_System_String_Type_
+  commentId: M:SixLabors.ImageSharp.Web.Commands.Converters.CommandConverter.ConvertFrom(CultureInfo,System.String,Type)
+  fullName: SixLabors.ImageSharp.Web.Commands.Converters.CommandConverter.ConvertFrom(CultureInfo, System.String, Type)
   nameWithType: CommandConverter.ConvertFrom(CultureInfo, String, Type)
 - uid: SixLabors.ImageSharp.Web.Commands.Converters.CommandConverter.ConvertFrom*
   name: ConvertFrom
@@ -36477,11 +36477,11 @@ references:
   isSpec: "True"
   fullName: SixLabors.ImageSharp.Web.Commands.Converters.CommandConverter.ConvertFrom
   nameWithType: CommandConverter.ConvertFrom
-- uid: SixLabors.ImageSharp.Web.Commands.Converters.CommandConverter.ConvertFromInvariantString(System.String,System.Type)
+- uid: SixLabors.ImageSharp.Web.Commands.Converters.CommandConverter.ConvertFromInvariantString(System.String,Type)
   name: ConvertFromInvariantString(String, Type)
-  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Commands.Converters.CommandConverter.html#SixLabors_ImageSharp_Web_Commands_Converters_CommandConverter_ConvertFromInvariantString_System_String_System_Type_
-  commentId: M:SixLabors.ImageSharp.Web.Commands.Converters.CommandConverter.ConvertFromInvariantString(System.String,System.Type)
-  fullName: SixLabors.ImageSharp.Web.Commands.Converters.CommandConverter.ConvertFromInvariantString(System.String, System.Type)
+  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Commands.Converters.CommandConverter.html#SixLabors_ImageSharp_Web_Commands_Converters_CommandConverter_ConvertFromInvariantString_System_String_Type_
+  commentId: M:SixLabors.ImageSharp.Web.Commands.Converters.CommandConverter.ConvertFromInvariantString(System.String,Type)
+  fullName: SixLabors.ImageSharp.Web.Commands.Converters.CommandConverter.ConvertFromInvariantString(System.String, Type)
   nameWithType: CommandConverter.ConvertFromInvariantString(String, Type)
 - uid: SixLabors.ImageSharp.Web.Commands.Converters.CommandConverter.ConvertFromInvariantString*
   name: ConvertFromInvariantString
@@ -36509,11 +36509,11 @@ references:
   commentId: T:SixLabors.ImageSharp.Web.Commands.Converters.ICommandConverter
   fullName: SixLabors.ImageSharp.Web.Commands.Converters.ICommandConverter
   nameWithType: ICommandConverter
-- uid: SixLabors.ImageSharp.Web.Commands.Converters.ICommandConverter.ConvertFrom(System.Globalization.CultureInfo,System.String,System.Type)
+- uid: SixLabors.ImageSharp.Web.Commands.Converters.ICommandConverter.ConvertFrom(CultureInfo,System.String,Type)
   name: ConvertFrom(CultureInfo, String, Type)
-  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Commands.Converters.ICommandConverter.html#SixLabors_ImageSharp_Web_Commands_Converters_ICommandConverter_ConvertFrom_System_Globalization_CultureInfo_System_String_System_Type_
-  commentId: M:SixLabors.ImageSharp.Web.Commands.Converters.ICommandConverter.ConvertFrom(System.Globalization.CultureInfo,System.String,System.Type)
-  fullName: SixLabors.ImageSharp.Web.Commands.Converters.ICommandConverter.ConvertFrom(System.Globalization.CultureInfo, System.String, System.Type)
+  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Commands.Converters.ICommandConverter.html#SixLabors_ImageSharp_Web_Commands_Converters_ICommandConverter_ConvertFrom_CultureInfo_System_String_Type_
+  commentId: M:SixLabors.ImageSharp.Web.Commands.Converters.ICommandConverter.ConvertFrom(CultureInfo,System.String,Type)
+  fullName: SixLabors.ImageSharp.Web.Commands.Converters.ICommandConverter.ConvertFrom(CultureInfo, System.String, Type)
   nameWithType: ICommandConverter.ConvertFrom(CultureInfo, String, Type)
 - uid: SixLabors.ImageSharp.Web.Commands.Converters.ICommandConverter.ConvertFrom*
   name: ConvertFrom
@@ -36522,11 +36522,11 @@ references:
   isSpec: "True"
   fullName: SixLabors.ImageSharp.Web.Commands.Converters.ICommandConverter.ConvertFrom
   nameWithType: ICommandConverter.ConvertFrom
-- uid: SixLabors.ImageSharp.Web.Commands.Converters.ICommandConverter.ConvertFromInvariantString(System.String,System.Type)
+- uid: SixLabors.ImageSharp.Web.Commands.Converters.ICommandConverter.ConvertFromInvariantString(System.String,Type)
   name: ConvertFromInvariantString(String, Type)
-  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Commands.Converters.ICommandConverter.html#SixLabors_ImageSharp_Web_Commands_Converters_ICommandConverter_ConvertFromInvariantString_System_String_System_Type_
-  commentId: M:SixLabors.ImageSharp.Web.Commands.Converters.ICommandConverter.ConvertFromInvariantString(System.String,System.Type)
-  fullName: SixLabors.ImageSharp.Web.Commands.Converters.ICommandConverter.ConvertFromInvariantString(System.String, System.Type)
+  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Commands.Converters.ICommandConverter.html#SixLabors_ImageSharp_Web_Commands_Converters_ICommandConverter_ConvertFromInvariantString_System_String_Type_
+  commentId: M:SixLabors.ImageSharp.Web.Commands.Converters.ICommandConverter.ConvertFromInvariantString(System.String,Type)
+  fullName: SixLabors.ImageSharp.Web.Commands.Converters.ICommandConverter.ConvertFromInvariantString(System.String, Type)
   nameWithType: ICommandConverter.ConvertFromInvariantString(String, Type)
 - uid: SixLabors.ImageSharp.Web.Commands.Converters.ICommandConverter.ConvertFromInvariantString*
   name: ConvertFromInvariantString
@@ -36548,13 +36548,13 @@ references:
   isSpec: "True"
   fullName: SixLabors.ImageSharp.Web.Commands.DictionaryExtensions.GetValueOrDefault
   nameWithType: DictionaryExtensions.GetValueOrDefault
-- uid: SixLabors.ImageSharp.Web.Commands.DictionaryExtensions.GetValueOrDefault``2(System.Collections.Generic.IDictionary{``1,``0},``1)
+- uid: SixLabors.ImageSharp.Web.Commands.DictionaryExtensions.GetValueOrDefault``2(IDictionary{``1,``0},``1)
   name: GetValueOrDefault<TValue, TKey>(IDictionary<TKey, TValue>, TKey)
-  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Commands.DictionaryExtensions.html#SixLabors_ImageSharp_Web_Commands_DictionaryExtensions_GetValueOrDefault__2_System_Collections_Generic_IDictionary___1___0____1_
-  commentId: M:SixLabors.ImageSharp.Web.Commands.DictionaryExtensions.GetValueOrDefault``2(System.Collections.Generic.IDictionary{``1,``0},``1)
+  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Commands.DictionaryExtensions.html#SixLabors_ImageSharp_Web_Commands_DictionaryExtensions_GetValueOrDefault__2_IDictionary___1___0____1_
+  commentId: M:SixLabors.ImageSharp.Web.Commands.DictionaryExtensions.GetValueOrDefault``2(IDictionary{``1,``0},``1)
   name.vb: GetValueOrDefault(Of TValue, TKey)(IDictionary(Of TKey, TValue), TKey)
-  fullName: SixLabors.ImageSharp.Web.Commands.DictionaryExtensions.GetValueOrDefault<TValue, TKey>(System.Collections.Generic.IDictionary<TKey, TValue>, TKey)
-  fullName.vb: SixLabors.ImageSharp.Web.Commands.DictionaryExtensions.GetValueOrDefault(Of TValue, TKey)(System.Collections.Generic.IDictionary(Of TKey, TValue), TKey)
+  fullName: SixLabors.ImageSharp.Web.Commands.DictionaryExtensions.GetValueOrDefault<TValue, TKey>(IDictionary<TKey, TValue>, TKey)
+  fullName.vb: SixLabors.ImageSharp.Web.Commands.DictionaryExtensions.GetValueOrDefault(Of TValue, TKey)(IDictionary(Of TKey, TValue), TKey)
   nameWithType: DictionaryExtensions.GetValueOrDefault<TValue, TKey>(IDictionary<TKey, TValue>, TKey)
   nameWithType.vb: DictionaryExtensions.GetValueOrDefault(Of TValue, TKey)(IDictionary(Of TKey, TValue), TKey)
 - uid: SixLabors.ImageSharp.Web.Commands.IRequestParser
@@ -36563,11 +36563,11 @@ references:
   commentId: T:SixLabors.ImageSharp.Web.Commands.IRequestParser
   fullName: SixLabors.ImageSharp.Web.Commands.IRequestParser
   nameWithType: IRequestParser
-- uid: SixLabors.ImageSharp.Web.Commands.IRequestParser.ParseRequestCommands(Microsoft.AspNetCore.Http.HttpContext)
+- uid: SixLabors.ImageSharp.Web.Commands.IRequestParser.ParseRequestCommands(HttpContext)
   name: ParseRequestCommands(HttpContext)
-  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Commands.IRequestParser.html#SixLabors_ImageSharp_Web_Commands_IRequestParser_ParseRequestCommands_Microsoft_AspNetCore_Http_HttpContext_
-  commentId: M:SixLabors.ImageSharp.Web.Commands.IRequestParser.ParseRequestCommands(Microsoft.AspNetCore.Http.HttpContext)
-  fullName: SixLabors.ImageSharp.Web.Commands.IRequestParser.ParseRequestCommands(Microsoft.AspNetCore.Http.HttpContext)
+  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Commands.IRequestParser.html#SixLabors_ImageSharp_Web_Commands_IRequestParser_ParseRequestCommands_HttpContext_
+  commentId: M:SixLabors.ImageSharp.Web.Commands.IRequestParser.ParseRequestCommands(HttpContext)
+  fullName: SixLabors.ImageSharp.Web.Commands.IRequestParser.ParseRequestCommands(HttpContext)
   nameWithType: IRequestParser.ParseRequestCommands(HttpContext)
 - uid: SixLabors.ImageSharp.Web.Commands.IRequestParser.ParseRequestCommands*
   name: ParseRequestCommands
@@ -36582,11 +36582,11 @@ references:
   commentId: T:SixLabors.ImageSharp.Web.Commands.QueryCollectionRequestParser
   fullName: SixLabors.ImageSharp.Web.Commands.QueryCollectionRequestParser
   nameWithType: QueryCollectionRequestParser
-- uid: SixLabors.ImageSharp.Web.Commands.QueryCollectionRequestParser.ParseRequestCommands(Microsoft.AspNetCore.Http.HttpContext)
+- uid: SixLabors.ImageSharp.Web.Commands.QueryCollectionRequestParser.ParseRequestCommands(HttpContext)
   name: ParseRequestCommands(HttpContext)
-  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Commands.QueryCollectionRequestParser.html#SixLabors_ImageSharp_Web_Commands_QueryCollectionRequestParser_ParseRequestCommands_Microsoft_AspNetCore_Http_HttpContext_
-  commentId: M:SixLabors.ImageSharp.Web.Commands.QueryCollectionRequestParser.ParseRequestCommands(Microsoft.AspNetCore.Http.HttpContext)
-  fullName: SixLabors.ImageSharp.Web.Commands.QueryCollectionRequestParser.ParseRequestCommands(Microsoft.AspNetCore.Http.HttpContext)
+  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Commands.QueryCollectionRequestParser.html#SixLabors_ImageSharp_Web_Commands_QueryCollectionRequestParser_ParseRequestCommands_HttpContext_
+  commentId: M:SixLabors.ImageSharp.Web.Commands.QueryCollectionRequestParser.ParseRequestCommands(HttpContext)
+  fullName: SixLabors.ImageSharp.Web.Commands.QueryCollectionRequestParser.ParseRequestCommands(HttpContext)
   nameWithType: QueryCollectionRequestParser.ParseRequestCommands(HttpContext)
 - uid: SixLabors.ImageSharp.Web.Commands.QueryCollectionRequestParser.ParseRequestCommands*
   name: ParseRequestCommands
@@ -36607,11 +36607,11 @@ references:
   commentId: T:SixLabors.ImageSharp.Web.DependencyInjection.ApplicationBuilderExtensions
   fullName: SixLabors.ImageSharp.Web.DependencyInjection.ApplicationBuilderExtensions
   nameWithType: ApplicationBuilderExtensions
-- uid: SixLabors.ImageSharp.Web.DependencyInjection.ApplicationBuilderExtensions.UseImageSharp(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+- uid: SixLabors.ImageSharp.Web.DependencyInjection.ApplicationBuilderExtensions.UseImageSharp(IApplicationBuilder)
   name: UseImageSharp(IApplicationBuilder)
-  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.DependencyInjection.ApplicationBuilderExtensions.html#SixLabors_ImageSharp_Web_DependencyInjection_ApplicationBuilderExtensions_UseImageSharp_Microsoft_AspNetCore_Builder_IApplicationBuilder_
-  commentId: M:SixLabors.ImageSharp.Web.DependencyInjection.ApplicationBuilderExtensions.UseImageSharp(Microsoft.AspNetCore.Builder.IApplicationBuilder)
-  fullName: SixLabors.ImageSharp.Web.DependencyInjection.ApplicationBuilderExtensions.UseImageSharp(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.DependencyInjection.ApplicationBuilderExtensions.html#SixLabors_ImageSharp_Web_DependencyInjection_ApplicationBuilderExtensions_UseImageSharp_IApplicationBuilder_
+  commentId: M:SixLabors.ImageSharp.Web.DependencyInjection.ApplicationBuilderExtensions.UseImageSharp(IApplicationBuilder)
+  fullName: SixLabors.ImageSharp.Web.DependencyInjection.ApplicationBuilderExtensions.UseImageSharp(IApplicationBuilder)
   nameWithType: ApplicationBuilderExtensions.UseImageSharp(IApplicationBuilder)
 - uid: SixLabors.ImageSharp.Web.DependencyInjection.ApplicationBuilderExtensions.UseImageSharp*
   name: UseImageSharp
@@ -36683,13 +36683,13 @@ references:
   commentId: T:SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions
   fullName: SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions
   nameWithType: ImageSharpCoreBuilderExtensions
-- uid: SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.AddProcessor(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpCoreBuilder,System.Func{System.IServiceProvider,SixLabors.ImageSharp.Web.Processors.IImageWebProcessor})
+- uid: SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.AddProcessor(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpCoreBuilder,Func{IServiceProvider,SixLabors.ImageSharp.Web.Processors.IImageWebProcessor})
   name: AddProcessor(IImageSharpCoreBuilder, Func<IServiceProvider, IImageWebProcessor>)
-  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.html#SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpCoreBuilderExtensions_AddProcessor_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpCoreBuilder_System_Func_System_IServiceProvider_SixLabors_ImageSharp_Web_Processors_IImageWebProcessor__
-  commentId: M:SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.AddProcessor(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpCoreBuilder,System.Func{System.IServiceProvider,SixLabors.ImageSharp.Web.Processors.IImageWebProcessor})
+  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.html#SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpCoreBuilderExtensions_AddProcessor_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpCoreBuilder_Func_IServiceProvider_SixLabors_ImageSharp_Web_Processors_IImageWebProcessor__
+  commentId: M:SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.AddProcessor(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpCoreBuilder,Func{IServiceProvider,SixLabors.ImageSharp.Web.Processors.IImageWebProcessor})
   name.vb: AddProcessor(IImageSharpCoreBuilder, Func(Of IServiceProvider, IImageWebProcessor))
-  fullName: SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.AddProcessor(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpCoreBuilder, System.Func<System.IServiceProvider, SixLabors.ImageSharp.Web.Processors.IImageWebProcessor>)
-  fullName.vb: SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.AddProcessor(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpCoreBuilder, System.Func(Of System.IServiceProvider, SixLabors.ImageSharp.Web.Processors.IImageWebProcessor))
+  fullName: SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.AddProcessor(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpCoreBuilder, Func<IServiceProvider, SixLabors.ImageSharp.Web.Processors.IImageWebProcessor>)
+  fullName.vb: SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.AddProcessor(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpCoreBuilder, Func(Of IServiceProvider, SixLabors.ImageSharp.Web.Processors.IImageWebProcessor))
   nameWithType: ImageSharpCoreBuilderExtensions.AddProcessor(IImageSharpCoreBuilder, Func<IServiceProvider, IImageWebProcessor>)
   nameWithType.vb: ImageSharpCoreBuilderExtensions.AddProcessor(IImageSharpCoreBuilder, Func(Of IServiceProvider, IImageWebProcessor))
 - uid: SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.AddProcessor*
@@ -36708,13 +36708,13 @@ references:
   fullName.vb: SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.AddProcessor(Of TProcessor)(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpCoreBuilder)
   nameWithType: ImageSharpCoreBuilderExtensions.AddProcessor<TProcessor>(IImageSharpCoreBuilder)
   nameWithType.vb: ImageSharpCoreBuilderExtensions.AddProcessor(Of TProcessor)(IImageSharpCoreBuilder)
-- uid: SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.AddProvider(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpCoreBuilder,System.Func{System.IServiceProvider,SixLabors.ImageSharp.Web.Providers.IImageProvider})
+- uid: SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.AddProvider(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpCoreBuilder,Func{IServiceProvider,SixLabors.ImageSharp.Web.Providers.IImageProvider})
   name: AddProvider(IImageSharpCoreBuilder, Func<IServiceProvider, IImageProvider>)
-  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.html#SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpCoreBuilderExtensions_AddProvider_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpCoreBuilder_System_Func_System_IServiceProvider_SixLabors_ImageSharp_Web_Providers_IImageProvider__
-  commentId: M:SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.AddProvider(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpCoreBuilder,System.Func{System.IServiceProvider,SixLabors.ImageSharp.Web.Providers.IImageProvider})
+  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.html#SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpCoreBuilderExtensions_AddProvider_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpCoreBuilder_Func_IServiceProvider_SixLabors_ImageSharp_Web_Providers_IImageProvider__
+  commentId: M:SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.AddProvider(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpCoreBuilder,Func{IServiceProvider,SixLabors.ImageSharp.Web.Providers.IImageProvider})
   name.vb: AddProvider(IImageSharpCoreBuilder, Func(Of IServiceProvider, IImageProvider))
-  fullName: SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.AddProvider(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpCoreBuilder, System.Func<System.IServiceProvider, SixLabors.ImageSharp.Web.Providers.IImageProvider>)
-  fullName.vb: SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.AddProvider(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpCoreBuilder, System.Func(Of System.IServiceProvider, SixLabors.ImageSharp.Web.Providers.IImageProvider))
+  fullName: SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.AddProvider(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpCoreBuilder, Func<IServiceProvider, SixLabors.ImageSharp.Web.Providers.IImageProvider>)
+  fullName.vb: SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.AddProvider(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpCoreBuilder, Func(Of IServiceProvider, SixLabors.ImageSharp.Web.Providers.IImageProvider))
   nameWithType: ImageSharpCoreBuilderExtensions.AddProvider(IImageSharpCoreBuilder, Func<IServiceProvider, IImageProvider>)
   nameWithType.vb: ImageSharpCoreBuilderExtensions.AddProvider(IImageSharpCoreBuilder, Func(Of IServiceProvider, IImageProvider))
 - uid: SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.AddProvider*
@@ -36733,13 +36733,13 @@ references:
   fullName.vb: SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.AddProvider(Of TProvider)(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpCoreBuilder)
   nameWithType: ImageSharpCoreBuilderExtensions.AddProvider<TProvider>(IImageSharpCoreBuilder)
   nameWithType.vb: ImageSharpCoreBuilderExtensions.AddProvider(Of TProvider)(IImageSharpCoreBuilder)
-- uid: SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.SetCache(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpCoreBuilder,System.Func{System.IServiceProvider,SixLabors.ImageSharp.Web.Caching.IImageCache})
+- uid: SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.SetCache(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpCoreBuilder,Func{IServiceProvider,SixLabors.ImageSharp.Web.Caching.IImageCache})
   name: SetCache(IImageSharpCoreBuilder, Func<IServiceProvider, IImageCache>)
-  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.html#SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpCoreBuilderExtensions_SetCache_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpCoreBuilder_System_Func_System_IServiceProvider_SixLabors_ImageSharp_Web_Caching_IImageCache__
-  commentId: M:SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.SetCache(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpCoreBuilder,System.Func{System.IServiceProvider,SixLabors.ImageSharp.Web.Caching.IImageCache})
+  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.html#SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpCoreBuilderExtensions_SetCache_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpCoreBuilder_Func_IServiceProvider_SixLabors_ImageSharp_Web_Caching_IImageCache__
+  commentId: M:SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.SetCache(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpCoreBuilder,Func{IServiceProvider,SixLabors.ImageSharp.Web.Caching.IImageCache})
   name.vb: SetCache(IImageSharpCoreBuilder, Func(Of IServiceProvider, IImageCache))
-  fullName: SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.SetCache(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpCoreBuilder, System.Func<System.IServiceProvider, SixLabors.ImageSharp.Web.Caching.IImageCache>)
-  fullName.vb: SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.SetCache(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpCoreBuilder, System.Func(Of System.IServiceProvider, SixLabors.ImageSharp.Web.Caching.IImageCache))
+  fullName: SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.SetCache(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpCoreBuilder, Func<IServiceProvider, SixLabors.ImageSharp.Web.Caching.IImageCache>)
+  fullName.vb: SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.SetCache(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpCoreBuilder, Func(Of IServiceProvider, SixLabors.ImageSharp.Web.Caching.IImageCache))
   nameWithType: ImageSharpCoreBuilderExtensions.SetCache(IImageSharpCoreBuilder, Func<IServiceProvider, IImageCache>)
   nameWithType.vb: ImageSharpCoreBuilderExtensions.SetCache(IImageSharpCoreBuilder, Func(Of IServiceProvider, IImageCache))
 - uid: SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.SetCache*
@@ -36758,13 +36758,13 @@ references:
   fullName.vb: SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.SetCache(Of TCache)(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpCoreBuilder)
   nameWithType: ImageSharpCoreBuilderExtensions.SetCache<TCache>(IImageSharpCoreBuilder)
   nameWithType.vb: ImageSharpCoreBuilderExtensions.SetCache(Of TCache)(IImageSharpCoreBuilder)
-- uid: SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.SetCacheHash(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpCoreBuilder,System.Func{System.IServiceProvider,SixLabors.ImageSharp.Web.Caching.ICacheHash})
+- uid: SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.SetCacheHash(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpCoreBuilder,Func{IServiceProvider,SixLabors.ImageSharp.Web.Caching.ICacheHash})
   name: SetCacheHash(IImageSharpCoreBuilder, Func<IServiceProvider, ICacheHash>)
-  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.html#SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpCoreBuilderExtensions_SetCacheHash_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpCoreBuilder_System_Func_System_IServiceProvider_SixLabors_ImageSharp_Web_Caching_ICacheHash__
-  commentId: M:SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.SetCacheHash(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpCoreBuilder,System.Func{System.IServiceProvider,SixLabors.ImageSharp.Web.Caching.ICacheHash})
+  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.html#SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpCoreBuilderExtensions_SetCacheHash_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpCoreBuilder_Func_IServiceProvider_SixLabors_ImageSharp_Web_Caching_ICacheHash__
+  commentId: M:SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.SetCacheHash(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpCoreBuilder,Func{IServiceProvider,SixLabors.ImageSharp.Web.Caching.ICacheHash})
   name.vb: SetCacheHash(IImageSharpCoreBuilder, Func(Of IServiceProvider, ICacheHash))
-  fullName: SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.SetCacheHash(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpCoreBuilder, System.Func<System.IServiceProvider, SixLabors.ImageSharp.Web.Caching.ICacheHash>)
-  fullName.vb: SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.SetCacheHash(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpCoreBuilder, System.Func(Of System.IServiceProvider, SixLabors.ImageSharp.Web.Caching.ICacheHash))
+  fullName: SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.SetCacheHash(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpCoreBuilder, Func<IServiceProvider, SixLabors.ImageSharp.Web.Caching.ICacheHash>)
+  fullName.vb: SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.SetCacheHash(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpCoreBuilder, Func(Of IServiceProvider, SixLabors.ImageSharp.Web.Caching.ICacheHash))
   nameWithType: ImageSharpCoreBuilderExtensions.SetCacheHash(IImageSharpCoreBuilder, Func<IServiceProvider, ICacheHash>)
   nameWithType.vb: ImageSharpCoreBuilderExtensions.SetCacheHash(IImageSharpCoreBuilder, Func(Of IServiceProvider, ICacheHash))
 - uid: SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.SetCacheHash*
@@ -36783,13 +36783,13 @@ references:
   fullName.vb: SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.SetCacheHash(Of TCacheHash)(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpCoreBuilder)
   nameWithType: ImageSharpCoreBuilderExtensions.SetCacheHash<TCacheHash>(IImageSharpCoreBuilder)
   nameWithType.vb: ImageSharpCoreBuilderExtensions.SetCacheHash(Of TCacheHash)(IImageSharpCoreBuilder)
-- uid: SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.SetMemoryAllocator(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpCoreBuilder,System.Func{System.IServiceProvider,SixLabors.Memory.MemoryAllocator})
+- uid: SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.SetMemoryAllocator(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpCoreBuilder,Func{IServiceProvider,MemoryAllocator})
   name: SetMemoryAllocator(IImageSharpCoreBuilder, Func<IServiceProvider, MemoryAllocator>)
-  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.html#SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpCoreBuilderExtensions_SetMemoryAllocator_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpCoreBuilder_System_Func_System_IServiceProvider_SixLabors_Memory_MemoryAllocator__
-  commentId: M:SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.SetMemoryAllocator(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpCoreBuilder,System.Func{System.IServiceProvider,SixLabors.Memory.MemoryAllocator})
+  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.html#SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpCoreBuilderExtensions_SetMemoryAllocator_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpCoreBuilder_Func_IServiceProvider_MemoryAllocator__
+  commentId: M:SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.SetMemoryAllocator(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpCoreBuilder,Func{IServiceProvider,MemoryAllocator})
   name.vb: SetMemoryAllocator(IImageSharpCoreBuilder, Func(Of IServiceProvider, MemoryAllocator))
-  fullName: SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.SetMemoryAllocator(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpCoreBuilder, System.Func<System.IServiceProvider, SixLabors.Memory.MemoryAllocator>)
-  fullName.vb: SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.SetMemoryAllocator(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpCoreBuilder, System.Func(Of System.IServiceProvider, SixLabors.Memory.MemoryAllocator))
+  fullName: SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.SetMemoryAllocator(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpCoreBuilder, Func<IServiceProvider, MemoryAllocator>)
+  fullName.vb: SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.SetMemoryAllocator(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpCoreBuilder, Func(Of IServiceProvider, MemoryAllocator))
   nameWithType: ImageSharpCoreBuilderExtensions.SetMemoryAllocator(IImageSharpCoreBuilder, Func<IServiceProvider, MemoryAllocator>)
   nameWithType.vb: ImageSharpCoreBuilderExtensions.SetMemoryAllocator(IImageSharpCoreBuilder, Func(Of IServiceProvider, MemoryAllocator))
 - uid: SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.SetMemoryAllocator*
@@ -36821,13 +36821,13 @@ references:
   isSpec: "True"
   fullName: SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.SetMemoryAllocatorFromMiddlewareOptions
   nameWithType: ImageSharpCoreBuilderExtensions.SetMemoryAllocatorFromMiddlewareOptions
-- uid: SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.SetRequestParser(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpCoreBuilder,System.Func{System.IServiceProvider,SixLabors.ImageSharp.Web.Commands.IRequestParser})
+- uid: SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.SetRequestParser(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpCoreBuilder,Func{IServiceProvider,SixLabors.ImageSharp.Web.Commands.IRequestParser})
   name: SetRequestParser(IImageSharpCoreBuilder, Func<IServiceProvider, IRequestParser>)
-  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.html#SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpCoreBuilderExtensions_SetRequestParser_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpCoreBuilder_System_Func_System_IServiceProvider_SixLabors_ImageSharp_Web_Commands_IRequestParser__
-  commentId: M:SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.SetRequestParser(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpCoreBuilder,System.Func{System.IServiceProvider,SixLabors.ImageSharp.Web.Commands.IRequestParser})
+  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.html#SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpCoreBuilderExtensions_SetRequestParser_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpCoreBuilder_Func_IServiceProvider_SixLabors_ImageSharp_Web_Commands_IRequestParser__
+  commentId: M:SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.SetRequestParser(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpCoreBuilder,Func{IServiceProvider,SixLabors.ImageSharp.Web.Commands.IRequestParser})
   name.vb: SetRequestParser(IImageSharpCoreBuilder, Func(Of IServiceProvider, IRequestParser))
-  fullName: SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.SetRequestParser(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpCoreBuilder, System.Func<System.IServiceProvider, SixLabors.ImageSharp.Web.Commands.IRequestParser>)
-  fullName.vb: SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.SetRequestParser(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpCoreBuilder, System.Func(Of System.IServiceProvider, SixLabors.ImageSharp.Web.Commands.IRequestParser))
+  fullName: SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.SetRequestParser(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpCoreBuilder, Func<IServiceProvider, SixLabors.ImageSharp.Web.Commands.IRequestParser>)
+  fullName.vb: SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.SetRequestParser(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpCoreBuilder, Func(Of IServiceProvider, SixLabors.ImageSharp.Web.Commands.IRequestParser))
   nameWithType: ImageSharpCoreBuilderExtensions.SetRequestParser(IImageSharpCoreBuilder, Func<IServiceProvider, IRequestParser>)
   nameWithType.vb: ImageSharpCoreBuilderExtensions.SetRequestParser(IImageSharpCoreBuilder, Func(Of IServiceProvider, IRequestParser))
 - uid: SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpCoreBuilderExtensions.SetRequestParser*
@@ -36852,19 +36852,19 @@ references:
   commentId: T:SixLabors.ImageSharp.Web.DependencyInjection.ServiceCollectionExtensions
   fullName: SixLabors.ImageSharp.Web.DependencyInjection.ServiceCollectionExtensions
   nameWithType: ServiceCollectionExtensions
-- uid: SixLabors.ImageSharp.Web.DependencyInjection.ServiceCollectionExtensions.AddImageSharp(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+- uid: SixLabors.ImageSharp.Web.DependencyInjection.ServiceCollectionExtensions.AddImageSharp(IServiceCollection)
   name: AddImageSharp(IServiceCollection)
-  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.DependencyInjection.ServiceCollectionExtensions.html#SixLabors_ImageSharp_Web_DependencyInjection_ServiceCollectionExtensions_AddImageSharp_Microsoft_Extensions_DependencyInjection_IServiceCollection_
-  commentId: M:SixLabors.ImageSharp.Web.DependencyInjection.ServiceCollectionExtensions.AddImageSharp(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  fullName: SixLabors.ImageSharp.Web.DependencyInjection.ServiceCollectionExtensions.AddImageSharp(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.DependencyInjection.ServiceCollectionExtensions.html#SixLabors_ImageSharp_Web_DependencyInjection_ServiceCollectionExtensions_AddImageSharp_IServiceCollection_
+  commentId: M:SixLabors.ImageSharp.Web.DependencyInjection.ServiceCollectionExtensions.AddImageSharp(IServiceCollection)
+  fullName: SixLabors.ImageSharp.Web.DependencyInjection.ServiceCollectionExtensions.AddImageSharp(IServiceCollection)
   nameWithType: ServiceCollectionExtensions.AddImageSharp(IServiceCollection)
-- uid: SixLabors.ImageSharp.Web.DependencyInjection.ServiceCollectionExtensions.AddImageSharp(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions})
+- uid: SixLabors.ImageSharp.Web.DependencyInjection.ServiceCollectionExtensions.AddImageSharp(IServiceCollection,Action{SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions})
   name: AddImageSharp(IServiceCollection, Action<ImageSharpMiddlewareOptions>)
-  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.DependencyInjection.ServiceCollectionExtensions.html#SixLabors_ImageSharp_Web_DependencyInjection_ServiceCollectionExtensions_AddImageSharp_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddlewareOptions__
-  commentId: M:SixLabors.ImageSharp.Web.DependencyInjection.ServiceCollectionExtensions.AddImageSharp(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions})
+  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.DependencyInjection.ServiceCollectionExtensions.html#SixLabors_ImageSharp_Web_DependencyInjection_ServiceCollectionExtensions_AddImageSharp_IServiceCollection_Action_SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddlewareOptions__
+  commentId: M:SixLabors.ImageSharp.Web.DependencyInjection.ServiceCollectionExtensions.AddImageSharp(IServiceCollection,Action{SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions})
   name.vb: AddImageSharp(IServiceCollection, Action(Of ImageSharpMiddlewareOptions))
-  fullName: SixLabors.ImageSharp.Web.DependencyInjection.ServiceCollectionExtensions.AddImageSharp(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions>)
-  fullName.vb: SixLabors.ImageSharp.Web.DependencyInjection.ServiceCollectionExtensions.AddImageSharp(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions))
+  fullName: SixLabors.ImageSharp.Web.DependencyInjection.ServiceCollectionExtensions.AddImageSharp(IServiceCollection, Action<SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions>)
+  fullName.vb: SixLabors.ImageSharp.Web.DependencyInjection.ServiceCollectionExtensions.AddImageSharp(IServiceCollection, Action(Of SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions))
   nameWithType: ServiceCollectionExtensions.AddImageSharp(IServiceCollection, Action<ImageSharpMiddlewareOptions>)
   nameWithType.vb: ServiceCollectionExtensions.AddImageSharp(IServiceCollection, Action(Of ImageSharpMiddlewareOptions))
 - uid: SixLabors.ImageSharp.Web.DependencyInjection.ServiceCollectionExtensions.AddImageSharp*
@@ -36874,19 +36874,19 @@ references:
   isSpec: "True"
   fullName: SixLabors.ImageSharp.Web.DependencyInjection.ServiceCollectionExtensions.AddImageSharp
   nameWithType: ServiceCollectionExtensions.AddImageSharp
-- uid: SixLabors.ImageSharp.Web.DependencyInjection.ServiceCollectionExtensions.AddImageSharpCore(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+- uid: SixLabors.ImageSharp.Web.DependencyInjection.ServiceCollectionExtensions.AddImageSharpCore(IServiceCollection)
   name: AddImageSharpCore(IServiceCollection)
-  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.DependencyInjection.ServiceCollectionExtensions.html#SixLabors_ImageSharp_Web_DependencyInjection_ServiceCollectionExtensions_AddImageSharpCore_Microsoft_Extensions_DependencyInjection_IServiceCollection_
-  commentId: M:SixLabors.ImageSharp.Web.DependencyInjection.ServiceCollectionExtensions.AddImageSharpCore(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  fullName: SixLabors.ImageSharp.Web.DependencyInjection.ServiceCollectionExtensions.AddImageSharpCore(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.DependencyInjection.ServiceCollectionExtensions.html#SixLabors_ImageSharp_Web_DependencyInjection_ServiceCollectionExtensions_AddImageSharpCore_IServiceCollection_
+  commentId: M:SixLabors.ImageSharp.Web.DependencyInjection.ServiceCollectionExtensions.AddImageSharpCore(IServiceCollection)
+  fullName: SixLabors.ImageSharp.Web.DependencyInjection.ServiceCollectionExtensions.AddImageSharpCore(IServiceCollection)
   nameWithType: ServiceCollectionExtensions.AddImageSharpCore(IServiceCollection)
-- uid: SixLabors.ImageSharp.Web.DependencyInjection.ServiceCollectionExtensions.AddImageSharpCore(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions})
+- uid: SixLabors.ImageSharp.Web.DependencyInjection.ServiceCollectionExtensions.AddImageSharpCore(IServiceCollection,Action{SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions})
   name: AddImageSharpCore(IServiceCollection, Action<ImageSharpMiddlewareOptions>)
-  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.DependencyInjection.ServiceCollectionExtensions.html#SixLabors_ImageSharp_Web_DependencyInjection_ServiceCollectionExtensions_AddImageSharpCore_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddlewareOptions__
-  commentId: M:SixLabors.ImageSharp.Web.DependencyInjection.ServiceCollectionExtensions.AddImageSharpCore(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions})
+  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.DependencyInjection.ServiceCollectionExtensions.html#SixLabors_ImageSharp_Web_DependencyInjection_ServiceCollectionExtensions_AddImageSharpCore_IServiceCollection_Action_SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddlewareOptions__
+  commentId: M:SixLabors.ImageSharp.Web.DependencyInjection.ServiceCollectionExtensions.AddImageSharpCore(IServiceCollection,Action{SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions})
   name.vb: AddImageSharpCore(IServiceCollection, Action(Of ImageSharpMiddlewareOptions))
-  fullName: SixLabors.ImageSharp.Web.DependencyInjection.ServiceCollectionExtensions.AddImageSharpCore(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions>)
-  fullName.vb: SixLabors.ImageSharp.Web.DependencyInjection.ServiceCollectionExtensions.AddImageSharpCore(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions))
+  fullName: SixLabors.ImageSharp.Web.DependencyInjection.ServiceCollectionExtensions.AddImageSharpCore(IServiceCollection, Action<SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions>)
+  fullName.vb: SixLabors.ImageSharp.Web.DependencyInjection.ServiceCollectionExtensions.AddImageSharpCore(IServiceCollection, Action(Of SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions))
   nameWithType: ServiceCollectionExtensions.AddImageSharpCore(IServiceCollection, Action<ImageSharpMiddlewareOptions>)
   nameWithType.vb: ServiceCollectionExtensions.AddImageSharpCore(IServiceCollection, Action(Of ImageSharpMiddlewareOptions))
 - uid: SixLabors.ImageSharp.Web.DependencyInjection.ServiceCollectionExtensions.AddImageSharpCore*
@@ -36902,13 +36902,13 @@ references:
   commentId: T:SixLabors.ImageSharp.Web.FormattedImage
   fullName: SixLabors.ImageSharp.Web.FormattedImage
   nameWithType: FormattedImage
-- uid: SixLabors.ImageSharp.Web.FormattedImage.#ctor(SixLabors.ImageSharp.Image{SixLabors.ImageSharp.PixelFormats.Rgba32},SixLabors.ImageSharp.Formats.IImageFormat)
+- uid: SixLabors.ImageSharp.Web.FormattedImage.#ctor(Image{Rgba32},IImageFormat)
   name: FormattedImage(Image<Rgba32>, IImageFormat)
-  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.FormattedImage.html#SixLabors_ImageSharp_Web_FormattedImage__ctor_SixLabors_ImageSharp_Image_SixLabors_ImageSharp_PixelFormats_Rgba32__SixLabors_ImageSharp_Formats_IImageFormat_
-  commentId: M:SixLabors.ImageSharp.Web.FormattedImage.#ctor(SixLabors.ImageSharp.Image{SixLabors.ImageSharp.PixelFormats.Rgba32},SixLabors.ImageSharp.Formats.IImageFormat)
+  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.FormattedImage.html#SixLabors_ImageSharp_Web_FormattedImage__ctor_Image_Rgba32__IImageFormat_
+  commentId: M:SixLabors.ImageSharp.Web.FormattedImage.#ctor(Image{Rgba32},IImageFormat)
   name.vb: FormattedImage(Image(Of Rgba32), IImageFormat)
-  fullName: SixLabors.ImageSharp.Web.FormattedImage.FormattedImage(SixLabors.ImageSharp.Image<SixLabors.ImageSharp.PixelFormats.Rgba32>, SixLabors.ImageSharp.Formats.IImageFormat)
-  fullName.vb: SixLabors.ImageSharp.Web.FormattedImage.FormattedImage(SixLabors.ImageSharp.Image(Of SixLabors.ImageSharp.PixelFormats.Rgba32), SixLabors.ImageSharp.Formats.IImageFormat)
+  fullName: SixLabors.ImageSharp.Web.FormattedImage.FormattedImage(Image<Rgba32>, IImageFormat)
+  fullName.vb: SixLabors.ImageSharp.Web.FormattedImage.FormattedImage(Image(Of Rgba32), IImageFormat)
   nameWithType: FormattedImage.FormattedImage(Image<Rgba32>, IImageFormat)
   nameWithType.vb: FormattedImage.FormattedImage(Image(Of Rgba32), IImageFormat)
 - uid: SixLabors.ImageSharp.Web.FormattedImage.#ctor*
@@ -36957,11 +36957,11 @@ references:
   isSpec: "True"
   fullName: SixLabors.ImageSharp.Web.FormattedImage.Image
   nameWithType: FormattedImage.Image
-- uid: SixLabors.ImageSharp.Web.FormattedImage.Load(SixLabors.ImageSharp.Configuration,System.IO.Stream)
+- uid: SixLabors.ImageSharp.Web.FormattedImage.Load(Configuration,Stream)
   name: Load(Configuration, Stream)
-  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.FormattedImage.html#SixLabors_ImageSharp_Web_FormattedImage_Load_SixLabors_ImageSharp_Configuration_System_IO_Stream_
-  commentId: M:SixLabors.ImageSharp.Web.FormattedImage.Load(SixLabors.ImageSharp.Configuration,System.IO.Stream)
-  fullName: SixLabors.ImageSharp.Web.FormattedImage.Load(SixLabors.ImageSharp.Configuration, System.IO.Stream)
+  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.FormattedImage.html#SixLabors_ImageSharp_Web_FormattedImage_Load_Configuration_Stream_
+  commentId: M:SixLabors.ImageSharp.Web.FormattedImage.Load(Configuration,Stream)
+  fullName: SixLabors.ImageSharp.Web.FormattedImage.Load(Configuration, Stream)
   nameWithType: FormattedImage.Load(Configuration, Stream)
 - uid: SixLabors.ImageSharp.Web.FormattedImage.Load*
   name: Load
@@ -36970,11 +36970,11 @@ references:
   isSpec: "True"
   fullName: SixLabors.ImageSharp.Web.FormattedImage.Load
   nameWithType: FormattedImage.Load
-- uid: SixLabors.ImageSharp.Web.FormattedImage.Save(System.IO.Stream)
+- uid: SixLabors.ImageSharp.Web.FormattedImage.Save(Stream)
   name: Save(Stream)
-  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.FormattedImage.html#SixLabors_ImageSharp_Web_FormattedImage_Save_System_IO_Stream_
-  commentId: M:SixLabors.ImageSharp.Web.FormattedImage.Save(System.IO.Stream)
-  fullName: SixLabors.ImageSharp.Web.FormattedImage.Save(System.IO.Stream)
+  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.FormattedImage.html#SixLabors_ImageSharp_Web_FormattedImage_Save_Stream_
+  commentId: M:SixLabors.ImageSharp.Web.FormattedImage.Save(Stream)
+  fullName: SixLabors.ImageSharp.Web.FormattedImage.Save(Stream)
   nameWithType: FormattedImage.Save(Stream)
 - uid: SixLabors.ImageSharp.Web.FormattedImage.Save*
   name: Save
@@ -36995,11 +36995,11 @@ references:
   commentId: T:SixLabors.ImageSharp.Web.Helpers.FormatUtilities
   fullName: SixLabors.ImageSharp.Web.Helpers.FormatUtilities
   nameWithType: FormatUtilities
-- uid: SixLabors.ImageSharp.Web.Helpers.FormatUtilities.#ctor(SixLabors.ImageSharp.Configuration)
+- uid: SixLabors.ImageSharp.Web.Helpers.FormatUtilities.#ctor(Configuration)
   name: FormatUtilities(Configuration)
-  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Helpers.FormatUtilities.html#SixLabors_ImageSharp_Web_Helpers_FormatUtilities__ctor_SixLabors_ImageSharp_Configuration_
-  commentId: M:SixLabors.ImageSharp.Web.Helpers.FormatUtilities.#ctor(SixLabors.ImageSharp.Configuration)
-  fullName: SixLabors.ImageSharp.Web.Helpers.FormatUtilities.FormatUtilities(SixLabors.ImageSharp.Configuration)
+  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Helpers.FormatUtilities.html#SixLabors_ImageSharp_Web_Helpers_FormatUtilities__ctor_Configuration_
+  commentId: M:SixLabors.ImageSharp.Web.Helpers.FormatUtilities.#ctor(Configuration)
+  fullName: SixLabors.ImageSharp.Web.Helpers.FormatUtilities.FormatUtilities(Configuration)
   nameWithType: FormatUtilities.FormatUtilities(Configuration)
 - uid: SixLabors.ImageSharp.Web.Helpers.FormatUtilities.#ctor*
   name: FormatUtilities
@@ -37040,23 +37040,23 @@ references:
   commentId: T:SixLabors.ImageSharp.Web.ImageMetaData
   fullName: SixLabors.ImageSharp.Web.ImageMetaData
   nameWithType: ImageMetaData
-- uid: SixLabors.ImageSharp.Web.ImageMetaData.#ctor(System.DateTime)
+- uid: SixLabors.ImageSharp.Web.ImageMetaData.#ctor(DateTime)
   name: ImageMetaData(DateTime)
-  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.ImageMetaData.html#SixLabors_ImageSharp_Web_ImageMetaData__ctor_System_DateTime_
-  commentId: M:SixLabors.ImageSharp.Web.ImageMetaData.#ctor(System.DateTime)
-  fullName: SixLabors.ImageSharp.Web.ImageMetaData.ImageMetaData(System.DateTime)
+  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.ImageMetaData.html#SixLabors_ImageSharp_Web_ImageMetaData__ctor_DateTime_
+  commentId: M:SixLabors.ImageSharp.Web.ImageMetaData.#ctor(DateTime)
+  fullName: SixLabors.ImageSharp.Web.ImageMetaData.ImageMetaData(DateTime)
   nameWithType: ImageMetaData.ImageMetaData(DateTime)
-- uid: SixLabors.ImageSharp.Web.ImageMetaData.#ctor(System.DateTime,System.String)
+- uid: SixLabors.ImageSharp.Web.ImageMetaData.#ctor(DateTime,System.String)
   name: ImageMetaData(DateTime, String)
-  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.ImageMetaData.html#SixLabors_ImageSharp_Web_ImageMetaData__ctor_System_DateTime_System_String_
-  commentId: M:SixLabors.ImageSharp.Web.ImageMetaData.#ctor(System.DateTime,System.String)
-  fullName: SixLabors.ImageSharp.Web.ImageMetaData.ImageMetaData(System.DateTime, System.String)
+  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.ImageMetaData.html#SixLabors_ImageSharp_Web_ImageMetaData__ctor_DateTime_System_String_
+  commentId: M:SixLabors.ImageSharp.Web.ImageMetaData.#ctor(DateTime,System.String)
+  fullName: SixLabors.ImageSharp.Web.ImageMetaData.ImageMetaData(DateTime, System.String)
   nameWithType: ImageMetaData.ImageMetaData(DateTime, String)
-- uid: SixLabors.ImageSharp.Web.ImageMetaData.#ctor(System.DateTime,System.String,System.TimeSpan)
+- uid: SixLabors.ImageSharp.Web.ImageMetaData.#ctor(DateTime,System.String,TimeSpan)
   name: ImageMetaData(DateTime, String, TimeSpan)
-  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.ImageMetaData.html#SixLabors_ImageSharp_Web_ImageMetaData__ctor_System_DateTime_System_String_System_TimeSpan_
-  commentId: M:SixLabors.ImageSharp.Web.ImageMetaData.#ctor(System.DateTime,System.String,System.TimeSpan)
-  fullName: SixLabors.ImageSharp.Web.ImageMetaData.ImageMetaData(System.DateTime, System.String, System.TimeSpan)
+  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.ImageMetaData.html#SixLabors_ImageSharp_Web_ImageMetaData__ctor_DateTime_System_String_TimeSpan_
+  commentId: M:SixLabors.ImageSharp.Web.ImageMetaData.#ctor(DateTime,System.String,TimeSpan)
+  fullName: SixLabors.ImageSharp.Web.ImageMetaData.ImageMetaData(DateTime, System.String, TimeSpan)
   nameWithType: ImageMetaData.ImageMetaData(DateTime, String, TimeSpan)
 - uid: SixLabors.ImageSharp.Web.ImageMetaData.#ctor*
   name: ImageMetaData
@@ -37168,11 +37168,11 @@ references:
   isSpec: "True"
   fullName: SixLabors.ImageSharp.Web.ImageMetaData.Inequality
   nameWithType: ImageMetaData.Inequality
-- uid: SixLabors.ImageSharp.Web.ImageMetaData.ReadAsync(System.IO.Stream)
+- uid: SixLabors.ImageSharp.Web.ImageMetaData.ReadAsync(Stream)
   name: ReadAsync(Stream)
-  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.ImageMetaData.html#SixLabors_ImageSharp_Web_ImageMetaData_ReadAsync_System_IO_Stream_
-  commentId: M:SixLabors.ImageSharp.Web.ImageMetaData.ReadAsync(System.IO.Stream)
-  fullName: SixLabors.ImageSharp.Web.ImageMetaData.ReadAsync(System.IO.Stream)
+  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.ImageMetaData.html#SixLabors_ImageSharp_Web_ImageMetaData_ReadAsync_Stream_
+  commentId: M:SixLabors.ImageSharp.Web.ImageMetaData.ReadAsync(Stream)
+  fullName: SixLabors.ImageSharp.Web.ImageMetaData.ReadAsync(Stream)
   nameWithType: ImageMetaData.ReadAsync(Stream)
 - uid: SixLabors.ImageSharp.Web.ImageMetaData.ReadAsync*
   name: ReadAsync
@@ -37194,11 +37194,11 @@ references:
   isSpec: "True"
   fullName: SixLabors.ImageSharp.Web.ImageMetaData.ToString
   nameWithType: ImageMetaData.ToString
-- uid: SixLabors.ImageSharp.Web.ImageMetaData.WriteAsync(System.IO.Stream)
+- uid: SixLabors.ImageSharp.Web.ImageMetaData.WriteAsync(Stream)
   name: WriteAsync(Stream)
-  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.ImageMetaData.html#SixLabors_ImageSharp_Web_ImageMetaData_WriteAsync_System_IO_Stream_
-  commentId: M:SixLabors.ImageSharp.Web.ImageMetaData.WriteAsync(System.IO.Stream)
-  fullName: SixLabors.ImageSharp.Web.ImageMetaData.WriteAsync(System.IO.Stream)
+  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.ImageMetaData.html#SixLabors_ImageSharp_Web_ImageMetaData_WriteAsync_Stream_
+  commentId: M:SixLabors.ImageSharp.Web.ImageMetaData.WriteAsync(Stream)
+  fullName: SixLabors.ImageSharp.Web.ImageMetaData.WriteAsync(Stream)
   nameWithType: ImageMetaData.WriteAsync(Stream)
 - uid: SixLabors.ImageSharp.Web.ImageMetaData.WriteAsync*
   name: WriteAsync
@@ -37219,13 +37219,13 @@ references:
   commentId: T:SixLabors.ImageSharp.Web.Middleware.ImageCommandContext
   fullName: SixLabors.ImageSharp.Web.Middleware.ImageCommandContext
   nameWithType: ImageCommandContext
-- uid: SixLabors.ImageSharp.Web.Middleware.ImageCommandContext.#ctor(Microsoft.AspNetCore.Http.HttpContext,System.Collections.Generic.IDictionary{System.String,System.String},SixLabors.ImageSharp.Web.Commands.CommandParser)
+- uid: SixLabors.ImageSharp.Web.Middleware.ImageCommandContext.#ctor(HttpContext,IDictionary{System.String,System.String},SixLabors.ImageSharp.Web.Commands.CommandParser)
   name: ImageCommandContext(HttpContext, IDictionary<String, String>, CommandParser)
-  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Middleware.ImageCommandContext.html#SixLabors_ImageSharp_Web_Middleware_ImageCommandContext__ctor_Microsoft_AspNetCore_Http_HttpContext_System_Collections_Generic_IDictionary_System_String_System_String__SixLabors_ImageSharp_Web_Commands_CommandParser_
-  commentId: M:SixLabors.ImageSharp.Web.Middleware.ImageCommandContext.#ctor(Microsoft.AspNetCore.Http.HttpContext,System.Collections.Generic.IDictionary{System.String,System.String},SixLabors.ImageSharp.Web.Commands.CommandParser)
+  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Middleware.ImageCommandContext.html#SixLabors_ImageSharp_Web_Middleware_ImageCommandContext__ctor_HttpContext_IDictionary_System_String_System_String__SixLabors_ImageSharp_Web_Commands_CommandParser_
+  commentId: M:SixLabors.ImageSharp.Web.Middleware.ImageCommandContext.#ctor(HttpContext,IDictionary{System.String,System.String},SixLabors.ImageSharp.Web.Commands.CommandParser)
   name.vb: ImageCommandContext(HttpContext, IDictionary(Of String, String), CommandParser)
-  fullName: SixLabors.ImageSharp.Web.Middleware.ImageCommandContext.ImageCommandContext(Microsoft.AspNetCore.Http.HttpContext, System.Collections.Generic.IDictionary<System.String, System.String>, SixLabors.ImageSharp.Web.Commands.CommandParser)
-  fullName.vb: SixLabors.ImageSharp.Web.Middleware.ImageCommandContext.ImageCommandContext(Microsoft.AspNetCore.Http.HttpContext, System.Collections.Generic.IDictionary(Of System.String, System.String), SixLabors.ImageSharp.Web.Commands.CommandParser)
+  fullName: SixLabors.ImageSharp.Web.Middleware.ImageCommandContext.ImageCommandContext(HttpContext, IDictionary<System.String, System.String>, SixLabors.ImageSharp.Web.Commands.CommandParser)
+  fullName.vb: SixLabors.ImageSharp.Web.Middleware.ImageCommandContext.ImageCommandContext(HttpContext, IDictionary(Of System.String, System.String), SixLabors.ImageSharp.Web.Commands.CommandParser)
   nameWithType: ImageCommandContext.ImageCommandContext(HttpContext, IDictionary<String, String>, CommandParser)
   nameWithType.vb: ImageCommandContext.ImageCommandContext(HttpContext, IDictionary(Of String, String), CommandParser)
 - uid: SixLabors.ImageSharp.Web.Middleware.ImageCommandContext.#ctor*
@@ -37280,13 +37280,13 @@ references:
   commentId: T:SixLabors.ImageSharp.Web.Middleware.ImageProcessingContext
   fullName: SixLabors.ImageSharp.Web.Middleware.ImageProcessingContext
   nameWithType: ImageProcessingContext
-- uid: SixLabors.ImageSharp.Web.Middleware.ImageProcessingContext.#ctor(Microsoft.AspNetCore.Http.HttpContext,System.IO.Stream,System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.String)
+- uid: SixLabors.ImageSharp.Web.Middleware.ImageProcessingContext.#ctor(HttpContext,Stream,IDictionary{System.String,System.String},System.String,System.String)
   name: ImageProcessingContext(HttpContext, Stream, IDictionary<String, String>, String, String)
-  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Middleware.ImageProcessingContext.html#SixLabors_ImageSharp_Web_Middleware_ImageProcessingContext__ctor_Microsoft_AspNetCore_Http_HttpContext_System_IO_Stream_System_Collections_Generic_IDictionary_System_String_System_String__System_String_System_String_
-  commentId: M:SixLabors.ImageSharp.Web.Middleware.ImageProcessingContext.#ctor(Microsoft.AspNetCore.Http.HttpContext,System.IO.Stream,System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.String)
+  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Middleware.ImageProcessingContext.html#SixLabors_ImageSharp_Web_Middleware_ImageProcessingContext__ctor_HttpContext_Stream_IDictionary_System_String_System_String__System_String_System_String_
+  commentId: M:SixLabors.ImageSharp.Web.Middleware.ImageProcessingContext.#ctor(HttpContext,Stream,IDictionary{System.String,System.String},System.String,System.String)
   name.vb: ImageProcessingContext(HttpContext, Stream, IDictionary(Of String, String), String, String)
-  fullName: SixLabors.ImageSharp.Web.Middleware.ImageProcessingContext.ImageProcessingContext(Microsoft.AspNetCore.Http.HttpContext, System.IO.Stream, System.Collections.Generic.IDictionary<System.String, System.String>, System.String, System.String)
-  fullName.vb: SixLabors.ImageSharp.Web.Middleware.ImageProcessingContext.ImageProcessingContext(Microsoft.AspNetCore.Http.HttpContext, System.IO.Stream, System.Collections.Generic.IDictionary(Of System.String, System.String), System.String, System.String)
+  fullName: SixLabors.ImageSharp.Web.Middleware.ImageProcessingContext.ImageProcessingContext(HttpContext, Stream, IDictionary<System.String, System.String>, System.String, System.String)
+  fullName.vb: SixLabors.ImageSharp.Web.Middleware.ImageProcessingContext.ImageProcessingContext(HttpContext, Stream, IDictionary(Of System.String, System.String), System.String, System.String)
   nameWithType: ImageProcessingContext.ImageProcessingContext(HttpContext, Stream, IDictionary<String, String>, String, String)
   nameWithType.vb: ImageProcessingContext.ImageProcessingContext(HttpContext, Stream, IDictionary(Of String, String), String, String)
 - uid: SixLabors.ImageSharp.Web.Middleware.ImageProcessingContext.#ctor*
@@ -37367,13 +37367,13 @@ references:
   commentId: T:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddleware
   fullName: SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddleware
   nameWithType: ImageSharpMiddleware
-- uid: SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Options.IOptions{SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions},Microsoft.Extensions.Logging.ILoggerFactory,SixLabors.Memory.MemoryAllocator,SixLabors.ImageSharp.Web.Commands.IRequestParser,System.Collections.Generic.IEnumerable{SixLabors.ImageSharp.Web.Providers.IImageProvider},System.Collections.Generic.IEnumerable{SixLabors.ImageSharp.Web.Processors.IImageWebProcessor},SixLabors.ImageSharp.Web.Caching.IImageCache,SixLabors.ImageSharp.Web.Caching.ICacheHash)
+- uid: SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddleware.#ctor(RequestDelegate,IOptions{SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions},ILoggerFactory,MemoryAllocator,SixLabors.ImageSharp.Web.Commands.IRequestParser,IEnumerable{SixLabors.ImageSharp.Web.Providers.IImageProvider},IEnumerable{SixLabors.ImageSharp.Web.Processors.IImageWebProcessor},SixLabors.ImageSharp.Web.Caching.IImageCache,SixLabors.ImageSharp.Web.Caching.ICacheHash)
   name: ImageSharpMiddleware(RequestDelegate, IOptions<ImageSharpMiddlewareOptions>, ILoggerFactory, MemoryAllocator, IRequestParser, IEnumerable<IImageProvider>, IEnumerable<IImageWebProcessor>, IImageCache, ICacheHash)
-  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddleware.html#SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddleware__ctor_Microsoft_AspNetCore_Http_RequestDelegate_Microsoft_Extensions_Options_IOptions_SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddlewareOptions__Microsoft_Extensions_Logging_ILoggerFactory_SixLabors_Memory_MemoryAllocator_SixLabors_ImageSharp_Web_Commands_IRequestParser_System_Collections_Generic_IEnumerable_SixLabors_ImageSharp_Web_Providers_IImageProvider__System_Collections_Generic_IEnumerable_SixLabors_ImageSharp_Web_Processors_IImageWebProcessor__SixLabors_ImageSharp_Web_Caching_IImageCache_SixLabors_ImageSharp_Web_Caching_ICacheHash_
-  commentId: M:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Options.IOptions{SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions},Microsoft.Extensions.Logging.ILoggerFactory,SixLabors.Memory.MemoryAllocator,SixLabors.ImageSharp.Web.Commands.IRequestParser,System.Collections.Generic.IEnumerable{SixLabors.ImageSharp.Web.Providers.IImageProvider},System.Collections.Generic.IEnumerable{SixLabors.ImageSharp.Web.Processors.IImageWebProcessor},SixLabors.ImageSharp.Web.Caching.IImageCache,SixLabors.ImageSharp.Web.Caching.ICacheHash)
+  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddleware.html#SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddleware__ctor_RequestDelegate_IOptions_SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddlewareOptions__ILoggerFactory_MemoryAllocator_SixLabors_ImageSharp_Web_Commands_IRequestParser_IEnumerable_SixLabors_ImageSharp_Web_Providers_IImageProvider__IEnumerable_SixLabors_ImageSharp_Web_Processors_IImageWebProcessor__SixLabors_ImageSharp_Web_Caching_IImageCache_SixLabors_ImageSharp_Web_Caching_ICacheHash_
+  commentId: M:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddleware.#ctor(RequestDelegate,IOptions{SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions},ILoggerFactory,MemoryAllocator,SixLabors.ImageSharp.Web.Commands.IRequestParser,IEnumerable{SixLabors.ImageSharp.Web.Providers.IImageProvider},IEnumerable{SixLabors.ImageSharp.Web.Processors.IImageWebProcessor},SixLabors.ImageSharp.Web.Caching.IImageCache,SixLabors.ImageSharp.Web.Caching.ICacheHash)
   name.vb: ImageSharpMiddleware(RequestDelegate, IOptions(Of ImageSharpMiddlewareOptions), ILoggerFactory, MemoryAllocator, IRequestParser, IEnumerable(Of IImageProvider), IEnumerable(Of IImageWebProcessor), IImageCache, ICacheHash)
-  fullName: SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddleware.ImageSharpMiddleware(Microsoft.AspNetCore.Http.RequestDelegate, Microsoft.Extensions.Options.IOptions<SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions>, Microsoft.Extensions.Logging.ILoggerFactory, SixLabors.Memory.MemoryAllocator, SixLabors.ImageSharp.Web.Commands.IRequestParser, System.Collections.Generic.IEnumerable<SixLabors.ImageSharp.Web.Providers.IImageProvider>, System.Collections.Generic.IEnumerable<SixLabors.ImageSharp.Web.Processors.IImageWebProcessor>, SixLabors.ImageSharp.Web.Caching.IImageCache, SixLabors.ImageSharp.Web.Caching.ICacheHash)
-  fullName.vb: SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddleware.ImageSharpMiddleware(Microsoft.AspNetCore.Http.RequestDelegate, Microsoft.Extensions.Options.IOptions(Of SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions), Microsoft.Extensions.Logging.ILoggerFactory, SixLabors.Memory.MemoryAllocator, SixLabors.ImageSharp.Web.Commands.IRequestParser, System.Collections.Generic.IEnumerable(Of SixLabors.ImageSharp.Web.Providers.IImageProvider), System.Collections.Generic.IEnumerable(Of SixLabors.ImageSharp.Web.Processors.IImageWebProcessor), SixLabors.ImageSharp.Web.Caching.IImageCache, SixLabors.ImageSharp.Web.Caching.ICacheHash)
+  fullName: SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddleware.ImageSharpMiddleware(RequestDelegate, IOptions<SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions>, ILoggerFactory, MemoryAllocator, SixLabors.ImageSharp.Web.Commands.IRequestParser, IEnumerable<SixLabors.ImageSharp.Web.Providers.IImageProvider>, IEnumerable<SixLabors.ImageSharp.Web.Processors.IImageWebProcessor>, SixLabors.ImageSharp.Web.Caching.IImageCache, SixLabors.ImageSharp.Web.Caching.ICacheHash)
+  fullName.vb: SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddleware.ImageSharpMiddleware(RequestDelegate, IOptions(Of SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions), ILoggerFactory, MemoryAllocator, SixLabors.ImageSharp.Web.Commands.IRequestParser, IEnumerable(Of SixLabors.ImageSharp.Web.Providers.IImageProvider), IEnumerable(Of SixLabors.ImageSharp.Web.Processors.IImageWebProcessor), SixLabors.ImageSharp.Web.Caching.IImageCache, SixLabors.ImageSharp.Web.Caching.ICacheHash)
   nameWithType: ImageSharpMiddleware.ImageSharpMiddleware(RequestDelegate, IOptions<ImageSharpMiddlewareOptions>, ILoggerFactory, MemoryAllocator, IRequestParser, IEnumerable<IImageProvider>, IEnumerable<IImageWebProcessor>, IImageCache, ICacheHash)
   nameWithType.vb: ImageSharpMiddleware.ImageSharpMiddleware(RequestDelegate, IOptions(Of ImageSharpMiddlewareOptions), ILoggerFactory, MemoryAllocator, IRequestParser, IEnumerable(Of IImageProvider), IEnumerable(Of IImageWebProcessor), IImageCache, ICacheHash)
 - uid: SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddleware.#ctor*
@@ -37383,11 +37383,11 @@ references:
   isSpec: "True"
   fullName: SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddleware.ImageSharpMiddleware
   nameWithType: ImageSharpMiddleware.ImageSharpMiddleware
-- uid: SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddleware.Invoke(Microsoft.AspNetCore.Http.HttpContext)
+- uid: SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddleware.Invoke(HttpContext)
   name: Invoke(HttpContext)
-  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddleware.html#SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddleware_Invoke_Microsoft_AspNetCore_Http_HttpContext_
-  commentId: M:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddleware.Invoke(Microsoft.AspNetCore.Http.HttpContext)
-  fullName: SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddleware.Invoke(Microsoft.AspNetCore.Http.HttpContext)
+  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddleware.html#SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddleware_Invoke_HttpContext_
+  commentId: M:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddleware.Invoke(HttpContext)
+  fullName: SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddleware.Invoke(HttpContext)
   nameWithType: ImageSharpMiddleware.Invoke(HttpContext)
 - uid: SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddleware.Invoke*
   name: Invoke
@@ -37537,13 +37537,13 @@ references:
   isSpec: "True"
   fullName: SixLabors.ImageSharp.Web.Processors.BackgroundColorWebProcessor.Commands
   nameWithType: BackgroundColorWebProcessor.Commands
-- uid: SixLabors.ImageSharp.Web.Processors.BackgroundColorWebProcessor.Process(SixLabors.ImageSharp.Web.FormattedImage,Microsoft.Extensions.Logging.ILogger,System.Collections.Generic.IDictionary{System.String,System.String})
+- uid: SixLabors.ImageSharp.Web.Processors.BackgroundColorWebProcessor.Process(SixLabors.ImageSharp.Web.FormattedImage,ILogger,IDictionary{System.String,System.String})
   name: Process(FormattedImage, ILogger, IDictionary<String, String>)
-  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Processors.BackgroundColorWebProcessor.html#SixLabors_ImageSharp_Web_Processors_BackgroundColorWebProcessor_Process_SixLabors_ImageSharp_Web_FormattedImage_Microsoft_Extensions_Logging_ILogger_System_Collections_Generic_IDictionary_System_String_System_String__
-  commentId: M:SixLabors.ImageSharp.Web.Processors.BackgroundColorWebProcessor.Process(SixLabors.ImageSharp.Web.FormattedImage,Microsoft.Extensions.Logging.ILogger,System.Collections.Generic.IDictionary{System.String,System.String})
+  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Processors.BackgroundColorWebProcessor.html#SixLabors_ImageSharp_Web_Processors_BackgroundColorWebProcessor_Process_SixLabors_ImageSharp_Web_FormattedImage_ILogger_IDictionary_System_String_System_String__
+  commentId: M:SixLabors.ImageSharp.Web.Processors.BackgroundColorWebProcessor.Process(SixLabors.ImageSharp.Web.FormattedImage,ILogger,IDictionary{System.String,System.String})
   name.vb: Process(FormattedImage, ILogger, IDictionary(Of String, String))
-  fullName: SixLabors.ImageSharp.Web.Processors.BackgroundColorWebProcessor.Process(SixLabors.ImageSharp.Web.FormattedImage, Microsoft.Extensions.Logging.ILogger, System.Collections.Generic.IDictionary<System.String, System.String>)
-  fullName.vb: SixLabors.ImageSharp.Web.Processors.BackgroundColorWebProcessor.Process(SixLabors.ImageSharp.Web.FormattedImage, Microsoft.Extensions.Logging.ILogger, System.Collections.Generic.IDictionary(Of System.String, System.String))
+  fullName: SixLabors.ImageSharp.Web.Processors.BackgroundColorWebProcessor.Process(SixLabors.ImageSharp.Web.FormattedImage, ILogger, IDictionary<System.String, System.String>)
+  fullName.vb: SixLabors.ImageSharp.Web.Processors.BackgroundColorWebProcessor.Process(SixLabors.ImageSharp.Web.FormattedImage, ILogger, IDictionary(Of System.String, System.String))
   nameWithType: BackgroundColorWebProcessor.Process(FormattedImage, ILogger, IDictionary<String, String>)
   nameWithType.vb: BackgroundColorWebProcessor.Process(FormattedImage, ILogger, IDictionary(Of String, String))
 - uid: SixLabors.ImageSharp.Web.Processors.BackgroundColorWebProcessor.Process*
@@ -37559,13 +37559,13 @@ references:
   commentId: T:SixLabors.ImageSharp.Web.Processors.FormatWebProcessor
   fullName: SixLabors.ImageSharp.Web.Processors.FormatWebProcessor
   nameWithType: FormatWebProcessor
-- uid: SixLabors.ImageSharp.Web.Processors.FormatWebProcessor.#ctor(Microsoft.Extensions.Options.IOptions{SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions})
+- uid: SixLabors.ImageSharp.Web.Processors.FormatWebProcessor.#ctor(IOptions{SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions})
   name: FormatWebProcessor(IOptions<ImageSharpMiddlewareOptions>)
-  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Processors.FormatWebProcessor.html#SixLabors_ImageSharp_Web_Processors_FormatWebProcessor__ctor_Microsoft_Extensions_Options_IOptions_SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddlewareOptions__
-  commentId: M:SixLabors.ImageSharp.Web.Processors.FormatWebProcessor.#ctor(Microsoft.Extensions.Options.IOptions{SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions})
+  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Processors.FormatWebProcessor.html#SixLabors_ImageSharp_Web_Processors_FormatWebProcessor__ctor_IOptions_SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddlewareOptions__
+  commentId: M:SixLabors.ImageSharp.Web.Processors.FormatWebProcessor.#ctor(IOptions{SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions})
   name.vb: FormatWebProcessor(IOptions(Of ImageSharpMiddlewareOptions))
-  fullName: SixLabors.ImageSharp.Web.Processors.FormatWebProcessor.FormatWebProcessor(Microsoft.Extensions.Options.IOptions<SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions>)
-  fullName.vb: SixLabors.ImageSharp.Web.Processors.FormatWebProcessor.FormatWebProcessor(Microsoft.Extensions.Options.IOptions(Of SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions))
+  fullName: SixLabors.ImageSharp.Web.Processors.FormatWebProcessor.FormatWebProcessor(IOptions<SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions>)
+  fullName.vb: SixLabors.ImageSharp.Web.Processors.FormatWebProcessor.FormatWebProcessor(IOptions(Of SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions))
   nameWithType: FormatWebProcessor.FormatWebProcessor(IOptions<ImageSharpMiddlewareOptions>)
   nameWithType.vb: FormatWebProcessor.FormatWebProcessor(IOptions(Of ImageSharpMiddlewareOptions))
 - uid: SixLabors.ImageSharp.Web.Processors.FormatWebProcessor.#ctor*
@@ -37594,13 +37594,13 @@ references:
   commentId: F:SixLabors.ImageSharp.Web.Processors.FormatWebProcessor.Format
   fullName: SixLabors.ImageSharp.Web.Processors.FormatWebProcessor.Format
   nameWithType: FormatWebProcessor.Format
-- uid: SixLabors.ImageSharp.Web.Processors.FormatWebProcessor.Process(SixLabors.ImageSharp.Web.FormattedImage,Microsoft.Extensions.Logging.ILogger,System.Collections.Generic.IDictionary{System.String,System.String})
+- uid: SixLabors.ImageSharp.Web.Processors.FormatWebProcessor.Process(SixLabors.ImageSharp.Web.FormattedImage,ILogger,IDictionary{System.String,System.String})
   name: Process(FormattedImage, ILogger, IDictionary<String, String>)
-  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Processors.FormatWebProcessor.html#SixLabors_ImageSharp_Web_Processors_FormatWebProcessor_Process_SixLabors_ImageSharp_Web_FormattedImage_Microsoft_Extensions_Logging_ILogger_System_Collections_Generic_IDictionary_System_String_System_String__
-  commentId: M:SixLabors.ImageSharp.Web.Processors.FormatWebProcessor.Process(SixLabors.ImageSharp.Web.FormattedImage,Microsoft.Extensions.Logging.ILogger,System.Collections.Generic.IDictionary{System.String,System.String})
+  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Processors.FormatWebProcessor.html#SixLabors_ImageSharp_Web_Processors_FormatWebProcessor_Process_SixLabors_ImageSharp_Web_FormattedImage_ILogger_IDictionary_System_String_System_String__
+  commentId: M:SixLabors.ImageSharp.Web.Processors.FormatWebProcessor.Process(SixLabors.ImageSharp.Web.FormattedImage,ILogger,IDictionary{System.String,System.String})
   name.vb: Process(FormattedImage, ILogger, IDictionary(Of String, String))
-  fullName: SixLabors.ImageSharp.Web.Processors.FormatWebProcessor.Process(SixLabors.ImageSharp.Web.FormattedImage, Microsoft.Extensions.Logging.ILogger, System.Collections.Generic.IDictionary<System.String, System.String>)
-  fullName.vb: SixLabors.ImageSharp.Web.Processors.FormatWebProcessor.Process(SixLabors.ImageSharp.Web.FormattedImage, Microsoft.Extensions.Logging.ILogger, System.Collections.Generic.IDictionary(Of System.String, System.String))
+  fullName: SixLabors.ImageSharp.Web.Processors.FormatWebProcessor.Process(SixLabors.ImageSharp.Web.FormattedImage, ILogger, IDictionary<System.String, System.String>)
+  fullName.vb: SixLabors.ImageSharp.Web.Processors.FormatWebProcessor.Process(SixLabors.ImageSharp.Web.FormattedImage, ILogger, IDictionary(Of System.String, System.String))
   nameWithType: FormatWebProcessor.Process(FormattedImage, ILogger, IDictionary<String, String>)
   nameWithType.vb: FormatWebProcessor.Process(FormattedImage, ILogger, IDictionary(Of String, String))
 - uid: SixLabors.ImageSharp.Web.Processors.FormatWebProcessor.Process*
@@ -37629,13 +37629,13 @@ references:
   isSpec: "True"
   fullName: SixLabors.ImageSharp.Web.Processors.IImageWebProcessor.Commands
   nameWithType: IImageWebProcessor.Commands
-- uid: SixLabors.ImageSharp.Web.Processors.IImageWebProcessor.Process(SixLabors.ImageSharp.Web.FormattedImage,Microsoft.Extensions.Logging.ILogger,System.Collections.Generic.IDictionary{System.String,System.String})
+- uid: SixLabors.ImageSharp.Web.Processors.IImageWebProcessor.Process(SixLabors.ImageSharp.Web.FormattedImage,ILogger,IDictionary{System.String,System.String})
   name: Process(FormattedImage, ILogger, IDictionary<String, String>)
-  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Processors.IImageWebProcessor.html#SixLabors_ImageSharp_Web_Processors_IImageWebProcessor_Process_SixLabors_ImageSharp_Web_FormattedImage_Microsoft_Extensions_Logging_ILogger_System_Collections_Generic_IDictionary_System_String_System_String__
-  commentId: M:SixLabors.ImageSharp.Web.Processors.IImageWebProcessor.Process(SixLabors.ImageSharp.Web.FormattedImage,Microsoft.Extensions.Logging.ILogger,System.Collections.Generic.IDictionary{System.String,System.String})
+  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Processors.IImageWebProcessor.html#SixLabors_ImageSharp_Web_Processors_IImageWebProcessor_Process_SixLabors_ImageSharp_Web_FormattedImage_ILogger_IDictionary_System_String_System_String__
+  commentId: M:SixLabors.ImageSharp.Web.Processors.IImageWebProcessor.Process(SixLabors.ImageSharp.Web.FormattedImage,ILogger,IDictionary{System.String,System.String})
   name.vb: Process(FormattedImage, ILogger, IDictionary(Of String, String))
-  fullName: SixLabors.ImageSharp.Web.Processors.IImageWebProcessor.Process(SixLabors.ImageSharp.Web.FormattedImage, Microsoft.Extensions.Logging.ILogger, System.Collections.Generic.IDictionary<System.String, System.String>)
-  fullName.vb: SixLabors.ImageSharp.Web.Processors.IImageWebProcessor.Process(SixLabors.ImageSharp.Web.FormattedImage, Microsoft.Extensions.Logging.ILogger, System.Collections.Generic.IDictionary(Of System.String, System.String))
+  fullName: SixLabors.ImageSharp.Web.Processors.IImageWebProcessor.Process(SixLabors.ImageSharp.Web.FormattedImage, ILogger, IDictionary<System.String, System.String>)
+  fullName.vb: SixLabors.ImageSharp.Web.Processors.IImageWebProcessor.Process(SixLabors.ImageSharp.Web.FormattedImage, ILogger, IDictionary(Of System.String, System.String))
   nameWithType: IImageWebProcessor.Process(FormattedImage, ILogger, IDictionary<String, String>)
   nameWithType.vb: IImageWebProcessor.Process(FormattedImage, ILogger, IDictionary(Of String, String))
 - uid: SixLabors.ImageSharp.Web.Processors.IImageWebProcessor.Process*
@@ -37688,13 +37688,13 @@ references:
   commentId: F:SixLabors.ImageSharp.Web.Processors.ResizeWebProcessor.Mode
   fullName: SixLabors.ImageSharp.Web.Processors.ResizeWebProcessor.Mode
   nameWithType: ResizeWebProcessor.Mode
-- uid: SixLabors.ImageSharp.Web.Processors.ResizeWebProcessor.Process(SixLabors.ImageSharp.Web.FormattedImage,Microsoft.Extensions.Logging.ILogger,System.Collections.Generic.IDictionary{System.String,System.String})
+- uid: SixLabors.ImageSharp.Web.Processors.ResizeWebProcessor.Process(SixLabors.ImageSharp.Web.FormattedImage,ILogger,IDictionary{System.String,System.String})
   name: Process(FormattedImage, ILogger, IDictionary<String, String>)
-  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Processors.ResizeWebProcessor.html#SixLabors_ImageSharp_Web_Processors_ResizeWebProcessor_Process_SixLabors_ImageSharp_Web_FormattedImage_Microsoft_Extensions_Logging_ILogger_System_Collections_Generic_IDictionary_System_String_System_String__
-  commentId: M:SixLabors.ImageSharp.Web.Processors.ResizeWebProcessor.Process(SixLabors.ImageSharp.Web.FormattedImage,Microsoft.Extensions.Logging.ILogger,System.Collections.Generic.IDictionary{System.String,System.String})
+  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Processors.ResizeWebProcessor.html#SixLabors_ImageSharp_Web_Processors_ResizeWebProcessor_Process_SixLabors_ImageSharp_Web_FormattedImage_ILogger_IDictionary_System_String_System_String__
+  commentId: M:SixLabors.ImageSharp.Web.Processors.ResizeWebProcessor.Process(SixLabors.ImageSharp.Web.FormattedImage,ILogger,IDictionary{System.String,System.String})
   name.vb: Process(FormattedImage, ILogger, IDictionary(Of String, String))
-  fullName: SixLabors.ImageSharp.Web.Processors.ResizeWebProcessor.Process(SixLabors.ImageSharp.Web.FormattedImage, Microsoft.Extensions.Logging.ILogger, System.Collections.Generic.IDictionary<System.String, System.String>)
-  fullName.vb: SixLabors.ImageSharp.Web.Processors.ResizeWebProcessor.Process(SixLabors.ImageSharp.Web.FormattedImage, Microsoft.Extensions.Logging.ILogger, System.Collections.Generic.IDictionary(Of System.String, System.String))
+  fullName: SixLabors.ImageSharp.Web.Processors.ResizeWebProcessor.Process(SixLabors.ImageSharp.Web.FormattedImage, ILogger, IDictionary<System.String, System.String>)
+  fullName.vb: SixLabors.ImageSharp.Web.Processors.ResizeWebProcessor.Process(SixLabors.ImageSharp.Web.FormattedImage, ILogger, IDictionary(Of System.String, System.String))
   nameWithType: ResizeWebProcessor.Process(FormattedImage, ILogger, IDictionary<String, String>)
   nameWithType.vb: ResizeWebProcessor.Process(FormattedImage, ILogger, IDictionary(Of String, String))
 - uid: SixLabors.ImageSharp.Web.Processors.ResizeWebProcessor.Process*
@@ -37734,11 +37734,11 @@ references:
   commentId: T:SixLabors.ImageSharp.Web.Providers.IImageProvider
   fullName: SixLabors.ImageSharp.Web.Providers.IImageProvider
   nameWithType: IImageProvider
-- uid: SixLabors.ImageSharp.Web.Providers.IImageProvider.GetAsync(Microsoft.AspNetCore.Http.HttpContext)
+- uid: SixLabors.ImageSharp.Web.Providers.IImageProvider.GetAsync(HttpContext)
   name: GetAsync(HttpContext)
-  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Providers.IImageProvider.html#SixLabors_ImageSharp_Web_Providers_IImageProvider_GetAsync_Microsoft_AspNetCore_Http_HttpContext_
-  commentId: M:SixLabors.ImageSharp.Web.Providers.IImageProvider.GetAsync(Microsoft.AspNetCore.Http.HttpContext)
-  fullName: SixLabors.ImageSharp.Web.Providers.IImageProvider.GetAsync(Microsoft.AspNetCore.Http.HttpContext)
+  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Providers.IImageProvider.html#SixLabors_ImageSharp_Web_Providers_IImageProvider_GetAsync_HttpContext_
+  commentId: M:SixLabors.ImageSharp.Web.Providers.IImageProvider.GetAsync(HttpContext)
+  fullName: SixLabors.ImageSharp.Web.Providers.IImageProvider.GetAsync(HttpContext)
   nameWithType: IImageProvider.GetAsync(HttpContext)
 - uid: SixLabors.ImageSharp.Web.Providers.IImageProvider.GetAsync*
   name: GetAsync
@@ -37747,11 +37747,11 @@ references:
   isSpec: "True"
   fullName: SixLabors.ImageSharp.Web.Providers.IImageProvider.GetAsync
   nameWithType: IImageProvider.GetAsync
-- uid: SixLabors.ImageSharp.Web.Providers.IImageProvider.IsValidRequest(Microsoft.AspNetCore.Http.HttpContext)
+- uid: SixLabors.ImageSharp.Web.Providers.IImageProvider.IsValidRequest(HttpContext)
   name: IsValidRequest(HttpContext)
-  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Providers.IImageProvider.html#SixLabors_ImageSharp_Web_Providers_IImageProvider_IsValidRequest_Microsoft_AspNetCore_Http_HttpContext_
-  commentId: M:SixLabors.ImageSharp.Web.Providers.IImageProvider.IsValidRequest(Microsoft.AspNetCore.Http.HttpContext)
-  fullName: SixLabors.ImageSharp.Web.Providers.IImageProvider.IsValidRequest(Microsoft.AspNetCore.Http.HttpContext)
+  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Providers.IImageProvider.html#SixLabors_ImageSharp_Web_Providers_IImageProvider_IsValidRequest_HttpContext_
+  commentId: M:SixLabors.ImageSharp.Web.Providers.IImageProvider.IsValidRequest(HttpContext)
+  fullName: SixLabors.ImageSharp.Web.Providers.IImageProvider.IsValidRequest(HttpContext)
   nameWithType: IImageProvider.IsValidRequest(HttpContext)
 - uid: SixLabors.ImageSharp.Web.Providers.IImageProvider.IsValidRequest*
   name: IsValidRequest
@@ -37792,13 +37792,13 @@ references:
   commentId: T:SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider
   fullName: SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider
   nameWithType: PhysicalFileSystemProvider
-- uid: SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider.#ctor(Microsoft.Extensions.Options.IOptions{SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions},Microsoft.AspNetCore.Hosting.IHostingEnvironment,SixLabors.Memory.MemoryAllocator)
+- uid: SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider.#ctor(IOptions{SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions},IHostingEnvironment,MemoryAllocator)
   name: PhysicalFileSystemProvider(IOptions<ImageSharpMiddlewareOptions>, IHostingEnvironment, MemoryAllocator)
-  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider.html#SixLabors_ImageSharp_Web_Providers_PhysicalFileSystemProvider__ctor_Microsoft_Extensions_Options_IOptions_SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddlewareOptions__Microsoft_AspNetCore_Hosting_IHostingEnvironment_SixLabors_Memory_MemoryAllocator_
-  commentId: M:SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider.#ctor(Microsoft.Extensions.Options.IOptions{SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions},Microsoft.AspNetCore.Hosting.IHostingEnvironment,SixLabors.Memory.MemoryAllocator)
+  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider.html#SixLabors_ImageSharp_Web_Providers_PhysicalFileSystemProvider__ctor_IOptions_SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddlewareOptions__IHostingEnvironment_MemoryAllocator_
+  commentId: M:SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider.#ctor(IOptions{SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions},IHostingEnvironment,MemoryAllocator)
   name.vb: PhysicalFileSystemProvider(IOptions(Of ImageSharpMiddlewareOptions), IHostingEnvironment, MemoryAllocator)
-  fullName: SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider.PhysicalFileSystemProvider(Microsoft.Extensions.Options.IOptions<SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions>, Microsoft.AspNetCore.Hosting.IHostingEnvironment, SixLabors.Memory.MemoryAllocator)
-  fullName.vb: SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider.PhysicalFileSystemProvider(Microsoft.Extensions.Options.IOptions(Of SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions), Microsoft.AspNetCore.Hosting.IHostingEnvironment, SixLabors.Memory.MemoryAllocator)
+  fullName: SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider.PhysicalFileSystemProvider(IOptions<SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions>, IHostingEnvironment, MemoryAllocator)
+  fullName.vb: SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider.PhysicalFileSystemProvider(IOptions(Of SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions), IHostingEnvironment, MemoryAllocator)
   nameWithType: PhysicalFileSystemProvider.PhysicalFileSystemProvider(IOptions<ImageSharpMiddlewareOptions>, IHostingEnvironment, MemoryAllocator)
   nameWithType.vb: PhysicalFileSystemProvider.PhysicalFileSystemProvider(IOptions(Of ImageSharpMiddlewareOptions), IHostingEnvironment, MemoryAllocator)
 - uid: SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider.#ctor*
@@ -37808,11 +37808,11 @@ references:
   isSpec: "True"
   fullName: SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider.PhysicalFileSystemProvider
   nameWithType: PhysicalFileSystemProvider.PhysicalFileSystemProvider
-- uid: SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider.GetAsync(Microsoft.AspNetCore.Http.HttpContext)
+- uid: SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider.GetAsync(HttpContext)
   name: GetAsync(HttpContext)
-  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider.html#SixLabors_ImageSharp_Web_Providers_PhysicalFileSystemProvider_GetAsync_Microsoft_AspNetCore_Http_HttpContext_
-  commentId: M:SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider.GetAsync(Microsoft.AspNetCore.Http.HttpContext)
-  fullName: SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider.GetAsync(Microsoft.AspNetCore.Http.HttpContext)
+  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider.html#SixLabors_ImageSharp_Web_Providers_PhysicalFileSystemProvider_GetAsync_HttpContext_
+  commentId: M:SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider.GetAsync(HttpContext)
+  fullName: SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider.GetAsync(HttpContext)
   nameWithType: PhysicalFileSystemProvider.GetAsync(HttpContext)
 - uid: SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider.GetAsync*
   name: GetAsync
@@ -37821,11 +37821,11 @@ references:
   isSpec: "True"
   fullName: SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider.GetAsync
   nameWithType: PhysicalFileSystemProvider.GetAsync
-- uid: SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider.IsValidRequest(Microsoft.AspNetCore.Http.HttpContext)
+- uid: SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider.IsValidRequest(HttpContext)
   name: IsValidRequest(HttpContext)
-  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider.html#SixLabors_ImageSharp_Web_Providers_PhysicalFileSystemProvider_IsValidRequest_Microsoft_AspNetCore_Http_HttpContext_
-  commentId: M:SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider.IsValidRequest(Microsoft.AspNetCore.Http.HttpContext)
-  fullName: SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider.IsValidRequest(Microsoft.AspNetCore.Http.HttpContext)
+  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider.html#SixLabors_ImageSharp_Web_Providers_PhysicalFileSystemProvider_IsValidRequest_HttpContext_
+  commentId: M:SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider.IsValidRequest(HttpContext)
+  fullName: SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider.IsValidRequest(HttpContext)
   nameWithType: PhysicalFileSystemProvider.IsValidRequest(HttpContext)
 - uid: SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider.IsValidRequest*
   name: IsValidRequest
@@ -37904,13 +37904,13 @@ references:
   commentId: T:SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver
   fullName: SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver
   nameWithType: PhysicalFileSystemResolver
-- uid: SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.#ctor(Microsoft.Extensions.FileProviders.IFileInfo,SixLabors.ImageSharp.Web.ImageMetaData@)
+- uid: SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.#ctor(IFileInfo,SixLabors.ImageSharp.Web.ImageMetaData@)
   name: PhysicalFileSystemResolver(IFileInfo, ImageMetaData)
-  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.html#SixLabors_ImageSharp_Web_Resolvers_PhysicalFileSystemResolver__ctor_Microsoft_Extensions_FileProviders_IFileInfo_SixLabors_ImageSharp_Web_ImageMetaData__
-  commentId: M:SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.#ctor(Microsoft.Extensions.FileProviders.IFileInfo,SixLabors.ImageSharp.Web.ImageMetaData@)
+  href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.html#SixLabors_ImageSharp_Web_Resolvers_PhysicalFileSystemResolver__ctor_IFileInfo_SixLabors_ImageSharp_Web_ImageMetaData__
+  commentId: M:SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.#ctor(IFileInfo,SixLabors.ImageSharp.Web.ImageMetaData@)
   name.vb: PhysicalFileSystemResolver(IFileInfo, ByRef ImageMetaData)
-  fullName: SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.PhysicalFileSystemResolver(Microsoft.Extensions.FileProviders.IFileInfo, SixLabors.ImageSharp.Web.ImageMetaData)
-  fullName.vb: SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.PhysicalFileSystemResolver(Microsoft.Extensions.FileProviders.IFileInfo, ByRef SixLabors.ImageSharp.Web.ImageMetaData)
+  fullName: SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.PhysicalFileSystemResolver(IFileInfo, SixLabors.ImageSharp.Web.ImageMetaData)
+  fullName.vb: SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.PhysicalFileSystemResolver(IFileInfo, ByRef SixLabors.ImageSharp.Web.ImageMetaData)
   nameWithType: PhysicalFileSystemResolver.PhysicalFileSystemResolver(IFileInfo, ImageMetaData)
   nameWithType.vb: PhysicalFileSystemResolver.PhysicalFileSystemResolver(IFileInfo, ByRef ImageMetaData)
 - uid: SixLabors.ImageSharp.Web.Resolvers.PhysicalFileSystemResolver.#ctor*
