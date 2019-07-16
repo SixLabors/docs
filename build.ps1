@@ -3,8 +3,8 @@ git submodule update --init
 Get-ChildItem ./ext -Directory | ForEach-Object {
     $path = $_.FullName
 
-    git -C "$path" fetch
-    $lastTag = (git -C "$path" describe --abbrev=0 --tags )  | Out-String
+    git -C "$path" fetch --tags
+    $lastTag = (git -C "$path" describe --tags $(git -C "$path" rev-list --tags --max-count=1))  | Out-String
     $lastTag = $lastTag.Trim()
 
     Write-Host "$path => $lastTag"
