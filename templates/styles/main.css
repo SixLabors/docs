@@ -254,6 +254,10 @@ article span.small.pull-right {
     display: none;
 }
 
+article{
+    line-height: 1.6;
+}
+
 article h4 {
     border-bottom: none;
 }

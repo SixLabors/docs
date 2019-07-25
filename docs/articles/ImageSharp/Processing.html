@@ -6,9 +6,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title> </title>
+    <title>Processing </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content=" ">
+    <meta name="title" content="Processing ">
     <meta name="generator" content="docfx 2.43.3.0">
     
     <link rel="shortcut icon" href="../../favicon.png">
@@ -69,8 +69,42 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
+<h1 id="processing">Processing</h1>
 
-<p>TODO</p>
+<p>The ImageSharp processing API is imperative. This means that the order in which you supply the individual processing operations is the order in which they are are compiled and applied. This allows the API to be very flexible, allowing you to combine processes in any order.</p>
+<p>Processing operations are implemented using one of two available method calls. 
+<a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Processing.ProcessingExtensions.html#SixLabors_ImageSharp_Processing_ProcessingExtensions_Mutate_"><code>Mutate</code></a> and <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Processing.ProcessingExtensions.html#SixLabors_ImageSharp_Processing_ProcessingExtensions_Clone_"><code>Clone</code></a></p>
+<p>The difference being that the former applies the given processing operations to the current image whereas the latter applies the operations to a depp copy of the original image.</p>
+<p>For example:</p>
+<p><strong>Mutate</strong></p>
+<pre><code class="lang-c#">using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.Processing;
+
+using (Image image = Image.Load(inStream)) 
+{
+    // Resize the given image in place and return it for chaining.
+    // &#39;x&#39; signifies the current image processing context.
+    image.Mutate(x =&gt; x.Resize(image.Width / 2, image.Height / 2)); 
+
+    image.Save(outStream); 
+} // Dispose - releasing memory into a memory pool ready for the next image you wish to process.
+</code></pre><p><strong>Clone</strong></p>
+<pre><code class="lang-c#">using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.Processing;
+
+using (Image image = Image.Load(inStream)) 
+{
+    // Create a deep copy of the given image, resize it, and return it for chaining.
+   using (Image copy = image.Clone(x =&gt; x.Resize(image.Width / 2, image.Height / 2)))
+   {
+       copy.Save(outStream); 
+   }
+} // Dispose - releasing memory into a memory pool ready for the next image you wish to process.
+</code></pre><h3 id="common-examples">Common Examples</h3>
+<p>Examples of common operations can be found in the following documentation pages.</p>
+<ul>
+<li><a href="Resize.html">Resizing</a> images using different options.</li>
+</ul>
 
 </article>
           </div>
