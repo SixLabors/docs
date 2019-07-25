@@ -120,7 +120,7 @@ If you want to do image processing work, make sure you are <code>using</code> th
 <h3 id="performance">Performance</h3>
 <p>Achieving near-to-native performance is a major goal for the SixLabors team, and thanks to the improvements brought by the RyuJIT runtime, it&#39;s no longer mission impossible. We are constantly working on improvements.</p>
 <p>At the moment it&#39;s pretty hard to define fair benchmarks comparing GDI+ (aka. <code>System.Drawing</code> on Windows) and ImageSharp, because of the differences between the algorithms being used. Generally speaking, we are more feature rich, producing better quality. We hope we can match the corresponding algorithm parameters, and present some very specific benchmark results soon.</p>
-<p>If you are experienceing a significant performance gap between System.Drawing and ImageSharp for basic use-cases, there is a high chance that essential SIMD optimizations are not utilized. </p>
+<p>If you are experiencing a significant performance gap between System.Drawing and ImageSharp for basic use-cases, there is a high chance that essential SIMD optimizations are not utilized. </p>
 <p>A few troubleshooting steps to try:</p>
 <ul>
 <li>Check the value of <a href="https://docs.microsoft.com/en-us/dotnet/api/system.numerics.vector.ishardwareaccelerated?view=netcore-2.1&amp;viewFallbackFrom=netstandard-2.0#System_Numerics_Vector_IsHardwareAccelerated">Vector.IsHardwareAccelerated</a>. If the output is false, it means there is no SIMD support in your runtime!</li>

@@ -73,8 +73,8 @@
 
 <p>Resizing an image is probably the most common processing operation that applications use. ImageSharp offers an incredibly flexible collection of resize options that allow developers to choose sizing algorithms, sampling algorithms, and gamma handling as well as other options.</p>
 <h3 id="the-basics">The Basics</h3>
-<p>Resizing involves the process of iterating through the pixels of the target image and sampling areas of the source image to choose what color to implement for each pixel. The sampling algorithm chosen affects the target color and can dramatically alter the result. Different samplers are usually chosen based upon the use case, for example <code>NearestNeigbor</code> is often used for fast, low quality thumbnail generation <code>Lanczos3</code> for high quality thumbnails due to it&#39;s sharpening effect, and <code>Spline</code> for high quality enlargment due to it&#39;s smoothing effect.</p>
-<p>With ImageSharp we default to <code>Bicubic</code> as it offers good quality output when both reducing and enlarging images but you can easily set the algorithm when processing.</p>
+<p>Resizing an image involves the process of creating and iterating through the pixels of a target image and sampling areas of a source image to choose what color to implement for each pixel. The sampling algorithm chosen affects the target color and can dramatically alter the result. Different samplers are usually chosen based upon the use case - For example <code>NearestNeigbor</code> is often used for fast, low quality thumbnail generation, <code>Lanczos3</code> for high quality thumbnails due to it&#39;s sharpening effect, and <code>Spline</code> for high quality enlargment due to it&#39;s smoothing effect.</p>
+<p>With ImageSharp we default to <code>Bicubic</code> as it is a very robust algorithm offering good quality output when both reducing and enlarging images but you can easily set the algorithm when processing.</p>
 <p>A full list of supported sampling algorithms can be found <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Processing.KnownResamplers.html">here</a>:</p>
 <p><strong>Resize the given image using the default <code>Bicubic</code> sampler.</strong></p>
 <pre><code class="lang-c#">using SixLabors.ImageSharp;
@@ -102,6 +102,8 @@ using (Image image = Image.Load(inStream))
 }
 </code></pre><div class="NOTE"><h5>Note</h5><p>If you pass <code>0</code> as any of the values for <code>width</code> and <code>height</code> dimensions then ImageSharp will automatically determine the correct opposite dimensions size to preserve the original aspect ratio.</p>
 </div>
+<h3 id="advanced-resizing">Advanced Resizing</h3>
+<p>In addition to basic resizing operations ImageSharp also offers more advanced features. </p>
 
 </article>
           </div>
