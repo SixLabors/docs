@@ -107,6 +107,7 @@ To achieve this the method actually implements an &quot;inline&quot; <a class="x
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IImageProcessingContext&lt;TPixel&gt; Apply&lt;TPixel&gt;(this IImageProcessingContext&lt;TPixel&gt; source, Action&lt;Image&lt;TPixel&gt;&gt; operation)
+
     where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -180,6 +181,7 @@ To achieve this the method actually implements an &quot;inline&quot; <a class="x
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IImageProcessingContext&lt;TPixel&gt; ApplyProcessors&lt;TPixel&gt;(this IImageProcessingContext&lt;TPixel&gt; source, params IImageProcessor&lt;TPixel&gt;[] operations)
+
     where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -253,6 +255,7 @@ To achieve this the method actually implements an &quot;inline&quot; <a class="x
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Image&lt;TPixel&gt; Clone&lt;TPixel&gt;(this Image&lt;TPixel&gt; source, Action&lt;IImageProcessingContext&lt;TPixel&gt;&gt; operation)
+
     where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -326,6 +329,7 @@ To achieve this the method actually implements an &quot;inline&quot; <a class="x
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Image&lt;TPixel&gt; Clone&lt;TPixel&gt;(this Image&lt;TPixel&gt; source, params IImageProcessor&lt;TPixel&gt;[] operations)
+
     where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -399,6 +403,7 @@ To achieve this the method actually implements an &quot;inline&quot; <a class="x
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static void Mutate&lt;TPixel&gt;(this Image&lt;TPixel&gt; source, Action&lt;IImageProcessingContext&lt;TPixel&gt;&gt; operation)
+
     where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -456,6 +461,7 @@ To achieve this the method actually implements an &quot;inline&quot; <a class="x
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static void Mutate&lt;TPixel&gt;(this Image&lt;TPixel&gt; source, params IImageProcessor&lt;TPixel&gt;[] operations)
+
     where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>

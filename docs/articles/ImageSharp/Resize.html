@@ -6,9 +6,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Pixel Formats </title>
+    <title>Resizing Images </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Pixel Formats ">
+    <meta name="title" content="Resizing Images ">
     <meta name="generator" content="docfx 2.43.3.0">
     
     <link rel="shortcut icon" href="../../favicon.png">
@@ -69,21 +69,42 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="pixel-formats">Pixel Formats</h1>
+<h1 id="resizing-images">Resizing Images</h1>
 
-<h3 id="why-is-xrefsixlaborsimagesharpimage1displaypropertyname-a-generic-class">Why is <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> a generic class?</h3>
-<p>We support multiple pixel formats just like <em>System.Drawing</em> does. However, unlike their closed <a href="https://docs.microsoft.com/en-us/dotnet/api/system.drawing.imaging.pixelformat">PixelFormat</a> enumeration, our solution is extensible.
-A pixel is basically a small value object (struct), describing the color at a given point according to a pixel model we call Pixel Format. <code>Image&lt;TPixel&gt;</code> represents a pixel graphic bitmap stored as a <strong>generic, contiguous memory block</strong> of pixels, having the size <code>image.Width * image.Height</code>.</p>
-<p>In the case of multi-frame images (usually decoded from gifs) multiple bitmaps are stored in <code>image.Frames</code> as <code>ImageFrame&lt;TPixel&gt;</code> instances.</p>
-<h3 id="ok-how-do-i-create-an-image-using-a-pixel-format-other-than-rgba32">Ok, how do I create an image using a pixel format other, than <code>Rgba32</code>?</h3>
-<p>Have a look at the various pixel formats available under <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.PixelFormats.html#structs">SixLabors.ImageSharp.PixelFormats</a>! After picking the pixel format of your choice, use it as a generic argument for <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a>, eg. by instantiating <code>Image&lt;Bgr24&gt;</code>.</p>
-<h3 id="can-i-define-my-own-pixel-format">Can I define my own pixel format?</h3>
-<p>Yes, you just need to define a struct implementing <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.PixelFormats.IPixel-1.html">IPixel&lt;TSelf&gt;</a> and use it as a generic argument for <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a>.
-However, at the moment you won&#39;t be able to provide SIMD-optimized batched pixel-conversion primitives. We need to open up the <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.PixelFormats.PixelOperations-1.html">PixelOperations&lt;TPixel&gt;</a> API to allow that.</p>
-<h3 id="i-have-a-monochrome-image-and-i-want-to-store-it-in-a-compact-way-can-i-store-a-pixel-on-a-single-bit">I have a monochrome image and I want to store it in a compact way. Can I store a pixel on a single bit?</h3>
-<p>No. Our architecture does not allow sub-byte pixel formats at the moment. This feature is incredibly complex to implement, and you are going to pay the price of the low memory footprint in processing speed / CPU load.</p>
-<h3 id="can-i-decode-into-pixel-formats-like-cmykhttpsenwikipediaorgwikicmykcolormodel-or-cielabhttpsenwikipediaorgwikilabcolorspace">Can I decode into pixel formats like <a href="https://en.wikipedia.org/wiki/CMYK_color_model">CMYK</a> or <a href="https://en.wikipedia.org/wiki/Lab_color_space">CIELAB</a>?</h3>
-<p>Unfortunately it&#39;s not possible and is unlikely to be in the future. Many image processing operations expect the pixels to be laid out in-memory in RGBA format. To manipulate images in exotic colorspaces we would have to translate each pixel to-and-from the colorspace multiple times, which would result in unusable performance and a loss of color information.</p>
+<p>Resizing an image is probably the most common processing operation that applications use. ImageSharp offers an incredibly flexible collection of resize options that allow developers to choose sizing algorithms, sampling algorithms, and gamma handling as well as other options.</p>
+<h3 id="the-basics">The Basics</h3>
+<p>Resizing an image involves the process of creating and iterating through the pixels of a target image and sampling areas of a source image to choose what color to implement for each pixel. The sampling algorithm chosen affects the target color and can dramatically alter the result. Different samplers are usually chosen based upon the use case - For example <code>NearestNeigbor</code> is often used for fast, low quality thumbnail generation, <code>Lanczos3</code> for high quality thumbnails due to it&#39;s sharpening effect, and <code>Spline</code> for high quality enlargment due to it&#39;s smoothing effect.</p>
+<p>With ImageSharp we default to <code>Bicubic</code> as it is a very robust algorithm offering good quality output when both reducing and enlarging images but you can easily set the algorithm when processing.</p>
+<p>A full list of supported sampling algorithms can be found <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Processing.KnownResamplers.html">here</a>:</p>
+<p><strong>Resize the given image using the default <code>Bicubic</code> sampler.</strong></p>
+<pre><code class="lang-c#">using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.Processing;
+
+using (Image image = Image.Load(inStream))
+{
+    int width = image.Width / 2;
+    int height = image.Height / 2;
+    image.Mutate(x =&gt; x.Resize(width, height));
+
+    image.Save(outStream);
+}
+</code></pre><p><strong>Resize the given image using the <code>Lanczos3</code> sampler:</strong></p>
+<pre><code class="lang-c#">using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.Processing;
+
+using (Image image = Image.Load(inStream))
+{
+    int width = image.Width / 2;
+    int height = image.Height / 2;
+    image.Mutate(x =&gt; x.Resize(width, height, KnownResamplers.Lanczos3));
+
+    image.Save(outStream);
+}
+</code></pre><div class="NOTE"><h5>Note</h5><p>If you pass <code>0</code> as any of the values for <code>width</code> and <code>height</code> dimensions then ImageSharp will automatically determine the correct opposite dimensions size to preserve the original aspect ratio.</p>
+</div>
+<h3 id="advanced-resizing">Advanced Resizing</h3>
+<p>In addition to basic resizing operations ImageSharp also offers more advanced features.</p>
+<p>TODO: Add advanced description and code examples.</p>
 
 </article>
           </div>
@@ -93,7 +114,7 @@ However, at the moment you won&#39;t be able to provide SIMD-optimized batched p
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/SixLabors/docs/blob/master/articles/ImageSharp/PixelFormats.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/SixLabors/docs/blob/master/articles/ImageSharp/Resize.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

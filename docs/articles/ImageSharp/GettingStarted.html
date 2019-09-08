@@ -72,40 +72,57 @@
 <h1 id="getting-started-with-imagesharp">Getting started with ImageSharp</h1>
 
 <p>So you&#39;ve gone and added the ImageSharp packages and you&#39;ve been left with the question &quot;so what to I do now?&quot; hopefully some of these snippets can answer that question for you, or at least get you started.</p>
-<h3 id="scaling-a-jpeg-by-half-and-save-it-again-as-a-jpg">Scaling a jpeg by half and save it again as a jpg</h3>
+<h3 id="loading-an-image-scaling-it-by-half-and-saving-it-again-as-a-jpg">Loading an image, scaling it by half and saving it again as a jpg</h3>
 <p>In this very basic example you are actually utilizing a bunch of core ImageSharp features:</p>
 <ul>
 <li><a href="PixelFormats.html">Pixel Formats</a> by using <code>Rgba32</code></li>
 <li><a href="ImageFormats.html">Image Formats</a> by loading and saving a jpeg image</li>
 <li><a href="Processing.html">Image Processors</a> by calling <code>Mutate()</code> and <code>Resize()</code></li>
 </ul>
-<pre><code class="lang-c#">using (Image&lt;Rgba32&gt; image = Image.Load(&quot;foo.jpg&quot;)) //open the file and detect the file type and decode it
+<pre><code class="lang-c#">using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.Processing;
+
+// Open the file and detect the file type and decode it.
+// Our image is now in an uncompressed, file format agnostic, structure in-memory as a series of pixels.
+using (Image image = Image.Load(&quot;foo.jpg&quot;)) 
 {
- // image is now in a file format agnostic structure in memory as a series of Rgba32 pixels
- image.Mutate(ctx=&gt;ctx.Resize(image.Width / 2, image.Height / 2)); // resize the image in place and return it for chaining
- image.Save(&quot;bar.jpg&quot;); // based on the file extension pick an encoder then encode and write the data to disk
-} // dispose - releasing memory into a memory pool ready for the next image you wish to process
+    // Resize the image in place and return it for chaining.
+    // &#39;x&#39; signifies the current image processing context.
+    image.Mutate(x =&gt; x.Resize(image.Width / 2, image.Height / 2)); 
+
+    // The library automatically picks an encoder based on the file extensions then encodes and write the data to disk.
+    image.Save(&quot;bar.jpg&quot;); 
+} // Dispose - releasing memory into a memory pool ready for the next image you wish to process.
 </code></pre><h3 id="how-do-i-create-a-blank-image-for-drawing-on">How do I create a blank image for drawing on?</h3>
-<pre><code class="lang-c#">int width = 640;
+<pre><code class="lang-c#">using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.PixelFormats;
+using SixLabors.ImageSharp.Processing;
+
+int width = 640;
 int height = 480;
-using(Image&lt;Rgba32&gt; image = new Image&lt;Rgba32&gt;(width, height)) // creates a new image with all the pixels set as transparent 
+
+// Creates a new image with all the pixels set as transparent. 
+using(var image = new Image&lt;Rgba32&gt;(width, height)) 
 {
- // do your drawing in here...
-} // dispose - releasing memory into a memory pool ready for the next image you wish to process
+  // Do your drawing in here...
+
+} // Dispose - releasing memory into a memory pool ready for the next image you wish to process.
 </code></pre><h3 id="api-style">API Style</h3>
 <p>The easiest way to work with ImageSharp is to utilize our extension methods:</p>
 <ul>
-<li><a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.ImageExtensions.html">ImageExtensions</a> for basic stuff</li>
-<li><a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Processing.ProcessingExtensions.html">ProcessingExtensions</a> for <code>Mutate()</code> and <code>Clone()</code> </li>
-<li>All the processing extensions (eg. <code>Resize(...)</code>) are living within the <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Processing.html">SixLabors.ImageSharp.Processing</a> namespace. 
-If you want to do image processing work, make sure you are <code>using</code> this namespace in your code!</li>
+<li><a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.html">SixLabors.ImageSharp</a> for basic stuff.</li>
+<li><a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Processing.html">SixLabors.ImageSharp.Processing</a> for <code>Mutate()</code> and <code>Clone()</code> <ul>
+<li>All the processing extensions (eg. <code>Resize(...)</code>) live within the <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Processing.html">SixLabors.ImageSharp.Processing</a> namespace. 
+If you want to do image processing work, make sure you add <code>using SixLabors.ImageSharp.Processing;</code>.</li>
+</ul>
+</li>
 </ul>
 <h3 id="why-is-xrefsixlaborsimagesharpimage1displaypropertyname-a-generic-class">Why is <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> a generic class?</h3>
 <p>An image is essentially a <strong>generic 2D array of pixels</strong> stored in a contiguous memory block. Check out the <a href="PixelFormats.html">Pixel Formats</a> article for more details!</p>
 <h3 id="performance">Performance</h3>
 <p>Achieving near-to-native performance is a major goal for the SixLabors team, and thanks to the improvements brought by the RyuJIT runtime, it&#39;s no longer mission impossible. We are constantly working on improvements.</p>
 <p>At the moment it&#39;s pretty hard to define fair benchmarks comparing GDI+ (aka. <code>System.Drawing</code> on Windows) and ImageSharp, because of the differences between the algorithms being used. Generally speaking, we are more feature rich, producing better quality. We hope we can match the corresponding algorithm parameters, and present some very specific benchmark results soon.</p>
-<p>If you are experienceing a significant performance gap between System.Drawing and ImageSharp for basic use-cases, there is a high chance that essential SIMD optimizations are not utilized. </p>
+<p>If you are experiencing a significant performance gap between System.Drawing and ImageSharp for basic use-cases, there is a high chance that essential SIMD optimizations are not utilized. </p>
 <p>A few troubleshooting steps to try:</p>
 <ul>
 <li>Check the value of <a href="https://docs.microsoft.com/en-us/dotnet/api/system.numerics.vector.ishardwareaccelerated?view=netcore-2.1&amp;viewFallbackFrom=netstandard-2.0#System_Numerics_Vector_IsHardwareAccelerated">Vector.IsHardwareAccelerated</a>. If the output is false, it means there is no SIMD support in your runtime!</li>

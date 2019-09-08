@@ -108,6 +108,7 @@ The Aot Compiler is designed to overcome the limitations of this compiler.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static void Seed&lt;TPixel&gt;()
+
     where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
@@ -141,6 +142,7 @@ The Aot Compiler is designed to overcome the limitations of this compiler.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static void Seed&lt;TPixel, TPixel2&gt;()
+
     where TPixel : struct, IPixel&lt;TPixel&gt; where TPixel2 : struct, IPixel&lt;TPixel2&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
@@ -179,6 +181,7 @@ The Aot Compiler is designed to overcome the limitations of this compiler.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static void Seed&lt;TPixel, TPixel2, TPixel3&gt;()
+
     where TPixel : struct, IPixel&lt;TPixel&gt; where TPixel2 : struct, IPixel&lt;TPixel2&gt; where TPixel3 : struct, IPixel&lt;TPixel3&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>

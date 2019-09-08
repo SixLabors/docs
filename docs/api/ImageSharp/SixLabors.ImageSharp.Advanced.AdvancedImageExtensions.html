@@ -107,6 +107,7 @@ The pixel buffer is a contigous memory area containing Width*Height TPixel eleme
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TPixel DangerousGetPinnableReferenceToPixelBuffer&lt;TPixel&gt;(this Image&lt;TPixel&gt; source)
+
     where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -176,6 +177,7 @@ The pixel buffer is a contiguous memory area containing Width*Height TPixel elem
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TPixel DangerousGetPinnableReferenceToPixelBuffer&lt;TPixel&gt;(this ImageFrame&lt;TPixel&gt; source)
+
     where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -243,6 +245,7 @@ The pixel buffer is a contiguous memory area containing Width*Height TPixel elem
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Configuration GetConfiguration&lt;TPixel&gt;(this Image&lt;TPixel&gt; source)
+
     where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -311,6 +314,7 @@ at row <code data-dev-comment-type="paramref" class="paramref">rowIndex</code> b
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Span&lt;TPixel&gt; GetPixelRowSpan&lt;TPixel&gt;(this Image&lt;TPixel&gt; source, int rowIndex)
+
     where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -385,6 +389,7 @@ at row <code data-dev-comment-type="paramref" class="paramref">rowIndex</code> b
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Span&lt;TPixel&gt; GetPixelRowSpan&lt;TPixel&gt;(this ImageFrame&lt;TPixel&gt; source, int rowIndex)
+
     where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -459,6 +464,7 @@ stored in row major order.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Span&lt;TPixel&gt; GetPixelSpan&lt;TPixel&gt;(this Image&lt;TPixel&gt; source)
+
     where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -527,6 +533,7 @@ stored in row major order.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Span&lt;TPixel&gt; GetPixelSpan&lt;TPixel&gt;(this ImageFrame&lt;TPixel&gt; source)
+
     where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>

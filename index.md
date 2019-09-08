@@ -28,7 +28,7 @@ Our graphics libraries are split into different projects. They cover different c
 Common classes and structs used across our projects including [](xref:SixLabors.Primitives).
 
 ### [SixLabors.ImageSharp](https://github.com/SixLabors/ImageSharp)
-- Contains the generic [](xref:SixLabors.Image`1?displayProperty=name) class, PixelFormats, Configuration, and other core functionality.
+- Contains the generic @"SixLabors.ImageSharp.Image`1?displayProperty=name" class, PixelFormats, Configuration, and other core functionality.
 - The [](xref:SixLabors.ImageSharp.Formats.IImageFormat?displayProperty=name) interface, Jpeg, Png, Bmp, and Gif formats.
 - The image processor infrastructure, `.Mutate()` and `.Clone()`
   - Transform methods like Resize, Crop, Skew, Rotate - Anything that alters the dimensions of the image.
