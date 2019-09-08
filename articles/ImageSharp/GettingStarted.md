@@ -45,7 +45,7 @@ using(var image = new Image<Rgba32>(width, height))
 The easiest way to work with ImageSharp is to utilize our extension methods:
 - @"SixLabors.ImageSharp" for basic stuff.
 - @"SixLabors.ImageSharp.Processing" for `Mutate()` and `Clone()` 
-- All the processing extensions (eg. `Resize(...)`) are living within the @"SixLabors.ImageSharp.Processing" namespace. 
+ - All the processing extensions (eg. `Resize(...)`) live within the @"SixLabors.ImageSharp.Processing" namespace. 
 If you want to do image processing work, make sure you are `using` this namespace in your code.
 
 ### Why is [](xref:SixLabors.ImageSharp.Image`1?displayProperty=name) a generic class?
