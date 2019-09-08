@@ -111,9 +111,11 @@ using(var image = new Image&lt;Rgba32&gt;(width, height))
 <p>The easiest way to work with ImageSharp is to utilize our extension methods:</p>
 <ul>
 <li><a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.html">SixLabors.ImageSharp</a> for basic stuff.</li>
-<li><a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Processing.html">SixLabors.ImageSharp.Processing</a> for <code>Mutate()</code> and <code>Clone()</code> </li>
-<li>All the processing extensions (eg. <code>Resize(...)</code>) are living within the <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Processing.html">SixLabors.ImageSharp.Processing</a> namespace. 
-If you want to do image processing work, make sure you are <code>using</code> this namespace in your code.</li>
+<li><a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Processing.html">SixLabors.ImageSharp.Processing</a> for <code>Mutate()</code> and <code>Clone()</code> <ul>
+<li>All the processing extensions (eg. <code>Resize(...)</code>) live within the <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Processing.html">SixLabors.ImageSharp.Processing</a> namespace. 
+If you want to do image processing work, make sure you add <code>using SixLabors.ImageSharp.Processing;</code>.</li>
+</ul>
+</li>
 </ul>
 <h3 id="why-is-xrefsixlaborsimagesharpimage1displaypropertyname-a-generic-class">Why is <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> a generic class?</h3>
 <p>An image is essentially a <strong>generic 2D array of pixels</strong> stored in a contiguous memory block. Check out the <a href="PixelFormats.html">Pixel Formats</a> article for more details!</p>
