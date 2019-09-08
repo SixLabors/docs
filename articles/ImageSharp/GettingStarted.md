@@ -46,7 +46,7 @@ The easiest way to work with ImageSharp is to utilize our extension methods:
 - @"SixLabors.ImageSharp" for basic stuff.
 - @"SixLabors.ImageSharp.Processing" for `Mutate()` and `Clone()` 
  - All the processing extensions (eg. `Resize(...)`) live within the @"SixLabors.ImageSharp.Processing" namespace. 
-If you want to do image processing work, make sure you are `using` this namespace in your code.
+If you want to do image processing work, make sure you add `using SixLabors.ImageSharp.Processing;`.
 
 ### Why is [](xref:SixLabors.ImageSharp.Image`1?displayProperty=name) a generic class?
 An image is essentially a **generic 2D array of pixels** stored in a contiguous memory block. Check out the [Pixel Formats](PixelFormats.md) article for more details!
