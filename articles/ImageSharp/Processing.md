@@ -5,7 +5,7 @@ The ImageSharp processing API is imperative. This means that the order in which 
 Processing operations are implemented using one of two available method calls. 
 [`Mutate`](xref:SixLabors.ImageSharp.Processing.ProcessingExtensions.Mutate*?displayProperty=name) and [`Clone`](xref:SixLabors.ImageSharp.Processing.ProcessingExtensions.Clone*?displayProperty=name)
 
-The difference being that the former applies the given processing operations to the current image whereas the latter applies the operations to a depp copy of the original image.
+The difference being that the former applies the given processing operations to the current image whereas the latter applies the operations to a deep copy of the original image.
 
 For example:
 
