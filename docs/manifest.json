@@ -5304,7 +5304,7 @@
           "hash": "H64FMuIiUnqFA0nCWEjjIQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -5337,10 +5337,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/ImageSharp/PixelFormats.html",
-          "hash": "boSJ5XaR6sv9QghuYFeurA=="
+          "hash": "LDuPtPQcb0dBVbPTxKtctQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -5352,7 +5352,7 @@
           "hash": "GPMA6KbjZdRAp2/mzP1eOg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -5361,10 +5361,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/ImageSharp/Resize.html",
-          "hash": "W6N8M+r5TQxd6xa4reBsRA=="
+          "hash": "CsfHnzfWOsesoEkmef29XQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -5441,7 +5441,7 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 11,
-          "skipped_file_count": 11
+          "skipped_file_count": 9
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,

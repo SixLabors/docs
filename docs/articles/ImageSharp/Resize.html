@@ -80,30 +80,31 @@
 <pre><code class="lang-c#">using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Processing;
 
-using (Image image = Image.Load(inStream)) 
+using (Image image = Image.Load(inStream))
 {
     int width = image.Width / 2;
     int height = image.Height / 2;
-    image.Mutate(x =&gt; x.Resize(width, height)); 
+    image.Mutate(x =&gt; x.Resize(width, height));
 
-    image.Save(outStream); 
+    image.Save(outStream);
 }
 </code></pre><p><strong>Resize the given image using the <code>Lanczos3</code> sampler:</strong></p>
 <pre><code class="lang-c#">using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Processing;
 
-using (Image image = Image.Load(inStream)) 
+using (Image image = Image.Load(inStream))
 {
     int width = image.Width / 2;
     int height = image.Height / 2;
-    image.Mutate(x =&gt; x.Resize(width, height, KnownResamplers.Lanczos3)); 
+    image.Mutate(x =&gt; x.Resize(width, height, KnownResamplers.Lanczos3));
 
-    image.Save(outStream); 
+    image.Save(outStream);
 }
 </code></pre><div class="NOTE"><h5>Note</h5><p>If you pass <code>0</code> as any of the values for <code>width</code> and <code>height</code> dimensions then ImageSharp will automatically determine the correct opposite dimensions size to preserve the original aspect ratio.</p>
 </div>
 <h3 id="advanced-resizing">Advanced Resizing</h3>
-<p>In addition to basic resizing operations ImageSharp also offers more advanced features. </p>
+<p>In addition to basic resizing operations ImageSharp also offers more advanced features.</p>
+<p>TODO: Add advanced description and code examples.</p>
 
 </article>
           </div>

@@ -11,38 +11,42 @@ With ImageSharp we default to `Bicubic` as it is a very robust algorithm offerin
 A full list of supported sampling algorithms can be found [here](xref:SixLabors.ImageSharp.Processing.KnownResamplers):
 
 **Resize the given image using the default `Bicubic` sampler.**
+
 ```c#
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Processing;
 
-using (Image image = Image.Load(inStream)) 
+using (Image image = Image.Load(inStream))
 {
     int width = image.Width / 2;
     int height = image.Height / 2;
-    image.Mutate(x => x.Resize(width, height)); 
+    image.Mutate(x => x.Resize(width, height));
 
-    image.Save(outStream); 
+    image.Save(outStream);
 }
 ```
 
 **Resize the given image using the `Lanczos3` sampler:**
+
 ```c#
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Processing;
 
-using (Image image = Image.Load(inStream)) 
+using (Image image = Image.Load(inStream))
 {
     int width = image.Width / 2;
     int height = image.Height / 2;
-    image.Mutate(x => x.Resize(width, height, KnownResamplers.Lanczos3)); 
+    image.Mutate(x => x.Resize(width, height, KnownResamplers.Lanczos3));
 
-    image.Save(outStream); 
+    image.Save(outStream);
 }
 ```
 
->[!NOTE]
-If you pass `0` as any of the values for `width` and `height` dimensions then ImageSharp will automatically determine the correct opposite dimensions size to preserve the original aspect ratio.
+> [!NOTE]
+> If you pass `0` as any of the values for `width` and `height` dimensions then ImageSharp will automatically determine the correct opposite dimensions size to preserve the original aspect ratio.
 
 ### Advanced Resizing
 
-In addition to basic resizing operations ImageSharp also offers more advanced features. 
+In addition to basic resizing operations ImageSharp also offers more advanced features.
+
+TODO: Add advanced description and code examples.
