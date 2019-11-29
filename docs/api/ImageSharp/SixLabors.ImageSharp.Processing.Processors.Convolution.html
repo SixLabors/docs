@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace SixLabors.ImageSharp.Processing.Processors.Convolution
    ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../../favicon.png">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -76,13 +76,62 @@
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="markdown level0 remarks"></div>
-    <h3 id="interfaces">Interfaces
+    <h3 id="classes">Classes
   </h3>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Convolution.IEdgeDetectorProcessor.html">IEdgeDetectorProcessor</a></h4>
-      <section><p>Provides properties and methods allowing the detection of edges within an image.</p>
+      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Convolution.BokehBlurProcessor.html">BokehBlurProcessor</a></h4>
+      <section><p>Applies bokeh blur processing to the image.</p>
 </section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Convolution.IEdgeDetectorProcessor-1.html">IEdgeDetectorProcessor&lt;TPixel&gt;</a></h4>
-      <section><p>Provides properties and methods allowing the detection of edges within an image.</p>
+      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Convolution.BoxBlurProcessor.html">BoxBlurProcessor</a></h4>
+      <section><p>Defines a box blur processor of a given Radius.</p>
+</section>
+      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Convolution.EdgeDetectorProcessor.html">EdgeDetectorProcessor</a></h4>
+      <section><p>Defines a processor that detects edges within an image using a single two dimensional matrix.</p>
+</section>
+      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Convolution.GaussianBlurProcessor.html">GaussianBlurProcessor</a></h4>
+      <section><p>Defines Gaussian blur by a (Sigma, Radius) pair.</p>
+</section>
+      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Convolution.GaussianSharpenProcessor.html">GaussianSharpenProcessor</a></h4>
+      <section><p>Defines Gaussian sharpening by a (Sigma, Radius) pair.</p>
+</section>
+      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Convolution.KayyaliProcessor.html">KayyaliProcessor</a></h4>
+      <section><p>Defines edge detection processing using the Kayyali operator filter.
+See <a href="http://edgedetection.webs.com/">http://edgedetection.webs.com/</a>.</p>
+</section>
+      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Convolution.KirschProcessor.html">KirschProcessor</a></h4>
+      <section><p>Defines edge detection using the Kirsch operator filter.
+See <a href="http://en.wikipedia.org/wiki/Kirsch_operator">http://en.wikipedia.org/wiki/Kirsch_operator</a>.</p>
+</section>
+      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Convolution.Laplacian3x3Processor.html">Laplacian3x3Processor</a></h4>
+      <section><p>Applies edge detection processing to the image using the Laplacian 3x3 operator filter.
+<a href="http://en.wikipedia.org/wiki/Discrete_Laplace_operator">http://en.wikipedia.org/wiki/Discrete_Laplace_operator</a></p>
+</section>
+      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Convolution.Laplacian5x5Processor.html">Laplacian5x5Processor</a></h4>
+      <section><p>Defines edge detection processing using the Laplacian 5x5 operator filter.
+<a href="http://en.wikipedia.org/wiki/Discrete_Laplace_operator">http://en.wikipedia.org/wiki/Discrete_Laplace_operator</a>.</p>
+</section>
+      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Convolution.LaplacianOfGaussianProcessor.html">LaplacianOfGaussianProcessor</a></h4>
+      <section><p>Applies edge detection processing to the image using the Laplacian of Gaussian operator filter.
+See <a href="http://fourier.eng.hmc.edu/e161/lectures/gradient/node8.html">http://fourier.eng.hmc.edu/e161/lectures/gradient/node8.html</a>.</p>
+</section>
+      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Convolution.PrewittProcessor.html">PrewittProcessor</a></h4>
+      <section><p>Defines edge detection using the Prewitt operator filter.
+See <a href="http://en.wikipedia.org/wiki/Prewitt_operator">http://en.wikipedia.org/wiki/Prewitt_operator</a>.</p>
+</section>
+      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Convolution.RobertsCrossProcessor.html">RobertsCrossProcessor</a></h4>
+      <section><p>Defines edge detection processing using the Roberts Cross operator filter.
+See <a href="http://en.wikipedia.org/wiki/Roberts_cross">http://en.wikipedia.org/wiki/Roberts_cross</a>.</p>
+</section>
+      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Convolution.RobinsonProcessor.html">RobinsonProcessor</a></h4>
+      <section><p>Defines edge detection using the Robinson operator filter.
+See <a href="http://www.tutorialspoint.com/dip/Robinson_Compass_Mask.htm">http://www.tutorialspoint.com/dip/Robinson_Compass_Mask.htm</a>.</p>
+</section>
+      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Convolution.ScharrProcessor.html">ScharrProcessor</a></h4>
+      <section><p>Defines edge detection processing using the Scharr operator filter.
+<a href="http://en.wikipedia.org/wiki/Sobel_operator#Alternative_operators">http://en.wikipedia.org/wiki/Sobel_operator#Alternative_operators</a></p>
+</section>
+      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Convolution.SobelProcessor.html">SobelProcessor</a></h4>
+      <section><p>Defines edge detection using the Sobel operator filter.
+See <a href="http://en.wikipedia.org/wiki/Sobel_operator">http://en.wikipedia.org/wiki/Sobel_operator</a>.</p>
 </section>
 </article>
           </div>

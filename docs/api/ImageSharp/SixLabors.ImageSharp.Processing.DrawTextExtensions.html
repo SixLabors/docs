@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class DrawTextExtensions
    ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../../favicon.png">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -92,21 +92,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_DrawTextExtensions_DrawText__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__SixLabors_ImageSharp_Processing_TextGraphicsOptions_System_String_Font___0_PointF_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.DrawTextExtensions.DrawText%60%601(SixLabors.ImageSharp.Processing.IImageProcessingContext%7B%60%600%7D%2CSixLabors.ImageSharp.Processing.TextGraphicsOptions%2CSystem.String%2CFont%2C%60%600%2CPointF)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_DrawTextExtensions_DrawText_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_TextGraphicsOptions_System_String_Font_SixLabors_ImageSharp_Color_PointF_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.DrawTextExtensions.DrawText(SixLabors.ImageSharp.Processing.IImageProcessingContext%2CSixLabors.ImageSharp.Processing.TextGraphicsOptions%2CSystem.String%2CFont%2CSixLabors.ImageSharp.Color%2CPointF)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp.Drawing/Processing/DrawTextExtensions.cs/#L45">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp.Drawing/Processing/Extensions/DrawTextExtensions.cs/#L46">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_DrawTextExtensions_DrawText_" data-uid="SixLabors.ImageSharp.Processing.DrawTextExtensions.DrawText*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_DrawTextExtensions_DrawText__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__SixLabors_ImageSharp_Processing_TextGraphicsOptions_System_String_Font___0_PointF_" data-uid="SixLabors.ImageSharp.Processing.DrawTextExtensions.DrawText``1(SixLabors.ImageSharp.Processing.IImageProcessingContext{``0},SixLabors.ImageSharp.Processing.TextGraphicsOptions,System.String,Font,``0,PointF)">DrawText&lt;TPixel&gt;(IImageProcessingContext&lt;TPixel&gt;, TextGraphicsOptions, String, Font, TPixel, PointF)</h4>
+  <h4 id="SixLabors_ImageSharp_Processing_DrawTextExtensions_DrawText_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_TextGraphicsOptions_System_String_Font_SixLabors_ImageSharp_Color_PointF_" data-uid="SixLabors.ImageSharp.Processing.DrawTextExtensions.DrawText(SixLabors.ImageSharp.Processing.IImageProcessingContext,SixLabors.ImageSharp.Processing.TextGraphicsOptions,System.String,Font,SixLabors.ImageSharp.Color,PointF)">DrawText(IImageProcessingContext, TextGraphicsOptions, String, Font, Color, PointF)</h4>
   <div class="markdown level1 summary"><p>Draws the text onto the the image filled via the brush.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IImageProcessingContext&lt;TPixel&gt; DrawText&lt;TPixel&gt;(this IImageProcessingContext&lt;TPixel&gt; source, TextGraphicsOptions options, string text, Font font, TPixel color, PointF location)
-
-    where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public static IImageProcessingContext DrawText(this IImageProcessingContext source, TextGraphicsOptions options, string text, Font font, Color color, PointF location)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -119,7 +117,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><span class="parametername">source</span></td>
         <td><p>The image this method extends.</p>
 </td>
@@ -143,7 +141,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">TPixel</span></td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Color.html">Color</a></td>
         <td><span class="parametername">color</span></td>
         <td><p>The color.</p>
 </td>
@@ -166,45 +164,27 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><p>The <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TPixel</span></td>
-        <td><p>The type of the color.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_DrawTextExtensions_DrawText__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__SixLabors_ImageSharp_Processing_TextGraphicsOptions_System_String_Font_SixLabors_ImageSharp_Processing_IBrush___0__PointF_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.DrawTextExtensions.DrawText%60%601(SixLabors.ImageSharp.Processing.IImageProcessingContext%7B%60%600%7D%2CSixLabors.ImageSharp.Processing.TextGraphicsOptions%2CSystem.String%2CFont%2CSixLabors.ImageSharp.Processing.IBrush%7B%60%600%7D%2CPointF)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_DrawTextExtensions_DrawText_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_TextGraphicsOptions_System_String_Font_SixLabors_ImageSharp_Processing_IBrush_PointF_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.DrawTextExtensions.DrawText(SixLabors.ImageSharp.Processing.IImageProcessingContext%2CSixLabors.ImageSharp.Processing.TextGraphicsOptions%2CSystem.String%2CFont%2CSixLabors.ImageSharp.Processing.IBrush%2CPointF)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp.Drawing/Processing/DrawTextExtensions.cs/#L78">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp.Drawing/Processing/Extensions/DrawTextExtensions.cs/#L86">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_DrawTextExtensions_DrawText_" data-uid="SixLabors.ImageSharp.Processing.DrawTextExtensions.DrawText*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_DrawTextExtensions_DrawText__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__SixLabors_ImageSharp_Processing_TextGraphicsOptions_System_String_Font_SixLabors_ImageSharp_Processing_IBrush___0__PointF_" data-uid="SixLabors.ImageSharp.Processing.DrawTextExtensions.DrawText``1(SixLabors.ImageSharp.Processing.IImageProcessingContext{``0},SixLabors.ImageSharp.Processing.TextGraphicsOptions,System.String,Font,SixLabors.ImageSharp.Processing.IBrush{``0},PointF)">DrawText&lt;TPixel&gt;(IImageProcessingContext&lt;TPixel&gt;, TextGraphicsOptions, String, Font, IBrush&lt;TPixel&gt;, PointF)</h4>
+  <h4 id="SixLabors_ImageSharp_Processing_DrawTextExtensions_DrawText_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_TextGraphicsOptions_System_String_Font_SixLabors_ImageSharp_Processing_IBrush_PointF_" data-uid="SixLabors.ImageSharp.Processing.DrawTextExtensions.DrawText(SixLabors.ImageSharp.Processing.IImageProcessingContext,SixLabors.ImageSharp.Processing.TextGraphicsOptions,System.String,Font,SixLabors.ImageSharp.Processing.IBrush,PointF)">DrawText(IImageProcessingContext, TextGraphicsOptions, String, Font, IBrush, PointF)</h4>
   <div class="markdown level1 summary"><p>Draws the text onto the the image filled via the brush.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IImageProcessingContext&lt;TPixel&gt; DrawText&lt;TPixel&gt;(this IImageProcessingContext&lt;TPixel&gt; source, TextGraphicsOptions options, string text, Font font, IBrush&lt;TPixel&gt; brush, PointF location)
-
-    where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public static IImageProcessingContext DrawText(this IImageProcessingContext source, TextGraphicsOptions options, string text, Font font, IBrush brush, PointF location)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -217,7 +197,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><span class="parametername">source</span></td>
         <td><p>The image this method extends.</p>
 </td>
@@ -241,7 +221,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IBrush-1.html">IBrush</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IBrush.html">IBrush</a></td>
         <td><span class="parametername">brush</span></td>
         <td><p>The brush.</p>
 </td>
@@ -264,45 +244,27 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><p>The <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TPixel</span></td>
-        <td><p>The type of the color.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_DrawTextExtensions_DrawText__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__SixLabors_ImageSharp_Processing_TextGraphicsOptions_System_String_Font_SixLabors_ImageSharp_Processing_IBrush___0__SixLabors_ImageSharp_Processing_IPen___0__PointF_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.DrawTextExtensions.DrawText%60%601(SixLabors.ImageSharp.Processing.IImageProcessingContext%7B%60%600%7D%2CSixLabors.ImageSharp.Processing.TextGraphicsOptions%2CSystem.String%2CFont%2CSixLabors.ImageSharp.Processing.IBrush%7B%60%600%7D%2CSixLabors.ImageSharp.Processing.IPen%7B%60%600%7D%2CPointF)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_DrawTextExtensions_DrawText_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_TextGraphicsOptions_System_String_Font_SixLabors_ImageSharp_Processing_IBrush_SixLabors_ImageSharp_Processing_IPen_PointF_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.DrawTextExtensions.DrawText(SixLabors.ImageSharp.Processing.IImageProcessingContext%2CSixLabors.ImageSharp.Processing.TextGraphicsOptions%2CSystem.String%2CFont%2CSixLabors.ImageSharp.Processing.IBrush%2CSixLabors.ImageSharp.Processing.IPen%2CPointF)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp.Drawing/Processing/DrawTextExtensions.cs/#L146">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp.Drawing/Processing/Extensions/DrawTextExtensions.cs/#L169">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_DrawTextExtensions_DrawText_" data-uid="SixLabors.ImageSharp.Processing.DrawTextExtensions.DrawText*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_DrawTextExtensions_DrawText__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__SixLabors_ImageSharp_Processing_TextGraphicsOptions_System_String_Font_SixLabors_ImageSharp_Processing_IBrush___0__SixLabors_ImageSharp_Processing_IPen___0__PointF_" data-uid="SixLabors.ImageSharp.Processing.DrawTextExtensions.DrawText``1(SixLabors.ImageSharp.Processing.IImageProcessingContext{``0},SixLabors.ImageSharp.Processing.TextGraphicsOptions,System.String,Font,SixLabors.ImageSharp.Processing.IBrush{``0},SixLabors.ImageSharp.Processing.IPen{``0},PointF)">DrawText&lt;TPixel&gt;(IImageProcessingContext&lt;TPixel&gt;, TextGraphicsOptions, String, Font, IBrush&lt;TPixel&gt;, IPen&lt;TPixel&gt;, PointF)</h4>
+  <h4 id="SixLabors_ImageSharp_Processing_DrawTextExtensions_DrawText_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_TextGraphicsOptions_System_String_Font_SixLabors_ImageSharp_Processing_IBrush_SixLabors_ImageSharp_Processing_IPen_PointF_" data-uid="SixLabors.ImageSharp.Processing.DrawTextExtensions.DrawText(SixLabors.ImageSharp.Processing.IImageProcessingContext,SixLabors.ImageSharp.Processing.TextGraphicsOptions,System.String,Font,SixLabors.ImageSharp.Processing.IBrush,SixLabors.ImageSharp.Processing.IPen,PointF)">DrawText(IImageProcessingContext, TextGraphicsOptions, String, Font, IBrush, IPen, PointF)</h4>
   <div class="markdown level1 summary"><p>Draws the text using the default resolution of <returns>72dpi</returns> onto the the image filled via the brush then outlined via the pen.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IImageProcessingContext&lt;TPixel&gt; DrawText&lt;TPixel&gt;(this IImageProcessingContext&lt;TPixel&gt; source, TextGraphicsOptions options, string text, Font font, IBrush&lt;TPixel&gt; brush, IPen&lt;TPixel&gt; pen, PointF location)
-
-    where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public static IImageProcessingContext DrawText(this IImageProcessingContext source, TextGraphicsOptions options, string text, Font font, IBrush brush, IPen pen, PointF location)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -315,7 +277,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><span class="parametername">source</span></td>
         <td><p>The image this method extends.</p>
 </td>
@@ -339,13 +301,13 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IBrush-1.html">IBrush</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IBrush.html">IBrush</a></td>
         <td><span class="parametername">brush</span></td>
         <td><p>The brush.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IPen-1.html">IPen</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IPen.html">IPen</a></td>
         <td><span class="parametername">pen</span></td>
         <td><p>The pen.</p>
 </td>
@@ -368,45 +330,27 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><p>The <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TPixel</span></td>
-        <td><p>The type of the color.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_DrawTextExtensions_DrawText__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__SixLabors_ImageSharp_Processing_TextGraphicsOptions_System_String_Font_SixLabors_ImageSharp_Processing_IPen___0__PointF_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.DrawTextExtensions.DrawText%60%601(SixLabors.ImageSharp.Processing.IImageProcessingContext%7B%60%600%7D%2CSixLabors.ImageSharp.Processing.TextGraphicsOptions%2CSystem.String%2CFont%2CSixLabors.ImageSharp.Processing.IPen%7B%60%600%7D%2CPointF)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_DrawTextExtensions_DrawText_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_TextGraphicsOptions_System_String_Font_SixLabors_ImageSharp_Processing_IPen_PointF_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.DrawTextExtensions.DrawText(SixLabors.ImageSharp.Processing.IImageProcessingContext%2CSixLabors.ImageSharp.Processing.TextGraphicsOptions%2CSystem.String%2CFont%2CSixLabors.ImageSharp.Processing.IPen%2CPointF)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp.Drawing/Processing/DrawTextExtensions.cs/#L111">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp.Drawing/Processing/Extensions/DrawTextExtensions.cs/#L126">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_DrawTextExtensions_DrawText_" data-uid="SixLabors.ImageSharp.Processing.DrawTextExtensions.DrawText*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_DrawTextExtensions_DrawText__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__SixLabors_ImageSharp_Processing_TextGraphicsOptions_System_String_Font_SixLabors_ImageSharp_Processing_IPen___0__PointF_" data-uid="SixLabors.ImageSharp.Processing.DrawTextExtensions.DrawText``1(SixLabors.ImageSharp.Processing.IImageProcessingContext{``0},SixLabors.ImageSharp.Processing.TextGraphicsOptions,System.String,Font,SixLabors.ImageSharp.Processing.IPen{``0},PointF)">DrawText&lt;TPixel&gt;(IImageProcessingContext&lt;TPixel&gt;, TextGraphicsOptions, String, Font, IPen&lt;TPixel&gt;, PointF)</h4>
+  <h4 id="SixLabors_ImageSharp_Processing_DrawTextExtensions_DrawText_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_TextGraphicsOptions_System_String_Font_SixLabors_ImageSharp_Processing_IPen_PointF_" data-uid="SixLabors.ImageSharp.Processing.DrawTextExtensions.DrawText(SixLabors.ImageSharp.Processing.IImageProcessingContext,SixLabors.ImageSharp.Processing.TextGraphicsOptions,System.String,Font,SixLabors.ImageSharp.Processing.IPen,PointF)">DrawText(IImageProcessingContext, TextGraphicsOptions, String, Font, IPen, PointF)</h4>
   <div class="markdown level1 summary"><p>Draws the text onto the the image outlined via the pen.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IImageProcessingContext&lt;TPixel&gt; DrawText&lt;TPixel&gt;(this IImageProcessingContext&lt;TPixel&gt; source, TextGraphicsOptions options, string text, Font font, IPen&lt;TPixel&gt; pen, PointF location)
-
-    where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public static IImageProcessingContext DrawText(this IImageProcessingContext source, TextGraphicsOptions options, string text, Font font, IPen pen, PointF location)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -419,7 +363,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><span class="parametername">source</span></td>
         <td><p>The image this method extends.</p>
 </td>
@@ -443,7 +387,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IPen-1.html">IPen</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IPen.html">IPen</a></td>
         <td><span class="parametername">pen</span></td>
         <td><p>The pen.</p>
 </td>
@@ -466,45 +410,27 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><p>The <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TPixel</span></td>
-        <td><p>The type of the color.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_DrawTextExtensions_DrawText__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__System_String_Font___0_PointF_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.DrawTextExtensions.DrawText%60%601(SixLabors.ImageSharp.Processing.IImageProcessingContext%7B%60%600%7D%2CSystem.String%2CFont%2C%60%600%2CPointF)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_DrawTextExtensions_DrawText_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_String_Font_SixLabors_ImageSharp_Color_PointF_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.DrawTextExtensions.DrawText(SixLabors.ImageSharp.Processing.IImageProcessingContext%2CSystem.String%2CFont%2CSixLabors.ImageSharp.Color%2CPointF)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp.Drawing/Processing/DrawTextExtensions.cs/#L28">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp.Drawing/Processing/Extensions/DrawTextExtensions.cs/#L26">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_DrawTextExtensions_DrawText_" data-uid="SixLabors.ImageSharp.Processing.DrawTextExtensions.DrawText*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_DrawTextExtensions_DrawText__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__System_String_Font___0_PointF_" data-uid="SixLabors.ImageSharp.Processing.DrawTextExtensions.DrawText``1(SixLabors.ImageSharp.Processing.IImageProcessingContext{``0},System.String,Font,``0,PointF)">DrawText&lt;TPixel&gt;(IImageProcessingContext&lt;TPixel&gt;, String, Font, TPixel, PointF)</h4>
+  <h4 id="SixLabors_ImageSharp_Processing_DrawTextExtensions_DrawText_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_String_Font_SixLabors_ImageSharp_Color_PointF_" data-uid="SixLabors.ImageSharp.Processing.DrawTextExtensions.DrawText(SixLabors.ImageSharp.Processing.IImageProcessingContext,System.String,Font,SixLabors.ImageSharp.Color,PointF)">DrawText(IImageProcessingContext, String, Font, Color, PointF)</h4>
   <div class="markdown level1 summary"><p>Draws the text onto the the image filled via the brush.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IImageProcessingContext&lt;TPixel&gt; DrawText&lt;TPixel&gt;(this IImageProcessingContext&lt;TPixel&gt; source, string text, Font font, TPixel color, PointF location)
-
-    where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public static IImageProcessingContext DrawText(this IImageProcessingContext source, string text, Font font, Color color, PointF location)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -517,7 +443,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><span class="parametername">source</span></td>
         <td><p>The image this method extends.</p>
 </td>
@@ -535,7 +461,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">TPixel</span></td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Color.html">Color</a></td>
         <td><span class="parametername">color</span></td>
         <td><p>The color.</p>
 </td>
@@ -558,45 +484,27 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><p>The <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TPixel</span></td>
-        <td><p>The type of the color.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_DrawTextExtensions_DrawText__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__System_String_Font_SixLabors_ImageSharp_Processing_IBrush___0__PointF_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.DrawTextExtensions.DrawText%60%601(SixLabors.ImageSharp.Processing.IImageProcessingContext%7B%60%600%7D%2CSystem.String%2CFont%2CSixLabors.ImageSharp.Processing.IBrush%7B%60%600%7D%2CPointF)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_DrawTextExtensions_DrawText_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_String_Font_SixLabors_ImageSharp_Processing_IBrush_PointF_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.DrawTextExtensions.DrawText(SixLabors.ImageSharp.Processing.IImageProcessingContext%2CSystem.String%2CFont%2CSixLabors.ImageSharp.Processing.IBrush%2CPointF)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp.Drawing/Processing/DrawTextExtensions.cs/#L61">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp.Drawing/Processing/Extensions/DrawTextExtensions.cs/#L66">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_DrawTextExtensions_DrawText_" data-uid="SixLabors.ImageSharp.Processing.DrawTextExtensions.DrawText*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_DrawTextExtensions_DrawText__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__System_String_Font_SixLabors_ImageSharp_Processing_IBrush___0__PointF_" data-uid="SixLabors.ImageSharp.Processing.DrawTextExtensions.DrawText``1(SixLabors.ImageSharp.Processing.IImageProcessingContext{``0},System.String,Font,SixLabors.ImageSharp.Processing.IBrush{``0},PointF)">DrawText&lt;TPixel&gt;(IImageProcessingContext&lt;TPixel&gt;, String, Font, IBrush&lt;TPixel&gt;, PointF)</h4>
+  <h4 id="SixLabors_ImageSharp_Processing_DrawTextExtensions_DrawText_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_String_Font_SixLabors_ImageSharp_Processing_IBrush_PointF_" data-uid="SixLabors.ImageSharp.Processing.DrawTextExtensions.DrawText(SixLabors.ImageSharp.Processing.IImageProcessingContext,System.String,Font,SixLabors.ImageSharp.Processing.IBrush,PointF)">DrawText(IImageProcessingContext, String, Font, IBrush, PointF)</h4>
   <div class="markdown level1 summary"><p>Draws the text onto the the image filled via the brush.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IImageProcessingContext&lt;TPixel&gt; DrawText&lt;TPixel&gt;(this IImageProcessingContext&lt;TPixel&gt; source, string text, Font font, IBrush&lt;TPixel&gt; brush, PointF location)
-
-    where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public static IImageProcessingContext DrawText(this IImageProcessingContext source, string text, Font font, IBrush brush, PointF location)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -609,7 +517,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><span class="parametername">source</span></td>
         <td><p>The image this method extends.</p>
 </td>
@@ -627,7 +535,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IBrush-1.html">IBrush</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IBrush.html">IBrush</a></td>
         <td><span class="parametername">brush</span></td>
         <td><p>The brush.</p>
 </td>
@@ -650,45 +558,27 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><p>The <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TPixel</span></td>
-        <td><p>The type of the color.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_DrawTextExtensions_DrawText__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__System_String_Font_SixLabors_ImageSharp_Processing_IBrush___0__SixLabors_ImageSharp_Processing_IPen___0__PointF_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.DrawTextExtensions.DrawText%60%601(SixLabors.ImageSharp.Processing.IImageProcessingContext%7B%60%600%7D%2CSystem.String%2CFont%2CSixLabors.ImageSharp.Processing.IBrush%7B%60%600%7D%2CSixLabors.ImageSharp.Processing.IPen%7B%60%600%7D%2CPointF)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_DrawTextExtensions_DrawText_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_String_Font_SixLabors_ImageSharp_Processing_IBrush_SixLabors_ImageSharp_Processing_IPen_PointF_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.DrawTextExtensions.DrawText(SixLabors.ImageSharp.Processing.IImageProcessingContext%2CSystem.String%2CFont%2CSixLabors.ImageSharp.Processing.IBrush%2CSixLabors.ImageSharp.Processing.IPen%2CPointF)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp.Drawing/Processing/DrawTextExtensions.cs/#L128">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp.Drawing/Processing/Extensions/DrawTextExtensions.cs/#L147">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_DrawTextExtensions_DrawText_" data-uid="SixLabors.ImageSharp.Processing.DrawTextExtensions.DrawText*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_DrawTextExtensions_DrawText__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__System_String_Font_SixLabors_ImageSharp_Processing_IBrush___0__SixLabors_ImageSharp_Processing_IPen___0__PointF_" data-uid="SixLabors.ImageSharp.Processing.DrawTextExtensions.DrawText``1(SixLabors.ImageSharp.Processing.IImageProcessingContext{``0},System.String,Font,SixLabors.ImageSharp.Processing.IBrush{``0},SixLabors.ImageSharp.Processing.IPen{``0},PointF)">DrawText&lt;TPixel&gt;(IImageProcessingContext&lt;TPixel&gt;, String, Font, IBrush&lt;TPixel&gt;, IPen&lt;TPixel&gt;, PointF)</h4>
+  <h4 id="SixLabors_ImageSharp_Processing_DrawTextExtensions_DrawText_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_String_Font_SixLabors_ImageSharp_Processing_IBrush_SixLabors_ImageSharp_Processing_IPen_PointF_" data-uid="SixLabors.ImageSharp.Processing.DrawTextExtensions.DrawText(SixLabors.ImageSharp.Processing.IImageProcessingContext,System.String,Font,SixLabors.ImageSharp.Processing.IBrush,SixLabors.ImageSharp.Processing.IPen,PointF)">DrawText(IImageProcessingContext, String, Font, IBrush, IPen, PointF)</h4>
   <div class="markdown level1 summary"><p>Draws the text onto the the image filled via the brush then outlined via the pen.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IImageProcessingContext&lt;TPixel&gt; DrawText&lt;TPixel&gt;(this IImageProcessingContext&lt;TPixel&gt; source, string text, Font font, IBrush&lt;TPixel&gt; brush, IPen&lt;TPixel&gt; pen, PointF location)
-
-    where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public static IImageProcessingContext DrawText(this IImageProcessingContext source, string text, Font font, IBrush brush, IPen pen, PointF location)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -701,7 +591,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><span class="parametername">source</span></td>
         <td><p>The image this method extends.</p>
 </td>
@@ -719,13 +609,13 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IBrush-1.html">IBrush</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IBrush.html">IBrush</a></td>
         <td><span class="parametername">brush</span></td>
         <td><p>The brush.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IPen-1.html">IPen</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IPen.html">IPen</a></td>
         <td><span class="parametername">pen</span></td>
         <td><p>The pen.</p>
 </td>
@@ -748,45 +638,27 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><p>The <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TPixel</span></td>
-        <td><p>The type of the color.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_DrawTextExtensions_DrawText__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__System_String_Font_SixLabors_ImageSharp_Processing_IPen___0__PointF_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.DrawTextExtensions.DrawText%60%601(SixLabors.ImageSharp.Processing.IImageProcessingContext%7B%60%600%7D%2CSystem.String%2CFont%2CSixLabors.ImageSharp.Processing.IPen%7B%60%600%7D%2CPointF)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_DrawTextExtensions_DrawText_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_String_Font_SixLabors_ImageSharp_Processing_IPen_PointF_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.DrawTextExtensions.DrawText(SixLabors.ImageSharp.Processing.IImageProcessingContext%2CSystem.String%2CFont%2CSixLabors.ImageSharp.Processing.IPen%2CPointF)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp.Drawing/Processing/DrawTextExtensions.cs/#L94">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp.Drawing/Processing/Extensions/DrawTextExtensions.cs/#L106">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_DrawTextExtensions_DrawText_" data-uid="SixLabors.ImageSharp.Processing.DrawTextExtensions.DrawText*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_DrawTextExtensions_DrawText__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__System_String_Font_SixLabors_ImageSharp_Processing_IPen___0__PointF_" data-uid="SixLabors.ImageSharp.Processing.DrawTextExtensions.DrawText``1(SixLabors.ImageSharp.Processing.IImageProcessingContext{``0},System.String,Font,SixLabors.ImageSharp.Processing.IPen{``0},PointF)">DrawText&lt;TPixel&gt;(IImageProcessingContext&lt;TPixel&gt;, String, Font, IPen&lt;TPixel&gt;, PointF)</h4>
+  <h4 id="SixLabors_ImageSharp_Processing_DrawTextExtensions_DrawText_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_String_Font_SixLabors_ImageSharp_Processing_IPen_PointF_" data-uid="SixLabors.ImageSharp.Processing.DrawTextExtensions.DrawText(SixLabors.ImageSharp.Processing.IImageProcessingContext,System.String,Font,SixLabors.ImageSharp.Processing.IPen,PointF)">DrawText(IImageProcessingContext, String, Font, IPen, PointF)</h4>
   <div class="markdown level1 summary"><p>Draws the text onto the the image outlined via the pen.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IImageProcessingContext&lt;TPixel&gt; DrawText&lt;TPixel&gt;(this IImageProcessingContext&lt;TPixel&gt; source, string text, Font font, IPen&lt;TPixel&gt; pen, PointF location)
-
-    where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public static IImageProcessingContext DrawText(this IImageProcessingContext source, string text, Font font, IPen pen, PointF location)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -799,7 +671,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><span class="parametername">source</span></td>
         <td><p>The image this method extends.</p>
 </td>
@@ -817,7 +689,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IPen-1.html">IPen</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IPen.html">IPen</a></td>
         <td><span class="parametername">pen</span></td>
         <td><p>The pen.</p>
 </td>
@@ -840,24 +712,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><p>The <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TPixel</span></td>
-        <td><p>The type of the color.</p>
 </td>
       </tr>
     </tbody>
@@ -873,7 +729,7 @@
                     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_DrawTextExtensions.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.DrawTextExtensions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp.Drawing/Processing/DrawTextExtensions.cs/#L14" class="contribution-link">View Source</a>
+                    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp.Drawing/Processing/Extensions/DrawTextExtensions.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

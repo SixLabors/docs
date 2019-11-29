@@ -5,12 +5,12 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Interface IImageFormat&lt;TFormatMetaData&gt;
+    <title>Interface IImageFormat&lt;TFormatMetadata&gt;
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Interface IImageFormat&lt;TFormatMetaData&gt;
+    <meta name="title" content="Interface IImageFormat&lt;TFormatMetadata&gt;
    ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../../favicon.png">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -72,7 +72,7 @@
             <article class="content wrap" id="_content" data-uid="SixLabors.ImageSharp.Formats.IImageFormat`1">
   
   
-  <h1 id="SixLabors_ImageSharp_Formats_IImageFormat_1" data-uid="SixLabors.ImageSharp.Formats.IImageFormat`1" class="text-break">Interface IImageFormat&lt;TFormatMetaData&gt;
+  <h1 id="SixLabors_ImageSharp_Formats_IImageFormat_1" data-uid="SixLabors.ImageSharp.Formats.IImageFormat`1" class="text-break">Interface IImageFormat&lt;TFormatMetadata&gt;
   </h1>
   <div class="markdown level0 summary"><p>Defines the contract for an image format containing metadata.</p>
 </div>
@@ -96,7 +96,7 @@
   <h6><strong>Assembly</strong>: SixLabors.ImageSharp.dll</h6>
   <h5 id="SixLabors_ImageSharp_Formats_IImageFormat_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IImageFormat&lt;out TFormatMetaData&gt; : IImageFormat where TFormatMetaData : class</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IImageFormat&lt;out TFormatMetadata&gt; : IImageFormat where TFormatMetadata : class</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -108,7 +108,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="parametername">TFormatMetaData</span></td>
+        <td><span class="parametername">TFormatMetadata</span></td>
         <td><p>The type of format metadata.</p>
 </td>
       </tr>
@@ -118,19 +118,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Formats_IImageFormat_1_CreateDefaultFormatMetaData.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Formats.IImageFormat%601.CreateDefaultFormatMetaData%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Formats_IImageFormat_1_CreateDefaultFormatMetadata.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Formats.IImageFormat%601.CreateDefaultFormatMetadata%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/Formats/IImageFormat.cs/#L45">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Formats/IImageFormat.cs/#L45">View Source</a>
   </span>
-  <a id="SixLabors_ImageSharp_Formats_IImageFormat_1_CreateDefaultFormatMetaData_" data-uid="SixLabors.ImageSharp.Formats.IImageFormat`1.CreateDefaultFormatMetaData*"></a>
-  <h4 id="SixLabors_ImageSharp_Formats_IImageFormat_1_CreateDefaultFormatMetaData" data-uid="SixLabors.ImageSharp.Formats.IImageFormat`1.CreateDefaultFormatMetaData">CreateDefaultFormatMetaData()</h4>
+  <a id="SixLabors_ImageSharp_Formats_IImageFormat_1_CreateDefaultFormatMetadata_" data-uid="SixLabors.ImageSharp.Formats.IImageFormat`1.CreateDefaultFormatMetadata*"></a>
+  <h4 id="SixLabors_ImageSharp_Formats_IImageFormat_1_CreateDefaultFormatMetadata" data-uid="SixLabors.ImageSharp.Formats.IImageFormat`1.CreateDefaultFormatMetadata">CreateDefaultFormatMetadata()</h4>
   <div class="markdown level1 summary"><p>Creates a default instance of the format metadata.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">TFormatMetaData CreateDefaultFormatMetaData()</code></pre>
+    <pre><code class="lang-csharp hljs">TFormatMetadata CreateDefaultFormatMetadata()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -142,8 +142,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">TFormatMetaData</span></td>
-        <td><p>The <code data-dev-comment-type="typeparamref" class="typeparamref">TFormatMetaData</code>.</p>
+        <td><span class="xref">TFormatMetadata</span></td>
+        <td><p>The <code data-dev-comment-type="typeparamref" class="typeparamref">TFormatMetadata</code>.</p>
 </td>
       </tr>
     </tbody>
@@ -159,7 +159,7 @@
                     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Formats_IImageFormat_1.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Formats.IImageFormat%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/Formats/IImageFormat.cs/#L38" class="contribution-link">View Source</a>
+                    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Formats/IImageFormat.cs/#L38" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

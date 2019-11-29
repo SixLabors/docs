@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class PhysicalFileSystemProvider
    ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../../favicon.png">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -96,19 +96,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_Providers_PhysicalFileSystemProvider__ctor_IOptions_SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddlewareOptions__IHostingEnvironment_MemoryAllocator_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider.%23ctor(IOptions%7BSixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions%7D%2CIHostingEnvironment%2CMemoryAllocator)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_Providers_PhysicalFileSystemProvider__ctor_IHostingEnvironment_SixLabors_ImageSharp_Web_FormatUtilities_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider.%23ctor(IHostingEnvironment%2CSixLabors.ImageSharp.Web.FormatUtilities)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/0ad58bb128778b7eec37a8784686c43486b92318/src/ImageSharp.Web/Providers/PhysicalFileSystemProvider.cs/#L50">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/5f8107a88d3c7a9a55b17e3d93d708b4888f98be/src/ImageSharp.Web/Providers/PhysicalFileSystemProvider.cs/#L34">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Web_Providers_PhysicalFileSystemProvider__ctor_" data-uid="SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider.#ctor*"></a>
-  <h4 id="SixLabors_ImageSharp_Web_Providers_PhysicalFileSystemProvider__ctor_IOptions_SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddlewareOptions__IHostingEnvironment_MemoryAllocator_" data-uid="SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider.#ctor(IOptions{SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions},IHostingEnvironment,MemoryAllocator)">PhysicalFileSystemProvider(IOptions&lt;ImageSharpMiddlewareOptions&gt;, IHostingEnvironment, MemoryAllocator)</h4>
+  <h4 id="SixLabors_ImageSharp_Web_Providers_PhysicalFileSystemProvider__ctor_IHostingEnvironment_SixLabors_ImageSharp_Web_FormatUtilities_" data-uid="SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider.#ctor(IHostingEnvironment,SixLabors.ImageSharp.Web.FormatUtilities)">PhysicalFileSystemProvider(IHostingEnvironment, FormatUtilities)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider.html">PhysicalFileSystemProvider</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PhysicalFileSystemProvider(IOptions&lt;ImageSharpMiddlewareOptions&gt; options, IHostingEnvironment environment, MemoryAllocator memoryAllocator)</code></pre>
+    <pre><code class="lang-csharp hljs">public PhysicalFileSystemProvider(IHostingEnvironment environment, FormatUtilities formatUtilities)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -121,21 +121,15 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IOptions</span>&lt;<a class="xref" href="SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.html">ImageSharpMiddlewareOptions</a>&gt;</td>
-        <td><span class="parametername">options</span></td>
-        <td><p>The middleware configuration options.</p>
-</td>
-      </tr>
-      <tr>
         <td><span class="xref">IHostingEnvironment</span></td>
         <td><span class="parametername">environment</span></td>
         <td><p>The <see cref="!:IHostingEnvironment"></see> used by this middleware.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">MemoryAllocator</span></td>
-        <td><span class="parametername">memoryAllocator</span></td>
-        <td><p>An <see cref="!:MemoryAllocator"></see> instance used to allocate arrays transporting encoded image data.</p>
+        <td><a class="xref" href="SixLabors.ImageSharp.Web.FormatUtilities.html">FormatUtilities</a></td>
+        <td><span class="parametername">formatUtilities</span></td>
+        <td><p>Contains various format helper methods based on the current configuration.</p>
 </td>
       </tr>
     </tbody>
@@ -147,11 +141,12 @@
     <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_Providers_PhysicalFileSystemProvider_Match.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider.Match%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/0ad58bb128778b7eec37a8784686c43486b92318/src/ImageSharp.Web/Providers/PhysicalFileSystemProvider.cs/#L63">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/5f8107a88d3c7a9a55b17e3d93d708b4888f98be/src/ImageSharp.Web/Providers/PhysicalFileSystemProvider.cs/#L45">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Web_Providers_PhysicalFileSystemProvider_Match_" data-uid="SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider.Match*"></a>
   <h4 id="SixLabors_ImageSharp_Web_Providers_PhysicalFileSystemProvider_Match" data-uid="SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider.Match">Match</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets or sets the method used by the resolver to identify itself as the correct resolver to use.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -172,36 +167,6 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_Providers_PhysicalFileSystemProvider_Settings.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider.Settings%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/0ad58bb128778b7eec37a8784686c43486b92318/src/ImageSharp.Web/Providers/PhysicalFileSystemProvider.cs/#L66">View Source</a>
-  </span>
-  <a id="SixLabors_ImageSharp_Web_Providers_PhysicalFileSystemProvider_Settings_" data-uid="SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider.Settings*"></a>
-  <h4 id="SixLabors_ImageSharp_Web_Providers_PhysicalFileSystemProvider_Settings" data-uid="SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider.Settings">Settings</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IDictionary&lt;string, string&gt; Settings { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
@@ -209,11 +174,12 @@
     <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_Providers_PhysicalFileSystemProvider_GetAsync_HttpContext_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider.GetAsync(HttpContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/0ad58bb128778b7eec37a8784686c43486b92318/src/ImageSharp.Web/Providers/PhysicalFileSystemProvider.cs/#L72">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/5f8107a88d3c7a9a55b17e3d93d708b4888f98be/src/ImageSharp.Web/Providers/PhysicalFileSystemProvider.cs/#L51">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Web_Providers_PhysicalFileSystemProvider_GetAsync_" data-uid="SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider.GetAsync*"></a>
   <h4 id="SixLabors_ImageSharp_Web_Providers_PhysicalFileSystemProvider_GetAsync_HttpContext_" data-uid="SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider.GetAsync(HttpContext)">GetAsync(HttpContext)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the image resolver associated with the context.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -232,7 +198,8 @@
       <tr>
         <td><span class="xref">HttpContext</span></td>
         <td><span class="parametername">context</span></td>
-        <td></td>
+        <td><p>The current HTTP request context.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -247,7 +214,8 @@
     <tbody>
       <tr>
         <td><span class="xref">Task</span>&lt;<a class="xref" href="SixLabors.ImageSharp.Web.Resolvers.IImageResolver.html">IImageResolver</a>&gt;</td>
-        <td></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Web.Resolvers.IImageResolver.html">IImageResolver</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -256,11 +224,12 @@
     <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_Providers_PhysicalFileSystemProvider_IsValidRequest_HttpContext_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider.IsValidRequest(HttpContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/0ad58bb128778b7eec37a8784686c43486b92318/src/ImageSharp.Web/Providers/PhysicalFileSystemProvider.cs/#L69">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/5f8107a88d3c7a9a55b17e3d93d708b4888f98be/src/ImageSharp.Web/Providers/PhysicalFileSystemProvider.cs/#L48">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Web_Providers_PhysicalFileSystemProvider_IsValidRequest_" data-uid="SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider.IsValidRequest*"></a>
   <h4 id="SixLabors_ImageSharp_Web_Providers_PhysicalFileSystemProvider_IsValidRequest_HttpContext_" data-uid="SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider.IsValidRequest(HttpContext)">IsValidRequest(HttpContext)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether the current request passes sanitizing rules.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -279,7 +248,8 @@
       <tr>
         <td><span class="xref">HttpContext</span></td>
         <td><span class="parametername">context</span></td>
-        <td></td>
+        <td><p>The current HTTP request context.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -294,7 +264,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><returns>The <see cref="!:System.Boolean"></see></returns>
+</td>
       </tr>
     </tbody>
   </table>
@@ -313,7 +284,7 @@
                     <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_Providers_PhysicalFileSystemProvider.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/0ad58bb128778b7eec37a8784686c43486b92318/src/ImageSharp.Web/Providers/PhysicalFileSystemProvider.cs/#L22" class="contribution-link">View Source</a>
+                    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/5f8107a88d3c7a9a55b17e3d93d708b4888f98be/src/ImageSharp.Web/Providers/PhysicalFileSystemProvider.cs/#L17" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

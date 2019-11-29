@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class TransformExtensions
    ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../../favicon.png">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -74,7 +74,8 @@
   
   <h1 id="SixLabors_ImageSharp_Processing_TransformExtensions" data-uid="SixLabors.ImageSharp.Processing.TransformExtensions" class="text-break">Class TransformExtensions
   </h1>
-  <div class="markdown level0 summary"><p>Adds extensions that allow the application of composable transform operations to the <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> type.</p>
+  <div class="markdown level0 summary"><p>Defines extensions that allow the application of composable transform operations on an <a class="xref" href="SixLabors.ImageSharp.Image.html">Image</a>
+using Mutate/Clone.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -92,21 +93,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_TransformExtensions_Transform__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__Rectangle_Matrix3x2_Size_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.TransformExtensions.Transform%60%601(SixLabors.ImageSharp.Processing.IImageProcessingContext%7B%60%600%7D%2CRectangle%2CMatrix3x2%2CSize%2CSixLabors.ImageSharp.Processing.Processors.Transforms.IResampler)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_TransformExtensions_Transform_SixLabors_ImageSharp_Processing_IImageProcessingContext_Rectangle_Matrix3x2_Size_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.TransformExtensions.Transform(SixLabors.ImageSharp.Processing.IImageProcessingContext%2CRectangle%2CMatrix3x2%2CSize%2CSixLabors.ImageSharp.Processing.Processors.Transforms.IResampler)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/Processing/TransformExtensions.cs/#L76">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Extensions/TransformExtensions.cs/#L69">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_TransformExtensions_Transform_" data-uid="SixLabors.ImageSharp.Processing.TransformExtensions.Transform*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_TransformExtensions_Transform__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__Rectangle_Matrix3x2_Size_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_" data-uid="SixLabors.ImageSharp.Processing.TransformExtensions.Transform``1(SixLabors.ImageSharp.Processing.IImageProcessingContext{``0},Rectangle,Matrix3x2,Size,SixLabors.ImageSharp.Processing.Processors.Transforms.IResampler)">Transform&lt;TPixel&gt;(IImageProcessingContext&lt;TPixel&gt;, Rectangle, Matrix3x2, Size, IResampler)</h4>
+  <h4 id="SixLabors_ImageSharp_Processing_TransformExtensions_Transform_SixLabors_ImageSharp_Processing_IImageProcessingContext_Rectangle_Matrix3x2_Size_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_" data-uid="SixLabors.ImageSharp.Processing.TransformExtensions.Transform(SixLabors.ImageSharp.Processing.IImageProcessingContext,Rectangle,Matrix3x2,Size,SixLabors.ImageSharp.Processing.Processors.Transforms.IResampler)">Transform(IImageProcessingContext, Rectangle, Matrix3x2, Size, IResampler)</h4>
   <div class="markdown level1 summary"><p>Performs an affine transform of an image using the specified sampling algorithm.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IImageProcessingContext&lt;TPixel&gt; Transform&lt;TPixel&gt;(this IImageProcessingContext&lt;TPixel&gt; ctx, Rectangle sourceRectangle, Matrix3x2 transform, Size targetDimensions, IResampler sampler)
-
-    where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public static IImageProcessingContext Transform(this IImageProcessingContext ctx, Rectangle sourceRectangle, Matrix3x2 transform, Size targetDimensions, IResampler sampler)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -119,9 +118,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><span class="parametername">ctx</span></td>
-        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext&lt;TPixel&gt;</a>.</p>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a>.</p>
 </td>
       </tr>
       <tr>
@@ -160,45 +159,27 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
-        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TPixel</span></td>
-        <td><p>The pixel format.</p>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a> to allow chaining of operations.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_TransformExtensions_Transform__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__Rectangle_Matrix4x4_Size_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.TransformExtensions.Transform%60%601(SixLabors.ImageSharp.Processing.IImageProcessingContext%7B%60%600%7D%2CRectangle%2CMatrix4x4%2CSize%2CSixLabors.ImageSharp.Processing.Processors.Transforms.IResampler)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_TransformExtensions_Transform_SixLabors_ImageSharp_Processing_IImageProcessingContext_Rectangle_Matrix4x4_Size_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.TransformExtensions.Transform(SixLabors.ImageSharp.Processing.IImageProcessingContext%2CRectangle%2CMatrix4x4%2CSize%2CSixLabors.ImageSharp.Processing.Processors.Transforms.IResampler)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/Processing/TransformExtensions.cs/#L148">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Extensions/TransformExtensions.cs/#L133">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_TransformExtensions_Transform_" data-uid="SixLabors.ImageSharp.Processing.TransformExtensions.Transform*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_TransformExtensions_Transform__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__Rectangle_Matrix4x4_Size_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_" data-uid="SixLabors.ImageSharp.Processing.TransformExtensions.Transform``1(SixLabors.ImageSharp.Processing.IImageProcessingContext{``0},Rectangle,Matrix4x4,Size,SixLabors.ImageSharp.Processing.Processors.Transforms.IResampler)">Transform&lt;TPixel&gt;(IImageProcessingContext&lt;TPixel&gt;, Rectangle, Matrix4x4, Size, IResampler)</h4>
+  <h4 id="SixLabors_ImageSharp_Processing_TransformExtensions_Transform_SixLabors_ImageSharp_Processing_IImageProcessingContext_Rectangle_Matrix4x4_Size_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_" data-uid="SixLabors.ImageSharp.Processing.TransformExtensions.Transform(SixLabors.ImageSharp.Processing.IImageProcessingContext,Rectangle,Matrix4x4,Size,SixLabors.ImageSharp.Processing.Processors.Transforms.IResampler)">Transform(IImageProcessingContext, Rectangle, Matrix4x4, Size, IResampler)</h4>
   <div class="markdown level1 summary"><p>Performs a projective transform of an image using the specified sampling algorithm.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IImageProcessingContext&lt;TPixel&gt; Transform&lt;TPixel&gt;(this IImageProcessingContext&lt;TPixel&gt; ctx, Rectangle sourceRectangle, Matrix4x4 transform, Size targetDimensions, IResampler sampler)
-
-    where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public static IImageProcessingContext Transform(this IImageProcessingContext ctx, Rectangle sourceRectangle, Matrix4x4 transform, Size targetDimensions, IResampler sampler)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -211,9 +192,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><span class="parametername">ctx</span></td>
-        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext&lt;TPixel&gt;</a>.</p>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a>.</p>
 </td>
       </tr>
       <tr>
@@ -252,45 +233,27 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
-        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TPixel</span></td>
-        <td><p>The pixel format.</p>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a> to allow chaining of operations.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_TransformExtensions_Transform__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__Rectangle_SixLabors_ImageSharp_Processing_AffineTransformBuilder_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.TransformExtensions.Transform%60%601(SixLabors.ImageSharp.Processing.IImageProcessingContext%7B%60%600%7D%2CRectangle%2CSixLabors.ImageSharp.Processing.AffineTransformBuilder%2CSixLabors.ImageSharp.Processing.Processors.Transforms.IResampler)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_TransformExtensions_Transform_SixLabors_ImageSharp_Processing_IImageProcessingContext_Rectangle_SixLabors_ImageSharp_Processing_AffineTransformBuilder_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.TransformExtensions.Transform(SixLabors.ImageSharp.Processing.IImageProcessingContext%2CRectangle%2CSixLabors.ImageSharp.Processing.AffineTransformBuilder%2CSixLabors.ImageSharp.Processing.Processors.Transforms.IResampler)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/Processing/TransformExtensions.cs/#L54">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Extensions/TransformExtensions.cs/#L49">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_TransformExtensions_Transform_" data-uid="SixLabors.ImageSharp.Processing.TransformExtensions.Transform*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_TransformExtensions_Transform__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__Rectangle_SixLabors_ImageSharp_Processing_AffineTransformBuilder_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_" data-uid="SixLabors.ImageSharp.Processing.TransformExtensions.Transform``1(SixLabors.ImageSharp.Processing.IImageProcessingContext{``0},Rectangle,SixLabors.ImageSharp.Processing.AffineTransformBuilder,SixLabors.ImageSharp.Processing.Processors.Transforms.IResampler)">Transform&lt;TPixel&gt;(IImageProcessingContext&lt;TPixel&gt;, Rectangle, AffineTransformBuilder, IResampler)</h4>
+  <h4 id="SixLabors_ImageSharp_Processing_TransformExtensions_Transform_SixLabors_ImageSharp_Processing_IImageProcessingContext_Rectangle_SixLabors_ImageSharp_Processing_AffineTransformBuilder_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_" data-uid="SixLabors.ImageSharp.Processing.TransformExtensions.Transform(SixLabors.ImageSharp.Processing.IImageProcessingContext,Rectangle,SixLabors.ImageSharp.Processing.AffineTransformBuilder,SixLabors.ImageSharp.Processing.Processors.Transforms.IResampler)">Transform(IImageProcessingContext, Rectangle, AffineTransformBuilder, IResampler)</h4>
   <div class="markdown level1 summary"><p>Performs an affine transform of an image using the specified sampling algorithm.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IImageProcessingContext&lt;TPixel&gt; Transform&lt;TPixel&gt;(this IImageProcessingContext&lt;TPixel&gt; ctx, Rectangle sourceRectangle, AffineTransformBuilder builder, IResampler sampler)
-
-    where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public static IImageProcessingContext Transform(this IImageProcessingContext ctx, Rectangle sourceRectangle, AffineTransformBuilder builder, IResampler sampler)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -303,9 +266,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><span class="parametername">ctx</span></td>
-        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext&lt;TPixel&gt;</a>.</p>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a>.</p>
 </td>
       </tr>
       <tr>
@@ -338,45 +301,27 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
-        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TPixel</span></td>
-        <td><p>The pixel format.</p>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a> to allow chaining of operations.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_TransformExtensions_Transform__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__Rectangle_SixLabors_ImageSharp_Processing_ProjectiveTransformBuilder_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.TransformExtensions.Transform%60%601(SixLabors.ImageSharp.Processing.IImageProcessingContext%7B%60%600%7D%2CRectangle%2CSixLabors.ImageSharp.Processing.ProjectiveTransformBuilder%2CSixLabors.ImageSharp.Processing.Processors.Transforms.IResampler)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_TransformExtensions_Transform_SixLabors_ImageSharp_Processing_IImageProcessingContext_Rectangle_SixLabors_ImageSharp_Processing_ProjectiveTransformBuilder_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.TransformExtensions.Transform(SixLabors.ImageSharp.Processing.IImageProcessingContext%2CRectangle%2CSixLabors.ImageSharp.Processing.ProjectiveTransformBuilder%2CSixLabors.ImageSharp.Processing.Processors.Transforms.IResampler)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/Processing/TransformExtensions.cs/#L126">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Extensions/TransformExtensions.cs/#L113">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_TransformExtensions_Transform_" data-uid="SixLabors.ImageSharp.Processing.TransformExtensions.Transform*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_TransformExtensions_Transform__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__Rectangle_SixLabors_ImageSharp_Processing_ProjectiveTransformBuilder_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_" data-uid="SixLabors.ImageSharp.Processing.TransformExtensions.Transform``1(SixLabors.ImageSharp.Processing.IImageProcessingContext{``0},Rectangle,SixLabors.ImageSharp.Processing.ProjectiveTransformBuilder,SixLabors.ImageSharp.Processing.Processors.Transforms.IResampler)">Transform&lt;TPixel&gt;(IImageProcessingContext&lt;TPixel&gt;, Rectangle, ProjectiveTransformBuilder, IResampler)</h4>
+  <h4 id="SixLabors_ImageSharp_Processing_TransformExtensions_Transform_SixLabors_ImageSharp_Processing_IImageProcessingContext_Rectangle_SixLabors_ImageSharp_Processing_ProjectiveTransformBuilder_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_" data-uid="SixLabors.ImageSharp.Processing.TransformExtensions.Transform(SixLabors.ImageSharp.Processing.IImageProcessingContext,Rectangle,SixLabors.ImageSharp.Processing.ProjectiveTransformBuilder,SixLabors.ImageSharp.Processing.Processors.Transforms.IResampler)">Transform(IImageProcessingContext, Rectangle, ProjectiveTransformBuilder, IResampler)</h4>
   <div class="markdown level1 summary"><p>Performs a projective transform of an image using the specified sampling algorithm.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IImageProcessingContext&lt;TPixel&gt; Transform&lt;TPixel&gt;(this IImageProcessingContext&lt;TPixel&gt; ctx, Rectangle sourceRectangle, ProjectiveTransformBuilder builder, IResampler sampler)
-
-    where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public static IImageProcessingContext Transform(this IImageProcessingContext ctx, Rectangle sourceRectangle, ProjectiveTransformBuilder builder, IResampler sampler)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -389,9 +334,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><span class="parametername">ctx</span></td>
-        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext&lt;TPixel&gt;</a>.</p>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a>.</p>
 </td>
       </tr>
       <tr>
@@ -424,45 +369,27 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
-        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TPixel</span></td>
-        <td><p>The pixel format.</p>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a> to allow chaining of operations.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_TransformExtensions_Transform__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__SixLabors_ImageSharp_Processing_AffineTransformBuilder_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.TransformExtensions.Transform%60%601(SixLabors.ImageSharp.Processing.IImageProcessingContext%7B%60%600%7D%2CSixLabors.ImageSharp.Processing.AffineTransformBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_TransformExtensions_Transform_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_AffineTransformBuilder_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.TransformExtensions.Transform(SixLabors.ImageSharp.Processing.IImageProcessingContext%2CSixLabors.ImageSharp.Processing.AffineTransformBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/Processing/TransformExtensions.cs/#L24">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Extensions/TransformExtensions.cs/#L23">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_TransformExtensions_Transform_" data-uid="SixLabors.ImageSharp.Processing.TransformExtensions.Transform*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_TransformExtensions_Transform__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__SixLabors_ImageSharp_Processing_AffineTransformBuilder_" data-uid="SixLabors.ImageSharp.Processing.TransformExtensions.Transform``1(SixLabors.ImageSharp.Processing.IImageProcessingContext{``0},SixLabors.ImageSharp.Processing.AffineTransformBuilder)">Transform&lt;TPixel&gt;(IImageProcessingContext&lt;TPixel&gt;, AffineTransformBuilder)</h4>
+  <h4 id="SixLabors_ImageSharp_Processing_TransformExtensions_Transform_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_AffineTransformBuilder_" data-uid="SixLabors.ImageSharp.Processing.TransformExtensions.Transform(SixLabors.ImageSharp.Processing.IImageProcessingContext,SixLabors.ImageSharp.Processing.AffineTransformBuilder)">Transform(IImageProcessingContext, AffineTransformBuilder)</h4>
   <div class="markdown level1 summary"><p>Performs an affine transform of an image.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IImageProcessingContext&lt;TPixel&gt; Transform&lt;TPixel&gt;(this IImageProcessingContext&lt;TPixel&gt; source, AffineTransformBuilder builder)
-
-    where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public static IImageProcessingContext Transform(this IImageProcessingContext source, AffineTransformBuilder builder)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -475,7 +402,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><span class="parametername">source</span></td>
         <td><p>The image to transform.</p>
 </td>
@@ -498,45 +425,27 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><p>The <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TPixel</span></td>
-        <td><p>The pixel format.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_TransformExtensions_Transform__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__SixLabors_ImageSharp_Processing_AffineTransformBuilder_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.TransformExtensions.Transform%60%601(SixLabors.ImageSharp.Processing.IImageProcessingContext%7B%60%600%7D%2CSixLabors.ImageSharp.Processing.AffineTransformBuilder%2CSixLabors.ImageSharp.Processing.Processors.Transforms.IResampler)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_TransformExtensions_Transform_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_AffineTransformBuilder_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.TransformExtensions.Transform(SixLabors.ImageSharp.Processing.IImageProcessingContext%2CSixLabors.ImageSharp.Processing.AffineTransformBuilder%2CSixLabors.ImageSharp.Processing.Processors.Transforms.IResampler)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/Processing/TransformExtensions.cs/#L38">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Extensions/TransformExtensions.cs/#L35">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_TransformExtensions_Transform_" data-uid="SixLabors.ImageSharp.Processing.TransformExtensions.Transform*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_TransformExtensions_Transform__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__SixLabors_ImageSharp_Processing_AffineTransformBuilder_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_" data-uid="SixLabors.ImageSharp.Processing.TransformExtensions.Transform``1(SixLabors.ImageSharp.Processing.IImageProcessingContext{``0},SixLabors.ImageSharp.Processing.AffineTransformBuilder,SixLabors.ImageSharp.Processing.Processors.Transforms.IResampler)">Transform&lt;TPixel&gt;(IImageProcessingContext&lt;TPixel&gt;, AffineTransformBuilder, IResampler)</h4>
+  <h4 id="SixLabors_ImageSharp_Processing_TransformExtensions_Transform_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_AffineTransformBuilder_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_" data-uid="SixLabors.ImageSharp.Processing.TransformExtensions.Transform(SixLabors.ImageSharp.Processing.IImageProcessingContext,SixLabors.ImageSharp.Processing.AffineTransformBuilder,SixLabors.ImageSharp.Processing.Processors.Transforms.IResampler)">Transform(IImageProcessingContext, AffineTransformBuilder, IResampler)</h4>
   <div class="markdown level1 summary"><p>Performs an affine transform of an image using the specified sampling algorithm.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IImageProcessingContext&lt;TPixel&gt; Transform&lt;TPixel&gt;(this IImageProcessingContext&lt;TPixel&gt; ctx, AffineTransformBuilder builder, IResampler sampler)
-
-    where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public static IImageProcessingContext Transform(this IImageProcessingContext ctx, AffineTransformBuilder builder, IResampler sampler)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -549,9 +458,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><span class="parametername">ctx</span></td>
-        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext&lt;TPixel&gt;</a>.</p>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a>.</p>
 </td>
       </tr>
       <tr>
@@ -578,45 +487,27 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
-        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TPixel</span></td>
-        <td><p>The pixel format.</p>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a> to allow chaining of operations.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_TransformExtensions_Transform__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__SixLabors_ImageSharp_Processing_ProjectiveTransformBuilder_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.TransformExtensions.Transform%60%601(SixLabors.ImageSharp.Processing.IImageProcessingContext%7B%60%600%7D%2CSixLabors.ImageSharp.Processing.ProjectiveTransformBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_TransformExtensions_Transform_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_ProjectiveTransformBuilder_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.TransformExtensions.Transform(SixLabors.ImageSharp.Processing.IImageProcessingContext%2CSixLabors.ImageSharp.Processing.ProjectiveTransformBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/Processing/TransformExtensions.cs/#L96">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Extensions/TransformExtensions.cs/#L87">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_TransformExtensions_Transform_" data-uid="SixLabors.ImageSharp.Processing.TransformExtensions.Transform*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_TransformExtensions_Transform__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__SixLabors_ImageSharp_Processing_ProjectiveTransformBuilder_" data-uid="SixLabors.ImageSharp.Processing.TransformExtensions.Transform``1(SixLabors.ImageSharp.Processing.IImageProcessingContext{``0},SixLabors.ImageSharp.Processing.ProjectiveTransformBuilder)">Transform&lt;TPixel&gt;(IImageProcessingContext&lt;TPixel&gt;, ProjectiveTransformBuilder)</h4>
+  <h4 id="SixLabors_ImageSharp_Processing_TransformExtensions_Transform_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_ProjectiveTransformBuilder_" data-uid="SixLabors.ImageSharp.Processing.TransformExtensions.Transform(SixLabors.ImageSharp.Processing.IImageProcessingContext,SixLabors.ImageSharp.Processing.ProjectiveTransformBuilder)">Transform(IImageProcessingContext, ProjectiveTransformBuilder)</h4>
   <div class="markdown level1 summary"><p>Performs a projective transform of an image.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IImageProcessingContext&lt;TPixel&gt; Transform&lt;TPixel&gt;(this IImageProcessingContext&lt;TPixel&gt; source, ProjectiveTransformBuilder builder)
-
-    where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public static IImageProcessingContext Transform(this IImageProcessingContext source, ProjectiveTransformBuilder builder)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -629,7 +520,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><span class="parametername">source</span></td>
         <td><p>The image to transform.</p>
 </td>
@@ -652,45 +543,27 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
-        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TPixel</span></td>
-        <td><p>The pixel format.</p>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a> to allow chaining of operations.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_TransformExtensions_Transform__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__SixLabors_ImageSharp_Processing_ProjectiveTransformBuilder_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.TransformExtensions.Transform%60%601(SixLabors.ImageSharp.Processing.IImageProcessingContext%7B%60%600%7D%2CSixLabors.ImageSharp.Processing.ProjectiveTransformBuilder%2CSixLabors.ImageSharp.Processing.Processors.Transforms.IResampler)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_TransformExtensions_Transform_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_ProjectiveTransformBuilder_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.TransformExtensions.Transform(SixLabors.ImageSharp.Processing.IImageProcessingContext%2CSixLabors.ImageSharp.Processing.ProjectiveTransformBuilder%2CSixLabors.ImageSharp.Processing.Processors.Transforms.IResampler)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/Processing/TransformExtensions.cs/#L110">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Extensions/TransformExtensions.cs/#L99">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_TransformExtensions_Transform_" data-uid="SixLabors.ImageSharp.Processing.TransformExtensions.Transform*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_TransformExtensions_Transform__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__SixLabors_ImageSharp_Processing_ProjectiveTransformBuilder_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_" data-uid="SixLabors.ImageSharp.Processing.TransformExtensions.Transform``1(SixLabors.ImageSharp.Processing.IImageProcessingContext{``0},SixLabors.ImageSharp.Processing.ProjectiveTransformBuilder,SixLabors.ImageSharp.Processing.Processors.Transforms.IResampler)">Transform&lt;TPixel&gt;(IImageProcessingContext&lt;TPixel&gt;, ProjectiveTransformBuilder, IResampler)</h4>
+  <h4 id="SixLabors_ImageSharp_Processing_TransformExtensions_Transform_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_ProjectiveTransformBuilder_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_" data-uid="SixLabors.ImageSharp.Processing.TransformExtensions.Transform(SixLabors.ImageSharp.Processing.IImageProcessingContext,SixLabors.ImageSharp.Processing.ProjectiveTransformBuilder,SixLabors.ImageSharp.Processing.Processors.Transforms.IResampler)">Transform(IImageProcessingContext, ProjectiveTransformBuilder, IResampler)</h4>
   <div class="markdown level1 summary"><p>Performs a projective transform of an image using the specified sampling algorithm.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IImageProcessingContext&lt;TPixel&gt; Transform&lt;TPixel&gt;(this IImageProcessingContext&lt;TPixel&gt; ctx, ProjectiveTransformBuilder builder, IResampler sampler)
-
-    where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public static IImageProcessingContext Transform(this IImageProcessingContext ctx, ProjectiveTransformBuilder builder, IResampler sampler)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -703,9 +576,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><span class="parametername">ctx</span></td>
-        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext&lt;TPixel&gt;</a>.</p>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a>.</p>
 </td>
       </tr>
       <tr>
@@ -732,24 +605,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
-        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TPixel</span></td>
-        <td><p>The pixel format.</p>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a> to allow chaining of operations.</p>
 </td>
       </tr>
     </tbody>
@@ -765,7 +622,7 @@
                     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_TransformExtensions.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.TransformExtensions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/Processing/TransformExtensions.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Extensions/TransformExtensions.cs/#L15" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class FillRegionExtensions
    ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../../favicon.png">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -92,21 +92,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_FillRegionExtensions_Fill__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0____0_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.FillRegionExtensions.Fill%60%601(SixLabors.ImageSharp.Processing.IImageProcessingContext%7B%60%600%7D%2C%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_FillRegionExtensions_Fill_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Color_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.FillRegionExtensions.Fill(SixLabors.ImageSharp.Processing.IImageProcessingContext%2CSixLabors.ImageSharp.Color)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp.Drawing/Processing/FillRegionExtensions.cs/#L33">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp.Drawing/Processing/Extensions/FillRegionExtensions.cs/#L29">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_FillRegionExtensions_Fill_" data-uid="SixLabors.ImageSharp.Processing.FillRegionExtensions.Fill*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_FillRegionExtensions_Fill__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0____0_" data-uid="SixLabors.ImageSharp.Processing.FillRegionExtensions.Fill``1(SixLabors.ImageSharp.Processing.IImageProcessingContext{``0},``0)">Fill&lt;TPixel&gt;(IImageProcessingContext&lt;TPixel&gt;, TPixel)</h4>
+  <h4 id="SixLabors_ImageSharp_Processing_FillRegionExtensions_Fill_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Color_" data-uid="SixLabors.ImageSharp.Processing.FillRegionExtensions.Fill(SixLabors.ImageSharp.Processing.IImageProcessingContext,SixLabors.ImageSharp.Color)">Fill(IImageProcessingContext, Color)</h4>
   <div class="markdown level1 summary"><p>Flood fills the image with the specified color.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IImageProcessingContext&lt;TPixel&gt; Fill&lt;TPixel&gt;(this IImageProcessingContext&lt;TPixel&gt; source, TPixel color)
-
-    where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public static IImageProcessingContext Fill(this IImageProcessingContext source, Color color)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -119,13 +117,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><span class="parametername">source</span></td>
         <td><p>The image this method extends.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">TPixel</span></td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Color.html">Color</a></td>
         <td><span class="parametername">color</span></td>
         <td><p>The color.</p>
 </td>
@@ -142,45 +140,27 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><p>The <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TPixel</span></td>
-        <td><p>The type of the color.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_FillRegionExtensions_Fill__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0____0_SixLabors_ImageSharp_Primitives_Region_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.FillRegionExtensions.Fill%60%601(SixLabors.ImageSharp.Processing.IImageProcessingContext%7B%60%600%7D%2C%60%600%2CSixLabors.ImageSharp.Primitives.Region)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_FillRegionExtensions_Fill_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Color_SixLabors_ImageSharp_Primitives_Region_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.FillRegionExtensions.Fill(SixLabors.ImageSharp.Processing.IImageProcessingContext%2CSixLabors.ImageSharp.Color%2CSixLabors.ImageSharp.Primitives.Region)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp.Drawing/Processing/FillRegionExtensions.cs/#L70">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp.Drawing/Processing/Extensions/FillRegionExtensions.cs/#L64">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_FillRegionExtensions_Fill_" data-uid="SixLabors.ImageSharp.Processing.FillRegionExtensions.Fill*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_FillRegionExtensions_Fill__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0____0_SixLabors_ImageSharp_Primitives_Region_" data-uid="SixLabors.ImageSharp.Processing.FillRegionExtensions.Fill``1(SixLabors.ImageSharp.Processing.IImageProcessingContext{``0},``0,SixLabors.ImageSharp.Primitives.Region)">Fill&lt;TPixel&gt;(IImageProcessingContext&lt;TPixel&gt;, TPixel, Region)</h4>
+  <h4 id="SixLabors_ImageSharp_Processing_FillRegionExtensions_Fill_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Color_SixLabors_ImageSharp_Primitives_Region_" data-uid="SixLabors.ImageSharp.Processing.FillRegionExtensions.Fill(SixLabors.ImageSharp.Processing.IImageProcessingContext,SixLabors.ImageSharp.Color,SixLabors.ImageSharp.Primitives.Region)">Fill(IImageProcessingContext, Color, Region)</h4>
   <div class="markdown level1 summary"><p>Flood fills the image with in the region with the specified color.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IImageProcessingContext&lt;TPixel&gt; Fill&lt;TPixel&gt;(this IImageProcessingContext&lt;TPixel&gt; source, TPixel color, Region region)
-
-    where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public static IImageProcessingContext Fill(this IImageProcessingContext source, Color color, Region region)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -193,13 +173,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><span class="parametername">source</span></td>
         <td><p>The image this method extends.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">TPixel</span></td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Color.html">Color</a></td>
         <td><span class="parametername">color</span></td>
         <td><p>The color.</p>
 </td>
@@ -222,45 +202,27 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><p>The <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TPixel</span></td>
-        <td><p>The type of the color.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_FillRegionExtensions_Fill__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__SixLabors_ImageSharp_GraphicsOptions___0_SixLabors_ImageSharp_Primitives_Region_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.FillRegionExtensions.Fill%60%601(SixLabors.ImageSharp.Processing.IImageProcessingContext%7B%60%600%7D%2CSixLabors.ImageSharp.GraphicsOptions%2C%60%600%2CSixLabors.ImageSharp.Primitives.Region)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_FillRegionExtensions_Fill_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Color_SixLabors_ImageSharp_Primitives_Region_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.FillRegionExtensions.Fill(SixLabors.ImageSharp.Processing.IImageProcessingContext%2CSixLabors.ImageSharp.GraphicsOptions%2CSixLabors.ImageSharp.Color%2CSixLabors.ImageSharp.Primitives.Region)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp.Drawing/Processing/FillRegionExtensions.cs/#L58">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp.Drawing/Processing/Extensions/FillRegionExtensions.cs/#L50">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_FillRegionExtensions_Fill_" data-uid="SixLabors.ImageSharp.Processing.FillRegionExtensions.Fill*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_FillRegionExtensions_Fill__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__SixLabors_ImageSharp_GraphicsOptions___0_SixLabors_ImageSharp_Primitives_Region_" data-uid="SixLabors.ImageSharp.Processing.FillRegionExtensions.Fill``1(SixLabors.ImageSharp.Processing.IImageProcessingContext{``0},SixLabors.ImageSharp.GraphicsOptions,``0,SixLabors.ImageSharp.Primitives.Region)">Fill&lt;TPixel&gt;(IImageProcessingContext&lt;TPixel&gt;, GraphicsOptions, TPixel, Region)</h4>
+  <h4 id="SixLabors_ImageSharp_Processing_FillRegionExtensions_Fill_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Color_SixLabors_ImageSharp_Primitives_Region_" data-uid="SixLabors.ImageSharp.Processing.FillRegionExtensions.Fill(SixLabors.ImageSharp.Processing.IImageProcessingContext,SixLabors.ImageSharp.GraphicsOptions,SixLabors.ImageSharp.Color,SixLabors.ImageSharp.Primitives.Region)">Fill(IImageProcessingContext, GraphicsOptions, Color, Region)</h4>
   <div class="markdown level1 summary"><p>Flood fills the image with in the region with the specified color.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IImageProcessingContext&lt;TPixel&gt; Fill&lt;TPixel&gt;(this IImageProcessingContext&lt;TPixel&gt; source, GraphicsOptions options, TPixel color, Region region)
-
-    where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public static IImageProcessingContext Fill(this IImageProcessingContext source, GraphicsOptions options, Color color, Region region)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -273,7 +235,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><span class="parametername">source</span></td>
         <td><p>The image this method extends.</p>
 </td>
@@ -285,7 +247,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">TPixel</span></td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Color.html">Color</a></td>
         <td><span class="parametername">color</span></td>
         <td><p>The color.</p>
 </td>
@@ -308,45 +270,27 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><p>The <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TPixel</span></td>
-        <td><p>The type of the color.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_FillRegionExtensions_Fill__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Processing_IBrush___0__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.FillRegionExtensions.Fill%60%601(SixLabors.ImageSharp.Processing.IImageProcessingContext%7B%60%600%7D%2CSixLabors.ImageSharp.GraphicsOptions%2CSixLabors.ImageSharp.Processing.IBrush%7B%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_FillRegionExtensions_Fill_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Processing_IBrush_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.FillRegionExtensions.Fill(SixLabors.ImageSharp.Processing.IImageProcessingContext%2CSixLabors.ImageSharp.GraphicsOptions%2CSixLabors.ImageSharp.Processing.IBrush)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp.Drawing/Processing/FillRegionExtensions.cs/#L95">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp.Drawing/Processing/Extensions/FillRegionExtensions.cs/#L89">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_FillRegionExtensions_Fill_" data-uid="SixLabors.ImageSharp.Processing.FillRegionExtensions.Fill*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_FillRegionExtensions_Fill__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Processing_IBrush___0__" data-uid="SixLabors.ImageSharp.Processing.FillRegionExtensions.Fill``1(SixLabors.ImageSharp.Processing.IImageProcessingContext{``0},SixLabors.ImageSharp.GraphicsOptions,SixLabors.ImageSharp.Processing.IBrush{``0})">Fill&lt;TPixel&gt;(IImageProcessingContext&lt;TPixel&gt;, GraphicsOptions, IBrush&lt;TPixel&gt;)</h4>
+  <h4 id="SixLabors_ImageSharp_Processing_FillRegionExtensions_Fill_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Processing_IBrush_" data-uid="SixLabors.ImageSharp.Processing.FillRegionExtensions.Fill(SixLabors.ImageSharp.Processing.IImageProcessingContext,SixLabors.ImageSharp.GraphicsOptions,SixLabors.ImageSharp.Processing.IBrush)">Fill(IImageProcessingContext, GraphicsOptions, IBrush)</h4>
   <div class="markdown level1 summary"><p>Flood fills the image with the specified brush.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IImageProcessingContext&lt;TPixel&gt; Fill&lt;TPixel&gt;(this IImageProcessingContext&lt;TPixel&gt; source, GraphicsOptions options, IBrush&lt;TPixel&gt; brush)
-
-    where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public static IImageProcessingContext Fill(this IImageProcessingContext source, GraphicsOptions options, IBrush brush)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -359,7 +303,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><span class="parametername">source</span></td>
         <td><p>The image this method extends.</p>
 </td>
@@ -371,7 +315,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IBrush-1.html">IBrush</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IBrush.html">IBrush</a></td>
         <td><span class="parametername">brush</span></td>
         <td><p>The details how to fill the region of interest.</p>
 </td>
@@ -388,45 +332,27 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><p>The <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TPixel</span></td>
-        <td><p>The type of the color.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_FillRegionExtensions_Fill__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Processing_IBrush___0__SixLabors_ImageSharp_Primitives_Region_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.FillRegionExtensions.Fill%60%601(SixLabors.ImageSharp.Processing.IImageProcessingContext%7B%60%600%7D%2CSixLabors.ImageSharp.GraphicsOptions%2CSixLabors.ImageSharp.Processing.IBrush%7B%60%600%7D%2CSixLabors.ImageSharp.Primitives.Region)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_FillRegionExtensions_Fill_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Processing_IBrush_SixLabors_ImageSharp_Primitives_Region_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.FillRegionExtensions.Fill(SixLabors.ImageSharp.Processing.IImageProcessingContext%2CSixLabors.ImageSharp.GraphicsOptions%2CSixLabors.ImageSharp.Processing.IBrush%2CSixLabors.ImageSharp.Primitives.Region)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp.Drawing/Processing/FillRegionExtensions.cs/#L83">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp.Drawing/Processing/Extensions/FillRegionExtensions.cs/#L75">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_FillRegionExtensions_Fill_" data-uid="SixLabors.ImageSharp.Processing.FillRegionExtensions.Fill*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_FillRegionExtensions_Fill__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Processing_IBrush___0__SixLabors_ImageSharp_Primitives_Region_" data-uid="SixLabors.ImageSharp.Processing.FillRegionExtensions.Fill``1(SixLabors.ImageSharp.Processing.IImageProcessingContext{``0},SixLabors.ImageSharp.GraphicsOptions,SixLabors.ImageSharp.Processing.IBrush{``0},SixLabors.ImageSharp.Primitives.Region)">Fill&lt;TPixel&gt;(IImageProcessingContext&lt;TPixel&gt;, GraphicsOptions, IBrush&lt;TPixel&gt;, Region)</h4>
+  <h4 id="SixLabors_ImageSharp_Processing_FillRegionExtensions_Fill_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Processing_IBrush_SixLabors_ImageSharp_Primitives_Region_" data-uid="SixLabors.ImageSharp.Processing.FillRegionExtensions.Fill(SixLabors.ImageSharp.Processing.IImageProcessingContext,SixLabors.ImageSharp.GraphicsOptions,SixLabors.ImageSharp.Processing.IBrush,SixLabors.ImageSharp.Primitives.Region)">Fill(IImageProcessingContext, GraphicsOptions, IBrush, Region)</h4>
   <div class="markdown level1 summary"><p>Flood fills the image with in the region with the specified brush.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IImageProcessingContext&lt;TPixel&gt; Fill&lt;TPixel&gt;(this IImageProcessingContext&lt;TPixel&gt; source, GraphicsOptions options, IBrush&lt;TPixel&gt; brush, Region region)
-
-    where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public static IImageProcessingContext Fill(this IImageProcessingContext source, GraphicsOptions options, IBrush brush, Region region)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -439,7 +365,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><span class="parametername">source</span></td>
         <td><p>The image this method extends.</p>
 </td>
@@ -451,7 +377,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IBrush-1.html">IBrush</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IBrush.html">IBrush</a></td>
         <td><span class="parametername">brush</span></td>
         <td><p>The brush.</p>
 </td>
@@ -474,45 +400,27 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><p>The <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TPixel</span></td>
-        <td><p>The type of the color.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_FillRegionExtensions_Fill__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__SixLabors_ImageSharp_Processing_IBrush___0__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.FillRegionExtensions.Fill%60%601(SixLabors.ImageSharp.Processing.IImageProcessingContext%7B%60%600%7D%2CSixLabors.ImageSharp.Processing.IBrush%7B%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_FillRegionExtensions_Fill_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_IBrush_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.FillRegionExtensions.Fill(SixLabors.ImageSharp.Processing.IImageProcessingContext%2CSixLabors.ImageSharp.Processing.IBrush)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp.Drawing/Processing/FillRegionExtensions.cs/#L22">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp.Drawing/Processing/Extensions/FillRegionExtensions.cs/#L20">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_FillRegionExtensions_Fill_" data-uid="SixLabors.ImageSharp.Processing.FillRegionExtensions.Fill*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_FillRegionExtensions_Fill__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__SixLabors_ImageSharp_Processing_IBrush___0__" data-uid="SixLabors.ImageSharp.Processing.FillRegionExtensions.Fill``1(SixLabors.ImageSharp.Processing.IImageProcessingContext{``0},SixLabors.ImageSharp.Processing.IBrush{``0})">Fill&lt;TPixel&gt;(IImageProcessingContext&lt;TPixel&gt;, IBrush&lt;TPixel&gt;)</h4>
+  <h4 id="SixLabors_ImageSharp_Processing_FillRegionExtensions_Fill_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_IBrush_" data-uid="SixLabors.ImageSharp.Processing.FillRegionExtensions.Fill(SixLabors.ImageSharp.Processing.IImageProcessingContext,SixLabors.ImageSharp.Processing.IBrush)">Fill(IImageProcessingContext, IBrush)</h4>
   <div class="markdown level1 summary"><p>Flood fills the image with the specified brush.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IImageProcessingContext&lt;TPixel&gt; Fill&lt;TPixel&gt;(this IImageProcessingContext&lt;TPixel&gt; source, IBrush&lt;TPixel&gt; brush)
-
-    where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public static IImageProcessingContext Fill(this IImageProcessingContext source, IBrush brush)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -525,13 +433,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><span class="parametername">source</span></td>
         <td><p>The image this method extends.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IBrush-1.html">IBrush</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IBrush.html">IBrush</a></td>
         <td><span class="parametername">brush</span></td>
         <td><p>The details how to fill the region of interest.</p>
 </td>
@@ -548,45 +456,27 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><p>The <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TPixel</span></td>
-        <td><p>The type of the color.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_FillRegionExtensions_Fill__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__SixLabors_ImageSharp_Processing_IBrush___0__SixLabors_ImageSharp_Primitives_Region_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.FillRegionExtensions.Fill%60%601(SixLabors.ImageSharp.Processing.IImageProcessingContext%7B%60%600%7D%2CSixLabors.ImageSharp.Processing.IBrush%7B%60%600%7D%2CSixLabors.ImageSharp.Primitives.Region)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_FillRegionExtensions_Fill_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_IBrush_SixLabors_ImageSharp_Primitives_Region_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.FillRegionExtensions.Fill(SixLabors.ImageSharp.Processing.IImageProcessingContext%2CSixLabors.ImageSharp.Processing.IBrush%2CSixLabors.ImageSharp.Primitives.Region)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp.Drawing/Processing/FillRegionExtensions.cs/#L45">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp.Drawing/Processing/Extensions/FillRegionExtensions.cs/#L39">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_FillRegionExtensions_Fill_" data-uid="SixLabors.ImageSharp.Processing.FillRegionExtensions.Fill*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_FillRegionExtensions_Fill__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__SixLabors_ImageSharp_Processing_IBrush___0__SixLabors_ImageSharp_Primitives_Region_" data-uid="SixLabors.ImageSharp.Processing.FillRegionExtensions.Fill``1(SixLabors.ImageSharp.Processing.IImageProcessingContext{``0},SixLabors.ImageSharp.Processing.IBrush{``0},SixLabors.ImageSharp.Primitives.Region)">Fill&lt;TPixel&gt;(IImageProcessingContext&lt;TPixel&gt;, IBrush&lt;TPixel&gt;, Region)</h4>
+  <h4 id="SixLabors_ImageSharp_Processing_FillRegionExtensions_Fill_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_IBrush_SixLabors_ImageSharp_Primitives_Region_" data-uid="SixLabors.ImageSharp.Processing.FillRegionExtensions.Fill(SixLabors.ImageSharp.Processing.IImageProcessingContext,SixLabors.ImageSharp.Processing.IBrush,SixLabors.ImageSharp.Primitives.Region)">Fill(IImageProcessingContext, IBrush, Region)</h4>
   <div class="markdown level1 summary"><p>Flood fills the image with in the region with the specified brush.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IImageProcessingContext&lt;TPixel&gt; Fill&lt;TPixel&gt;(this IImageProcessingContext&lt;TPixel&gt; source, IBrush&lt;TPixel&gt; brush, Region region)
-
-    where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public static IImageProcessingContext Fill(this IImageProcessingContext source, IBrush brush, Region region)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -599,13 +489,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><span class="parametername">source</span></td>
         <td><p>The image this method extends.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IBrush-1.html">IBrush</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IBrush.html">IBrush</a></td>
         <td><span class="parametername">brush</span></td>
         <td><p>The brush.</p>
 </td>
@@ -628,24 +518,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><p>The <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TPixel</span></td>
-        <td><p>The type of the color.</p>
 </td>
       </tr>
     </tbody>
@@ -661,7 +535,7 @@
                     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_FillRegionExtensions.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.FillRegionExtensions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp.Drawing/Processing/FillRegionExtensions.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp.Drawing/Processing/Extensions/FillRegionExtensions.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

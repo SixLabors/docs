@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class DiffuseExtensions
    ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../../favicon.png">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -74,7 +74,8 @@
   
   <h1 id="SixLabors_ImageSharp_Processing_Dithering_DiffuseExtensions" data-uid="SixLabors.ImageSharp.Processing.Dithering.DiffuseExtensions" class="text-break">Class DiffuseExtensions
   </h1>
-  <div class="markdown level0 summary"><p>Adds diffusion extensions to the <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> type.</p>
+  <div class="markdown level0 summary"><p>Defines extension methods to apply diffusion to an <a class="xref" href="SixLabors.ImageSharp.Image.html">Image</a>
+using Mutate/Clone.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -92,21 +93,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Dithering_DiffuseExtensions_Diffuse__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Dithering.DiffuseExtensions.Diffuse%60%601(SixLabors.ImageSharp.Processing.IImageProcessingContext%7B%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Dithering_DiffuseExtensions_Diffuse_SixLabors_ImageSharp_Processing_IImageProcessingContext_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Dithering.DiffuseExtensions.Diffuse(SixLabors.ImageSharp.Processing.IImageProcessingContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/Processing/DiffuseExtensions.cs/#L21">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Extensions/DiffuseExtensions.cs/#L22">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_Dithering_DiffuseExtensions_Diffuse_" data-uid="SixLabors.ImageSharp.Processing.Dithering.DiffuseExtensions.Diffuse*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_Dithering_DiffuseExtensions_Diffuse__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__" data-uid="SixLabors.ImageSharp.Processing.Dithering.DiffuseExtensions.Diffuse``1(SixLabors.ImageSharp.Processing.IImageProcessingContext{``0})">Diffuse&lt;TPixel&gt;(IImageProcessingContext&lt;TPixel&gt;)</h4>
+  <h4 id="SixLabors_ImageSharp_Processing_Dithering_DiffuseExtensions_Diffuse_SixLabors_ImageSharp_Processing_IImageProcessingContext_" data-uid="SixLabors.ImageSharp.Processing.Dithering.DiffuseExtensions.Diffuse(SixLabors.ImageSharp.Processing.IImageProcessingContext)">Diffuse(IImageProcessingContext)</h4>
   <div class="markdown level1 summary"><p>Dithers the image reducing it to a web-safe palette using error diffusion.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IImageProcessingContext&lt;TPixel&gt; Diffuse&lt;TPixel&gt;(this IImageProcessingContext&lt;TPixel&gt; source)
-
-    where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public static IImageProcessingContext Diffuse(this IImageProcessingContext source)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -119,7 +118,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><span class="parametername">source</span></td>
         <td><p>The image this method extends.</p>
 </td>
@@ -136,45 +135,27 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
-        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TPixel</span></td>
-        <td><p>The pixel format.</p>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a> to allow chaining of operations.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Dithering_DiffuseExtensions_Diffuse__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__SixLabors_ImageSharp_Processing_Processors_Dithering_IErrorDiffuser_System_Single_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Dithering.DiffuseExtensions.Diffuse%60%601(SixLabors.ImageSharp.Processing.IImageProcessingContext%7B%60%600%7D%2CSixLabors.ImageSharp.Processing.Processors.Dithering.IErrorDiffuser%2CSystem.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Dithering_DiffuseExtensions_Diffuse_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_Processors_Dithering_IErrorDiffuser_System_Single_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Dithering.DiffuseExtensions.Diffuse(SixLabors.ImageSharp.Processing.IImageProcessingContext%2CSixLabors.ImageSharp.Processing.Processors.Dithering.IErrorDiffuser%2CSystem.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/Processing/DiffuseExtensions.cs/#L44">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Extensions/DiffuseExtensions.cs/#L41">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_Dithering_DiffuseExtensions_Diffuse_" data-uid="SixLabors.ImageSharp.Processing.Dithering.DiffuseExtensions.Diffuse*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_Dithering_DiffuseExtensions_Diffuse__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__SixLabors_ImageSharp_Processing_Processors_Dithering_IErrorDiffuser_System_Single_" data-uid="SixLabors.ImageSharp.Processing.Dithering.DiffuseExtensions.Diffuse``1(SixLabors.ImageSharp.Processing.IImageProcessingContext{``0},SixLabors.ImageSharp.Processing.Processors.Dithering.IErrorDiffuser,System.Single)">Diffuse&lt;TPixel&gt;(IImageProcessingContext&lt;TPixel&gt;, IErrorDiffuser, Single)</h4>
+  <h4 id="SixLabors_ImageSharp_Processing_Dithering_DiffuseExtensions_Diffuse_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_Processors_Dithering_IErrorDiffuser_System_Single_" data-uid="SixLabors.ImageSharp.Processing.Dithering.DiffuseExtensions.Diffuse(SixLabors.ImageSharp.Processing.IImageProcessingContext,SixLabors.ImageSharp.Processing.Processors.Dithering.IErrorDiffuser,System.Single)">Diffuse(IImageProcessingContext, IErrorDiffuser, Single)</h4>
   <div class="markdown level1 summary"><p>Dithers the image reducing it to a web-safe palette using error diffusion.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IImageProcessingContext&lt;TPixel&gt; Diffuse&lt;TPixel&gt;(this IImageProcessingContext&lt;TPixel&gt; source, IErrorDiffuser diffuser, float threshold)
-
-    where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public static IImageProcessingContext Diffuse(this IImageProcessingContext source, IErrorDiffuser diffuser, float threshold)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -187,7 +168,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><span class="parametername">source</span></td>
         <td><p>The image this method extends.</p>
 </td>
@@ -216,45 +197,27 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
-        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TPixel</span></td>
-        <td><p>The pixel format.</p>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a> to allow chaining of operations.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Dithering_DiffuseExtensions_Diffuse__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__SixLabors_ImageSharp_Processing_Processors_Dithering_IErrorDiffuser_System_Single___0___.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Dithering.DiffuseExtensions.Diffuse%60%601(SixLabors.ImageSharp.Processing.IImageProcessingContext%7B%60%600%7D%2CSixLabors.ImageSharp.Processing.Processors.Dithering.IErrorDiffuser%2CSystem.Single%2C%60%600%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Dithering_DiffuseExtensions_Diffuse_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_Processors_Dithering_IErrorDiffuser_System_Single_ReadOnlyMemory_SixLabors_ImageSharp_Color__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Dithering.DiffuseExtensions.Diffuse(SixLabors.ImageSharp.Processing.IImageProcessingContext%2CSixLabors.ImageSharp.Processing.Processors.Dithering.IErrorDiffuser%2CSystem.Single%2CReadOnlyMemory%7BSixLabors.ImageSharp.Color%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/Processing/DiffuseExtensions.cs/#L72">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Extensions/DiffuseExtensions.cs/#L72">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_Dithering_DiffuseExtensions_Diffuse_" data-uid="SixLabors.ImageSharp.Processing.Dithering.DiffuseExtensions.Diffuse*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_Dithering_DiffuseExtensions_Diffuse__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__SixLabors_ImageSharp_Processing_Processors_Dithering_IErrorDiffuser_System_Single___0___" data-uid="SixLabors.ImageSharp.Processing.Dithering.DiffuseExtensions.Diffuse``1(SixLabors.ImageSharp.Processing.IImageProcessingContext{``0},SixLabors.ImageSharp.Processing.Processors.Dithering.IErrorDiffuser,System.Single,``0[])">Diffuse&lt;TPixel&gt;(IImageProcessingContext&lt;TPixel&gt;, IErrorDiffuser, Single, TPixel[])</h4>
+  <h4 id="SixLabors_ImageSharp_Processing_Dithering_DiffuseExtensions_Diffuse_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_Processors_Dithering_IErrorDiffuser_System_Single_ReadOnlyMemory_SixLabors_ImageSharp_Color__" data-uid="SixLabors.ImageSharp.Processing.Dithering.DiffuseExtensions.Diffuse(SixLabors.ImageSharp.Processing.IImageProcessingContext,SixLabors.ImageSharp.Processing.Processors.Dithering.IErrorDiffuser,System.Single,ReadOnlyMemory{SixLabors.ImageSharp.Color})">Diffuse(IImageProcessingContext, IErrorDiffuser, Single, ReadOnlyMemory&lt;Color&gt;)</h4>
   <div class="markdown level1 summary"><p>Dithers the image reducing it to the given palette using error diffusion.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IImageProcessingContext&lt;TPixel&gt; Diffuse&lt;TPixel&gt;(this IImageProcessingContext&lt;TPixel&gt; source, IErrorDiffuser diffuser, float threshold, TPixel[] palette)
-
-    where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public static IImageProcessingContext Diffuse(this IImageProcessingContext source, IErrorDiffuser diffuser, float threshold, ReadOnlyMemory&lt;Color&gt; palette)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -267,7 +230,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><span class="parametername">source</span></td>
         <td><p>The image this method extends.</p>
 </td>
@@ -285,7 +248,7 @@
 </td>
       </tr>
       <tr>
-        <td>TPixel[]</td>
+        <td><span class="xref">ReadOnlyMemory</span>&lt;<a class="xref" href="SixLabors.ImageSharp.Color.html">Color</a>&gt;</td>
         <td><span class="parametername">palette</span></td>
         <td><p>The palette to select substitute colors from.</p>
 </td>
@@ -302,45 +265,27 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
-        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TPixel</span></td>
-        <td><p>The pixel format.</p>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a> to allow chaining of operations.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Dithering_DiffuseExtensions_Diffuse__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__SixLabors_ImageSharp_Processing_Processors_Dithering_IErrorDiffuser_System_Single___0___Rectangle_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Dithering.DiffuseExtensions.Diffuse%60%601(SixLabors.ImageSharp.Processing.IImageProcessingContext%7B%60%600%7D%2CSixLabors.ImageSharp.Processing.Processors.Dithering.IErrorDiffuser%2CSystem.Single%2C%60%600%5B%5D%2CRectangle)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Dithering_DiffuseExtensions_Diffuse_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_Processors_Dithering_IErrorDiffuser_System_Single_ReadOnlyMemory_SixLabors_ImageSharp_Color__Rectangle_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Dithering.DiffuseExtensions.Diffuse(SixLabors.ImageSharp.Processing.IImageProcessingContext%2CSixLabors.ImageSharp.Processing.Processors.Dithering.IErrorDiffuser%2CSystem.Single%2CReadOnlyMemory%7BSixLabors.ImageSharp.Color%7D%2CRectangle)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/Processing/DiffuseExtensions.cs/#L88">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Extensions/DiffuseExtensions.cs/#L90">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_Dithering_DiffuseExtensions_Diffuse_" data-uid="SixLabors.ImageSharp.Processing.Dithering.DiffuseExtensions.Diffuse*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_Dithering_DiffuseExtensions_Diffuse__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__SixLabors_ImageSharp_Processing_Processors_Dithering_IErrorDiffuser_System_Single___0___Rectangle_" data-uid="SixLabors.ImageSharp.Processing.Dithering.DiffuseExtensions.Diffuse``1(SixLabors.ImageSharp.Processing.IImageProcessingContext{``0},SixLabors.ImageSharp.Processing.Processors.Dithering.IErrorDiffuser,System.Single,``0[],Rectangle)">Diffuse&lt;TPixel&gt;(IImageProcessingContext&lt;TPixel&gt;, IErrorDiffuser, Single, TPixel[], Rectangle)</h4>
+  <h4 id="SixLabors_ImageSharp_Processing_Dithering_DiffuseExtensions_Diffuse_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_Processors_Dithering_IErrorDiffuser_System_Single_ReadOnlyMemory_SixLabors_ImageSharp_Color__Rectangle_" data-uid="SixLabors.ImageSharp.Processing.Dithering.DiffuseExtensions.Diffuse(SixLabors.ImageSharp.Processing.IImageProcessingContext,SixLabors.ImageSharp.Processing.Processors.Dithering.IErrorDiffuser,System.Single,ReadOnlyMemory{SixLabors.ImageSharp.Color},Rectangle)">Diffuse(IImageProcessingContext, IErrorDiffuser, Single, ReadOnlyMemory&lt;Color&gt;, Rectangle)</h4>
   <div class="markdown level1 summary"><p>Dithers the image reducing it to the given palette using error diffusion.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IImageProcessingContext&lt;TPixel&gt; Diffuse&lt;TPixel&gt;(this IImageProcessingContext&lt;TPixel&gt; source, IErrorDiffuser diffuser, float threshold, TPixel[] palette, Rectangle rectangle)
-
-    where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public static IImageProcessingContext Diffuse(this IImageProcessingContext source, IErrorDiffuser diffuser, float threshold, ReadOnlyMemory&lt;Color&gt; palette, Rectangle rectangle)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -353,7 +298,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><span class="parametername">source</span></td>
         <td><p>The image this method extends.</p>
 </td>
@@ -371,7 +316,7 @@
 </td>
       </tr>
       <tr>
-        <td>TPixel[]</td>
+        <td><span class="xref">ReadOnlyMemory</span>&lt;<a class="xref" href="SixLabors.ImageSharp.Color.html">Color</a>&gt;</td>
         <td><span class="parametername">palette</span></td>
         <td><p>The palette to select substitute colors from.</p>
 </td>
@@ -394,45 +339,27 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
-        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TPixel</span></td>
-        <td><p>The pixel format.</p>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a> to allow chaining of operations.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Dithering_DiffuseExtensions_Diffuse__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__SixLabors_ImageSharp_Processing_Processors_Dithering_IErrorDiffuser_System_Single_Rectangle_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Dithering.DiffuseExtensions.Diffuse%60%601(SixLabors.ImageSharp.Processing.IImageProcessingContext%7B%60%600%7D%2CSixLabors.ImageSharp.Processing.Processors.Dithering.IErrorDiffuser%2CSystem.Single%2CRectangle)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Dithering_DiffuseExtensions_Diffuse_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_Processors_Dithering_IErrorDiffuser_System_Single_Rectangle_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Dithering.DiffuseExtensions.Diffuse(SixLabors.ImageSharp.Processing.IImageProcessingContext%2CSixLabors.ImageSharp.Processing.Processors.Dithering.IErrorDiffuser%2CSystem.Single%2CRectangle)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/Processing/DiffuseExtensions.cs/#L59">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Extensions/DiffuseExtensions.cs/#L57">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_Dithering_DiffuseExtensions_Diffuse_" data-uid="SixLabors.ImageSharp.Processing.Dithering.DiffuseExtensions.Diffuse*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_Dithering_DiffuseExtensions_Diffuse__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__SixLabors_ImageSharp_Processing_Processors_Dithering_IErrorDiffuser_System_Single_Rectangle_" data-uid="SixLabors.ImageSharp.Processing.Dithering.DiffuseExtensions.Diffuse``1(SixLabors.ImageSharp.Processing.IImageProcessingContext{``0},SixLabors.ImageSharp.Processing.Processors.Dithering.IErrorDiffuser,System.Single,Rectangle)">Diffuse&lt;TPixel&gt;(IImageProcessingContext&lt;TPixel&gt;, IErrorDiffuser, Single, Rectangle)</h4>
+  <h4 id="SixLabors_ImageSharp_Processing_Dithering_DiffuseExtensions_Diffuse_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_Processors_Dithering_IErrorDiffuser_System_Single_Rectangle_" data-uid="SixLabors.ImageSharp.Processing.Dithering.DiffuseExtensions.Diffuse(SixLabors.ImageSharp.Processing.IImageProcessingContext,SixLabors.ImageSharp.Processing.Processors.Dithering.IErrorDiffuser,System.Single,Rectangle)">Diffuse(IImageProcessingContext, IErrorDiffuser, Single, Rectangle)</h4>
   <div class="markdown level1 summary"><p>Dithers the image reducing it to a web-safe palette using error diffusion.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IImageProcessingContext&lt;TPixel&gt; Diffuse&lt;TPixel&gt;(this IImageProcessingContext&lt;TPixel&gt; source, IErrorDiffuser diffuser, float threshold, Rectangle rectangle)
-
-    where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public static IImageProcessingContext Diffuse(this IImageProcessingContext source, IErrorDiffuser diffuser, float threshold, Rectangle rectangle)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -445,7 +372,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><span class="parametername">source</span></td>
         <td><p>The image this method extends.</p>
 </td>
@@ -480,45 +407,27 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
-        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TPixel</span></td>
-        <td><p>The pixel format.</p>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a> to allow chaining of operations.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Dithering_DiffuseExtensions_Diffuse__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__System_Single_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Dithering.DiffuseExtensions.Diffuse%60%601(SixLabors.ImageSharp.Processing.IImageProcessingContext%7B%60%600%7D%2CSystem.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Dithering_DiffuseExtensions_Diffuse_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Single_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Dithering.DiffuseExtensions.Diffuse(SixLabors.ImageSharp.Processing.IImageProcessingContext%2CSystem.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/Processing/DiffuseExtensions.cs/#L32">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Extensions/DiffuseExtensions.cs/#L31">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_Dithering_DiffuseExtensions_Diffuse_" data-uid="SixLabors.ImageSharp.Processing.Dithering.DiffuseExtensions.Diffuse*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_Dithering_DiffuseExtensions_Diffuse__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__System_Single_" data-uid="SixLabors.ImageSharp.Processing.Dithering.DiffuseExtensions.Diffuse``1(SixLabors.ImageSharp.Processing.IImageProcessingContext{``0},System.Single)">Diffuse&lt;TPixel&gt;(IImageProcessingContext&lt;TPixel&gt;, Single)</h4>
+  <h4 id="SixLabors_ImageSharp_Processing_Dithering_DiffuseExtensions_Diffuse_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Single_" data-uid="SixLabors.ImageSharp.Processing.Dithering.DiffuseExtensions.Diffuse(SixLabors.ImageSharp.Processing.IImageProcessingContext,System.Single)">Diffuse(IImageProcessingContext, Single)</h4>
   <div class="markdown level1 summary"><p>Dithers the image reducing it to a web-safe palette using error diffusion.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IImageProcessingContext&lt;TPixel&gt; Diffuse&lt;TPixel&gt;(this IImageProcessingContext&lt;TPixel&gt; source, float threshold)
-
-    where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public static IImageProcessingContext Diffuse(this IImageProcessingContext source, float threshold)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -531,7 +440,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><span class="parametername">source</span></td>
         <td><p>The image this method extends.</p>
 </td>
@@ -554,24 +463,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
-        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TPixel</span></td>
-        <td><p>The pixel format.</p>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a> to allow chaining of operations.</p>
 </td>
       </tr>
     </tbody>
@@ -587,7 +480,7 @@
                     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Dithering_DiffuseExtensions.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Dithering.DiffuseExtensions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/Processing/DiffuseExtensions.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Extensions/DiffuseExtensions.cs/#L15" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

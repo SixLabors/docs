@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class DrawPolygonExtensions
    ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../../favicon.png">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -92,21 +92,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_DrawPolygonExtensions_DrawPolygon__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0____0_System_Single_PointF___.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.DrawPolygonExtensions.DrawPolygon%60%601(SixLabors.ImageSharp.Processing.IImageProcessingContext%7B%60%600%7D%2C%60%600%2CSystem.Single%2CPointF%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_DrawPolygonExtensions_DrawPolygon_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Color_System_Single_PointF___.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.DrawPolygonExtensions.DrawPolygon(SixLabors.ImageSharp.Processing.IImageProcessingContext%2CSixLabors.ImageSharp.Color%2CSystem.Single%2CPointF%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp.Drawing/Processing/DrawPolygonExtensions.cs/#L51">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp.Drawing/Processing/Extensions/DrawPolygonExtensions.cs/#L54">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_DrawPolygonExtensions_DrawPolygon_" data-uid="SixLabors.ImageSharp.Processing.DrawPolygonExtensions.DrawPolygon*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_DrawPolygonExtensions_DrawPolygon__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0____0_System_Single_PointF___" data-uid="SixLabors.ImageSharp.Processing.DrawPolygonExtensions.DrawPolygon``1(SixLabors.ImageSharp.Processing.IImageProcessingContext{``0},``0,System.Single,PointF[])">DrawPolygon&lt;TPixel&gt;(IImageProcessingContext&lt;TPixel&gt;, TPixel, Single, PointF[])</h4>
+  <h4 id="SixLabors_ImageSharp_Processing_DrawPolygonExtensions_DrawPolygon_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Color_System_Single_PointF___" data-uid="SixLabors.ImageSharp.Processing.DrawPolygonExtensions.DrawPolygon(SixLabors.ImageSharp.Processing.IImageProcessingContext,SixLabors.ImageSharp.Color,System.Single,PointF[])">DrawPolygon(IImageProcessingContext, Color, Single, PointF[])</h4>
   <div class="markdown level1 summary"><p>Draws the provided Points as a closed Linear Polygon with the provided brush at the provided thickness.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IImageProcessingContext&lt;TPixel&gt; DrawPolygon&lt;TPixel&gt;(this IImageProcessingContext&lt;TPixel&gt; source, TPixel color, float thickness, params PointF[] points)
-
-    where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public static IImageProcessingContext DrawPolygon(this IImageProcessingContext source, Color color, float thickness, params PointF[] points)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -119,13 +117,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><span class="parametername">source</span></td>
         <td><p>The image this method extends.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">TPixel</span></td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Color.html">Color</a></td>
         <td><span class="parametername">color</span></td>
         <td><p>The color.</p>
 </td>
@@ -154,45 +152,27 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><p>The <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TPixel</span></td>
-        <td><p>The type of the color.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_DrawPolygonExtensions_DrawPolygon__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__SixLabors_ImageSharp_GraphicsOptions___0_System_Single_PointF___.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.DrawPolygonExtensions.DrawPolygon%60%601(SixLabors.ImageSharp.Processing.IImageProcessingContext%7B%60%600%7D%2CSixLabors.ImageSharp.GraphicsOptions%2C%60%600%2CSystem.Single%2CPointF%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_DrawPolygonExtensions_DrawPolygon_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Color_System_Single_PointF___.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.DrawPolygonExtensions.DrawPolygon(SixLabors.ImageSharp.Processing.IImageProcessingContext%2CSixLabors.ImageSharp.GraphicsOptions%2CSixLabors.ImageSharp.Color%2CSystem.Single%2CPointF%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp.Drawing/Processing/DrawPolygonExtensions.cs/#L65">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp.Drawing/Processing/Extensions/DrawPolygonExtensions.cs/#L70">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_DrawPolygonExtensions_DrawPolygon_" data-uid="SixLabors.ImageSharp.Processing.DrawPolygonExtensions.DrawPolygon*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_DrawPolygonExtensions_DrawPolygon__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__SixLabors_ImageSharp_GraphicsOptions___0_System_Single_PointF___" data-uid="SixLabors.ImageSharp.Processing.DrawPolygonExtensions.DrawPolygon``1(SixLabors.ImageSharp.Processing.IImageProcessingContext{``0},SixLabors.ImageSharp.GraphicsOptions,``0,System.Single,PointF[])">DrawPolygon&lt;TPixel&gt;(IImageProcessingContext&lt;TPixel&gt;, GraphicsOptions, TPixel, Single, PointF[])</h4>
+  <h4 id="SixLabors_ImageSharp_Processing_DrawPolygonExtensions_DrawPolygon_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Color_System_Single_PointF___" data-uid="SixLabors.ImageSharp.Processing.DrawPolygonExtensions.DrawPolygon(SixLabors.ImageSharp.Processing.IImageProcessingContext,SixLabors.ImageSharp.GraphicsOptions,SixLabors.ImageSharp.Color,System.Single,PointF[])">DrawPolygon(IImageProcessingContext, GraphicsOptions, Color, Single, PointF[])</h4>
   <div class="markdown level1 summary"><p>Draws the provided Points as a closed Linear Polygon with the provided brush at the provided thickness.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IImageProcessingContext&lt;TPixel&gt; DrawPolygon&lt;TPixel&gt;(this IImageProcessingContext&lt;TPixel&gt; source, GraphicsOptions options, TPixel color, float thickness, params PointF[] points)
-
-    where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public static IImageProcessingContext DrawPolygon(this IImageProcessingContext source, GraphicsOptions options, Color color, float thickness, params PointF[] points)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -205,7 +185,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><span class="parametername">source</span></td>
         <td><p>The image this method extends.</p>
 </td>
@@ -217,7 +197,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">TPixel</span></td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Color.html">Color</a></td>
         <td><span class="parametername">color</span></td>
         <td><p>The color.</p>
 </td>
@@ -246,45 +226,27 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><p>The <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TPixel</span></td>
-        <td><p>The type of the color.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_DrawPolygonExtensions_DrawPolygon__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Processing_IBrush___0__System_Single_PointF___.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.DrawPolygonExtensions.DrawPolygon%60%601(SixLabors.ImageSharp.Processing.IImageProcessingContext%7B%60%600%7D%2CSixLabors.ImageSharp.GraphicsOptions%2CSixLabors.ImageSharp.Processing.IBrush%7B%60%600%7D%2CSystem.Single%2CPointF%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_DrawPolygonExtensions_DrawPolygon_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Processing_IBrush_System_Single_PointF___.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.DrawPolygonExtensions.DrawPolygon(SixLabors.ImageSharp.Processing.IImageProcessingContext%2CSixLabors.ImageSharp.GraphicsOptions%2CSixLabors.ImageSharp.Processing.IBrush%2CSystem.Single%2CPointF%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp.Drawing/Processing/DrawPolygonExtensions.cs/#L25">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp.Drawing/Processing/Extensions/DrawPolygonExtensions.cs/#L23">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_DrawPolygonExtensions_DrawPolygon_" data-uid="SixLabors.ImageSharp.Processing.DrawPolygonExtensions.DrawPolygon*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_DrawPolygonExtensions_DrawPolygon__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Processing_IBrush___0__System_Single_PointF___" data-uid="SixLabors.ImageSharp.Processing.DrawPolygonExtensions.DrawPolygon``1(SixLabors.ImageSharp.Processing.IImageProcessingContext{``0},SixLabors.ImageSharp.GraphicsOptions,SixLabors.ImageSharp.Processing.IBrush{``0},System.Single,PointF[])">DrawPolygon&lt;TPixel&gt;(IImageProcessingContext&lt;TPixel&gt;, GraphicsOptions, IBrush&lt;TPixel&gt;, Single, PointF[])</h4>
+  <h4 id="SixLabors_ImageSharp_Processing_DrawPolygonExtensions_DrawPolygon_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Processing_IBrush_System_Single_PointF___" data-uid="SixLabors.ImageSharp.Processing.DrawPolygonExtensions.DrawPolygon(SixLabors.ImageSharp.Processing.IImageProcessingContext,SixLabors.ImageSharp.GraphicsOptions,SixLabors.ImageSharp.Processing.IBrush,System.Single,PointF[])">DrawPolygon(IImageProcessingContext, GraphicsOptions, IBrush, Single, PointF[])</h4>
   <div class="markdown level1 summary"><p>Draws the provided Points as a closed Linear Polygon with the provided brush at the provided thickness.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IImageProcessingContext&lt;TPixel&gt; DrawPolygon&lt;TPixel&gt;(this IImageProcessingContext&lt;TPixel&gt; source, GraphicsOptions options, IBrush&lt;TPixel&gt; brush, float thickness, params PointF[] points)
-
-    where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public static IImageProcessingContext DrawPolygon(this IImageProcessingContext source, GraphicsOptions options, IBrush brush, float thickness, params PointF[] points)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -297,7 +259,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><span class="parametername">source</span></td>
         <td><p>The image this method extends.</p>
 </td>
@@ -309,7 +271,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IBrush-1.html">IBrush</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IBrush.html">IBrush</a></td>
         <td><span class="parametername">brush</span></td>
         <td><p>The brush.</p>
 </td>
@@ -338,45 +300,27 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><p>The <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TPixel</span></td>
-        <td><p>The type of the color.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_DrawPolygonExtensions_DrawPolygon__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Processing_IPen___0__PointF___.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.DrawPolygonExtensions.DrawPolygon%60%601(SixLabors.ImageSharp.Processing.IImageProcessingContext%7B%60%600%7D%2CSixLabors.ImageSharp.GraphicsOptions%2CSixLabors.ImageSharp.Processing.IPen%7B%60%600%7D%2CPointF%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_DrawPolygonExtensions_DrawPolygon_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Processing_IPen_PointF___.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.DrawPolygonExtensions.DrawPolygon(SixLabors.ImageSharp.Processing.IImageProcessingContext%2CSixLabors.ImageSharp.GraphicsOptions%2CSixLabors.ImageSharp.Processing.IPen%2CPointF%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp.Drawing/Processing/DrawPolygonExtensions.cs/#L90">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp.Drawing/Processing/Extensions/DrawPolygonExtensions.cs/#L99">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_DrawPolygonExtensions_DrawPolygon_" data-uid="SixLabors.ImageSharp.Processing.DrawPolygonExtensions.DrawPolygon*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_DrawPolygonExtensions_DrawPolygon__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Processing_IPen___0__PointF___" data-uid="SixLabors.ImageSharp.Processing.DrawPolygonExtensions.DrawPolygon``1(SixLabors.ImageSharp.Processing.IImageProcessingContext{``0},SixLabors.ImageSharp.GraphicsOptions,SixLabors.ImageSharp.Processing.IPen{``0},PointF[])">DrawPolygon&lt;TPixel&gt;(IImageProcessingContext&lt;TPixel&gt;, GraphicsOptions, IPen&lt;TPixel&gt;, PointF[])</h4>
+  <h4 id="SixLabors_ImageSharp_Processing_DrawPolygonExtensions_DrawPolygon_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Processing_IPen_PointF___" data-uid="SixLabors.ImageSharp.Processing.DrawPolygonExtensions.DrawPolygon(SixLabors.ImageSharp.Processing.IImageProcessingContext,SixLabors.ImageSharp.GraphicsOptions,SixLabors.ImageSharp.Processing.IPen,PointF[])">DrawPolygon(IImageProcessingContext, GraphicsOptions, IPen, PointF[])</h4>
   <div class="markdown level1 summary"><p>Draws the provided Points as a closed Linear Polygon with the provided Pen.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IImageProcessingContext&lt;TPixel&gt; DrawPolygon&lt;TPixel&gt;(this IImageProcessingContext&lt;TPixel&gt; source, GraphicsOptions options, IPen&lt;TPixel&gt; pen, params PointF[] points)
-
-    where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public static IImageProcessingContext DrawPolygon(this IImageProcessingContext source, GraphicsOptions options, IPen pen, params PointF[] points)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -389,7 +333,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><span class="parametername">source</span></td>
         <td><p>The image this method extends.</p>
 </td>
@@ -401,7 +345,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IPen-1.html">IPen</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IPen.html">IPen</a></td>
         <td><span class="parametername">pen</span></td>
         <td><p>The pen.</p>
 </td>
@@ -424,45 +368,27 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><p>The <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TPixel</span></td>
-        <td><p>The type of the color.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_DrawPolygonExtensions_DrawPolygon__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__SixLabors_ImageSharp_Processing_IBrush___0__System_Single_PointF___.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.DrawPolygonExtensions.DrawPolygon%60%601(SixLabors.ImageSharp.Processing.IImageProcessingContext%7B%60%600%7D%2CSixLabors.ImageSharp.Processing.IBrush%7B%60%600%7D%2CSystem.Single%2CPointF%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_DrawPolygonExtensions_DrawPolygon_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_IBrush_System_Single_PointF___.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.DrawPolygonExtensions.DrawPolygon(SixLabors.ImageSharp.Processing.IImageProcessingContext%2CSixLabors.ImageSharp.Processing.IBrush%2CSystem.Single%2CPointF%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp.Drawing/Processing/DrawPolygonExtensions.cs/#L38">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp.Drawing/Processing/Extensions/DrawPolygonExtensions.cs/#L39">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_DrawPolygonExtensions_DrawPolygon_" data-uid="SixLabors.ImageSharp.Processing.DrawPolygonExtensions.DrawPolygon*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_DrawPolygonExtensions_DrawPolygon__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__SixLabors_ImageSharp_Processing_IBrush___0__System_Single_PointF___" data-uid="SixLabors.ImageSharp.Processing.DrawPolygonExtensions.DrawPolygon``1(SixLabors.ImageSharp.Processing.IImageProcessingContext{``0},SixLabors.ImageSharp.Processing.IBrush{``0},System.Single,PointF[])">DrawPolygon&lt;TPixel&gt;(IImageProcessingContext&lt;TPixel&gt;, IBrush&lt;TPixel&gt;, Single, PointF[])</h4>
+  <h4 id="SixLabors_ImageSharp_Processing_DrawPolygonExtensions_DrawPolygon_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_IBrush_System_Single_PointF___" data-uid="SixLabors.ImageSharp.Processing.DrawPolygonExtensions.DrawPolygon(SixLabors.ImageSharp.Processing.IImageProcessingContext,SixLabors.ImageSharp.Processing.IBrush,System.Single,PointF[])">DrawPolygon(IImageProcessingContext, IBrush, Single, PointF[])</h4>
   <div class="markdown level1 summary"><p>Draws the provided Points as a closed Linear Polygon with the provided brush at the provided thickness.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IImageProcessingContext&lt;TPixel&gt; DrawPolygon&lt;TPixel&gt;(this IImageProcessingContext&lt;TPixel&gt; source, IBrush&lt;TPixel&gt; brush, float thickness, params PointF[] points)
-
-    where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public static IImageProcessingContext DrawPolygon(this IImageProcessingContext source, IBrush brush, float thickness, params PointF[] points)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -475,13 +401,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><span class="parametername">source</span></td>
         <td><p>The image this method extends.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IBrush-1.html">IBrush</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IBrush.html">IBrush</a></td>
         <td><span class="parametername">brush</span></td>
         <td><p>The brush.</p>
 </td>
@@ -510,45 +436,27 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><p>The <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TPixel</span></td>
-        <td><p>The type of the color.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_DrawPolygonExtensions_DrawPolygon__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__SixLabors_ImageSharp_Processing_IPen___0__PointF___.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.DrawPolygonExtensions.DrawPolygon%60%601(SixLabors.ImageSharp.Processing.IImageProcessingContext%7B%60%600%7D%2CSixLabors.ImageSharp.Processing.IPen%7B%60%600%7D%2CPointF%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_DrawPolygonExtensions_DrawPolygon_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_IPen_PointF___.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.DrawPolygonExtensions.DrawPolygon(SixLabors.ImageSharp.Processing.IImageProcessingContext%2CSixLabors.ImageSharp.Processing.IPen%2CPointF%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp.Drawing/Processing/DrawPolygonExtensions.cs/#L77">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp.Drawing/Processing/Extensions/DrawPolygonExtensions.cs/#L85">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_DrawPolygonExtensions_DrawPolygon_" data-uid="SixLabors.ImageSharp.Processing.DrawPolygonExtensions.DrawPolygon*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_DrawPolygonExtensions_DrawPolygon__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__SixLabors_ImageSharp_Processing_IPen___0__PointF___" data-uid="SixLabors.ImageSharp.Processing.DrawPolygonExtensions.DrawPolygon``1(SixLabors.ImageSharp.Processing.IImageProcessingContext{``0},SixLabors.ImageSharp.Processing.IPen{``0},PointF[])">DrawPolygon&lt;TPixel&gt;(IImageProcessingContext&lt;TPixel&gt;, IPen&lt;TPixel&gt;, PointF[])</h4>
+  <h4 id="SixLabors_ImageSharp_Processing_DrawPolygonExtensions_DrawPolygon_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_IPen_PointF___" data-uid="SixLabors.ImageSharp.Processing.DrawPolygonExtensions.DrawPolygon(SixLabors.ImageSharp.Processing.IImageProcessingContext,SixLabors.ImageSharp.Processing.IPen,PointF[])">DrawPolygon(IImageProcessingContext, IPen, PointF[])</h4>
   <div class="markdown level1 summary"><p>Draws the provided Points as a closed Linear Polygon with the provided Pen.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IImageProcessingContext&lt;TPixel&gt; DrawPolygon&lt;TPixel&gt;(this IImageProcessingContext&lt;TPixel&gt; source, IPen&lt;TPixel&gt; pen, params PointF[] points)
-
-    where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public static IImageProcessingContext DrawPolygon(this IImageProcessingContext source, IPen pen, params PointF[] points)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -561,13 +469,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><span class="parametername">source</span></td>
         <td><p>The image this method extends.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IPen-1.html">IPen</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IPen.html">IPen</a></td>
         <td><span class="parametername">pen</span></td>
         <td><p>The pen.</p>
 </td>
@@ -590,24 +498,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><p>The <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TPixel</span></td>
-        <td><p>The type of the color.</p>
 </td>
       </tr>
     </tbody>
@@ -623,7 +515,7 @@
                     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_DrawPolygonExtensions.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.DrawPolygonExtensions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp.Drawing/Processing/DrawPolygonExtensions.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp.Drawing/Processing/Extensions/DrawPolygonExtensions.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

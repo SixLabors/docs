@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class BrightnessExtensions
    ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../../favicon.png">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -74,7 +74,8 @@
   
   <h1 id="SixLabors_ImageSharp_Processing_BrightnessExtensions" data-uid="SixLabors.ImageSharp.Processing.BrightnessExtensions" class="text-break">Class BrightnessExtensions
   </h1>
-  <div class="markdown level0 summary"><p>Adds extensions that allow the alteration of the brightness component to the <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> type.</p>
+  <div class="markdown level0 summary"><p>Defines extensions that allow the alteration of the brightness component of an <a class="xref" href="SixLabors.ImageSharp.Image.html">Image</a>
+using Mutate/Clone.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -92,21 +93,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_BrightnessExtensions_Brightness__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__System_Single_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.BrightnessExtensions.Brightness%60%601(SixLabors.ImageSharp.Processing.IImageProcessingContext%7B%60%600%7D%2CSystem.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_BrightnessExtensions_Brightness_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Single_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.BrightnessExtensions.Brightness(SixLabors.ImageSharp.Processing.IImageProcessingContext%2CSystem.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/Processing/BrightnessExtensions.cs/#L26">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Extensions/BrightnessExtensions.cs/#L25">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_BrightnessExtensions_Brightness_" data-uid="SixLabors.ImageSharp.Processing.BrightnessExtensions.Brightness*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_BrightnessExtensions_Brightness__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__System_Single_" data-uid="SixLabors.ImageSharp.Processing.BrightnessExtensions.Brightness``1(SixLabors.ImageSharp.Processing.IImageProcessingContext{``0},System.Single)">Brightness&lt;TPixel&gt;(IImageProcessingContext&lt;TPixel&gt;, Single)</h4>
+  <h4 id="SixLabors_ImageSharp_Processing_BrightnessExtensions_Brightness_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Single_" data-uid="SixLabors.ImageSharp.Processing.BrightnessExtensions.Brightness(SixLabors.ImageSharp.Processing.IImageProcessingContext,System.Single)">Brightness(IImageProcessingContext, Single)</h4>
   <div class="markdown level1 summary"><p>Alters the brightness component of the image.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IImageProcessingContext&lt;TPixel&gt; Brightness&lt;TPixel&gt;(this IImageProcessingContext&lt;TPixel&gt; source, float amount)
-
-    where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public static IImageProcessingContext Brightness(this IImageProcessingContext source, float amount)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -119,7 +118,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><span class="parametername">source</span></td>
         <td><p>The image this method extends.</p>
 </td>
@@ -142,49 +141,31 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
-        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a>.</p>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a> to allow chaining of operations.</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TPixel</span></td>
-        <td><p>The pixel format.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="SixLabors_ImageSharp_Processing_BrightnessExtensions_Brightness__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__System_Single__remarks">Remarks</h5>
+  <h5 id="SixLabors_ImageSharp_Processing_BrightnessExtensions_Brightness_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Single__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>A value of 0 will create an image that is completely black. A value of 1 leaves the input unchanged.
 Other values are linear multipliers on the effect. Values of an amount over 1 are allowed, providing brighter results.</p>
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_BrightnessExtensions_Brightness__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__System_Single_Rectangle_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.BrightnessExtensions.Brightness%60%601(SixLabors.ImageSharp.Processing.IImageProcessingContext%7B%60%600%7D%2CSystem.Single%2CRectangle)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_BrightnessExtensions_Brightness_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Single_Rectangle_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.BrightnessExtensions.Brightness(SixLabors.ImageSharp.Processing.IImageProcessingContext%2CSystem.Single%2CRectangle)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/Processing/BrightnessExtensions.cs/#L44">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Extensions/BrightnessExtensions.cs/#L41">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_BrightnessExtensions_Brightness_" data-uid="SixLabors.ImageSharp.Processing.BrightnessExtensions.Brightness*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_BrightnessExtensions_Brightness__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__System_Single_Rectangle_" data-uid="SixLabors.ImageSharp.Processing.BrightnessExtensions.Brightness``1(SixLabors.ImageSharp.Processing.IImageProcessingContext{``0},System.Single,Rectangle)">Brightness&lt;TPixel&gt;(IImageProcessingContext&lt;TPixel&gt;, Single, Rectangle)</h4>
+  <h4 id="SixLabors_ImageSharp_Processing_BrightnessExtensions_Brightness_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Single_Rectangle_" data-uid="SixLabors.ImageSharp.Processing.BrightnessExtensions.Brightness(SixLabors.ImageSharp.Processing.IImageProcessingContext,System.Single,Rectangle)">Brightness(IImageProcessingContext, Single, Rectangle)</h4>
   <div class="markdown level1 summary"><p>Alters the brightness component of the image.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IImageProcessingContext&lt;TPixel&gt; Brightness&lt;TPixel&gt;(this IImageProcessingContext&lt;TPixel&gt; source, float amount, Rectangle rectangle)
-
-    where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public static IImageProcessingContext Brightness(this IImageProcessingContext source, float amount, Rectangle rectangle)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -197,7 +178,7 @@ Other values are linear multipliers on the effect. Values of an amount over 1 ar
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><span class="parametername">source</span></td>
         <td><p>The image this method extends.</p>
 </td>
@@ -226,29 +207,13 @@ Other values are linear multipliers on the effect. Values of an amount over 1 ar
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
-        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a>.</p>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a> to allow chaining of operations.</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TPixel</span></td>
-        <td><p>The pixel format.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="SixLabors_ImageSharp_Processing_BrightnessExtensions_Brightness__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__System_Single_Rectangle__remarks">Remarks</h5>
+  <h5 id="SixLabors_ImageSharp_Processing_BrightnessExtensions_Brightness_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Single_Rectangle__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>A value of 0 will create an image that is completely black. A value of 1 leaves the input unchanged.
 Other values are linear multipliers on the effect. Values of an amount over 1 are allowed, providing brighter results.</p>
 </div>
@@ -263,7 +228,7 @@ Other values are linear multipliers on the effect. Values of an amount over 1 ar
                     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_BrightnessExtensions.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.BrightnessExtensions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/Processing/BrightnessExtensions.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Extensions/BrightnessExtensions.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

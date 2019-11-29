@@ -1,0 +1,525 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ResizeProcessor
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ResizeProcessor
+   ">
+    <meta name="generator" content="docfx 2.47.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.png">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="SixLabors.ImageSharp.Processing.Processors.Transforms.ResizeProcessor">
+  
+  
+  <h1 id="SixLabors_ImageSharp_Processing_Processors_Transforms_ResizeProcessor" data-uid="SixLabors.ImageSharp.Processing.Processors.Transforms.ResizeProcessor" class="text-break">Class ResizeProcessor
+  </h1>
+  <div class="markdown level0 summary"><p>Defines an image resizing operation with the given <a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Transforms.IResampler.html">IResampler</a> and dimensional parameters.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">ResizeProcessor</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="SixLabors.ImageSharp.Processing.Processors.IImageProcessor.html">IImageProcessor</a></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Transforms.html">SixLabors.ImageSharp.Processing.Processors.Transforms</a></h6>
+  <h6><strong>Assembly</strong>: SixLabors.ImageSharp.dll</h6>
+  <h5 id="SixLabors_ImageSharp_Processing_Processors_Transforms_ResizeProcessor_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ResizeProcessor : object, IImageProcessor</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Transforms_ResizeProcessor__ctor_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_System_Int32_System_Int32_Size_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Transforms.ResizeProcessor.%23ctor(SixLabors.ImageSharp.Processing.Processors.Transforms.IResampler%2CSystem.Int32%2CSystem.Int32%2CSize)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Processors/Transforms/Resize/ResizeProcessor.cs/#L102">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Processing_Processors_Transforms_ResizeProcessor__ctor_" data-uid="SixLabors.ImageSharp.Processing.Processors.Transforms.ResizeProcessor.#ctor*"></a>
+  <h4 id="SixLabors_ImageSharp_Processing_Processors_Transforms_ResizeProcessor__ctor_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_System_Int32_System_Int32_Size_" data-uid="SixLabors.ImageSharp.Processing.Processors.Transforms.ResizeProcessor.#ctor(SixLabors.ImageSharp.Processing.Processors.Transforms.IResampler,System.Int32,System.Int32,Size)">ResizeProcessor(IResampler, Int32, Int32, Size)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Transforms.ResizeProcessor.html">ResizeProcessor</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ResizeProcessor(IResampler sampler, int width, int height, Size sourceSize)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Transforms.IResampler.html">IResampler</a></td>
+        <td><span class="parametername">sampler</span></td>
+        <td><p>The sampler to perform the resize operation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">width</span></td>
+        <td><p>The target width.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">height</span></td>
+        <td><p>The target height.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Size</span></td>
+        <td><span class="parametername">sourceSize</span></td>
+        <td><p>The source image size</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Transforms_ResizeProcessor__ctor_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_System_Int32_System_Int32_Size_Rectangle_System_Boolean_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Transforms.ResizeProcessor.%23ctor(SixLabors.ImageSharp.Processing.Processors.Transforms.IResampler%2CSystem.Int32%2CSystem.Int32%2CSize%2CRectangle%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Processors/Transforms/Resize/ResizeProcessor.cs/#L25">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Processing_Processors_Transforms_ResizeProcessor__ctor_" data-uid="SixLabors.ImageSharp.Processing.Processors.Transforms.ResizeProcessor.#ctor*"></a>
+  <h4 id="SixLabors_ImageSharp_Processing_Processors_Transforms_ResizeProcessor__ctor_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_System_Int32_System_Int32_Size_Rectangle_System_Boolean_" data-uid="SixLabors.ImageSharp.Processing.Processors.Transforms.ResizeProcessor.#ctor(SixLabors.ImageSharp.Processing.Processors.Transforms.IResampler,System.Int32,System.Int32,Size,Rectangle,System.Boolean)">ResizeProcessor(IResampler, Int32, Int32, Size, Rectangle, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Transforms.ResizeProcessor.html">ResizeProcessor</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ResizeProcessor(IResampler sampler, int width, int height, Size sourceSize, Rectangle targetRectangle, bool compand)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Transforms.IResampler.html">IResampler</a></td>
+        <td><span class="parametername">sampler</span></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Transforms.IResampler.html">IResampler</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">width</span></td>
+        <td><p>The width.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">height</span></td>
+        <td><p>The height.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Size</span></td>
+        <td><span class="parametername">sourceSize</span></td>
+        <td><p>The size of the source image.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Rectangle</span></td>
+        <td><span class="parametername">targetRectangle</span></td>
+        <td><p>The target rectangle to resize into.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">compand</span></td>
+        <td><p>A value indicating whether to apply RGBA companding.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Transforms_ResizeProcessor__ctor_SixLabors_ImageSharp_Processing_ResizeOptions_Size_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Transforms.ResizeProcessor.%23ctor(SixLabors.ImageSharp.Processing.ResizeOptions%2CSize)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Processors/Transforms/Resize/ResizeProcessor.cs/#L60">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Processing_Processors_Transforms_ResizeProcessor__ctor_" data-uid="SixLabors.ImageSharp.Processing.Processors.Transforms.ResizeProcessor.#ctor*"></a>
+  <h4 id="SixLabors_ImageSharp_Processing_Processors_Transforms_ResizeProcessor__ctor_SixLabors_ImageSharp_Processing_ResizeOptions_Size_" data-uid="SixLabors.ImageSharp.Processing.Processors.Transforms.ResizeProcessor.#ctor(SixLabors.ImageSharp.Processing.ResizeOptions,Size)">ResizeProcessor(ResizeOptions, Size)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Transforms.ResizeProcessor.html">ResizeProcessor</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ResizeProcessor(ResizeOptions options, Size sourceSize)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.ResizeOptions.html">ResizeOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The resize options.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Size</span></td>
+        <td><span class="parametername">sourceSize</span></td>
+        <td><p>The source image size.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Transforms_ResizeProcessor_Compand.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Transforms.ResizeProcessor.Compand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Processors/Transforms/Resize/ResizeProcessor.cs/#L130">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Processing_Processors_Transforms_ResizeProcessor_Compand_" data-uid="SixLabors.ImageSharp.Processing.Processors.Transforms.ResizeProcessor.Compand*"></a>
+  <h4 id="SixLabors_ImageSharp_Processing_Processors_Transforms_ResizeProcessor_Compand" data-uid="SixLabors.ImageSharp.Processing.Processors.Transforms.ResizeProcessor.Compand">Compand</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether to compress or expand individual pixel color values on processing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Compand { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Transforms_ResizeProcessor_Height.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Transforms.ResizeProcessor.Height%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Processors/Transforms/Resize/ResizeProcessor.cs/#L120">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Processing_Processors_Transforms_ResizeProcessor_Height_" data-uid="SixLabors.ImageSharp.Processing.Processors.Transforms.ResizeProcessor.Height*"></a>
+  <h4 id="SixLabors_ImageSharp_Processing_Processors_Transforms_ResizeProcessor_Height" data-uid="SixLabors.ImageSharp.Processing.Processors.Transforms.ResizeProcessor.Height">Height</h4>
+  <div class="markdown level1 summary"><p>Gets the target height.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Height { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Transforms_ResizeProcessor_Sampler.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Transforms.ResizeProcessor.Sampler%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Processors/Transforms/Resize/ResizeProcessor.cs/#L110">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Processing_Processors_Transforms_ResizeProcessor_Sampler_" data-uid="SixLabors.ImageSharp.Processing.Processors.Transforms.ResizeProcessor.Sampler*"></a>
+  <h4 id="SixLabors_ImageSharp_Processing_Processors_Transforms_ResizeProcessor_Sampler" data-uid="SixLabors.ImageSharp.Processing.Processors.Transforms.ResizeProcessor.Sampler">Sampler</h4>
+  <div class="markdown level1 summary"><p>Gets the sampler to perform the resize operation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IResampler Sampler { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Transforms.IResampler.html">IResampler</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Transforms_ResizeProcessor_TargetRectangle.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Transforms.ResizeProcessor.TargetRectangle%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Processors/Transforms/Resize/ResizeProcessor.cs/#L125">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Processing_Processors_Transforms_ResizeProcessor_TargetRectangle_" data-uid="SixLabors.ImageSharp.Processing.Processors.Transforms.ResizeProcessor.TargetRectangle*"></a>
+  <h4 id="SixLabors_ImageSharp_Processing_Processors_Transforms_ResizeProcessor_TargetRectangle" data-uid="SixLabors.ImageSharp.Processing.Processors.Transforms.ResizeProcessor.TargetRectangle">TargetRectangle</h4>
+  <div class="markdown level1 summary"><p>Gets the resize rectangle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Rectangle TargetRectangle { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Rectangle</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Transforms_ResizeProcessor_Width.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Transforms.ResizeProcessor.Width%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Processors/Transforms/Resize/ResizeProcessor.cs/#L115">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Processing_Processors_Transforms_ResizeProcessor_Width_" data-uid="SixLabors.ImageSharp.Processing.Processors.Transforms.ResizeProcessor.Width*"></a>
+  <h4 id="SixLabors_ImageSharp_Processing_Processors_Transforms_ResizeProcessor_Width" data-uid="SixLabors.ImageSharp.Processing.Processors.Transforms.ResizeProcessor.Width">Width</h4>
+  <div class="markdown level1 summary"><p>Gets the target width.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Width { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Transforms_ResizeProcessor_CreatePixelSpecificProcessor__1_SixLabors_ImageSharp_Image___0__Rectangle_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Transforms.ResizeProcessor.CreatePixelSpecificProcessor%60%601(SixLabors.ImageSharp.Image%7B%60%600%7D%2CRectangle)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Processors/Transforms/Resize/ResizeProcessor.cs/#L133">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Processing_Processors_Transforms_ResizeProcessor_CreatePixelSpecificProcessor_" data-uid="SixLabors.ImageSharp.Processing.Processors.Transforms.ResizeProcessor.CreatePixelSpecificProcessor*"></a>
+  <h4 id="SixLabors_ImageSharp_Processing_Processors_Transforms_ResizeProcessor_CreatePixelSpecificProcessor__1_SixLabors_ImageSharp_Image___0__Rectangle_" data-uid="SixLabors.ImageSharp.Processing.Processors.Transforms.ResizeProcessor.CreatePixelSpecificProcessor``1(SixLabors.ImageSharp.Image{``0},Rectangle)">CreatePixelSpecificProcessor&lt;TPixel&gt;(Image&lt;TPixel&gt;, Rectangle)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IImageProcessor&lt;TPixel&gt; CreatePixelSpecificProcessor&lt;TPixel&gt;(Image&lt;TPixel&gt; source, Rectangle sourceRectangle)
+    where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image</a>&lt;TPixel&gt;</td>
+        <td><span class="parametername">source</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Rectangle</span></td>
+        <td><span class="parametername">sourceRectangle</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.Processors.IImageProcessor-1.html">IImageProcessor</a>&lt;TPixel&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TPixel</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.Processors.IImageProcessor.html">IImageProcessor</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Transforms_ResizeProcessor.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Transforms.ResizeProcessor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Processors/Transforms/Resize/ResizeProcessor.cs/#L14" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © Six Labors<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

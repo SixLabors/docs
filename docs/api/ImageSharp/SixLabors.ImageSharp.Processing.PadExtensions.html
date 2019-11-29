@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class PadExtensions
    ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../../favicon.png">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -74,7 +74,8 @@
   
   <h1 id="SixLabors_ImageSharp_Processing_PadExtensions" data-uid="SixLabors.ImageSharp.Processing.PadExtensions" class="text-break">Class PadExtensions
   </h1>
-  <div class="markdown level0 summary"><p>Adds extensions that allow the application of padding operations to the <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> type.</p>
+  <div class="markdown level0 summary"><p>Defines extensions that allow the application of padding operations on an <a class="xref" href="SixLabors.ImageSharp.Image.html">Image</a>
+using Mutate/Clone.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -92,21 +93,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_PadExtensions_Pad__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.PadExtensions.Pad%60%601(SixLabors.ImageSharp.Processing.IImageProcessingContext%7B%60%600%7D%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_PadExtensions_Pad_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.PadExtensions.Pad(SixLabors.ImageSharp.Processing.IImageProcessingContext%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/Processing/PadExtensions.cs/#L22">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Extensions/PadExtensions.cs/#L21">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_PadExtensions_Pad_" data-uid="SixLabors.ImageSharp.Processing.PadExtensions.Pad*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_PadExtensions_Pad__1_SixLabors_ImageSharp_Processing_IImageProcessingContext___0__System_Int32_System_Int32_" data-uid="SixLabors.ImageSharp.Processing.PadExtensions.Pad``1(SixLabors.ImageSharp.Processing.IImageProcessingContext{``0},System.Int32,System.Int32)">Pad&lt;TPixel&gt;(IImageProcessingContext&lt;TPixel&gt;, Int32, Int32)</h4>
+  <h4 id="SixLabors_ImageSharp_Processing_PadExtensions_Pad_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Int32_System_Int32_" data-uid="SixLabors.ImageSharp.Processing.PadExtensions.Pad(SixLabors.ImageSharp.Processing.IImageProcessingContext,System.Int32,System.Int32)">Pad(IImageProcessingContext, Int32, Int32)</h4>
   <div class="markdown level1 summary"><p>Evenly pads an image to fit the new dimensions.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IImageProcessingContext&lt;TPixel&gt; Pad&lt;TPixel&gt;(this IImageProcessingContext&lt;TPixel&gt; source, int width, int height)
-
-    where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public static IImageProcessingContext Pad(this IImageProcessingContext source, int width, int height)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -119,7 +118,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
         <td><span class="parametername">source</span></td>
         <td><p>The source image to pad.</p>
 </td>
@@ -148,24 +147,76 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext-1.html">IImageProcessingContext</a>&lt;TPixel&gt;</td>
-        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a>.</p>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a> to allow chaining of operations.</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h5 class="typeParameters">Type Parameters</h5>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_PadExtensions_Pad_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Int32_System_Int32_SixLabors_ImageSharp_Color_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.PadExtensions.Pad(SixLabors.ImageSharp.Processing.IImageProcessingContext%2CSystem.Int32%2CSystem.Int32%2CSixLabors.ImageSharp.Color)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Extensions/PadExtensions.cs/#L32">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Processing_PadExtensions_Pad_" data-uid="SixLabors.ImageSharp.Processing.PadExtensions.Pad*"></a>
+  <h4 id="SixLabors_ImageSharp_Processing_PadExtensions_Pad_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Int32_System_Int32_SixLabors_ImageSharp_Color_" data-uid="SixLabors.ImageSharp.Processing.PadExtensions.Pad(SixLabors.ImageSharp.Processing.IImageProcessingContext,System.Int32,System.Int32,SixLabors.ImageSharp.Color)">Pad(IImageProcessingContext, Int32, Int32, Color)</h4>
+  <div class="markdown level1 summary"><p>Evenly pads an image to fit the new dimensions with the given background color.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IImageProcessingContext Pad(this IImageProcessingContext source, int width, int height, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
+        <th>Type</th>
         <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="parametername">TPixel</span></td>
-        <td><p>The pixel format.</p>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
+        <td><span class="parametername">source</span></td>
+        <td><p>The source image to pad.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">width</span></td>
+        <td><p>The new width.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">height</span></td>
+        <td><p>The new height.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Color.html">Color</a></td>
+        <td><span class="parametername">color</span></td>
+        <td><p>The background color with which to pad the image.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a> to allow chaining of operations.</p>
 </td>
       </tr>
     </tbody>
@@ -181,7 +232,7 @@
                     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_PadExtensions.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.PadExtensions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/SixLabors/ImageSharp/blob/2849fd9c1dc19a7338235f6c33f4970e5a12dee3/src/ImageSharp/Processing/PadExtensions.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Extensions/PadExtensions.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

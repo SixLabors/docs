@@ -1,5 +1,5 @@
 # ensure all submodules are currently checked out to the latest tag
-git submodule update --init
+git submodule update --init --recursive
 Get-ChildItem ./ext -Directory | ForEach-Object {
     $path = $_.FullName
 
