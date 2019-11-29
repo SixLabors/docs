@@ -1,0 +1,151 @@
+﻿
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Welcome to Six Labors documentation! </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Welcome to Six Labors documentation! ">
+    <meta name="generator" content="docfx 2.47.0.0">
+    
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta property="docfx:navrel" content="toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+  <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="welcome-to-six-labors-documentation">Welcome to Six Labors documentation!</h1>
+
+<p>We aim to provide modern, cross-platform, incredibly powerful yet beautifully simple graphics libraries. Built against .NET Standard, our libraries can be used in device, cloud, and embedded/IoT scenarios.</p>
+<p>You can find tutorials, examples and API details covering all Six Labors projects.</p>
+<h3 id="articlesarticlesintromd"><a href="articles/intro.html">Articles</a></h3>
+<p>Examples, quick-start guides and FAQ-s about our API. <strong>This is the recommended place to go for newcomers.</strong> (Or at least it would be - as soon as we manage to finish all topics.)</p>
+<h3 id="api-documentationapiindexmd"><a href="api/index.html">API documentation</a></h3>
+<p>Detailed documentation for the entire API available across our projects.</p>
+<h3 id="examples-repositoryhttpsgithubcomsixlaborssamples"><a href="https://github.com/SixLabors/Samples">Examples repository</a></h3>
+<p>We have implemented short self-contained sample projects for a few specific use cases, including:</p>
+<ol>
+<li><a href="https://github.com/SixLabors/Samples/tree/master/ImageSharp/AvatarWithRoundedCorner">Avatar with rounded corners</a><br>
+Crops rounded corners of a source image leaving a nice rounded avatar.</li>
+<li><a href="https://github.com/SixLabors/Samples/tree/master/ImageSharp/DrawWaterMarkOnImage">Draw watermark on image</a><br>
+Draw water mark over an image automaticaly scaling the font size to fill the avalible space.</li>
+<li><a href="https://github.com/SixLabors/Samples/tree/master/ImageSharp/ChangeDefaultEncoderOptions">Change default encoder options</a><br>
+Provides an example on how you go about switching out the registered encoder for a file format and changing its default options in the process.</li>
+<li><a href="https://github.com/SixLabors/Samples/tree/master/ImageSharp/DrawingTextAlongAPath">Draw text along a path</a><br>
+Draw some text following the contours of a path.</li>
+</ol>
+<h1 id="sixlabors-projects">SixLabors Projects</h1>
+<p>Our graphics libraries are split into different projects. They cover different concerns separately, but there is strong cohesion in order to provide the best developer experience.</p>
+<h3 id="sixlaborscorehttpsgithubcomsixlaborscore"><a href="https://github.com/SixLabors/Core">SixLabors.Core</a></h3>
+<p>Common classes and structs used across our projects including <a class="xref" href="api/Core/SixLabors.Primitives.html">SixLabors.Primitives</a>.</p>
+<h3 id="sixlaborsimagesharphttpsgithubcomsixlaborsimagesharp"><a href="https://github.com/SixLabors/ImageSharp">SixLabors.ImageSharp</a></h3>
+<ul>
+<li>Contains the generic <a class="xref" href="api/ImageSharp/SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> class, PixelFormats, Configuration, and other core functionality.</li>
+<li>The <a class="xref" href="api/ImageSharp/SixLabors.ImageSharp.Formats.IImageFormat.html">IImageFormat</a> interface, Jpeg, Png, Bmp, and Gif formats.</li>
+<li>The image processor infrastructure, <code>.Mutate()</code> and <code>.Clone()</code><ul>
+<li>Transform methods like Resize, Crop, Skew, Rotate - Anything that alters the dimensions of the image.</li>
+<li>Non-transform methods like Gaussian Blur, Pixelate, Edge Detection - Anything that maintains the original image dimensions.</li>
+</ul>
+</li>
+</ul>
+<h3 id="sixlaborsshapeshttpsgithubcomsixlaborsshapes"><a href="https://github.com/SixLabors/Shapes">SixLabors.Shapes</a></h3>
+<p>Net standard geometry/shape manipulation library, can be used to instantiate various shapes allowing operations like merge, split, intersections etc.
+The SixLabors.Drawing library is based on Shapes.</p>
+<h3 id="sixlaborsfontshttpsgithubcomsixlaborsfonts"><a href="https://github.com/SixLabors/Fonts">SixLabors.Fonts</a></h3>
+<p>Font loading and drawing library. Text drawing in <code>SixLabors.ImageSharp.Drawing</code> is based on this library.</p>
+<h3 id="sixlaborsimagesharpdrawing">SixLabors.ImageSharp.Drawing</h3>
+<ul>
+<li>Brushes and various drawing algorithms, including drawing images.</li>
+<li>Various vector drawing methods for drawing paths, polygons etc.</li>
+<li>Text drawing (based on <a href="https://github.com/SixLabors/Fonts">SixLabors.Fonts</a>)</li>
+</ul>
+<h3 id="sixlaborsimagesharpwebhttpsgithubcomsixlaborsimagesharpweb"><a href="https://github.com/SixLabors/ImageSharp.Web">SixLabors.ImageSharp.Web</a></h3>
+<p>ASP.NET-Core middleware for image manipulation.</p>
+
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/SixLabors/docs/blob/master/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © Six Labors<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>

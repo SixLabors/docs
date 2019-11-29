@@ -1,0 +1,180 @@
+﻿
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Working with pixel buffers </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Working with pixel buffers ">
+    <meta name="generator" content="docfx 2.47.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.png">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+  <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="working-with-pixel-buffers">Working with pixel buffers</h1>
+
+<h3 id="setting-individual-pixels-using-indexers">Setting individual pixels using indexers</h3>
+<p>A very basic and readable way for manipulating individual pixels is to use the indexer either on <code>Image&lt;T&gt;</code> or <code>ImageFrame&lt;T&gt;</code>:</p>
+<pre><code class="lang-C#">using (Image&lt;Rgba32&gt; image = new Image&lt;Rgba32&gt;(400, 400))
+{
+    image[200, 200] = Rgba32.White; // also works on ImageFrame&lt;T&gt;
+}
+</code></pre><p>The idexer is much faster than the <code>.GetPixel(x, y)</code> and <code>.SetPixel(x,y)</code> methods of <code>System.Drawing</code> but, it&#39;s still quite slow.</p>
+<h3 id="efficient-pixel-manipulation">Efficient pixel manipulation</h3>
+<p>If you want to achieve killer speed in your own low-level pixel manipulation routines, you need to utilize extension methods within the <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Advanced.AdvancedImageExtensions.html">AdvancedImageExtensions</a> class. These methods are using the <a href="https://www.codemag.com/Article/1807051/Introducing-.NET-Core-2.1-Flagship-Types-Span-T-and-Memory-T">brand-new <code>Span&lt;T&gt;</code>-based memory manipulation primitives</a> from <a href="https://www.nuget.org/packages/System.Memory/">System.Memory</a>, providing a fast, yet safe low-level solution to manipulate pixel data.</p>
+<p>This is how you can implement efficient row-by-row pixel manipulation:</p>
+<pre><code class="lang-C#">using SixLabors.ImageSharp.Advanced;
+
+// ...
+
+using (Image&lt;Rgba32&gt; image = new Image&lt;Rgba32&gt;(400, 400))
+{
+    for (int y = 0; y &lt; image.Height; y++)
+    {
+        Span&lt;Rgba32&gt; pixelRowSpan = image.GetPixelRowSpan(y);
+        for (int x = 0; x &lt; image.Width; x++)
+        {
+            pixelRowSpan[x] = new Rgba32(x/255, y/255, 50, 255);
+        }
+    }
+}
+</code></pre><h3 id="spant-limitations"><code>Span&lt;T&gt;</code> limitations</h3>
+<p>Please be aware that <strong><code>Span&lt;T&gt;</code> has a very specific limitation</strong>: it is a stack-only type! Read the <em>Is There Anything Span Can’t Do?!</em> section in <a href="https://www.codemag.com/Article/1807051/Introducing-.NET-Core-2.1-Flagship-Types-Span-T-and-Memory-T">this article</a> for more details.
+A short summary of the limitations:</p>
+<ul>
+<li>Span can only live on the execution stack.</li>
+<li>Span cannot be boxed or put on the heap.</li>
+<li>Span cannot be used as a generic type argument.</li>
+<li>Span cannot be an instance field of a type that itself is not stack-only.</li>
+<li>Span cannot be used within asynchronous methods.</li>
+</ul>
+<p><strong>Non-conformant code:</strong></p>
+<pre><code class="lang-C#">Span&lt;Rgba32&gt; span = image.GetRowSpan(y);
+
+await Task.Run(() =&gt;
+    {   
+        // ☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠
+        // ☠☠☠ BANG! YOU HAVE CAPTURED A SPAN ON THE HEAP! ☠☠☠
+
+        for (int i = 0; i &lt; span.Length; i++)
+        {
+            span[i] = /* ... */;
+        }
+    });
+</code></pre><h3 id="exporting-raw-pixel-data-from-an-imaget">Exporting raw pixel data from an <code>Image&lt;T&gt;</code></h3>
+<p>You can use <code>image.GetPixelSpan()</code> to access the whole contigous pixel buffer, eg. to copy the pixel data into an array:</p>
+<pre><code class="lang-C#">Rgba32[] pixelArray = image.GetPixelSpan().ToArray();
+</code></pre><p>Or:</p>
+<pre><code class="lang-C#">Rgba32[] pixelArray = /* your pixel buffer being reused */
+image.GetPixelSpan().CopyTo(pixelArray);
+</code></pre><p>Or:</p>
+<pre><code class="lang-C#">byte[] rgbaBytes = MemoryMarshal.AsBytes(image.GetPixelSpan()).ToArray();
+</code></pre><h3 id="loading-raw-pixel-data-into-an-imaget">Loading raw pixel data into an <code>Image&lt;T&gt;</code></h3>
+<pre><code class="lang-C#">Rgba32[] rgbaData = GetMyRgbaArray();
+using (var image = Image.LoadPixelData(rgbaData))
+{
+    // Work with image
+}
+</code></pre><pre><code class="lang-C#">byte[] rgbaBytes = GetMyRgbaBytes();
+using (var image = Image.LoadPixelData&lt;Rgba32&gt;(rgbaBytes))
+{
+    // Work with image
+}
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/SixLabors/docs/blob/master/articles/ImageSharp/WorkingWithPixelBuffers.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © Six Labors<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

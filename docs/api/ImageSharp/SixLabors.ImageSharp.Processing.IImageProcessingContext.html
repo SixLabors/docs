@@ -1,0 +1,986 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IImageProcessingContext
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IImageProcessingContext
+   ">
+    <meta name="generator" content="docfx 2.47.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.png">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="SixLabors.ImageSharp.Processing.IImageProcessingContext">
+  
+  
+  <h1 id="SixLabors_ImageSharp_Processing_IImageProcessingContext" data-uid="SixLabors.ImageSharp.Processing.IImageProcessingContext" class="text-break">Interface IImageProcessingContext
+  </h1>
+  <div class="markdown level0 summary"><p>A pixel-agnostic interface to queue up image operations to apply to an image.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="SixLabors.ImageSharp.Processing.html">SixLabors.ImageSharp.Processing</a></h6>
+  <h6><strong>Assembly</strong>: SixLabors.ImageSharp.dll</h6>
+  <h5 id="SixLabors_ImageSharp_Processing_IImageProcessingContext_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IImageProcessingContext</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_IImageProcessingContext_MemoryAllocator.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.IImageProcessingContext.MemoryAllocator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/IImageProcessingContext.cs/#L19">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Processing_IImageProcessingContext_MemoryAllocator_" data-uid="SixLabors.ImageSharp.Processing.IImageProcessingContext.MemoryAllocator*"></a>
+  <h4 id="SixLabors_ImageSharp_Processing_IImageProcessingContext_MemoryAllocator" data-uid="SixLabors.ImageSharp.Processing.IImageProcessingContext.MemoryAllocator">MemoryAllocator</h4>
+  <div class="markdown level1 summary"><p>Gets a reference to the <a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html#SixLabors_ImageSharp_Processing_IImageProcessingContext_MemoryAllocator">MemoryAllocator</a> used to allocate buffers
+for this context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">MemoryAllocator MemoryAllocator { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MemoryAllocator</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_IImageProcessingContext_ApplyProcessor_SixLabors_ImageSharp_Processing_Processors_IImageProcessor_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.IImageProcessingContext.ApplyProcessor(SixLabors.ImageSharp.Processing.Processors.IImageProcessor)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/IImageProcessingContext.cs/#L40">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Processing_IImageProcessingContext_ApplyProcessor_" data-uid="SixLabors.ImageSharp.Processing.IImageProcessingContext.ApplyProcessor*"></a>
+  <h4 id="SixLabors_ImageSharp_Processing_IImageProcessingContext_ApplyProcessor_SixLabors_ImageSharp_Processing_Processors_IImageProcessor_" data-uid="SixLabors.ImageSharp.Processing.IImageProcessingContext.ApplyProcessor(SixLabors.ImageSharp.Processing.Processors.IImageProcessor)">ApplyProcessor(IImageProcessor)</h4>
+  <div class="markdown level1 summary"><p>Adds the processor to the current set of image operations to be applied.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IImageProcessingContext ApplyProcessor(IImageProcessor processor)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.Processors.IImageProcessor.html">IImageProcessor</a></td>
+        <td><span class="parametername">processor</span></td>
+        <td><p>The processor to apply.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
+        <td><p>The current operations class to allow chaining of operations.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_IImageProcessingContext_ApplyProcessor_SixLabors_ImageSharp_Processing_Processors_IImageProcessor_Rectangle_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.IImageProcessingContext.ApplyProcessor(SixLabors.ImageSharp.Processing.Processors.IImageProcessor%2CRectangle)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/IImageProcessingContext.cs/#L33">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Processing_IImageProcessingContext_ApplyProcessor_" data-uid="SixLabors.ImageSharp.Processing.IImageProcessingContext.ApplyProcessor*"></a>
+  <h4 id="SixLabors_ImageSharp_Processing_IImageProcessingContext_ApplyProcessor_SixLabors_ImageSharp_Processing_Processors_IImageProcessor_Rectangle_" data-uid="SixLabors.ImageSharp.Processing.IImageProcessingContext.ApplyProcessor(SixLabors.ImageSharp.Processing.Processors.IImageProcessor,Rectangle)">ApplyProcessor(IImageProcessor, Rectangle)</h4>
+  <div class="markdown level1 summary"><p>Adds the processor to the current set of image operations to be applied.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IImageProcessingContext ApplyProcessor(IImageProcessor processor, Rectangle rectangle)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.Processors.IImageProcessor.html">IImageProcessor</a></td>
+        <td><span class="parametername">processor</span></td>
+        <td><p>The processor to apply.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Rectangle</span></td>
+        <td><span class="parametername">rectangle</span></td>
+        <td><p>The area to apply it to.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></td>
+        <td><p>The current operations class to allow chaining of operations.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_IImageProcessingContext_GetCurrentSize.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.IImageProcessingContext.GetCurrentSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/IImageProcessingContext.cs/#L25">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Processing_IImageProcessingContext_GetCurrentSize_" data-uid="SixLabors.ImageSharp.Processing.IImageProcessingContext.GetCurrentSize*"></a>
+  <h4 id="SixLabors_ImageSharp_Processing_IImageProcessingContext_GetCurrentSize" data-uid="SixLabors.ImageSharp.Processing.IImageProcessingContext.GetCurrentSize">GetCurrentSize()</h4>
+  <div class="markdown level1 summary"><p>Gets the image dimensions at the current point in the processing pipeline.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Size GetCurrentSize()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Size</span></td>
+        <td><p>The <see cref="!:Rectangle"></see>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.AutoOrientExtensions.html#SixLabors_ImageSharp_Processing_AutoOrientExtensions_AutoOrient_SixLabors_ImageSharp_Processing_IImageProcessingContext_">AutoOrientExtensions.AutoOrient(IImageProcessingContext)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.BackgroundColorExtensions.html#SixLabors_ImageSharp_Processing_BackgroundColorExtensions_BackgroundColor_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Color_">BackgroundColorExtensions.BackgroundColor(IImageProcessingContext, Color)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.BackgroundColorExtensions.html#SixLabors_ImageSharp_Processing_BackgroundColorExtensions_BackgroundColor_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Color_Rectangle_">BackgroundColorExtensions.BackgroundColor(IImageProcessingContext, Color, Rectangle)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.BackgroundColorExtensions.html#SixLabors_ImageSharp_Processing_BackgroundColorExtensions_BackgroundColor_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Color_">BackgroundColorExtensions.BackgroundColor(IImageProcessingContext, GraphicsOptions, Color)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.BackgroundColorExtensions.html#SixLabors_ImageSharp_Processing_BackgroundColorExtensions_BackgroundColor_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Color_Rectangle_">BackgroundColorExtensions.BackgroundColor(IImageProcessingContext, GraphicsOptions, Color, Rectangle)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.BinaryDiffuseExtensions.html#SixLabors_ImageSharp_Processing_BinaryDiffuseExtensions_BinaryDiffuse_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_Processors_Dithering_IErrorDiffuser_System_Single_">BinaryDiffuseExtensions.BinaryDiffuse(IImageProcessingContext, IErrorDiffuser, Single)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.BinaryDiffuseExtensions.html#SixLabors_ImageSharp_Processing_BinaryDiffuseExtensions_BinaryDiffuse_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_Processors_Dithering_IErrorDiffuser_System_Single_Rectangle_">BinaryDiffuseExtensions.BinaryDiffuse(IImageProcessingContext, IErrorDiffuser, Single, Rectangle)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.BinaryDiffuseExtensions.html#SixLabors_ImageSharp_Processing_BinaryDiffuseExtensions_BinaryDiffuse_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_Processors_Dithering_IErrorDiffuser_System_Single_SixLabors_ImageSharp_Color_SixLabors_ImageSharp_Color_">BinaryDiffuseExtensions.BinaryDiffuse(IImageProcessingContext, IErrorDiffuser, Single, Color, Color)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.BinaryDiffuseExtensions.html#SixLabors_ImageSharp_Processing_BinaryDiffuseExtensions_BinaryDiffuse_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_Processors_Dithering_IErrorDiffuser_System_Single_SixLabors_ImageSharp_Color_SixLabors_ImageSharp_Color_Rectangle_">BinaryDiffuseExtensions.BinaryDiffuse(IImageProcessingContext, IErrorDiffuser, Single, Color, Color, Rectangle)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.BinaryDitherExtensions.html#SixLabors_ImageSharp_Processing_BinaryDitherExtensions_BinaryDither_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_Processors_Dithering_IOrderedDither_">BinaryDitherExtensions.BinaryDither(IImageProcessingContext, IOrderedDither)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.BinaryDitherExtensions.html#SixLabors_ImageSharp_Processing_BinaryDitherExtensions_BinaryDither_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_Processors_Dithering_IOrderedDither_SixLabors_ImageSharp_Color_SixLabors_ImageSharp_Color_">BinaryDitherExtensions.BinaryDither(IImageProcessingContext, IOrderedDither, Color, Color)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.BinaryDitherExtensions.html#SixLabors_ImageSharp_Processing_BinaryDitherExtensions_BinaryDither_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_Processors_Dithering_IOrderedDither_Rectangle_">BinaryDitherExtensions.BinaryDither(IImageProcessingContext, IOrderedDither, Rectangle)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.BinaryDitherExtensions.html#SixLabors_ImageSharp_Processing_BinaryDitherExtensions_BinaryDither_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_Processors_Dithering_IOrderedDither_SixLabors_ImageSharp_Color_SixLabors_ImageSharp_Color_Rectangle_">BinaryDitherExtensions.BinaryDither(IImageProcessingContext, IOrderedDither, Color, Color, Rectangle)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.BinaryThresholdExtensions.html#SixLabors_ImageSharp_Processing_BinaryThresholdExtensions_BinaryThreshold_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Single_">BinaryThresholdExtensions.BinaryThreshold(IImageProcessingContext, Single)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.BinaryThresholdExtensions.html#SixLabors_ImageSharp_Processing_BinaryThresholdExtensions_BinaryThreshold_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Single_Rectangle_">BinaryThresholdExtensions.BinaryThreshold(IImageProcessingContext, Single, Rectangle)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.BinaryThresholdExtensions.html#SixLabors_ImageSharp_Processing_BinaryThresholdExtensions_BinaryThreshold_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Single_SixLabors_ImageSharp_Color_SixLabors_ImageSharp_Color_">BinaryThresholdExtensions.BinaryThreshold(IImageProcessingContext, Single, Color, Color)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.BinaryThresholdExtensions.html#SixLabors_ImageSharp_Processing_BinaryThresholdExtensions_BinaryThreshold_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Single_SixLabors_ImageSharp_Color_SixLabors_ImageSharp_Color_Rectangle_">BinaryThresholdExtensions.BinaryThreshold(IImageProcessingContext, Single, Color, Color, Rectangle)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.BlackWhiteExtensions.html#SixLabors_ImageSharp_Processing_BlackWhiteExtensions_BlackWhite_SixLabors_ImageSharp_Processing_IImageProcessingContext_">BlackWhiteExtensions.BlackWhite(IImageProcessingContext)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.BlackWhiteExtensions.html#SixLabors_ImageSharp_Processing_BlackWhiteExtensions_BlackWhite_SixLabors_ImageSharp_Processing_IImageProcessingContext_Rectangle_">BlackWhiteExtensions.BlackWhite(IImageProcessingContext, Rectangle)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.BokehBlurExtensions.html#SixLabors_ImageSharp_Processing_BokehBlurExtensions_BokehBlur_SixLabors_ImageSharp_Processing_IImageProcessingContext_">BokehBlurExtensions.BokehBlur(IImageProcessingContext)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.BokehBlurExtensions.html#SixLabors_ImageSharp_Processing_BokehBlurExtensions_BokehBlur_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_BokehBlurExecutionMode_">BokehBlurExtensions.BokehBlur(IImageProcessingContext, BokehBlurExecutionMode)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.BokehBlurExtensions.html#SixLabors_ImageSharp_Processing_BokehBlurExtensions_BokehBlur_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Int32_System_Int32_System_Single_">BokehBlurExtensions.BokehBlur(IImageProcessingContext, Int32, Int32, Single)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.BokehBlurExtensions.html#SixLabors_ImageSharp_Processing_BokehBlurExtensions_BokehBlur_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Int32_System_Int32_System_Single_SixLabors_ImageSharp_Processing_BokehBlurExecutionMode_">BokehBlurExtensions.BokehBlur(IImageProcessingContext, Int32, Int32, Single, BokehBlurExecutionMode)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.BokehBlurExtensions.html#SixLabors_ImageSharp_Processing_BokehBlurExtensions_BokehBlur_SixLabors_ImageSharp_Processing_IImageProcessingContext_Rectangle_">BokehBlurExtensions.BokehBlur(IImageProcessingContext, Rectangle)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.BokehBlurExtensions.html#SixLabors_ImageSharp_Processing_BokehBlurExtensions_BokehBlur_SixLabors_ImageSharp_Processing_IImageProcessingContext_Rectangle_SixLabors_ImageSharp_Processing_BokehBlurExecutionMode_">BokehBlurExtensions.BokehBlur(IImageProcessingContext, Rectangle, BokehBlurExecutionMode)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.BokehBlurExtensions.html#SixLabors_ImageSharp_Processing_BokehBlurExtensions_BokehBlur_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Int32_System_Int32_System_Single_Rectangle_">BokehBlurExtensions.BokehBlur(IImageProcessingContext, Int32, Int32, Single, Rectangle)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.BokehBlurExtensions.html#SixLabors_ImageSharp_Processing_BokehBlurExtensions_BokehBlur_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Int32_System_Int32_System_Single_SixLabors_ImageSharp_Processing_BokehBlurExecutionMode_Rectangle_">BokehBlurExtensions.BokehBlur(IImageProcessingContext, Int32, Int32, Single, BokehBlurExecutionMode, Rectangle)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.BoxBlurExtensions.html#SixLabors_ImageSharp_Processing_BoxBlurExtensions_BoxBlur_SixLabors_ImageSharp_Processing_IImageProcessingContext_">BoxBlurExtensions.BoxBlur(IImageProcessingContext)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.BoxBlurExtensions.html#SixLabors_ImageSharp_Processing_BoxBlurExtensions_BoxBlur_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Int32_">BoxBlurExtensions.BoxBlur(IImageProcessingContext, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.BoxBlurExtensions.html#SixLabors_ImageSharp_Processing_BoxBlurExtensions_BoxBlur_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Int32_Rectangle_">BoxBlurExtensions.BoxBlur(IImageProcessingContext, Int32, Rectangle)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.BrightnessExtensions.html#SixLabors_ImageSharp_Processing_BrightnessExtensions_Brightness_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Single_">BrightnessExtensions.Brightness(IImageProcessingContext, Single)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.BrightnessExtensions.html#SixLabors_ImageSharp_Processing_BrightnessExtensions_Brightness_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Single_Rectangle_">BrightnessExtensions.Brightness(IImageProcessingContext, Single, Rectangle)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.ColorBlindnessExtensions.html#SixLabors_ImageSharp_Processing_ColorBlindnessExtensions_ColorBlindness_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_ColorBlindnessMode_">ColorBlindnessExtensions.ColorBlindness(IImageProcessingContext, ColorBlindnessMode)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.ColorBlindnessExtensions.html#SixLabors_ImageSharp_Processing_ColorBlindnessExtensions_ColorBlindness_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_ColorBlindnessMode_Rectangle_">ColorBlindnessExtensions.ColorBlindness(IImageProcessingContext, ColorBlindnessMode, Rectangle)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.ContrastExtensions.html#SixLabors_ImageSharp_Processing_ContrastExtensions_Contrast_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Single_">ContrastExtensions.Contrast(IImageProcessingContext, Single)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.ContrastExtensions.html#SixLabors_ImageSharp_Processing_ContrastExtensions_Contrast_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Single_Rectangle_">ContrastExtensions.Contrast(IImageProcessingContext, Single, Rectangle)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.CropExtensions.html#SixLabors_ImageSharp_Processing_CropExtensions_Crop_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Int32_System_Int32_">CropExtensions.Crop(IImageProcessingContext, Int32, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.CropExtensions.html#SixLabors_ImageSharp_Processing_CropExtensions_Crop_SixLabors_ImageSharp_Processing_IImageProcessingContext_Rectangle_">CropExtensions.Crop(IImageProcessingContext, Rectangle)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DetectEdgesExtensions.html#SixLabors_ImageSharp_Processing_DetectEdgesExtensions_DetectEdges_SixLabors_ImageSharp_Processing_IImageProcessingContext_">DetectEdgesExtensions.DetectEdges(IImageProcessingContext)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DetectEdgesExtensions.html#SixLabors_ImageSharp_Processing_DetectEdgesExtensions_DetectEdges_SixLabors_ImageSharp_Processing_IImageProcessingContext_Rectangle_">DetectEdgesExtensions.DetectEdges(IImageProcessingContext, Rectangle)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DetectEdgesExtensions.html#SixLabors_ImageSharp_Processing_DetectEdgesExtensions_DetectEdges_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_EdgeDetectionOperators_">DetectEdgesExtensions.DetectEdges(IImageProcessingContext, EdgeDetectionOperators)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DetectEdgesExtensions.html#SixLabors_ImageSharp_Processing_DetectEdgesExtensions_DetectEdges_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_EdgeDetectionOperators_System_Boolean_">DetectEdgesExtensions.DetectEdges(IImageProcessingContext, EdgeDetectionOperators, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DetectEdgesExtensions.html#SixLabors_ImageSharp_Processing_DetectEdgesExtensions_DetectEdges_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_EdgeDetectionOperators_Rectangle_System_Boolean_">DetectEdgesExtensions.DetectEdges(IImageProcessingContext, EdgeDetectionOperators, Rectangle, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DitherExtensions.html#SixLabors_ImageSharp_Processing_DitherExtensions_Dither_SixLabors_ImageSharp_Processing_IImageProcessingContext_">DitherExtensions.Dither(IImageProcessingContext)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DitherExtensions.html#SixLabors_ImageSharp_Processing_DitherExtensions_Dither_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_Processors_Dithering_IOrderedDither_">DitherExtensions.Dither(IImageProcessingContext, IOrderedDither)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DitherExtensions.html#SixLabors_ImageSharp_Processing_DitherExtensions_Dither_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_Processors_Dithering_IOrderedDither_ReadOnlyMemory_SixLabors_ImageSharp_Color__">DitherExtensions.Dither(IImageProcessingContext, IOrderedDither, ReadOnlyMemory&lt;Color&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DitherExtensions.html#SixLabors_ImageSharp_Processing_DitherExtensions_Dither_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_Processors_Dithering_IOrderedDither_Rectangle_">DitherExtensions.Dither(IImageProcessingContext, IOrderedDither, Rectangle)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DitherExtensions.html#SixLabors_ImageSharp_Processing_DitherExtensions_Dither_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_Processors_Dithering_IOrderedDither_ReadOnlyMemory_SixLabors_ImageSharp_Color__Rectangle_">DitherExtensions.Dither(IImageProcessingContext, IOrderedDither, ReadOnlyMemory&lt;Color&gt;, Rectangle)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.EntropyCropExtensions.html#SixLabors_ImageSharp_Processing_EntropyCropExtensions_EntropyCrop_SixLabors_ImageSharp_Processing_IImageProcessingContext_">EntropyCropExtensions.EntropyCrop(IImageProcessingContext)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.EntropyCropExtensions.html#SixLabors_ImageSharp_Processing_EntropyCropExtensions_EntropyCrop_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Single_">EntropyCropExtensions.EntropyCrop(IImageProcessingContext, Single)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.FilterExtensions.html#SixLabors_ImageSharp_Processing_FilterExtensions_Filter_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Primitives_ColorMatrix_">FilterExtensions.Filter(IImageProcessingContext, ColorMatrix)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.FilterExtensions.html#SixLabors_ImageSharp_Processing_FilterExtensions_Filter_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Primitives_ColorMatrix_Rectangle_">FilterExtensions.Filter(IImageProcessingContext, ColorMatrix, Rectangle)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.FlipExtensions.html#SixLabors_ImageSharp_Processing_FlipExtensions_Flip_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_FlipMode_">FlipExtensions.Flip(IImageProcessingContext, FlipMode)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.GaussianBlurExtensions.html#SixLabors_ImageSharp_Processing_GaussianBlurExtensions_GaussianBlur_SixLabors_ImageSharp_Processing_IImageProcessingContext_">GaussianBlurExtensions.GaussianBlur(IImageProcessingContext)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.GaussianBlurExtensions.html#SixLabors_ImageSharp_Processing_GaussianBlurExtensions_GaussianBlur_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Single_">GaussianBlurExtensions.GaussianBlur(IImageProcessingContext, Single)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.GaussianBlurExtensions.html#SixLabors_ImageSharp_Processing_GaussianBlurExtensions_GaussianBlur_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Single_Rectangle_">GaussianBlurExtensions.GaussianBlur(IImageProcessingContext, Single, Rectangle)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.GaussianSharpenExtensions.html#SixLabors_ImageSharp_Processing_GaussianSharpenExtensions_GaussianSharpen_SixLabors_ImageSharp_Processing_IImageProcessingContext_">GaussianSharpenExtensions.GaussianSharpen(IImageProcessingContext)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.GaussianSharpenExtensions.html#SixLabors_ImageSharp_Processing_GaussianSharpenExtensions_GaussianSharpen_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Single_">GaussianSharpenExtensions.GaussianSharpen(IImageProcessingContext, Single)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.GaussianSharpenExtensions.html#SixLabors_ImageSharp_Processing_GaussianSharpenExtensions_GaussianSharpen_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Single_Rectangle_">GaussianSharpenExtensions.GaussianSharpen(IImageProcessingContext, Single, Rectangle)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.GlowExtensions.html#SixLabors_ImageSharp_Processing_GlowExtensions_Glow_SixLabors_ImageSharp_Processing_IImageProcessingContext_">GlowExtensions.Glow(IImageProcessingContext)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.GlowExtensions.html#SixLabors_ImageSharp_Processing_GlowExtensions_Glow_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Color_">GlowExtensions.Glow(IImageProcessingContext, Color)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.GlowExtensions.html#SixLabors_ImageSharp_Processing_GlowExtensions_Glow_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Single_">GlowExtensions.Glow(IImageProcessingContext, Single)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.GlowExtensions.html#SixLabors_ImageSharp_Processing_GlowExtensions_Glow_SixLabors_ImageSharp_Processing_IImageProcessingContext_Rectangle_">GlowExtensions.Glow(IImageProcessingContext, Rectangle)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.GlowExtensions.html#SixLabors_ImageSharp_Processing_GlowExtensions_Glow_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Color_System_Single_Rectangle_">GlowExtensions.Glow(IImageProcessingContext, Color, Single, Rectangle)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.GlowExtensions.html#SixLabors_ImageSharp_Processing_GlowExtensions_Glow_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_">GlowExtensions.Glow(IImageProcessingContext, GraphicsOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.GlowExtensions.html#SixLabors_ImageSharp_Processing_GlowExtensions_Glow_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Color_">GlowExtensions.Glow(IImageProcessingContext, GraphicsOptions, Color)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.GlowExtensions.html#SixLabors_ImageSharp_Processing_GlowExtensions_Glow_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_System_Single_">GlowExtensions.Glow(IImageProcessingContext, GraphicsOptions, Single)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.GlowExtensions.html#SixLabors_ImageSharp_Processing_GlowExtensions_Glow_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_Rectangle_">GlowExtensions.Glow(IImageProcessingContext, GraphicsOptions, Rectangle)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.GlowExtensions.html#SixLabors_ImageSharp_Processing_GlowExtensions_Glow_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Color_System_Single_Rectangle_">GlowExtensions.Glow(IImageProcessingContext, GraphicsOptions, Color, Single, Rectangle)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.GrayscaleExtensions.html#SixLabors_ImageSharp_Processing_GrayscaleExtensions_Grayscale_SixLabors_ImageSharp_Processing_IImageProcessingContext_">GrayscaleExtensions.Grayscale(IImageProcessingContext)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.GrayscaleExtensions.html#SixLabors_ImageSharp_Processing_GrayscaleExtensions_Grayscale_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Single_">GrayscaleExtensions.Grayscale(IImageProcessingContext, Single)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.GrayscaleExtensions.html#SixLabors_ImageSharp_Processing_GrayscaleExtensions_Grayscale_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_GrayscaleMode_">GrayscaleExtensions.Grayscale(IImageProcessingContext, GrayscaleMode)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.GrayscaleExtensions.html#SixLabors_ImageSharp_Processing_GrayscaleExtensions_Grayscale_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_GrayscaleMode_System_Single_">GrayscaleExtensions.Grayscale(IImageProcessingContext, GrayscaleMode, Single)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.GrayscaleExtensions.html#SixLabors_ImageSharp_Processing_GrayscaleExtensions_Grayscale_SixLabors_ImageSharp_Processing_IImageProcessingContext_Rectangle_">GrayscaleExtensions.Grayscale(IImageProcessingContext, Rectangle)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.GrayscaleExtensions.html#SixLabors_ImageSharp_Processing_GrayscaleExtensions_Grayscale_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Single_Rectangle_">GrayscaleExtensions.Grayscale(IImageProcessingContext, Single, Rectangle)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.GrayscaleExtensions.html#SixLabors_ImageSharp_Processing_GrayscaleExtensions_Grayscale_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_GrayscaleMode_Rectangle_">GrayscaleExtensions.Grayscale(IImageProcessingContext, GrayscaleMode, Rectangle)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.GrayscaleExtensions.html#SixLabors_ImageSharp_Processing_GrayscaleExtensions_Grayscale_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_GrayscaleMode_System_Single_Rectangle_">GrayscaleExtensions.Grayscale(IImageProcessingContext, GrayscaleMode, Single, Rectangle)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.HistogramEqualizationExtensions.html#SixLabors_ImageSharp_Processing_HistogramEqualizationExtensions_HistogramEqualization_SixLabors_ImageSharp_Processing_IImageProcessingContext_">HistogramEqualizationExtensions.HistogramEqualization(IImageProcessingContext)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.HistogramEqualizationExtensions.html#SixLabors_ImageSharp_Processing_HistogramEqualizationExtensions_HistogramEqualization_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_Processors_Normalization_HistogramEqualizationOptions_">HistogramEqualizationExtensions.HistogramEqualization(IImageProcessingContext, HistogramEqualizationOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.HueExtensions.html#SixLabors_ImageSharp_Processing_HueExtensions_Hue_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Single_">HueExtensions.Hue(IImageProcessingContext, Single)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.HueExtensions.html#SixLabors_ImageSharp_Processing_HueExtensions_Hue_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Single_Rectangle_">HueExtensions.Hue(IImageProcessingContext, Single, Rectangle)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.InvertExtensions.html#SixLabors_ImageSharp_Processing_InvertExtensions_Invert_SixLabors_ImageSharp_Processing_IImageProcessingContext_">InvertExtensions.Invert(IImageProcessingContext)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.InvertExtensions.html#SixLabors_ImageSharp_Processing_InvertExtensions_Invert_SixLabors_ImageSharp_Processing_IImageProcessingContext_Rectangle_">InvertExtensions.Invert(IImageProcessingContext, Rectangle)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.KodachromeExtensions.html#SixLabors_ImageSharp_Processing_KodachromeExtensions_Kodachrome_SixLabors_ImageSharp_Processing_IImageProcessingContext_">KodachromeExtensions.Kodachrome(IImageProcessingContext)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.KodachromeExtensions.html#SixLabors_ImageSharp_Processing_KodachromeExtensions_Kodachrome_SixLabors_ImageSharp_Processing_IImageProcessingContext_Rectangle_">KodachromeExtensions.Kodachrome(IImageProcessingContext, Rectangle)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.LomographExtensions.html#SixLabors_ImageSharp_Processing_LomographExtensions_Lomograph_SixLabors_ImageSharp_Processing_IImageProcessingContext_">LomographExtensions.Lomograph(IImageProcessingContext)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.LomographExtensions.html#SixLabors_ImageSharp_Processing_LomographExtensions_Lomograph_SixLabors_ImageSharp_Processing_IImageProcessingContext_Rectangle_">LomographExtensions.Lomograph(IImageProcessingContext, Rectangle)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.OilPaintExtensions.html#SixLabors_ImageSharp_Processing_OilPaintExtensions_OilPaint_SixLabors_ImageSharp_Processing_IImageProcessingContext_">OilPaintExtensions.OilPaint(IImageProcessingContext)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.OilPaintExtensions.html#SixLabors_ImageSharp_Processing_OilPaintExtensions_OilPaint_SixLabors_ImageSharp_Processing_IImageProcessingContext_Rectangle_">OilPaintExtensions.OilPaint(IImageProcessingContext, Rectangle)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.OilPaintExtensions.html#SixLabors_ImageSharp_Processing_OilPaintExtensions_OilPaint_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Int32_System_Int32_">OilPaintExtensions.OilPaint(IImageProcessingContext, Int32, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.OilPaintExtensions.html#SixLabors_ImageSharp_Processing_OilPaintExtensions_OilPaint_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Int32_System_Int32_Rectangle_">OilPaintExtensions.OilPaint(IImageProcessingContext, Int32, Int32, Rectangle)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.OpacityExtensions.html#SixLabors_ImageSharp_Processing_OpacityExtensions_Opacity_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Single_">OpacityExtensions.Opacity(IImageProcessingContext, Single)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.OpacityExtensions.html#SixLabors_ImageSharp_Processing_OpacityExtensions_Opacity_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Single_Rectangle_">OpacityExtensions.Opacity(IImageProcessingContext, Single, Rectangle)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.PadExtensions.html#SixLabors_ImageSharp_Processing_PadExtensions_Pad_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Int32_System_Int32_">PadExtensions.Pad(IImageProcessingContext, Int32, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.PadExtensions.html#SixLabors_ImageSharp_Processing_PadExtensions_Pad_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Int32_System_Int32_SixLabors_ImageSharp_Color_">PadExtensions.Pad(IImageProcessingContext, Int32, Int32, Color)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.PixelateExtensions.html#SixLabors_ImageSharp_Processing_PixelateExtensions_Pixelate_SixLabors_ImageSharp_Processing_IImageProcessingContext_">PixelateExtensions.Pixelate(IImageProcessingContext)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.PixelateExtensions.html#SixLabors_ImageSharp_Processing_PixelateExtensions_Pixelate_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Int32_">PixelateExtensions.Pixelate(IImageProcessingContext, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.PixelateExtensions.html#SixLabors_ImageSharp_Processing_PixelateExtensions_Pixelate_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Int32_Rectangle_">PixelateExtensions.Pixelate(IImageProcessingContext, Int32, Rectangle)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.PolaroidExtensions.html#SixLabors_ImageSharp_Processing_PolaroidExtensions_Polaroid_SixLabors_ImageSharp_Processing_IImageProcessingContext_">PolaroidExtensions.Polaroid(IImageProcessingContext)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.PolaroidExtensions.html#SixLabors_ImageSharp_Processing_PolaroidExtensions_Polaroid_SixLabors_ImageSharp_Processing_IImageProcessingContext_Rectangle_">PolaroidExtensions.Polaroid(IImageProcessingContext, Rectangle)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.ProcessingExtensions.html#SixLabors_ImageSharp_Processing_ProcessingExtensions_ApplyProcessors_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_Processors_IImageProcessor___">ProcessingExtensions.ApplyProcessors(IImageProcessingContext, IImageProcessor[])</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.QuantizeExtensions.html#SixLabors_ImageSharp_Processing_QuantizeExtensions_Quantize_SixLabors_ImageSharp_Processing_IImageProcessingContext_">QuantizeExtensions.Quantize(IImageProcessingContext)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.QuantizeExtensions.html#SixLabors_ImageSharp_Processing_QuantizeExtensions_Quantize_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_Processors_Quantization_IQuantizer_">QuantizeExtensions.Quantize(IImageProcessingContext, IQuantizer)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.ResizeExtensions.html#SixLabors_ImageSharp_Processing_ResizeExtensions_Resize_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_ResizeOptions_">ResizeExtensions.Resize(IImageProcessingContext, ResizeOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.ResizeExtensions.html#SixLabors_ImageSharp_Processing_ResizeExtensions_Resize_SixLabors_ImageSharp_Processing_IImageProcessingContext_Size_">ResizeExtensions.Resize(IImageProcessingContext, Size)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.ResizeExtensions.html#SixLabors_ImageSharp_Processing_ResizeExtensions_Resize_SixLabors_ImageSharp_Processing_IImageProcessingContext_Size_System_Boolean_">ResizeExtensions.Resize(IImageProcessingContext, Size, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.ResizeExtensions.html#SixLabors_ImageSharp_Processing_ResizeExtensions_Resize_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Int32_System_Int32_">ResizeExtensions.Resize(IImageProcessingContext, Int32, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.ResizeExtensions.html#SixLabors_ImageSharp_Processing_ResizeExtensions_Resize_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Int32_System_Int32_System_Boolean_">ResizeExtensions.Resize(IImageProcessingContext, Int32, Int32, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.ResizeExtensions.html#SixLabors_ImageSharp_Processing_ResizeExtensions_Resize_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Int32_System_Int32_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_">ResizeExtensions.Resize(IImageProcessingContext, Int32, Int32, IResampler)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.ResizeExtensions.html#SixLabors_ImageSharp_Processing_ResizeExtensions_Resize_SixLabors_ImageSharp_Processing_IImageProcessingContext_Size_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_System_Boolean_">ResizeExtensions.Resize(IImageProcessingContext, Size, IResampler, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.ResizeExtensions.html#SixLabors_ImageSharp_Processing_ResizeExtensions_Resize_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Int32_System_Int32_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_System_Boolean_">ResizeExtensions.Resize(IImageProcessingContext, Int32, Int32, IResampler, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.ResizeExtensions.html#SixLabors_ImageSharp_Processing_ResizeExtensions_Resize_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Int32_System_Int32_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_Rectangle_Rectangle_System_Boolean_">ResizeExtensions.Resize(IImageProcessingContext, Int32, Int32, IResampler, Rectangle, Rectangle, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.ResizeExtensions.html#SixLabors_ImageSharp_Processing_ResizeExtensions_Resize_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Int32_System_Int32_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_Rectangle_System_Boolean_">ResizeExtensions.Resize(IImageProcessingContext, Int32, Int32, IResampler, Rectangle, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.RotateExtensions.html#SixLabors_ImageSharp_Processing_RotateExtensions_Rotate_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_RotateMode_">RotateExtensions.Rotate(IImageProcessingContext, RotateMode)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.RotateExtensions.html#SixLabors_ImageSharp_Processing_RotateExtensions_Rotate_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Single_">RotateExtensions.Rotate(IImageProcessingContext, Single)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.RotateExtensions.html#SixLabors_ImageSharp_Processing_RotateExtensions_Rotate_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Single_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_">RotateExtensions.Rotate(IImageProcessingContext, Single, IResampler)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.RotateFlipExtensions.html#SixLabors_ImageSharp_Processing_RotateFlipExtensions_RotateFlip_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_RotateMode_SixLabors_ImageSharp_Processing_FlipMode_">RotateFlipExtensions.RotateFlip(IImageProcessingContext, RotateMode, FlipMode)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.SaturateExtensions.html#SixLabors_ImageSharp_Processing_SaturateExtensions_Saturate_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Single_">SaturateExtensions.Saturate(IImageProcessingContext, Single)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.SaturateExtensions.html#SixLabors_ImageSharp_Processing_SaturateExtensions_Saturate_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Single_Rectangle_">SaturateExtensions.Saturate(IImageProcessingContext, Single, Rectangle)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.SepiaExtensions.html#SixLabors_ImageSharp_Processing_SepiaExtensions_Sepia_SixLabors_ImageSharp_Processing_IImageProcessingContext_">SepiaExtensions.Sepia(IImageProcessingContext)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.SepiaExtensions.html#SixLabors_ImageSharp_Processing_SepiaExtensions_Sepia_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Single_">SepiaExtensions.Sepia(IImageProcessingContext, Single)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.SepiaExtensions.html#SixLabors_ImageSharp_Processing_SepiaExtensions_Sepia_SixLabors_ImageSharp_Processing_IImageProcessingContext_Rectangle_">SepiaExtensions.Sepia(IImageProcessingContext, Rectangle)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.SepiaExtensions.html#SixLabors_ImageSharp_Processing_SepiaExtensions_Sepia_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Single_Rectangle_">SepiaExtensions.Sepia(IImageProcessingContext, Single, Rectangle)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.SkewExtensions.html#SixLabors_ImageSharp_Processing_SkewExtensions_Skew_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Single_System_Single_">SkewExtensions.Skew(IImageProcessingContext, Single, Single)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.SkewExtensions.html#SixLabors_ImageSharp_Processing_SkewExtensions_Skew_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Single_System_Single_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_">SkewExtensions.Skew(IImageProcessingContext, Single, Single, IResampler)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.TransformExtensions.html#SixLabors_ImageSharp_Processing_TransformExtensions_Transform_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_AffineTransformBuilder_">TransformExtensions.Transform(IImageProcessingContext, AffineTransformBuilder)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.TransformExtensions.html#SixLabors_ImageSharp_Processing_TransformExtensions_Transform_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_AffineTransformBuilder_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_">TransformExtensions.Transform(IImageProcessingContext, AffineTransformBuilder, IResampler)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.TransformExtensions.html#SixLabors_ImageSharp_Processing_TransformExtensions_Transform_SixLabors_ImageSharp_Processing_IImageProcessingContext_Rectangle_SixLabors_ImageSharp_Processing_AffineTransformBuilder_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_">TransformExtensions.Transform(IImageProcessingContext, Rectangle, AffineTransformBuilder, IResampler)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.TransformExtensions.html#SixLabors_ImageSharp_Processing_TransformExtensions_Transform_SixLabors_ImageSharp_Processing_IImageProcessingContext_Rectangle_Matrix3x2_Size_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_">TransformExtensions.Transform(IImageProcessingContext, Rectangle, Matrix3x2, Size, IResampler)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.TransformExtensions.html#SixLabors_ImageSharp_Processing_TransformExtensions_Transform_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_ProjectiveTransformBuilder_">TransformExtensions.Transform(IImageProcessingContext, ProjectiveTransformBuilder)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.TransformExtensions.html#SixLabors_ImageSharp_Processing_TransformExtensions_Transform_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_ProjectiveTransformBuilder_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_">TransformExtensions.Transform(IImageProcessingContext, ProjectiveTransformBuilder, IResampler)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.TransformExtensions.html#SixLabors_ImageSharp_Processing_TransformExtensions_Transform_SixLabors_ImageSharp_Processing_IImageProcessingContext_Rectangle_SixLabors_ImageSharp_Processing_ProjectiveTransformBuilder_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_">TransformExtensions.Transform(IImageProcessingContext, Rectangle, ProjectiveTransformBuilder, IResampler)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.TransformExtensions.html#SixLabors_ImageSharp_Processing_TransformExtensions_Transform_SixLabors_ImageSharp_Processing_IImageProcessingContext_Rectangle_Matrix4x4_Size_SixLabors_ImageSharp_Processing_Processors_Transforms_IResampler_">TransformExtensions.Transform(IImageProcessingContext, Rectangle, Matrix4x4, Size, IResampler)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.VignetteExtensions.html#SixLabors_ImageSharp_Processing_VignetteExtensions_Vignette_SixLabors_ImageSharp_Processing_IImageProcessingContext_">VignetteExtensions.Vignette(IImageProcessingContext)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.VignetteExtensions.html#SixLabors_ImageSharp_Processing_VignetteExtensions_Vignette_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Color_">VignetteExtensions.Vignette(IImageProcessingContext, Color)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.VignetteExtensions.html#SixLabors_ImageSharp_Processing_VignetteExtensions_Vignette_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Single_System_Single_">VignetteExtensions.Vignette(IImageProcessingContext, Single, Single)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.VignetteExtensions.html#SixLabors_ImageSharp_Processing_VignetteExtensions_Vignette_SixLabors_ImageSharp_Processing_IImageProcessingContext_Rectangle_">VignetteExtensions.Vignette(IImageProcessingContext, Rectangle)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.VignetteExtensions.html#SixLabors_ImageSharp_Processing_VignetteExtensions_Vignette_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Color_System_Single_System_Single_Rectangle_">VignetteExtensions.Vignette(IImageProcessingContext, Color, Single, Single, Rectangle)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.VignetteExtensions.html#SixLabors_ImageSharp_Processing_VignetteExtensions_Vignette_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_">VignetteExtensions.Vignette(IImageProcessingContext, GraphicsOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.VignetteExtensions.html#SixLabors_ImageSharp_Processing_VignetteExtensions_Vignette_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Color_">VignetteExtensions.Vignette(IImageProcessingContext, GraphicsOptions, Color)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.VignetteExtensions.html#SixLabors_ImageSharp_Processing_VignetteExtensions_Vignette_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_System_Single_System_Single_">VignetteExtensions.Vignette(IImageProcessingContext, GraphicsOptions, Single, Single)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.VignetteExtensions.html#SixLabors_ImageSharp_Processing_VignetteExtensions_Vignette_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_Rectangle_">VignetteExtensions.Vignette(IImageProcessingContext, GraphicsOptions, Rectangle)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.VignetteExtensions.html#SixLabors_ImageSharp_Processing_VignetteExtensions_Vignette_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Color_System_Single_System_Single_Rectangle_">VignetteExtensions.Vignette(IImageProcessingContext, GraphicsOptions, Color, Single, Single, Rectangle)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.Dithering.DiffuseExtensions.html#SixLabors_ImageSharp_Processing_Dithering_DiffuseExtensions_Diffuse_SixLabors_ImageSharp_Processing_IImageProcessingContext_">DiffuseExtensions.Diffuse(IImageProcessingContext)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.Dithering.DiffuseExtensions.html#SixLabors_ImageSharp_Processing_Dithering_DiffuseExtensions_Diffuse_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_Single_">DiffuseExtensions.Diffuse(IImageProcessingContext, Single)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.Dithering.DiffuseExtensions.html#SixLabors_ImageSharp_Processing_Dithering_DiffuseExtensions_Diffuse_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_Processors_Dithering_IErrorDiffuser_System_Single_">DiffuseExtensions.Diffuse(IImageProcessingContext, IErrorDiffuser, Single)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.Dithering.DiffuseExtensions.html#SixLabors_ImageSharp_Processing_Dithering_DiffuseExtensions_Diffuse_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_Processors_Dithering_IErrorDiffuser_System_Single_Rectangle_">DiffuseExtensions.Diffuse(IImageProcessingContext, IErrorDiffuser, Single, Rectangle)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.Dithering.DiffuseExtensions.html#SixLabors_ImageSharp_Processing_Dithering_DiffuseExtensions_Diffuse_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_Processors_Dithering_IErrorDiffuser_System_Single_ReadOnlyMemory_SixLabors_ImageSharp_Color__">DiffuseExtensions.Diffuse(IImageProcessingContext, IErrorDiffuser, Single, ReadOnlyMemory&lt;Color&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.Dithering.DiffuseExtensions.html#SixLabors_ImageSharp_Processing_Dithering_DiffuseExtensions_Diffuse_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_Processors_Dithering_IErrorDiffuser_System_Single_ReadOnlyMemory_SixLabors_ImageSharp_Color__Rectangle_">DiffuseExtensions.Diffuse(IImageProcessingContext, IErrorDiffuser, Single, ReadOnlyMemory&lt;Color&gt;, Rectangle)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DrawBezierExtensions.html#SixLabors_ImageSharp_Processing_DrawBezierExtensions_DrawBeziers_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Processing_IBrush_System_Single_PointF___">DrawBezierExtensions.DrawBeziers(IImageProcessingContext, GraphicsOptions, IBrush, Single, PointF[])</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DrawBezierExtensions.html#SixLabors_ImageSharp_Processing_DrawBezierExtensions_DrawBeziers_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_IBrush_System_Single_PointF___">DrawBezierExtensions.DrawBeziers(IImageProcessingContext, IBrush, Single, PointF[])</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DrawBezierExtensions.html#SixLabors_ImageSharp_Processing_DrawBezierExtensions_DrawBeziers_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Color_System_Single_PointF___">DrawBezierExtensions.DrawBeziers(IImageProcessingContext, Color, Single, PointF[])</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DrawBezierExtensions.html#SixLabors_ImageSharp_Processing_DrawBezierExtensions_DrawBeziers_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Color_System_Single_PointF___">DrawBezierExtensions.DrawBeziers(IImageProcessingContext, GraphicsOptions, Color, Single, PointF[])</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DrawBezierExtensions.html#SixLabors_ImageSharp_Processing_DrawBezierExtensions_DrawBeziers_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Processing_IPen_PointF___">DrawBezierExtensions.DrawBeziers(IImageProcessingContext, GraphicsOptions, IPen, PointF[])</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DrawBezierExtensions.html#SixLabors_ImageSharp_Processing_DrawBezierExtensions_DrawBeziers_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_IPen_PointF___">DrawBezierExtensions.DrawBeziers(IImageProcessingContext, IPen, PointF[])</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DrawImageExtensions.html#SixLabors_ImageSharp_Processing_DrawImageExtensions_DrawImage_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Image_System_Single_">DrawImageExtensions.DrawImage(IImageProcessingContext, Image, Single)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DrawImageExtensions.html#SixLabors_ImageSharp_Processing_DrawImageExtensions_DrawImage_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Image_SixLabors_ImageSharp_PixelFormats_PixelColorBlendingMode_System_Single_">DrawImageExtensions.DrawImage(IImageProcessingContext, Image, PixelColorBlendingMode, Single)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DrawImageExtensions.html#SixLabors_ImageSharp_Processing_DrawImageExtensions_DrawImage_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Image_SixLabors_ImageSharp_PixelFormats_PixelColorBlendingMode_SixLabors_ImageSharp_PixelFormats_PixelAlphaCompositionMode_System_Single_">DrawImageExtensions.DrawImage(IImageProcessingContext, Image, PixelColorBlendingMode, PixelAlphaCompositionMode, Single)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DrawImageExtensions.html#SixLabors_ImageSharp_Processing_DrawImageExtensions_DrawImage_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Image_SixLabors_ImageSharp_GraphicsOptions_">DrawImageExtensions.DrawImage(IImageProcessingContext, Image, GraphicsOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DrawImageExtensions.html#SixLabors_ImageSharp_Processing_DrawImageExtensions_DrawImage_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Image_Point_System_Single_">DrawImageExtensions.DrawImage(IImageProcessingContext, Image, Point, Single)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DrawImageExtensions.html#SixLabors_ImageSharp_Processing_DrawImageExtensions_DrawImage_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Image_Point_SixLabors_ImageSharp_PixelFormats_PixelColorBlendingMode_System_Single_">DrawImageExtensions.DrawImage(IImageProcessingContext, Image, Point, PixelColorBlendingMode, Single)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DrawImageExtensions.html#SixLabors_ImageSharp_Processing_DrawImageExtensions_DrawImage_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Image_Point_SixLabors_ImageSharp_PixelFormats_PixelColorBlendingMode_SixLabors_ImageSharp_PixelFormats_PixelAlphaCompositionMode_System_Single_">DrawImageExtensions.DrawImage(IImageProcessingContext, Image, Point, PixelColorBlendingMode, PixelAlphaCompositionMode, Single)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DrawImageExtensions.html#SixLabors_ImageSharp_Processing_DrawImageExtensions_DrawImage_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Image_Point_SixLabors_ImageSharp_GraphicsOptions_">DrawImageExtensions.DrawImage(IImageProcessingContext, Image, Point, GraphicsOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DrawLineExtensions.html#SixLabors_ImageSharp_Processing_DrawLineExtensions_DrawLines_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Processing_IBrush_System_Single_PointF___">DrawLineExtensions.DrawLines(IImageProcessingContext, GraphicsOptions, IBrush, Single, PointF[])</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DrawLineExtensions.html#SixLabors_ImageSharp_Processing_DrawLineExtensions_DrawLines_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_IBrush_System_Single_PointF___">DrawLineExtensions.DrawLines(IImageProcessingContext, IBrush, Single, PointF[])</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DrawLineExtensions.html#SixLabors_ImageSharp_Processing_DrawLineExtensions_DrawLines_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Color_System_Single_PointF___">DrawLineExtensions.DrawLines(IImageProcessingContext, Color, Single, PointF[])</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DrawLineExtensions.html#SixLabors_ImageSharp_Processing_DrawLineExtensions_DrawLines_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Color_System_Single_PointF___">DrawLineExtensions.DrawLines(IImageProcessingContext, GraphicsOptions, Color, Single, PointF[])</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DrawLineExtensions.html#SixLabors_ImageSharp_Processing_DrawLineExtensions_DrawLines_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Processing_IPen_PointF___">DrawLineExtensions.DrawLines(IImageProcessingContext, GraphicsOptions, IPen, PointF[])</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DrawLineExtensions.html#SixLabors_ImageSharp_Processing_DrawLineExtensions_DrawLines_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_IPen_PointF___">DrawLineExtensions.DrawLines(IImageProcessingContext, IPen, PointF[])</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DrawPathCollectionExtensions.html#SixLabors_ImageSharp_Processing_DrawPathCollectionExtensions_Draw_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Processing_IPen_IPathCollection_">DrawPathCollectionExtensions.Draw(IImageProcessingContext, GraphicsOptions, IPen, IPathCollection)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DrawPathCollectionExtensions.html#SixLabors_ImageSharp_Processing_DrawPathCollectionExtensions_Draw_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_IPen_IPathCollection_">DrawPathCollectionExtensions.Draw(IImageProcessingContext, IPen, IPathCollection)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DrawPathCollectionExtensions.html#SixLabors_ImageSharp_Processing_DrawPathCollectionExtensions_Draw_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Processing_IBrush_System_Single_IPathCollection_">DrawPathCollectionExtensions.Draw(IImageProcessingContext, GraphicsOptions, IBrush, Single, IPathCollection)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DrawPathCollectionExtensions.html#SixLabors_ImageSharp_Processing_DrawPathCollectionExtensions_Draw_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_IBrush_System_Single_IPathCollection_">DrawPathCollectionExtensions.Draw(IImageProcessingContext, IBrush, Single, IPathCollection)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DrawPathCollectionExtensions.html#SixLabors_ImageSharp_Processing_DrawPathCollectionExtensions_Draw_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Color_System_Single_IPathCollection_">DrawPathCollectionExtensions.Draw(IImageProcessingContext, GraphicsOptions, Color, Single, IPathCollection)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DrawPathCollectionExtensions.html#SixLabors_ImageSharp_Processing_DrawPathCollectionExtensions_Draw_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Color_System_Single_IPathCollection_">DrawPathCollectionExtensions.Draw(IImageProcessingContext, Color, Single, IPathCollection)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DrawPathExtensions.html#SixLabors_ImageSharp_Processing_DrawPathExtensions_Draw_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Processing_IPen_IPath_">DrawPathExtensions.Draw(IImageProcessingContext, GraphicsOptions, IPen, IPath)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DrawPathExtensions.html#SixLabors_ImageSharp_Processing_DrawPathExtensions_Draw_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_IPen_IPath_">DrawPathExtensions.Draw(IImageProcessingContext, IPen, IPath)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DrawPathExtensions.html#SixLabors_ImageSharp_Processing_DrawPathExtensions_Draw_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Processing_IBrush_System_Single_IPath_">DrawPathExtensions.Draw(IImageProcessingContext, GraphicsOptions, IBrush, Single, IPath)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DrawPathExtensions.html#SixLabors_ImageSharp_Processing_DrawPathExtensions_Draw_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_IBrush_System_Single_IPath_">DrawPathExtensions.Draw(IImageProcessingContext, IBrush, Single, IPath)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DrawPathExtensions.html#SixLabors_ImageSharp_Processing_DrawPathExtensions_Draw_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Color_System_Single_IPath_">DrawPathExtensions.Draw(IImageProcessingContext, GraphicsOptions, Color, Single, IPath)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DrawPathExtensions.html#SixLabors_ImageSharp_Processing_DrawPathExtensions_Draw_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Color_System_Single_IPath_">DrawPathExtensions.Draw(IImageProcessingContext, Color, Single, IPath)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DrawPolygonExtensions.html#SixLabors_ImageSharp_Processing_DrawPolygonExtensions_DrawPolygon_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Processing_IBrush_System_Single_PointF___">DrawPolygonExtensions.DrawPolygon(IImageProcessingContext, GraphicsOptions, IBrush, Single, PointF[])</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DrawPolygonExtensions.html#SixLabors_ImageSharp_Processing_DrawPolygonExtensions_DrawPolygon_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_IBrush_System_Single_PointF___">DrawPolygonExtensions.DrawPolygon(IImageProcessingContext, IBrush, Single, PointF[])</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DrawPolygonExtensions.html#SixLabors_ImageSharp_Processing_DrawPolygonExtensions_DrawPolygon_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Color_System_Single_PointF___">DrawPolygonExtensions.DrawPolygon(IImageProcessingContext, Color, Single, PointF[])</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DrawPolygonExtensions.html#SixLabors_ImageSharp_Processing_DrawPolygonExtensions_DrawPolygon_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Color_System_Single_PointF___">DrawPolygonExtensions.DrawPolygon(IImageProcessingContext, GraphicsOptions, Color, Single, PointF[])</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DrawPolygonExtensions.html#SixLabors_ImageSharp_Processing_DrawPolygonExtensions_DrawPolygon_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_IPen_PointF___">DrawPolygonExtensions.DrawPolygon(IImageProcessingContext, IPen, PointF[])</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DrawPolygonExtensions.html#SixLabors_ImageSharp_Processing_DrawPolygonExtensions_DrawPolygon_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Processing_IPen_PointF___">DrawPolygonExtensions.DrawPolygon(IImageProcessingContext, GraphicsOptions, IPen, PointF[])</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DrawRectangleExtensions.html#SixLabors_ImageSharp_Processing_DrawRectangleExtensions_Draw_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Processing_IPen_RectangleF_">DrawRectangleExtensions.Draw(IImageProcessingContext, GraphicsOptions, IPen, RectangleF)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DrawRectangleExtensions.html#SixLabors_ImageSharp_Processing_DrawRectangleExtensions_Draw_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_IPen_RectangleF_">DrawRectangleExtensions.Draw(IImageProcessingContext, IPen, RectangleF)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DrawRectangleExtensions.html#SixLabors_ImageSharp_Processing_DrawRectangleExtensions_Draw_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Processing_IBrush_System_Single_RectangleF_">DrawRectangleExtensions.Draw(IImageProcessingContext, GraphicsOptions, IBrush, Single, RectangleF)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DrawRectangleExtensions.html#SixLabors_ImageSharp_Processing_DrawRectangleExtensions_Draw_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_IBrush_System_Single_RectangleF_">DrawRectangleExtensions.Draw(IImageProcessingContext, IBrush, Single, RectangleF)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DrawRectangleExtensions.html#SixLabors_ImageSharp_Processing_DrawRectangleExtensions_Draw_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Color_System_Single_RectangleF_">DrawRectangleExtensions.Draw(IImageProcessingContext, GraphicsOptions, Color, Single, RectangleF)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DrawRectangleExtensions.html#SixLabors_ImageSharp_Processing_DrawRectangleExtensions_Draw_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Color_System_Single_RectangleF_">DrawRectangleExtensions.Draw(IImageProcessingContext, Color, Single, RectangleF)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DrawTextExtensions.html#SixLabors_ImageSharp_Processing_DrawTextExtensions_DrawText_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_String_Font_SixLabors_ImageSharp_Color_PointF_">DrawTextExtensions.DrawText(IImageProcessingContext, String, Font, Color, PointF)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DrawTextExtensions.html#SixLabors_ImageSharp_Processing_DrawTextExtensions_DrawText_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_TextGraphicsOptions_System_String_Font_SixLabors_ImageSharp_Color_PointF_">DrawTextExtensions.DrawText(IImageProcessingContext, TextGraphicsOptions, String, Font, Color, PointF)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DrawTextExtensions.html#SixLabors_ImageSharp_Processing_DrawTextExtensions_DrawText_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_String_Font_SixLabors_ImageSharp_Processing_IBrush_PointF_">DrawTextExtensions.DrawText(IImageProcessingContext, String, Font, IBrush, PointF)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DrawTextExtensions.html#SixLabors_ImageSharp_Processing_DrawTextExtensions_DrawText_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_TextGraphicsOptions_System_String_Font_SixLabors_ImageSharp_Processing_IBrush_PointF_">DrawTextExtensions.DrawText(IImageProcessingContext, TextGraphicsOptions, String, Font, IBrush, PointF)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DrawTextExtensions.html#SixLabors_ImageSharp_Processing_DrawTextExtensions_DrawText_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_String_Font_SixLabors_ImageSharp_Processing_IPen_PointF_">DrawTextExtensions.DrawText(IImageProcessingContext, String, Font, IPen, PointF)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DrawTextExtensions.html#SixLabors_ImageSharp_Processing_DrawTextExtensions_DrawText_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_TextGraphicsOptions_System_String_Font_SixLabors_ImageSharp_Processing_IPen_PointF_">DrawTextExtensions.DrawText(IImageProcessingContext, TextGraphicsOptions, String, Font, IPen, PointF)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DrawTextExtensions.html#SixLabors_ImageSharp_Processing_DrawTextExtensions_DrawText_SixLabors_ImageSharp_Processing_IImageProcessingContext_System_String_Font_SixLabors_ImageSharp_Processing_IBrush_SixLabors_ImageSharp_Processing_IPen_PointF_">DrawTextExtensions.DrawText(IImageProcessingContext, String, Font, IBrush, IPen, PointF)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.DrawTextExtensions.html#SixLabors_ImageSharp_Processing_DrawTextExtensions_DrawText_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_TextGraphicsOptions_System_String_Font_SixLabors_ImageSharp_Processing_IBrush_SixLabors_ImageSharp_Processing_IPen_PointF_">DrawTextExtensions.DrawText(IImageProcessingContext, TextGraphicsOptions, String, Font, IBrush, IPen, PointF)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.FillPathBuilderExtensions.html#SixLabors_ImageSharp_Processing_FillPathBuilderExtensions_Fill_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Processing_IBrush_Action_PathBuilder__">FillPathBuilderExtensions.Fill(IImageProcessingContext, GraphicsOptions, IBrush, Action&lt;PathBuilder&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.FillPathBuilderExtensions.html#SixLabors_ImageSharp_Processing_FillPathBuilderExtensions_Fill_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_IBrush_Action_PathBuilder__">FillPathBuilderExtensions.Fill(IImageProcessingContext, IBrush, Action&lt;PathBuilder&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.FillPathBuilderExtensions.html#SixLabors_ImageSharp_Processing_FillPathBuilderExtensions_Fill_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Color_Action_PathBuilder__">FillPathBuilderExtensions.Fill(IImageProcessingContext, GraphicsOptions, Color, Action&lt;PathBuilder&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.FillPathBuilderExtensions.html#SixLabors_ImageSharp_Processing_FillPathBuilderExtensions_Fill_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Color_Action_PathBuilder__">FillPathBuilderExtensions.Fill(IImageProcessingContext, Color, Action&lt;PathBuilder&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.FillPathCollectionExtensions.html#SixLabors_ImageSharp_Processing_FillPathCollectionExtensions_Fill_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Processing_IBrush_IPathCollection_">FillPathCollectionExtensions.Fill(IImageProcessingContext, GraphicsOptions, IBrush, IPathCollection)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.FillPathCollectionExtensions.html#SixLabors_ImageSharp_Processing_FillPathCollectionExtensions_Fill_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_IBrush_IPathCollection_">FillPathCollectionExtensions.Fill(IImageProcessingContext, IBrush, IPathCollection)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.FillPathCollectionExtensions.html#SixLabors_ImageSharp_Processing_FillPathCollectionExtensions_Fill_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Color_IPathCollection_">FillPathCollectionExtensions.Fill(IImageProcessingContext, GraphicsOptions, Color, IPathCollection)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.FillPathCollectionExtensions.html#SixLabors_ImageSharp_Processing_FillPathCollectionExtensions_Fill_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Color_IPathCollection_">FillPathCollectionExtensions.Fill(IImageProcessingContext, Color, IPathCollection)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.FillPathExtensions.html#SixLabors_ImageSharp_Processing_FillPathExtensions_Fill_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Processing_IBrush_IPath_">FillPathExtensions.Fill(IImageProcessingContext, GraphicsOptions, IBrush, IPath)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.FillPathExtensions.html#SixLabors_ImageSharp_Processing_FillPathExtensions_Fill_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_IBrush_IPath_">FillPathExtensions.Fill(IImageProcessingContext, IBrush, IPath)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.FillPathExtensions.html#SixLabors_ImageSharp_Processing_FillPathExtensions_Fill_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Color_IPath_">FillPathExtensions.Fill(IImageProcessingContext, GraphicsOptions, Color, IPath)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.FillPathExtensions.html#SixLabors_ImageSharp_Processing_FillPathExtensions_Fill_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Color_IPath_">FillPathExtensions.Fill(IImageProcessingContext, Color, IPath)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.FillPolygonExtensions.html#SixLabors_ImageSharp_Processing_FillPolygonExtensions_FillPolygon_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Processing_IBrush_PointF___">FillPolygonExtensions.FillPolygon(IImageProcessingContext, GraphicsOptions, IBrush, PointF[])</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.FillPolygonExtensions.html#SixLabors_ImageSharp_Processing_FillPolygonExtensions_FillPolygon_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_IBrush_PointF___">FillPolygonExtensions.FillPolygon(IImageProcessingContext, IBrush, PointF[])</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.FillPolygonExtensions.html#SixLabors_ImageSharp_Processing_FillPolygonExtensions_FillPolygon_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Color_PointF___">FillPolygonExtensions.FillPolygon(IImageProcessingContext, GraphicsOptions, Color, PointF[])</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.FillPolygonExtensions.html#SixLabors_ImageSharp_Processing_FillPolygonExtensions_FillPolygon_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Color_PointF___">FillPolygonExtensions.FillPolygon(IImageProcessingContext, Color, PointF[])</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.FillRectangleExtensions.html#SixLabors_ImageSharp_Processing_FillRectangleExtensions_Fill_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Processing_IBrush_RectangleF_">FillRectangleExtensions.Fill(IImageProcessingContext, GraphicsOptions, IBrush, RectangleF)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.FillRectangleExtensions.html#SixLabors_ImageSharp_Processing_FillRectangleExtensions_Fill_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_IBrush_RectangleF_">FillRectangleExtensions.Fill(IImageProcessingContext, IBrush, RectangleF)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.FillRectangleExtensions.html#SixLabors_ImageSharp_Processing_FillRectangleExtensions_Fill_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Color_RectangleF_">FillRectangleExtensions.Fill(IImageProcessingContext, GraphicsOptions, Color, RectangleF)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.FillRectangleExtensions.html#SixLabors_ImageSharp_Processing_FillRectangleExtensions_Fill_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Color_RectangleF_">FillRectangleExtensions.Fill(IImageProcessingContext, Color, RectangleF)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.FillRegionExtensions.html#SixLabors_ImageSharp_Processing_FillRegionExtensions_Fill_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_IBrush_">FillRegionExtensions.Fill(IImageProcessingContext, IBrush)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.FillRegionExtensions.html#SixLabors_ImageSharp_Processing_FillRegionExtensions_Fill_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Color_">FillRegionExtensions.Fill(IImageProcessingContext, Color)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.FillRegionExtensions.html#SixLabors_ImageSharp_Processing_FillRegionExtensions_Fill_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_IBrush_SixLabors_ImageSharp_Primitives_Region_">FillRegionExtensions.Fill(IImageProcessingContext, IBrush, Region)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.FillRegionExtensions.html#SixLabors_ImageSharp_Processing_FillRegionExtensions_Fill_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Color_SixLabors_ImageSharp_Primitives_Region_">FillRegionExtensions.Fill(IImageProcessingContext, GraphicsOptions, Color, Region)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.FillRegionExtensions.html#SixLabors_ImageSharp_Processing_FillRegionExtensions_Fill_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Color_SixLabors_ImageSharp_Primitives_Region_">FillRegionExtensions.Fill(IImageProcessingContext, Color, Region)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.FillRegionExtensions.html#SixLabors_ImageSharp_Processing_FillRegionExtensions_Fill_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Processing_IBrush_SixLabors_ImageSharp_Primitives_Region_">FillRegionExtensions.Fill(IImageProcessingContext, GraphicsOptions, IBrush, Region)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Processing.FillRegionExtensions.html#SixLabors_ImageSharp_Processing_FillRegionExtensions_Fill_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_GraphicsOptions_SixLabors_ImageSharp_Processing_IBrush_">FillRegionExtensions.Fill(IImageProcessingContext, GraphicsOptions, IBrush)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_IImageProcessingContext.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.IImageProcessingContext%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/IImageProcessingContext.cs/#L13" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © Six Labors<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,607 @@
+/* @import url("https://use.fontawesome.com/releases/v5.0.8/css/regular.css");
+@import url("https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css"); */
+
+/* #############
+ * ### RESET ###
+ * #############
+ */
+html {
+  line-height: 1.15;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica,
+    Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+details,
+main,
+menu {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+template {
+  display: none;
+}
+
+a {
+  -webkit-text-decoration-skip: objects;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+  cursor: help;
+}
+
+b,
+strong {
+  font-weight: inherit;
+  font-weight: 700;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.25rem;
+}
+
+sub {
+  bottom: -0.5rem;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+button {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring,
+button:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+html {
+  -webkit-overflow-scrolling: touch;
+  color: #222;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+*,
+:after,
+:before {
+  box-sizing: inherit;
+}
+
+[tabindex="-1"]:focus {
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-rendering: optimizeLegibility;
+  page-break-after: avoid;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 1.34rem 0;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin: 1.245rem 0;
+}
+
+h3 {
+  font-size: 1.17rem;
+  margin: 1.17rem 0;
+}
+
+h4 {
+  font-size: 1rem;
+  margin: 1.33rem 0;
+}
+
+h5 {
+  font-size: 0.83rem;
+  margin: 1.386rem 0;
+}
+
+h6 {
+  font-size: 0.67rem;
+  margin: 1.561rem 0;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid silver;
+  margin: 1rem 0;
+  padding: 0;
+}
+
+/* ##################
+ * ### TYPOGRAPHY ###
+ * ##################
+ */
+
+html,
+body {
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  line-height: 1.2;
+  font-size: 100%;
+  background-color: #fff;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #40064e;
+  line-height: 1.15;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 1rem 0;
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 1.34rem 0;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin: 1.245rem 0;
+}
+
+a,
+.a {
+  color: #337ab7;
+  text-decoration: none;
+}
+
+a:hover,
+a:hover .a,
+a:focus,
+a:focus .a {
+  color: #23527c;
+  text-decoration: underline;
+}
+
+.a {
+  text-transform: uppercase;
+}
+
+/* #######################
+ * ### MAIN NAVIGATION ###
+ * #######################
+ */
+
+#logo {
+  width: 160px;
+  height: 50px;
+  margin-right: 1rem;
+}
+
+header .navbar {
+  text-transform: uppercase;
+}
+
+.navbar-inverse {
+  background-color: #000;
+  border-color: #000;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 1;
+}
+
+.navbar-default {
+  border: none;
+}
+
+.navbar-inverse .navbar-nav > li > a,
+.navbar-inverse .navbar-text {
+  color: #fff;
+}
+
+/* Fix loss of drop shadow by overriding DocFX "static"*/
+
+@media only screen and (max-width: 768px) {
+  header {
+    position: relative;
+  }
+}
+
+.icon-bar {
+  transition: 0.4s;
+}
+
+[aria-expanded="true"] .icon-bar:nth-of-type(2) {
+  /* Rotate first bar */
+  transform: rotate(-45deg) translate(-4px, 5px);
+}
+
+[aria-expanded="true"] .icon-bar:nth-of-type(3) {
+  /* Fade out the second bar */
+  opacity: 0;
+}
+
+[aria-expanded="true"] .icon-bar:nth-of-type(4) {
+  /* Rotate last bar */
+  transform: rotate(45deg) translate(-4px, -5px);
+}
+
+.collapse.in,
+.collapsing {
+  text-align: unset;
+}
+
+/* #######################
+ * ### SIDE NAVIGATION ###
+ * #######################
+ */
+
+.sidefilter {
+  background-color: #fff;
+  top: 106px;
+  padding: 15px 0;
+  border: none;
+}
+
+.toc-filter {
+  border-radius: 0;
+  background: #fff;
+  color: inherit;
+  padding: 0;
+  position: relative;
+  margin: 0;
+}
+
+.toc-filter > input {
+  border: 1px solid #dcdcdc;
+  color: inherit;
+  font-size: 0.875rem;
+  height: 36px;
+  line-height: 1.8;
+  padding: 0 10px 0 20px;
+}
+
+.toc-filter > input:focus {
+  outline: #3b99fc solid 1px;
+}
+
+.sidetoc {
+  background-color: #fff;
+  border: none;
+  top: 166px;
+}
+
+.toc {
+  margin: 0;
+  padding: 0;
+}
+
+.toc ul {
+  font-size: inherit;
+  margin: 0;
+}
+
+/* Prevent double scroll bar */
+
+body .toc {
+  background-color: #fff;
+  overflow-x: initial;
+}
+
+.toc .level1 > li {
+  font-weight: bold;
+  margin-top: 2px;
+  position: relative;
+  font-size: 15px;
+}
+
+toc .nav > li > a {
+  font-weight: normal;
+  color: inherit;
+  padding: 5px 0 0 15px;
+  margin: 0;
+}
+
+.toc .nav > li > .expand-stub::before,
+.toc .nav > li.active > .expand-stub::before,
+.toc .nav > li.filtered > .expand-stub::before {
+  /*DOCFX selectors far too specific!*/
+  content: "\f054" !important;
+  position: absolute;
+  z-index: 1;
+  left: 15px;
+  top: 9px;
+  font-size: 0.75rem;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.toc .nav > li.active > .expand-stub::before {
+  color: #fff;
+}
+
+.toc .nav > li.in > .expand-stub::before,
+.toc .nav > li.in.active > .expand-stub::before,
+.toc .nav > li > .expand-stub.in::before {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.toc a {
+  font-weight: normal;
+}
+
+.toc .nav > li > a {
+  padding: 5px 5px 5px 18px;
+  margin: 0;
+}
+
+.toc .nav .level2 a {
+  padding-left: 5px;
+}
+
+.toc .nav > li > a:hover,
+.toc .nav > li > a:focus {
+  color: #23527c;
+  text-decoration: underline;
+}
+
+.toc .nav > li.in.active > a:hover,
+.toc .nav > li.in.active > a:focus {
+  color: #fff;
+  background-color: #40064e;
+  text-decoration: none;
+}
+
+.toc .nav > li.active > a {
+  color: #fff;
+  background-color: #e30183;
+}
+
+/* ###################
+ * ### API ARTICLE ###
+ * ###################
+ */
+
+.article {
+  margin-top: 94px;
+}
+
+article span.small.pull-right {
+  /* The styling for these is mental and causes odd offsets all over the place*/
+  display: none;
+}
+
+article {
+  line-height: 1.6;
+}
+
+article h1 {
+  margin-top: 16px;
+}
+
+article h4 {
+  border-bottom: none;
+}
+
+.code-like,
+code,
+kbd,
+pre,
+samp {
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: auto;
+  font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono",
+    "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace,
+    sans-serif;
+}
+
+pre {
+  word-break: unset;
+  word-wrap: unset;
+  overflow-x: auto;
+}
+
+pre code {
+  word-wrap: normal;
+  white-space: pre;
+}
+
+/* ########################
+ * ### AFFIX NAVIGATION ###
+ * ########################
+ */
+
+.sideaffix {
+  margin-top: 16px;
+  font-size: 13px;
+}
+
+.contribution a::before {
+  /*Edit*/
+  content: "\f044";
+}
+
+.contribution li + li a::before {
+  /*Github*/
+  content: "\f09b";
+}
+
+.sideaffix > div.contribution > ul > li > a.contribution-link {
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.affix ul > li.active > a {
+  color: #337ab7;
+}
+
+.affix .level2 > li.active > a {
+  text-decoration: underline;
+}
+
+.affix ul ul > li > a:before {
+  content: "";
+}
+
+.affix > ul > li > a:before {
+  content: "";
+  width: 2px;
+  background-color: #e30183;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.nav > li > a:focus,
+.nav > li > a:hover {
+  text-decoration: underline;
+}
+
+/* ###################
+ * ### FONTAWESOME ###
+ * ###################
+ */
+
+.expand-stub,
+.contribution a {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+
+.expand-stub::before,
+.contribution a::before {
+  margin-right: 4px;
+  font-family: "Font Awesome\ 5 Free", "Font Awesome\ 5 Brands";
+}
+
+/* ###################
+ * ### FONTAWESOME ###
+ * ###################
+ */
+
+.grad-bottom {
+  display: none;
+}
+
+.footer {
+  border-top: none;
+  background-color: #222;
+  color: #fff;
+}
+
+.footer a {
+  color: #fff !important;
+}
