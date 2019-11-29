@@ -306,6 +306,12 @@ header .navbar {
   color: #fff;
 }
 
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:focus,
+.navbar-inverse .navbar-nav > .active > a:hover {
+  background-color: #e30183;
+}
+
 /* Fix loss of drop shadow by overriding DocFX "static"*/
 
 @media only screen and (max-width: 768px) {
