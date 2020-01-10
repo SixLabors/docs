@@ -112,7 +112,7 @@ for pixel buffers of type <code data-dev-comment-type="typeparamref" class="type
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PixelFormats_PixelOperations_1_Instance.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PixelFormats.PixelOperations%601.Instance%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/PixelFormats/PixelOperations{TPixel}.cs/#L23">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/PixelFormats/PixelOperations{TPixel}.cs/#L23">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_PixelFormats_PixelOperations_1_Instance_" data-uid="SixLabors.ImageSharp.PixelFormats.PixelOperations`1.Instance*"></a>
   <h4 id="SixLabors_ImageSharp_PixelFormats_PixelOperations_1_Instance" data-uid="SixLabors.ImageSharp.PixelFormats.PixelOperations`1.Instance">Instance</h4>
@@ -138,6 +138,320 @@ for pixel buffers of type <code data-dev-comment-type="typeparamref" class="type
       </tr>
     </tbody>
   </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PixelFormats_PixelOperations_1_FromVector4Destructive_SixLabors_ImageSharp_Configuration_Span_Vector4__Span__0__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PixelFormats.PixelOperations%601.FromVector4Destructive(SixLabors.ImageSharp.Configuration%2CSpan%7BVector4%7D%2CSpan%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/PixelFormats/PixelOperations{TPixel}.cs/#L59">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_PixelFormats_PixelOperations_1_FromVector4Destructive_" data-uid="SixLabors.ImageSharp.PixelFormats.PixelOperations`1.FromVector4Destructive*"></a>
+  <h4 id="SixLabors_ImageSharp_PixelFormats_PixelOperations_1_FromVector4Destructive_SixLabors_ImageSharp_Configuration_Span_Vector4__Span__0__" data-uid="SixLabors.ImageSharp.PixelFormats.PixelOperations`1.FromVector4Destructive(SixLabors.ImageSharp.Configuration,Span{Vector4},Span{`0})">FromVector4Destructive(Configuration, Span&lt;Vector4&gt;, Span&lt;TPixel&gt;)</h4>
+  <div class="markdown level1 summary"><p>Bulk version of <a class="xref" href="SixLabors.ImageSharp.PixelFormats.IPixel.html#SixLabors_ImageSharp_PixelFormats_IPixel_FromVector4_Vector4_">FromVector4(Vector4)</a> converting &apos;sourceVectors.Length&apos; pixels into &apos;destinationColors&apos;.
+The method is DESTRUCTIVE altering the contents of <code data-dev-comment-type="paramref" class="paramref">sourceVectors</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void FromVector4Destructive(Configuration configuration, Span&lt;Vector4&gt; sourceVectors, Span&lt;TPixel&gt; destPixels)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Configuration.html">Configuration</a></td>
+        <td><span class="parametername">configuration</span></td>
+        <td><p>A <a class="xref" href="SixLabors.ImageSharp.Configuration.html">Configuration</a> to configure internal operations</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Span</span>&lt;<span class="xref">Vector4</span>&gt;</td>
+        <td><span class="parametername">sourceVectors</span></td>
+        <td><p>The <see cref="!:Span&lt;T>"></see> to the source vectors.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Span</span>&lt;TPixel&gt;</td>
+        <td><span class="parametername">destPixels</span></td>
+        <td><p>The <see cref="!:Span&lt;T>"></see> to the destination colors.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="SixLabors_ImageSharp_PixelFormats_PixelOperations_1_FromVector4Destructive_SixLabors_ImageSharp_Configuration_Span_Vector4__Span__0___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The destructive behavior is a design choice for performance reasons.
+In a typical use case the contents of <code data-dev-comment-type="paramref" class="paramref">sourceVectors</code> are abandoned after the conversion.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PixelFormats_PixelOperations_1_FromVector4Destructive_SixLabors_ImageSharp_Configuration_Span_Vector4__Span__0__SixLabors_ImageSharp_PixelFormats_PixelConversionModifiers_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PixelFormats.PixelOperations%601.FromVector4Destructive(SixLabors.ImageSharp.Configuration%2CSpan%7BVector4%7D%2CSpan%7B%600%7D%2CSixLabors.ImageSharp.PixelFormats.PixelConversionModifiers)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/PixelFormats/PixelOperations{TPixel}.cs/#L37">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_PixelFormats_PixelOperations_1_FromVector4Destructive_" data-uid="SixLabors.ImageSharp.PixelFormats.PixelOperations`1.FromVector4Destructive*"></a>
+  <h4 id="SixLabors_ImageSharp_PixelFormats_PixelOperations_1_FromVector4Destructive_SixLabors_ImageSharp_Configuration_Span_Vector4__Span__0__SixLabors_ImageSharp_PixelFormats_PixelConversionModifiers_" data-uid="SixLabors.ImageSharp.PixelFormats.PixelOperations`1.FromVector4Destructive(SixLabors.ImageSharp.Configuration,Span{Vector4},Span{`0},SixLabors.ImageSharp.PixelFormats.PixelConversionModifiers)">FromVector4Destructive(Configuration, Span&lt;Vector4&gt;, Span&lt;TPixel&gt;, PixelConversionModifiers)</h4>
+  <div class="markdown level1 summary"><p>Bulk version of <a class="xref" href="SixLabors.ImageSharp.PixelFormats.IPixel.html#SixLabors_ImageSharp_PixelFormats_IPixel_FromVector4_Vector4_">FromVector4(Vector4)</a> converting &apos;sourceVectors.Length&apos; pixels into &apos;destinationColors&apos;.
+The method is DESTRUCTIVE altering the contents of <code data-dev-comment-type="paramref" class="paramref">sourceVectors</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void FromVector4Destructive(Configuration configuration, Span&lt;Vector4&gt; sourceVectors, Span&lt;TPixel&gt; destPixels, PixelConversionModifiers modifiers)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Configuration.html">Configuration</a></td>
+        <td><span class="parametername">configuration</span></td>
+        <td><p>A <a class="xref" href="SixLabors.ImageSharp.Configuration.html">Configuration</a> to configure internal operations</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Span</span>&lt;<span class="xref">Vector4</span>&gt;</td>
+        <td><span class="parametername">sourceVectors</span></td>
+        <td><p>The <see cref="!:Span&lt;T>"></see> to the source vectors.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Span</span>&lt;TPixel&gt;</td>
+        <td><span class="parametername">destPixels</span></td>
+        <td><p>The <see cref="!:Span&lt;T>"></see> to the destination colors.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.PixelFormats.PixelConversionModifiers.html">PixelConversionModifiers</a></td>
+        <td><span class="parametername">modifiers</span></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.PixelFormats.PixelConversionModifiers.html">PixelConversionModifiers</a> to apply during the conversion</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="SixLabors_ImageSharp_PixelFormats_PixelOperations_1_FromVector4Destructive_SixLabors_ImageSharp_Configuration_Span_Vector4__Span__0__SixLabors_ImageSharp_PixelFormats_PixelConversionModifiers__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The destructive behavior is a design choice for performance reasons.
+In a typical use case the contents of <code data-dev-comment-type="paramref" class="paramref">sourceVectors</code> are abandoned after the conversion.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PixelFormats_PixelOperations_1_GetPixelBlender_SixLabors_ImageSharp_GraphicsOptions_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PixelFormats.PixelOperations%601.GetPixelBlender(SixLabors.ImageSharp.GraphicsOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/PixelFormats/PixelOperations{TPixel}.PixelBenders.cs/#L19">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_PixelFormats_PixelOperations_1_GetPixelBlender_" data-uid="SixLabors.ImageSharp.PixelFormats.PixelOperations`1.GetPixelBlender*"></a>
+  <h4 id="SixLabors_ImageSharp_PixelFormats_PixelOperations_1_GetPixelBlender_SixLabors_ImageSharp_GraphicsOptions_" data-uid="SixLabors.ImageSharp.PixelFormats.PixelOperations`1.GetPixelBlender(SixLabors.ImageSharp.GraphicsOptions)">GetPixelBlender(GraphicsOptions)</h4>
+  <div class="markdown level1 summary"><p>Find an instance of the pixel blender.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PixelBlender&lt;TPixel&gt; GetPixelBlender(GraphicsOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.GraphicsOptions.html">GraphicsOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>the blending and composition to apply</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.PixelFormats.PixelBlender-1.html">PixelBlender</a>&lt;TPixel&gt;</td>
+        <td><p>A <a class="xref" href="SixLabors.ImageSharp.PixelFormats.PixelBlender-1.html">PixelBlender&lt;TPixel&gt;</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PixelFormats_PixelOperations_1_GetPixelBlender_SixLabors_ImageSharp_PixelFormats_PixelColorBlendingMode_SixLabors_ImageSharp_PixelFormats_PixelAlphaCompositionMode_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PixelFormats.PixelOperations%601.GetPixelBlender(SixLabors.ImageSharp.PixelFormats.PixelColorBlendingMode%2CSixLabors.ImageSharp.PixelFormats.PixelAlphaCompositionMode)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/PixelFormats/PixelOperations{TPixel}.PixelBenders.cs/#L30">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_PixelFormats_PixelOperations_1_GetPixelBlender_" data-uid="SixLabors.ImageSharp.PixelFormats.PixelOperations`1.GetPixelBlender*"></a>
+  <h4 id="SixLabors_ImageSharp_PixelFormats_PixelOperations_1_GetPixelBlender_SixLabors_ImageSharp_PixelFormats_PixelColorBlendingMode_SixLabors_ImageSharp_PixelFormats_PixelAlphaCompositionMode_" data-uid="SixLabors.ImageSharp.PixelFormats.PixelOperations`1.GetPixelBlender(SixLabors.ImageSharp.PixelFormats.PixelColorBlendingMode,SixLabors.ImageSharp.PixelFormats.PixelAlphaCompositionMode)">GetPixelBlender(PixelColorBlendingMode, PixelAlphaCompositionMode)</h4>
+  <div class="markdown level1 summary"><p>Find an instance of the pixel blender.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual PixelBlender&lt;TPixel&gt; GetPixelBlender(PixelColorBlendingMode colorMode, PixelAlphaCompositionMode alphaMode)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.PixelFormats.PixelColorBlendingMode.html">PixelColorBlendingMode</a></td>
+        <td><span class="parametername">colorMode</span></td>
+        <td><p>The color blending mode to apply</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.PixelFormats.PixelAlphaCompositionMode.html">PixelAlphaCompositionMode</a></td>
+        <td><span class="parametername">alphaMode</span></td>
+        <td><p>The alpha composition mode to apply</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.PixelFormats.PixelBlender-1.html">PixelBlender</a>&lt;TPixel&gt;</td>
+        <td><p>A <a class="xref" href="SixLabors.ImageSharp.PixelFormats.PixelBlender-1.html">PixelBlender&lt;TPixel&gt;</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PixelFormats_PixelOperations_1_ToVector4_SixLabors_ImageSharp_Configuration_ReadOnlySpan__0__Span_Vector4__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PixelFormats.PixelOperations%601.ToVector4(SixLabors.ImageSharp.Configuration%2CReadOnlySpan%7B%600%7D%2CSpan%7BVector4%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/PixelFormats/PixelOperations{TPixel}.cs/#L89">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_PixelFormats_PixelOperations_1_ToVector4_" data-uid="SixLabors.ImageSharp.PixelFormats.PixelOperations`1.ToVector4*"></a>
+  <h4 id="SixLabors_ImageSharp_PixelFormats_PixelOperations_1_ToVector4_SixLabors_ImageSharp_Configuration_ReadOnlySpan__0__Span_Vector4__" data-uid="SixLabors.ImageSharp.PixelFormats.PixelOperations`1.ToVector4(SixLabors.ImageSharp.Configuration,ReadOnlySpan{`0},Span{Vector4})">ToVector4(Configuration, ReadOnlySpan&lt;TPixel&gt;, Span&lt;Vector4&gt;)</h4>
+  <div class="markdown level1 summary"><p>Bulk version of <a class="xref" href="SixLabors.ImageSharp.PixelFormats.IPixel.html#SixLabors_ImageSharp_PixelFormats_IPixel_ToVector4">ToVector4()</a> converting &apos;sourceColors.Length&apos; pixels into &apos;destinationVectors&apos;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ToVector4(Configuration configuration, ReadOnlySpan&lt;TPixel&gt; sourcePixels, Span&lt;Vector4&gt; destVectors)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Configuration.html">Configuration</a></td>
+        <td><span class="parametername">configuration</span></td>
+        <td><p>A <a class="xref" href="SixLabors.ImageSharp.Configuration.html">Configuration</a> to configure internal operations</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">ReadOnlySpan</span>&lt;TPixel&gt;</td>
+        <td><span class="parametername">sourcePixels</span></td>
+        <td><p>The <see cref="!:Span&lt;T>"></see> to the source colors.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Span</span>&lt;<span class="xref">Vector4</span>&gt;</td>
+        <td><span class="parametername">destVectors</span></td>
+        <td><p>The <see cref="!:Span&lt;T>"></see> to the destination vectors.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PixelFormats_PixelOperations_1_ToVector4_SixLabors_ImageSharp_Configuration_ReadOnlySpan__0__Span_Vector4__SixLabors_ImageSharp_PixelFormats_PixelConversionModifiers_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PixelFormats.PixelOperations%601.ToVector4(SixLabors.ImageSharp.Configuration%2CReadOnlySpan%7B%600%7D%2CSpan%7BVector4%7D%2CSixLabors.ImageSharp.PixelFormats.PixelConversionModifiers)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/PixelFormats/PixelOperations{TPixel}.cs/#L72">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_PixelFormats_PixelOperations_1_ToVector4_" data-uid="SixLabors.ImageSharp.PixelFormats.PixelOperations`1.ToVector4*"></a>
+  <h4 id="SixLabors_ImageSharp_PixelFormats_PixelOperations_1_ToVector4_SixLabors_ImageSharp_Configuration_ReadOnlySpan__0__Span_Vector4__SixLabors_ImageSharp_PixelFormats_PixelConversionModifiers_" data-uid="SixLabors.ImageSharp.PixelFormats.PixelOperations`1.ToVector4(SixLabors.ImageSharp.Configuration,ReadOnlySpan{`0},Span{Vector4},SixLabors.ImageSharp.PixelFormats.PixelConversionModifiers)">ToVector4(Configuration, ReadOnlySpan&lt;TPixel&gt;, Span&lt;Vector4&gt;, PixelConversionModifiers)</h4>
+  <div class="markdown level1 summary"><p>Bulk version of <a class="xref" href="SixLabors.ImageSharp.PixelFormats.IPixel.html#SixLabors_ImageSharp_PixelFormats_IPixel_ToVector4">ToVector4()</a> converting &apos;sourceColors.Length&apos; pixels into &apos;destinationVectors&apos;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ToVector4(Configuration configuration, ReadOnlySpan&lt;TPixel&gt; sourcePixels, Span&lt;Vector4&gt; destVectors, PixelConversionModifiers modifiers)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Configuration.html">Configuration</a></td>
+        <td><span class="parametername">configuration</span></td>
+        <td><p>A <a class="xref" href="SixLabors.ImageSharp.Configuration.html">Configuration</a> to configure internal operations</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">ReadOnlySpan</span>&lt;TPixel&gt;</td>
+        <td><span class="parametername">sourcePixels</span></td>
+        <td><p>The <see cref="!:Span&lt;T>"></see> to the source colors.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Span</span>&lt;<span class="xref">Vector4</span>&gt;</td>
+        <td><span class="parametername">destVectors</span></td>
+        <td><p>The <see cref="!:Span&lt;T>"></see> to the destination vectors.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.PixelFormats.PixelConversionModifiers.html">PixelConversionModifiers</a></td>
+        <td><span class="parametername">modifiers</span></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.PixelFormats.PixelConversionModifiers.html">PixelConversionModifiers</a> to apply during the conversion</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           
@@ -149,7 +463,7 @@ for pixel buffers of type <code data-dev-comment-type="typeparamref" class="type
                     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PixelFormats_PixelOperations_1.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PixelFormats.PixelOperations%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/PixelFormats/PixelOperations{TPixel}.PixelBenders.cs/#L11" class="contribution-link">View Source</a>
+                    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/PixelFormats/PixelOperations{TPixel}.PixelBenders.cs/#L11" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

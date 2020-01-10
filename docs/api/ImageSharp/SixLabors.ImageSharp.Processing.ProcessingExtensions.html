@@ -95,7 +95,7 @@
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_ProcessingExtensions_ApplyProcessors_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_Processors_IImageProcessor___.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.ProcessingExtensions.ApplyProcessors(SixLabors.ImageSharp.Processing.IImageProcessingContext%2CSixLabors.ImageSharp.Processing.Processors.IImageProcessor%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Extensions/ProcessingExtensions.cs/#L131">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/Processing/Extensions/ProcessingExtensions.cs/#L204">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_ProcessingExtensions_ApplyProcessors_" data-uid="SixLabors.ImageSharp.Processing.ProcessingExtensions.ApplyProcessors*"></a>
   <h4 id="SixLabors_ImageSharp_Processing_ProcessingExtensions_ApplyProcessors_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_Processors_IImageProcessor___" data-uid="SixLabors.ImageSharp.Processing.ProcessingExtensions.ApplyProcessors(SixLabors.ImageSharp.Processing.IImageProcessingContext,SixLabors.ImageSharp.Processing.Processors.IImageProcessor[])">ApplyProcessors(IImageProcessingContext, IImageProcessor[])</h4>
@@ -151,7 +151,7 @@
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_ProcessingExtensions_Clone_SixLabors_ImageSharp_Image_Action_SixLabors_ImageSharp_Processing_IImageProcessingContext__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.ProcessingExtensions.Clone(SixLabors.ImageSharp.Image%2CAction%7BSixLabors.ImageSharp.Processing.IImageProcessingContext%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Extensions/ProcessingExtensions.cs/#L74">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/Processing/Extensions/ProcessingExtensions.cs/#L108">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_ProcessingExtensions_Clone_" data-uid="SixLabors.ImageSharp.Processing.ProcessingExtensions.Clone*"></a>
   <h4 id="SixLabors_ImageSharp_Processing_ProcessingExtensions_Clone_SixLabors_ImageSharp_Image_Action_SixLabors_ImageSharp_Processing_IImageProcessingContext__" data-uid="SixLabors.ImageSharp.Processing.ProcessingExtensions.Clone(SixLabors.ImageSharp.Image,Action{SixLabors.ImageSharp.Processing.IImageProcessingContext})">Clone(Image, Action&lt;IImageProcessingContext&gt;)</h4>
@@ -204,10 +204,72 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_ProcessingExtensions_Clone_SixLabors_ImageSharp_Image_SixLabors_ImageSharp_Configuration_Action_SixLabors_ImageSharp_Processing_IImageProcessingContext__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.ProcessingExtensions.Clone(SixLabors.ImageSharp.Image%2CSixLabors.ImageSharp.Configuration%2CAction%7BSixLabors.ImageSharp.Processing.IImageProcessingContext%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/Processing/Extensions/ProcessingExtensions.cs/#L118">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Processing_ProcessingExtensions_Clone_" data-uid="SixLabors.ImageSharp.Processing.ProcessingExtensions.Clone*"></a>
+  <h4 id="SixLabors_ImageSharp_Processing_ProcessingExtensions_Clone_SixLabors_ImageSharp_Image_SixLabors_ImageSharp_Configuration_Action_SixLabors_ImageSharp_Processing_IImageProcessingContext__" data-uid="SixLabors.ImageSharp.Processing.ProcessingExtensions.Clone(SixLabors.ImageSharp.Image,SixLabors.ImageSharp.Configuration,Action{SixLabors.ImageSharp.Processing.IImageProcessingContext})">Clone(Image, Configuration, Action&lt;IImageProcessingContext&gt;)</h4>
+  <div class="markdown level1 summary"><p>Creates a deep clone of the current image. The clone is then mutated by the given operation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Image Clone(this Image source, Configuration configuration, Action&lt;IImageProcessingContext&gt; operation)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Image.html">Image</a></td>
+        <td><span class="parametername">source</span></td>
+        <td><p>The image to clone.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Configuration.html">Configuration</a></td>
+        <td><span class="parametername">configuration</span></td>
+        <td><p>The configuration which allows altering default behaviour or extending the library.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a>&gt;</td>
+        <td><span class="parametername">operation</span></td>
+        <td><p>The operation to perform on the clone.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Image.html">Image</a></td>
+        <td><p>The new <a class="xref" href="SixLabors.ImageSharp.Image.html">Image</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_ProcessingExtensions_Clone__1_SixLabors_ImageSharp_Image___0__Action_SixLabors_ImageSharp_Processing_IImageProcessingContext__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.ProcessingExtensions.Clone%60%601(SixLabors.ImageSharp.Image%7B%60%600%7D%2CAction%7BSixLabors.ImageSharp.Processing.IImageProcessingContext%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Extensions/ProcessingExtensions.cs/#L92">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/Processing/Extensions/ProcessingExtensions.cs/#L137">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_ProcessingExtensions_Clone_" data-uid="SixLabors.ImageSharp.Processing.ProcessingExtensions.Clone*"></a>
   <h4 id="SixLabors_ImageSharp_Processing_ProcessingExtensions_Clone__1_SixLabors_ImageSharp_Image___0__Action_SixLabors_ImageSharp_Processing_IImageProcessingContext__" data-uid="SixLabors.ImageSharp.Processing.ProcessingExtensions.Clone``1(SixLabors.ImageSharp.Image{``0},Action{SixLabors.ImageSharp.Processing.IImageProcessingContext})">Clone&lt;TPixel&gt;(Image&lt;TPixel&gt;, Action&lt;IImageProcessingContext&gt;)</h4>
@@ -277,10 +339,168 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_ProcessingExtensions_Clone__1_SixLabors_ImageSharp_Image___0__SixLabors_ImageSharp_Configuration_Action_SixLabors_ImageSharp_Processing_IImageProcessingContext__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.ProcessingExtensions.Clone%60%601(SixLabors.ImageSharp.Image%7B%60%600%7D%2CSixLabors.ImageSharp.Configuration%2CAction%7BSixLabors.ImageSharp.Processing.IImageProcessingContext%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/Processing/Extensions/ProcessingExtensions.cs/#L149">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Processing_ProcessingExtensions_Clone_" data-uid="SixLabors.ImageSharp.Processing.ProcessingExtensions.Clone*"></a>
+  <h4 id="SixLabors_ImageSharp_Processing_ProcessingExtensions_Clone__1_SixLabors_ImageSharp_Image___0__SixLabors_ImageSharp_Configuration_Action_SixLabors_ImageSharp_Processing_IImageProcessingContext__" data-uid="SixLabors.ImageSharp.Processing.ProcessingExtensions.Clone``1(SixLabors.ImageSharp.Image{``0},SixLabors.ImageSharp.Configuration,Action{SixLabors.ImageSharp.Processing.IImageProcessingContext})">Clone&lt;TPixel&gt;(Image&lt;TPixel&gt;, Configuration, Action&lt;IImageProcessingContext&gt;)</h4>
+  <div class="markdown level1 summary"><p>Creates a deep clone of the current image. The clone is then mutated by the given operation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Image&lt;TPixel&gt; Clone&lt;TPixel&gt;(this Image&lt;TPixel&gt; source, Configuration configuration, Action&lt;IImageProcessingContext&gt; operation)
+    where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image</a>&lt;TPixel&gt;</td>
+        <td><span class="parametername">source</span></td>
+        <td><p>The image to clone.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Configuration.html">Configuration</a></td>
+        <td><span class="parametername">configuration</span></td>
+        <td><p>The configuration which allows altering default behaviour or extending the library.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a>&gt;</td>
+        <td><span class="parametername">operation</span></td>
+        <td><p>The operation to perform on the clone.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image</a>&lt;TPixel&gt;</td>
+        <td><p>The new <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TPixel</span></td>
+        <td><p>The pixel format.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_ProcessingExtensions_Clone__1_SixLabors_ImageSharp_Image___0__SixLabors_ImageSharp_Configuration_SixLabors_ImageSharp_Processing_Processors_IImageProcessor___.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.ProcessingExtensions.Clone%60%601(SixLabors.ImageSharp.Image%7B%60%600%7D%2CSixLabors.ImageSharp.Configuration%2CSixLabors.ImageSharp.Processing.Processors.IImageProcessor%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/Processing/Extensions/ProcessingExtensions.cs/#L183">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Processing_ProcessingExtensions_Clone_" data-uid="SixLabors.ImageSharp.Processing.ProcessingExtensions.Clone*"></a>
+  <h4 id="SixLabors_ImageSharp_Processing_ProcessingExtensions_Clone__1_SixLabors_ImageSharp_Image___0__SixLabors_ImageSharp_Configuration_SixLabors_ImageSharp_Processing_Processors_IImageProcessor___" data-uid="SixLabors.ImageSharp.Processing.ProcessingExtensions.Clone``1(SixLabors.ImageSharp.Image{``0},SixLabors.ImageSharp.Configuration,SixLabors.ImageSharp.Processing.Processors.IImageProcessor[])">Clone&lt;TPixel&gt;(Image&lt;TPixel&gt;, Configuration, IImageProcessor[])</h4>
+  <div class="markdown level1 summary"><p>Creates a deep clone of the current image. The clone is then mutated by the given operations.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Image&lt;TPixel&gt; Clone&lt;TPixel&gt;(this Image&lt;TPixel&gt; source, Configuration configuration, params IImageProcessor[] operations)
+    where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image</a>&lt;TPixel&gt;</td>
+        <td><span class="parametername">source</span></td>
+        <td><p>The image to clone.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Configuration.html">Configuration</a></td>
+        <td><span class="parametername">configuration</span></td>
+        <td><p>The configuration which allows altering default behaviour or extending the library.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.Processors.IImageProcessor.html">IImageProcessor</a>[]</td>
+        <td><span class="parametername">operations</span></td>
+        <td><p>The operations to perform on the clone.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image</a>&lt;TPixel&gt;</td>
+        <td><p>The new <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TPixel</span></td>
+        <td><p>The pixel format.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_ProcessingExtensions_Clone__1_SixLabors_ImageSharp_Image___0__SixLabors_ImageSharp_Processing_Processors_IImageProcessor___.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.ProcessingExtensions.Clone%60%601(SixLabors.ImageSharp.Image%7B%60%600%7D%2CSixLabors.ImageSharp.Processing.Processors.IImageProcessor%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Extensions/ProcessingExtensions.cs/#L112">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/Processing/Extensions/ProcessingExtensions.cs/#L171">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_ProcessingExtensions_Clone_" data-uid="SixLabors.ImageSharp.Processing.ProcessingExtensions.Clone*"></a>
   <h4 id="SixLabors_ImageSharp_Processing_ProcessingExtensions_Clone__1_SixLabors_ImageSharp_Image___0__SixLabors_ImageSharp_Processing_Processors_IImageProcessor___" data-uid="SixLabors.ImageSharp.Processing.ProcessingExtensions.Clone``1(SixLabors.ImageSharp.Image{``0},SixLabors.ImageSharp.Processing.Processors.IImageProcessor[])">Clone&lt;TPixel&gt;(Image&lt;TPixel&gt;, IImageProcessor[])</h4>
@@ -353,7 +573,7 @@
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_ProcessingExtensions_Mutate_SixLabors_ImageSharp_Image_Action_SixLabors_ImageSharp_Processing_IImageProcessingContext__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.ProcessingExtensions.Mutate(SixLabors.ImageSharp.Image%2CAction%7BSixLabors.ImageSharp.Processing.IImageProcessingContext%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Extensions/ProcessingExtensions.cs/#L22">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/Processing/Extensions/ProcessingExtensions.cs/#L22">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_ProcessingExtensions_Mutate_" data-uid="SixLabors.ImageSharp.Processing.ProcessingExtensions.Mutate*"></a>
   <h4 id="SixLabors_ImageSharp_Processing_ProcessingExtensions_Mutate_SixLabors_ImageSharp_Image_Action_SixLabors_ImageSharp_Processing_IImageProcessingContext__" data-uid="SixLabors.ImageSharp.Processing.ProcessingExtensions.Mutate(SixLabors.ImageSharp.Image,Action{SixLabors.ImageSharp.Processing.IImageProcessingContext})">Mutate(Image, Action&lt;IImageProcessingContext&gt;)</h4>
@@ -390,10 +610,56 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_ProcessingExtensions_Mutate_SixLabors_ImageSharp_Image_SixLabors_ImageSharp_Configuration_Action_SixLabors_ImageSharp_Processing_IImageProcessingContext__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.ProcessingExtensions.Mutate(SixLabors.ImageSharp.Image%2CSixLabors.ImageSharp.Configuration%2CAction%7BSixLabors.ImageSharp.Processing.IImageProcessingContext%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/Processing/Extensions/ProcessingExtensions.cs/#L31">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Processing_ProcessingExtensions_Mutate_" data-uid="SixLabors.ImageSharp.Processing.ProcessingExtensions.Mutate*"></a>
+  <h4 id="SixLabors_ImageSharp_Processing_ProcessingExtensions_Mutate_SixLabors_ImageSharp_Image_SixLabors_ImageSharp_Configuration_Action_SixLabors_ImageSharp_Processing_IImageProcessingContext__" data-uid="SixLabors.ImageSharp.Processing.ProcessingExtensions.Mutate(SixLabors.ImageSharp.Image,SixLabors.ImageSharp.Configuration,Action{SixLabors.ImageSharp.Processing.IImageProcessingContext})">Mutate(Image, Configuration, Action&lt;IImageProcessingContext&gt;)</h4>
+  <div class="markdown level1 summary"><p>Mutates the source image by applying the image operation to it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Mutate(this Image source, Configuration configuration, Action&lt;IImageProcessingContext&gt; operation)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Image.html">Image</a></td>
+        <td><span class="parametername">source</span></td>
+        <td><p>The image to mutate.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Configuration.html">Configuration</a></td>
+        <td><span class="parametername">configuration</span></td>
+        <td><p>The configuration which allows altering default behaviour or extending the library.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a>&gt;</td>
+        <td><span class="parametername">operation</span></td>
+        <td><p>The operation to perform on the source.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_ProcessingExtensions_Mutate__1_SixLabors_ImageSharp_Image___0__Action_SixLabors_ImageSharp_Processing_IImageProcessingContext__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.ProcessingExtensions.Mutate%60%601(SixLabors.ImageSharp.Image%7B%60%600%7D%2CAction%7BSixLabors.ImageSharp.Processing.IImageProcessingContext%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Extensions/ProcessingExtensions.cs/#L38">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/Processing/Extensions/ProcessingExtensions.cs/#L47">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_ProcessingExtensions_Mutate_" data-uid="SixLabors.ImageSharp.Processing.ProcessingExtensions.Mutate*"></a>
   <h4 id="SixLabors_ImageSharp_Processing_ProcessingExtensions_Mutate__1_SixLabors_ImageSharp_Image___0__Action_SixLabors_ImageSharp_Processing_IImageProcessingContext__" data-uid="SixLabors.ImageSharp.Processing.ProcessingExtensions.Mutate``1(SixLabors.ImageSharp.Image{``0},Action{SixLabors.ImageSharp.Processing.IImageProcessingContext})">Mutate&lt;TPixel&gt;(Image&lt;TPixel&gt;, Action&lt;IImageProcessingContext&gt;)</h4>
@@ -447,10 +713,136 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_ProcessingExtensions_Mutate__1_SixLabors_ImageSharp_Image___0__SixLabors_ImageSharp_Configuration_Action_SixLabors_ImageSharp_Processing_IImageProcessingContext__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.ProcessingExtensions.Mutate%60%601(SixLabors.ImageSharp.Image%7B%60%600%7D%2CSixLabors.ImageSharp.Configuration%2CAction%7BSixLabors.ImageSharp.Processing.IImageProcessingContext%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/Processing/Extensions/ProcessingExtensions.cs/#L58">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Processing_ProcessingExtensions_Mutate_" data-uid="SixLabors.ImageSharp.Processing.ProcessingExtensions.Mutate*"></a>
+  <h4 id="SixLabors_ImageSharp_Processing_ProcessingExtensions_Mutate__1_SixLabors_ImageSharp_Image___0__SixLabors_ImageSharp_Configuration_Action_SixLabors_ImageSharp_Processing_IImageProcessingContext__" data-uid="SixLabors.ImageSharp.Processing.ProcessingExtensions.Mutate``1(SixLabors.ImageSharp.Image{``0},SixLabors.ImageSharp.Configuration,Action{SixLabors.ImageSharp.Processing.IImageProcessingContext})">Mutate&lt;TPixel&gt;(Image&lt;TPixel&gt;, Configuration, Action&lt;IImageProcessingContext&gt;)</h4>
+  <div class="markdown level1 summary"><p>Mutates the source image by applying the image operation to it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Mutate&lt;TPixel&gt;(this Image&lt;TPixel&gt; source, Configuration configuration, Action&lt;IImageProcessingContext&gt; operation)
+    where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image</a>&lt;TPixel&gt;</td>
+        <td><span class="parametername">source</span></td>
+        <td><p>The image to mutate.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Configuration.html">Configuration</a></td>
+        <td><span class="parametername">configuration</span></td>
+        <td><p>The configuration which allows altering default behaviour or extending the library.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a>&gt;</td>
+        <td><span class="parametername">operation</span></td>
+        <td><p>The operation to perform on the source.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TPixel</span></td>
+        <td><p>The pixel format.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_ProcessingExtensions_Mutate__1_SixLabors_ImageSharp_Image___0__SixLabors_ImageSharp_Configuration_SixLabors_ImageSharp_Processing_Processors_IImageProcessor___.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.ProcessingExtensions.Mutate%60%601(SixLabors.ImageSharp.Image%7B%60%600%7D%2CSixLabors.ImageSharp.Configuration%2CSixLabors.ImageSharp.Processing.Processors.IImageProcessor%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/Processing/Extensions/ProcessingExtensions.cs/#L89">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Processing_ProcessingExtensions_Mutate_" data-uid="SixLabors.ImageSharp.Processing.ProcessingExtensions.Mutate*"></a>
+  <h4 id="SixLabors_ImageSharp_Processing_ProcessingExtensions_Mutate__1_SixLabors_ImageSharp_Image___0__SixLabors_ImageSharp_Configuration_SixLabors_ImageSharp_Processing_Processors_IImageProcessor___" data-uid="SixLabors.ImageSharp.Processing.ProcessingExtensions.Mutate``1(SixLabors.ImageSharp.Image{``0},SixLabors.ImageSharp.Configuration,SixLabors.ImageSharp.Processing.Processors.IImageProcessor[])">Mutate&lt;TPixel&gt;(Image&lt;TPixel&gt;, Configuration, IImageProcessor[])</h4>
+  <div class="markdown level1 summary"><p>Mutates the source image by applying the operations to it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Mutate&lt;TPixel&gt;(this Image&lt;TPixel&gt; source, Configuration configuration, params IImageProcessor[] operations)
+    where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image</a>&lt;TPixel&gt;</td>
+        <td><span class="parametername">source</span></td>
+        <td><p>The image to mutate.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Configuration.html">Configuration</a></td>
+        <td><span class="parametername">configuration</span></td>
+        <td><p>The configuration which allows altering default behaviour or extending the library.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.Processors.IImageProcessor.html">IImageProcessor</a>[]</td>
+        <td><span class="parametername">operations</span></td>
+        <td><p>The operations to perform on the source.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TPixel</span></td>
+        <td><p>The pixel format.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_ProcessingExtensions_Mutate__1_SixLabors_ImageSharp_Image___0__SixLabors_ImageSharp_Processing_Processors_IImageProcessor___.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.ProcessingExtensions.Mutate%60%601(SixLabors.ImageSharp.Image%7B%60%600%7D%2CSixLabors.ImageSharp.Processing.Processors.IImageProcessor%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Extensions/ProcessingExtensions.cs/#L56">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/Processing/Extensions/ProcessingExtensions.cs/#L78">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_ProcessingExtensions_Mutate_" data-uid="SixLabors.ImageSharp.Processing.ProcessingExtensions.Mutate*"></a>
   <h4 id="SixLabors_ImageSharp_Processing_ProcessingExtensions_Mutate__1_SixLabors_ImageSharp_Image___0__SixLabors_ImageSharp_Processing_Processors_IImageProcessor___" data-uid="SixLabors.ImageSharp.Processing.ProcessingExtensions.Mutate``1(SixLabors.ImageSharp.Image{``0},SixLabors.ImageSharp.Processing.Processors.IImageProcessor[])">Mutate&lt;TPixel&gt;(Image&lt;TPixel&gt;, IImageProcessor[])</h4>
@@ -513,7 +905,7 @@
                     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_ProcessingExtensions.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.ProcessingExtensions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Extensions/ProcessingExtensions.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/Processing/Extensions/ProcessingExtensions.cs/#L15" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

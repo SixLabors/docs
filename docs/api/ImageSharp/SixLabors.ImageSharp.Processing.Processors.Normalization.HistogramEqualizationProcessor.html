@@ -99,19 +99,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Normalization_HistogramEqualizationProcessor__ctor_System_Int32_System_Boolean_System_Single_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Normalization.HistogramEqualizationProcessor.%23ctor(System.Int32%2CSystem.Boolean%2CSystem.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Normalization_HistogramEqualizationProcessor__ctor_System_Int32_System_Boolean_System_Int32_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Normalization.HistogramEqualizationProcessor.%23ctor(System.Int32%2CSystem.Boolean%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Processors/Normalization/HistogramEqualizationProcessor.cs/#L21">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/Processing/Processors/Normalization/HistogramEqualizationProcessor.cs/#L21">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_Processors_Normalization_HistogramEqualizationProcessor__ctor_" data-uid="SixLabors.ImageSharp.Processing.Processors.Normalization.HistogramEqualizationProcessor.#ctor*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_Processors_Normalization_HistogramEqualizationProcessor__ctor_System_Int32_System_Boolean_System_Single_" data-uid="SixLabors.ImageSharp.Processing.Processors.Normalization.HistogramEqualizationProcessor.#ctor(System.Int32,System.Boolean,System.Single)">HistogramEqualizationProcessor(Int32, Boolean, Single)</h4>
+  <h4 id="SixLabors_ImageSharp_Processing_Processors_Normalization_HistogramEqualizationProcessor__ctor_System_Int32_System_Boolean_System_Int32_" data-uid="SixLabors.ImageSharp.Processing.Processors.Normalization.HistogramEqualizationProcessor.#ctor(System.Int32,System.Boolean,System.Int32)">HistogramEqualizationProcessor(Int32, Boolean, Int32)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Normalization.HistogramEqualizationProcessor.html">HistogramEqualizationProcessor</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected HistogramEqualizationProcessor(int luminanceLevels, bool clipHistogram, float clipLimitPercentage)</code></pre>
+    <pre><code class="lang-csharp hljs">protected HistogramEqualizationProcessor(int luminanceLevels, bool clipHistogram, int clipLimit)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -137,9 +137,9 @@ or 65536 for 16-bit grayscale images.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">clipLimitPercentage</span></td>
-        <td><p>Histogram clip limit in percent of the total pixels in the tile. Histogram bins which exceed this limit, will be capped at this value.</p>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">clipLimit</span></td>
+        <td><p>The histogram clip limit. Histogram bins which exceed this limit, will be capped at this value.</p>
 </td>
       </tr>
     </tbody>
@@ -151,7 +151,7 @@ or 65536 for 16-bit grayscale images.</p>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Normalization_HistogramEqualizationProcessor_ClipHistogram.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Normalization.HistogramEqualizationProcessor.ClipHistogram%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Processors/Normalization/HistogramEqualizationProcessor.cs/#L36">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/Processing/Processors/Normalization/HistogramEqualizationProcessor.cs/#L36">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_Processors_Normalization_HistogramEqualizationProcessor_ClipHistogram_" data-uid="SixLabors.ImageSharp.Processing.Processors.Normalization.HistogramEqualizationProcessor.ClipHistogram*"></a>
   <h4 id="SixLabors_ImageSharp_Processing_Processors_Normalization_HistogramEqualizationProcessor_ClipHistogram" data-uid="SixLabors.ImageSharp.Processing.Processors.Normalization.HistogramEqualizationProcessor.ClipHistogram">ClipHistogram</h4>
@@ -179,19 +179,19 @@ or 65536 for 16-bit grayscale images.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Normalization_HistogramEqualizationProcessor_ClipLimitPercentage.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Normalization.HistogramEqualizationProcessor.ClipLimitPercentage%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Normalization_HistogramEqualizationProcessor_ClipLimit.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Normalization.HistogramEqualizationProcessor.ClipLimit%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Processors/Normalization/HistogramEqualizationProcessor.cs/#L41">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/Processing/Processors/Normalization/HistogramEqualizationProcessor.cs/#L41">View Source</a>
   </span>
-  <a id="SixLabors_ImageSharp_Processing_Processors_Normalization_HistogramEqualizationProcessor_ClipLimitPercentage_" data-uid="SixLabors.ImageSharp.Processing.Processors.Normalization.HistogramEqualizationProcessor.ClipLimitPercentage*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_Processors_Normalization_HistogramEqualizationProcessor_ClipLimitPercentage" data-uid="SixLabors.ImageSharp.Processing.Processors.Normalization.HistogramEqualizationProcessor.ClipLimitPercentage">ClipLimitPercentage</h4>
-  <div class="markdown level1 summary"><p>Gets the histogram clip limit in percent of the total pixels in the tile. Histogram bins which exceed this limit, will be capped at this value.</p>
+  <a id="SixLabors_ImageSharp_Processing_Processors_Normalization_HistogramEqualizationProcessor_ClipLimit_" data-uid="SixLabors.ImageSharp.Processing.Processors.Normalization.HistogramEqualizationProcessor.ClipLimit*"></a>
+  <h4 id="SixLabors_ImageSharp_Processing_Processors_Normalization_HistogramEqualizationProcessor_ClipLimit" data-uid="SixLabors.ImageSharp.Processing.Processors.Normalization.HistogramEqualizationProcessor.ClipLimit">ClipLimit</h4>
+  <div class="markdown level1 summary"><p>Gets the histogram clip limit. Histogram bins which exceed this limit, will be capped at this value.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float ClipLimitPercentage { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int ClipLimit { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -203,7 +203,7 @@ or 65536 for 16-bit grayscale images.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Single</span></td>
+        <td><span class="xref">System.Int32</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -213,7 +213,7 @@ or 65536 for 16-bit grayscale images.</p>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Normalization_HistogramEqualizationProcessor_LuminanceLevels.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Normalization.HistogramEqualizationProcessor.LuminanceLevels%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Processors/Normalization/HistogramEqualizationProcessor.cs/#L31">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/Processing/Processors/Normalization/HistogramEqualizationProcessor.cs/#L31">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_Processors_Normalization_HistogramEqualizationProcessor_LuminanceLevels_" data-uid="SixLabors.ImageSharp.Processing.Processors.Normalization.HistogramEqualizationProcessor.LuminanceLevels*"></a>
   <h4 id="SixLabors_ImageSharp_Processing_Processors_Normalization_HistogramEqualizationProcessor_LuminanceLevels" data-uid="SixLabors.ImageSharp.Processing.Processors.Normalization.HistogramEqualizationProcessor.LuminanceLevels">LuminanceLevels</h4>
@@ -243,18 +243,18 @@ or 65536 for 16-bit grayscale images.</p>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Normalization_HistogramEqualizationProcessor_CreatePixelSpecificProcessor__1_SixLabors_ImageSharp_Image___0__Rectangle_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Normalization.HistogramEqualizationProcessor.CreatePixelSpecificProcessor%60%601(SixLabors.ImageSharp.Image%7B%60%600%7D%2CRectangle)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Normalization_HistogramEqualizationProcessor_CreatePixelSpecificProcessor__1_SixLabors_ImageSharp_Configuration_SixLabors_ImageSharp_Image___0__Rectangle_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Normalization.HistogramEqualizationProcessor.CreatePixelSpecificProcessor%60%601(SixLabors.ImageSharp.Configuration%2CSixLabors.ImageSharp.Image%7B%60%600%7D%2CRectangle)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Processors/Normalization/HistogramEqualizationProcessor.cs/#L44">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/Processing/Processors/Normalization/HistogramEqualizationProcessor.cs/#L44">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_Processors_Normalization_HistogramEqualizationProcessor_CreatePixelSpecificProcessor_" data-uid="SixLabors.ImageSharp.Processing.Processors.Normalization.HistogramEqualizationProcessor.CreatePixelSpecificProcessor*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_Processors_Normalization_HistogramEqualizationProcessor_CreatePixelSpecificProcessor__1_SixLabors_ImageSharp_Image___0__Rectangle_" data-uid="SixLabors.ImageSharp.Processing.Processors.Normalization.HistogramEqualizationProcessor.CreatePixelSpecificProcessor``1(SixLabors.ImageSharp.Image{``0},Rectangle)">CreatePixelSpecificProcessor&lt;TPixel&gt;(Image&lt;TPixel&gt;, Rectangle)</h4>
+  <h4 id="SixLabors_ImageSharp_Processing_Processors_Normalization_HistogramEqualizationProcessor_CreatePixelSpecificProcessor__1_SixLabors_ImageSharp_Configuration_SixLabors_ImageSharp_Image___0__Rectangle_" data-uid="SixLabors.ImageSharp.Processing.Processors.Normalization.HistogramEqualizationProcessor.CreatePixelSpecificProcessor``1(SixLabors.ImageSharp.Configuration,SixLabors.ImageSharp.Image{``0},Rectangle)">CreatePixelSpecificProcessor&lt;TPixel&gt;(Configuration, Image&lt;TPixel&gt;, Rectangle)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract IImageProcessor&lt;TPixel&gt; CreatePixelSpecificProcessor&lt;TPixel&gt;(Image&lt;TPixel&gt; source, Rectangle sourceRectangle)
+    <pre><code class="lang-csharp hljs">public abstract IImageProcessor&lt;TPixel&gt; CreatePixelSpecificProcessor&lt;TPixel&gt;(Configuration configuration, Image&lt;TPixel&gt; source, Rectangle sourceRectangle)
     where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -267,6 +267,11 @@ or 65536 for 16-bit grayscale images.</p>
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Configuration.html">Configuration</a></td>
+        <td><span class="parametername">configuration</span></td>
+        <td></td>
+      </tr>
       <tr>
         <td><a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image</a>&lt;TPixel&gt;</td>
         <td><span class="parametername">source</span></td>
@@ -314,7 +319,7 @@ or 65536 for 16-bit grayscale images.</p>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Normalization_HistogramEqualizationProcessor_FromOptions_SixLabors_ImageSharp_Processing_Processors_Normalization_HistogramEqualizationOptions_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Normalization.HistogramEqualizationProcessor.FromOptions(SixLabors.ImageSharp.Processing.Processors.Normalization.HistogramEqualizationOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Processors/Normalization/HistogramEqualizationProcessor.cs/#L53">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/Processing/Processors/Normalization/HistogramEqualizationProcessor.cs/#L53">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_Processors_Normalization_HistogramEqualizationProcessor_FromOptions_" data-uid="SixLabors.ImageSharp.Processing.Processors.Normalization.HistogramEqualizationProcessor.FromOptions*"></a>
   <h4 id="SixLabors_ImageSharp_Processing_Processors_Normalization_HistogramEqualizationProcessor_FromOptions_SixLabors_ImageSharp_Processing_Processors_Normalization_HistogramEqualizationOptions_" data-uid="SixLabors.ImageSharp.Processing.Processors.Normalization.HistogramEqualizationProcessor.FromOptions(SixLabors.ImageSharp.Processing.Processors.Normalization.HistogramEqualizationOptions)">FromOptions(HistogramEqualizationOptions)</h4>
@@ -375,7 +380,7 @@ defined by the given <a class="xref" href="SixLabors.ImageSharp.Processing.Proce
                     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Normalization_HistogramEqualizationProcessor.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Normalization.HistogramEqualizationProcessor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Processors/Normalization/HistogramEqualizationProcessor.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/Processing/Processors/Normalization/HistogramEqualizationProcessor.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
