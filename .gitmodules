@@ -10,11 +10,3 @@
 	path = ext/Fonts
 	url = https://github.com/SixLabors/Fonts.git
 	ignore = dirty
-[submodule "ext/Shapes"]
-	path = ext/Shapes
-	url = https://github.com/SixLabors/Shapes.git
-	ignore = dirty
-[submodule "ext/Core"]
-	path = ext/Core
-	url = https://github.com/SixLabors/Core.git
-	ignore = dirty
