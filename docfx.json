@@ -5,16 +5,12 @@
         {
           "files": [
             "ext/ImageSharp/src/**.csproj"
-          ],
-          "exclude": [
-            "**/obj/**",
-            "**/bin/**",
-            "docs/**"
           ]
         }
       ],
       "dest": "api/ImageSharp",
       "disableGitFeatures": false,
+      "disableDefaultFilter": false,
       "properties": {
         "TargetFramework": "netcoreapp3.1"
       }
@@ -24,35 +20,12 @@
         {
           "files": [
             "ext/ImageSharp.Drawing/src/**.csproj"
-          ],
-          "exclude": [
-            "**/obj/**",
-            "**/bin/**",
-            "docs/**"
           ]
         }
       ],
       "dest": "api/ImageSharp.Drawing",
       "disableGitFeatures": false,
-      "properties": {
-        "TargetFramework": "netcoreapp3.1"
-      }
-    },
-    {
-      "src": [
-        {
-          "files": [
-            "ext/ImageSharp.Web/src/**.csproj"
-          ],
-          "exclude": [
-            "**/obj/**",
-            "**/bin/**",
-            "docs/**"
-          ]
-        }
-      ],
-      "dest": "api/ImageSharp.Web",
-      "disableGitFeatures": false,
+      "disableDefaultFilter": false,
       "properties": {
         "TargetFramework": "netcoreapp3.1"
       }
@@ -62,16 +35,27 @@
         {
           "files": [
             "ext/Fonts/src/**.csproj"
-          ],
-          "exclude": [
-            "**/obj/**",
-            "**/bin/**",
-            "docs/**"
           ]
         }
       ],
       "dest": "api/Fonts",
       "disableGitFeatures": false,
+      "disableDefaultFilter": false,
+      "properties": {
+        "TargetFramework": "netcoreapp3.1"
+      }
+    },
+    {
+      "src": [
+        {
+          "files": [
+            "ext/ImageSharp.Web/src/ImageSharp.Web/**.csproj"
+          ]
+        }
+      ],
+      "dest": "api/ImageSharp.Web",
+      "disableGitFeatures": false,
+      "disableDefaultFilter": false,
       "properties": {
         "TargetFramework": "netcoreapp3.1"
       }
@@ -105,7 +89,8 @@
     "resource": [
       {
         "files": [
-          "images/**"
+          "images/**",
+          "favicon.ico"
         ],
         "exclude": [
           "obj/**",
