@@ -24,9 +24,6 @@ We have implemented short self-contained sample projects for a few specific use 
 # SixLabors Projects
 Our graphics libraries are split into different projects. They cover different concerns separately, but there is strong cohesion in order to provide the best developer experience.
 
-### [SixLabors.Core](https://github.com/SixLabors/Core)
-Common classes and structs used across our projects including [](xref:SixLabors.Primitives).
-
 ### [SixLabors.ImageSharp](https://github.com/SixLabors/ImageSharp)
 - Contains the generic @"SixLabors.ImageSharp.Image`1?displayProperty=name" class, PixelFormats, Configuration, and other core functionality.
 - The [](xref:SixLabors.ImageSharp.Formats.IImageFormat?displayProperty=name) interface, Jpeg, Png, Bmp, and Gif formats.
@@ -34,14 +31,11 @@ Common classes and structs used across our projects including [](xref:SixLabors.
   - Transform methods like Resize, Crop, Skew, Rotate - Anything that alters the dimensions of the image.
   - Non-transform methods like Gaussian Blur, Pixelate, Edge Detection - Anything that maintains the original image dimensions.
 
-### [SixLabors.Shapes](https://github.com/SixLabors/Shapes)
-Net standard geometry/shape manipulation library, can be used to instantiate various shapes allowing operations like merge, split, intersections etc.
-The SixLabors.Drawing library is based on Shapes.
-
 ### [SixLabors.Fonts](https://github.com/SixLabors/Fonts)
 Font loading and drawing library. Text drawing in `SixLabors.ImageSharp.Drawing` is based on this library.
 
 ### SixLabors.ImageSharp.Drawing
+- Shape primitives and geometry API.
 - Brushes and various drawing algorithms, including drawing images.
 - Various vector drawing methods for drawing paths, polygons etc.
 - Text drawing (based on [SixLabors.Fonts](https://github.com/SixLabors/Fonts))

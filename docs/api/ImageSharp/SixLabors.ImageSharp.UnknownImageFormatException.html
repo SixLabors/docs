@@ -81,14 +81,76 @@ an image which has an unknown format.</p>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="SixLabors.ImageSharp.ImageFormatException.html">ImageFormatException</a></div>
-    <div class="level2"><span class="xref">UnknownImageFormatException</span></div>
+    <div class="level1"><span class="xref">System.Exception</span></div>
+    <div class="level2"><a class="xref" href="SixLabors.ImageSharp.ImageFormatException.html">ImageFormatException</a></div>
+    <div class="level3"><span class="xref">UnknownImageFormatException</span></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="SixLabors.ImageSharp.html">SixLabors.ImageSharp</a></h6>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.Runtime.Serialization.ISerializable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Exception.GetBaseException()</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.Data</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.HelpLink</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.HResult</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.InnerException</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.Message</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.Source</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.StackTrace</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.TargetSite</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.SerializeObjectState</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="../ImageSharp.Drawing/SixLabors.ImageSharp.html">SixLabors.ImageSharp</a></h6>
   <h6><strong>Assembly</strong>: SixLabors.ImageSharp.dll</h6>
   <h5 id="SixLabors_ImageSharp_UnknownImageFormatException_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class UnknownImageFormatException : ImageFormatException</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class UnknownImageFormatException : ImageFormatException, ISerializable</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -97,7 +159,7 @@ an image which has an unknown format.</p>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_UnknownImageFormatException__ctor_System_String_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.UnknownImageFormatException.%23ctor(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/Common/Exceptions/UnknownImageFormatException.cs/#L17">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/db5ea653668fb6d90a4e1188ff6e29488df425c9/src/ImageSharp/Common/Exceptions/UnknownImageFormatException.cs/#L17">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_UnknownImageFormatException__ctor_" data-uid="SixLabors.ImageSharp.UnknownImageFormatException.#ctor*"></a>
   <h4 id="SixLabors_ImageSharp_UnknownImageFormatException__ctor_System_String_" data-uid="SixLabors.ImageSharp.UnknownImageFormatException.#ctor(System.String)">UnknownImageFormatException(String)</h4>
@@ -127,6 +189,10 @@ parameter that causes this exception.</p>
       </tr>
     </tbody>
   </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.Runtime.Serialization.ISerializable</span>
+  </div>
 </article>
           </div>
           
@@ -138,7 +204,7 @@ parameter that causes this exception.</p>
                     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_UnknownImageFormatException.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.UnknownImageFormatException%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/Common/Exceptions/UnknownImageFormatException.cs/#L10" class="contribution-link">View Source</a>
+                    <a href="https://github.com/SixLabors/ImageSharp/blob/db5ea653668fb6d90a4e1188ff6e29488df425c9/src/ImageSharp/Common/Exceptions/UnknownImageFormatException.cs/#L10" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

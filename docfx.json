@@ -16,7 +16,26 @@
       "dest": "api/ImageSharp",
       "disableGitFeatures": false,
       "properties": {
-        "TargetFramework": "netstandard2.0"
+        "TargetFramework": "netcoreapp3.1"
+      }
+    },
+    {
+      "src": [
+        {
+          "files": [
+            "ext/ImageSharp.Drawing/src/**.csproj"
+          ],
+          "exclude": [
+            "**/obj/**",
+            "**/bin/**",
+            "docs/**"
+          ]
+        }
+      ],
+      "dest": "api/ImageSharp.Drawing",
+      "disableGitFeatures": false,
+      "properties": {
+        "TargetFramework": "netcoreapp3.1"
       }
     },
     {
@@ -35,7 +54,7 @@
       "dest": "api/ImageSharp.Web",
       "disableGitFeatures": false,
       "properties": {
-        "TargetFramework": "netstandard2.0"
+        "TargetFramework": "netcoreapp3.1"
       }
     },
     {
@@ -54,45 +73,7 @@
       "dest": "api/Fonts",
       "disableGitFeatures": false,
       "properties": {
-        "TargetFramework": "netstandard2.0"
-      }
-    },
-    {
-      "src": [
-        {
-          "files": [
-            "ext/Shapes/src/**.csproj"
-          ],
-          "exclude": [
-            "**/obj/**",
-            "**/bin/**",
-            "docs/**"
-          ]
-        }
-      ],
-      "dest": "api/Shapes",
-      "disableGitFeatures": false,
-      "properties": {
-        "TargetFramework": "netstandard2.0"
-      }
-    },
-    {
-      "src": [
-        {
-          "files": [
-            "ext/Core/src/**.csproj"
-          ],
-          "exclude": [
-            "**/obj/**",
-            "**/bin/**",
-            "docs/**"
-          ]
-        }
-      ],
-      "dest": "api/Core",
-      "disableGitFeatures": false,
-      "properties": {
-        "TargetFramework": "netstandard2.0"
+        "TargetFramework": "netcoreapp3.1"
       }
     }
   ],
@@ -136,10 +117,9 @@
       {
         "files": [
           "ext/ImageSharp/apiSpec/**.md",
+          "ext/ImageSharp.Drawing/apiSpec/**.md",
           "ext/ImageSharp.Web/apiSpec/**.md",
-          "ext/Fonts/apiSpec/**.md",
-          "ext/Shapes/apiSpec/**.md",
-          "ext/Core/apiSpec/**.md"
+          "ext/Fonts/apiSpec/**.md"
         ],
         "exclude": [
           "obj/**",
@@ -150,9 +130,8 @@
     "dest": "docs",
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
-    "fileMetadata":{
-    },
-    "globalMetadata" : {
+    "fileMetadata": {},
+    "globalMetadata": {
       "_gitContribute": {
         "branch": "master"
       }

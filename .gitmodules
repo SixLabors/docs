@@ -1,7 +1,3 @@
-[submodule "ext/ImageSharp"]
-	path = ext/ImageSharp
-	url = https://github.com/SixLabors/ImageSharp.git
-	ignore = dirty
 [submodule "ext/ImageSharp.Web"]
 	path = ext/ImageSharp.Web
 	url = https://github.com/SixLabors/ImageSharp.Web.git

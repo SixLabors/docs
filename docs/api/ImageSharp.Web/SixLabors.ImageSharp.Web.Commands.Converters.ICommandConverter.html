@@ -88,13 +88,13 @@ Implementations of this interface should be stateless by design.</p>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_Commands_Converters_ICommandConverter_ConvertFrom_CultureInfo_System_String_Type_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.Commands.Converters.ICommandConverter.ConvertFrom(CultureInfo%2CSystem.String%2CType)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_Commands_Converters_ICommandConverter_ConvertFrom_System_Globalization_CultureInfo_System_String_System_Type_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.Commands.Converters.ICommandConverter.ConvertFrom(System.Globalization.CultureInfo%2CSystem.String%2CSystem.Type)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/5901fff5dc3d216817779d3ac1739fa78f7d86b1/src/ImageSharp.Web/Commands/Converters/ICommandConverter.cs/#L27">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/6441493984b58544a05d51ba1c1fe44c69ca91a3/src/ImageSharp.Web/Commands/Converters/ICommandConverter.cs/#L27">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Web_Commands_Converters_ICommandConverter_ConvertFrom_" data-uid="SixLabors.ImageSharp.Web.Commands.Converters.ICommandConverter.ConvertFrom*"></a>
-  <h4 id="SixLabors_ImageSharp_Web_Commands_Converters_ICommandConverter_ConvertFrom_CultureInfo_System_String_Type_" data-uid="SixLabors.ImageSharp.Web.Commands.Converters.ICommandConverter.ConvertFrom(CultureInfo,System.String,Type)">ConvertFrom(CultureInfo, String, Type)</h4>
+  <h4 id="SixLabors_ImageSharp_Web_Commands_Converters_ICommandConverter_ConvertFrom_System_Globalization_CultureInfo_System_String_System_Type_" data-uid="SixLabors.ImageSharp.Web.Commands.Converters.ICommandConverter.ConvertFrom(System.Globalization.CultureInfo,System.String,System.Type)">ConvertFrom(CultureInfo, String, Type)</h4>
   <div class="markdown level1 summary"><p>Converts the given string to the type of this converter, using the specified culture information.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -113,19 +113,19 @@ Implementations of this interface should be stateless by design.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">CultureInfo</span></td>
+        <td><span class="xref">System.Globalization.CultureInfo</span></td>
         <td><span class="parametername">culture</span></td>
-        <td><p>The <see cref="!:CultureInfo"></see> to use as the current culture.</p>
+        <td><p>The <span class="xref">System.Globalization.CultureInfo</span> to use as the current culture.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">value</span></td>
-        <td><p>The <see cref="!:System.String"></see> to convert. </p>
+        <td><p>The <span class="xref">System.String</span> to convert. </p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Type</span></td>
+        <td><span class="xref">System.Type</span></td>
         <td><span class="parametername">propertyType</span></td>
         <td><p>The property type that the converter will convert to.</p>
 </td>
@@ -143,20 +143,36 @@ Implementations of this interface should be stateless by design.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Object</span></td>
-        <td><p>An <see cref="!:System.String"></see> that represents the converted value.</p>
+        <td><p>An <span class="xref">System.String</span> that represents the converted value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.NotSupportedException</span></td>
+        <td><p>The conversion cannot be performed.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_Commands_Converters_ICommandConverter_ConvertFromInvariantString_System_String_Type_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.Commands.Converters.ICommandConverter.ConvertFromInvariantString(System.String%2CType)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_Commands_Converters_ICommandConverter_ConvertFromInvariantString_System_String_System_Type_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.Commands.Converters.ICommandConverter.ConvertFromInvariantString(System.String%2CSystem.Type)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/5901fff5dc3d216817779d3ac1739fa78f7d86b1/src/ImageSharp.Web/Commands/Converters/ICommandConverter.cs/#L37">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/6441493984b58544a05d51ba1c1fe44c69ca91a3/src/ImageSharp.Web/Commands/Converters/ICommandConverter.cs/#L37">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Web_Commands_Converters_ICommandConverter_ConvertFromInvariantString_" data-uid="SixLabors.ImageSharp.Web.Commands.Converters.ICommandConverter.ConvertFromInvariantString*"></a>
-  <h4 id="SixLabors_ImageSharp_Web_Commands_Converters_ICommandConverter_ConvertFromInvariantString_System_String_Type_" data-uid="SixLabors.ImageSharp.Web.Commands.Converters.ICommandConverter.ConvertFromInvariantString(System.String,Type)">ConvertFromInvariantString(String, Type)</h4>
+  <h4 id="SixLabors_ImageSharp_Web_Commands_Converters_ICommandConverter_ConvertFromInvariantString_System_String_System_Type_" data-uid="SixLabors.ImageSharp.Web.Commands.Converters.ICommandConverter.ConvertFromInvariantString(System.String,System.Type)">ConvertFromInvariantString(String, Type)</h4>
   <div class="markdown level1 summary"><p>Converts the given string to the converter&apos;s native type using the invariant culture.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -181,7 +197,7 @@ Implementations of this interface should be stateless by design.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Type</span></td>
+        <td><span class="xref">System.Type</span></td>
         <td><span class="parametername">propertyType</span></td>
         <td><p>The property type that the converter will convert to.</p>
 </td>
@@ -199,7 +215,7 @@ Implementations of this interface should be stateless by design.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Object</span></td>
-        <td><p>An <see cref="!:System.Object"></see> that represents the converted value.</p>
+        <td><p>An <span class="xref">System.Object</span> that represents the converted value.</p>
 </td>
       </tr>
     </tbody>
@@ -215,7 +231,7 @@ Implementations of this interface should be stateless by design.</p>
                     <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_Commands_Converters_ICommandConverter.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.Commands.Converters.ICommandConverter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/5901fff5dc3d216817779d3ac1739fa78f7d86b1/src/ImageSharp.Web/Commands/Converters/ICommandConverter.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/6441493984b58544a05d51ba1c1fe44c69ca91a3/src/ImageSharp.Web/Commands/Converters/ICommandConverter.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

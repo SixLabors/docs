@@ -82,29 +82,54 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">Buffer2DExtensions</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="SixLabors.ImageSharp.Memory.html">SixLabors.ImageSharp.Memory</a></h6>
   <h6><strong>Assembly</strong>: SixLabors.ImageSharp.dll</h6>
   <h5 id="SixLabors_ImageSharp_Memory_Buffer2DExtensions_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class Buffer2DExtensions : object</code></pre>
+    <pre><code class="lang-csharp hljs">public static class Buffer2DExtensions</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Memory_Buffer2DExtensions_GetMemory__1_SixLabors_ImageSharp_Memory_Buffer2D___0__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Memory.Buffer2DExtensions.GetMemory%60%601(SixLabors.ImageSharp.Memory.Buffer2D%7B%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Memory_Buffer2DExtensions_GetMemoryGroup__1_SixLabors_ImageSharp_Memory_Buffer2D___0__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Memory.Buffer2DExtensions.GetMemoryGroup%60%601(SixLabors.ImageSharp.Memory.Buffer2D%7B%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/Memory/Buffer2DExtensions.cs/#L37">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/db5ea653668fb6d90a4e1188ff6e29488df425c9/src/ImageSharp/Memory/Buffer2DExtensions.cs/#L23">View Source</a>
   </span>
-  <a id="SixLabors_ImageSharp_Memory_Buffer2DExtensions_GetMemory_" data-uid="SixLabors.ImageSharp.Memory.Buffer2DExtensions.GetMemory*"></a>
-  <h4 id="SixLabors_ImageSharp_Memory_Buffer2DExtensions_GetMemory__1_SixLabors_ImageSharp_Memory_Buffer2D___0__" data-uid="SixLabors.ImageSharp.Memory.Buffer2DExtensions.GetMemory``1(SixLabors.ImageSharp.Memory.Buffer2D{``0})">GetMemory&lt;T&gt;(Buffer2D&lt;T&gt;)</h4>
-  <div class="markdown level1 summary"><p>Gets the <see cref="!:Memory&lt;T>"></see> holding the backing buffer of <code data-dev-comment-type="paramref" class="paramref">buffer</code>.</p>
+  <a id="SixLabors_ImageSharp_Memory_Buffer2DExtensions_GetMemoryGroup_" data-uid="SixLabors.ImageSharp.Memory.Buffer2DExtensions.GetMemoryGroup*"></a>
+  <h4 id="SixLabors_ImageSharp_Memory_Buffer2DExtensions_GetMemoryGroup__1_SixLabors_ImageSharp_Memory_Buffer2D___0__" data-uid="SixLabors.ImageSharp.Memory.Buffer2DExtensions.GetMemoryGroup``1(SixLabors.ImageSharp.Memory.Buffer2D{``0})">GetMemoryGroup&lt;T&gt;(Buffer2D&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Gets the backing <a class="xref" href="SixLabors.ImageSharp.Memory.IMemoryGroup-1.html">IMemoryGroup&lt;T&gt;</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Memory&lt;T&gt; GetMemory&lt;T&gt;(this Buffer2D&lt;T&gt; buffer)
+    <pre><code class="lang-csharp hljs">public static IMemoryGroup&lt;T&gt; GetMemoryGroup&lt;T&gt;(this Buffer2D&lt;T&gt; buffer)
+
     where T : struct</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -120,7 +145,7 @@
       <tr>
         <td><a class="xref" href="SixLabors.ImageSharp.Memory.Buffer2D-1.html">Buffer2D</a>&lt;T&gt;</td>
         <td><span class="parametername">buffer</span></td>
-        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Memory.Buffer2D-1.html">Buffer2D&lt;T&gt;</a>.</p>
+        <td><p>The buffer.</p>
 </td>
       </tr>
     </tbody>
@@ -135,8 +160,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">SixLabors.ImageSharp.Memory</span>&lt;T&gt;</td>
-        <td><p>The <see cref="!:Memory&lt;T>"></see>.</p>
+        <td><a class="xref" href="SixLabors.ImageSharp.Memory.IMemoryGroup-1.html">IMemoryGroup</a>&lt;T&gt;</td>
+        <td><p>The MemoryGroup.</p>
 </td>
       </tr>
     </tbody>
@@ -152,220 +177,7 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td><p>The value type.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Memory_Buffer2DExtensions_GetRowMemory__1_SixLabors_ImageSharp_Memory_Buffer2D___0__System_Int32_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Memory.Buffer2DExtensions.GetRowMemory%60%601(SixLabors.ImageSharp.Memory.Buffer2D%7B%60%600%7D%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/Memory/Buffer2DExtensions.cs/#L66">View Source</a>
-  </span>
-  <a id="SixLabors_ImageSharp_Memory_Buffer2DExtensions_GetRowMemory_" data-uid="SixLabors.ImageSharp.Memory.Buffer2DExtensions.GetRowMemory*"></a>
-  <h4 id="SixLabors_ImageSharp_Memory_Buffer2DExtensions_GetRowMemory__1_SixLabors_ImageSharp_Memory_Buffer2D___0__System_Int32_" data-uid="SixLabors.ImageSharp.Memory.Buffer2DExtensions.GetRowMemory``1(SixLabors.ImageSharp.Memory.Buffer2D{``0},System.Int32)">GetRowMemory&lt;T&gt;(Buffer2D&lt;T&gt;, Int32)</h4>
-  <div class="markdown level1 summary"><p>Gets a <see cref="!:Memory&lt;T>"></see> to the row &apos;y&apos; beginning from the pixel at the first pixel on that row.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Memory&lt;T&gt; GetRowMemory&lt;T&gt;(this Buffer2D&lt;T&gt; buffer, int y)
-    where T : struct</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Memory.Buffer2D-1.html">Buffer2D</a>&lt;T&gt;</td>
-        <td><span class="parametername">buffer</span></td>
-        <td><p>The buffer</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">y</span></td>
-        <td><p>The y (row) coordinate</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">SixLabors.ImageSharp.Memory</span>&lt;T&gt;</td>
-        <td><p>The <see cref="!:Span&lt;T>"></see></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td><p>The element type</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Memory_Buffer2DExtensions_GetRowSpan__1_SixLabors_ImageSharp_Memory_Buffer2D___0__System_Int32_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Memory.Buffer2DExtensions.GetRowSpan%60%601(SixLabors.ImageSharp.Memory.Buffer2D%7B%60%600%7D%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/Memory/Buffer2DExtensions.cs/#L51">View Source</a>
-  </span>
-  <a id="SixLabors_ImageSharp_Memory_Buffer2DExtensions_GetRowSpan_" data-uid="SixLabors.ImageSharp.Memory.Buffer2DExtensions.GetRowSpan*"></a>
-  <h4 id="SixLabors_ImageSharp_Memory_Buffer2DExtensions_GetRowSpan__1_SixLabors_ImageSharp_Memory_Buffer2D___0__System_Int32_" data-uid="SixLabors.ImageSharp.Memory.Buffer2DExtensions.GetRowSpan``1(SixLabors.ImageSharp.Memory.Buffer2D{``0},System.Int32)">GetRowSpan&lt;T&gt;(Buffer2D&lt;T&gt;, Int32)</h4>
-  <div class="markdown level1 summary"><p>Gets a <see cref="!:Span&lt;T>"></see> to the row &apos;y&apos; beginning from the pixel at the first pixel on that row.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Span&lt;T&gt; GetRowSpan&lt;T&gt;(this Buffer2D&lt;T&gt; buffer, int y)
-    where T : struct</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Memory.Buffer2D-1.html">Buffer2D</a>&lt;T&gt;</td>
-        <td><span class="parametername">buffer</span></td>
-        <td><p>The buffer</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">y</span></td>
-        <td><p>The y (row) coordinate</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Span</span>&lt;T&gt;</td>
-        <td><p>The <see cref="!:Span&lt;T>"></see></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td><p>The element type</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Memory_Buffer2DExtensions_GetSpan__1_SixLabors_ImageSharp_Memory_Buffer2D___0__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Memory.Buffer2DExtensions.GetSpan%60%601(SixLabors.ImageSharp.Memory.Buffer2D%7B%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/Memory/Buffer2DExtensions.cs/#L24">View Source</a>
-  </span>
-  <a id="SixLabors_ImageSharp_Memory_Buffer2DExtensions_GetSpan_" data-uid="SixLabors.ImageSharp.Memory.Buffer2DExtensions.GetSpan*"></a>
-  <h4 id="SixLabors_ImageSharp_Memory_Buffer2DExtensions_GetSpan__1_SixLabors_ImageSharp_Memory_Buffer2D___0__" data-uid="SixLabors.ImageSharp.Memory.Buffer2DExtensions.GetSpan``1(SixLabors.ImageSharp.Memory.Buffer2D{``0})">GetSpan&lt;T&gt;(Buffer2D&lt;T&gt;)</h4>
-  <div class="markdown level1 summary"><p>Gets a <see cref="!:Span&lt;T>"></see> to the backing buffer of <code data-dev-comment-type="paramref" class="paramref">buffer</code>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Span&lt;T&gt; GetSpan&lt;T&gt;(this Buffer2D&lt;T&gt; buffer)
-    where T : struct</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Memory.Buffer2D-1.html">Buffer2D</a>&lt;T&gt;</td>
-        <td><span class="parametername">buffer</span></td>
-        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Memory.Buffer2D-1.html">Buffer2D&lt;T&gt;</a>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Span</span>&lt;T&gt;</td>
-        <td><p>The <see cref="!:Span&lt;T>"></see> referencing the memory area.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td><p>The value type.</p>
+        <td><p>The element type.</p>
 </td>
       </tr>
     </tbody>
@@ -381,7 +193,7 @@
                     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Memory_Buffer2DExtensions.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Memory.Buffer2DExtensions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/Memory/Buffer2DExtensions.cs/#L16" class="contribution-link">View Source</a>
+                    <a href="https://github.com/SixLabors/ImageSharp/blob/db5ea653668fb6d90a4e1188ff6e29488df425c9/src/ImageSharp/Memory/Buffer2DExtensions.cs/#L15" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

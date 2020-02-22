@@ -1,6 +1,4 @@
 # @SixLabors.ImageSharp
+# @SixLabors.ImageSharp.Drawing
 # @SixLabors.ImageSharp.Web
 # @SixLabors.Fonts
-# @SixLabors.Shapes
-# @SixLabors.Primitives
-# @SixLabors.Memory

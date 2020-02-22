@@ -80,13 +80,75 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">ImageProcessingException</span></div>
+    <div class="level1"><span class="xref">System.Exception</span></div>
+    <div class="level2"><span class="xref">ImageProcessingException</span></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="SixLabors.ImageSharp.html">SixLabors.ImageSharp</a></h6>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.Runtime.Serialization.ISerializable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Exception.GetBaseException()</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.Data</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.HelpLink</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.HResult</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.InnerException</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.Message</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.Source</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.StackTrace</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.TargetSite</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.SerializeObjectState</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="../ImageSharp.Drawing/SixLabors.ImageSharp.html">SixLabors.ImageSharp</a></h6>
   <h6><strong>Assembly</strong>: SixLabors.ImageSharp.dll</h6>
   <h5 id="SixLabors_ImageSharp_ImageProcessingException_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class ImageProcessingException : Exception</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ImageProcessingException : Exception, ISerializable</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -95,7 +157,7 @@
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_ImageProcessingException__ctor_System_String_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.ImageProcessingException.%23ctor(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/Common/Exceptions/ImageProcessingException.cs/#L18">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/db5ea653668fb6d90a4e1188ff6e29488df425c9/src/ImageSharp/Common/Exceptions/ImageProcessingException.cs/#L18">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_ImageProcessingException__ctor_" data-uid="SixLabors.ImageSharp.ImageProcessingException.#ctor*"></a>
   <h4 id="SixLabors_ImageSharp_ImageProcessingException__ctor_System_String_" data-uid="SixLabors.ImageSharp.ImageProcessingException.#ctor(System.String)">ImageProcessingException(String)</h4>
@@ -127,13 +189,13 @@ parameter that causes this exception.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_ImageProcessingException__ctor_System_String_Exception_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.ImageProcessingException.%23ctor(System.String%2CException)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_ImageProcessingException__ctor_System_String_System_Exception_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.ImageProcessingException.%23ctor(System.String%2CSystem.Exception)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/Common/Exceptions/ImageProcessingException.cs/#L30">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/db5ea653668fb6d90a4e1188ff6e29488df425c9/src/ImageSharp/Common/Exceptions/ImageProcessingException.cs/#L30">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_ImageProcessingException__ctor_" data-uid="SixLabors.ImageSharp.ImageProcessingException.#ctor*"></a>
-  <h4 id="SixLabors_ImageSharp_ImageProcessingException__ctor_System_String_Exception_" data-uid="SixLabors.ImageSharp.ImageProcessingException.#ctor(System.String,Exception)">ImageProcessingException(String, Exception)</h4>
+  <h4 id="SixLabors_ImageSharp_ImageProcessingException__ctor_System_String_System_Exception_" data-uid="SixLabors.ImageSharp.ImageProcessingException.#ctor(System.String,System.Exception)">ImageProcessingException(String, Exception)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="SixLabors.ImageSharp.ImageProcessingException.html">ImageProcessingException</a> class with a specified
 error message and the exception that is the cause of this exception.</p>
 </div>
@@ -159,7 +221,7 @@ error message and the exception that is the cause of this exception.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Exception</span></td>
+        <td><span class="xref">System.Exception</span></td>
         <td><span class="parametername">innerException</span></td>
         <td><p>The exception that is the cause of the current exception, or a null reference (Nothing in Visual Basic)
 if no inner exception is specified.</p>
@@ -167,6 +229,10 @@ if no inner exception is specified.</p>
       </tr>
     </tbody>
   </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.Runtime.Serialization.ISerializable</span>
+  </div>
 </article>
           </div>
           
@@ -178,7 +244,7 @@ if no inner exception is specified.</p>
                     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_ImageProcessingException.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.ImageProcessingException%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/Common/Exceptions/ImageProcessingException.cs/#L11" class="contribution-link">View Source</a>
+                    <a href="https://github.com/SixLabors/ImageSharp/blob/db5ea653668fb6d90a4e1188ff6e29488df425c9/src/ImageSharp/Common/Exceptions/ImageProcessingException.cs/#L11" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -86,7 +86,9 @@ that make up an <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&l
   </div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><span class="xref">IEnumerable</span>&lt;<a class="xref" href="SixLabors.ImageSharp.ImageFrame-1.html">ImageFrame</a>&lt;TPixel&gt;&gt;</div>
+    <div><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="SixLabors.ImageSharp.ImageFrame.html">ImageFrame</a>&gt;</div>
+    <div><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="SixLabors.ImageSharp.ImageFrame-1.html">ImageFrame</a>&lt;TPixel&gt;&gt;</div>
+    <div><span class="xref">System.Collections.IEnumerable</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -102,12 +104,33 @@ that make up an <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&l
     <div>
       <a class="xref" href="SixLabors.ImageSharp.ImageFrameCollection.html#SixLabors_ImageSharp_ImageFrameCollection_GetEnumerator">ImageFrameCollection.GetEnumerator()</a>
     </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="SixLabors.ImageSharp.html">SixLabors.ImageSharp</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="../ImageSharp.Drawing/SixLabors.ImageSharp.html">SixLabors.ImageSharp</a></h6>
   <h6><strong>Assembly</strong>: SixLabors.ImageSharp.dll</h6>
   <h5 id="SixLabors_ImageSharp_ImageFrameCollection_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class ImageFrameCollection&lt;TPixel&gt; : ImageFrameCollection, IEnumerable&lt;ImageFrame&lt;TPixel&gt;&gt; where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ImageFrameCollection&lt;TPixel&gt; : ImageFrameCollection, IEnumerable&lt;ImageFrame&gt;, IEnumerable&lt;ImageFrame&lt;TPixel&gt;&gt;, IEnumerable where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -132,7 +155,7 @@ that make up an <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&l
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_ImageFrameCollection_1_Count.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.ImageFrameCollection%601.Count%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L65">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/db5ea653668fb6d90a4e1188ff6e29488df425c9/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L65">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_ImageFrameCollection_1_Count_" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.Count*"></a>
   <h4 id="SixLabors_ImageSharp_ImageFrameCollection_1_Count" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.Count">Count</h4>
@@ -165,7 +188,7 @@ that make up an <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&l
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_ImageFrameCollection_1_Item_System_Int32_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.ImageFrameCollection%601.Item(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L83">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/db5ea653668fb6d90a4e1188ff6e29488df425c9/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L83">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_ImageFrameCollection_1_Item_" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.Item*"></a>
   <h4 id="SixLabors_ImageSharp_ImageFrameCollection_1_Item_System_Int32_" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.Item(System.Int32)">Item[Int32]</h4>
@@ -215,12 +238,11 @@ that make up an <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&l
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_ImageFrameCollection_1_NonGenericRootFrame.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.ImageFrameCollection%601.NonGenericRootFrame%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L73">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/db5ea653668fb6d90a4e1188ff6e29488df425c9/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L73">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_ImageFrameCollection_1_NonGenericRootFrame_" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.NonGenericRootFrame*"></a>
   <h4 id="SixLabors_ImageSharp_ImageFrameCollection_1_NonGenericRootFrame" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.NonGenericRootFrame">NonGenericRootFrame</h4>
-  <div class="markdown level1 summary"><p>Gets the root frame. (Implements <a class="xref" href="SixLabors.ImageSharp.ImageFrameCollection.html#SixLabors_ImageSharp_ImageFrameCollection_RootFrame">RootFrame</a>.)</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -248,7 +270,7 @@ that make up an <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&l
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_ImageFrameCollection_1_RootFrame.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.ImageFrameCollection%601.RootFrame%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L70">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/db5ea653668fb6d90a4e1188ff6e29488df425c9/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L70">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_ImageFrameCollection_1_RootFrame_" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.RootFrame*"></a>
   <h4 id="SixLabors_ImageSharp_ImageFrameCollection_1_RootFrame" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.RootFrame">RootFrame</h4>
@@ -281,7 +303,7 @@ that make up an <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&l
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_ImageFrameCollection_1_AddFrame__0___.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.ImageFrameCollection%601.AddFrame(%600%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L149">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/db5ea653668fb6d90a4e1188ff6e29488df425c9/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L149">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_ImageFrameCollection_1_AddFrame_" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.AddFrame*"></a>
   <h4 id="SixLabors_ImageSharp_ImageFrameCollection_1_AddFrame__0___" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.AddFrame(`0[])">AddFrame(TPixel[])</h4>
@@ -329,61 +351,10 @@ new frame at the end of the collection.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_ImageFrameCollection_1_AddFrame_ReadOnlySpan__0__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.ImageFrameCollection%601.AddFrame(ReadOnlySpan%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L132">View Source</a>
-  </span>
-  <a id="SixLabors_ImageSharp_ImageFrameCollection_1_AddFrame_" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.AddFrame*"></a>
-  <h4 id="SixLabors_ImageSharp_ImageFrameCollection_1_AddFrame_ReadOnlySpan__0__" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.AddFrame(ReadOnlySpan{`0})">AddFrame(ReadOnlySpan&lt;TPixel&gt;)</h4>
-  <div class="markdown level1 summary"><p>Creates a new frame from the pixel data with the same dimensions as the other frames and inserts the
-new frame at the end of the collection.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ImageFrame&lt;TPixel&gt; AddFrame(ReadOnlySpan&lt;TPixel&gt; source)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">ReadOnlySpan</span>&lt;TPixel&gt;</td>
-        <td><span class="parametername">source</span></td>
-        <td><p>The raw pixel data to generate the <a class="xref" href="SixLabors.ImageSharp.ImageFrame-1.html">ImageFrame&lt;TPixel&gt;</a> from.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.ImageFrame-1.html">ImageFrame</a>&lt;TPixel&gt;</td>
-        <td><p>The new <a class="xref" href="SixLabors.ImageSharp.ImageFrame-1.html">ImageFrame&lt;TPixel&gt;</a>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_ImageFrameCollection_1_AddFrame_SixLabors_ImageSharp_ImageFrame__0__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.ImageFrameCollection%601.AddFrame(SixLabors.ImageSharp.ImageFrame%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L118">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/db5ea653668fb6d90a4e1188ff6e29488df425c9/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L118">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_ImageFrameCollection_1_AddFrame_" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.AddFrame*"></a>
   <h4 id="SixLabors_ImageSharp_ImageFrameCollection_1_AddFrame_SixLabors_ImageSharp_ImageFrame__0__" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.AddFrame(SixLabors.ImageSharp.ImageFrame{`0})">AddFrame(ImageFrame&lt;TPixel&gt;)</h4>
@@ -430,10 +401,61 @@ new frame at the end of the collection.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_ImageFrameCollection_1_AddFrame_System_ReadOnlySpan__0__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.ImageFrameCollection%601.AddFrame(System.ReadOnlySpan%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/db5ea653668fb6d90a4e1188ff6e29488df425c9/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L132">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_ImageFrameCollection_1_AddFrame_" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.AddFrame*"></a>
+  <h4 id="SixLabors_ImageSharp_ImageFrameCollection_1_AddFrame_System_ReadOnlySpan__0__" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.AddFrame(System.ReadOnlySpan{`0})">AddFrame(ReadOnlySpan&lt;TPixel&gt;)</h4>
+  <div class="markdown level1 summary"><p>Creates a new frame from the pixel data with the same dimensions as the other frames and inserts the
+new frame at the end of the collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ImageFrame&lt;TPixel&gt; AddFrame(ReadOnlySpan&lt;TPixel&gt; source)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ReadOnlySpan</span>&lt;TPixel&gt;</td>
+        <td><span class="parametername">source</span></td>
+        <td><p>The raw pixel data to generate the <a class="xref" href="SixLabors.ImageSharp.ImageFrame-1.html">ImageFrame&lt;TPixel&gt;</a> from.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.ImageFrame-1.html">ImageFrame</a>&lt;TPixel&gt;</td>
+        <td><p>The new <a class="xref" href="SixLabors.ImageSharp.ImageFrame-1.html">ImageFrame&lt;TPixel&gt;</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_ImageFrameCollection_1_CloneFrame_System_Int32_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.ImageFrameCollection%601.CloneFrame(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L229">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/db5ea653668fb6d90a4e1188ff6e29488df425c9/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L229">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_ImageFrameCollection_1_CloneFrame_" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.CloneFrame*"></a>
   <h4 id="SixLabors_ImageSharp_ImageFrameCollection_1_CloneFrame_System_Int32_" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.CloneFrame(System.Int32)">CloneFrame(Int32)</h4>
@@ -484,12 +506,11 @@ with the same metadata as the original image.</p>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_ImageFrameCollection_1_Contains_SixLabors_ImageSharp_ImageFrame_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.ImageFrameCollection%601.Contains(SixLabors.ImageSharp.ImageFrame)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L173">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/db5ea653668fb6d90a4e1188ff6e29488df425c9/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L173">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_ImageFrameCollection_1_Contains_" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.Contains*"></a>
   <h4 id="SixLabors_ImageSharp_ImageFrameCollection_1_Contains_SixLabors_ImageSharp_ImageFrame_" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.Contains(SixLabors.ImageSharp.ImageFrame)">Contains(ImageFrame)</h4>
-  <div class="markdown level1 summary"><p>Determines whether the <a class="xref" href="SixLabors.ImageSharp.ImageFrameCollection-1.html">ImageFrameCollection&lt;TPixel&gt;</a> contains the <code data-dev-comment-type="paramref" class="paramref">frame</code>.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -508,8 +529,7 @@ with the same metadata as the original image.</p>
       <tr>
         <td><a class="xref" href="SixLabors.ImageSharp.ImageFrame.html">ImageFrame</a></td>
         <td><span class="parametername">frame</span></td>
-        <td><p>The frame.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -524,8 +544,7 @@ with the same metadata as the original image.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td><p><code>true</code> if the <a class="xref" href="SixLabors.ImageSharp.ImageFrameCollection-1.html">ImageFrameCollection&lt;TPixel&gt;</a> contains the specified frame; otherwise, <code>false</code>.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -536,7 +555,7 @@ with the same metadata as the original image.</p>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_ImageFrameCollection_1_Contains_SixLabors_ImageSharp_ImageFrame__0__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.ImageFrameCollection%601.Contains(SixLabors.ImageSharp.ImageFrame%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L183">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/db5ea653668fb6d90a4e1188ff6e29488df425c9/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L183">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_ImageFrameCollection_1_Contains_" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.Contains*"></a>
   <h4 id="SixLabors_ImageSharp_ImageFrameCollection_1_Contains_SixLabors_ImageSharp_ImageFrame__0__" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.Contains(SixLabors.ImageSharp.ImageFrame{`0})">Contains(ImageFrame&lt;TPixel&gt;)</h4>
@@ -586,7 +605,7 @@ with the same metadata as the original image.</p>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_ImageFrameCollection_1_CreateFrame.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.ImageFrameCollection%601.CreateFrame%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L242">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/db5ea653668fb6d90a4e1188ff6e29488df425c9/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L242">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_ImageFrameCollection_1_CreateFrame_" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.CreateFrame*"></a>
   <h4 id="SixLabors_ImageSharp_ImageFrameCollection_1_CreateFrame" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.CreateFrame">CreateFrame()</h4>
@@ -618,7 +637,7 @@ with the same metadata as the original image.</p>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_ImageFrameCollection_1_CreateFrame__0_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.ImageFrameCollection%601.CreateFrame(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L308">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/db5ea653668fb6d90a4e1188ff6e29488df425c9/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L308">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_ImageFrameCollection_1_CreateFrame_" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.CreateFrame*"></a>
   <h4 id="SixLabors_ImageSharp_ImageFrameCollection_1_CreateFrame__0_" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.CreateFrame(`0)">CreateFrame(TPixel)</h4>
@@ -668,7 +687,7 @@ with the same metadata as the original image.</p>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_ImageFrameCollection_1_ExportFrame_System_Int32_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.ImageFrameCollection%601.ExportFrame(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L209">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/db5ea653668fb6d90a4e1188ff6e29488df425c9/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L209">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_ImageFrameCollection_1_ExportFrame_" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.ExportFrame*"></a>
   <h4 id="SixLabors_ImageSharp_ImageFrameCollection_1_ExportFrame_System_Int32_" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.ExportFrame(System.Int32)">ExportFrame(Int32)</h4>
@@ -714,17 +733,32 @@ with the same metadata as the original image.</p>
       </tr>
     </tbody>
   </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td><p>Cannot remove last frame.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_ImageFrameCollection_1_IndexOf_SixLabors_ImageSharp_ImageFrame_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.ImageFrameCollection%601.IndexOf(SixLabors.ImageSharp.ImageFrame)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L86">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/db5ea653668fb6d90a4e1188ff6e29488df425c9/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L86">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_ImageFrameCollection_1_IndexOf_" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.IndexOf*"></a>
   <h4 id="SixLabors_ImageSharp_ImageFrameCollection_1_IndexOf_SixLabors_ImageSharp_ImageFrame_" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.IndexOf(SixLabors.ImageSharp.ImageFrame)">IndexOf(ImageFrame)</h4>
-  <div class="markdown level1 summary"><p>Determines the index of a specific <code data-dev-comment-type="paramref" class="paramref">frame</code> in the <a class="xref" href="SixLabors.ImageSharp.ImageFrameCollection.html">ImageFrameCollection</a>.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -743,8 +777,7 @@ with the same metadata as the original image.</p>
       <tr>
         <td><a class="xref" href="SixLabors.ImageSharp.ImageFrame.html">ImageFrame</a></td>
         <td><span class="parametername">frame</span></td>
-        <td><p>The <a class="xref" href="SixLabors.ImageSharp.ImageFrame.html">ImageFrame</a> to locate in the <a class="xref" href="SixLabors.ImageSharp.ImageFrameCollection.html">ImageFrameCollection</a>.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -759,8 +792,7 @@ with the same metadata as the original image.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><p>The index of item if found in the list; otherwise, -1.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -771,7 +803,7 @@ with the same metadata as the original image.</p>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_ImageFrameCollection_1_IndexOf_SixLabors_ImageSharp_ImageFrame__0__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.ImageFrameCollection%601.IndexOf(SixLabors.ImageSharp.ImageFrame%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L96">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/db5ea653668fb6d90a4e1188ff6e29488df425c9/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L96">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_ImageFrameCollection_1_IndexOf_" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.IndexOf*"></a>
   <h4 id="SixLabors_ImageSharp_ImageFrameCollection_1_IndexOf_SixLabors_ImageSharp_ImageFrame__0__" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.IndexOf(SixLabors.ImageSharp.ImageFrame{`0})">IndexOf(ImageFrame&lt;TPixel&gt;)</h4>
@@ -821,7 +853,7 @@ with the same metadata as the original image.</p>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_ImageFrameCollection_1_InsertFrame_System_Int32_SixLabors_ImageSharp_ImageFrame__0__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.ImageFrameCollection%601.InsertFrame(System.Int32%2CSixLabors.ImageSharp.ImageFrame%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L105">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/db5ea653668fb6d90a4e1188ff6e29488df425c9/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L105">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_ImageFrameCollection_1_InsertFrame_" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.InsertFrame*"></a>
   <h4 id="SixLabors_ImageSharp_ImageFrameCollection_1_InsertFrame_System_Int32_SixLabors_ImageSharp_ImageFrame__0__" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.InsertFrame(System.Int32,SixLabors.ImageSharp.ImageFrame{`0})">InsertFrame(Int32, ImageFrame&lt;TPixel&gt;)</h4>
@@ -872,12 +904,28 @@ with the same metadata as the original image.</p>
       </tr>
     </tbody>
   </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>Frame must have the same dimensions as the image.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_ImageFrameCollection_1_MoveFrame_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.ImageFrameCollection%601.MoveFrame(System.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L190">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/db5ea653668fb6d90a4e1188ff6e29488df425c9/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L190">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_ImageFrameCollection_1_MoveFrame_" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.MoveFrame*"></a>
   <h4 id="SixLabors_ImageSharp_ImageFrameCollection_1_MoveFrame_System_Int32_System_Int32_" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.MoveFrame(System.Int32,System.Int32)">MoveFrame(Int32, Int32)</h4>
@@ -919,12 +967,11 @@ with the same metadata as the original image.</p>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_ImageFrameCollection_1_NonGenericAddFrame_SixLabors_ImageSharp_ImageFrame_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.ImageFrameCollection%601.NonGenericAddFrame(SixLabors.ImageSharp.ImageFrame)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L274">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/db5ea653668fb6d90a4e1188ff6e29488df425c9/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L274">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_ImageFrameCollection_1_NonGenericAddFrame_" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.NonGenericAddFrame*"></a>
   <h4 id="SixLabors_ImageSharp_ImageFrameCollection_1_NonGenericAddFrame_SixLabors_ImageSharp_ImageFrame_" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.NonGenericAddFrame(SixLabors.ImageSharp.ImageFrame)">NonGenericAddFrame(ImageFrame)</h4>
-  <div class="markdown level1 summary"><p>Implements <a class="xref" href="SixLabors.ImageSharp.ImageFrameCollection.html#SixLabors_ImageSharp_ImageFrameCollection_AddFrame_SixLabors_ImageSharp_ImageFrame_">AddFrame(ImageFrame)</a>.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -943,8 +990,7 @@ with the same metadata as the original image.</p>
       <tr>
         <td><a class="xref" href="SixLabors.ImageSharp.ImageFrame.html">ImageFrame</a></td>
         <td><span class="parametername">source</span></td>
-        <td><p>The frame.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -959,8 +1005,7 @@ with the same metadata as the original image.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="SixLabors.ImageSharp.ImageFrame.html">ImageFrame</a></td>
-        <td><p>The new frame.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -971,12 +1016,11 @@ with the same metadata as the original image.</p>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_ImageFrameCollection_1_NonGenericCloneFrame_System_Int32_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.ImageFrameCollection%601.NonGenericCloneFrame(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L292">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/db5ea653668fb6d90a4e1188ff6e29488df425c9/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L292">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_ImageFrameCollection_1_NonGenericCloneFrame_" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.NonGenericCloneFrame*"></a>
   <h4 id="SixLabors_ImageSharp_ImageFrameCollection_1_NonGenericCloneFrame_System_Int32_" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.NonGenericCloneFrame(System.Int32)">NonGenericCloneFrame(Int32)</h4>
-  <div class="markdown level1 summary"><p>Implements <a class="xref" href="SixLabors.ImageSharp.ImageFrameCollection.html#SixLabors_ImageSharp_ImageFrameCollection_CloneFrame_System_Int32_">CloneFrame(Int32)</a>.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -995,8 +1039,7 @@ with the same metadata as the original image.</p>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">index</span></td>
-        <td><p>The index.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -1011,8 +1054,7 @@ with the same metadata as the original image.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="SixLabors.ImageSharp.Image.html">Image</a></td>
-        <td><p>The new image.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -1023,12 +1065,11 @@ with the same metadata as the original image.</p>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_ImageFrameCollection_1_NonGenericCreateFrame.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.ImageFrameCollection%601.NonGenericCreateFrame%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L299">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/db5ea653668fb6d90a4e1188ff6e29488df425c9/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L299">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_ImageFrameCollection_1_NonGenericCreateFrame_" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.NonGenericCreateFrame*"></a>
   <h4 id="SixLabors_ImageSharp_ImageFrameCollection_1_NonGenericCreateFrame" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.NonGenericCreateFrame">NonGenericCreateFrame()</h4>
-  <div class="markdown level1 summary"><p>Implements <a class="xref" href="SixLabors.ImageSharp.ImageFrameCollection.html#SixLabors_ImageSharp_ImageFrameCollection_CreateFrame">CreateFrame()</a>.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1045,8 +1086,7 @@ with the same metadata as the original image.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="SixLabors.ImageSharp.ImageFrame.html">ImageFrame</a></td>
-        <td><p>The new frame.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -1057,12 +1097,11 @@ with the same metadata as the original image.</p>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_ImageFrameCollection_1_NonGenericCreateFrame_SixLabors_ImageSharp_Color_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.ImageFrameCollection%601.NonGenericCreateFrame(SixLabors.ImageSharp.Color)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L295">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/db5ea653668fb6d90a4e1188ff6e29488df425c9/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L295">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_ImageFrameCollection_1_NonGenericCreateFrame_" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.NonGenericCreateFrame*"></a>
   <h4 id="SixLabors_ImageSharp_ImageFrameCollection_1_NonGenericCreateFrame_SixLabors_ImageSharp_Color_" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.NonGenericCreateFrame(SixLabors.ImageSharp.Color)">NonGenericCreateFrame(Color)</h4>
-  <div class="markdown level1 summary"><p>Implements <a class="xref" href="SixLabors.ImageSharp.ImageFrameCollection.html#SixLabors_ImageSharp_ImageFrameCollection_CreateFrame">CreateFrame()</a>.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1081,8 +1120,7 @@ with the same metadata as the original image.</p>
       <tr>
         <td><a class="xref" href="SixLabors.ImageSharp.Color.html">Color</a></td>
         <td><span class="parametername">backgroundColor</span></td>
-        <td><p>The background color.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -1097,8 +1135,7 @@ with the same metadata as the original image.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="SixLabors.ImageSharp.ImageFrame.html">ImageFrame</a></td>
-        <td><p>The new frame.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -1109,12 +1146,11 @@ with the same metadata as the original image.</p>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_ImageFrameCollection_1_NonGenericExportFrame_System_Int32_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.ImageFrameCollection%601.NonGenericExportFrame(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L289">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/db5ea653668fb6d90a4e1188ff6e29488df425c9/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L289">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_ImageFrameCollection_1_NonGenericExportFrame_" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.NonGenericExportFrame*"></a>
   <h4 id="SixLabors_ImageSharp_ImageFrameCollection_1_NonGenericExportFrame_System_Int32_" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.NonGenericExportFrame(System.Int32)">NonGenericExportFrame(Int32)</h4>
-  <div class="markdown level1 summary"><p>Implements <a class="xref" href="SixLabors.ImageSharp.ImageFrameCollection.html#SixLabors_ImageSharp_ImageFrameCollection_ExportFrame_System_Int32_">ExportFrame(Int32)</a>.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1133,8 +1169,7 @@ with the same metadata as the original image.</p>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">index</span></td>
-        <td><p>The index.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -1149,8 +1184,7 @@ with the same metadata as the original image.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="SixLabors.ImageSharp.Image.html">Image</a></td>
-        <td><p>The new image.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -1161,12 +1195,11 @@ with the same metadata as the original image.</p>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_ImageFrameCollection_1_NonGenericGetEnumerator.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.ImageFrameCollection%601.NonGenericGetEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L253">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/db5ea653668fb6d90a4e1188ff6e29488df425c9/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L253">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_ImageFrameCollection_1_NonGenericGetEnumerator_" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.NonGenericGetEnumerator*"></a>
   <h4 id="SixLabors_ImageSharp_ImageFrameCollection_1_NonGenericGetEnumerator" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.NonGenericGetEnumerator">NonGenericGetEnumerator()</h4>
-  <div class="markdown level1 summary"><p>Implements <a class="xref" href="SixLabors.ImageSharp.ImageFrameCollection.html#SixLabors_ImageSharp_ImageFrameCollection_GetEnumerator">GetEnumerator()</a>.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1182,9 +1215,8 @@ with the same metadata as the original image.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerator</span>&lt;<a class="xref" href="SixLabors.ImageSharp.ImageFrame.html">ImageFrame</a>&gt;</td>
-        <td><p>The enumerator.</p>
-</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerator</span>&lt;<a class="xref" href="SixLabors.ImageSharp.ImageFrame.html">ImageFrame</a>&gt;</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -1195,12 +1227,11 @@ with the same metadata as the original image.</p>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_ImageFrameCollection_1_NonGenericGetFrame_System_Int32_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.ImageFrameCollection%601.NonGenericGetFrame(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L256">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/db5ea653668fb6d90a4e1188ff6e29488df425c9/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L256">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_ImageFrameCollection_1_NonGenericGetFrame_" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.NonGenericGetFrame*"></a>
   <h4 id="SixLabors_ImageSharp_ImageFrameCollection_1_NonGenericGetFrame_System_Int32_" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.NonGenericGetFrame(System.Int32)">NonGenericGetFrame(Int32)</h4>
-  <div class="markdown level1 summary"><p>Implements the getter of the indexer.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1219,8 +1250,7 @@ with the same metadata as the original image.</p>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">index</span></td>
-        <td><p>The index.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -1235,8 +1265,7 @@ with the same metadata as the original image.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="SixLabors.ImageSharp.ImageFrame.html">ImageFrame</a></td>
-        <td><p>The frame.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -1247,12 +1276,11 @@ with the same metadata as the original image.</p>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_ImageFrameCollection_1_NonGenericInsertFrame_System_Int32_SixLabors_ImageSharp_ImageFrame_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.ImageFrameCollection%601.NonGenericInsertFrame(System.Int32%2CSixLabors.ImageSharp.ImageFrame)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L259">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/db5ea653668fb6d90a4e1188ff6e29488df425c9/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L259">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_ImageFrameCollection_1_NonGenericInsertFrame_" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.NonGenericInsertFrame*"></a>
   <h4 id="SixLabors_ImageSharp_ImageFrameCollection_1_NonGenericInsertFrame_System_Int32_SixLabors_ImageSharp_ImageFrame_" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.NonGenericInsertFrame(System.Int32,SixLabors.ImageSharp.ImageFrame)">NonGenericInsertFrame(Int32, ImageFrame)</h4>
-  <div class="markdown level1 summary"><p>Implements <a class="xref" href="SixLabors.ImageSharp.ImageFrameCollection.html#SixLabors_ImageSharp_ImageFrameCollection_InsertFrame_System_Int32_SixLabors_ImageSharp_ImageFrame_">InsertFrame(Int32, ImageFrame)</a>.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1271,14 +1299,12 @@ with the same metadata as the original image.</p>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">index</span></td>
-        <td><p>The index.</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="SixLabors.ImageSharp.ImageFrame.html">ImageFrame</a></td>
         <td><span class="parametername">source</span></td>
-        <td><p>The frame.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -1293,8 +1319,7 @@ with the same metadata as the original image.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="SixLabors.ImageSharp.ImageFrame.html">ImageFrame</a></td>
-        <td><p>The new frame.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -1305,7 +1330,7 @@ with the same metadata as the original image.</p>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_ImageFrameCollection_1_RemoveFrame_System_Int32_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.ImageFrameCollection%601.RemoveFrame(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L160">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/db5ea653668fb6d90a4e1188ff6e29488df425c9/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L160">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_ImageFrameCollection_1_RemoveFrame_" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.RemoveFrame*"></a>
   <h4 id="SixLabors_ImageSharp_ImageFrameCollection_1_RemoveFrame_System_Int32_" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.RemoveFrame(System.Int32)">RemoveFrame(Int32)</h4>
@@ -1336,9 +1361,93 @@ with the same metadata as the original image.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="SixLabors.ImageSharp.ImageFrameCollection.html#SixLabors_ImageSharp_ImageFrameCollection_RemoveFrame_System_Int32_">ImageFrameCollection.RemoveFrame(Int32)</a></div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td><p>Cannot remove last frame.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_ImageFrameCollection_1_System_Collections_Generic_IEnumerable_SixLabors_ImageSharp_ImageFrame_TPixel___GetEnumerator.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.ImageFrameCollection%601.System%23Collections%23Generic%23IEnumerable%7BSixLabors%23ImageSharp%23ImageFrame%7BTPixel%7D%7D%23GetEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/db5ea653668fb6d90a4e1188ff6e29488df425c9/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L320">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_ImageFrameCollection_1_System_Collections_Generic_IEnumerable_SixLabors_ImageSharp_ImageFrame_TPixel___GetEnumerator_" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.System#Collections#Generic#IEnumerable{SixLabors#ImageSharp#ImageFrame{TPixel}}#GetEnumerator*"></a>
+  <h4 id="SixLabors_ImageSharp_ImageFrameCollection_1_System_Collections_Generic_IEnumerable_SixLabors_ImageSharp_ImageFrame_TPixel___GetEnumerator" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.System#Collections#Generic#IEnumerable{SixLabors#ImageSharp#ImageFrame{TPixel}}#GetEnumerator">IEnumerable&lt;ImageFrame&lt;TPixel&gt;&gt;.GetEnumerator()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerator&lt;ImageFrame&lt;TPixel&gt;&gt; IEnumerable&lt;ImageFrame&lt;TPixel&gt;&gt;.GetEnumerator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerator</span>&lt;<a class="xref" href="SixLabors.ImageSharp.ImageFrame-1.html">ImageFrame</a>&lt;TPixel&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_ImageFrameCollection_1_System_Collections_IEnumerable_GetEnumerator.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.ImageFrameCollection%601.System%23Collections%23IEnumerable%23GetEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/db5ea653668fb6d90a4e1188ff6e29488df425c9/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L323">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_ImageFrameCollection_1_System_Collections_IEnumerable_GetEnumerator_" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.System#Collections#IEnumerable#GetEnumerator*"></a>
+  <h4 id="SixLabors_ImageSharp_ImageFrameCollection_1_System_Collections_IEnumerable_GetEnumerator" data-uid="SixLabors.ImageSharp.ImageFrameCollection`1.System#Collections#IEnumerable#GetEnumerator">IEnumerable.GetEnumerator()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerator IEnumerable.GetEnumerator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.IEnumerator</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <span class="xref">IEnumerable&lt;&gt;</span>
+      <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.IEnumerable</span>
   </div>
 </article>
           </div>
@@ -1351,7 +1460,7 @@ with the same metadata as the original image.</p>
                     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_ImageFrameCollection_1.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.ImageFrameCollection%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/SixLabors/ImageSharp/blob/dadc274173a32051425cadc6be10c5180da9674e/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L19" class="contribution-link">View Source</a>
+                    <a href="https://github.com/SixLabors/ImageSharp/blob/db5ea653668fb6d90a4e1188ff6e29488df425c9/src/ImageSharp/ImageFrameCollection{TPixel}.cs/#L19" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
