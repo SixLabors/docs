@@ -6,3 +6,6 @@
 	path = ext/Fonts
 	url = https://github.com/SixLabors/Fonts.git
 	ignore = dirty
+[submodule "ext/ImageSharp"]
+	path = ext/ImageSharp
+	url = https://github.com/SixLabors/ImageSharp
