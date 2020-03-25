@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Interface IDither
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.50.0.0">
     
     <link rel="shortcut icon" href="../../favicon.png">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -87,22 +87,21 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Dithering_IDither_ApplyPaletteDither__1_SixLabors_ImageSharp_Configuration_System_ReadOnlyMemory___0__SixLabors_ImageSharp_ImageFrame___0__SixLabors_ImageSharp_Rectangle_System_Single_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Dithering.IDither.ApplyPaletteDither%60%601(SixLabors.ImageSharp.Configuration%2CSystem.ReadOnlyMemory%7B%60%600%7D%2CSixLabors.ImageSharp.ImageFrame%7B%60%600%7D%2CSixLabors.ImageSharp.Rectangle%2CSystem.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Dithering_IDither_ApplyPaletteDither__2___0__SixLabors_ImageSharp_ImageFrame___1__SixLabors_ImageSharp_Rectangle_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Dithering.IDither.ApplyPaletteDither%60%602(%60%600%40%2CSixLabors.ImageSharp.ImageFrame%7B%60%601%7D%2CSixLabors.ImageSharp.Rectangle)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/Processing/Processors/Dithering/IDither.cs/#L45">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/26b89ed936b3ba959821fc704170382474366107/src/ImageSharp/Processing/Processors/Dithering/IDither.cs/#L41">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_Processors_Dithering_IDither_ApplyPaletteDither_" data-uid="SixLabors.ImageSharp.Processing.Processors.Dithering.IDither.ApplyPaletteDither*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_Processors_Dithering_IDither_ApplyPaletteDither__1_SixLabors_ImageSharp_Configuration_System_ReadOnlyMemory___0__SixLabors_ImageSharp_ImageFrame___0__SixLabors_ImageSharp_Rectangle_System_Single_" data-uid="SixLabors.ImageSharp.Processing.Processors.Dithering.IDither.ApplyPaletteDither``1(SixLabors.ImageSharp.Configuration,System.ReadOnlyMemory{``0},SixLabors.ImageSharp.ImageFrame{``0},SixLabors.ImageSharp.Rectangle,System.Single)">ApplyPaletteDither&lt;TPixel&gt;(Configuration, ReadOnlyMemory&lt;TPixel&gt;, ImageFrame&lt;TPixel&gt;, Rectangle, Single)</h4>
+  <h4 id="SixLabors_ImageSharp_Processing_Processors_Dithering_IDither_ApplyPaletteDither__2___0__SixLabors_ImageSharp_ImageFrame___1__SixLabors_ImageSharp_Rectangle_" data-uid="SixLabors.ImageSharp.Processing.Processors.Dithering.IDither.ApplyPaletteDither``2(``0@,SixLabors.ImageSharp.ImageFrame{``1},SixLabors.ImageSharp.Rectangle)">ApplyPaletteDither&lt;TPaletteDitherImageProcessor, TPixel&gt;(TPaletteDitherImageProcessor, ImageFrame&lt;TPixel&gt;, Rectangle)</h4>
   <div class="markdown level1 summary"><p>Transforms the image frame applying a dither matrix.
 This method should be treated as destructive, altering the input pixels.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void ApplyPaletteDither&lt;TPixel&gt;(Configuration configuration, ReadOnlyMemory&lt;TPixel&gt; palette, ImageFrame&lt;TPixel&gt; source, Rectangle bounds, float scale)
-
-    where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">void ApplyPaletteDither&lt;TPaletteDitherImageProcessor, TPixel&gt;(in TPaletteDitherImageProcessor processor, ImageFrame&lt;TPixel&gt; source, Rectangle bounds)
+    where TPaletteDitherImageProcessor : struct, IPaletteDitherImageProcessor&lt;TPixel&gt; where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -115,15 +114,9 @@ This method should be treated as destructive, altering the input pixels.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Configuration.html">Configuration</a></td>
-        <td><span class="parametername">configuration</span></td>
-        <td><p>The configuration.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.ReadOnlyMemory</span>&lt;TPixel&gt;</td>
-        <td><span class="parametername">palette</span></td>
-        <td><p>The quantized palette.</p>
+        <td><span class="xref">TPaletteDitherImageProcessor</span></td>
+        <td><span class="parametername">processor</span></td>
+        <td><p>The palette dithering processor.</p>
 </td>
       </tr>
       <tr>
@@ -138,12 +131,6 @@ This method should be treated as destructive, altering the input pixels.</p>
         <td><p>The region of interest bounds.</p>
 </td>
       </tr>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">scale</span></td>
-        <td><p>The dithering scale used to adjust the amount of dither. Range 0..1.</p>
-</td>
-      </tr>
     </tbody>
   </table>
   <h5 class="typeParameters">Type Parameters</h5>
@@ -156,6 +143,11 @@ This method should be treated as destructive, altering the input pixels.</p>
     </thead>
     <tbody>
       <tr>
+        <td><span class="parametername">TPaletteDitherImageProcessor</span></td>
+        <td><p>The type of palette dithering processor.</p>
+</td>
+      </tr>
+      <tr>
         <td><span class="parametername">TPixel</span></td>
         <td><p>The pixel format.</p>
 </td>
@@ -164,21 +156,20 @@ This method should be treated as destructive, altering the input pixels.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Dithering_IDither_ApplyQuantizationDither__2___0__System_ReadOnlyMemory___1__SixLabors_ImageSharp_ImageFrame___1__System_Memory_System_Byte__SixLabors_ImageSharp_Rectangle_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Dithering.IDither.ApplyQuantizationDither%60%602(%60%600%40%2CSystem.ReadOnlyMemory%7B%60%601%7D%2CSixLabors.ImageSharp.ImageFrame%7B%60%601%7D%2CSystem.Memory%7BSystem.Byte%7D%2CSixLabors.ImageSharp.Rectangle)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Dithering_IDither_ApplyQuantizationDither__2___0__SixLabors_ImageSharp_ImageFrame___1__SixLabors_ImageSharp_Processing_Processors_Quantization_IndexedImageFrame___1__SixLabors_ImageSharp_Rectangle_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Dithering.IDither.ApplyQuantizationDither%60%602(%60%600%40%2CSixLabors.ImageSharp.ImageFrame%7B%60%601%7D%2CSixLabors.ImageSharp.Processing.Processors.Quantization.IndexedImageFrame%7B%60%601%7D%2CSixLabors.ImageSharp.Rectangle)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/Processing/Processors/Dithering/IDither.cs/#L26">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/26b89ed936b3ba959821fc704170382474366107/src/ImageSharp/Processing/Processors/Dithering/IDither.cs/#L24">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_Processors_Dithering_IDither_ApplyQuantizationDither_" data-uid="SixLabors.ImageSharp.Processing.Processors.Dithering.IDither.ApplyQuantizationDither*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_Processors_Dithering_IDither_ApplyQuantizationDither__2___0__System_ReadOnlyMemory___1__SixLabors_ImageSharp_ImageFrame___1__System_Memory_System_Byte__SixLabors_ImageSharp_Rectangle_" data-uid="SixLabors.ImageSharp.Processing.Processors.Dithering.IDither.ApplyQuantizationDither``2(``0@,System.ReadOnlyMemory{``1},SixLabors.ImageSharp.ImageFrame{``1},System.Memory{System.Byte},SixLabors.ImageSharp.Rectangle)">ApplyQuantizationDither&lt;TFrameQuantizer, TPixel&gt;(ref TFrameQuantizer, ReadOnlyMemory&lt;TPixel&gt;, ImageFrame&lt;TPixel&gt;, Memory&lt;Byte&gt;, Rectangle)</h4>
+  <h4 id="SixLabors_ImageSharp_Processing_Processors_Dithering_IDither_ApplyQuantizationDither__2___0__SixLabors_ImageSharp_ImageFrame___1__SixLabors_ImageSharp_Processing_Processors_Quantization_IndexedImageFrame___1__SixLabors_ImageSharp_Rectangle_" data-uid="SixLabors.ImageSharp.Processing.Processors.Dithering.IDither.ApplyQuantizationDither``2(``0@,SixLabors.ImageSharp.ImageFrame{``1},SixLabors.ImageSharp.Processing.Processors.Quantization.IndexedImageFrame{``1},SixLabors.ImageSharp.Rectangle)">ApplyQuantizationDither&lt;TFrameQuantizer, TPixel&gt;(ref TFrameQuantizer, ImageFrame&lt;TPixel&gt;, IndexedImageFrame&lt;TPixel&gt;, Rectangle)</h4>
   <div class="markdown level1 summary"><p>Transforms the quantized image frame applying a dither matrix.
 This method should be treated as destructive, altering the input pixels.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void ApplyQuantizationDither&lt;TFrameQuantizer, TPixel&gt;(ref TFrameQuantizer quantizer, ReadOnlyMemory&lt;TPixel&gt; palette, ImageFrame&lt;TPixel&gt; source, Memory&lt;byte&gt; output, Rectangle bounds)
-
+    <pre><code class="lang-csharp hljs">void ApplyQuantizationDither&lt;TFrameQuantizer, TPixel&gt;(ref TFrameQuantizer quantizer, ImageFrame&lt;TPixel&gt; source, IndexedImageFrame&lt;TPixel&gt; destination, Rectangle bounds)
     where TFrameQuantizer : struct, IFrameQuantizer&lt;TPixel&gt; where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -198,21 +189,15 @@ This method should be treated as destructive, altering the input pixels.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.ReadOnlyMemory</span>&lt;TPixel&gt;</td>
-        <td><span class="parametername">palette</span></td>
-        <td><p>The quantized palette.</p>
-</td>
-      </tr>
-      <tr>
         <td><a class="xref" href="SixLabors.ImageSharp.ImageFrame-1.html">ImageFrame</a>&lt;TPixel&gt;</td>
         <td><span class="parametername">source</span></td>
         <td><p>The source image.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Memory</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
-        <td><span class="parametername">output</span></td>
-        <td><p>The output target</p>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Quantization.IndexedImageFrame-1.html">IndexedImageFrame</a>&lt;TPixel&gt;</td>
+        <td><span class="parametername">destination</span></td>
+        <td><p>The destination quantized frame.</p>
 </td>
       </tr>
       <tr>
@@ -255,7 +240,7 @@ This method should be treated as destructive, altering the input pixels.</p>
                     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Dithering_IDither.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Dithering.IDither%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/Processing/Processors/Dithering/IDither.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/SixLabors/ImageSharp/blob/26b89ed936b3ba959821fc704170382474366107/src/ImageSharp/Processing/Processors/Dithering/IDither.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

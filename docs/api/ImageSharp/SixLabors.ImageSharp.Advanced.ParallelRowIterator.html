@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ParallelRowIterator
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.50.0.0">
     
     <link rel="shortcut icon" href="../../favicon.png">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -119,20 +119,19 @@ Using this class is preferred over direct usage of <span class="xref">System.Thr
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Advanced_ParallelRowIterator_IterateRows__1_SixLabors_ImageSharp_Configuration_SixLabors_ImageSharp_Rectangle___0__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Advanced.ParallelRowIterator.IterateRows%60%601(SixLabors.ImageSharp.Configuration%2CSixLabors.ImageSharp.Rectangle%2C%60%600%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Advanced_ParallelRowIterator_IterateRowIntervals__1_SixLabors_ImageSharp_Configuration_SixLabors_ImageSharp_Rectangle___0__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Advanced.ParallelRowIterator.IterateRowIntervals%60%601(SixLabors.ImageSharp.Configuration%2CSixLabors.ImageSharp.Rectangle%2C%60%600%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/Advanced/ParallelRowIterator.cs/#L27">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/26b89ed936b3ba959821fc704170382474366107/src/ImageSharp/Advanced/ParallelRowIterator.cs/#L156">View Source</a>
   </span>
-  <a id="SixLabors_ImageSharp_Advanced_ParallelRowIterator_IterateRows_" data-uid="SixLabors.ImageSharp.Advanced.ParallelRowIterator.IterateRows*"></a>
-  <h4 id="SixLabors_ImageSharp_Advanced_ParallelRowIterator_IterateRows__1_SixLabors_ImageSharp_Configuration_SixLabors_ImageSharp_Rectangle___0__" data-uid="SixLabors.ImageSharp.Advanced.ParallelRowIterator.IterateRows``1(SixLabors.ImageSharp.Configuration,SixLabors.ImageSharp.Rectangle,``0@)">IterateRows&lt;T&gt;(Configuration, Rectangle, T)</h4>
+  <a id="SixLabors_ImageSharp_Advanced_ParallelRowIterator_IterateRowIntervals_" data-uid="SixLabors.ImageSharp.Advanced.ParallelRowIterator.IterateRowIntervals*"></a>
+  <h4 id="SixLabors_ImageSharp_Advanced_ParallelRowIterator_IterateRowIntervals__1_SixLabors_ImageSharp_Configuration_SixLabors_ImageSharp_Rectangle___0__" data-uid="SixLabors.ImageSharp.Advanced.ParallelRowIterator.IterateRowIntervals``1(SixLabors.ImageSharp.Configuration,SixLabors.ImageSharp.Rectangle,``0@)">IterateRowIntervals&lt;T&gt;(Configuration, Rectangle, T)</h4>
   <div class="markdown level1 summary"><p>Iterate through the rows of a rectangle in optimized batches defined by <a class="xref" href="SixLabors.ImageSharp.Memory.RowInterval.html">RowInterval</a>-s.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void IterateRows&lt;T&gt;(Configuration configuration, Rectangle rectangle, in T operation)
-
+    <pre><code class="lang-csharp hljs">public static void IterateRowIntervals&lt;T&gt;(Configuration configuration, Rectangle rectangle, in T operation)
     where T : struct, IRowIntervalOperation</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -183,20 +182,19 @@ Using this class is preferred over direct usage of <span class="xref">System.Thr
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Advanced_ParallelRowIterator_IterateRows__1_SixLabors_ImageSharp_Rectangle_SixLabors_ImageSharp_Advanced_ParallelExecutionSettings____0__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Advanced.ParallelRowIterator.IterateRows%60%601(SixLabors.ImageSharp.Rectangle%2CSixLabors.ImageSharp.Advanced.ParallelExecutionSettings%40%2C%60%600%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Advanced_ParallelRowIterator_IterateRowIntervals__1_SixLabors_ImageSharp_Rectangle_SixLabors_ImageSharp_Advanced_ParallelExecutionSettings____0__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Advanced.ParallelRowIterator.IterateRowIntervals%60%601(SixLabors.ImageSharp.Rectangle%2CSixLabors.ImageSharp.Advanced.ParallelExecutionSettings%40%2C%60%600%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/Advanced/ParallelRowIterator.cs/#L42">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/26b89ed936b3ba959821fc704170382474366107/src/ImageSharp/Advanced/ParallelRowIterator.cs/#L171">View Source</a>
   </span>
-  <a id="SixLabors_ImageSharp_Advanced_ParallelRowIterator_IterateRows_" data-uid="SixLabors.ImageSharp.Advanced.ParallelRowIterator.IterateRows*"></a>
-  <h4 id="SixLabors_ImageSharp_Advanced_ParallelRowIterator_IterateRows__1_SixLabors_ImageSharp_Rectangle_SixLabors_ImageSharp_Advanced_ParallelExecutionSettings____0__" data-uid="SixLabors.ImageSharp.Advanced.ParallelRowIterator.IterateRows``1(SixLabors.ImageSharp.Rectangle,SixLabors.ImageSharp.Advanced.ParallelExecutionSettings@,``0@)">IterateRows&lt;T&gt;(Rectangle, ParallelExecutionSettings, T)</h4>
+  <a id="SixLabors_ImageSharp_Advanced_ParallelRowIterator_IterateRowIntervals_" data-uid="SixLabors.ImageSharp.Advanced.ParallelRowIterator.IterateRowIntervals*"></a>
+  <h4 id="SixLabors_ImageSharp_Advanced_ParallelRowIterator_IterateRowIntervals__1_SixLabors_ImageSharp_Rectangle_SixLabors_ImageSharp_Advanced_ParallelExecutionSettings____0__" data-uid="SixLabors.ImageSharp.Advanced.ParallelRowIterator.IterateRowIntervals``1(SixLabors.ImageSharp.Rectangle,SixLabors.ImageSharp.Advanced.ParallelExecutionSettings@,``0@)">IterateRowIntervals&lt;T&gt;(Rectangle, ParallelExecutionSettings, T)</h4>
   <div class="markdown level1 summary"><p>Iterate through the rows of a rectangle in optimized batches defined by <a class="xref" href="SixLabors.ImageSharp.Memory.RowInterval.html">RowInterval</a>-s.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void IterateRows&lt;T&gt;(Rectangle rectangle, in ParallelExecutionSettings parallelSettings, in T operation)
-
+    <pre><code class="lang-csharp hljs">public static void IterateRowIntervals&lt;T&gt;(Rectangle rectangle, in ParallelExecutionSettings parallelSettings, in T operation)
     where T : struct, IRowIntervalOperation</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -247,21 +245,20 @@ Using this class is preferred over direct usage of <span class="xref">System.Thr
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Advanced_ParallelRowIterator_IterateRows__2_SixLabors_ImageSharp_Configuration_SixLabors_ImageSharp_Rectangle___0__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Advanced.ParallelRowIterator.IterateRows%60%602(SixLabors.ImageSharp.Configuration%2CSixLabors.ImageSharp.Rectangle%2C%60%600%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Advanced_ParallelRowIterator_IterateRowIntervals__2_SixLabors_ImageSharp_Configuration_SixLabors_ImageSharp_Rectangle___0__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Advanced.ParallelRowIterator.IterateRowIntervals%60%602(SixLabors.ImageSharp.Configuration%2CSixLabors.ImageSharp.Rectangle%2C%60%600%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/Advanced/ParallelRowIterator.cs/#L87">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/26b89ed936b3ba959821fc704170382474366107/src/ImageSharp/Advanced/ParallelRowIterator.cs/#L215">View Source</a>
   </span>
-  <a id="SixLabors_ImageSharp_Advanced_ParallelRowIterator_IterateRows_" data-uid="SixLabors.ImageSharp.Advanced.ParallelRowIterator.IterateRows*"></a>
-  <h4 id="SixLabors_ImageSharp_Advanced_ParallelRowIterator_IterateRows__2_SixLabors_ImageSharp_Configuration_SixLabors_ImageSharp_Rectangle___0__" data-uid="SixLabors.ImageSharp.Advanced.ParallelRowIterator.IterateRows``2(SixLabors.ImageSharp.Configuration,SixLabors.ImageSharp.Rectangle,``0@)">IterateRows&lt;T, TBuffer&gt;(Configuration, Rectangle, T)</h4>
+  <a id="SixLabors_ImageSharp_Advanced_ParallelRowIterator_IterateRowIntervals_" data-uid="SixLabors.ImageSharp.Advanced.ParallelRowIterator.IterateRowIntervals*"></a>
+  <h4 id="SixLabors_ImageSharp_Advanced_ParallelRowIterator_IterateRowIntervals__2_SixLabors_ImageSharp_Configuration_SixLabors_ImageSharp_Rectangle___0__" data-uid="SixLabors.ImageSharp.Advanced.ParallelRowIterator.IterateRowIntervals``2(SixLabors.ImageSharp.Configuration,SixLabors.ImageSharp.Rectangle,``0@)">IterateRowIntervals&lt;T, TBuffer&gt;(Configuration, Rectangle, T)</h4>
   <div class="markdown level1 summary"><p>Iterate through the rows of a rectangle in optimized batches defined by <a class="xref" href="SixLabors.ImageSharp.Memory.RowInterval.html">RowInterval</a>-s
 instantiating a temporary buffer for each <code data-dev-comment-type="paramref" class="paramref">operation</code> invocation.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void IterateRows&lt;T, TBuffer&gt;(Configuration configuration, Rectangle rectangle, in T operation)
-
+    <pre><code class="lang-csharp hljs">public static void IterateRowIntervals&lt;T, TBuffer&gt;(Configuration configuration, Rectangle rectangle, in T operation)
     where T : struct, IRowIntervalOperation&lt;TBuffer&gt; where TBuffer : struct</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -317,21 +314,20 @@ instantiating a temporary buffer for each <code data-dev-comment-type="paramref"
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Advanced_ParallelRowIterator_IterateRows__2_SixLabors_ImageSharp_Rectangle_SixLabors_ImageSharp_Advanced_ParallelExecutionSettings____0__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Advanced.ParallelRowIterator.IterateRows%60%602(SixLabors.ImageSharp.Rectangle%2CSixLabors.ImageSharp.Advanced.ParallelExecutionSettings%40%2C%60%600%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Advanced_ParallelRowIterator_IterateRowIntervals__2_SixLabors_ImageSharp_Rectangle_SixLabors_ImageSharp_Advanced_ParallelExecutionSettings____0__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Advanced.ParallelRowIterator.IterateRowIntervals%60%602(SixLabors.ImageSharp.Rectangle%2CSixLabors.ImageSharp.Advanced.ParallelExecutionSettings%40%2C%60%600%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/Advanced/ParallelRowIterator.cs/#L104">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/26b89ed936b3ba959821fc704170382474366107/src/ImageSharp/Advanced/ParallelRowIterator.cs/#L232">View Source</a>
   </span>
-  <a id="SixLabors_ImageSharp_Advanced_ParallelRowIterator_IterateRows_" data-uid="SixLabors.ImageSharp.Advanced.ParallelRowIterator.IterateRows*"></a>
-  <h4 id="SixLabors_ImageSharp_Advanced_ParallelRowIterator_IterateRows__2_SixLabors_ImageSharp_Rectangle_SixLabors_ImageSharp_Advanced_ParallelExecutionSettings____0__" data-uid="SixLabors.ImageSharp.Advanced.ParallelRowIterator.IterateRows``2(SixLabors.ImageSharp.Rectangle,SixLabors.ImageSharp.Advanced.ParallelExecutionSettings@,``0@)">IterateRows&lt;T, TBuffer&gt;(Rectangle, ParallelExecutionSettings, T)</h4>
+  <a id="SixLabors_ImageSharp_Advanced_ParallelRowIterator_IterateRowIntervals_" data-uid="SixLabors.ImageSharp.Advanced.ParallelRowIterator.IterateRowIntervals*"></a>
+  <h4 id="SixLabors_ImageSharp_Advanced_ParallelRowIterator_IterateRowIntervals__2_SixLabors_ImageSharp_Rectangle_SixLabors_ImageSharp_Advanced_ParallelExecutionSettings____0__" data-uid="SixLabors.ImageSharp.Advanced.ParallelRowIterator.IterateRowIntervals``2(SixLabors.ImageSharp.Rectangle,SixLabors.ImageSharp.Advanced.ParallelExecutionSettings@,``0@)">IterateRowIntervals&lt;T, TBuffer&gt;(Rectangle, ParallelExecutionSettings, T)</h4>
   <div class="markdown level1 summary"><p>Iterate through the rows of a rectangle in optimized batches defined by <a class="xref" href="SixLabors.ImageSharp.Memory.RowInterval.html">RowInterval</a>-s
 instantiating a temporary buffer for each <code data-dev-comment-type="paramref" class="paramref">operation</code> invocation.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void IterateRows&lt;T, TBuffer&gt;(Rectangle rectangle, in ParallelExecutionSettings parallelSettings, in T operation)
-
+    <pre><code class="lang-csharp hljs">public static void IterateRowIntervals&lt;T, TBuffer&gt;(Rectangle rectangle, in ParallelExecutionSettings parallelSettings, in T operation)
     where T : struct, IRowIntervalOperation&lt;TBuffer&gt; where TBuffer : struct</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -360,6 +356,270 @@ instantiating a temporary buffer for each <code data-dev-comment-type="paramref"
         <td><span class="xref">T</span></td>
         <td><span class="parametername">operation</span></td>
         <td><p>The operation defining the iteration logic on a single <a class="xref" href="SixLabors.ImageSharp.Memory.RowInterval.html">RowInterval</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of row operation to perform.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TBuffer</span></td>
+        <td><p>The type of buffer elements.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Advanced_ParallelRowIterator_IterateRows__1_SixLabors_ImageSharp_Configuration_SixLabors_ImageSharp_Rectangle___0__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Advanced.ParallelRowIterator.IterateRows%60%601(SixLabors.ImageSharp.Configuration%2CSixLabors.ImageSharp.Rectangle%2C%60%600%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/26b89ed936b3ba959821fc704170382474366107/src/ImageSharp/Advanced/ParallelRowIterator.cs/#L27">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Advanced_ParallelRowIterator_IterateRows_" data-uid="SixLabors.ImageSharp.Advanced.ParallelRowIterator.IterateRows*"></a>
+  <h4 id="SixLabors_ImageSharp_Advanced_ParallelRowIterator_IterateRows__1_SixLabors_ImageSharp_Configuration_SixLabors_ImageSharp_Rectangle___0__" data-uid="SixLabors.ImageSharp.Advanced.ParallelRowIterator.IterateRows``1(SixLabors.ImageSharp.Configuration,SixLabors.ImageSharp.Rectangle,``0@)">IterateRows&lt;T&gt;(Configuration, Rectangle, T)</h4>
+  <div class="markdown level1 summary"><p>Iterate through the rows of a rectangle in optimized batches.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void IterateRows&lt;T&gt;(Configuration configuration, Rectangle rectangle, in T operation)
+    where T : struct, IRowOperation</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Configuration.html">Configuration</a></td>
+        <td><span class="parametername">configuration</span></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Configuration.html">Configuration</a> to get the parallel settings from.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Rectangle.html">Rectangle</a></td>
+        <td><span class="parametername">rectangle</span></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Rectangle.html">Rectangle</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">operation</span></td>
+        <td><p>The operation defining the iteration logic on a single row.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of row operation to perform.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Advanced_ParallelRowIterator_IterateRows__1_SixLabors_ImageSharp_Rectangle_SixLabors_ImageSharp_Advanced_ParallelExecutionSettings____0__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Advanced.ParallelRowIterator.IterateRows%60%601(SixLabors.ImageSharp.Rectangle%2CSixLabors.ImageSharp.Advanced.ParallelExecutionSettings%40%2C%60%600%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/26b89ed936b3ba959821fc704170382474366107/src/ImageSharp/Advanced/ParallelRowIterator.cs/#L42">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Advanced_ParallelRowIterator_IterateRows_" data-uid="SixLabors.ImageSharp.Advanced.ParallelRowIterator.IterateRows*"></a>
+  <h4 id="SixLabors_ImageSharp_Advanced_ParallelRowIterator_IterateRows__1_SixLabors_ImageSharp_Rectangle_SixLabors_ImageSharp_Advanced_ParallelExecutionSettings____0__" data-uid="SixLabors.ImageSharp.Advanced.ParallelRowIterator.IterateRows``1(SixLabors.ImageSharp.Rectangle,SixLabors.ImageSharp.Advanced.ParallelExecutionSettings@,``0@)">IterateRows&lt;T&gt;(Rectangle, ParallelExecutionSettings, T)</h4>
+  <div class="markdown level1 summary"><p>Iterate through the rows of a rectangle in optimized batches.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void IterateRows&lt;T&gt;(Rectangle rectangle, in ParallelExecutionSettings parallelSettings, in T operation)
+    where T : struct, IRowOperation</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Rectangle.html">Rectangle</a></td>
+        <td><span class="parametername">rectangle</span></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Rectangle.html">Rectangle</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Advanced.ParallelExecutionSettings.html">ParallelExecutionSettings</a></td>
+        <td><span class="parametername">parallelSettings</span></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Advanced.ParallelExecutionSettings.html">ParallelExecutionSettings</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">operation</span></td>
+        <td><p>The operation defining the iteration logic on a single row.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of row operation to perform.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Advanced_ParallelRowIterator_IterateRows__2_SixLabors_ImageSharp_Configuration_SixLabors_ImageSharp_Rectangle___0__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Advanced.ParallelRowIterator.IterateRows%60%602(SixLabors.ImageSharp.Configuration%2CSixLabors.ImageSharp.Rectangle%2C%60%600%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/26b89ed936b3ba959821fc704170382474366107/src/ImageSharp/Advanced/ParallelRowIterator.cs/#L89">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Advanced_ParallelRowIterator_IterateRows_" data-uid="SixLabors.ImageSharp.Advanced.ParallelRowIterator.IterateRows*"></a>
+  <h4 id="SixLabors_ImageSharp_Advanced_ParallelRowIterator_IterateRows__2_SixLabors_ImageSharp_Configuration_SixLabors_ImageSharp_Rectangle___0__" data-uid="SixLabors.ImageSharp.Advanced.ParallelRowIterator.IterateRows``2(SixLabors.ImageSharp.Configuration,SixLabors.ImageSharp.Rectangle,``0@)">IterateRows&lt;T, TBuffer&gt;(Configuration, Rectangle, T)</h4>
+  <div class="markdown level1 summary"><p>Iterate through the rows of a rectangle in optimized batches.
+instantiating a temporary buffer for each <code data-dev-comment-type="paramref" class="paramref">operation</code> invocation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void IterateRows&lt;T, TBuffer&gt;(Configuration configuration, Rectangle rectangle, in T operation)
+    where T : struct, IRowOperation&lt;TBuffer&gt; where TBuffer : struct</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Configuration.html">Configuration</a></td>
+        <td><span class="parametername">configuration</span></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Configuration.html">Configuration</a> to get the parallel settings from.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Rectangle.html">Rectangle</a></td>
+        <td><span class="parametername">rectangle</span></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Rectangle.html">Rectangle</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">operation</span></td>
+        <td><p>The operation defining the iteration logic on a single row.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of row operation to perform.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TBuffer</span></td>
+        <td><p>The type of buffer elements.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Advanced_ParallelRowIterator_IterateRows__2_SixLabors_ImageSharp_Rectangle_SixLabors_ImageSharp_Advanced_ParallelExecutionSettings____0__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Advanced.ParallelRowIterator.IterateRows%60%602(SixLabors.ImageSharp.Rectangle%2CSixLabors.ImageSharp.Advanced.ParallelExecutionSettings%40%2C%60%600%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/26b89ed936b3ba959821fc704170382474366107/src/ImageSharp/Advanced/ParallelRowIterator.cs/#L106">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Advanced_ParallelRowIterator_IterateRows_" data-uid="SixLabors.ImageSharp.Advanced.ParallelRowIterator.IterateRows*"></a>
+  <h4 id="SixLabors_ImageSharp_Advanced_ParallelRowIterator_IterateRows__2_SixLabors_ImageSharp_Rectangle_SixLabors_ImageSharp_Advanced_ParallelExecutionSettings____0__" data-uid="SixLabors.ImageSharp.Advanced.ParallelRowIterator.IterateRows``2(SixLabors.ImageSharp.Rectangle,SixLabors.ImageSharp.Advanced.ParallelExecutionSettings@,``0@)">IterateRows&lt;T, TBuffer&gt;(Rectangle, ParallelExecutionSettings, T)</h4>
+  <div class="markdown level1 summary"><p>Iterate through the rows of a rectangle in optimized batches.
+instantiating a temporary buffer for each <code data-dev-comment-type="paramref" class="paramref">operation</code> invocation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void IterateRows&lt;T, TBuffer&gt;(Rectangle rectangle, in ParallelExecutionSettings parallelSettings, in T operation)
+    where T : struct, IRowOperation&lt;TBuffer&gt; where TBuffer : struct</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Rectangle.html">Rectangle</a></td>
+        <td><span class="parametername">rectangle</span></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Rectangle.html">Rectangle</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Advanced.ParallelExecutionSettings.html">ParallelExecutionSettings</a></td>
+        <td><span class="parametername">parallelSettings</span></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Advanced.ParallelExecutionSettings.html">ParallelExecutionSettings</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">operation</span></td>
+        <td><p>The operation defining the iteration logic on a single row.</p>
 </td>
       </tr>
     </tbody>
@@ -396,7 +656,7 @@ instantiating a temporary buffer for each <code data-dev-comment-type="paramref"
                     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Advanced_ParallelRowIterator.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Advanced.ParallelRowIterator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/Advanced/ParallelRowIterator.Wrappers.cs/#L18" class="contribution-link">View Source</a>
+                    <a href="https://github.com/SixLabors/ImageSharp/blob/26b89ed936b3ba959821fc704170382474366107/src/ImageSharp/Advanced/ParallelRowIterator.Wrappers.cs/#L18" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

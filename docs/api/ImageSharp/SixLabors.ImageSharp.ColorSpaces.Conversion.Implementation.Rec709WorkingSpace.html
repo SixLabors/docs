@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Rec709WorkingSpace
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.50.0.0">
     
     <link rel="shortcut icon" href="../../favicon.png">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -126,7 +126,7 @@
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_ColorSpaces_Conversion_Implementation_Rec709WorkingSpace__ctor_SixLabors_ImageSharp_ColorSpaces_CieXyz_SixLabors_ImageSharp_ColorSpaces_Conversion_Implementation_RgbPrimariesChromaticityCoordinates_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.ColorSpaces.Conversion.Implementation.Rec709WorkingSpace.%23ctor(SixLabors.ImageSharp.ColorSpaces.CieXyz%2CSixLabors.ImageSharp.ColorSpaces.Conversion.Implementation.RgbPrimariesChromaticityCoordinates)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/ColorSpaces/Conversion/Implementation/WorkingSpaces/Rec709WorkingSpace.cs/#L19">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/26b89ed936b3ba959821fc704170382474366107/src/ImageSharp/ColorSpaces/Conversion/Implementation/WorkingSpaces/Rec709WorkingSpace.cs/#L19">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_ColorSpaces_Conversion_Implementation_Rec709WorkingSpace__ctor_" data-uid="SixLabors.ImageSharp.ColorSpaces.Conversion.Implementation.Rec709WorkingSpace.#ctor*"></a>
   <h4 id="SixLabors_ImageSharp_ColorSpaces_Conversion_Implementation_Rec709WorkingSpace__ctor_SixLabors_ImageSharp_ColorSpaces_CieXyz_SixLabors_ImageSharp_ColorSpaces_Conversion_Implementation_RgbPrimariesChromaticityCoordinates_" data-uid="SixLabors.ImageSharp.ColorSpaces.Conversion.Implementation.Rec709WorkingSpace.#ctor(SixLabors.ImageSharp.ColorSpaces.CieXyz,SixLabors.ImageSharp.ColorSpaces.Conversion.Implementation.RgbPrimariesChromaticityCoordinates)">Rec709WorkingSpace(CieXyz, RgbPrimariesChromaticityCoordinates)</h4>
@@ -168,11 +168,12 @@
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_ColorSpaces_Conversion_Implementation_Rec709WorkingSpace_Compress_System_Single_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.ColorSpaces.Conversion.Implementation.Rec709WorkingSpace.Compress(System.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/ColorSpaces/Conversion/Implementation/WorkingSpaces/Rec709WorkingSpace.cs/#L25">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/26b89ed936b3ba959821fc704170382474366107/src/ImageSharp/ColorSpaces/Conversion/Implementation/WorkingSpaces/Rec709WorkingSpace.cs/#L25">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_ColorSpaces_Conversion_Implementation_Rec709WorkingSpace_Compress_" data-uid="SixLabors.ImageSharp.ColorSpaces.Conversion.Implementation.Rec709WorkingSpace.Compress*"></a>
   <h4 id="SixLabors_ImageSharp_ColorSpaces_Conversion_Implementation_Rec709WorkingSpace_Compress_System_Single_" data-uid="SixLabors.ImageSharp.ColorSpaces.Conversion.Implementation.Rec709WorkingSpace.Compress(System.Single)">Compress(Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Compresses an uncompanded channel (linear) to its nonlinear equivalent (depends on the RGB color system).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -191,7 +192,8 @@
       <tr>
         <td><span class="xref">System.Single</span></td>
         <td><span class="parametername">channel</span></td>
-        <td></td>
+        <td><p>The channel value.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -206,22 +208,28 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Single</span></td>
-        <td></td>
+        <td><p>The <span class="xref">System.Single</span> representing the nonlinear channel value.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="SixLabors.ImageSharp.ColorSpaces.Conversion.Implementation.RgbWorkingSpace.html#SixLabors_ImageSharp_ColorSpaces_Conversion_Implementation_RgbWorkingSpace_Compress_System_Single_">RgbWorkingSpace.Compress(Single)</a></div>
+  <h5 id="SixLabors_ImageSharp_ColorSpaces_Conversion_Implementation_Rec709WorkingSpace_Compress_System_Single__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>For more info see:
+<a href="http://www.brucelindbloom.com/index.html?Eqn_XYZ_to_RGB.html">http://www.brucelindbloom.com/index.html?Eqn_XYZ_to_RGB.html</a></p>
+</div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_ColorSpaces_Conversion_Implementation_Rec709WorkingSpace_Expand_System_Single_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.ColorSpaces.Conversion.Implementation.Rec709WorkingSpace.Expand(System.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/ColorSpaces/Conversion/Implementation/WorkingSpaces/Rec709WorkingSpace.cs/#L29">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/26b89ed936b3ba959821fc704170382474366107/src/ImageSharp/ColorSpaces/Conversion/Implementation/WorkingSpaces/Rec709WorkingSpace.cs/#L29">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_ColorSpaces_Conversion_Implementation_Rec709WorkingSpace_Expand_" data-uid="SixLabors.ImageSharp.ColorSpaces.Conversion.Implementation.Rec709WorkingSpace.Expand*"></a>
   <h4 id="SixLabors_ImageSharp_ColorSpaces_Conversion_Implementation_Rec709WorkingSpace_Expand_System_Single_" data-uid="SixLabors.ImageSharp.ColorSpaces.Conversion.Implementation.Rec709WorkingSpace.Expand(System.Single)">Expand(Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Expands a companded channel to its linear equivalent with respect to the energy.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -240,7 +248,8 @@
       <tr>
         <td><span class="xref">System.Single</span></td>
         <td><span class="parametername">channel</span></td>
-        <td></td>
+        <td><p>The channel value.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -255,12 +264,17 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Single</span></td>
-        <td></td>
+        <td><p>The <span class="xref">System.Single</span> representing the linear channel value.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="SixLabors.ImageSharp.ColorSpaces.Conversion.Implementation.RgbWorkingSpace.html#SixLabors_ImageSharp_ColorSpaces_Conversion_Implementation_RgbWorkingSpace_Expand_System_Single_">RgbWorkingSpace.Expand(Single)</a></div>
+  <h5 id="SixLabors_ImageSharp_ColorSpaces_Conversion_Implementation_Rec709WorkingSpace_Expand_System_Single__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>For more info see:
+<a href="http://www.brucelindbloom.com/index.html?Eqn_RGB_to_XYZ.html">http://www.brucelindbloom.com/index.html?Eqn_RGB_to_XYZ.html</a></p>
+</div>
 </article>
           </div>
           
@@ -272,7 +286,7 @@
                     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_ColorSpaces_Conversion_Implementation_Rec709WorkingSpace.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.ColorSpaces.Conversion.Implementation.Rec709WorkingSpace%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/ColorSpaces/Conversion/Implementation/WorkingSpaces/Rec709WorkingSpace.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/SixLabors/ImageSharp/blob/26b89ed936b3ba959821fc704170382474366107/src/ImageSharp/ColorSpaces/Conversion/Implementation/WorkingSpaces/Rec709WorkingSpace.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

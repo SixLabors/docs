@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class SimpleGcMemoryAllocator
    ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.50.0.0">
     
     <link rel="shortcut icon" href="../../favicon.png">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -123,16 +123,16 @@
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Memory_SimpleGcMemoryAllocator_Allocate__1_System_Int32_SixLabors_ImageSharp_Memory_AllocationOptions_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Memory.SimpleGcMemoryAllocator.Allocate%60%601(System.Int32%2CSixLabors.ImageSharp.Memory.AllocationOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/Memory/Allocators/SimpleGcMemoryAllocator.cs/#L18">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/26b89ed936b3ba959821fc704170382474366107/src/ImageSharp/Memory/Allocators/SimpleGcMemoryAllocator.cs/#L18">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Memory_SimpleGcMemoryAllocator_Allocate_" data-uid="SixLabors.ImageSharp.Memory.SimpleGcMemoryAllocator.Allocate*"></a>
   <h4 id="SixLabors_ImageSharp_Memory_SimpleGcMemoryAllocator_Allocate__1_System_Int32_SixLabors_ImageSharp_Memory_AllocationOptions_" data-uid="SixLabors.ImageSharp.Memory.SimpleGcMemoryAllocator.Allocate``1(System.Int32,SixLabors.ImageSharp.Memory.AllocationOptions)">Allocate&lt;T&gt;(Int32, AllocationOptions)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Allocates an <span class="xref">System.Buffers.IMemoryOwner&lt;T&gt;</span>, holding a <span class="xref">System.Memory&lt;T&gt;</span> of length <code data-dev-comment-type="paramref" class="paramref">length</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override IMemoryOwner&lt;T&gt; Allocate&lt;T&gt;(int length, AllocationOptions options = AllocationOptions.None)
-
     where T : struct</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -148,12 +148,14 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">length</span></td>
-        <td></td>
+        <td><p>Size of the buffer to allocate.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="SixLabors.ImageSharp.Memory.AllocationOptions.html">AllocationOptions</a></td>
         <td><span class="parametername">options</span></td>
-        <td></td>
+        <td><p>The allocation options.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -168,7 +170,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Buffers.IMemoryOwner</span>&lt;T&gt;</td>
-        <td></td>
+        <td><p>A buffer of values of type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -183,22 +186,45 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>Type of the data stored in the buffer.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="SixLabors.ImageSharp.Memory.MemoryAllocator.html#SixLabors_ImageSharp_Memory_MemoryAllocator_Allocate__1_System_Int32_SixLabors_ImageSharp_Memory_AllocationOptions_">MemoryAllocator.Allocate&lt;T&gt;(Int32, AllocationOptions)</a></div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentOutOfRangeException</span></td>
+        <td><p>When length is zero or negative.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Memory.InvalidMemoryOperationException.html">InvalidMemoryOperationException</a></td>
+        <td><p>When length is over the capacity of the allocator.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Memory_SimpleGcMemoryAllocator_AllocateManagedByteBuffer_System_Int32_SixLabors_ImageSharp_Memory_AllocationOptions_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Memory.SimpleGcMemoryAllocator.AllocateManagedByteBuffer(System.Int32%2CSixLabors.ImageSharp.Memory.AllocationOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/Memory/Allocators/SimpleGcMemoryAllocator.cs/#L26">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/26b89ed936b3ba959821fc704170382474366107/src/ImageSharp/Memory/Allocators/SimpleGcMemoryAllocator.cs/#L26">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Memory_SimpleGcMemoryAllocator_AllocateManagedByteBuffer_" data-uid="SixLabors.ImageSharp.Memory.SimpleGcMemoryAllocator.AllocateManagedByteBuffer*"></a>
   <h4 id="SixLabors_ImageSharp_Memory_SimpleGcMemoryAllocator_AllocateManagedByteBuffer_System_Int32_SixLabors_ImageSharp_Memory_AllocationOptions_" data-uid="SixLabors.ImageSharp.Memory.SimpleGcMemoryAllocator.AllocateManagedByteBuffer(System.Int32,SixLabors.ImageSharp.Memory.AllocationOptions)">AllocateManagedByteBuffer(Int32, AllocationOptions)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Allocates an <a class="xref" href="SixLabors.ImageSharp.Memory.IManagedByteBuffer.html">IManagedByteBuffer</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -217,12 +243,14 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">length</span></td>
-        <td></td>
+        <td><p>The requested buffer length.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="SixLabors.ImageSharp.Memory.AllocationOptions.html">AllocationOptions</a></td>
         <td><span class="parametername">options</span></td>
-        <td></td>
+        <td><p>The allocation options.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -237,22 +265,45 @@
     <tbody>
       <tr>
         <td><a class="xref" href="SixLabors.ImageSharp.Memory.IManagedByteBuffer.html">IManagedByteBuffer</a></td>
-        <td></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Memory.IManagedByteBuffer.html">IManagedByteBuffer</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="SixLabors.ImageSharp.Memory.MemoryAllocator.html#SixLabors_ImageSharp_Memory_MemoryAllocator_AllocateManagedByteBuffer_System_Int32_SixLabors_ImageSharp_Memory_AllocationOptions_">MemoryAllocator.AllocateManagedByteBuffer(Int32, AllocationOptions)</a></div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentOutOfRangeException</span></td>
+        <td><p>When length is zero or negative.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Memory.InvalidMemoryOperationException.html">InvalidMemoryOperationException</a></td>
+        <td><p>When length is over the capacity of the allocator.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Memory_SimpleGcMemoryAllocator_GetBufferCapacityInBytes.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Memory.SimpleGcMemoryAllocator.GetBufferCapacityInBytes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/Memory/Allocators/SimpleGcMemoryAllocator.cs/#L15">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/26b89ed936b3ba959821fc704170382474366107/src/ImageSharp/Memory/Allocators/SimpleGcMemoryAllocator.cs/#L15">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Memory_SimpleGcMemoryAllocator_GetBufferCapacityInBytes_" data-uid="SixLabors.ImageSharp.Memory.SimpleGcMemoryAllocator.GetBufferCapacityInBytes*"></a>
   <h4 id="SixLabors_ImageSharp_Memory_SimpleGcMemoryAllocator_GetBufferCapacityInBytes" data-uid="SixLabors.ImageSharp.Memory.SimpleGcMemoryAllocator.GetBufferCapacityInBytes">GetBufferCapacityInBytes()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the length of the largest contiguous buffer that can be handled by this allocator instance in bytes.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -269,7 +320,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
+        <td><p>The length of the largest contiguous buffer that can be handled by this allocator instance.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -293,7 +345,7 @@
                     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Memory_SimpleGcMemoryAllocator.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Memory.SimpleGcMemoryAllocator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/SixLabors/ImageSharp/blob/master/src/ImageSharp/Memory/Allocators/SimpleGcMemoryAllocator.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/SixLabors/ImageSharp/blob/26b89ed936b3ba959821fc704170382474366107/src/ImageSharp/Memory/Allocators/SimpleGcMemoryAllocator.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
