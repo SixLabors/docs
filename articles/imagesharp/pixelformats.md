@@ -1,17 +1,17 @@
 # Pixel Formats
 
-### Why is [](xref:SixLabors.ImageSharp.Image`1?displayProperty=name) a generic class?
+### Why is @"SixLabors.ImageSharp.Image`1" a generic class?
 
 We support multiple pixel formats just like _System.Drawing_ does. However, unlike their closed [PixelFormat](https://docs.microsoft.com/en-us/dotnet/api/system.drawing.imaging.pixelformat) enumeration, our solution is extensible.
-A pixel is basically a small value object (struct), describing the color at a given point according to a pixel model we call Pixel Format. `Image<TPixel>` represents a pixel graphic bitmap stored as a **generic, contiguous memory block** of pixels, having the size `image.Width * image.Height`.
+A pixel is basically a small value object (struct), describing the color at a given point according to a pixel model we call Pixel Format. `Image<TPixel>` represents a pixel graphic bitmap stored as a **generic, contiguous memory block** of pixels, of size `image.Width * image.Height`.
 
 In the case of multi-frame images (usually decoded from gifs) multiple bitmaps are stored in `image.Frames` as `ImageFrame<TPixel>` instances.
 
-### Ok, how do I create an image using a pixel format other, than `Rgba32`?
+### Choosing Pixel Formats
 
-Have a look at the various pixel formats available under [](xref:SixLabors.ImageSharp.PixelFormats#structs)! After picking the pixel format of your choice, use it as a generic argument for [](xref:SixLabors.ImageSharp.Image`1?displayProperty=name), eg. by instantiating `Image<Bgr24>`.
+Have a look at the various pixel formats available under @"SixLabors.ImageSharp.PixelFormats#structs" After picking the pixel format of your choice, use it as a generic argument for [](xref:SixLabors.ImageSharp.Image`1?displayProperty=name), eg. by instantiating `Image<Bgr24>`.
 
-### Can I define my own pixel format?
+### Defining Custom Pixel Formats
 
 Yes, you just need to define a struct implementing [](xref:SixLabors.ImageSharp.PixelFormats.IPixel`1) and use it as a generic argument for [](xref:SixLabors.ImageSharp.Image`1?displayProperty=name).
 However, at the moment you won't be able to provide SIMD-optimized batched pixel-conversion primitives. We need to open up the [](xref:SixLabors.ImageSharp.PixelFormats.PixelOperations`1) API to allow that.

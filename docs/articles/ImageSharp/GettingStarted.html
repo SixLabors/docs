@@ -82,43 +82,43 @@
 <div class="NOTE"><h5>Note</h5><p>The official guide assumes intermediate level knowledge of C# and .NET. If you are totally new to .NET development, it might not be the best idea to jump right into a framework as your first step - grasp the basics then come back. Prior experience with other languages and frameworks helps, but is not required.</p>
 </div>
 <h3 id="imagesharp-images">ImageSharp Images</h3>
-<p>ImageSharp provides several classes for storing pixel data.</p>
+<p>ImageSharp provides several classes for storing pixel data:</p>
 <ul>
 <li><a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Image.html">Image</a> A pixel format agnostic image container used for general processing operations.</li>
 <li><a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> A generic image container that allows per-pixel access.</li>
 </ul>
-<p>In addition there are classes available that represent individual image frames.</p>
+<p>In addition there are classes available that represent individual image frames:</p>
 <ul>
 <li><a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.ImageFrame.html">ImageFrame</a> A pixel format agnostic image frame container.</li>
 <li><a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.ImageFrame-1.html">ImageFrame&lt;TPixel&gt;</a> A generic image frame container that allows per-pixel access.</li>
-<li><a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Processing.Processors.Quantization.IndexedImageFrame-1.html">IndexedImageFrame&lt;TPixel&gt;</a> A generic image frame used for indexed image pixel data comprising of a color palette and indices buffer.</li>
+<li><a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Processing.Processors.Quantization.IndexedImageFrame-1.html">IndexedImageFrame&lt;TPixel&gt;</a> A generic image frame used for indexed image pixel data where each pixel buffer value represents an index in a color palette.</li>
 </ul>
 <p>For more information on pixel formats please see the following <a href="pixelformats.html">documentation</a>.</p>
 <h3 id="loading-and-saving-images">Loading and Saving Images</h3>
-<p>ImageSharp provides several options for loading and saving images 
-In this very basic example you are actually utilizing a bunch of core ImageSharp features:</p>
-<ul>
-<li><a href="imageformats.html">Image Formats</a> by loading and saving an image.</li>
-</ul>
+<p>ImageSharp provides several options for loading and saving images to cover different scenarios. The library automatically detects the source image format upon load and it is possible to dictate which image format to save an image pixel data to.  </p>
 <pre><code class="lang-c#">using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Processing;
 
-// Open the file and detect the file type and decode it.
-// Our image is now in an uncompressed, file format agnostic, structure in-memory as a series of pixels.
+// Open the file automatically detecting the file type to decode it.
+// Our image is now in an uncompressed, file format agnostic, structure in-memory as
+// a series of pixels.
 using (Image image = Image.Load(&quot;foo.jpg&quot;)) 
 {
     // Resize the image in place and return it for chaining.
     // &#39;x&#39; signifies the current image processing context.
     image.Mutate(x =&gt; x.Resize(image.Width / 2, image.Height / 2)); 
 
-    // The library automatically picks an encoder based on the file extensions then encodes and write the data to disk.
+    // The library automatically picks an encoder based on the file extension then
+    // encodes and write the data to disk.
+    // You can optionally set the encoder to choose.
     image.Save(&quot;bar.jpg&quot;); 
 } // Dispose - releasing memory into a memory pool ready for the next image you wish to process.
-</code></pre><ul>
-<li><a href="pixelformats.html">Pixel Formats</a> by using <code>Rgba32</code></li>
+</code></pre><p>In this very basic example you are actually utilizing several core ImageSharp features:</p>
+<ul>
+<li><a href="imageformats.html">Image Formats</a> by loading and saving an image.</li>
 <li><a href="processing.html">Image Processors</a> by calling <code>Mutate()</code> and <code>Resize()</code></li>
 </ul>
-<h3 id="how-do-i-create-a-blank-image-for-drawing-on">How do I create a blank image for drawing on?</h3>
+<h3 id="initializing-new-images">Initializing New Images</h3>
 <pre><code class="lang-c#">using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.PixelFormats;
 using SixLabors.ImageSharp.Processing;
@@ -126,26 +126,24 @@ using SixLabors.ImageSharp.Processing;
 int width = 640;
 int height = 480;
 
-// Creates a new image with all the pixels set as transparent. 
+// Creates a new image with empty pixel data. 
 using(var image = new Image&lt;Rgba32&gt;(width, height)) 
 {
   // Do your drawing in here...
 
 } // Dispose - releasing memory into a memory pool ready for the next image you wish to process.
-</code></pre><h3 id="api-style">API Style</h3>
+</code></pre><p>In this example you are utilizing the following core ImageSharp feature:</p>
+<ul>
+<li><a href="pixelformats.html">Pixel Formats</a> by using <code>Rgba32</code></li>
+</ul>
+<h3 id="api-cornerstones">API Cornerstones</h3>
 <p>The easiest way to work with ImageSharp is to utilize our extension methods:</p>
 <ul>
-<li><a class="xref" href="../../api/ImageSharp.Drawing/SixLabors.ImageSharp.html">SixLabors.ImageSharp</a> for basic stuff.</li>
-<li><a class="xref" href="../../api/ImageSharp.Drawing/SixLabors.ImageSharp.Processing.html">SixLabors.ImageSharp.Processing</a> for <code>Mutate()</code> and <code>Clone()</code> <ul>
-<li>All the processing extensions (eg. <code>Resize(...)</code>) live within the <a class="xref" href="../../api/ImageSharp.Drawing/SixLabors.ImageSharp.Processing.html">SixLabors.ImageSharp.Processing</a> namespace. 
-If you want to do image processing work, make sure you add <code>using SixLabors.ImageSharp.Processing;</code>.</li>
+<li><a class="xref" href="../../api/ImageSharp.Drawing/SixLabors.ImageSharp.html">SixLabors.ImageSharp</a> for basic operations and primitives.</li>
+<li><a class="xref" href="../../api/ImageSharp.Drawing/SixLabors.ImageSharp.Processing.html">SixLabors.ImageSharp.Processing</a> for <code>Mutate()</code> and <code>Clone()</code>. All the processing extensions (eg. <code>Resize(...)</code>) live within this namespace. </li>
 </ul>
-</li>
-</ul>
-<h3 id="why-is-xrefsixlaborsimagesharpimage1displaypropertyname-a-generic-class">Why is <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> a generic class?</h3>
-<p>An image is essentially a <strong>generic 2D array of pixels</strong> stored in a contiguous memory block. Check out the <a href="pixelformats.html">Pixel Formats</a> article for more details!</p>
 <h3 id="performance">Performance</h3>
-<p>Achieving near-to-native performance is a major goal for the SixLabors team, and thanks to the improvements brought by the RyuJIT runtime, it&#39;s no longer mission impossible. We are constantly working on improvements.</p>
+<p>Achieving near-to-native performance is a major goal for the SixLabors team, and thanks to the improvements brought by the RyuJIT runtime, it&#39;s no longer mission impossible. We have made great progress and are constantly working on improvements.</p>
 <p>At the moment it&#39;s pretty hard to define fair benchmarks comparing GDI+ (aka. <code>System.Drawing</code> on Windows) and ImageSharp, because of the differences between the algorithms being used. Generally speaking, we are more feature rich, producing better quality. We hope we can match the corresponding algorithm parameters, and present some very specific benchmark results soon.</p>
 <p>If you are experiencing a significant performance gap between System.Drawing and ImageSharp for basic use-cases, there is a high chance that essential SIMD optimizations are not utilized. </p>
 <p>A few troubleshooting steps to try:</p>

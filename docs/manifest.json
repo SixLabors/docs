@@ -1129,9 +1129,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "ManagedReference",
       "source_relative_path": "api/ImageSharp.Drawing/SixLabors.ImageSharp.Processing.yml",
       "output": {
@@ -1216,9 +1213,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "ManagedReference",
       "source_relative_path": "api/ImageSharp.Drawing/SixLabors.ImageSharp.yml",
       "output": {
@@ -6406,6 +6400,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "ManagedReference",
       "source_relative_path": "api/ImageSharp/SixLabors.ImageSharp.Processing.yml",
       "output": {
@@ -6514,6 +6511,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "ManagedReference",
       "source_relative_path": "api/ImageSharp/SixLabors.ImageSharp.yml",
       "output": {
@@ -6594,7 +6594,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/imagesharp/gettingstarted.html",
-          "hash": "01eG7eXh07zBJxFmvJXGbA=="
+          "hash": "OzhsDDiuKHAXpOy5Ntb2Lw=="
         }
       },
       "is_incremental": false,
@@ -6618,22 +6618,19 @@
       "output": {
         ".html": {
           "relative_path": "articles/imagesharp/index.html",
-          "hash": "618v+gokvPSXWarxPVrWUA=="
+          "hash": "iS5g4brlJHeM/4R/HGjVnw=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "UidNotFound"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/imagesharp/memorymanagement.md",
       "output": {
         ".html": {
           "relative_path": "articles/imagesharp/memorymanagement.html",
-          "hash": "+sqX/x8YHx4FmXE23YuJPA=="
+          "hash": "GdgzZHpR7rky2pnKCvFLtg=="
         }
       },
       "is_incremental": false,
@@ -6645,7 +6642,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/imagesharp/pixelformats.html",
-          "hash": "V0lJTDlvCsJeXtGCx6Cu7g=="
+          "hash": "sINgykL09hUmnyR7jUPR7A=="
         }
       },
       "is_incremental": false,
@@ -6705,7 +6702,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "Se/EgJbDir3vUIzhIplg+A=="
+          "hash": "Rn2zT2Q99wnKYLS4tawsUg=="
         }
       },
       "is_incremental": false,
@@ -6720,7 +6717,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "L5MDwmrRUHosxLRTKr2OnA=="
+          "hash": "l2oLR/wmvxEv4bt8fBG4TA=="
         }
       },
       "is_incremental": false,

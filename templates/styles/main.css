@@ -651,7 +651,7 @@ pre code {
 
 .project {
   height: 100%;
-  padding: 1rem 1rem 0;
+  padding: 1rem .5rem 0;
   color: inherit;
   margin-bottom: 1rem;
   display: block;
@@ -664,9 +664,14 @@ pre code {
       height: 137px;
   }
 
-  .project h2 {
+  .project h3 {
       text-decoration: none;
+      font-size: 1rem;
   }
+
+.project h3 a::after {
+    display: none;
+}
 
   .project:hover,
   .project:focus {

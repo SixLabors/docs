@@ -1,4 +1,4 @@
-# Welcome to Six Labors Documentation.
+# Six Labors Documentation.
 
 We aim to provide modern, cross-platform, incredibly powerful yet beautifully simple graphics libraries. Built against .NET Standard, our libraries can be used in device, cloud, and embedded/IoT scenarios.
 
@@ -8,7 +8,7 @@ You can find tutorials, examples and API details covering all Six Labors project
 
 Detailed documentation for the entire API available across our projects.
 
-### Articles and Supplementary Documentation 
+### Conceptual Documentation 
 
 Our graphics libraries are split into different projects. They cover different concerns separately, but there is strong cohesion in order to provide the best developer experience.
 
@@ -57,7 +57,7 @@ You can find documentation for each project in the links below.
     </div>
 </div>
 
-### [Examples repository](https://github.com/SixLabors/Samples)
+### [Examples Repository](https://github.com/SixLabors/Samples)
 
 We have implemented short self-contained sample projects for a few specific use cases, including:
 
@@ -69,25 +69,3 @@ We have implemented short self-contained sample projects for a few specific use 
   Provides an example on how you go about switching out the registered encoder for a file format and changing its default options in the process.
 4. [Draw text along a path](https://github.com/SixLabors/Samples/tree/master/ImageSharp/DrawingTextAlongAPath)<br/>
   Draw some text following the contours of a path.
-
-### [SixLabors.ImageSharp](https://github.com/SixLabors/ImageSharp)
-
-- Contains the generic @"SixLabors.ImageSharp.Image`1?displayProperty=name" class, PixelFormats, Configuration, and other core functionality.
-- The [](xref:SixLabors.ImageSharp.Formats.IImageFormat?displayProperty=name) interface, Jpeg, Png, Bmp, and Gif formats.
-- The image processor infrastructure, `.Mutate()` and `.Clone()`
-  - Transform methods like Resize, Crop, Skew, Rotate - Anything that alters the dimensions of the image.
-  - Non-transform methods like Gaussian Blur, Pixelate, Edge Detection - Anything that maintains the original image dimensions.
-
-### [SixLabors.Fonts](https://github.com/SixLabors/Fonts)
-
-Font loading and drawing library. Text drawing in `SixLabors.ImageSharp.Drawing` is based on this library.
-
-### SixLabors.ImageSharp.Drawing
-
-- Shape primitives and geometry API.
-- Brushes and various drawing algorithms, including drawing images.
-- Various vector drawing methods for drawing paths, polygons etc.
-- Text drawing (based on [SixLabors.Fonts](https://github.com/SixLabors/Fonts))
-
-### [SixLabors.ImageSharp.Web](https://github.com/SixLabors/ImageSharp.Web)
-ASP.NET-Core middleware for image manipulation.
