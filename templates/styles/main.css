@@ -611,3 +611,48 @@ pre code {
 .footer a {
   color: #fff !important;
 }
+
+/* ###################
+ * ##### PROJECTS ####
+ * ###################
+ */
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ .projects > [class*=col-] {
+  padding-bottom: 16px;
+}
+
+.project {
+  height: 100%;
+  padding: 1rem 1rem 0;
+  color: inherit;
+  margin-bottom: 1rem;
+  display: block;
+  border: 4px solid #FFF;
+  background-color: #FFF;
+  box-shadow: 0 0 8px rgba(0,0,0,0.08);
+}
+
+  .project img {
+      height: 137px;
+  }
+
+  .project h2 {
+      text-decoration: none;
+  }
+
+  .project:hover,
+  .project:focus {
+      text-decoration: none;
+      box-shadow: 0 0 8px rgba(0,0,0,0.16);
+      border-color: #e30183;
+  }
+
+.icon {
+  max-width: 20px;
+  margin-right: .5rem;
+}
