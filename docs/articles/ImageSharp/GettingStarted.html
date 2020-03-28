@@ -6,9 +6,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Getting started with ImageSharp </title>
+    <title>Getting Started </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Getting started with ImageSharp ">
+    <meta name="title" content="Getting Started ">
     <meta name="generator" content="docfx 2.50.0.0">
     
     <link rel="shortcut icon" href="../../favicon.png">
@@ -19,7 +19,7 @@
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
     
-    
+    <meta property="docfx:rel" content="../../">
     
   </head>
   <body data-spy="scroll" data-target="#affix">
@@ -58,6 +58,14 @@
           </div>
         </div>
       </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
       <div role="main" class="container body-content hide-when-search">
         
         <div class="sidenav hide-when-search">
@@ -69,15 +77,28 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="getting-started-with-imagesharp">Getting started with ImageSharp</h1>
+<h1 id="getting-started">Getting Started</h1>
 
-<p>So you&#39;ve gone and added the ImageSharp packages and you&#39;ve been left with the question &quot;so what to I do now?&quot; hopefully some of these snippets can answer that question for you, or at least get you started.</p>
-<h3 id="loading-an-image-scaling-it-by-half-and-saving-it-again-as-a-jpg">Loading an image, scaling it by half and saving it again as a jpg</h3>
-<p>In this very basic example you are actually utilizing a bunch of core ImageSharp features:</p>
+<div class="NOTE"><h5>Note</h5><p>The official guide assumes intermediate level knowledge of C# and .NET. If you are totally new to .NET development, it might not be the best idea to jump right into a framework as your first step - grasp the basics then come back. Prior experience with other languages and frameworks helps, but is not required.</p>
+</div>
+<h3 id="imagesharp-images">ImageSharp Images</h3>
+<p>ImageSharp provides several classes for storing pixel data.</p>
 <ul>
-<li><a href="PixelFormats.html">Pixel Formats</a> by using <code>Rgba32</code></li>
-<li><a href="ImageFormats.html">Image Formats</a> by loading and saving a jpeg image</li>
-<li><a href="Processing.html">Image Processors</a> by calling <code>Mutate()</code> and <code>Resize()</code></li>
+<li><a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Image.html">Image</a> A pixel format agnostic image container used for general processing operations.</li>
+<li><a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> A generic image container that allows per-pixel access.</li>
+</ul>
+<p>In addition there are classes available that represent individual image frames.</p>
+<ul>
+<li><a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.ImageFrame.html">ImageFrame</a> A pixel format agnostic image frame container.</li>
+<li><a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.ImageFrame-1.html">ImageFrame&lt;TPixel&gt;</a> A generic image frame container that allows per-pixel access.</li>
+<li><a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Processing.Processors.Quantization.IndexedImageFrame-1.html">IndexedImageFrame&lt;TPixel&gt;</a> A generic image frame used for indexed image pixel data comprising of a color palette and indices buffer.</li>
+</ul>
+<p>For more information on pixel formats please see the following <a href="pixelformats.html">documentation</a>.</p>
+<h3 id="loading-and-saving-images">Loading and Saving Images</h3>
+<p>ImageSharp provides several options for loading and saving images 
+In this very basic example you are actually utilizing a bunch of core ImageSharp features:</p>
+<ul>
+<li><a href="imageformats.html">Image Formats</a> by loading and saving an image.</li>
 </ul>
 <pre><code class="lang-c#">using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Processing;
@@ -93,7 +114,11 @@ using (Image image = Image.Load(&quot;foo.jpg&quot;))
     // The library automatically picks an encoder based on the file extensions then encodes and write the data to disk.
     image.Save(&quot;bar.jpg&quot;); 
 } // Dispose - releasing memory into a memory pool ready for the next image you wish to process.
-</code></pre><h3 id="how-do-i-create-a-blank-image-for-drawing-on">How do I create a blank image for drawing on?</h3>
+</code></pre><ul>
+<li><a href="pixelformats.html">Pixel Formats</a> by using <code>Rgba32</code></li>
+<li><a href="processing.html">Image Processors</a> by calling <code>Mutate()</code> and <code>Resize()</code></li>
+</ul>
+<h3 id="how-do-i-create-a-blank-image-for-drawing-on">How do I create a blank image for drawing on?</h3>
 <pre><code class="lang-c#">using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.PixelFormats;
 using SixLabors.ImageSharp.Processing;
@@ -118,7 +143,7 @@ If you want to do image processing work, make sure you add <code>using SixLabors
 </li>
 </ul>
 <h3 id="why-is-xrefsixlaborsimagesharpimage1displaypropertyname-a-generic-class">Why is <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> a generic class?</h3>
-<p>An image is essentially a <strong>generic 2D array of pixels</strong> stored in a contiguous memory block. Check out the <a href="PixelFormats.html">Pixel Formats</a> article for more details!</p>
+<p>An image is essentially a <strong>generic 2D array of pixels</strong> stored in a contiguous memory block. Check out the <a href="pixelformats.html">Pixel Formats</a> article for more details!</p>
 <h3 id="performance">Performance</h3>
 <p>Achieving near-to-native performance is a major goal for the SixLabors team, and thanks to the improvements brought by the RyuJIT runtime, it&#39;s no longer mission impossible. We are constantly working on improvements.</p>
 <p>At the moment it&#39;s pretty hard to define fair benchmarks comparing GDI+ (aka. <code>System.Drawing</code> on Windows) and ImageSharp, because of the differences between the algorithms being used. Generally speaking, we are more feature rich, producing better quality. We hope we can match the corresponding algorithm parameters, and present some very specific benchmark results soon.</p>
@@ -137,7 +162,7 @@ If you want to do image processing work, make sure you add <code>using SixLabors
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/SixLabors/docs/blob/master/articles/ImageSharp/GettingStarted.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/SixLabors/docs/blob/master/articles/imagesharp/gettingstarted.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

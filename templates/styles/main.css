@@ -1,5 +1,6 @@
 /* @import url("https://use.fontawesome.com/releases/v5.0.8/css/regular.css");
 @import url("https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css"); */
+@import url("vs2015.css");
 
 /* #############
  * ### RESET ###
@@ -513,6 +514,9 @@ pre {
   word-break: unset;
   word-wrap: unset;
   overflow-x: auto;
+  padding: 0;
+  border: none;
+  box-shadow: 0 0 8px rgba(0,0,0,0.08);
 }
 
 pre code {
@@ -610,6 +614,25 @@ pre code {
 
 .footer a {
   color: #fff !important;
+}
+
+/* ###################
+ * ###### TABS #######
+ * ###################
+ */
+
+.tabGroup{
+  margin-bottom: 1rem;
+}
+
+.tabGroup section[role="tabpanel"]{
+  border-left:0;
+  border-right:0;
+  border-bottom:0;
+}
+
+.tabGroup section[role="tabpanel"] > pre:last-child {
+  margin-bottom: -8px;
 }
 
 /* ###################

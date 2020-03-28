@@ -1,4 +1,4 @@
-# Processing
+# Processing Image Operations
 
 The ImageSharp processing API is imperative. This means that the order in which you supply the individual processing operations is the order in which they are are compiled and applied. This allows the API to be very flexible, allowing you to combine processes in any order.
 
@@ -45,4 +45,4 @@ using (Image image = Image.Load(inStream))
 
 Examples of common operations can be found in the following documentation pages.
 
-- [Resizing](Resize.md) images using different options.
+- [Resizing](resize.md) images using different options.

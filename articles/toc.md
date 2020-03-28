@@ -1,4 +1,5 @@
-# [Introduction](intro.md)
+# [Introduction](imagesharp/index.md)
+# [Getting Started](imagesharp/GettingStarted.md)
 # [ImageSharp](ImageSharp/GettingStarted.md)
 ## [Pixel Formats](ImageSharp/PixelFormats.md)
 ## [Image Formats](ImageSharp/ImageFormats.md)

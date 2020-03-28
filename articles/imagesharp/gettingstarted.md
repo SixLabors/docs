@@ -1,11 +1,29 @@
-# Getting started with ImageSharp
-So you've gone and added the ImageSharp packages and you've been left with the question "so what to I do now?" hopefully some of these snippets can answer that question for you, or at least get you started.
+# Getting Started
 
-### Loading an image, scaling it by half and saving it again as a jpg
+>[!NOTE]
+>The official guide assumes intermediate level knowledge of C# and .NET. If you are totally new to .NET development, it might not be the best idea to jump right into a framework as your first step - grasp the basics then come back. Prior experience with other languages and frameworks helps, but is not required.
+
+### ImageSharp Images
+
+ImageSharp provides several classes for storing pixel data.
+
+- @"SixLabors.ImageSharp.Image" A pixel format agnostic image container used for general processing operations.
+- @"SixLabors.ImageSharp.Image`1" A generic image container that allows per-pixel access.
+
+In addition there are classes available that represent individual image frames.
+
+- @"SixLabors.ImageSharp.ImageFrame" A pixel format agnostic image frame container.
+- @"SixLabors.ImageSharp.ImageFrame`1" A generic image frame container that allows per-pixel access.
+- @"SixLabors.ImageSharp.Processing.Processors.Quantization.IndexedImageFrame`1" A generic image frame used for indexed image pixel data comprising of a color palette and indices buffer.
+
+For more information on pixel formats please see the following [documentation](pixelformats.md).
+
+### Loading and Saving Images
+
+ImageSharp provides several options for loading and saving images 
 In this very basic example you are actually utilizing a bunch of core ImageSharp features:
-- [Pixel Formats](PixelFormats.md) by using `Rgba32`
-- [Image Formats](ImageFormats.md) by loading and saving a jpeg image
-- [Image Processors](Processing.md) by calling `Mutate()` and `Resize()`
+- [Image Formats](imageformats.md) by loading and saving an image.
+
 
 ```c#
 using SixLabors.ImageSharp;
@@ -23,6 +41,9 @@ using (Image image = Image.Load("foo.jpg"))
     image.Save("bar.jpg"); 
 } // Dispose - releasing memory into a memory pool ready for the next image you wish to process.
 ```
+
+- [Pixel Formats](pixelformats.md) by using `Rgba32`
+- [Image Processors](Processing.md) by calling `Mutate()` and `Resize()`
 
 ### How do I create a blank image for drawing on?
 ```c#

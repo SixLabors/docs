@@ -19,7 +19,7 @@
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
     
-    
+    <meta property="docfx:rel" content="../../">
     
   </head>
   <body data-spy="scroll" data-target="#affix">
@@ -58,6 +58,14 @@
           </div>
         </div>
       </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
       <div role="main" class="container body-content hide-when-search">
         
         <div class="sidenav hide-when-search">
@@ -104,7 +112,7 @@ using (var image = Image.Load(inputStream, out format))
 <ul>
 <li><a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Formats.IImageDecoder.html"><code>IImageDecoder</code></a> is responsible for decoding streams (and files) in into <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Image-1.html"><code>Image&lt;TPixel&gt;</code></a>. ImageSharp can <strong>auto-detect</strong> the image formats of streams/files based on their headers, selecting the correct <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Formats.IImageFormat.html"><code>IImageFormat</code></a> (and thus <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Formats.IImageDecoder.html"><code>IImageDecoder</code></a>). This logic is implemented by <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Formats.IImageFormatDetector.html"><code>IImageFormatDetector</code></a>&#39;s.</li>
 <li><a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Formats.IImageEncoder.html"><code>IImageEncoder</code></a> is responsible for writing <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Image-1.html"><code>Image&lt;TPixel&gt;</code></a> into a stream using a given format.</li>
-<li>Decoders/encoders and <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Formats.IImageFormatDetector.html"><code>IImageFormatDetector</code></a>&#39;s are mapped to image formats in <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Configuration.html#SixLabors_ImageSharp_Configuration_ImageFormatsManager"><code>ImageFormatsManager</code></a>. It&#39;s possible to register new formats, or drop existing ones. See <a href="Configuration.html">Configuration</a> for more details.</li>
+<li>Decoders/encoders and <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Formats.IImageFormatDetector.html"><code>IImageFormatDetector</code></a>&#39;s are mapped to image formats in <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Configuration.html#SixLabors_ImageSharp_Configuration_ImageFormatsManager"><code>ImageFormatsManager</code></a>. It&#39;s possible to register new formats, or drop existing ones. See <a href="configuration.html">Configuration</a> for more details.</li>
 </ul>
 <h3 id="metadata-only-decoding">Metadata-only Decoding</h3>
 <p>Sometimes it&#39;s worth to efficiently decode image metadata ignoring the memory and CPU heavy pixel information inside the stream. ImageSharp allows this by using one of the several <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Image.html">Image.Identify</a> overloads:</p>
@@ -132,7 +140,7 @@ using (var image = Image.Load(inputStream, out format))
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/SixLabors/docs/blob/master/articles/ImageSharp/ImageFormats.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/SixLabors/docs/blob/master/articles/imagesharp/imageformats.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

@@ -117,6 +117,7 @@
     "fileMetadataFiles": [],
     "fileMetadata": {},
     "globalMetadata": {
+      "_enableSearch": true,
       "_gitContribute": {
         "branch": "master"
       }
@@ -125,10 +126,12 @@
       "default",
       "templates"
     ],
-    "postProcessors": [],
+    "postProcessors": [
+      "ExtractSearchIndex"
+    ],
     "noLangKeyword": false,
     "keepFileLink": false,
     "cleanupCacheHistory": false,
-    "disableGitFeatures": false
+    "disableGitFeatures": false,
   }
 }
