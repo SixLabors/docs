@@ -1,0 +1,1004 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ComplexPolygon
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ComplexPolygon
+   ">
+    <meta name="generator" content="docfx 2.50.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.png">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="SixLabors.ImageSharp.Drawing.ComplexPolygon">
+  
+  
+  <h1 id="SixLabors_ImageSharp_Drawing_ComplexPolygon" data-uid="SixLabors.ImageSharp.Drawing.ComplexPolygon" class="text-break">Class ComplexPolygon
+  </h1>
+  <div class="markdown level0 summary"><p>Represents a complex polygon made up of one or more shapes overlayed on each other, where overlaps causes holes.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">ComplexPolygon</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="SixLabors.ImageSharp.Drawing.IPath.html">IPath</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="SixLabors.ImageSharp.Drawing.html">SixLabors.ImageSharp.Drawing</a></h6>
+  <h6><strong>Assembly</strong>: SixLabors.ImageSharp.Drawing.dll</h6>
+  <h5 id="SixLabors_ImageSharp_Drawing_ComplexPolygon_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class ComplexPolygon : IPath</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Drawing_ComplexPolygon__ctor_SixLabors_ImageSharp_Drawing_IPath___.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Drawing.ComplexPolygon.%23ctor(SixLabors.ImageSharp.Drawing.IPath%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/master/src/ImageSharp.Drawing/Shapes/ComplexPolygon.cs/#L32">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Drawing_ComplexPolygon__ctor_" data-uid="SixLabors.ImageSharp.Drawing.ComplexPolygon.#ctor*"></a>
+  <h4 id="SixLabors_ImageSharp_Drawing_ComplexPolygon__ctor_SixLabors_ImageSharp_Drawing_IPath___" data-uid="SixLabors.ImageSharp.Drawing.ComplexPolygon.#ctor(SixLabors.ImageSharp.Drawing.IPath[])">ComplexPolygon(IPath[])</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="SixLabors.ImageSharp.Drawing.ComplexPolygon.html">ComplexPolygon</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ComplexPolygon(params IPath[] paths)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Drawing.IPath.html">IPath</a>[]</td>
+        <td><span class="parametername">paths</span></td>
+        <td><p>The paths.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Drawing_ComplexPolygon__ctor_System_Collections_Generic_IEnumerable_SixLabors_ImageSharp_Drawing_IPath__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Drawing.ComplexPolygon.%23ctor(System.Collections.Generic.IEnumerable%7BSixLabors.ImageSharp.Drawing.IPath%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/master/src/ImageSharp.Drawing/Shapes/ComplexPolygon.cs/#L23">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Drawing_ComplexPolygon__ctor_" data-uid="SixLabors.ImageSharp.Drawing.ComplexPolygon.#ctor*"></a>
+  <h4 id="SixLabors_ImageSharp_Drawing_ComplexPolygon__ctor_System_Collections_Generic_IEnumerable_SixLabors_ImageSharp_Drawing_IPath__" data-uid="SixLabors.ImageSharp.Drawing.ComplexPolygon.#ctor(System.Collections.Generic.IEnumerable{SixLabors.ImageSharp.Drawing.IPath})">ComplexPolygon(IEnumerable&lt;IPath&gt;)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="SixLabors.ImageSharp.Drawing.ComplexPolygon.html">ComplexPolygon</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ComplexPolygon(IEnumerable&lt;IPath&gt; paths)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="SixLabors.ImageSharp.Drawing.IPath.html">IPath</a>&gt;</td>
+        <td><span class="parametername">paths</span></td>
+        <td><p>The paths.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Drawing_ComplexPolygon_Bounds.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Drawing.ComplexPolygon.Bounds%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/master/src/ImageSharp.Drawing/Shapes/ComplexPolygon.cs/#L99">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Drawing_ComplexPolygon_Bounds_" data-uid="SixLabors.ImageSharp.Drawing.ComplexPolygon.Bounds*"></a>
+  <h4 id="SixLabors_ImageSharp_Drawing_ComplexPolygon_Bounds" data-uid="SixLabors.ImageSharp.Drawing.ComplexPolygon.Bounds">Bounds</h4>
+  <div class="markdown level1 summary"><p>Gets the bounding box of this shape.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RectangleF Bounds { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">RectangleF</span></td>
+        <td><p>The bounds.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Drawing_ComplexPolygon_Length.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Drawing.ComplexPolygon.Length%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/master/src/ImageSharp.Drawing/Shapes/ComplexPolygon.cs/#L78">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Drawing_ComplexPolygon_Length_" data-uid="SixLabors.ImageSharp.Drawing.ComplexPolygon.Length*"></a>
+  <h4 id="SixLabors_ImageSharp_Drawing_ComplexPolygon_Length" data-uid="SixLabors.ImageSharp.Drawing.ComplexPolygon.Length">Length</h4>
+  <div class="markdown level1 summary"><p>Gets the length of the path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Length { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Drawing_ComplexPolygon_MaxIntersections.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Drawing.ComplexPolygon.MaxIntersections%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/master/src/ImageSharp.Drawing/Shapes/ComplexPolygon.cs/#L107">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Drawing_ComplexPolygon_MaxIntersections_" data-uid="SixLabors.ImageSharp.Drawing.ComplexPolygon.MaxIntersections*"></a>
+  <h4 id="SixLabors_ImageSharp_Drawing_ComplexPolygon_MaxIntersections" data-uid="SixLabors.ImageSharp.Drawing.ComplexPolygon.MaxIntersections">MaxIntersections</h4>
+  <div class="markdown level1 summary"><p>Gets the maximum number intersections that a shape can have when testing a line.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MaxIntersections { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The maximum intersections.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Drawing_ComplexPolygon_Paths.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Drawing.ComplexPolygon.Paths%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/master/src/ImageSharp.Drawing/Shapes/ComplexPolygon.cs/#L91">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Drawing_ComplexPolygon_Paths_" data-uid="SixLabors.ImageSharp.Drawing.ComplexPolygon.Paths*"></a>
+  <h4 id="SixLabors_ImageSharp_Drawing_ComplexPolygon_Paths" data-uid="SixLabors.ImageSharp.Drawing.ComplexPolygon.Paths">Paths</h4>
+  <div class="markdown level1 summary"><p>Gets the paths that make up this shape</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;IPath&gt; Paths { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="SixLabors.ImageSharp.Drawing.IPath.html">IPath</a>&gt;</td>
+        <td><p>The paths.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Drawing_ComplexPolygon_PathType.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Drawing.ComplexPolygon.PathType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/master/src/ImageSharp.Drawing/Shapes/ComplexPolygon.cs/#L83">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Drawing_ComplexPolygon_PathType_" data-uid="SixLabors.ImageSharp.Drawing.ComplexPolygon.PathType*"></a>
+  <h4 id="SixLabors_ImageSharp_Drawing_ComplexPolygon_PathType" data-uid="SixLabors.ImageSharp.Drawing.ComplexPolygon.PathType">PathType</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is closed, open or a composite path with a mixture of open and closed figures.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PathTypes PathType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Drawing.PathTypes.html">PathTypes</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Drawing_ComplexPolygon_AsClosedPath.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Drawing.ComplexPolygon.AsClosedPath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/master/src/ImageSharp.Drawing/Shapes/ComplexPolygon.cs/#L281">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Drawing_ComplexPolygon_AsClosedPath_" data-uid="SixLabors.ImageSharp.Drawing.ComplexPolygon.AsClosedPath*"></a>
+  <h4 id="SixLabors_ImageSharp_Drawing_ComplexPolygon_AsClosedPath" data-uid="SixLabors.ImageSharp.Drawing.ComplexPolygon.AsClosedPath">AsClosedPath()</h4>
+  <div class="markdown level1 summary"><p>Converts a path to a closed path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IPath AsClosedPath()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Drawing.IPath.html">IPath</a></td>
+        <td><p>Returns the path as a closed path.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Drawing_ComplexPolygon_Contains_PointF_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Drawing.ComplexPolygon.Contains(PointF)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/master/src/ImageSharp.Drawing/Shapes/ComplexPolygon.cs/#L219">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Drawing_ComplexPolygon_Contains_" data-uid="SixLabors.ImageSharp.Drawing.ComplexPolygon.Contains*"></a>
+  <h4 id="SixLabors_ImageSharp_Drawing_ComplexPolygon_Contains_PointF_" data-uid="SixLabors.ImageSharp.Drawing.ComplexPolygon.Contains(PointF)">Contains(PointF)</h4>
+  <div class="markdown level1 summary"><p>Determines whether the <a class="xref" href="SixLabors.ImageSharp.Drawing.IPath.html">IPath</a> contains the specified point</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Contains(PointF point)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">PointF</span></td>
+        <td><span class="parametername">point</span></td>
+        <td><p>The point.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if the <a class="xref" href="SixLabors.ImageSharp.Drawing.IPath.html">IPath</a> contains the specified point; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Drawing_ComplexPolygon_Distance_PointF_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Drawing.ComplexPolygon.Distance(PointF)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/master/src/ImageSharp.Drawing/Shapes/ComplexPolygon.cs/#L121">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Drawing_ComplexPolygon_Distance_" data-uid="SixLabors.ImageSharp.Drawing.ComplexPolygon.Distance*"></a>
+  <h4 id="SixLabors_ImageSharp_Drawing_ComplexPolygon_Distance_PointF_" data-uid="SixLabors.ImageSharp.Drawing.ComplexPolygon.Distance(PointF)">Distance(PointF)</h4>
+  <div class="markdown level1 summary"><p>the distance of the point from the outline of the shape, if the value is negative it is inside the polygon bounds</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PointInfo Distance(PointF point)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">PointF</span></td>
+        <td><span class="parametername">point</span></td>
+        <td><p>The point.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Drawing.PointInfo.html">PointInfo</a></td>
+        <td><p>Returns the distance from thr shape to the point</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="SixLabors_ImageSharp_Drawing_ComplexPolygon_Distance_PointF__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Due to the clipping we did during construction we know that out shapes do not overlap at there edges
+therefore for a point to be in more that one we must be in a hole of another, theoretically this could
+then flip again to be in a outline inside a hole inside an outline :)</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Drawing_ComplexPolygon_FindIntersections_PointF_PointF_PointF___System_Int32_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Drawing.ComplexPolygon.FindIntersections(PointF%2CPointF%2CPointF%5B%5D%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/master/src/ImageSharp.Drawing/Shapes/ComplexPolygon.cs/#L164">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Drawing_ComplexPolygon_FindIntersections_" data-uid="SixLabors.ImageSharp.Drawing.ComplexPolygon.FindIntersections*"></a>
+  <h4 id="SixLabors_ImageSharp_Drawing_ComplexPolygon_FindIntersections_PointF_PointF_PointF___System_Int32_" data-uid="SixLabors.ImageSharp.Drawing.ComplexPolygon.FindIntersections(PointF,PointF,PointF[],System.Int32)">FindIntersections(PointF, PointF, PointF[], Int32)</h4>
+  <div class="markdown level1 summary"><p>Based on a line described by <code data-dev-comment-type="paramref" class="paramref">start</code> and <code data-dev-comment-type="paramref" class="paramref">end</code>
+populate a buffer for all points on all the polygons, that make up this complex shape,
+that the line intersects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int FindIntersections(PointF start, PointF end, PointF[] buffer, int offset)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">PointF</span></td>
+        <td><span class="parametername">start</span></td>
+        <td><p>The start point of the line.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">PointF</span></td>
+        <td><span class="parametername">end</span></td>
+        <td><p>The end point of the line.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">PointF</span>[]</td>
+        <td><span class="parametername">buffer</span></td>
+        <td><p>The buffer that will be populated with intersections.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">offset</span></td>
+        <td><p>The offset within the buffer</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The number of intersections populated into the buffer.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Drawing_ComplexPolygon_FindIntersections_PointF_PointF_PointF___System_Int32_SixLabors_ImageSharp_Drawing_IntersectionRule_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Drawing.ComplexPolygon.FindIntersections(PointF%2CPointF%2CPointF%5B%5D%2CSystem.Int32%2CSixLabors.ImageSharp.Drawing.IntersectionRule)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/master/src/ImageSharp.Drawing/Shapes/ComplexPolygon.cs/#L184">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Drawing_ComplexPolygon_FindIntersections_" data-uid="SixLabors.ImageSharp.Drawing.ComplexPolygon.FindIntersections*"></a>
+  <h4 id="SixLabors_ImageSharp_Drawing_ComplexPolygon_FindIntersections_PointF_PointF_PointF___System_Int32_SixLabors_ImageSharp_Drawing_IntersectionRule_" data-uid="SixLabors.ImageSharp.Drawing.ComplexPolygon.FindIntersections(PointF,PointF,PointF[],System.Int32,SixLabors.ImageSharp.Drawing.IntersectionRule)">FindIntersections(PointF, PointF, PointF[], Int32, IntersectionRule)</h4>
+  <div class="markdown level1 summary"><p>Based on a line described by <code data-dev-comment-type="paramref" class="paramref">start</code> and <code data-dev-comment-type="paramref" class="paramref">end</code>
+populate a buffer for all points on all the polygons, that make up this complex shape,
+that the line intersects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int FindIntersections(PointF start, PointF end, PointF[] buffer, int offset, IntersectionRule intersectionRule)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">PointF</span></td>
+        <td><span class="parametername">start</span></td>
+        <td><p>The start point of the line.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">PointF</span></td>
+        <td><span class="parametername">end</span></td>
+        <td><p>The end point of the line.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">PointF</span>[]</td>
+        <td><span class="parametername">buffer</span></td>
+        <td><p>The buffer that will be populated with intersections.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">offset</span></td>
+        <td><p>The offset within the buffer</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Drawing.IntersectionRule.html">IntersectionRule</a></td>
+        <td><span class="parametername">intersectionRule</span></td>
+        <td><p>The intersection rule to use</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The number of intersections populated into the buffer.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Drawing_ComplexPolygon_FindIntersections_PointF_PointF_System_Span_PointF__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Drawing.ComplexPolygon.FindIntersections(PointF%2CPointF%2CSystem.Span%7BPointF%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/master/src/ImageSharp.Drawing/Shapes/ComplexPolygon.cs/#L168">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Drawing_ComplexPolygon_FindIntersections_" data-uid="SixLabors.ImageSharp.Drawing.ComplexPolygon.FindIntersections*"></a>
+  <h4 id="SixLabors_ImageSharp_Drawing_ComplexPolygon_FindIntersections_PointF_PointF_System_Span_PointF__" data-uid="SixLabors.ImageSharp.Drawing.ComplexPolygon.FindIntersections(PointF,PointF,System.Span{PointF})">FindIntersections(PointF, PointF, Span&lt;PointF&gt;)</h4>
+  <div class="markdown level1 summary"><p>Based on a line described by <code data-dev-comment-type="paramref" class="paramref">start</code> and <code data-dev-comment-type="paramref" class="paramref">end</code>
+populate a buffer for all points on the polygon that the line intersects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int FindIntersections(PointF start, PointF end, Span&lt;PointF&gt; buffer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">PointF</span></td>
+        <td><span class="parametername">start</span></td>
+        <td><p>The start point of the line.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">PointF</span></td>
+        <td><span class="parametername">end</span></td>
+        <td><p>The end point of the line.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Span</span>&lt;<span class="xref">PointF</span>&gt;</td>
+        <td><span class="parametername">buffer</span></td>
+        <td><p>The buffer that will be populated with intersections.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The number of intersections populated into the buffer.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Drawing_ComplexPolygon_FindIntersections_PointF_PointF_System_Span_PointF__SixLabors_ImageSharp_Drawing_IntersectionRule_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Drawing.ComplexPolygon.FindIntersections(PointF%2CPointF%2CSystem.Span%7BPointF%7D%2CSixLabors.ImageSharp.Drawing.IntersectionRule)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/master/src/ImageSharp.Drawing/Shapes/ComplexPolygon.cs/#L191">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Drawing_ComplexPolygon_FindIntersections_" data-uid="SixLabors.ImageSharp.Drawing.ComplexPolygon.FindIntersections*"></a>
+  <h4 id="SixLabors_ImageSharp_Drawing_ComplexPolygon_FindIntersections_PointF_PointF_System_Span_PointF__SixLabors_ImageSharp_Drawing_IntersectionRule_" data-uid="SixLabors.ImageSharp.Drawing.ComplexPolygon.FindIntersections(PointF,PointF,System.Span{PointF},SixLabors.ImageSharp.Drawing.IntersectionRule)">FindIntersections(PointF, PointF, Span&lt;PointF&gt;, IntersectionRule)</h4>
+  <div class="markdown level1 summary"><p>Based on a line described by <code data-dev-comment-type="paramref" class="paramref">start</code> and <code data-dev-comment-type="paramref" class="paramref">end</code>
+populate a buffer for all points on the polygon that the line intersects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int FindIntersections(PointF start, PointF end, Span&lt;PointF&gt; buffer, IntersectionRule intersectionRule)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">PointF</span></td>
+        <td><span class="parametername">start</span></td>
+        <td><p>The start point of the line.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">PointF</span></td>
+        <td><span class="parametername">end</span></td>
+        <td><p>The end point of the line.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Span</span>&lt;<span class="xref">PointF</span>&gt;</td>
+        <td><span class="parametername">buffer</span></td>
+        <td><p>The buffer that will be populated with intersections.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Drawing.IntersectionRule.html">IntersectionRule</a></td>
+        <td><span class="parametername">intersectionRule</span></td>
+        <td><p>How intersections are handled</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The number of intersections populated into the buffer.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Drawing_ComplexPolygon_Flatten.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Drawing.ComplexPolygon.Flatten%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/master/src/ImageSharp.Drawing/Shapes/ComplexPolygon.cs/#L264">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Drawing_ComplexPolygon_Flatten_" data-uid="SixLabors.ImageSharp.Drawing.ComplexPolygon.Flatten*"></a>
+  <h4 id="SixLabors_ImageSharp_Drawing_ComplexPolygon_Flatten" data-uid="SixLabors.ImageSharp.Drawing.ComplexPolygon.Flatten">Flatten()</h4>
+  <div class="markdown level1 summary"><p>Converts the <a class="xref" href="SixLabors.ImageSharp.Drawing.IPath.html">IPath</a> into a simple linear path..</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;ISimplePath&gt; Flatten()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="SixLabors.ImageSharp.Drawing.ISimplePath.html">ISimplePath</a>&gt;</td>
+        <td><p>Returns the current <a class="xref" href="SixLabors.ImageSharp.Drawing.IPath.html">IPath</a> as simple linear path.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Drawing_ComplexPolygon_PointAlongPath_System_Single_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Drawing.ComplexPolygon.PointAlongPath(System.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/master/src/ImageSharp.Drawing/Shapes/ComplexPolygon.cs/#L306">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Drawing_ComplexPolygon_PointAlongPath_" data-uid="SixLabors.ImageSharp.Drawing.ComplexPolygon.PointAlongPath*"></a>
+  <h4 id="SixLabors_ImageSharp_Drawing_ComplexPolygon_PointAlongPath_System_Single_" data-uid="SixLabors.ImageSharp.Drawing.ComplexPolygon.PointAlongPath(System.Single)">PointAlongPath(Single)</h4>
+  <div class="markdown level1 summary"><p>Calculates the point a certain distance a path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SegmentInfo PointAlongPath(float distanceAlongPath)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">distanceAlongPath</span></td>
+        <td><p>The distance along the path to find details of.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Drawing.SegmentInfo.html">SegmentInfo</a></td>
+        <td><p>Returns details about a point along a path.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Drawing_ComplexPolygon_Transform_System_Numerics_Matrix3x2_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Drawing.ComplexPolygon.Transform(System.Numerics.Matrix3x2)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/master/src/ImageSharp.Drawing/Shapes/ComplexPolygon.cs/#L240">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Drawing_ComplexPolygon_Transform_" data-uid="SixLabors.ImageSharp.Drawing.ComplexPolygon.Transform*"></a>
+  <h4 id="SixLabors_ImageSharp_Drawing_ComplexPolygon_Transform_System_Numerics_Matrix3x2_" data-uid="SixLabors.ImageSharp.Drawing.ComplexPolygon.Transform(System.Numerics.Matrix3x2)">Transform(Matrix3x2)</h4>
+  <div class="markdown level1 summary"><p>Transforms the shape using the specified matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IPath Transform(Matrix3x2 matrix)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Numerics.Matrix3x2</span></td>
+        <td><span class="parametername">matrix</span></td>
+        <td><p>The matrix.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Drawing.IPath.html">IPath</a></td>
+        <td><p>A new shape with the matrix applied to it.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Drawing.IPath.html">IPath</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Drawing.ClipperExtensions.html#SixLabors_ImageSharp_Drawing_ClipperExtensions_Clip_SixLabors_ImageSharp_Drawing_IPath_System_Collections_Generic_IEnumerable_SixLabors_ImageSharp_Drawing_IPath__">ClipperExtensions.Clip(IPath, IEnumerable&lt;IPath&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Drawing.ClipperExtensions.html#SixLabors_ImageSharp_Drawing_ClipperExtensions_Clip_SixLabors_ImageSharp_Drawing_IPath_SixLabors_ImageSharp_Drawing_IPath___">ClipperExtensions.Clip(IPath, IPath[])</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Drawing.Outliner.html#SixLabors_ImageSharp_Drawing_Outliner_GenerateOutline_SixLabors_ImageSharp_Drawing_IPath_System_Single_System_Single___">Outliner.GenerateOutline(IPath, Single, Single[])</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Drawing.Outliner.html#SixLabors_ImageSharp_Drawing_Outliner_GenerateOutline_SixLabors_ImageSharp_Drawing_IPath_System_Single_System_ReadOnlySpan_System_Single__">Outliner.GenerateOutline(IPath, Single, ReadOnlySpan&lt;Single&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Drawing.Outliner.html#SixLabors_ImageSharp_Drawing_Outliner_GenerateOutline_SixLabors_ImageSharp_Drawing_IPath_System_Single_System_Single___System_Boolean_">Outliner.GenerateOutline(IPath, Single, Single[], Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Drawing.Outliner.html#SixLabors_ImageSharp_Drawing_Outliner_GenerateOutline_SixLabors_ImageSharp_Drawing_IPath_System_Single_System_ReadOnlySpan_System_Single__System_Boolean_">Outliner.GenerateOutline(IPath, Single, ReadOnlySpan&lt;Single&gt;, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Drawing.Outliner.html#SixLabors_ImageSharp_Drawing_Outliner_GenerateOutline_SixLabors_ImageSharp_Drawing_IPath_System_Single_System_ReadOnlySpan_System_Single__System_Boolean_SixLabors_ImageSharp_Drawing_JointStyle_SixLabors_ImageSharp_Drawing_EndCapStyle_">Outliner.GenerateOutline(IPath, Single, ReadOnlySpan&lt;Single&gt;, Boolean, JointStyle, EndCapStyle)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Drawing.Outliner.html#SixLabors_ImageSharp_Drawing_Outliner_GenerateOutline_SixLabors_ImageSharp_Drawing_IPath_System_Single_">Outliner.GenerateOutline(IPath, Single)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Drawing.Outliner.html#SixLabors_ImageSharp_Drawing_Outliner_GenerateOutline_SixLabors_ImageSharp_Drawing_IPath_System_Single_SixLabors_ImageSharp_Drawing_JointStyle_SixLabors_ImageSharp_Drawing_EndCapStyle_">Outliner.GenerateOutline(IPath, Single, JointStyle, EndCapStyle)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Drawing.PathExtensions.html#SixLabors_ImageSharp_Drawing_PathExtensions_Rotate_SixLabors_ImageSharp_Drawing_IPath_System_Single_">PathExtensions.Rotate(IPath, Single)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Drawing.PathExtensions.html#SixLabors_ImageSharp_Drawing_PathExtensions_RotateDegree_SixLabors_ImageSharp_Drawing_IPath_System_Single_">PathExtensions.RotateDegree(IPath, Single)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Drawing.PathExtensions.html#SixLabors_ImageSharp_Drawing_PathExtensions_Translate_SixLabors_ImageSharp_Drawing_IPath_PointF_">PathExtensions.Translate(IPath, PointF)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Drawing.PathExtensions.html#SixLabors_ImageSharp_Drawing_PathExtensions_Translate_SixLabors_ImageSharp_Drawing_IPath_System_Single_System_Single_">PathExtensions.Translate(IPath, Single, Single)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Drawing.PathExtensions.html#SixLabors_ImageSharp_Drawing_PathExtensions_Scale_SixLabors_ImageSharp_Drawing_IPath_System_Single_System_Single_">PathExtensions.Scale(IPath, Single, Single)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Drawing.PathExtensions.html#SixLabors_ImageSharp_Drawing_PathExtensions_Scale_SixLabors_ImageSharp_Drawing_IPath_System_Single_">PathExtensions.Scale(IPath, Single)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.Drawing.PathExtensions.html#SixLabors_ImageSharp_Drawing_PathExtensions_FindIntersections_SixLabors_ImageSharp_Drawing_IPath_PointF_PointF_">PathExtensions.FindIntersections(IPath, PointF, PointF)</a>
+  </div>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><a class="xref" href="SixLabors.ImageSharp.Drawing.IPath.html">IPath</a></div>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/SixLabors/ImageSharp.Drawing/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Drawing_ComplexPolygon.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Drawing.ComplexPolygon%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/master/src/ImageSharp.Drawing/Shapes/ComplexPolygon.cs/#L15" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © Six Labors<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
