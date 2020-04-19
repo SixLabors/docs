@@ -6,7 +6,7 @@
 ### What is ImageSharp.Drawing?
 ImageSharp.Drawing is a library build on top on ImageSharp to providing 2D Drawing extensions.
 
-ImageSharp.Drawing is designed from the ground up to be flexible and extensible. The library provides API endpoints for common vector and text processing operations adds the building blocks for building custom image.
+ImageSharp.Drawing is designed from the ground up to be flexible and extensible. The library provides API endpoints for common vector and text processing operations adding the building blocks for building custom images.
 
 Built against [.NET Standard 1.3](https://docs.microsoft.com/en-us/dotnet/standard/net-standard), ImageSharp.Drawing can be used in device, cloud, and embedded/IoT scenarios.  
   
