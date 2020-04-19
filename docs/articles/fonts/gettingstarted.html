@@ -6,9 +6,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Introduction </title>
+    <title>Getting Started </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Introduction ">
+    <meta name="title" content="Getting Started ">
     <meta name="generator" content="docfx 2.52.0.0">
     
     <link rel="shortcut icon" href="../../favicon.png">
@@ -77,49 +77,53 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="introduction">Introduction</h1>
+<h1 id="getting-started">Getting Started</h1>
 
-<h3 id="what-is-imagesharp">What is ImageSharp?</h3>
-<p>ImageSharp is a new, fully featured, fully managed, cross-platform, 2D graphics library.
-Designed to democratize image processing, ImageSharp brings you an incredibly powerful yet beautifully simple API.</p>
-<p>ImageSharp is designed from the ground up to be flexible and extensible. The library provides API endpoints for common image processing operations and the building blocks to allow for the development of addtional operations.  </p>
-<p>Built against <a href="https://docs.microsoft.com/en-us/dotnet/standard/net-standard">.NET Standard 1.3</a>, ImageSharp can be used in device, cloud, and embedded/IoT scenarios.  </p>
-<h3 id="license">License</h3>
-<p>Imagesharp is licensed under under the terms of <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">GNU Affero General
-Public License, version 3</a>. Commercial licensing options are available in addition to this license, see <a href="https://sixlabors.com/pricing">https://sixlabors.com/pricing</a> for details.</p>
-<h3 id="installation">Installation</h3>
-<p>ImageSharp is installed via <a href="https://www.nuget.org/packages/SixLabors.ImageSharp">Nuget</a> with nightly builds available on <a href="https://www.myget.org/feed/sixlabors/package/nuget/SixLabors.ImageSharp">MyGet</a>.</p>
-<div class="tabGroup" id="tabgroup_4fKdZcGiyY">
-<ul role="tablist">
-<li role="presentation">
-<a href="#tabpanel_4fKdZcGiyY_tabid-1" role="tab" aria-controls="tabpanel_4fKdZcGiyY_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Package Manager</a>
-</li>
-<li role="presentation">
-<a href="#tabpanel_4fKdZcGiyY_tabid-2" role="tab" aria-controls="tabpanel_4fKdZcGiyY_tabid-2" data-tab="tabid-2" tabindex="-1">.NET CLI</a>
-</li>
-<li role="presentation">
-<a href="#tabpanel_4fKdZcGiyY_tabid-3" role="tab" aria-controls="tabpanel_4fKdZcGiyY_tabid-3" data-tab="tabid-3" tabindex="-1">PackageReference</a>
-</li>
-<li role="presentation">
-<a href="#tabpanel_4fKdZcGiyY_tabid-4" role="tab" aria-controls="tabpanel_4fKdZcGiyY_tabid-4" data-tab="tabid-4" tabindex="-1">Paket CLI</a>
-</li>
+<div class="WARNING"><h5>Warning</h5><p>Fonts is still considered BETA quality and we still reserve the rights to change the API shapes. We are yet to priorities performance in our font loading and layout APIs.</p>
+</div>
+<div class="NOTE"><h5>Note</h5><p>The official guide assumes intermediate level knowledge of C# and .NET. If you are totally new to .NET development, it might not be the best idea to jump right into a framework as your first step - grasp the basics then come back. Prior experience with other languages and frameworks helps, but is not required.</p>
+</div>
+<h3 id="fonts">Fonts</h3>
+<p>Fonts provides the core to your text layout and loading subsystems.</p>
+<ul>
+<li><code>SixLabors.Fonts.FontCollection</code> is the root type you will configure and load up with all the TrueType/OpenType/Woff fonts. (font loading is deemed expensive and should be done once and shared across multiple rasterizations)</li>
+<li><code>SixLabors.Fonts.Font</code> is our currying type for passing information about your chosen font face.</li>
 </ul>
-<section id="tabpanel_4fKdZcGiyY_tabid-1" role="tabpanel" data-tab="tabid-1">
-<pre><code class="lang-bash">PM &gt; Install-Package SixLabors.ImageSharp -Version VERSION_NUMBER
-</code></pre></section>
-<section id="tabpanel_4fKdZcGiyY_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
-<pre><code class="lang-bash">dotnet add package SixLabors.ImageSharp --version VERSION_NUMBER
-</code></pre></section>
-<section id="tabpanel_4fKdZcGiyY_tabid-3" role="tabpanel" data-tab="tabid-3" aria-hidden="true" hidden="hidden">
-<pre><code class="lang-xml">&lt;PackageReference Include=&quot;SixLabors.ImageSharp&quot; Version=&quot;VERSION_NUMBER&quot; /&gt;
-</code></pre></section>
-<section id="tabpanel_4fKdZcGiyY_tabid-4" role="tabpanel" data-tab="tabid-4" aria-hidden="true" hidden="hidden">
-<pre><code class="lang-bash">paket add SixLabors.ImageSharp --version VERSION_NUMBER
-</code></pre></section>
-</div>
-<div class="WARNING"><h5>Warning</h5><p>Prerelease versions installed via the <a href="https://docs.microsoft.com/en-us/nuget/consume-packages/install-use-packages-visual-studio">Visual Studio Nuget Package Manager</a> require the &quot;include prerelease&quot; checkbox to be checked.</p>
-</div>
+<h3 id="loading-fonts">Loading Fonts</h3>
+<p>Fonts provides several options for loading fonts, you can load then from a streams or files, we also support loading collections out of *.TTC files and well as single variants out if individual *.TTF files. We also support loading *.woff files.</p>
+<h4 id="minimal-example">Minimal Example</h4>
+<pre><code class="lang-c#">using SixLabors.Fonts;
 
+FontCollection collection = new FontCollection();
+FontFamily family = collection.Install(&quot;path/to/font.ttf&quot;);
+Font font = family.Create(12, FontStyle.Italic);
+
+// &quot;font&quot; can now be used in calls to DrawText from our ImageSharp.Drawing library.
+</code></pre><h4 id="expanded-example">Expanded Example</h4>
+<pre><code class="lang-c#">using SixLabors.Fonts;
+
+FontCollection collection = new FontCollection();
+collection.Install(&quot;path/to/font.ttf&quot;);
+collection.Install(&quot;path/to/font2.ttf&quot;);
+collection.Install(&quot;path/to/emojiFont.ttf&quot;);
+collection.InstallCollection(&quot;path/to/font.ttc&quot;);
+
+if(collection.TryFind(&quot;Font Name&quot;, out FontFamily family))
+if(collection.TryFind(&quot;Emoji Font Name&quot;, out FontFamily emojiFamily))
+{
+    // family will not be null here
+    Font font = family.Create(12, FontStyle.Italic);
+    RendererOptions options = new RendererOptions(font, dpi: 72)
+    {
+        ApplyKerning  = true, 
+        FallbackFontFamilies  = new []
+        {
+            emojiFamily // will be used if a particular code point doesn&#39;t exist in the font passed into the constructor. (e.g. emoji)
+        }
+    };
+    FontRectangle rect = TextMeasurer.Measure(&quot;Text to measure&quot;, options);
+}
+</code></pre>
 </article>
           </div>
           
@@ -128,7 +132,7 @@ Public License, version 3</a>. Commercial licensing options are available in add
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/SixLabors/docs/blob/master/articles/imagesharp/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/SixLabors/docs/blob/master/articles/fonts/gettingstarted.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

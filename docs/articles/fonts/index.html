@@ -79,42 +79,42 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="introduction">Introduction</h1>
 
-<h3 id="what-is-imagesharp">What is ImageSharp?</h3>
-<p>ImageSharp is a new, fully featured, fully managed, cross-platform, 2D graphics library.
-Designed to democratize image processing, ImageSharp brings you an incredibly powerful yet beautifully simple API.</p>
-<p>ImageSharp is designed from the ground up to be flexible and extensible. The library provides API endpoints for common image processing operations and the building blocks to allow for the development of addtional operations.  </p>
-<p>Built against <a href="https://docs.microsoft.com/en-us/dotnet/standard/net-standard">.NET Standard 1.3</a>, ImageSharp can be used in device, cloud, and embedded/IoT scenarios.  </p>
+<div class="WARNING"><h5>Warning</h5><p>Fonts is still considered BETA quality and we still reserve the rights to change the API shapes. WE are yet to priorities performance in our drawing APIs.</p>
+</div>
+<h3 id="what-is-fonts">What is Fonts?</h3>
+<p>Fonts is a font loading and layout library built primarily to provide text drawing support to ImageSharp.Drawing.</p>
+<p>Built against <a href="https://docs.microsoft.com/en-us/dotnet/standard/net-standard">.NET Standard 1.3</a>, Fonts can be used in device, cloud, and embedded/IoT scenarios.  </p>
 <h3 id="license">License</h3>
-<p>Imagesharp is licensed under under the terms of <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">GNU Affero General
+<p>Fonts is licensed under under the terms of <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">GNU Affero General
 Public License, version 3</a>. Commercial licensing options are available in addition to this license, see <a href="https://sixlabors.com/pricing">https://sixlabors.com/pricing</a> for details.</p>
 <h3 id="installation">Installation</h3>
-<p>ImageSharp is installed via <a href="https://www.nuget.org/packages/SixLabors.ImageSharp">Nuget</a> with nightly builds available on <a href="https://www.myget.org/feed/sixlabors/package/nuget/SixLabors.ImageSharp">MyGet</a>.</p>
-<div class="tabGroup" id="tabgroup_4fKdZcGiyY">
+<p>ImageSharp.Drawing is installed via <a href="https://www.nuget.org/packages/SixLabors.Fonts">Nuget</a> with nightly builds available on <a href="https://www.myget.org/feed/sixlabors/package/nuget/SixLabors.Fonts">MyGet</a>.</p>
+<div class="tabGroup" id="tabgroup_cVma2RQCLN">
 <ul role="tablist">
 <li role="presentation">
-<a href="#tabpanel_4fKdZcGiyY_tabid-1" role="tab" aria-controls="tabpanel_4fKdZcGiyY_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Package Manager</a>
+<a href="#tabpanel_cVma2RQCLN_tabid-1" role="tab" aria-controls="tabpanel_cVma2RQCLN_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Package Manager</a>
 </li>
 <li role="presentation">
-<a href="#tabpanel_4fKdZcGiyY_tabid-2" role="tab" aria-controls="tabpanel_4fKdZcGiyY_tabid-2" data-tab="tabid-2" tabindex="-1">.NET CLI</a>
+<a href="#tabpanel_cVma2RQCLN_tabid-2" role="tab" aria-controls="tabpanel_cVma2RQCLN_tabid-2" data-tab="tabid-2" tabindex="-1">.NET CLI</a>
 </li>
 <li role="presentation">
-<a href="#tabpanel_4fKdZcGiyY_tabid-3" role="tab" aria-controls="tabpanel_4fKdZcGiyY_tabid-3" data-tab="tabid-3" tabindex="-1">PackageReference</a>
+<a href="#tabpanel_cVma2RQCLN_tabid-3" role="tab" aria-controls="tabpanel_cVma2RQCLN_tabid-3" data-tab="tabid-3" tabindex="-1">PackageReference</a>
 </li>
 <li role="presentation">
-<a href="#tabpanel_4fKdZcGiyY_tabid-4" role="tab" aria-controls="tabpanel_4fKdZcGiyY_tabid-4" data-tab="tabid-4" tabindex="-1">Paket CLI</a>
+<a href="#tabpanel_cVma2RQCLN_tabid-4" role="tab" aria-controls="tabpanel_cVma2RQCLN_tabid-4" data-tab="tabid-4" tabindex="-1">Paket CLI</a>
 </li>
 </ul>
-<section id="tabpanel_4fKdZcGiyY_tabid-1" role="tabpanel" data-tab="tabid-1">
-<pre><code class="lang-bash">PM &gt; Install-Package SixLabors.ImageSharp -Version VERSION_NUMBER
+<section id="tabpanel_cVma2RQCLN_tabid-1" role="tabpanel" data-tab="tabid-1">
+<pre><code class="lang-bash">PM &gt; Install-Package SixLabors.Fonts -Version VERSION_NUMBER
 </code></pre></section>
-<section id="tabpanel_4fKdZcGiyY_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
-<pre><code class="lang-bash">dotnet add package SixLabors.ImageSharp --version VERSION_NUMBER
+<section id="tabpanel_cVma2RQCLN_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
+<pre><code class="lang-bash">dotnet add package SixLabors.Fonts --version VERSION_NUMBER
 </code></pre></section>
-<section id="tabpanel_4fKdZcGiyY_tabid-3" role="tabpanel" data-tab="tabid-3" aria-hidden="true" hidden="hidden">
-<pre><code class="lang-xml">&lt;PackageReference Include=&quot;SixLabors.ImageSharp&quot; Version=&quot;VERSION_NUMBER&quot; /&gt;
+<section id="tabpanel_cVma2RQCLN_tabid-3" role="tabpanel" data-tab="tabid-3" aria-hidden="true" hidden="hidden">
+<pre><code class="lang-xml">&lt;PackageReference Include=&quot;SixLabors.Fonts&quot; Version=&quot;VERSION_NUMBER&quot; /&gt;
 </code></pre></section>
-<section id="tabpanel_4fKdZcGiyY_tabid-4" role="tabpanel" data-tab="tabid-4" aria-hidden="true" hidden="hidden">
-<pre><code class="lang-bash">paket add SixLabors.ImageSharp --version VERSION_NUMBER
+<section id="tabpanel_cVma2RQCLN_tabid-4" role="tabpanel" data-tab="tabid-4" aria-hidden="true" hidden="hidden">
+<pre><code class="lang-bash">paket add SixLabors.Fonts --version VERSION_NUMBER
 </code></pre></section>
 </div>
 <div class="WARNING"><h5>Warning</h5><p>Prerelease versions installed via the <a href="https://docs.microsoft.com/en-us/nuget/consume-packages/install-use-packages-visual-studio">Visual Studio Nuget Package Manager</a> require the &quot;include prerelease&quot; checkbox to be checked.</p>
@@ -128,7 +128,7 @@ Public License, version 3</a>. Commercial licensing options are available in add
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/SixLabors/docs/blob/master/articles/imagesharp/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/SixLabors/docs/blob/master/articles/fonts/index.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

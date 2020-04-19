@@ -9,7 +9,7 @@
     <title>Resizing Images </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Resizing Images ">
-    <meta name="generator" content="docfx 2.50.0.0">
+    <meta name="generator" content="docfx 2.52.0.0">
     
     <link rel="shortcut icon" href="../../favicon.png">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -83,7 +83,7 @@
 <h3 id="the-basics">The Basics</h3>
 <p>Resizing an image involves the process of creating and iterating through the pixels of a target image and sampling areas of a source image to choose what color to implement for each pixel. The sampling algorithm chosen affects the target color and can dramatically alter the result. Different samplers are usually chosen based upon the use case - For example <code>NearestNeigbor</code> is often used for fast, low quality thumbnail generation, <code>Lanczos3</code> for high quality thumbnails due to it&#39;s sharpening effect, and <code>Spline</code> for high quality enlargment due to it&#39;s smoothing effect.</p>
 <p>With ImageSharp we default to <code>Bicubic</code> as it is a very robust algorithm offering good quality output when both reducing and enlarging images but you can easily set the algorithm when processing.</p>
-<p>A full list of supported sampling algorithms can be found <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Processing.KnownResamplers.html">here</a>:</p>
+<p>A full list of supported sampling algorithms can be found <a href="xref:SixLabors.ImageSharp.Processing.KnownResamplers">here</a>:</p>
 <p><strong>Resize the given image using the default <code>Bicubic</code> sampler.</strong></p>
 <pre><code class="lang-c#">using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Processing;
