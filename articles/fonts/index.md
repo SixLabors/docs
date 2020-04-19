@@ -14,7 +14,7 @@ Public License, version 3](https://www.gnu.org/licenses/agpl-3.0.en.html). Comme
   
 ### Installation
   
-ImageSharp.Drawing is installed via [Nuget](https://www.nuget.org/packages/SixLabors.Fonts) with nightly builds available on [MyGet](https://www.myget.org/feed/sixlabors/package/nuget/SixLabors.Fonts).
+Fonts is installed via [Nuget](https://www.nuget.org/packages/SixLabors.Fonts) with nightly builds available on [MyGet](https://www.myget.org/feed/sixlabors/package/nuget/SixLabors.Fonts).
 
 # [Package Manager](#tab/tabid-1)
 
