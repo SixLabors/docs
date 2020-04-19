@@ -13,7 +13,7 @@ ImageSharp.Drawing provides several classes for build and manipulating various s
 - @"SixLabors.ImageSharp.Drawing.IPath" Root interface defining a path/polygon and the type that the rasterizer uses to generate pixel output.
 - This `SixLabors.ImageSharp.Drawing` namespace contains a variety of available polygons to speed up your drawing process.
 
-In addition to the vector manipulation APIs we also have the rasterization APIs that can convert your @"SixLabors.ImageSharp.Drawing.IPath"s to pixels.
+In addition to the vector manipulation APIs the library also contains rasterization APIs that can convert your @"SixLabors.ImageSharp.Drawing.IPath"s to pixels.
 
 ### Drawing Polygons
 
