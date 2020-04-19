@@ -31,6 +31,7 @@ using (Image image = Image.Load(inStream))
 ```c#
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Processing;
+using SixLabors.ImageSharp.Formats.Png; //used only for the PNG encoder below
 
 using (Image image = Image.Load(inStream))
 {
@@ -38,7 +39,7 @@ using (Image image = Image.Load(inStream))
     int height = image.Height / 2;
     image.Mutate(x => x.Resize(width, height, KnownResamplers.Lanczos3));
 
-    image.Save(outStream);
+    image.Save(outStream, new PngEncoder());//Replace Png encoder with the file format of choice
 }
 ```
 
