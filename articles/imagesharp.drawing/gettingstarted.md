@@ -17,7 +17,7 @@ In addition to the vector manipulation APIs the library also contains rasterizat
 
 ### Drawing Polygons
 
-ImageSharp provides several options for drawing polygons weather you want to draw outlines or fill the shapes.
+ImageSharp provides several options for drawing polygons whether you want to draw outlines or fill shapes.
 
 #### Minimal Example
 
