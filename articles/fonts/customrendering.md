@@ -4,7 +4,7 @@
 >Fonts is still considered BETA quality and we still reserve the rights to change the API shapes. We are yet to priorities performance in our font loading and layout APIs.
 
 >[!NOTE]
->ImageSharp.Drawing already implements the glyph rendering for you unless you are rendering on other platforms we would recommend using the version build into that library.. this is a more advanced topic.
+>ImageSharp.Drawing already implements the glyph rendering for you unless you are rendering on other platforms we would recommend using the version provided by that library.. This is a more advanced topic.
 
 ### Implementing a glyph renderer
 
