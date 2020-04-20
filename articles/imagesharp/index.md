@@ -2,7 +2,7 @@
 
 ### What is ImageSharp?
 ImageSharp is a new, fully featured, fully managed, cross-platform, 2D graphics library.
-Designed to democratize image processing, ImageSharp brings you an incredibly powerful yet beautifully simple API.
+Designed to simplify image processing, ImageSharp brings you an incredibly powerful yet beautifully simple API.
 
 ImageSharp is designed from the ground up to be flexible and extensible. The library provides API endpoints for common image processing operations and the building blocks to allow for the development of addtional operations.  
 

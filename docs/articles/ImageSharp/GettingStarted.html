@@ -84,13 +84,13 @@
 <h3 id="imagesharp-images">ImageSharp Images</h3>
 <p>ImageSharp provides several classes for storing pixel data:</p>
 <ul>
-<li>@&quot;SixLabors.ImageSharp.Image&quot; A pixel format agnostic image container used for general processing operations.</li>
-<li>@&quot;SixLabors.ImageSharp.Image`1&quot; A generic image container that allows per-pixel access.</li>
+<li><a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Image.html">Image</a> A pixel format agnostic image container used for general processing operations.</li>
+<li><a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> A generic image container that allows per-pixel access.</li>
 </ul>
 <p>In addition there are classes available that represent individual image frames:</p>
 <ul>
-<li>@&quot;SixLabors.ImageSharp.ImageFrame&quot; A pixel format agnostic image frame container.</li>
-<li>@&quot;SixLabors.ImageSharp.ImageFrame`1&quot; A generic image frame container that allows per-pixel access.</li>
+<li><a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.ImageFrame.html">ImageFrame</a> A pixel format agnostic image frame container.</li>
+<li><a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.ImageFrame-1.html">ImageFrame&lt;TPixel&gt;</a> A generic image frame container that allows per-pixel access.</li>
 <li>@&quot;SixLabors.ImageSharp.Processing.Processors.Quantization.IndexedImageFrame`1&quot; A generic image frame used for indexed image pixel data where each pixel buffer value represents an index in a color palette.</li>
 </ul>
 <p>For more information on pixel formats please see the following <a href="pixelformats.html">documentation</a>.</p>
@@ -139,8 +139,8 @@ using(var image = new Image&lt;Rgba32&gt;(width, height))
 <h3 id="api-cornerstones">API Cornerstones</h3>
 <p>The easiest way to work with ImageSharp is to utilize our extension methods:</p>
 <ul>
-<li>@&quot;SixLabors.ImageSharp&quot; for basic operations and primitives.</li>
-<li>@&quot;SixLabors.ImageSharp.Processing&quot; for <code>Mutate()</code> and <code>Clone()</code>. All the processing extensions (eg. <code>Resize(...)</code>) live within this namespace. </li>
+<li><a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.html">SixLabors.ImageSharp</a> for basic operations and primitives.</li>
+<li><a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Processing.html">SixLabors.ImageSharp.Processing</a> for <code>Mutate()</code> and <code>Clone()</code>. All the processing extensions (eg. <code>Resize(...)</code>) live within this namespace. </li>
 </ul>
 <h3 id="performance">Performance</h3>
 <p>Achieving near-to-native performance is a major goal for the SixLabors team, and thanks to the improvements brought by the RyuJIT runtime, it&#39;s no longer mission impossible. We have made great progress and are constantly working on improvements.</p>
