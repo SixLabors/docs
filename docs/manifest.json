@@ -6704,6 +6704,30 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/imagesharp.web/gettingstarted.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/imagesharp.web/gettingstarted.html",
+          "hash": "DGUyaI98ivI0Qz6ozdWYsg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/imagesharp.web/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/imagesharp.web/index.html",
+          "hash": "x/pnJ6V/lqGfPGR5hgya7g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/imagesharp/configuration.md",
       "output": {
         ".html": {
@@ -6828,7 +6852,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "zfJ8EL4i4TTO3Fx7UDsi8w=="
+          "hash": "zg9jG5P1OhJfFHtenz6BtA=="
         }
       },
       "is_incremental": false,
@@ -6874,8 +6898,8 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 17,
-          "skipped_file_count": 16
+          "total_file_count": 19,
+          "skipped_file_count": 19
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,

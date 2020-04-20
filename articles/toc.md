@@ -2,7 +2,6 @@
 ## [Getting Started](imagesharp/gettingstarted.md)
 ### [Pixel Formats](imagesharp/pixelformats.md)
 ### [Image Formats](imagesharp/imageformats.md)
-
 ### [Processing Images](imagesharp/Processing.md)
 ### [Working with Pixel Buffers](imagesharp/WorkingWithPixelBuffers.md)
 ### [Configuration](imagesharp/Configuration.md)
@@ -10,6 +9,9 @@
 
 # [ImageSharp.Drawing](imagesharp.drawing/index.md)
 ## [Getting Started](imagesharp.drawing/gettingstarted.md)
+
+# [ImageSharp.Web](imagesharp.web/index.md)
+## [Getting Started](imagesharp.web/gettingstarted.md)
 
 # [Fonts](fonts/index.md)
 ## [Getting Started](fonts/gettingstarted.md)
