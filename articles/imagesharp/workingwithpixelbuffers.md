@@ -1,4 +1,4 @@
-# Working with pixel buffers
+# Working with Pixel Buffers
 
 ### Setting individual pixels using indexers
 A very basic and readable way for manipulating individual pixels is to use the indexer either on `Image<T>` or `ImageFrame<T>`:
@@ -12,7 +12,7 @@ using (Image<Rgba32> image = new Image<Rgba32>(400, 400))
 The idexer is much faster than the `.GetPixel(x, y)` and `.SetPixel(x,y)` methods of `System.Drawing` but, it's still quite slow.
 
 ### Efficient pixel manipulation
-If you want to achieve killer speed in your own low-level pixel manipulation routines, you need to utilize extension methods within the [](xref:SixLabors.ImageSharp.Advanced.AdvancedImageExtensions?displayProperty=name) class. These methods are using the [brand-new `Span<T>`-based memory manipulation primitives](https://www.codemag.com/Article/1807051/Introducing-.NET-Core-2.1-Flagship-Types-Span-T-and-Memory-T) from [System.Memory](https://www.nuget.org/packages/System.Memory/), providing a fast, yet safe low-level solution to manipulate pixel data.
+If you want to achieve killer speed in your own low-level pixel manipulation routines, you should utilize the per-row methods. These methods take advantage of the [brand-new `Span<T>`-based memory manipulation primitives](https://www.codemag.com/Article/1807051/Introducing-.NET-Core-2.1-Flagship-Types-Span-T-and-Memory-T) from [System.Memory](https://www.nuget.org/packages/System.Memory/), providing a fast, yet safe low-level solution to manipulate pixel data.
 
 This is how you can implement efficient row-by-row pixel manipulation:
 
@@ -61,20 +61,29 @@ await Task.Run(() =>
 ```
 
 ### Exporting raw pixel data from an `Image<T>`
-You can use `image.GetPixelSpan()` to access the whole contigous pixel buffer, eg. to copy the pixel data into an array:
+You can use @"SixLabors.ImageSharp.Image`1.TryGetSinglePixelSpan*" to access the whole contigous pixel buffer, eg. to copy the pixel data into an array. For large, multu-megapixel images, however, the data must be accessed and copied per row:
 ```C#
-Rgba32[] pixelArray = image.GetPixelSpan().ToArray();
+if(image.TryGetPixelSpan(out var pixelSpan))
+{
+    Rgba32[] pixelArray = pixelSpan.ToArray();
+}
 ```
 
 Or:
 ```C#
 Rgba32[] pixelArray = /* your pixel buffer being reused */
-image.GetPixelSpan().CopyTo(pixelArray);
+if(image.TryGetPixelSpan(out var pixelSpan))
+{
+    pixelSpan().CopyTo(pixelArray);
+}
 ```
 
 Or:
 ```C#
-byte[] rgbaBytes = MemoryMarshal.AsBytes(image.GetPixelSpan()).ToArray();
+if(image.TryGetPixelSpan(out var pixelSpan))
+{
+    byte[] rgbaBytes = MemoryMarshal.AsBytes(pixelSpan()).ToArray();
+}
 ```
 
 ### Loading raw pixel data into an `Image<T>`
@@ -83,7 +92,7 @@ byte[] rgbaBytes = MemoryMarshal.AsBytes(image.GetPixelSpan()).ToArray();
 Rgba32[] rgbaData = GetMyRgbaArray();
 using (var image = Image.LoadPixelData(rgbaData))
 {
-	// Work with image
+	// Work with the image
 }
 ```
 
@@ -91,7 +100,7 @@ using (var image = Image.LoadPixelData(rgbaData))
 byte[] rgbaBytes = GetMyRgbaBytes();
 using (var image = Image.LoadPixelData<Rgba32>(rgbaBytes))
 {
-	// Work with image
+	// Work with the image
 }
 ```
 
