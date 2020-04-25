@@ -243,7 +243,7 @@ h3 {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin: 1rem 0;
 }
 
@@ -683,4 +683,18 @@ pre code {
 .icon {
   max-width: 20px;
   margin-right: .5rem;
+}
+
+/* ###################
+ * ####### BUGS ######
+ * ###################
+ */
+.inheritance .level0:before,
+.inheritance .level1:before,
+.inheritance .level2:before,
+.inheritance .level3:before,
+.inheritance .level4:before,
+.inheritance .level5:before {
+    content: '\21B3';
+    margin-right: 5px;
 }

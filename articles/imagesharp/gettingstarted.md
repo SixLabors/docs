@@ -14,7 +14,7 @@ In addition there are classes available that represent individual image frames:
 
 - @"SixLabors.ImageSharp.ImageFrame" A pixel format agnostic image frame container.
 - @"SixLabors.ImageSharp.ImageFrame`1" A generic image frame container that allows per-pixel access.
-- @"SixLabors.ImageSharp.Processing.Processors.Quantization.IndexedImageFrame`1" A generic image frame used for indexed image pixel data where each pixel buffer value represents an index in a color palette.
+- @"SixLabors.ImageSharp.IndexedImageFrame`1" A generic image frame used for indexed image pixel data where each pixel buffer value represents an index in a color palette.
 
 For more information on pixel formats please see the following [documentation](pixelformats.md).
 

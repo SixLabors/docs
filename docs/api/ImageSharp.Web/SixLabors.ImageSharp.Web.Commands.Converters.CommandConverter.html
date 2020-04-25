@@ -136,11 +136,12 @@ We do not ever want to interfere with that.</p>
     <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_Commands_Converters_CommandConverter_ConvertFrom_System_Globalization_CultureInfo_System_String_System_Type_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.Commands.Converters.CommandConverter.ConvertFrom(System.Globalization.CultureInfo%2CSystem.String%2CSystem.Type)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/dc45b69b09e4e803424939eef326eef0f912ba31/src/ImageSharp.Web/Commands/Converters/CommandConverter.cs/#L20">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/4353568122b783bdd2a622c484d8142b36b870c6/src/ImageSharp.Web/Commands/Converters/CommandConverter.cs/#L20">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Web_Commands_Converters_CommandConverter_ConvertFrom_" data-uid="SixLabors.ImageSharp.Web.Commands.Converters.CommandConverter.ConvertFrom*"></a>
   <h4 id="SixLabors_ImageSharp_Web_Commands_Converters_CommandConverter_ConvertFrom_System_Globalization_CultureInfo_System_String_System_Type_" data-uid="SixLabors.ImageSharp.Web.Commands.Converters.CommandConverter.ConvertFrom(System.Globalization.CultureInfo,System.String,System.Type)">ConvertFrom(CultureInfo, String, Type)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts the given string to the type of this converter, using the specified culture information.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -159,17 +160,20 @@ We do not ever want to interfere with that.</p>
       <tr>
         <td><span class="xref">System.Globalization.CultureInfo</span></td>
         <td><span class="parametername">culture</span></td>
-        <td></td>
+        <td><p>The <span class="xref">System.Globalization.CultureInfo</span> to use as the current culture.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">value</span></td>
-        <td></td>
+        <td><p>The <span class="xref">System.String</span> to convert. </p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Type</span></td>
         <td><span class="parametername">propertyType</span></td>
-        <td></td>
+        <td><p>The property type that the converter will convert to.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -184,7 +188,24 @@ We do not ever want to interfere with that.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Object</span></td>
-        <td></td>
+        <td><p>An <span class="xref">System.String</span> that represents the converted value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.NotSupportedException</span></td>
+        <td><p>The conversion cannot be performed.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -193,11 +214,12 @@ We do not ever want to interfere with that.</p>
     <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_Commands_Converters_CommandConverter_ConvertFromInvariantString_System_String_System_Type_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.Commands.Converters.CommandConverter.ConvertFromInvariantString(System.String%2CSystem.Type)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/dc45b69b09e4e803424939eef326eef0f912ba31/src/ImageSharp.Web/Commands/Converters/CommandConverter.cs/#L23">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/4353568122b783bdd2a622c484d8142b36b870c6/src/ImageSharp.Web/Commands/Converters/CommandConverter.cs/#L23">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Web_Commands_Converters_CommandConverter_ConvertFromInvariantString_" data-uid="SixLabors.ImageSharp.Web.Commands.Converters.CommandConverter.ConvertFromInvariantString*"></a>
   <h4 id="SixLabors_ImageSharp_Web_Commands_Converters_CommandConverter_ConvertFromInvariantString_System_String_System_Type_" data-uid="SixLabors.ImageSharp.Web.Commands.Converters.CommandConverter.ConvertFromInvariantString(System.String,System.Type)">ConvertFromInvariantString(String, Type)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts the given string to the converter&apos;s native type using the invariant culture.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -216,12 +238,14 @@ We do not ever want to interfere with that.</p>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">text</span></td>
-        <td></td>
+        <td><p>The value to convert from.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Type</span></td>
         <td><span class="parametername">propertyType</span></td>
-        <td></td>
+        <td><p>The property type that the converter will convert to.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -236,7 +260,8 @@ We do not ever want to interfere with that.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Object</span></td>
-        <td></td>
+        <td><p>An <span class="xref">System.Object</span> that represents the converted value.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -245,7 +270,7 @@ We do not ever want to interfere with that.</p>
     <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_Commands_Converters_CommandConverter_GetConvertFromException_System_Object_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.Commands.Converters.CommandConverter.GetConvertFromException(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/dc45b69b09e4e803424939eef326eef0f912ba31/src/ImageSharp.Web/Commands/Converters/CommandConverter.cs/#L30">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/4353568122b783bdd2a622c484d8142b36b870c6/src/ImageSharp.Web/Commands/Converters/CommandConverter.cs/#L30">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Web_Commands_Converters_CommandConverter_GetConvertFromException_" data-uid="SixLabors.ImageSharp.Web.Commands.Converters.CommandConverter.GetConvertFromException*"></a>
   <h4 id="SixLabors_ImageSharp_Web_Commands_Converters_CommandConverter_GetConvertFromException_System_Object_" data-uid="SixLabors.ImageSharp.Web.Commands.Converters.CommandConverter.GetConvertFromException(System.Object)">GetConvertFromException(Object)</h4>
@@ -305,7 +330,7 @@ We do not ever want to interfere with that.</p>
                     <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_Commands_Converters_CommandConverter.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.Commands.Converters.CommandConverter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/dc45b69b09e4e803424939eef326eef0f912ba31/src/ImageSharp.Web/Commands/Converters/CommandConverter.cs/#L17" class="contribution-link">View Source</a>
+                    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/4353568122b783bdd2a622c484d8142b36b870c6/src/ImageSharp.Web/Commands/Converters/CommandConverter.cs/#L17" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
