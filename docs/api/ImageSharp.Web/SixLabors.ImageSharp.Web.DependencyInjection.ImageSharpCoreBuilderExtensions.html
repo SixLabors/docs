@@ -87,31 +87,31 @@
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">ImageSharpCoreBuilderExtensions</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
     </div>
     <div>
-      <span class="xref">System.Object.GetHashCode()</span>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">System.Object.GetType()</span>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
     </div>
     <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
     </div>
     <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
     </div>
     <div>
-      <span class="xref">System.Object.ToString()</span>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="SixLabors.ImageSharp.Web.DependencyInjection.html">SixLabors.ImageSharp.Web.DependencyInjection</a></h6>
@@ -137,6 +137,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IImageSharpBuilder AddProcessor&lt;TProcessor&gt;(this IImageSharpBuilder builder)
+
     where TProcessor : class, IImageWebProcessor</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -204,6 +205,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IImageSharpBuilder AddProcessor&lt;TProcessor&gt;(this IImageSharpBuilder builder, Func&lt;IServiceProvider, TProcessor&gt; implementationFactory)
+
     where TProcessor : class, IImageWebProcessor</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -223,7 +225,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.IServiceProvider</span>, TProcessor&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, TProcessor&gt;</td>
         <td><span class="parametername">implementationFactory</span></td>
         <td><p>The factory method for returning a <a class="xref" href="SixLabors.ImageSharp.Web.Providers.IImageProvider.html">IImageProvider</a>.</p>
 </td>
@@ -277,6 +279,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IImageSharpBuilder AddProvider&lt;TProvider&gt;(this IImageSharpBuilder builder)
+
     where TProvider : class, IImageProvider</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -344,6 +347,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IImageSharpBuilder AddProvider&lt;TProvider&gt;(this IImageSharpBuilder builder, Func&lt;IServiceProvider, TProvider&gt; implementationFactory)
+
     where TProvider : class, IImageProvider</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -363,7 +367,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.IServiceProvider</span>, TProvider&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, TProvider&gt;</td>
         <td><span class="parametername">implementationFactory</span></td>
         <td><p>The factory method for returning a <a class="xref" href="SixLabors.ImageSharp.Web.Providers.IImageProvider.html">IImageProvider</a>.</p>
 </td>
@@ -417,6 +421,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IImageSharpBuilder Configure&lt;TOptions&gt;(this IImageSharpBuilder builder, IConfiguration configuration)
+
     where TOptions : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -436,7 +441,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Microsoft.Extensions.Configuration.IConfiguration</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.extensions.configuration.iconfiguration">IConfiguration</a></td>
         <td><span class="parametername">configuration</span></td>
         <td><p>The configuration being bound.</p>
 </td>
@@ -490,6 +495,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IImageSharpBuilder Configure&lt;TOptions&gt;(this IImageSharpBuilder builder, Action&lt;TOptions&gt; configureOptions)
+
     where TOptions : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -509,7 +515,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;TOptions&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;TOptions&gt;</td>
         <td><span class="parametername">configureOptions</span></td>
         <td><p>The action used to configure the options.</p>
 </td>
@@ -563,6 +569,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IImageSharpBuilder RemoveProcessor&lt;TProcessor&gt;(this IImageSharpBuilder builder)
+
     where TProcessor : class, IImageWebProcessor</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -630,6 +637,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IImageSharpBuilder RemoveProvider&lt;TProvider&gt;(this IImageSharpBuilder builder)
+
     where TProvider : class, IImageProvider</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -715,7 +723,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.IServiceProvider</span>, <a class="xref" href="SixLabors.ImageSharp.Web.Caching.IImageCache.html">IImageCache</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="SixLabors.ImageSharp.Web.Caching.IImageCache.html">IImageCache</a>&gt;</td>
         <td><span class="parametername">implementationFactory</span></td>
         <td><p>The factory method for returning a <a class="xref" href="SixLabors.ImageSharp.Web.Caching.IImageCache.html">IImageCache</a>.</p>
 </td>
@@ -753,6 +761,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IImageSharpBuilder SetCache&lt;TCache&gt;(this IImageSharpBuilder builder)
+
     where TCache : class, IImageCache</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -838,7 +847,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.IServiceProvider</span>, <a class="xref" href="SixLabors.ImageSharp.Web.Caching.ICacheHash.html">ICacheHash</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="SixLabors.ImageSharp.Web.Caching.ICacheHash.html">ICacheHash</a>&gt;</td>
         <td><span class="parametername">implementationFactory</span></td>
         <td><p>The factory method for returning a <a class="xref" href="SixLabors.ImageSharp.Web.Caching.ICacheHash.html">ICacheHash</a>.</p>
 </td>
@@ -876,6 +885,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IImageSharpBuilder SetCacheHash&lt;TCacheHash&gt;(this IImageSharpBuilder builder)
+
     where TCacheHash : class, ICacheHash</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -961,7 +971,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.IServiceProvider</span>, <span class="xref">MemoryAllocator</span>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <span class="xref">MemoryAllocator</span>&gt;</td>
         <td><span class="parametername">implementationFactory</span></td>
         <td><p>The factory method for returning a <see cref="!:MemoryAllocator"></see>.</p>
 </td>
@@ -999,6 +1009,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IImageSharpBuilder SetMemoryAllocator&lt;TMemoryAllocator&gt;(this IImageSharpBuilder builder)
+
     where TMemoryAllocator : MemoryAllocator</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1084,7 +1095,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.IServiceProvider</span>, <a class="xref" href="SixLabors.ImageSharp.Web.Commands.IRequestParser.html">IRequestParser</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>, <a class="xref" href="SixLabors.ImageSharp.Web.Commands.IRequestParser.html">IRequestParser</a>&gt;</td>
         <td><span class="parametername">implementationFactory</span></td>
         <td><p>The factory method for returning a <a class="xref" href="SixLabors.ImageSharp.Web.Commands.IRequestParser.html">IRequestParser</a>.</p>
 </td>
@@ -1122,6 +1133,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IImageSharpBuilder SetRequestParser&lt;TParser&gt;(this IImageSharpBuilder builder)
+
     where TParser : class, IRequestParser</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>

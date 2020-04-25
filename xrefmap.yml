@@ -1,0 +1,33 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+  - uid: SixLabors.ImageSharp
+    name: SixLabors.ImageSharp
+    href: api/ImageSharp/SixLabors.ImageSharp.html
+    commentId: N:SixLabors.ImageSharp
+    fullName: SixLabors.ImageSharp
+    nameWithType: SixLabors.ImageSharp
+  - uid: SixLabors.ImageSharp.Drawing
+    name: SixLabors.ImageSharp.Drawing
+    href: api/ImageSharp.Drawing/SixLabors.ImageSharp.Drawing.html
+    commentId: N:SixLabors.ImageSharp.Drawing
+    fullName: SixLabors.ImageSharp.Drawing
+    nameWithType: SixLabors.ImageSharp.Drawing
+  - uid: SixLabors.Fonts
+    name: SixLabors.Fonts
+    href: api/Fonts/SixLabors.Fonts.html
+    commentId: N:SixLabors.Fonts
+    fullName: SixLabors.Fonts
+    nameWithType: SixLabors.Fonts
+  - uid: SixLabors.ImageSharp.Web.Providers
+    name: SixLabors.ImageSharp.Web.Providers
+    href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Providers.html
+    commentId: N:SixLabors.ImageSharp.Web.Providers
+    fullName: SixLabors.ImageSharp.Web.Providers
+    nameWithType: SixLabors.ImageSharp.Web.Providers
+  - uid: SixLabors.ImageSharp.Web.Resolvers
+    name: SixLabors.ImageSharp.Web.Resolvers
+    href: api/ImageSharp.Web/SixLabors.ImageSharp.Web.Resolvers.html
+    commentId: N:SixLabors.ImageSharp.Web.Resolvers
+    fullName: SixLabors.ImageSharp.Web.Resolvers
+    nameWithType: SixLabors.ImageSharp.Web.Resolvers

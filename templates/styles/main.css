@@ -232,6 +232,12 @@ body {
   background-color: #fff;
 }
 
+@media (min-width: 1200px){
+.container {
+    width: 95%;
+    max-width: 1400px;
+}
+
 h1,
 h2,
 h3 {
@@ -240,11 +246,18 @@ h3 {
   text-transform: uppercase;
   color: #40064e;
   line-height: 1.15;
+  word-wrap: none!important;
+  word-break: normal!important;
 }
 
 h1 {
   font-size: 2.5rem;
   margin: 1rem 0;
+}
+
+h1[data-uid]{
+  text-transform: none;
+  font-size: 2rem;
 }
 
 h2 {

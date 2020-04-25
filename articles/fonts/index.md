@@ -14,7 +14,7 @@ Public License, version 3](https://www.gnu.org/licenses/agpl-3.0.en.html). Comme
   
 ### Installation
   
-Fonts is installed via [Nuget](https://www.nuget.org/packages/SixLabors.Fonts) with nightly builds available on [MyGet](https://www.myget.org/feed/sixlabors/package/nuget/SixLabors.Fonts).
+Fonts is installed via [NuGet](https://www.nuget.org/packages/SixLabors.Fonts) with nightly builds available on [MyGet](https://www.myget.org/feed/sixlabors/package/nuget/SixLabors.Fonts).
 
 # [Package Manager](#tab/tabid-1)
 
@@ -43,4 +43,4 @@ paket add SixLabors.Fonts --version VERSION_NUMBER
 ***
 
 >[!WARNING]
->Prerelease versions installed via the [Visual Studio Nuget Package Manager](https://docs.microsoft.com/en-us/nuget/consume-packages/install-use-packages-visual-studio) require the "include prerelease" checkbox to be checked.
+>Prerelease versions installed via the [Visual Studio NuGet Package Manager](https://docs.microsoft.com/en-us/nuget/consume-packages/install-use-packages-visual-studio) require the "include prerelease" checkbox to be checked.

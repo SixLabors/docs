@@ -82,8 +82,65 @@
 <div class="NOTE"><h5>Note</h5><p>The official guide assumes intermediate level knowledge of C# and .NET. If you are totally new to .NET development, it might not be the best idea to jump right into a framework as your first step - grasp the basics then come back. Prior experience with other languages and frameworks helps, but is not required.</p>
 </div>
 <h3 id="setup-and-configuration">Setup and Configuration</h3>
-<p>TODO:</p>
+<p>Once installed you will need to add the following code  to <code>ConfigureServices</code> and <code>Configure</code> in your <code>Startup.cs</code> file.</p>
+<p>This installs the the default service and options.</p>
+<pre><code class="lang-c#">public void ConfigureServices(IServiceCollection services) {
+    // Add the default service and options.
+    services.AddImageSharp();
+}
 
+public void Configure(IApplicationBuilder app, IWebHostEnvironment env) {
+
+    // Add the image processing middleware.
+    app.UseImageSharp();
+}
+</code></pre><p>The fluent configuration is flexible allowing you to configure a mutlitude of different options. For example you can add the default service and custom options.</p>
+<pre><code class="lang-c#">// Add the default service and custom options.
+services.AddImageSharp(
+    options =&gt;
+        {
+            // You only need to set the options you want to change here.
+            options.Configuration = Configuration.Default;
+            options.MaxBrowserCacheDays = 7;
+            options.MaxCacheDays = 365;
+            options.CachedNameLength = 8;
+            options.OnParseCommands = _ =&gt; { };
+            options.OnBeforeSave = _ =&gt; { };
+            options.OnProcessed = _ =&gt; { };
+            options.OnPrepareResponse = _ =&gt; { };
+        });
+</code></pre><p>Or you can fine-grain control adding the default options and configure other services.</p>
+<pre><code class="lang-c#">// Fine-grain control adding the default options and configure other services.
+services.AddImageSharp()
+        .RemoveProcessor&lt;FormatWebProcessor&gt;()
+        .RemoveProcessor&lt;BackgroundColorWebProcessor&gt;();
+</code></pre><p>There are also factory methods for each builder that will allow building from configuration files.</p>
+<pre><code class="lang-c#">// Use the factory methods to configure the PhysicalFileSystemCacheOptions
+services.AddImageSharpCore(
+    options =&gt;
+        {
+            options.Configuration = Configuration.Default;
+            options.MaxBrowserCacheDays = 7;
+            options.MaxCacheDays = 365;
+            options.CachedNameLength = 8;
+            options.OnParseCommands = _ =&gt; { };
+            options.OnBeforeSave = _ =&gt; { };
+            options.OnProcessed = _ =&gt; { };
+            options.OnPrepareResponse = _ =&gt; { };
+        })
+    .SetRequestParser&lt;QueryCollectionRequestParser&gt;()
+    .SetMemoryAllocator(provider =&gt; ArrayPoolMemoryAllocator.CreateWithMinimalPooling())
+    .Configure&lt;PhysicalFileSystemCacheOptions&gt;(options =&gt;
+    {
+        options.CacheFolder = &quot;different-cache&quot;;
+    })
+    .SetCache&lt;PhysicalFileSystemCache&gt;()
+    .SetCacheHash&lt;CacheHash&gt;()
+    .AddProvider&lt;PhysicalFileSystemProvider&gt;()
+    .AddProcessor&lt;ResizeWebProcessor&gt;()
+    .AddProcessor&lt;FormatWebProcessor&gt;()
+    .AddProcessor&lt;BackgroundColorWebProcessor&gt;();
+</code></pre>
 </article>
           </div>
           

@@ -59,9 +59,30 @@
       "properties": {
         "TargetFramework": "netcoreapp3.1"
       }
+    },
+    {
+      "src": [
+        {
+          "files": [
+            "ext/ImageSharp.Web/src/ImageSharp.Web.Providers.Azure/**.csproj"
+          ]
+        }
+      ],
+      "dest": "api/ImageSharp.Web.Providers.Azure",
+      "disableGitFeatures": false,
+      "disableDefaultFilter": false,
+      "properties": {
+        "TargetFramework": "netcoreapp3.1"
+      }
     }
   ],
   "build": {
+    "xref": [
+      "xrefmap.yml"
+    ],
+    "xrefService": [
+      "https://xref.docs.microsoft.com/query?uid={uid}"
+    ],
     "content": [
       {
         "files": [
@@ -104,6 +125,7 @@
           "ext/ImageSharp/apiSpec/**.md",
           "ext/ImageSharp.Drawing/apiSpec/**.md",
           "ext/ImageSharp.Web/apiSpec/**.md",
+          "ext/ImageSharp.Web.Providers.Azure/apiSpec/**.md",
           "ext/Fonts/apiSpec/**.md"
         ],
         "exclude": [
