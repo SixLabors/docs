@@ -8,10 +8,17 @@ $(function () {
         return text.replace(/(Namespace|Class|Enum|Struct|Type|Interface)/g, '$1<wbr>');
     }
 
-    console.log("Running New Breaker");
     $("h1.text-break").each(function () {
-        let $this = $(this);
+        const $this = $(this);
 
         $this.html(breakPlainText($this.text()));
+    });
+
+    // Fix the width of the right sidebar so we don't lose content.
+    const scrollbarWidth = 3 * (window.innerWidth - document.body.offsetWidth);
+    $(".sideaffix").each(function () {
+        const $this = $(this);
+
+        $this.width($this.parent().outerWidth() + scrollbarWidth);
     });
 });

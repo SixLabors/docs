@@ -41,7 +41,7 @@ Real life image streams are usually stored / transferred in standardized formats
 
 - [`IImageDecoder`](xref:SixLabors.ImageSharp.Formats.IImageDecoder) is responsible for decoding streams (and files) in into [`Image<TPixel>`](xref:SixLabors.ImageSharp.Image`1). ImageSharp can **auto-detect** the image formats of streams/files based on their headers, selecting the correct [`IImageFormat`](xref:SixLabors.ImageSharp.Formats.IImageFormat) (and thus [`IImageDecoder`](xref:SixLabors.ImageSharp.Formats.IImageDecoder)). This logic is implemented by [`IImageFormatDetector`](xref:SixLabors.ImageSharp.Formats.IImageFormatDetector)'s.
 - [`IImageEncoder`](xref:SixLabors.ImageSharp.Formats.IImageEncoder) is responsible for writing [`Image<TPixel>`](xref:SixLabors.ImageSharp.Image`1) into a stream using a given format.
-- Decoders/encoders and [`IImageFormatDetector`](xref:SixLabors.ImageSharp.Formats.IImageFormatDetector)'s are mapped to image formats in [`ImageFormatsManager`](xref:SixLabors.ImageSharp.Configuration.ImageFormatsManager). It's possible to register new formats, or drop existing ones. See [Configuration](Configuration.md) for more details.
+- Decoders/encoders and [`IImageFormatDetector`](xref:SixLabors.ImageSharp.Formats.IImageFormatDetector)'s are mapped to image formats in [`ImageFormatsManager`](xref:SixLabors.ImageSharp.Configuration.ImageFormatsManager). It's possible to register new formats, or drop existing ones. See [Configuration](configuration.md) for more details.
 
 ### Metadata-only Decoding
 
