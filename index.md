@@ -8,7 +8,7 @@ You can find tutorials, examples and API details covering all Six Labors project
 
 Detailed documentation for the entire API available across our projects.
 
-### [Conceptual Documentation](articles/imagesharp) 
+### [Conceptual Documentation](articles/imagesharp/index.html) 
 
 Our graphics libraries are split into different projects. They cover different concerns separately, but there is strong cohesion in order to provide the best developer experience.
 
@@ -16,7 +16,7 @@ You can find documentation for each project in the links below.
 
 <div class="row projects">
     <div class="col-sm-6 col-md-3">
-        <a href="articles/imagesharp" class="project">
+        <a href="articles/imagesharp/index.html" class="project">
             <div class="text-center">
                 <img src="https://raw.githubusercontent.com/SixLabors/Branding/master/icons/imagesharp/sixlabors.imagesharp.svg?sanitize=true" alt="ImageSharp Logo">
             </div>
@@ -26,7 +26,7 @@ You can find documentation for each project in the links below.
         </a>
     </div>
     <div class="col-sm-6 col-md-3">
-        <a href="articles/imagesharp.drawing" class="project">
+        <a href="articles/imagesharp.drawing/index.html" class="project">
             <div class="text-center">
                 <img src="https://raw.githubusercontent.com/SixLabors/Branding/master/icons/imagesharp.drawing/sixlabors.imagesharp.drawing.svg?sanitize=true">
             </div>
@@ -36,7 +36,7 @@ You can find documentation for each project in the links below.
         </a>
     </div>
     <div class="col-sm-6 col-md-3">
-        <a href="articles/imagesharp.web" class="project">
+        <a href="articles/imagesharp.web/index.html" class="project">
             <div class="text-center">
                 <img src="https://raw.githubusercontent.com/SixLabors/Branding/master/icons/imagesharp.web/sixlabors.imagesharp.web.svg?sanitize=true">
             </div>
@@ -46,7 +46,7 @@ You can find documentation for each project in the links below.
         </a>
     </div>
     <div class="col-sm-6 col-md-3">
-        <a href="articles/fonts" class="project">
+        <a href="articles/fonts/index.html" class="project">
             <div class="text-center">
                 <img src="https://raw.githubusercontent.com/SixLabors/Branding/master/icons/fonts/sixlabors.fonts.svg?sanitize=true">
             </div>

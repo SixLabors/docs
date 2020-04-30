@@ -67,7 +67,7 @@ Our `Draw` APIs always work off the `Pen` where we processes your vector to crea
 
 ### Drawing Text
 
-ImageSharp.Drawing provides several options for drawing text all overloads of a single `DrawText` API. Our text drawing infrastructure is build on top of our [Fonts](../fonts) library. (See [SixLabors.Fonts](../fonts) for details on handling fonts.)
+ImageSharp.Drawing provides several options for drawing text all overloads of a single `DrawText` API. Our text drawing infrastructure is build on top of our [Fonts](../fonts/index.html) library. (See [SixLabors.Fonts](../fonts/index.html) for details on handling fonts.)
 
 #### Minimal Example
 
