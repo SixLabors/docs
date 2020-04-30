@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class OctreeQuantizer
    ">
-    <meta name="generator" content="docfx 2.47.0.0">
+    <meta name="generator" content="docfx 2.52.0.0">
     
     <link rel="shortcut icon" href="../../favicon.png">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -20,7 +20,7 @@
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
     
-    
+    <meta property="docfx:rel" content="../../">
     
   </head>
   <body data-spy="scroll" data-target="#affix" data-offset="120">
@@ -59,6 +59,14 @@
           </div>
         </div>
       </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
       <div role="main" class="container body-content hide-when-search">
         
         <div class="sidenav hide-when-search">
@@ -75,26 +83,47 @@
   <h1 id="SixLabors_ImageSharp_Processing_Processors_Quantization_OctreeQuantizer" data-uid="SixLabors.ImageSharp.Processing.Processors.Quantization.OctreeQuantizer" class="text-break">Class OctreeQuantizer
   </h1>
   <div class="markdown level0 summary"><p>Allows the quantization of images pixels using Octrees.
-<a href="http://msdn.microsoft.com/en-us/library/aa479306.aspx">http://msdn.microsoft.com/en-us/library/aa479306.aspx</a>
-<p>
-By default the quantizer uses <a class="xref" href="SixLabors.ImageSharp.Processing.KnownDiffusers.html#SixLabors_ImageSharp_Processing_KnownDiffusers_FloydSteinberg">FloydSteinberg</a> dithering and a color palette of a maximum length of <returns>255</returns>
-</p></p>
+<a href="http://msdn.microsoft.com/en-us/library/aa479306.aspx">http://msdn.microsoft.com/en-us/library/aa479306.aspx</a></p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">OctreeQuantizer</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Quantization.IQuantizer.html">IQuantizer</a></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Quantization.html">SixLabors.ImageSharp.Processing.Processors.Quantization</a></h6>
   <h6><strong>Assembly</strong>: SixLabors.ImageSharp.dll</h6>
   <h5 id="SixLabors_ImageSharp_Processing_Processors_Quantization_OctreeQuantizer_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class OctreeQuantizer : object, IQuantizer</code></pre>
+    <pre><code class="lang-csharp hljs">public class OctreeQuantizer : IQuantizer</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -103,11 +132,12 @@ By default the quantizer uses <a class="xref" href="SixLabors.ImageSharp.Process
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Quantization_OctreeQuantizer__ctor.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Quantization.OctreeQuantizer.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Processors/Quantization/OctreeQuantizer.cs/#L21">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/b44008ed2fe31fc1a620d014ddcd5d55a2f61605/src/ImageSharp/Processing/Processors/Quantization/OctreeQuantizer.cs/#L20">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_Processors_Quantization_OctreeQuantizer__ctor_" data-uid="SixLabors.ImageSharp.Processing.Processors.Quantization.OctreeQuantizer.#ctor*"></a>
   <h4 id="SixLabors_ImageSharp_Processing_Processors_Quantization_OctreeQuantizer__ctor" data-uid="SixLabors.ImageSharp.Processing.Processors.Quantization.OctreeQuantizer.#ctor">OctreeQuantizer()</h4>
-  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Quantization.OctreeQuantizer.html">OctreeQuantizer</a> class.</p>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Quantization.OctreeQuantizer.html">OctreeQuantizer</a> class
+using the default <a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Quantization.QuantizerOptions.html">QuantizerOptions</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -116,19 +146,19 @@ By default the quantizer uses <a class="xref" href="SixLabors.ImageSharp.Process
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Quantization_OctreeQuantizer__ctor_SixLabors_ImageSharp_Processing_Processors_Dithering_IErrorDiffuser_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Quantization.OctreeQuantizer.%23ctor(SixLabors.ImageSharp.Processing.Processors.Dithering.IErrorDiffuser)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Quantization_OctreeQuantizer__ctor_SixLabors_ImageSharp_Processing_Processors_Quantization_QuantizerOptions_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Quantization.OctreeQuantizer.%23ctor(SixLabors.ImageSharp.Processing.Processors.Quantization.QuantizerOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Processors/Quantization/OctreeQuantizer.cs/#L58">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/b44008ed2fe31fc1a620d014ddcd5d55a2f61605/src/ImageSharp/Processing/Processors/Quantization/OctreeQuantizer.cs/#L29">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_Processors_Quantization_OctreeQuantizer__ctor_" data-uid="SixLabors.ImageSharp.Processing.Processors.Quantization.OctreeQuantizer.#ctor*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_Processors_Quantization_OctreeQuantizer__ctor_SixLabors_ImageSharp_Processing_Processors_Dithering_IErrorDiffuser_" data-uid="SixLabors.ImageSharp.Processing.Processors.Quantization.OctreeQuantizer.#ctor(SixLabors.ImageSharp.Processing.Processors.Dithering.IErrorDiffuser)">OctreeQuantizer(IErrorDiffuser)</h4>
+  <h4 id="SixLabors_ImageSharp_Processing_Processors_Quantization_OctreeQuantizer__ctor_SixLabors_ImageSharp_Processing_Processors_Quantization_QuantizerOptions_" data-uid="SixLabors.ImageSharp.Processing.Processors.Quantization.OctreeQuantizer.#ctor(SixLabors.ImageSharp.Processing.Processors.Quantization.QuantizerOptions)">OctreeQuantizer(QuantizerOptions)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Quantization.OctreeQuantizer.html">OctreeQuantizer</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public OctreeQuantizer(IErrorDiffuser diffuser)</code></pre>
+    <pre><code class="lang-csharp hljs">public OctreeQuantizer(QuantizerOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -141,157 +171,9 @@ By default the quantizer uses <a class="xref" href="SixLabors.ImageSharp.Process
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Dithering.IErrorDiffuser.html">IErrorDiffuser</a></td>
-        <td><span class="parametername">diffuser</span></td>
-        <td><p>The error diffusion algorithm, if any, to apply to the output image.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Quantization_OctreeQuantizer__ctor_SixLabors_ImageSharp_Processing_Processors_Dithering_IErrorDiffuser_System_Int32_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Quantization.OctreeQuantizer.%23ctor(SixLabors.ImageSharp.Processing.Processors.Dithering.IErrorDiffuser%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Processors/Quantization/OctreeQuantizer.cs/#L68">View Source</a>
-  </span>
-  <a id="SixLabors_ImageSharp_Processing_Processors_Quantization_OctreeQuantizer__ctor_" data-uid="SixLabors.ImageSharp.Processing.Processors.Quantization.OctreeQuantizer.#ctor*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_Processors_Quantization_OctreeQuantizer__ctor_SixLabors_ImageSharp_Processing_Processors_Dithering_IErrorDiffuser_System_Int32_" data-uid="SixLabors.ImageSharp.Processing.Processors.Quantization.OctreeQuantizer.#ctor(SixLabors.ImageSharp.Processing.Processors.Dithering.IErrorDiffuser,System.Int32)">OctreeQuantizer(IErrorDiffuser, Int32)</h4>
-  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Quantization.OctreeQuantizer.html">OctreeQuantizer</a> class.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public OctreeQuantizer(IErrorDiffuser diffuser, int maxColors)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Dithering.IErrorDiffuser.html">IErrorDiffuser</a></td>
-        <td><span class="parametername">diffuser</span></td>
-        <td><p>The error diffusion algorithm, if any, to apply to the output image.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">maxColors</span></td>
-        <td><p>The maximum number of colors to hold in the color palette.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Quantization_OctreeQuantizer__ctor_System_Boolean_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Quantization.OctreeQuantizer.%23ctor(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Processors/Quantization/OctreeQuantizer.cs/#L39">View Source</a>
-  </span>
-  <a id="SixLabors_ImageSharp_Processing_Processors_Quantization_OctreeQuantizer__ctor_" data-uid="SixLabors.ImageSharp.Processing.Processors.Quantization.OctreeQuantizer.#ctor*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_Processors_Quantization_OctreeQuantizer__ctor_System_Boolean_" data-uid="SixLabors.ImageSharp.Processing.Processors.Quantization.OctreeQuantizer.#ctor(System.Boolean)">OctreeQuantizer(Boolean)</h4>
-  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Quantization.OctreeQuantizer.html">OctreeQuantizer</a> class.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public OctreeQuantizer(bool dither)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">dither</span></td>
-        <td><p>Whether to apply dithering to the output image.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Quantization_OctreeQuantizer__ctor_System_Boolean_System_Int32_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Quantization.OctreeQuantizer.%23ctor(System.Boolean%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Processors/Quantization/OctreeQuantizer.cs/#L49">View Source</a>
-  </span>
-  <a id="SixLabors_ImageSharp_Processing_Processors_Quantization_OctreeQuantizer__ctor_" data-uid="SixLabors.ImageSharp.Processing.Processors.Quantization.OctreeQuantizer.#ctor*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_Processors_Quantization_OctreeQuantizer__ctor_System_Boolean_System_Int32_" data-uid="SixLabors.ImageSharp.Processing.Processors.Quantization.OctreeQuantizer.#ctor(System.Boolean,System.Int32)">OctreeQuantizer(Boolean, Int32)</h4>
-  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Quantization.OctreeQuantizer.html">OctreeQuantizer</a> class.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public OctreeQuantizer(bool dither, int maxColors)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">dither</span></td>
-        <td><p>Whether to apply dithering to the output image.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">maxColors</span></td>
-        <td><p>The maximum number of colors to hold in the color palette.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Quantization_OctreeQuantizer__ctor_System_Int32_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Quantization.OctreeQuantizer.%23ctor(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Processors/Quantization/OctreeQuantizer.cs/#L30">View Source</a>
-  </span>
-  <a id="SixLabors_ImageSharp_Processing_Processors_Quantization_OctreeQuantizer__ctor_" data-uid="SixLabors.ImageSharp.Processing.Processors.Quantization.OctreeQuantizer.#ctor*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_Processors_Quantization_OctreeQuantizer__ctor_System_Int32_" data-uid="SixLabors.ImageSharp.Processing.Processors.Quantization.OctreeQuantizer.#ctor(System.Int32)">OctreeQuantizer(Int32)</h4>
-  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Quantization.OctreeQuantizer.html">OctreeQuantizer</a> class.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public OctreeQuantizer(int maxColors)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">maxColors</span></td>
-        <td><p>The maximum number of colors to hold in the color palette.</p>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Quantization.QuantizerOptions.html">QuantizerOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The quantizer options defining quantization rules.</p>
 </td>
       </tr>
     </tbody>
@@ -300,19 +182,18 @@ By default the quantizer uses <a class="xref" href="SixLabors.ImageSharp.Process
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Quantization_OctreeQuantizer_Diffuser.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Quantization.OctreeQuantizer.Diffuser%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Quantization_OctreeQuantizer_Options.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Quantization.OctreeQuantizer.Options%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Processors/Quantization/OctreeQuantizer.cs/#L75">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/b44008ed2fe31fc1a620d014ddcd5d55a2f61605/src/ImageSharp/Processing/Processors/Quantization/OctreeQuantizer.cs/#L36">View Source</a>
   </span>
-  <a id="SixLabors_ImageSharp_Processing_Processors_Quantization_OctreeQuantizer_Diffuser_" data-uid="SixLabors.ImageSharp.Processing.Processors.Quantization.OctreeQuantizer.Diffuser*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_Processors_Quantization_OctreeQuantizer_Diffuser" data-uid="SixLabors.ImageSharp.Processing.Processors.Quantization.OctreeQuantizer.Diffuser">Diffuser</h4>
-  <div class="markdown level1 summary"><p>Gets the error diffusion algorithm to apply to the output image.</p>
-</div>
+  <a id="SixLabors_ImageSharp_Processing_Processors_Quantization_OctreeQuantizer_Options_" data-uid="SixLabors.ImageSharp.Processing.Processors.Quantization.OctreeQuantizer.Options*"></a>
+  <h4 id="SixLabors_ImageSharp_Processing_Processors_Quantization_OctreeQuantizer_Options" data-uid="SixLabors.ImageSharp.Processing.Processors.Quantization.OctreeQuantizer.Options">Options</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IErrorDiffuser Diffuser { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public QuantizerOptions Options { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -324,38 +205,7 @@ By default the quantizer uses <a class="xref" href="SixLabors.ImageSharp.Process
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Dithering.IErrorDiffuser.html">IErrorDiffuser</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Quantization_OctreeQuantizer_MaxColors.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Quantization.OctreeQuantizer.MaxColors%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Processors/Quantization/OctreeQuantizer.cs/#L80">View Source</a>
-  </span>
-  <a id="SixLabors_ImageSharp_Processing_Processors_Quantization_OctreeQuantizer_MaxColors_" data-uid="SixLabors.ImageSharp.Processing.Processors.Quantization.OctreeQuantizer.MaxColors*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_Processors_Quantization_OctreeQuantizer_MaxColors" data-uid="SixLabors.ImageSharp.Processing.Processors.Quantization.OctreeQuantizer.MaxColors">MaxColors</h4>
-  <div class="markdown level1 summary"><p>Gets the maximum number of colors to hold in the color palette.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int MaxColors { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Quantization.QuantizerOptions.html">QuantizerOptions</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -364,19 +214,19 @@ By default the quantizer uses <a class="xref" href="SixLabors.ImageSharp.Process
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Quantization_OctreeQuantizer_CreateFrameQuantizer__1_SixLabors_ImageSharp_Configuration_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Quantization.OctreeQuantizer.CreateFrameQuantizer%60%601(SixLabors.ImageSharp.Configuration)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Quantization_OctreeQuantizer_CreatePixelSpecificQuantizer__1_SixLabors_ImageSharp_Configuration_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Quantization.OctreeQuantizer.CreatePixelSpecificQuantizer%60%601(SixLabors.ImageSharp.Configuration)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Processors/Quantization/OctreeQuantizer.cs/#L84">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/b44008ed2fe31fc1a620d014ddcd5d55a2f61605/src/ImageSharp/Processing/Processors/Quantization/OctreeQuantizer.cs/#L39">View Source</a>
   </span>
-  <a id="SixLabors_ImageSharp_Processing_Processors_Quantization_OctreeQuantizer_CreateFrameQuantizer_" data-uid="SixLabors.ImageSharp.Processing.Processors.Quantization.OctreeQuantizer.CreateFrameQuantizer*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_Processors_Quantization_OctreeQuantizer_CreateFrameQuantizer__1_SixLabors_ImageSharp_Configuration_" data-uid="SixLabors.ImageSharp.Processing.Processors.Quantization.OctreeQuantizer.CreateFrameQuantizer``1(SixLabors.ImageSharp.Configuration)">CreateFrameQuantizer&lt;TPixel&gt;(Configuration)</h4>
-  <div class="markdown level1 summary"><p>Creates the generic frame quantizer</p>
-</div>
+  <a id="SixLabors_ImageSharp_Processing_Processors_Quantization_OctreeQuantizer_CreatePixelSpecificQuantizer_" data-uid="SixLabors.ImageSharp.Processing.Processors.Quantization.OctreeQuantizer.CreatePixelSpecificQuantizer*"></a>
+  <h4 id="SixLabors_ImageSharp_Processing_Processors_Quantization_OctreeQuantizer_CreatePixelSpecificQuantizer__1_SixLabors_ImageSharp_Configuration_" data-uid="SixLabors.ImageSharp.Processing.Processors.Quantization.OctreeQuantizer.CreatePixelSpecificQuantizer``1(SixLabors.ImageSharp.Configuration)">CreatePixelSpecificQuantizer&lt;TPixel&gt;(Configuration)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IFrameQuantizer&lt;TPixel&gt; CreateFrameQuantizer&lt;TPixel&gt;(Configuration configuration)
+    <pre><code class="lang-csharp hljs">public IQuantizer&lt;TPixel&gt; CreatePixelSpecificQuantizer&lt;TPixel&gt;(Configuration configuration)
+
     where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -406,9 +256,8 @@ By default the quantizer uses <a class="xref" href="SixLabors.ImageSharp.Process
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Quantization.IFrameQuantizer-1.html">IFrameQuantizer</a>&lt;TPixel&gt;</td>
-        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Quantization.IFrameQuantizer-1.html">IFrameQuantizer&lt;TPixel&gt;</a></p>
-</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Quantization.IQuantizer-1.html">IQuantizer</a>&lt;TPixel&gt;</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -423,26 +272,25 @@ By default the quantizer uses <a class="xref" href="SixLabors.ImageSharp.Process
     <tbody>
       <tr>
         <td><span class="parametername">TPixel</span></td>
-        <td><p>The pixel format.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Quantization_OctreeQuantizer_CreateFrameQuantizer__1_SixLabors_ImageSharp_Configuration_System_Int32_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Quantization.OctreeQuantizer.CreateFrameQuantizer%60%601(SixLabors.ImageSharp.Configuration%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Quantization_OctreeQuantizer_CreatePixelSpecificQuantizer__1_SixLabors_ImageSharp_Configuration_SixLabors_ImageSharp_Processing_Processors_Quantization_QuantizerOptions_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Quantization.OctreeQuantizer.CreatePixelSpecificQuantizer%60%601(SixLabors.ImageSharp.Configuration%2CSixLabors.ImageSharp.Processing.Processors.Quantization.QuantizerOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Processors/Quantization/OctreeQuantizer.cs/#L89">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/b44008ed2fe31fc1a620d014ddcd5d55a2f61605/src/ImageSharp/Processing/Processors/Quantization/OctreeQuantizer.cs/#L44">View Source</a>
   </span>
-  <a id="SixLabors_ImageSharp_Processing_Processors_Quantization_OctreeQuantizer_CreateFrameQuantizer_" data-uid="SixLabors.ImageSharp.Processing.Processors.Quantization.OctreeQuantizer.CreateFrameQuantizer*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_Processors_Quantization_OctreeQuantizer_CreateFrameQuantizer__1_SixLabors_ImageSharp_Configuration_System_Int32_" data-uid="SixLabors.ImageSharp.Processing.Processors.Quantization.OctreeQuantizer.CreateFrameQuantizer``1(SixLabors.ImageSharp.Configuration,System.Int32)">CreateFrameQuantizer&lt;TPixel&gt;(Configuration, Int32)</h4>
-  <div class="markdown level1 summary"><p>Creates the generic frame quantizer</p>
-</div>
+  <a id="SixLabors_ImageSharp_Processing_Processors_Quantization_OctreeQuantizer_CreatePixelSpecificQuantizer_" data-uid="SixLabors.ImageSharp.Processing.Processors.Quantization.OctreeQuantizer.CreatePixelSpecificQuantizer*"></a>
+  <h4 id="SixLabors_ImageSharp_Processing_Processors_Quantization_OctreeQuantizer_CreatePixelSpecificQuantizer__1_SixLabors_ImageSharp_Configuration_SixLabors_ImageSharp_Processing_Processors_Quantization_QuantizerOptions_" data-uid="SixLabors.ImageSharp.Processing.Processors.Quantization.OctreeQuantizer.CreatePixelSpecificQuantizer``1(SixLabors.ImageSharp.Configuration,SixLabors.ImageSharp.Processing.Processors.Quantization.QuantizerOptions)">CreatePixelSpecificQuantizer&lt;TPixel&gt;(Configuration, QuantizerOptions)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IFrameQuantizer&lt;TPixel&gt; CreateFrameQuantizer&lt;TPixel&gt;(Configuration configuration, int maxColors)
+    <pre><code class="lang-csharp hljs">public IQuantizer&lt;TPixel&gt; CreatePixelSpecificQuantizer&lt;TPixel&gt;(Configuration configuration, QuantizerOptions options)
+
     where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -458,14 +306,12 @@ By default the quantizer uses <a class="xref" href="SixLabors.ImageSharp.Process
       <tr>
         <td><a class="xref" href="SixLabors.ImageSharp.Configuration.html">Configuration</a></td>
         <td><span class="parametername">configuration</span></td>
-        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Configuration.html">Configuration</a> to configure internal operations.</p>
-</td>
+        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">maxColors</span></td>
-        <td><p>The maximum number of colors to hold in the color palette.</p>
-</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Quantization.QuantizerOptions.html">QuantizerOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -479,9 +325,8 @@ By default the quantizer uses <a class="xref" href="SixLabors.ImageSharp.Process
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Quantization.IFrameQuantizer-1.html">IFrameQuantizer</a>&lt;TPixel&gt;</td>
-        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Quantization.IFrameQuantizer-1.html">IFrameQuantizer&lt;TPixel&gt;</a></p>
-</td>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Quantization.IQuantizer-1.html">IQuantizer</a>&lt;TPixel&gt;</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -496,8 +341,7 @@ By default the quantizer uses <a class="xref" href="SixLabors.ImageSharp.Process
     <tbody>
       <tr>
         <td><span class="parametername">TPixel</span></td>
-        <td><p>The pixel format.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -516,7 +360,7 @@ By default the quantizer uses <a class="xref" href="SixLabors.ImageSharp.Process
                     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Quantization_OctreeQuantizer.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Quantization.OctreeQuantizer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/Processing/Processors/Quantization/OctreeQuantizer.cs/#L16" class="contribution-link">View Source</a>
+                    <a href="https://github.com/SixLabors/ImageSharp/blob/b44008ed2fe31fc1a620d014ddcd5d55a2f61605/src/ImageSharp/Processing/Processors/Quantization/OctreeQuantizer.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

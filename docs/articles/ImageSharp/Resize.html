@@ -9,7 +9,7 @@
     <title>Resizing Images </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Resizing Images ">
-    <meta name="generator" content="docfx 2.47.0.0">
+    <meta name="generator" content="docfx 2.52.0.0">
     
     <link rel="shortcut icon" href="../../favicon.png">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -19,7 +19,7 @@
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
     
-    
+    <meta property="docfx:rel" content="../../">
     
   </head>
   <body data-spy="scroll" data-target="#affix">
@@ -58,6 +58,14 @@
           </div>
         </div>
       </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
       <div role="main" class="container body-content hide-when-search">
         
         <div class="sidenav hide-when-search">
@@ -73,9 +81,9 @@
 
 <p>Resizing an image is probably the most common processing operation that applications use. ImageSharp offers an incredibly flexible collection of resize options that allow developers to choose sizing algorithms, sampling algorithms, and gamma handling as well as other options.</p>
 <h3 id="the-basics">The Basics</h3>
-<p>Resizing an image involves the process of creating and iterating through the pixels of a target image and sampling areas of a source image to choose what color to implement for each pixel. The sampling algorithm chosen affects the target color and can dramatically alter the result. Different samplers are usually chosen based upon the use case - For example <code>NearestNeigbor</code> is often used for fast, low quality thumbnail generation, <code>Lanczos3</code> for high quality thumbnails due to it&#39;s sharpening effect, and <code>Spline</code> for high quality enlargment due to it&#39;s smoothing effect.</p>
+<p>Resizing an image involves the process of creating and iterating through the pixels of a target image and sampling areas of a source image to choose what color to implement for each pixel. The sampling algorithm chosen affects the target color and can dramatically alter the result. Different samplers are usually chosen based upon the use case - For example <code>NearestNeigbor</code> is often used for fast, low quality thumbnail generation, <code>Lanczos3</code> for high quality thumbnails due to it&#39;s sharpening effect, and <code>Spline</code> for high quality enlargement due to it&#39;s smoothing effect.</p>
 <p>With ImageSharp we default to <code>Bicubic</code> as it is a very robust algorithm offering good quality output when both reducing and enlarging images but you can easily set the algorithm when processing.</p>
-<p>A full list of supported sampling algorithms can be found <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Processing.KnownResamplers.html">here</a>:</p>
+<p>A full list of out-of-the-box sampling algorithms can be found <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Processing.KnownResamplers.html">here</a>:</p>
 <p><strong>Resize the given image using the default <code>Bicubic</code> sampler.</strong></p>
 <pre><code class="lang-c#">using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Processing;
@@ -91,6 +99,7 @@ using (Image image = Image.Load(inStream))
 </code></pre><p><strong>Resize the given image using the <code>Lanczos3</code> sampler:</strong></p>
 <pre><code class="lang-c#">using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Processing;
+using SixLabors.ImageSharp.Formats.Png; //used only for the PNG encoder below
 
 using (Image image = Image.Load(inStream))
 {
@@ -98,13 +107,12 @@ using (Image image = Image.Load(inStream))
     int height = image.Height / 2;
     image.Mutate(x =&gt; x.Resize(width, height, KnownResamplers.Lanczos3));
 
-    image.Save(outStream);
+    image.Save(outStream, new PngEncoder());//Replace Png encoder with the file format of choice
 }
 </code></pre><div class="NOTE"><h5>Note</h5><p>If you pass <code>0</code> as any of the values for <code>width</code> and <code>height</code> dimensions then ImageSharp will automatically determine the correct opposite dimensions size to preserve the original aspect ratio.</p>
 </div>
 <h3 id="advanced-resizing">Advanced Resizing</h3>
-<p>In addition to basic resizing operations ImageSharp also offers more advanced features.</p>
-<p>TODO: Add advanced description and code examples.</p>
+<p>In addition to basic resizing operations ImageSharp also offers more advanced features. Check out the <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Processing.ResizeOptions.html">ResizeOptions</a> class for details.</p>
 
 </article>
           </div>
@@ -114,7 +122,7 @@ using (Image image = Image.Load(inStream))
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/SixLabors/docs/blob/master/articles/ImageSharp/Resize.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/SixLabors/docs/blob/master/articles/imagesharp/resize.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

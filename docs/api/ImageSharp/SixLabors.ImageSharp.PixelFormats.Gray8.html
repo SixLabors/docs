@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Struct Gray8
    ">
-    <meta name="generator" content="docfx 2.47.0.0">
+    <meta name="generator" content="docfx 2.52.0.0">
     
     <link rel="shortcut icon" href="../../favicon.png">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -20,7 +20,7 @@
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
     
-    
+    <meta property="docfx:rel" content="../../">
     
   </head>
   <body data-spy="scroll" data-target="#affix" data-offset="120">
@@ -59,6 +59,14 @@
           </div>
         </div>
       </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
       <div role="main" class="container body-content hide-when-search">
         
         <div class="sidenav hide-when-search">
@@ -83,9 +91,21 @@ Ranges from [0, 0, 0, 1] to [1, 1, 1, 1] in vector form.
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="SixLabors.ImageSharp.PixelFormats.IPixel-1.html">IPixel</a>&lt;<a class="xref" href="SixLabors.ImageSharp.PixelFormats.Gray8.html">Gray8</a>&gt;</div>
-    <div><span class="xref">IEquatable</span>&lt;<a class="xref" href="SixLabors.ImageSharp.PixelFormats.Gray8.html">Gray8</a>&gt;</div>
-    <div><a class="xref" href="SixLabors.ImageSharp.PixelFormats.IPackedVector-1.html">IPackedVector</a>&lt;<span class="xref">System.Byte</span>&gt;</div>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="SixLabors.ImageSharp.PixelFormats.Gray8.html">Gray8</a>&gt;</div>
+    <div><a class="xref" href="SixLabors.ImageSharp.PixelFormats.IPackedVector-1.html">IPackedVector</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>&gt;</div>
     <div><a class="xref" href="SixLabors.ImageSharp.PixelFormats.IPixel.html">IPixel</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="SixLabors.ImageSharp.PixelFormats.html">SixLabors.ImageSharp.PixelFormats</a></h6>
   <h6><strong>Assembly</strong>: SixLabors.ImageSharp.dll</h6>
@@ -122,7 +142,7 @@ Ranges from [0, 0, 0, 1] to [1, 1, 1, 1] in vector form.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Byte</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a></td>
         <td><span class="parametername">luminance</span></td>
         <td><p>The luminance component.</p>
 </td>
@@ -140,7 +160,8 @@ Ranges from [0, 0, 0, 1] to [1, 1, 1, 1] in vector form.
   </span>
   <a id="SixLabors_ImageSharp_PixelFormats_Gray8_PackedValue_" data-uid="SixLabors.ImageSharp.PixelFormats.Gray8.PackedValue*"></a>
   <h4 id="SixLabors_ImageSharp_PixelFormats_Gray8_PackedValue" data-uid="SixLabors.ImageSharp.PixelFormats.Gray8.PackedValue">PackedValue</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets or sets the packed representation of the value.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -156,7 +177,7 @@ Ranges from [0, 0, 0, 1] to [1, 1, 1, 1] in vector form.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Byte</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -172,7 +193,9 @@ Ranges from [0, 0, 0, 1] to [1, 1, 1, 1] in vector form.
   </span>
   <a id="SixLabors_ImageSharp_PixelFormats_Gray8_CreatePixelOperations_" data-uid="SixLabors.ImageSharp.PixelFormats.Gray8.CreatePixelOperations*"></a>
   <h4 id="SixLabors_ImageSharp_PixelFormats_Gray8_CreatePixelOperations" data-uid="SixLabors.ImageSharp.PixelFormats.Gray8.CreatePixelOperations">CreatePixelOperations()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a <a class="xref" href="SixLabors.ImageSharp.PixelFormats.PixelOperations-1.html">PixelOperations&lt;TPixel&gt;</a> instance for this pixel type.
+This method is not intended to be consumed directly. Use <a class="xref" href="SixLabors.ImageSharp.PixelFormats.PixelOperations-1.html#SixLabors_ImageSharp_PixelFormats_PixelOperations_1_Instance">Instance</a> instead.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -189,7 +212,8 @@ Ranges from [0, 0, 0, 1] to [1, 1, 1, 1] in vector form.
     <tbody>
       <tr>
         <td><a class="xref" href="SixLabors.ImageSharp.PixelFormats.PixelOperations-1.html">PixelOperations</a>&lt;<a class="xref" href="SixLabors.ImageSharp.PixelFormats.Gray8.html">Gray8</a>&gt;</td>
-        <td></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.PixelFormats.PixelOperations-1.html">PixelOperations&lt;TPixel&gt;</a> instance.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -235,7 +259,7 @@ Ranges from [0, 0, 0, 1] to [1, 1, 1, 1] in vector form.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -266,7 +290,7 @@ Ranges from [0, 0, 0, 1] to [1, 1, 1, 1] in vector form.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Object</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
         <td><span class="parametername">obj</span></td>
         <td></td>
       </tr>
@@ -282,11 +306,13 @@ Ranges from [0, 0, 0, 1] to [1, 1, 1, 1] in vector form.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetype.equals#System_ValueType_Equals_System_Object_">ValueType.Equals(Object)</a></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PixelFormats_Gray8_FromArgb32_SixLabors_ImageSharp_PixelFormats_Argb32_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PixelFormats.Gray8.FromArgb32(SixLabors.ImageSharp.PixelFormats.Argb32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -629,14 +655,14 @@ Ranges from [0, 0, 0, 1] to [1, 1, 1, 1] in vector form.
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PixelFormats_Gray8_FromScaledVector4_Vector4_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PixelFormats.Gray8.FromScaledVector4(Vector4)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PixelFormats_Gray8_FromScaledVector4_System_Numerics_Vector4_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PixelFormats.Gray8.FromScaledVector4(System.Numerics.Vector4)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/PixelFormats/PixelImplementations/Gray8.cs/#L55">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_PixelFormats_Gray8_FromScaledVector4_" data-uid="SixLabors.ImageSharp.PixelFormats.Gray8.FromScaledVector4*"></a>
-  <h4 id="SixLabors_ImageSharp_PixelFormats_Gray8_FromScaledVector4_Vector4_" data-uid="SixLabors.ImageSharp.PixelFormats.Gray8.FromScaledVector4(Vector4)">FromScaledVector4(Vector4)</h4>
-  <div class="markdown level1 summary"><p>Initializes the pixel instance from a generic (&quot;scaled&quot;) <see cref="!:Vector4"></see>.</p>
+  <h4 id="SixLabors_ImageSharp_PixelFormats_Gray8_FromScaledVector4_System_Numerics_Vector4_" data-uid="SixLabors.ImageSharp.PixelFormats.Gray8.FromScaledVector4(System.Numerics.Vector4)">FromScaledVector4(Vector4)</h4>
+  <div class="markdown level1 summary"><p>Initializes the pixel instance from a generic (&quot;scaled&quot;) <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.numerics.vector4">Vector4</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -654,7 +680,7 @@ Ranges from [0, 0, 0, 1] to [1, 1, 1, 1] in vector form.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Vector4</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.numerics.vector4">Vector4</a></td>
         <td><span class="parametername">vector</span></td>
         <td><p>The vector to load the pixel from.</p>
 </td>
@@ -663,14 +689,14 @@ Ranges from [0, 0, 0, 1] to [1, 1, 1, 1] in vector form.
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PixelFormats_Gray8_FromVector4_Vector4_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PixelFormats.Gray8.FromVector4(Vector4)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PixelFormats_Gray8_FromVector4_System_Numerics_Vector4_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PixelFormats.Gray8.FromVector4(System.Numerics.Vector4)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/SixLabors/ImageSharp/blob/be5c99f57f853607b326c1cd2d2eb73b43f80a7b/src/ImageSharp/PixelFormats/PixelImplementations/Gray8.cs/#L63">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_PixelFormats_Gray8_FromVector4_" data-uid="SixLabors.ImageSharp.PixelFormats.Gray8.FromVector4*"></a>
-  <h4 id="SixLabors_ImageSharp_PixelFormats_Gray8_FromVector4_Vector4_" data-uid="SixLabors.ImageSharp.PixelFormats.Gray8.FromVector4(Vector4)">FromVector4(Vector4)</h4>
-  <div class="markdown level1 summary"><p>Initializes the pixel instance from a <see cref="!:Vector4"></see> which is specific to the current pixel type.</p>
+  <h4 id="SixLabors_ImageSharp_PixelFormats_Gray8_FromVector4_System_Numerics_Vector4_" data-uid="SixLabors.ImageSharp.PixelFormats.Gray8.FromVector4(System.Numerics.Vector4)">FromVector4(Vector4)</h4>
+  <div class="markdown level1 summary"><p>Initializes the pixel instance from a <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.numerics.vector4">Vector4</a> which is specific to the current pixel type.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -688,7 +714,7 @@ Ranges from [0, 0, 0, 1] to [1, 1, 1, 1] in vector form.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Vector4</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.numerics.vector4">Vector4</a></td>
         <td><span class="parametername">vector</span></td>
         <td><p>The vector to load the pixel from.</p>
 </td>
@@ -720,11 +746,13 @@ Ranges from [0, 0, 0, 1] to [1, 1, 1, 1] in vector form.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetype.gethashcode#System_ValueType_GetHashCode">ValueType.GetHashCode()</a></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PixelFormats_Gray8_ToRgba32_SixLabors_ImageSharp_PixelFormats_Rgba32__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PixelFormats.Gray8.ToRgba32(SixLabors.ImageSharp.PixelFormats.Rgba32%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -768,7 +796,7 @@ Ranges from [0, 0, 0, 1] to [1, 1, 1, 1] in vector form.
   </span>
   <a id="SixLabors_ImageSharp_PixelFormats_Gray8_ToScaledVector4_" data-uid="SixLabors.ImageSharp.PixelFormats.Gray8.ToScaledVector4*"></a>
   <h4 id="SixLabors_ImageSharp_PixelFormats_Gray8_ToScaledVector4" data-uid="SixLabors.ImageSharp.PixelFormats.Gray8.ToScaledVector4">ToScaledVector4()</h4>
-  <div class="markdown level1 summary"><p>Expands the pixel into a generic (&quot;scaled&quot;) <see cref="!:Vector4"></see> representation
+  <div class="markdown level1 summary"><p>Expands the pixel into a generic (&quot;scaled&quot;) <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.numerics.vector4">Vector4</a> representation
 with values scaled and clamped between <returns>0</returns> and <returns>1</returns>.
 The vector components are typically expanded in least to greatest significance order.</p>
 </div>
@@ -787,8 +815,8 @@ The vector components are typically expanded in least to greatest significance o
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Vector4</span></td>
-        <td><p>The <see cref="!:Vector4"></see>.</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.numerics.vector4">Vector4</a></td>
+        <td><p>The <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.numerics.vector4">Vector4</a>.</p>
 </td>
       </tr>
     </tbody>
@@ -818,11 +846,13 @@ The vector components are typically expanded in least to greatest significance o
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetype.tostring#System_ValueType_ToString">ValueType.ToString()</a></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PixelFormats_Gray8_ToVector4.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PixelFormats.Gray8.ToVector4%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -832,7 +862,7 @@ The vector components are typically expanded in least to greatest significance o
   </span>
   <a id="SixLabors_ImageSharp_PixelFormats_Gray8_ToVector4_" data-uid="SixLabors.ImageSharp.PixelFormats.Gray8.ToVector4*"></a>
   <h4 id="SixLabors_ImageSharp_PixelFormats_Gray8_ToVector4" data-uid="SixLabors.ImageSharp.PixelFormats.Gray8.ToVector4">ToVector4()</h4>
-  <div class="markdown level1 summary"><p>Expands the pixel into a <see cref="!:Vector4"></see> which is specific to the current pixel type.
+  <div class="markdown level1 summary"><p>Expands the pixel into a <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.numerics.vector4">Vector4</a> which is specific to the current pixel type.
 The vector components are typically expanded in least to greatest significance order.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -850,8 +880,8 @@ The vector components are typically expanded in least to greatest significance o
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Vector4</span></td>
-        <td><p>The <see cref="!:Vector4"></see>.</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.numerics.vector4">Vector4</a></td>
+        <td><p>The <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.numerics.vector4">Vector4</a>.</p>
 </td>
       </tr>
     </tbody>
@@ -908,7 +938,7 @@ The vector components are typically expanded in least to greatest significance o
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><p>True if the <code data-dev-comment-type="paramref" class="paramref">left</code> parameter is equal to the <code data-dev-comment-type="paramref" class="paramref">right</code> parameter; otherwise, false.</p>
 </td>
       </tr>
@@ -964,7 +994,7 @@ The vector components are typically expanded in least to greatest significance o
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><p>True if the <code data-dev-comment-type="paramref" class="paramref">left</code> parameter is not equal to the <code data-dev-comment-type="paramref" class="paramref">right</code> parameter; otherwise, false.</p>
 </td>
       </tr>
@@ -975,7 +1005,7 @@ The vector components are typically expanded in least to greatest significance o
       <a class="xref" href="SixLabors.ImageSharp.PixelFormats.IPixel-1.html">IPixel&lt;TSelf&gt;</a>
   </div>
   <div>
-      <span class="xref">IEquatable&lt;&gt;</span>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iequatable-1">System.IEquatable&lt;T&gt;</a>
   </div>
   <div>
       <a class="xref" href="SixLabors.ImageSharp.PixelFormats.IPackedVector-1.html">IPackedVector&lt;TPacked&gt;</a>

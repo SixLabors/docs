@@ -1,0 +1,962 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class PathBuilder
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class PathBuilder
+   ">
+    <meta name="generator" content="docfx 2.50.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.png">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="SixLabors.ImageSharp.PathBuilder">
+  
+  
+  <h1 id="SixLabors_ImageSharp_PathBuilder" data-uid="SixLabors.ImageSharp.PathBuilder" class="text-break">Class PathBuilder
+  </h1>
+  <div class="markdown level0 summary"><p>Allow you to derivatively build shapes and paths.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">PathBuilder</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="SixLabors.ImageSharp.html">SixLabors.ImageSharp</a></h6>
+  <h6><strong>Assembly</strong>: SixLabors.ImageSharp.Drawing.dll</h6>
+  <h5 id="SixLabors_ImageSharp_PathBuilder_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class PathBuilder</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PathBuilder__ctor.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PathBuilder.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/master/src/ImageSharp.Drawing/Shapes/PathBuilder.cs/#L25">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_PathBuilder__ctor_" data-uid="SixLabors.ImageSharp.PathBuilder.#ctor*"></a>
+  <h4 id="SixLabors_ImageSharp_PathBuilder__ctor" data-uid="SixLabors.ImageSharp.PathBuilder.#ctor">PathBuilder()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="SixLabors.ImageSharp.PathBuilder.html">PathBuilder</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PathBuilder()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PathBuilder__ctor_System_Numerics_Matrix3x2_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PathBuilder.%23ctor(System.Numerics.Matrix3x2)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/master/src/ImageSharp.Drawing/Shapes/PathBuilder.cs/#L34">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_PathBuilder__ctor_" data-uid="SixLabors.ImageSharp.PathBuilder.#ctor*"></a>
+  <h4 id="SixLabors_ImageSharp_PathBuilder__ctor_System_Numerics_Matrix3x2_" data-uid="SixLabors.ImageSharp.PathBuilder.#ctor(System.Numerics.Matrix3x2)">PathBuilder(Matrix3x2)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="SixLabors.ImageSharp.PathBuilder.html">PathBuilder</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PathBuilder(Matrix3x2 defaultTransform)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Numerics.Matrix3x2</span></td>
+        <td><span class="parametername">defaultTransform</span></td>
+        <td><p>The default transform.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PathBuilder_AddBezier_PointF_PointF_PointF_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PathBuilder.AddBezier(PointF%2CPointF%2CPointF)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/master/src/ImageSharp.Drawing/Shapes/PathBuilder.cs/#L169">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_PathBuilder_AddBezier_" data-uid="SixLabors.ImageSharp.PathBuilder.AddBezier*"></a>
+  <h4 id="SixLabors_ImageSharp_PathBuilder_AddBezier_PointF_PointF_PointF_" data-uid="SixLabors.ImageSharp.PathBuilder.AddBezier(PointF,PointF,PointF)">AddBezier(PointF, PointF, PointF)</h4>
+  <div class="markdown level1 summary"><p>Adds a quadratic bezier curve to the current figure joining the last point to the endPoint.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PathBuilder AddBezier(PointF startPoint, PointF controlPoint, PointF endPoint)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">PointF</span></td>
+        <td><span class="parametername">startPoint</span></td>
+        <td><p>The start point.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">PointF</span></td>
+        <td><span class="parametername">controlPoint</span></td>
+        <td><p>The control point1.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">PointF</span></td>
+        <td><span class="parametername">endPoint</span></td>
+        <td><p>The end point.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.PathBuilder.html">PathBuilder</a></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.PathBuilder.html">PathBuilder</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PathBuilder_AddBezier_PointF_PointF_PointF_PointF_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PathBuilder.AddBezier(PointF%2CPointF%2CPointF%2CPointF)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/master/src/ImageSharp.Drawing/Shapes/PathBuilder.cs/#L191">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_PathBuilder_AddBezier_" data-uid="SixLabors.ImageSharp.PathBuilder.AddBezier*"></a>
+  <h4 id="SixLabors_ImageSharp_PathBuilder_AddBezier_PointF_PointF_PointF_PointF_" data-uid="SixLabors.ImageSharp.PathBuilder.AddBezier(PointF,PointF,PointF,PointF)">AddBezier(PointF, PointF, PointF, PointF)</h4>
+  <div class="markdown level1 summary"><p>Adds a cubic bezier curve to the current figure joining the last point to the endPoint.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PathBuilder AddBezier(PointF startPoint, PointF controlPoint1, PointF controlPoint2, PointF endPoint)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">PointF</span></td>
+        <td><span class="parametername">startPoint</span></td>
+        <td><p>The start point.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">PointF</span></td>
+        <td><span class="parametername">controlPoint1</span></td>
+        <td><p>The control point1.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">PointF</span></td>
+        <td><span class="parametername">controlPoint2</span></td>
+        <td><p>The control point2.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">PointF</span></td>
+        <td><span class="parametername">endPoint</span></td>
+        <td><p>The end point.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.PathBuilder.html">PathBuilder</a></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.PathBuilder.html">PathBuilder</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PathBuilder_AddLine_PointF_PointF_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PathBuilder.AddLine(PointF%2CPointF)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/master/src/ImageSharp.Drawing/Shapes/PathBuilder.cs/#L97">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_PathBuilder_AddLine_" data-uid="SixLabors.ImageSharp.PathBuilder.AddLine*"></a>
+  <h4 id="SixLabors_ImageSharp_PathBuilder_AddLine_PointF_PointF_" data-uid="SixLabors.ImageSharp.PathBuilder.AddLine(PointF,PointF)">AddLine(PointF, PointF)</h4>
+  <div class="markdown level1 summary"><p>Adds the line connecting the current point to the new point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PathBuilder AddLine(PointF start, PointF end)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">PointF</span></td>
+        <td><span class="parametername">start</span></td>
+        <td><p>The start.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">PointF</span></td>
+        <td><span class="parametername">end</span></td>
+        <td><p>The end.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.PathBuilder.html">PathBuilder</a></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.PathBuilder.html">PathBuilder</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PathBuilder_AddLine_System_Single_System_Single_System_Single_System_Single_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PathBuilder.AddLine(System.Single%2CSystem.Single%2CSystem.Single%2CSystem.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/master/src/ImageSharp.Drawing/Shapes/PathBuilder.cs/#L114">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_PathBuilder_AddLine_" data-uid="SixLabors.ImageSharp.PathBuilder.AddLine*"></a>
+  <h4 id="SixLabors_ImageSharp_PathBuilder_AddLine_System_Single_System_Single_System_Single_System_Single_" data-uid="SixLabors.ImageSharp.PathBuilder.AddLine(System.Single,System.Single,System.Single,System.Single)">AddLine(Single, Single, Single, Single)</h4>
+  <div class="markdown level1 summary"><p>Adds the line connecting the current point to the new point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PathBuilder AddLine(float x1, float y1, float x2, float y2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">x1</span></td>
+        <td><p>The x1.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">y1</span></td>
+        <td><p>The y1.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">x2</span></td>
+        <td><p>The x2.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">y2</span></td>
+        <td><p>The y2.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.PathBuilder.html">PathBuilder</a></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.PathBuilder.html">PathBuilder</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PathBuilder_AddLines_PointF___.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PathBuilder.AddLines(PointF%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/master/src/ImageSharp.Drawing/Shapes/PathBuilder.cs/#L143">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_PathBuilder_AddLines_" data-uid="SixLabors.ImageSharp.PathBuilder.AddLines*"></a>
+  <h4 id="SixLabors_ImageSharp_PathBuilder_AddLines_PointF___" data-uid="SixLabors.ImageSharp.PathBuilder.AddLines(PointF[])">AddLines(PointF[])</h4>
+  <div class="markdown level1 summary"><p>Adds a series of line segments connecting the current point to the new points.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PathBuilder AddLines(params PointF[] points)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">PointF</span>[]</td>
+        <td><span class="parametername">points</span></td>
+        <td><p>The points.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.PathBuilder.html">PathBuilder</a></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.PathBuilder.html">PathBuilder</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PathBuilder_AddLines_System_Collections_Generic_IEnumerable_PointF__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PathBuilder.AddLines(System.Collections.Generic.IEnumerable%7BPointF%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/master/src/ImageSharp.Drawing/Shapes/PathBuilder.cs/#L126">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_PathBuilder_AddLines_" data-uid="SixLabors.ImageSharp.PathBuilder.AddLines*"></a>
+  <h4 id="SixLabors_ImageSharp_PathBuilder_AddLines_System_Collections_Generic_IEnumerable_PointF__" data-uid="SixLabors.ImageSharp.PathBuilder.AddLines(System.Collections.Generic.IEnumerable{PointF})">AddLines(IEnumerable&lt;PointF&gt;)</h4>
+  <div class="markdown level1 summary"><p>Adds a series of line segments connecting the current point to the new points.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PathBuilder AddLines(IEnumerable&lt;PointF&gt; points)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">PointF</span>&gt;</td>
+        <td><span class="parametername">points</span></td>
+        <td><p>The points.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.PathBuilder.html">PathBuilder</a></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.PathBuilder.html">PathBuilder</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PathBuilder_AddSegment_SixLabors_ImageSharp_ILineSegment_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PathBuilder.AddSegment(SixLabors.ImageSharp.ILineSegment)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/master/src/ImageSharp.Drawing/Shapes/PathBuilder.cs/#L155">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_PathBuilder_AddSegment_" data-uid="SixLabors.ImageSharp.PathBuilder.AddSegment*"></a>
+  <h4 id="SixLabors_ImageSharp_PathBuilder_AddSegment_SixLabors_ImageSharp_ILineSegment_" data-uid="SixLabors.ImageSharp.PathBuilder.AddSegment(SixLabors.ImageSharp.ILineSegment)">AddSegment(ILineSegment)</h4>
+  <div class="markdown level1 summary"><p>Adds the segment.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PathBuilder AddSegment(ILineSegment segment)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.ILineSegment.html">ILineSegment</a></td>
+        <td><span class="parametername">segment</span></td>
+        <td><p>The segment.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.PathBuilder.html">PathBuilder</a></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.PathBuilder.html">PathBuilder</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PathBuilder_Build.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PathBuilder.Build%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/master/src/ImageSharp.Drawing/Shapes/PathBuilder.cs/#L253">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_PathBuilder_Build_" data-uid="SixLabors.ImageSharp.PathBuilder.Build*"></a>
+  <h4 id="SixLabors_ImageSharp_PathBuilder_Build" data-uid="SixLabors.ImageSharp.PathBuilder.Build">Build()</h4>
+  <div class="markdown level1 summary"><p>Builds a complex polygon fromn the current working set of working operations.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IPath Build()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.IPath.html">IPath</a></td>
+        <td><p>The current set of operations as a complex polygon</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PathBuilder_Clear.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PathBuilder.Clear%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/master/src/ImageSharp.Drawing/Shapes/PathBuilder.cs/#L279">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_PathBuilder_Clear_" data-uid="SixLabors.ImageSharp.PathBuilder.Clear*"></a>
+  <h4 id="SixLabors_ImageSharp_PathBuilder_Clear" data-uid="SixLabors.ImageSharp.PathBuilder.Clear">Clear()</h4>
+  <div class="markdown level1 summary"><p>Clears all drawn paths, Leaving any applied transforms.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Clear()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PathBuilder_CloseAllFigures.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PathBuilder.CloseAllFigures%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/master/src/ImageSharp.Drawing/Shapes/PathBuilder.cs/#L237">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_PathBuilder_CloseAllFigures_" data-uid="SixLabors.ImageSharp.PathBuilder.CloseAllFigures*"></a>
+  <h4 id="SixLabors_ImageSharp_PathBuilder_CloseAllFigures" data-uid="SixLabors.ImageSharp.PathBuilder.CloseAllFigures">CloseAllFigures()</h4>
+  <div class="markdown level1 summary"><p>Closes the current figure.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PathBuilder CloseAllFigures()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.PathBuilder.html">PathBuilder</a></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.PathBuilder.html">PathBuilder</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PathBuilder_CloseFigure.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PathBuilder.CloseFigure%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/master/src/ImageSharp.Drawing/Shapes/PathBuilder.cs/#L225">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_PathBuilder_CloseFigure_" data-uid="SixLabors.ImageSharp.PathBuilder.CloseFigure*"></a>
+  <h4 id="SixLabors_ImageSharp_PathBuilder_CloseFigure" data-uid="SixLabors.ImageSharp.PathBuilder.CloseFigure">CloseFigure()</h4>
+  <div class="markdown level1 summary"><p>Closes the current figure.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PathBuilder CloseFigure()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.PathBuilder.html">PathBuilder</a></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.PathBuilder.html">PathBuilder</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PathBuilder_Reset.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PathBuilder.Reset%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/master/src/ImageSharp.Drawing/Shapes/PathBuilder.cs/#L268">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_PathBuilder_Reset_" data-uid="SixLabors.ImageSharp.PathBuilder.Reset*"></a>
+  <h4 id="SixLabors_ImageSharp_PathBuilder_Reset" data-uid="SixLabors.ImageSharp.PathBuilder.Reset">Reset()</h4>
+  <div class="markdown level1 summary"><p>Resets this instance, clearing any drawn paths and reseting any transforms.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PathBuilder Reset()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.PathBuilder.html">PathBuilder</a></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.PathBuilder.html">PathBuilder</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PathBuilder_ResetOrigin.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PathBuilder.ResetOrigin%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/master/src/ImageSharp.Drawing/Shapes/PathBuilder.cs/#L83">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_PathBuilder_ResetOrigin_" data-uid="SixLabors.ImageSharp.PathBuilder.ResetOrigin*"></a>
+  <h4 id="SixLabors_ImageSharp_PathBuilder_ResetOrigin" data-uid="SixLabors.ImageSharp.PathBuilder.ResetOrigin">ResetOrigin()</h4>
+  <div class="markdown level1 summary"><p>Resets the origin to the default.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PathBuilder ResetOrigin()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.PathBuilder.html">PathBuilder</a></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.PathBuilder.html">PathBuilder</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PathBuilder_ResetTransform.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PathBuilder.ResetTransform%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/master/src/ImageSharp.Drawing/Shapes/PathBuilder.cs/#L71">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_PathBuilder_ResetTransform_" data-uid="SixLabors.ImageSharp.PathBuilder.ResetTransform*"></a>
+  <h4 id="SixLabors_ImageSharp_PathBuilder_ResetTransform" data-uid="SixLabors.ImageSharp.PathBuilder.ResetTransform">ResetTransform()</h4>
+  <div class="markdown level1 summary"><p>Resets the translation to the default.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PathBuilder ResetTransform()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.PathBuilder.html">PathBuilder</a></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.PathBuilder.html">PathBuilder</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PathBuilder_SetOrigin_PointF_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PathBuilder.SetOrigin(PointF)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/master/src/ImageSharp.Drawing/Shapes/PathBuilder.cs/#L58">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_PathBuilder_SetOrigin_" data-uid="SixLabors.ImageSharp.PathBuilder.SetOrigin*"></a>
+  <h4 id="SixLabors_ImageSharp_PathBuilder_SetOrigin_PointF_" data-uid="SixLabors.ImageSharp.PathBuilder.SetOrigin(PointF)">SetOrigin(PointF)</h4>
+  <div class="markdown level1 summary"><p>Sets the origin all subsequent point should be relative to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PathBuilder SetOrigin(PointF origin)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">PointF</span></td>
+        <td><span class="parametername">origin</span></td>
+        <td><p>The origin.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.PathBuilder.html">PathBuilder</a></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.PathBuilder.html">PathBuilder</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PathBuilder_SetTransform_System_Numerics_Matrix3x2_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PathBuilder.SetTransform(System.Numerics.Matrix3x2)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/master/src/ImageSharp.Drawing/Shapes/PathBuilder.cs/#L46">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_PathBuilder_SetTransform_" data-uid="SixLabors.ImageSharp.PathBuilder.SetTransform*"></a>
+  <h4 id="SixLabors_ImageSharp_PathBuilder_SetTransform_System_Numerics_Matrix3x2_" data-uid="SixLabors.ImageSharp.PathBuilder.SetTransform(System.Numerics.Matrix3x2)">SetTransform(Matrix3x2)</h4>
+  <div class="markdown level1 summary"><p>Sets the translation to be applied to all items to follow being applied to the <a class="xref" href="SixLabors.ImageSharp.PathBuilder.html">PathBuilder</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PathBuilder SetTransform(Matrix3x2 translation)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Numerics.Matrix3x2</span></td>
+        <td><span class="parametername">translation</span></td>
+        <td><p>The translation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.PathBuilder.html">PathBuilder</a></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.PathBuilder.html">PathBuilder</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PathBuilder_StartFigure.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PathBuilder.StartFigure%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/master/src/ImageSharp.Drawing/Shapes/PathBuilder.cs/#L206">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_PathBuilder_StartFigure_" data-uid="SixLabors.ImageSharp.PathBuilder.StartFigure*"></a>
+  <h4 id="SixLabors_ImageSharp_PathBuilder_StartFigure" data-uid="SixLabors.ImageSharp.PathBuilder.StartFigure">StartFigure()</h4>
+  <div class="markdown level1 summary"><p>Starts a new figure but leaves the previous one open.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PathBuilder StartFigure()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.PathBuilder.html">PathBuilder</a></td>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.PathBuilder.html">PathBuilder</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/SixLabors/ImageSharp.Drawing/new/master/apiSpec/new?filename=SixLabors_ImageSharp_PathBuilder.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.PathBuilder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/master/src/ImageSharp.Drawing/Shapes/PathBuilder.cs/#L14" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © Six Labors<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

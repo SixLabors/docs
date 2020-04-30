@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace SixLabors.ImageSharp.PixelFormats
    ">
-    <meta name="generator" content="docfx 2.47.0.0">
+    <meta name="generator" content="docfx 2.52.0.0">
     
     <link rel="shortcut icon" href="../../favicon.png">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -20,7 +20,7 @@
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
     
-    
+    <meta property="docfx:rel" content="../../">
     
   </head>
   <body data-spy="scroll" data-target="#affix" data-offset="120">
@@ -59,6 +59,14 @@
           </div>
         </div>
       </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
       <div role="main" class="container body-content hide-when-search">
         
         <div class="sidenav hide-when-search">
@@ -78,8 +86,8 @@
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
   </h3>
-      <h4><a class="xref" href="SixLabors.ImageSharp.PixelFormats.ColorConstants.html">ColorConstants</a></h4>
-      <section><p>Provides useful color definitions.</p>
+      <h4><a class="xref" href="SixLabors.ImageSharp.PixelFormats.PixelBlender-1.html">PixelBlender&lt;TPixel&gt;</a></h4>
+      <section><p>Abstract base class for calling pixel composition functions</p>
 </section>
       <h4><a class="xref" href="SixLabors.ImageSharp.PixelFormats.PixelOperations-1.html">PixelOperations&lt;TPixel&gt;</a></h4>
       <section><p>A stateless class implementing Strategy Pattern for batched pixel-data conversion operations
@@ -87,8 +95,8 @@ for pixel buffers of type <code data-dev-comment-type="typeparamref" class="type
 </section>
     <h3 id="structs">Structs
   </h3>
-      <h4><a class="xref" href="SixLabors.ImageSharp.PixelFormats.Alpha8.html">Alpha8</a></h4>
-      <section><p>Packed pixel type containing a single 8 bit normalized W values.
+      <h4><a class="xref" href="SixLabors.ImageSharp.PixelFormats.A8.html">A8</a></h4>
+      <section><p>Packed pixel type containing a single 8-bit normalized alpha value.
 <p>
 Ranges from [0, 0, 0, 0] to [0, 0, 0, 1] in vector form.
 </p></p>
@@ -141,18 +149,6 @@ Ranges from [0, 0, 0, 0] to [1, 1, 1, 1] in vector form.
 Ranges from [0, 0, 0, 0] to [255, 255, 255, 255] in vector form.
 </p></p>
 </section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.PixelFormats.Gray16.html">Gray16</a></h4>
-      <section><p>Packed pixel type containing a single 16 bit normalized gray values.
-<p>
-Ranges from [0, 0, 0, 1] to [1, 1, 1, 1] in vector form.
-</p></p>
-</section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.PixelFormats.Gray8.html">Gray8</a></h4>
-      <section><p>Packed pixel type containing a single 8 bit normalized gray values.
-<p>
-Ranges from [0, 0, 0, 1] to [1, 1, 1, 1] in vector form.
-</p></p>
-</section>
       <h4><a class="xref" href="SixLabors.ImageSharp.PixelFormats.HalfSingle.html">HalfSingle</a></h4>
       <section><p>Packed pixel type containing a single 16 bit floating point value.
 <p>
@@ -169,6 +165,30 @@ Ranges from [-1, -1, 0, 1] to [1, 1, 0, 1] in vector form.
       <section><p>Packed pixel type containing four 16-bit floating-point values.
 <p>
 Ranges from [-1, -1, -1, -1] to [1, 1, 1, 1] in vector form.
+</p></p>
+</section>
+      <h4><a class="xref" href="SixLabors.ImageSharp.PixelFormats.L16.html">L16</a></h4>
+      <section><p>Packed pixel type containing a single 16-bit normalized luminance value.
+<p>
+Ranges from [0, 0, 0, 1] to [1, 1, 1, 1] in vector form.
+</p></p>
+</section>
+      <h4><a class="xref" href="SixLabors.ImageSharp.PixelFormats.L8.html">L8</a></h4>
+      <section><p>Packed pixel type containing a single 8-bit normalized luminance value.
+<p>
+Ranges from [0, 0, 0, 1] to [1, 1, 1, 1] in vector form.
+</p></p>
+</section>
+      <h4><a class="xref" href="SixLabors.ImageSharp.PixelFormats.La16.html">La16</a></h4>
+      <section><p>Packed pixel type containing two 8-bit normalized values representing luminance and alpha.
+<p>
+Ranges from [0, 0, 0, 0] to [1, 1, 1, 1] in vector form.
+</p></p>
+</section>
+      <h4><a class="xref" href="SixLabors.ImageSharp.PixelFormats.La32.html">La32</a></h4>
+      <section><p>Packed pixel type containing two 16-bit normalized values representing luminance and alpha.
+<p>
+Ranges from [0, 0, 0, 0] to [1, 1, 1, 1] in vector form.
 </p></p>
 </section>
       <h4><a class="xref" href="SixLabors.ImageSharp.PixelFormats.NormalizedByte2.html">NormalizedByte2</a></h4>
@@ -274,6 +294,13 @@ For example in the <a class="xref" href="SixLabors.ImageSharp.PixelFormats.Rgba3
 </section>
       <h4><a class="xref" href="SixLabors.ImageSharp.PixelFormats.PixelColorBlendingMode.html">PixelColorBlendingMode</a></h4>
       <section><p>Enumerates the various color blending modes.</p>
+</section>
+      <h4><a class="xref" href="SixLabors.ImageSharp.PixelFormats.PixelConversionModifiers.html">PixelConversionModifiers</a></h4>
+      <section><p>Flags responsible to select additional operations which could be efficiently applied in
+<a class="xref" href="SixLabors.ImageSharp.PixelFormats.PixelOperations-1.html#SixLabors_ImageSharp_PixelFormats_PixelOperations_1_ToVector4_SixLabors_ImageSharp_Configuration_System_ReadOnlySpan__0__System_Span_System_Numerics_Vector4__SixLabors_ImageSharp_PixelFormats_PixelConversionModifiers_">ToVector4(Configuration, ReadOnlySpan&lt;TPixel&gt;, Span&lt;Vector4&gt;, PixelConversionModifiers)</a>
+or
+<a class="xref" href="SixLabors.ImageSharp.PixelFormats.PixelOperations-1.html#SixLabors_ImageSharp_PixelFormats_PixelOperations_1_FromVector4Destructive_SixLabors_ImageSharp_Configuration_System_Span_System_Numerics_Vector4__System_Span__0__SixLabors_ImageSharp_PixelFormats_PixelConversionModifiers_">FromVector4Destructive(Configuration, Span&lt;Vector4&gt;, Span&lt;TPixel&gt;, PixelConversionModifiers)</a>
+knowing the pixel type.</p>
 </section>
 </article>
           </div>

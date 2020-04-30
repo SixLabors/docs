@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Interface IReadOnlyFontCollection
    ">
-    <meta name="generator" content="docfx 2.47.0.0">
+    <meta name="generator" content="docfx 2.52.0.0">
     
     <link rel="shortcut icon" href="../../favicon.png">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -20,7 +20,7 @@
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
     
-    
+    <meta property="docfx:rel" content="../../">
     
   </head>
   <body data-spy="scroll" data-target="#affix" data-offset="120">
@@ -59,6 +59,14 @@
           </div>
         </div>
       </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
       <div role="main" class="container body-content hide-when-search">
         
         <div class="sidenav hide-when-search">
@@ -90,11 +98,11 @@
     <a href="https://github.com/SixLabors/Fonts/new/master/apiSpec/new?filename=SixLabors_Fonts_IReadOnlyFontCollection_Families.md&amp;value=---%0Auid%3A%20SixLabors.Fonts.IReadOnlyFontCollection.Families%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/Fonts/blob/5b81eb54f3d03532dd450f771bec39b9c50d1aa9/src/SixLabors.Fonts/IReadonlyFontCollection.cs/#L20">View Source</a>
+    <a href="https://github.com/SixLabors/Fonts/blob/1e0d0ac9f1106eaea424e4a86279bf1fa711b88a/src/SixLabors.Fonts/IReadonlyFontCollection.cs/#L22">View Source</a>
   </span>
   <a id="SixLabors_Fonts_IReadOnlyFontCollection_Families_" data-uid="SixLabors.Fonts.IReadOnlyFontCollection.Families*"></a>
   <h4 id="SixLabors_Fonts_IReadOnlyFontCollection_Families" data-uid="SixLabors.Fonts.IReadOnlyFontCollection.Families">Families</h4>
-  <div class="markdown level1 summary"><p>Gets the collection of <a class="xref" href="SixLabors.Fonts.FontFamily.html">FontFamily</a> objects associated with this <a class="xref" href="SixLabors.Fonts.FontCollection.html">FontCollection</a>.</p>
+  <div class="markdown level1 summary"><p>Gets the collection of <a class="xref" href="SixLabors.Fonts.FontFamily.html">FontFamily</a> objects associated with this <a class="xref" href="SixLabors.Fonts.FontCollection.html">FontCollection</a> in the invariant culture.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -111,7 +119,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="SixLabors.Fonts.FontFamily.html">FontFamily</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="SixLabors.Fonts.FontFamily.html">FontFamily</a>&gt;</td>
         <td><p>The families.</p>
 </td>
       </tr>
@@ -121,14 +129,64 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Fonts/new/master/apiSpec/new?filename=SixLabors_Fonts_IReadOnlyFontCollection_FamiliesByCulture_System_Globalization_CultureInfo_.md&amp;value=---%0Auid%3A%20SixLabors.Fonts.IReadOnlyFontCollection.FamiliesByCulture(System.Globalization.CultureInfo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Fonts/blob/1e0d0ac9f1106eaea424e4a86279bf1fa711b88a/src/SixLabors.Fonts/IReadonlyFontCollection.cs/#L30">View Source</a>
+  </span>
+  <a id="SixLabors_Fonts_IReadOnlyFontCollection_FamiliesByCulture_" data-uid="SixLabors.Fonts.IReadOnlyFontCollection.FamiliesByCulture*"></a>
+  <h4 id="SixLabors_Fonts_IReadOnlyFontCollection_FamiliesByCulture_System_Globalization_CultureInfo_" data-uid="SixLabors.Fonts.IReadOnlyFontCollection.FamiliesByCulture(System.Globalization.CultureInfo)">FamiliesByCulture(CultureInfo)</h4>
+  <div class="markdown level1 summary"><p>Gets the collection of <a class="xref" href="SixLabors.Fonts.FontFamily.html">FontFamily</a> objects associated with this <a class="xref" href="SixLabors.Fonts.FontCollection.html">FontCollection</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;FontFamily&gt; FamiliesByCulture(CultureInfo culture)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.globalization.cultureinfo">CultureInfo</a></td>
+        <td><span class="parametername">culture</span></td>
+        <td><p>The culture to use while getting the family name from the installed set of fonts.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="SixLabors.Fonts.FontFamily.html">FontFamily</a>&gt;</td>
+        <td><p>The set of fonts families using the fonts culture aware font name</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/SixLabors/Fonts/new/master/apiSpec/new?filename=SixLabors_Fonts_IReadOnlyFontCollection_Find_System_String_.md&amp;value=---%0Auid%3A%20SixLabors.Fonts.IReadOnlyFontCollection.Find(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/Fonts/blob/5b81eb54f3d03532dd450f771bec39b9c50d1aa9/src/SixLabors.Fonts/IReadonlyFontCollection.cs/#L27">View Source</a>
+    <a href="https://github.com/SixLabors/Fonts/blob/1e0d0ac9f1106eaea424e4a86279bf1fa711b88a/src/SixLabors.Fonts/IReadonlyFontCollection.cs/#L55">View Source</a>
   </span>
   <a id="SixLabors_Fonts_IReadOnlyFontCollection_Find_" data-uid="SixLabors.Fonts.IReadOnlyFontCollection.Find*"></a>
   <h4 id="SixLabors_Fonts_IReadOnlyFontCollection_Find_System_String_" data-uid="SixLabors.Fonts.IReadOnlyFontCollection.Find(System.String)">Find(String)</h4>
-  <div class="markdown level1 summary"><p>Finds the specified font family.</p>
+  <div class="markdown level1 summary"><p>Finds the specified font family using the invariant culture font family name.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -146,9 +204,65 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">fontFamily</span></td>
         <td><p>The font family.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Fonts.FontFamily.html">FontFamily</a></td>
+        <td><p>The family if installed otherwise throws <a class="xref" href="SixLabors.Fonts.Exceptions.FontFamilyNotFoundException.html">FontFamilyNotFoundException</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Fonts/new/master/apiSpec/new?filename=SixLabors_Fonts_IReadOnlyFontCollection_Find_System_String_System_Globalization_CultureInfo_.md&amp;value=---%0Auid%3A%20SixLabors.Fonts.IReadOnlyFontCollection.Find(System.String%2CSystem.Globalization.CultureInfo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Fonts/blob/1e0d0ac9f1106eaea424e4a86279bf1fa711b88a/src/SixLabors.Fonts/IReadonlyFontCollection.cs/#L38">View Source</a>
+  </span>
+  <a id="SixLabors_Fonts_IReadOnlyFontCollection_Find_" data-uid="SixLabors.Fonts.IReadOnlyFontCollection.Find*"></a>
+  <h4 id="SixLabors_Fonts_IReadOnlyFontCollection_Find_System_String_System_Globalization_CultureInfo_" data-uid="SixLabors.Fonts.IReadOnlyFontCollection.Find(System.String,System.Globalization.CultureInfo)">Find(String, CultureInfo)</h4>
+  <div class="markdown level1 summary"><p>Finds the specified font family.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">FontFamily Find(string fontFamily, CultureInfo culture)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">fontFamily</span></td>
+        <td><p>The font family.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.globalization.cultureinfo">CultureInfo</a></td>
+        <td><span class="parametername">culture</span></td>
+        <td><p>The culture to use while getting the family name from the installed set of fonts.</p>
 </td>
       </tr>
     </tbody>
@@ -174,11 +288,11 @@
     <a href="https://github.com/SixLabors/Fonts/new/master/apiSpec/new?filename=SixLabors_Fonts_IReadOnlyFontCollection_TryFind_System_String_SixLabors_Fonts_FontFamily__.md&amp;value=---%0Auid%3A%20SixLabors.Fonts.IReadOnlyFontCollection.TryFind(System.String%2CSixLabors.Fonts.FontFamily%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/Fonts/blob/5b81eb54f3d03532dd450f771bec39b9c50d1aa9/src/SixLabors.Fonts/IReadonlyFontCollection.cs/#L35">View Source</a>
+    <a href="https://github.com/SixLabors/Fonts/blob/1e0d0ac9f1106eaea424e4a86279bf1fa711b88a/src/SixLabors.Fonts/IReadonlyFontCollection.cs/#L63">View Source</a>
   </span>
   <a id="SixLabors_Fonts_IReadOnlyFontCollection_TryFind_" data-uid="SixLabors.Fonts.IReadOnlyFontCollection.TryFind*"></a>
   <h4 id="SixLabors_Fonts_IReadOnlyFontCollection_TryFind_System_String_SixLabors_Fonts_FontFamily__" data-uid="SixLabors.Fonts.IReadOnlyFontCollection.TryFind(System.String,SixLabors.Fonts.FontFamily@)">TryFind(String, out FontFamily)</h4>
-  <div class="markdown level1 summary"><p>Finds the specified font family.</p>
+  <div class="markdown level1 summary"><p>Finds the specified font family using the invariant culture font family name.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -196,7 +310,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">fontFamily</span></td>
         <td><p>The font family to find.</p>
 </td>
@@ -219,7 +333,69 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>true if a font of that family has been installed into the font collection.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Fonts/new/master/apiSpec/new?filename=SixLabors_Fonts_IReadOnlyFontCollection_TryFind_System_String_System_Globalization_CultureInfo_SixLabors_Fonts_FontFamily__.md&amp;value=---%0Auid%3A%20SixLabors.Fonts.IReadOnlyFontCollection.TryFind(System.String%2CSystem.Globalization.CultureInfo%2CSixLabors.Fonts.FontFamily%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Fonts/blob/1e0d0ac9f1106eaea424e4a86279bf1fa711b88a/src/SixLabors.Fonts/IReadonlyFontCollection.cs/#L47">View Source</a>
+  </span>
+  <a id="SixLabors_Fonts_IReadOnlyFontCollection_TryFind_" data-uid="SixLabors.Fonts.IReadOnlyFontCollection.TryFind*"></a>
+  <h4 id="SixLabors_Fonts_IReadOnlyFontCollection_TryFind_System_String_System_Globalization_CultureInfo_SixLabors_Fonts_FontFamily__" data-uid="SixLabors.Fonts.IReadOnlyFontCollection.TryFind(System.String,System.Globalization.CultureInfo,SixLabors.Fonts.FontFamily@)">TryFind(String, CultureInfo, out FontFamily)</h4>
+  <div class="markdown level1 summary"><p>Finds the specified font family.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool TryFind(string fontFamily, CultureInfo culture, out FontFamily family)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">fontFamily</span></td>
+        <td><p>The font family to find.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.globalization.cultureinfo">CultureInfo</a></td>
+        <td><span class="parametername">culture</span></td>
+        <td><p>The culture to use while getting the family name from the installed set of fonts.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SixLabors.Fonts.FontFamily.html">FontFamily</a></td>
+        <td><span class="parametername">family</span></td>
+        <td><p>The found family.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><p>true if a font of that family has been installed into the font collection.</p>
 </td>
       </tr>
@@ -232,6 +408,12 @@
   <div>
       <a class="xref" href="SixLabors.Fonts.IReadonlyFontCollectionExtensions.html#SixLabors_Fonts_IReadonlyFontCollectionExtensions_CreateFont_SixLabors_Fonts_IReadOnlyFontCollection_System_String_System_Single_">IReadonlyFontCollectionExtensions.CreateFont(IReadOnlyFontCollection, String, Single)</a>
   </div>
+  <div>
+      <a class="xref" href="SixLabors.Fonts.IReadonlyFontCollectionExtensions.html#SixLabors_Fonts_IReadonlyFontCollectionExtensions_CreateFont_SixLabors_Fonts_IReadOnlyFontCollection_System_String_System_Globalization_CultureInfo_System_Single_SixLabors_Fonts_FontStyle_">IReadonlyFontCollectionExtensions.CreateFont(IReadOnlyFontCollection, String, CultureInfo, Single, FontStyle)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.Fonts.IReadonlyFontCollectionExtensions.html#SixLabors_Fonts_IReadonlyFontCollectionExtensions_CreateFont_SixLabors_Fonts_IReadOnlyFontCollection_System_String_System_Globalization_CultureInfo_System_Single_">IReadonlyFontCollectionExtensions.CreateFont(IReadOnlyFontCollection, String, CultureInfo, Single)</a>
+  </div>
 </article>
           </div>
           
@@ -243,7 +425,7 @@
                     <a href="https://github.com/SixLabors/Fonts/new/master/apiSpec/new?filename=SixLabors_Fonts_IReadOnlyFontCollection.md&amp;value=---%0Auid%3A%20SixLabors.Fonts.IReadOnlyFontCollection%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/SixLabors/Fonts/blob/5b81eb54f3d03532dd450f771bec39b9c50d1aa9/src/SixLabors.Fonts/IReadonlyFontCollection.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/SixLabors/Fonts/blob/1e0d0ac9f1106eaea424e4a86279bf1fa711b88a/src/SixLabors.Fonts/IReadonlyFontCollection.cs/#L14" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

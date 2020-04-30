@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace SixLabors.ImageSharp.Processing
    ">
-    <meta name="generator" content="docfx 2.47.0.0">
+    <meta name="generator" content="docfx 2.52.0.0">
     
     <link rel="shortcut icon" href="../../favicon.png">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -20,7 +20,7 @@
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
     
-    
+    <meta property="docfx:rel" content="../../">
     
   </head>
   <body data-spy="scroll" data-target="#affix" data-offset="120">
@@ -59,6 +59,14 @@
           </div>
         </div>
       </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
       <div role="main" class="container body-content hide-when-search">
         
         <div class="sidenav hide-when-search">
@@ -78,8 +86,11 @@
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
   </h3>
+      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.AdaptiveThresholdExtensions.html">AdaptiveThresholdExtensions</a></h4>
+      <section><p>Extensions to perform AdaptiveThreshold through Mutator.</p>
+</section>
       <h4><a class="xref" href="SixLabors.ImageSharp.Processing.AffineTransformBuilder.html">AffineTransformBuilder</a></h4>
-      <section><p>A helper class for constructing <see cref="!:Matrix3x2"></see> instances for use in affine transforms.</p>
+      <section><p>A helper class for constructing <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.numerics.matrix3x2">Matrix3x2</a> instances for use in affine transforms.</p>
 </section>
       <h4><a class="xref" href="SixLabors.ImageSharp.Processing.AutoOrientExtensions.html">AutoOrientExtensions</a></h4>
       <section><p>Defines extensions that allow the application of auto-orientation operations to an <a class="xref" href="SixLabors.ImageSharp.Image.html">Image</a>
@@ -87,10 +98,6 @@ using Mutate/Clone.</p>
 </section>
       <h4><a class="xref" href="SixLabors.ImageSharp.Processing.BackgroundColorExtensions.html">BackgroundColorExtensions</a></h4>
       <section><p>Defines extension methods to replace the background color of an <a class="xref" href="SixLabors.ImageSharp.Image.html">Image</a>
-using Mutate/Clone.</p>
-</section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.BinaryDiffuseExtensions.html">BinaryDiffuseExtensions</a></h4>
-      <section><p>Defines extension methods to apply binary diffusion on an <a class="xref" href="SixLabors.ImageSharp.Image.html">Image</a>
 using Mutate/Clone.</p>
 </section>
       <h4><a class="xref" href="SixLabors.ImageSharp.Processing.BinaryDitherExtensions.html">BinaryDitherExtensions</a></h4>
@@ -116,12 +123,6 @@ using Mutate/Clone.</p>
       <section><p>Defines extensions that allow the alteration of the brightness component of an <a class="xref" href="SixLabors.ImageSharp.Image.html">Image</a>
 using Mutate/Clone.</p>
 </section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.BrushApplicator-1.html">BrushApplicator&lt;TPixel&gt;</a></h4>
-      <section><p>primitive that converts a point in to a color for discovering the fill color based on an implementation</p>
-</section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.Brushes.html">Brushes</a></h4>
-      <section><p>A collection of methods for creating generic brushes.</p>
-</section>
       <h4><a class="xref" href="SixLabors.ImageSharp.Processing.ColorBlindnessExtensions.html">ColorBlindnessExtensions</a></h4>
       <section><p>Defines extensions that simulate the effects of various color blindness disorders on an <a class="xref" href="SixLabors.ImageSharp.Image.html">Image</a>
 using Mutate/Clone.</p>
@@ -141,57 +142,12 @@ using Mutate/Clone.</p>
       <section><p>Defines dithering extensions to apply on an <a class="xref" href="SixLabors.ImageSharp.Image.html">Image</a>
 using Mutate/Clone.</p>
 </section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.DrawBezierExtensions.html">DrawBezierExtensions</a></h4>
-      <section><p>Adds extensions that allow the drawing of Bezier paths to the <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> type.</p>
-</section>
       <h4><a class="xref" href="SixLabors.ImageSharp.Processing.DrawImageExtensions.html">DrawImageExtensions</a></h4>
       <section><p>Adds extensions that allow the drawing of images to the <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> type.</p>
-</section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.DrawLineExtensions.html">DrawLineExtensions</a></h4>
-      <section><p>Adds extensions that allow the drawing of lines to the <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> type.</p>
-</section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.DrawPathCollectionExtensions.html">DrawPathCollectionExtensions</a></h4>
-      <section><p>Adds extensions that allow the drawing of collections of polygon outlines to the <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> type.</p>
-</section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.DrawPathExtensions.html">DrawPathExtensions</a></h4>
-      <section><p>Adds extensions that allow the drawing of polygon outlines to the <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> type.</p>
-</section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.DrawPolygonExtensions.html">DrawPolygonExtensions</a></h4>
-      <section><p>Adds extensions that allow the drawing of closed linear polygons to the <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> type.</p>
-</section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.DrawRectangleExtensions.html">DrawRectangleExtensions</a></h4>
-      <section><p>Adds extensions that allow the drawing of rectangles to the <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> type.</p>
-</section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.DrawTextExtensions.html">DrawTextExtensions</a></h4>
-      <section><p>Adds extensions that allow the drawing of text to the <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> type.</p>
-</section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.EllipticGradientBrush.html">EllipticGradientBrush</a></h4>
-      <section><p>Gradient Brush with elliptic shape.
-The ellipse is defined by a center point,
-a point on the longest extension of the ellipse and
-the ratio between longest and shortest extension.</p>
 </section>
       <h4><a class="xref" href="SixLabors.ImageSharp.Processing.EntropyCropExtensions.html">EntropyCropExtensions</a></h4>
       <section><p>Defines extensions that allow the application of entropy cropping operations on an <a class="xref" href="SixLabors.ImageSharp.Image.html">Image</a>
 using Mutate/Clone.</p>
-</section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.FillPathBuilderExtensions.html">FillPathBuilderExtensions</a></h4>
-      <section><p>Adds extensions that allow the filling of polygons with various brushes to the <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> type.</p>
-</section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.FillPathCollectionExtensions.html">FillPathCollectionExtensions</a></h4>
-      <section><p>Adds extensions that allow the filling of collections of polygon outlines to the <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> type.</p>
-</section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.FillPathExtensions.html">FillPathExtensions</a></h4>
-      <section><p>Adds extensions that allow the filling of polygon outlines to the <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> type.</p>
-</section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.FillPolygonExtensions.html">FillPolygonExtensions</a></h4>
-      <section><p>Adds extensions that allow the filling of closed linear polygons to the <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> type.</p>
-</section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.FillRectangleExtensions.html">FillRectangleExtensions</a></h4>
-      <section><p>Adds extensions that allow the filling of rectangles to the <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> type.</p>
-</section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.FillRegionExtensions.html">FillRegionExtensions</a></h4>
-      <section><p>Adds extensions that allow the filling of regions with various brushes to the <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> type.</p>
 </section>
       <h4><a class="xref" href="SixLabors.ImageSharp.Processing.FilterExtensions.html">FilterExtensions</a></h4>
       <section><p>Defines extensions that allow the application of composable filters to an <a class="xref" href="SixLabors.ImageSharp.Image.html">Image</a>
@@ -213,9 +169,6 @@ using Mutate/Clone.</p>
       <section><p>Defines extensions that allow the application of a radial glow on an <a class="xref" href="SixLabors.ImageSharp.Image.html">Image</a>
 using Mutate/Clone.</p>
 </section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.GradientBrush.html">GradientBrush</a></h4>
-      <section><p>Base class for Gradient brushes</p>
-</section>
       <h4><a class="xref" href="SixLabors.ImageSharp.Processing.GrayscaleExtensions.html">GrayscaleExtensions</a></h4>
       <section><p>Defines extensions that allow the application of grayscale toning to an <a class="xref" href="SixLabors.ImageSharp.Image.html">Image</a>
 using Mutate/Clone.</p>
@@ -227,21 +180,15 @@ using Mutate/Clone.</p>
       <section><p>Defines extensions that allow the alteration of the hue component of an <a class="xref" href="SixLabors.ImageSharp.Image.html">Image</a>
 using Mutate/Clone.</p>
 </section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.ImageBrush.html">ImageBrush</a></h4>
-      <section><p>Provides an implementation of an image brush for painting images within areas.</p>
-</section>
       <h4><a class="xref" href="SixLabors.ImageSharp.Processing.InvertExtensions.html">InvertExtensions</a></h4>
       <section><p>Defines extensions that allow the inversion of colors of an <a class="xref" href="SixLabors.ImageSharp.Image.html">Image</a>
 using Mutate/Clone.</p>
 </section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.KnownDiffusers.html">KnownDiffusers</a></h4>
-      <section><p>Contains reusable static instances of known error diffusion algorithms</p>
-</section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.KnownDitherers.html">KnownDitherers</a></h4>
-      <section><p>Contains reusable static instances of known ordered dither matrices</p>
+      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.KnownDitherings.html">KnownDitherings</a></h4>
+      <section><p>Contains reusable static instances of known dithering algorithms.</p>
 </section>
       <h4><a class="xref" href="SixLabors.ImageSharp.Processing.KnownFilterMatrices.html">KnownFilterMatrices</a></h4>
-      <section><p>A collection of known <a class="xref" href="SixLabors.ImageSharp.Primitives.ColorMatrix.html">ColorMatrix</a> values for composing filters</p>
+      <section><p>A collection of known <a class="xref" href="SixLabors.ImageSharp.ColorMatrix.html">ColorMatrix</a> values for composing filters</p>
 </section>
       <h4><a class="xref" href="SixLabors.ImageSharp.Processing.KnownQuantizers.html">KnownQuantizers</a></h4>
       <section><p>Contains reusable static instances of known quantizing algorithms</p>
@@ -253,12 +200,9 @@ using Mutate/Clone.</p>
       <section><p>Defines extensions that allow the recreation of an old Kodachrome camera effect on an <a class="xref" href="SixLabors.ImageSharp.Image.html">Image</a>
 using Mutate/Clone.</p>
 </section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.LinearGradientBrush.html">LinearGradientBrush</a></h4>
-      <section><p>Provides an implementation of a brush for painting linear gradients within areas.
-Supported right now:</p>
-<ul>
-<li>a set of colors in relative distances to each other.</li>
-</ul>
+      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.LightnessExtensions.html">LightnessExtensions</a></h4>
+      <section><p>Defines extensions that allow the alteration of the lightness component of an <a class="xref" href="SixLabors.ImageSharp.Image.html">Image</a>
+using Mutate/Clone.</p>
 </section>
       <h4><a class="xref" href="SixLabors.ImageSharp.Processing.LomographExtensions.html">LomographExtensions</a></h4>
       <section><p>Defines extensions that allow the recreation of an old Lomograph camera effect on an <a class="xref" href="SixLabors.ImageSharp.Image.html">Image</a>
@@ -276,22 +220,12 @@ using Mutate/Clone.</p>
       <section><p>Defines extensions that allow the application of padding operations on an <a class="xref" href="SixLabors.ImageSharp.Image.html">Image</a>
 using Mutate/Clone.</p>
 </section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.PathGradientBrush.html">PathGradientBrush</a></h4>
-      <section><p>Provides an implementation of a brush for painting gradients between multiple color positions in 2D coordinates.
-It works similarly with the class in System.Drawing.Drawing2D of the same name.</p>
-</section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.PatternBrush.html">PatternBrush</a></h4>
-      <section><p>Provides an implementation of a pattern brush for painting patterns.</p>
-</section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.Pen.html">Pen</a></h4>
-      <section><p>Provides a pen that can apply a pattern to a line with a set brush and thickness</p>
-</section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.Pens.html">Pens</a></h4>
-      <section><p>Contains a collection of common Pen styles</p>
-</section>
       <h4><a class="xref" href="SixLabors.ImageSharp.Processing.PixelateExtensions.html">PixelateExtensions</a></h4>
       <section><p>Defines pixelation effect extensions applicable on an <a class="xref" href="SixLabors.ImageSharp.Image.html">Image</a>
 using Mutate/Clone.</p>
+</section>
+      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.PixelRowDelegateExtensions.html">PixelRowDelegateExtensions</a></h4>
+      <section><p>Defines extension methods that allow the application of user defined processing delegate to an <a class="xref" href="SixLabors.ImageSharp.Image.html">Image</a>.</p>
 </section>
       <h4><a class="xref" href="SixLabors.ImageSharp.Processing.PolaroidExtensions.html">PolaroidExtensions</a></h4>
       <section><p>Defines extensions that allow the recreation of an old Polaroid camera effect on an <a class="xref" href="SixLabors.ImageSharp.Image.html">Image</a>
@@ -301,17 +235,11 @@ using Mutate/Clone.</p>
       <section><p>Adds extensions that allow the processing of images to the <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> type.</p>
 </section>
       <h4><a class="xref" href="SixLabors.ImageSharp.Processing.ProjectiveTransformBuilder.html">ProjectiveTransformBuilder</a></h4>
-      <section><p>A helper class for constructing <see cref="!:Matrix4x4"></see> instances for use in projective transforms.</p>
+      <section><p>A helper class for constructing <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a> instances for use in projective transforms.</p>
 </section>
       <h4><a class="xref" href="SixLabors.ImageSharp.Processing.QuantizeExtensions.html">QuantizeExtensions</a></h4>
       <section><p>Defines extensions that allow the application of quantizing algorithms on an <a class="xref" href="SixLabors.ImageSharp.Image.html">Image</a>
 using Mutate/Clone.</p>
-</section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.RadialGradientBrush.html">RadialGradientBrush</a></h4>
-      <section><p>A Circular Gradient Brush, defined by center point and radius.</p>
-</section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.RecolorBrush.html">RecolorBrush</a></h4>
-      <section><p>Provides an implementation of a brush that can recolor an image</p>
 </section>
       <h4><a class="xref" href="SixLabors.ImageSharp.Processing.ResizeExtensions.html">ResizeExtensions</a></h4>
       <section><p>Defines extensions that allow the application of resize operations on an <a class="xref" href="SixLabors.ImageSharp.Image.html">Image</a>
@@ -340,9 +268,6 @@ using Mutate/Clone.</p>
       <section><p>Defines extensions that allow the application of skew operations on an <a class="xref" href="SixLabors.ImageSharp.Image.html">Image</a>
 using Mutate/Clone.</p>
 </section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.SolidBrush.html">SolidBrush</a></h4>
-      <section><p>Provides an implementation of a solid brush for painting solid color areas.</p>
-</section>
       <h4><a class="xref" href="SixLabors.ImageSharp.Processing.TransformExtensions.html">TransformExtensions</a></h4>
       <section><p>Defines extensions that allow the application of composable transform operations on an <a class="xref" href="SixLabors.ImageSharp.Image.html">Image</a>
 using Mutate/Clone.</p>
@@ -351,32 +276,15 @@ using Mutate/Clone.</p>
       <section><p>Defines extensions that allow the application of a radial glow to an <a class="xref" href="SixLabors.ImageSharp.Image.html">Image</a>
 using Mutate/Clone.</p>
 </section>
-    <h3 id="structs">Structs
-  </h3>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.ColorStop.html">ColorStop</a></h4>
-      <section><p>A struct that defines a single color stop.</p>
-</section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.TextGraphicsOptions.html">TextGraphicsOptions</a></h4>
-      <section><p>Options for influencing the drawing functions.</p>
-</section>
     <h3 id="interfaces">Interfaces
   </h3>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.IBrush.html">IBrush</a></h4>
-      <section><p>Brush represents a logical configuration of a brush which can be used to source pixel colors</p>
-</section>
       <h4><a class="xref" href="SixLabors.ImageSharp.Processing.IImageProcessingContext.html">IImageProcessingContext</a></h4>
       <section><p>A pixel-agnostic interface to queue up image operations to apply to an image.</p>
-</section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.IPen.html">IPen</a></h4>
-      <section><p>Interface representing the pattern and size of the stroke to apply with a Pen.</p>
 </section>
     <h3 id="enums">Enums
   </h3>
       <h4><a class="xref" href="SixLabors.ImageSharp.Processing.AnchorPositionMode.html">AnchorPositionMode</a></h4>
       <section><p>Enumerated anchor positions to apply to resized images.</p>
-</section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.BokehBlurExecutionMode.html">BokehBlurExecutionMode</a></h4>
-      <section><p>An <span class="xref">langword_csharp_enum</span> that indicates execution options for the <a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Convolution.BokehBlurProcessor.html">BokehBlurProcessor</a>.</p>
 </section>
       <h4><a class="xref" href="SixLabors.ImageSharp.Processing.ColorBlindnessMode.html">ColorBlindnessMode</a></h4>
       <section><p>Enumerates the various types of defined color blindness filters.</p>
@@ -386,9 +294,6 @@ using Mutate/Clone.</p>
 </section>
       <h4><a class="xref" href="SixLabors.ImageSharp.Processing.FlipMode.html">FlipMode</a></h4>
       <section><p>Provides enumeration over how a image should be flipped.</p>
-</section>
-      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.GradientRepetitionMode.html">GradientRepetitionMode</a></h4>
-      <section><p>Modes to repeat a gradient.</p>
 </section>
       <h4><a class="xref" href="SixLabors.ImageSharp.Processing.GrayscaleMode.html">GrayscaleMode</a></h4>
       <section><p>Enumerates the various types of defined grayscale filters.</p>
@@ -404,6 +309,14 @@ using Mutate/Clone.</p>
 </section>
       <h4><a class="xref" href="SixLabors.ImageSharp.Processing.TaperSide.html">TaperSide</a></h4>
       <section><p>Enumerates the various options which determine which side to taper</p>
+</section>
+    <h3 id="delegates">Delegates
+  </h3>
+      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.PixelRowOperation.html">PixelRowOperation</a></h4>
+      <section><p>A <span class="xref">langword_csharp_delegate</span> representing a user defined processing delegate to use to modify image rows.</p>
+</section>
+      <h4><a class="xref" href="SixLabors.ImageSharp.Processing.PixelRowOperation-1.html">PixelRowOperation&lt;T&gt;</a></h4>
+      <section><p>A <span class="xref">langword_csharp_delegate</span> representing a user defined processing delegate to use to modify image rows.</p>
 </section>
 </article>
           </div>

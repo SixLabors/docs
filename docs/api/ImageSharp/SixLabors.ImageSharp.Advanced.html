@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace SixLabors.ImageSharp.Advanced
    ">
-    <meta name="generator" content="docfx 2.47.0.0">
+    <meta name="generator" content="docfx 2.52.0.0">
     
     <link rel="shortcut icon" href="../../favicon.png">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -20,7 +20,7 @@
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
     
-    
+    <meta property="docfx:rel" content="../../">
     
   </head>
   <body data-spy="scroll" data-target="#affix" data-offset="120">
@@ -59,6 +59,14 @@
           </div>
         </div>
       </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
       <div role="main" class="container body-content hide-when-search">
         
         <div class="sidenav hide-when-search">
@@ -80,6 +88,35 @@
   </h3>
       <h4><a class="xref" href="SixLabors.ImageSharp.Advanced.AdvancedImageExtensions.html">AdvancedImageExtensions</a></h4>
       <section><p>Extension methods over Image{TPixel}</p>
+</section>
+      <h4><a class="xref" href="SixLabors.ImageSharp.Advanced.ParallelRowIterator.html">ParallelRowIterator</a></h4>
+      <section><p>Utility methods for batched processing of pixel row intervals.
+Parallel execution is optimized for image processing based on values defined
+<a class="xref" href="SixLabors.ImageSharp.Advanced.ParallelExecutionSettings.html">ParallelExecutionSettings</a> or <a class="xref" href="SixLabors.ImageSharp.Configuration.html">Configuration</a>.
+Using this class is preferred over direct usage of <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.parallel">Parallel</a> utility methods.</p>
+</section>
+    <h3 id="structs">Structs
+  </h3>
+      <h4><a class="xref" href="SixLabors.ImageSharp.Advanced.ParallelExecutionSettings.html">ParallelExecutionSettings</a></h4>
+      <section><p>Defines execution settings for methods in <a class="xref" href="SixLabors.ImageSharp.Advanced.ParallelRowIterator.html">ParallelRowIterator</a>.</p>
+</section>
+    <h3 id="interfaces">Interfaces
+  </h3>
+      <h4><a class="xref" href="SixLabors.ImageSharp.Advanced.IImageVisitor.html">IImageVisitor</a></h4>
+      <section><p>A visitor to implement a double-dispatch pattern in order to apply pixel-specific operations
+on non-generic <a class="xref" href="SixLabors.ImageSharp.Image.html">Image</a> instances.</p>
+</section>
+      <h4><a class="xref" href="SixLabors.ImageSharp.Advanced.IRowIntervalOperation.html">IRowIntervalOperation</a></h4>
+      <section><p>Defines the contract for an action that operates on a row interval.</p>
+</section>
+      <h4><a class="xref" href="SixLabors.ImageSharp.Advanced.IRowIntervalOperation-1.html">IRowIntervalOperation&lt;TBuffer&gt;</a></h4>
+      <section><p>Defines the contract for an action that operates on a row interval with a temporary buffer.</p>
+</section>
+      <h4><a class="xref" href="SixLabors.ImageSharp.Advanced.IRowOperation.html">IRowOperation</a></h4>
+      <section><p>Defines the contract for an action that operates on a row.</p>
+</section>
+      <h4><a class="xref" href="SixLabors.ImageSharp.Advanced.IRowOperation-1.html">IRowOperation&lt;TBuffer&gt;</a></h4>
+      <section><p>Defines the contract for an action that operates on a row with a temporary buffer.</p>
 </section>
 </article>
           </div>

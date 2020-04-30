@@ -1,14 +1,15 @@
 /* @import url("https://use.fontawesome.com/releases/v5.0.8/css/regular.css");
 @import url("https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css"); */
 
+@import url("vs2015.css");
 /* #############
  * ### RESET ###
  * #############
  */
+
 html {
   line-height: 1.15;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica,
-    Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -17,9 +18,7 @@ body {
   margin: 0;
 }
 
-details,
-main,
-menu {
+details, main, menu {
   display: block;
 }
 
@@ -44,8 +43,7 @@ a {
   -webkit-text-decoration-skip: objects;
 }
 
-a:active,
-a:hover {
+a:active, a:hover {
   outline: 0;
 }
 
@@ -56,8 +54,7 @@ abbr[title] {
   cursor: help;
 }
 
-b,
-strong {
+b, strong {
   font-weight: inherit;
   font-weight: 700;
 }
@@ -66,8 +63,7 @@ small {
   font-size: 80%;
 }
 
-sub,
-sup {
+sub, sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
@@ -86,11 +82,7 @@ svg:not(:root) {
   overflow: hidden;
 }
 
-button,
-input,
-optgroup,
-select,
-textarea {
+button, input, optgroup, select, textarea {
   color: inherit;
   font: inherit;
   margin: 0;
@@ -100,34 +92,25 @@ button {
   overflow: visible;
 }
 
-button,
-select {
+button, select {
   text-transform: none;
 }
 
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer;
 }
 
-button::-moz-focus-inner,
-input::-moz-focus-inner {
+button::-moz-focus-inner, input::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring,
-button:-moz-focusring {
+[type="button"]:-moz-focusring, [type="reset"]:-moz-focusring, [type="submit"]:-moz-focusring, button:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -136,8 +119,7 @@ input[type="number"]::-webkit-outer-spin-button {
   outline-offset: -2px;
 }
 
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -153,9 +135,7 @@ html {
   box-sizing: border-box;
 }
 
-*,
-:after,
-:before {
+*, :after, :before {
   box-sizing: inherit;
 }
 
@@ -163,12 +143,7 @@ html {
   outline: none;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   text-rendering: optimizeLegibility;
   page-break-after: avoid;
 }
@@ -222,28 +197,38 @@ hr {
  * ##################
  */
 
-html,
-body {
-  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Helvetica,
-    Arial, sans-serif;
+html, body {
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.2;
   font-size: 100%;
   background-color: #fff;
 }
 
-h1,
-h2,
-h3 {
+@media (min-width: 1200px) {
+  .container {
+    width: 95%;
+    max-width: 1400px;
+  }
+}
+
+h1, h2, h3 {
   font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
   color: #40064e;
   line-height: 1.15;
+  word-wrap: none!important;
+  word-break: normal!important;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin: 1rem 0;
+}
+
+h1[data-uid] {
+  text-transform: none;
+  font-size: 2rem;
 }
 
 h2 {
@@ -256,16 +241,12 @@ h3 {
   margin: 1.245rem 0;
 }
 
-a,
-.a {
+a, .a {
   color: #337ab7;
   text-decoration: none;
 }
 
-a:hover,
-a:hover .a,
-a:focus,
-a:focus .a {
+a:hover, a:hover .a, a:focus, a:focus .a {
   color: #23527c;
   text-decoration: underline;
 }
@@ -301,14 +282,11 @@ header .navbar {
   border: none;
 }
 
-.navbar-inverse .navbar-nav > li > a,
-.navbar-inverse .navbar-text {
+.navbar-inverse .navbar-nav>li>a, .navbar-inverse .navbar-text {
   color: #fff;
 }
 
-.navbar-inverse .navbar-nav > .active > a,
-.navbar-inverse .navbar-nav > .active > a:focus,
-.navbar-inverse .navbar-nav > .active > a:hover {
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
   background-color: #e30183;
 }
 
@@ -339,8 +317,7 @@ header .navbar {
   transform: rotate(45deg) translate(-4px, -5px);
 }
 
-.collapse.in,
-.collapsing {
+.collapse.in, .collapsing {
   text-align: unset;
 }
 
@@ -365,7 +342,7 @@ header .navbar {
   margin: 0;
 }
 
-.toc-filter > input {
+.toc-filter>input {
   border: 1px solid #dcdcdc;
   color: inherit;
   font-size: 0.875rem;
@@ -374,7 +351,7 @@ header .navbar {
   padding: 0 10px 0 20px;
 }
 
-.toc-filter > input:focus {
+.toc-filter>input:focus {
   outline: #3b99fc solid 1px;
 }
 
@@ -401,23 +378,21 @@ body .toc {
   overflow-x: initial;
 }
 
-.toc .level1 > li {
+.toc .level1>li {
   font-weight: bold;
   margin-top: 2px;
   position: relative;
   font-size: 15px;
 }
 
-toc .nav > li > a {
+toc .nav>li>a {
   font-weight: normal;
   color: inherit;
   padding: 5px 0 0 15px;
   margin: 0;
 }
 
-.toc .nav > li > .expand-stub::before,
-.toc .nav > li.active > .expand-stub::before,
-.toc .nav > li.filtered > .expand-stub::before {
+.toc .nav>li>.expand-stub::before, .toc .nav>li.active>.expand-stub::before, .toc .nav>li.filtered>.expand-stub::before {
   /*DOCFX selectors far too specific!*/
   content: "\f054" !important;
   position: absolute;
@@ -429,13 +404,11 @@ toc .nav > li > a {
   transform: rotate(0deg);
 }
 
-.toc .nav > li.active > .expand-stub::before {
+.toc .nav>li.active>.expand-stub::before {
   color: #fff;
 }
 
-.toc .nav > li.in > .expand-stub::before,
-.toc .nav > li.in.active > .expand-stub::before,
-.toc .nav > li > .expand-stub.in::before {
+.toc .nav>li.in>.expand-stub::before, .toc .nav>li.in.active>.expand-stub::before, .toc .nav>li>.expand-stub.in::before {
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
 }
@@ -444,7 +417,7 @@ toc .nav > li > a {
   font-weight: normal;
 }
 
-.toc .nav > li > a {
+.toc .nav>li>a {
   padding: 5px 5px 5px 18px;
   margin: 0;
 }
@@ -453,20 +426,18 @@ toc .nav > li > a {
   padding-left: 5px;
 }
 
-.toc .nav > li > a:hover,
-.toc .nav > li > a:focus {
+.toc .nav>li>a:hover, .toc .nav>li>a:focus {
   color: #23527c;
   text-decoration: underline;
 }
 
-.toc .nav > li.in.active > a:hover,
-.toc .nav > li.in.active > a:focus {
+.toc .nav>li.in.active>a:hover, .toc .nav>li.in.active>a:focus {
   color: #fff;
   background-color: #40064e;
   text-decoration: none;
 }
 
-.toc .nav > li.active > a {
+.toc .nav>li.active>a {
   color: #fff;
   background-color: #e30183;
 }
@@ -497,22 +468,19 @@ article h4 {
   border-bottom: none;
 }
 
-.code-like,
-code,
-kbd,
-pre,
-samp {
+.code-like, code, kbd, pre, samp {
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: auto;
-  font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono",
-    "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace,
-    sans-serif;
+  font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, sans-serif;
 }
 
 pre {
   word-break: unset;
   word-wrap: unset;
   overflow-x: auto;
+  padding: 0;
+  border: none;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
 }
 
 pre code {
@@ -535,29 +503,29 @@ pre code {
   content: "\f044";
 }
 
-.contribution li + li a::before {
+.contribution li+li a::before {
   /*Github*/
   content: "\f09b";
 }
 
-.sideaffix > div.contribution > ul > li > a.contribution-link {
+.sideaffix>div.contribution>ul>li>a.contribution-link {
   font-weight: normal;
   text-transform: uppercase;
 }
 
-.affix ul > li.active > a {
+.affix ul>li.active>a {
   color: #337ab7;
 }
 
-.affix .level2 > li.active > a {
+.affix .level2>li.active>a {
   text-decoration: underline;
 }
 
-.affix ul ul > li > a:before {
+.affix ul ul>li>a:before {
   content: "";
 }
 
-.affix > ul > li > a:before {
+.affix>ul>li>a:before {
   content: "";
   width: 2px;
   background-color: #e30183;
@@ -566,8 +534,7 @@ pre code {
   bottom: 0;
 }
 
-.nav > li > a:focus,
-.nav > li > a:hover {
+.nav>li>a:focus, .nav>li>a:hover {
   text-decoration: underline;
 }
 
@@ -576,8 +543,7 @@ pre code {
  * ###################
  */
 
-.expand-stub,
-.contribution a {
+.expand-stub, .contribution a {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   display: inline-block;
@@ -587,8 +553,7 @@ pre code {
   line-height: 1;
 }
 
-.expand-stub::before,
-.contribution a::before {
+.expand-stub::before, .contribution a::before {
   margin-right: 4px;
   font-family: "Font Awesome\ 5 Free", "Font Awesome\ 5 Brands";
 }
@@ -610,4 +575,102 @@ pre code {
 
 .footer a {
   color: #fff !important;
+}
+
+/* ###################
+ * ###### TABS #######
+ * ###################
+ */
+
+.tabGroup {
+  margin-bottom: 1rem;
+}
+
+.tabGroup section[role="tabpanel"] {
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+}
+
+.tabGroup section[role="tabpanel"]>pre:last-child {
+  margin-bottom: -8px;
+}
+
+/* ###################
+ * ##### PROJECTS ####
+ * ###################
+ */
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.projects>[class*=col-] {
+  padding-bottom: 16px;
+}
+
+.project {
+  height: 100%;
+  padding: 1rem .5rem 0;
+  color: inherit;
+  margin-bottom: 1rem;
+  display: block;
+  border: 4px solid #FFF;
+  background-color: #FFF;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+}
+
+.project img {
+  height: 137px;
+}
+
+.project h3 {
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.project h3 a::after {
+  display: none;
+}
+
+.project:hover, .project:focus {
+  text-decoration: none;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.16);
+  border-color: #e30183;
+}
+
+.icon {
+  max-width: 20px;
+  margin-right: .5rem;
+}
+
+/* ###################
+ * ####### BUGS ######
+ * ###################
+ */
+
+.inheritance .level0:before, .inheritance .level1:before, .inheritance .level2:before, .inheritance .level3:before, .inheritance .level4:before, .inheritance .level5:before {
+  content: '\21B3';
+  margin-right: 5px;
+}
+
+/*
+* Fix the sidebar so content is not cut off and indicate scroll.
+*/
+
+.bs-docs-sidebar.affix {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: calc(100% - 100px);
+  background: linear-gradient(#FFF 30%, rgba(255, 255, 255, 0)), linear-gradient(rgba(255, 255, 255, 0), #FFF 70%) 0 100%, radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, 0.24), rgba(0, 0, 0, 0)), radial-gradient(farthest-side at 50% 100%, rgba(0, 0, 0, 0.24), rgba(0, 0, 0, 0)) 0 100%;
+  background-color: #FFF;
+  background-repeat: no-repeat;
+  background-attachment: local, local, scroll, scroll;
+  background-size: 100% 10px, 100% 10px, 100% 5px, 100% 5px;
+}
+
+.bs-docs-sidebar.affix>ul.level1 {
+  overflow: initial;
+  max-height: 100%;
 }

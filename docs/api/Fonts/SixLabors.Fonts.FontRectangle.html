@@ -1,0 +1,1643 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Struct FontRectangle
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Struct FontRectangle
+   ">
+    <meta name="generator" content="docfx 2.52.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.png">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="SixLabors.Fonts.FontRectangle">
+  
+  
+  <h1 id="SixLabors_Fonts_FontRectangle" data-uid="SixLabors.Fonts.FontRectangle" class="text-break">Struct FontRectangle
+  </h1>
+  <div class="markdown level0 summary"><p>Stores a set of four single precision floating points that represent the location and size of a rectangle.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="SixLabors.Fonts.html">SixLabors.Fonts</a></h6>
+  <h6><strong>Assembly</strong>: SixLabors.Fonts.dll</h6>
+  <h5 id="SixLabors_Fonts_FontRectangle_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public struct FontRectangle : IEquatable&lt;FontRectangle&gt;</code></pre>
+  </div>
+  <h5 id="SixLabors_Fonts_FontRectangle_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>This struct is fully mutable. This is done (against the guidelines) for the sake of performance,
+as it avoids the need to create new values for modification operations.</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Fonts/new/master/apiSpec/new?filename=SixLabors_Fonts_FontRectangle__ctor_System_Single_System_Single_System_Single_System_Single_.md&amp;value=---%0Auid%3A%20SixLabors.Fonts.FontRectangle.%23ctor(System.Single%2CSystem.Single%2CSystem.Single%2CSystem.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Fonts/blob/1e0d0ac9f1106eaea424e4a86279bf1fa711b88a/src/SixLabors.Fonts/FontRectangle.cs/#L33">View Source</a>
+  </span>
+  <a id="SixLabors_Fonts_FontRectangle__ctor_" data-uid="SixLabors.Fonts.FontRectangle.#ctor*"></a>
+  <h4 id="SixLabors_Fonts_FontRectangle__ctor_System_Single_System_Single_System_Single_System_Single_" data-uid="SixLabors.Fonts.FontRectangle.#ctor(System.Single,System.Single,System.Single,System.Single)">FontRectangle(Single, Single, Single, Single)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a> struct.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FontRectangle(float x, float y, float width, float height)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">x</span></td>
+        <td><p>The horizontal position of the rectangle.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">y</span></td>
+        <td><p>The vertical position of the rectangle.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">width</span></td>
+        <td><p>The width of the rectangle.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">height</span></td>
+        <td><p>The height of the rectangle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Fonts/new/master/apiSpec/new?filename=SixLabors_Fonts_FontRectangle_Empty.md&amp;value=---%0Auid%3A%20SixLabors.Fonts.FontRectangle.Empty%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Fonts/blob/1e0d0ac9f1106eaea424e4a86279bf1fa711b88a/src/SixLabors.Fonts/FontRectangle.cs/#L24">View Source</a>
+  </span>
+  <h4 id="SixLabors_Fonts_FontRectangle_Empty" data-uid="SixLabors.Fonts.FontRectangle.Empty">Empty</h4>
+  <div class="markdown level1 summary"><p>Represents a <a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a> that has X, Y, Width, and Height values set to zero.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly FontRectangle Empty</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Fonts/new/master/apiSpec/new?filename=SixLabors_Fonts_FontRectangle_Bottom.md&amp;value=---%0Auid%3A%20SixLabors.Fonts.FontRectangle.Bottom%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Fonts/blob/1e0d0ac9f1106eaea424e4a86279bf1fa711b88a/src/SixLabors.Fonts/FontRectangle.cs/#L118">View Source</a>
+  </span>
+  <a id="SixLabors_Fonts_FontRectangle_Bottom_" data-uid="SixLabors.Fonts.FontRectangle.Bottom*"></a>
+  <h4 id="SixLabors_Fonts_FontRectangle_Bottom" data-uid="SixLabors.Fonts.FontRectangle.Bottom">Bottom</h4>
+  <div class="markdown level1 summary"><p>Gets the y-coordinate of the bottom edge of this <a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Bottom { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Fonts/new/master/apiSpec/new?filename=SixLabors_Fonts_FontRectangle_Height.md&amp;value=---%0Auid%3A%20SixLabors.Fonts.FontRectangle.Height%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Fonts/blob/1e0d0ac9f1106eaea424e4a86279bf1fa711b88a/src/SixLabors.Fonts/FontRectangle.cs/#L73">View Source</a>
+  </span>
+  <a id="SixLabors_Fonts_FontRectangle_Height_" data-uid="SixLabors.Fonts.FontRectangle.Height*"></a>
+  <h4 id="SixLabors_Fonts_FontRectangle_Height" data-uid="SixLabors.Fonts.FontRectangle.Height">Height</h4>
+  <div class="markdown level1 summary"><p>Gets the height of this <a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Height { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Fonts/new/master/apiSpec/new?filename=SixLabors_Fonts_FontRectangle_Left.md&amp;value=---%0Auid%3A%20SixLabors.Fonts.FontRectangle.Left%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Fonts/blob/1e0d0ac9f1106eaea424e4a86279bf1fa711b88a/src/SixLabors.Fonts/FontRectangle.cs/#L127">View Source</a>
+  </span>
+  <a id="SixLabors_Fonts_FontRectangle_Left_" data-uid="SixLabors.Fonts.FontRectangle.Left*"></a>
+  <h4 id="SixLabors_Fonts_FontRectangle_Left" data-uid="SixLabors.Fonts.FontRectangle.Left">Left</h4>
+  <div class="markdown level1 summary"><p>Gets the x-coordinate of the left edge of this <a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Left { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Fonts/new/master/apiSpec/new?filename=SixLabors_Fonts_FontRectangle_Right.md&amp;value=---%0Auid%3A%20SixLabors.Fonts.FontRectangle.Right%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Fonts/blob/1e0d0ac9f1106eaea424e4a86279bf1fa711b88a/src/SixLabors.Fonts/FontRectangle.cs/#L109">View Source</a>
+  </span>
+  <a id="SixLabors_Fonts_FontRectangle_Right_" data-uid="SixLabors.Fonts.FontRectangle.Right*"></a>
+  <h4 id="SixLabors_Fonts_FontRectangle_Right" data-uid="SixLabors.Fonts.FontRectangle.Right">Right</h4>
+  <div class="markdown level1 summary"><p>Gets the x-coordinate of the right edge of this <a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Right { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Fonts/new/master/apiSpec/new?filename=SixLabors_Fonts_FontRectangle_Top.md&amp;value=---%0Auid%3A%20SixLabors.Fonts.FontRectangle.Top%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Fonts/blob/1e0d0ac9f1106eaea424e4a86279bf1fa711b88a/src/SixLabors.Fonts/FontRectangle.cs/#L104">View Source</a>
+  </span>
+  <a id="SixLabors_Fonts_FontRectangle_Top_" data-uid="SixLabors.Fonts.FontRectangle.Top*"></a>
+  <h4 id="SixLabors_Fonts_FontRectangle_Top" data-uid="SixLabors.Fonts.FontRectangle.Top">Top</h4>
+  <div class="markdown level1 summary"><p>Gets the y-coordinate of the top edge of this <a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Top { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Fonts/new/master/apiSpec/new?filename=SixLabors_Fonts_FontRectangle_Width.md&amp;value=---%0Auid%3A%20SixLabors.Fonts.FontRectangle.Width%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Fonts/blob/1e0d0ac9f1106eaea424e4a86279bf1fa711b88a/src/SixLabors.Fonts/FontRectangle.cs/#L68">View Source</a>
+  </span>
+  <a id="SixLabors_Fonts_FontRectangle_Width_" data-uid="SixLabors.Fonts.FontRectangle.Width*"></a>
+  <h4 id="SixLabors_Fonts_FontRectangle_Width" data-uid="SixLabors.Fonts.FontRectangle.Width">Width</h4>
+  <div class="markdown level1 summary"><p>Gets the width of this <a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Width { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Fonts/new/master/apiSpec/new?filename=SixLabors_Fonts_FontRectangle_X.md&amp;value=---%0Auid%3A%20SixLabors.Fonts.FontRectangle.X%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Fonts/blob/1e0d0ac9f1106eaea424e4a86279bf1fa711b88a/src/SixLabors.Fonts/FontRectangle.cs/#L58">View Source</a>
+  </span>
+  <a id="SixLabors_Fonts_FontRectangle_X_" data-uid="SixLabors.Fonts.FontRectangle.X*"></a>
+  <h4 id="SixLabors_Fonts_FontRectangle_X" data-uid="SixLabors.Fonts.FontRectangle.X">X</h4>
+  <div class="markdown level1 summary"><p>Gets the x-coordinate of this <a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float X { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Fonts/new/master/apiSpec/new?filename=SixLabors_Fonts_FontRectangle_Y.md&amp;value=---%0Auid%3A%20SixLabors.Fonts.FontRectangle.Y%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Fonts/blob/1e0d0ac9f1106eaea424e4a86279bf1fa711b88a/src/SixLabors.Fonts/FontRectangle.cs/#L63">View Source</a>
+  </span>
+  <a id="SixLabors_Fonts_FontRectangle_Y_" data-uid="SixLabors.Fonts.FontRectangle.Y*"></a>
+  <h4 id="SixLabors_Fonts_FontRectangle_Y" data-uid="SixLabors.Fonts.FontRectangle.Y">Y</h4>
+  <div class="markdown level1 summary"><p>Gets the y-coordinate of this <a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Y { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Fonts/new/master/apiSpec/new?filename=SixLabors_Fonts_FontRectangle_Center_SixLabors_Fonts_FontRectangle_.md&amp;value=---%0Auid%3A%20SixLabors.Fonts.FontRectangle.Center(SixLabors.Fonts.FontRectangle)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Fonts/blob/1e0d0ac9f1106eaea424e4a86279bf1fa711b88a/src/SixLabors.Fonts/FontRectangle.cs/#L168">View Source</a>
+  </span>
+  <a id="SixLabors_Fonts_FontRectangle_Center_" data-uid="SixLabors.Fonts.FontRectangle.Center*"></a>
+  <h4 id="SixLabors_Fonts_FontRectangle_Center_SixLabors_Fonts_FontRectangle_" data-uid="SixLabors.Fonts.FontRectangle.Center(SixLabors.Fonts.FontRectangle)">Center(FontRectangle)</h4>
+  <div class="markdown level1 summary"><p>Returns the center point of the given <a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector2 Center(FontRectangle rectangle)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a></td>
+        <td><span class="parametername">rectangle</span></td>
+        <td><p>The rectangle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a></td>
+        <td><p>The <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Fonts/new/master/apiSpec/new?filename=SixLabors_Fonts_FontRectangle_Contains_SixLabors_Fonts_FontRectangle_.md&amp;value=---%0Auid%3A%20SixLabors.Fonts.FontRectangle.Contains(SixLabors.Fonts.FontRectangle)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Fonts/blob/1e0d0ac9f1106eaea424e4a86279bf1fa711b88a/src/SixLabors.Fonts/FontRectangle.cs/#L315">View Source</a>
+  </span>
+  <a id="SixLabors_Fonts_FontRectangle_Contains_" data-uid="SixLabors.Fonts.FontRectangle.Contains*"></a>
+  <h4 id="SixLabors_Fonts_FontRectangle_Contains_SixLabors_Fonts_FontRectangle_" data-uid="SixLabors.Fonts.FontRectangle.Contains(SixLabors.Fonts.FontRectangle)">Contains(FontRectangle)</h4>
+  <div class="markdown level1 summary"><p>Determines if the rectangular region represented by <code data-dev-comment-type="paramref" class="paramref">rectangle</code> is entirely contained
+within the rectangular region represented by this <a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a> .</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Contains(FontRectangle rectangle)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a></td>
+        <td><span class="parametername">rectangle</span></td>
+        <td><p>The rectangle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>The <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Fonts/new/master/apiSpec/new?filename=SixLabors_Fonts_FontRectangle_Contains_System_Numerics_Vector2_.md&amp;value=---%0Auid%3A%20SixLabors.Fonts.FontRectangle.Contains(System.Numerics.Vector2)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Fonts/blob/1e0d0ac9f1106eaea424e4a86279bf1fa711b88a/src/SixLabors.Fonts/FontRectangle.cs/#L306">View Source</a>
+  </span>
+  <a id="SixLabors_Fonts_FontRectangle_Contains_" data-uid="SixLabors.Fonts.FontRectangle.Contains*"></a>
+  <h4 id="SixLabors_Fonts_FontRectangle_Contains_System_Numerics_Vector2_" data-uid="SixLabors.Fonts.FontRectangle.Contains(System.Numerics.Vector2)">Contains(Vector2)</h4>
+  <div class="markdown level1 summary"><p>Determines if the specified point is contained within the rectangular region defined by this <a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a> .</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Contains(Vector2 point)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a></td>
+        <td><span class="parametername">point</span></td>
+        <td><p>The point.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>The <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Fonts/new/master/apiSpec/new?filename=SixLabors_Fonts_FontRectangle_Contains_System_Single_System_Single_.md&amp;value=---%0Auid%3A%20SixLabors.Fonts.FontRectangle.Contains(System.Single%2CSystem.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Fonts/blob/1e0d0ac9f1106eaea424e4a86279bf1fa711b88a/src/SixLabors.Fonts/FontRectangle.cs/#L298">View Source</a>
+  </span>
+  <a id="SixLabors_Fonts_FontRectangle_Contains_" data-uid="SixLabors.Fonts.FontRectangle.Contains*"></a>
+  <h4 id="SixLabors_Fonts_FontRectangle_Contains_System_Single_System_Single_" data-uid="SixLabors.Fonts.FontRectangle.Contains(System.Single,System.Single)">Contains(Single, Single)</h4>
+  <div class="markdown level1 summary"><p>Determines if the specfied point is contained within the rectangular region defined by
+this <a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Contains(float x, float y)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">x</span></td>
+        <td><p>The x-coordinate of the given point.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">y</span></td>
+        <td><p>The y-coordinate of the given point.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>The <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Fonts/new/master/apiSpec/new?filename=SixLabors_Fonts_FontRectangle_Deconstruct_System_Single__System_Single__System_Single__System_Single__.md&amp;value=---%0Auid%3A%20SixLabors.Fonts.FontRectangle.Deconstruct(System.Single%40%2CSystem.Single%40%2CSystem.Single%40%2CSystem.Single%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Fonts/blob/1e0d0ac9f1106eaea424e4a86279bf1fa711b88a/src/SixLabors.Fonts/FontRectangle.cs/#L248">View Source</a>
+  </span>
+  <a id="SixLabors_Fonts_FontRectangle_Deconstruct_" data-uid="SixLabors.Fonts.FontRectangle.Deconstruct*"></a>
+  <h4 id="SixLabors_Fonts_FontRectangle_Deconstruct_System_Single__System_Single__System_Single__System_Single__" data-uid="SixLabors.Fonts.FontRectangle.Deconstruct(System.Single@,System.Single@,System.Single@,System.Single@)">Deconstruct(out Single, out Single, out Single, out Single)</h4>
+  <div class="markdown level1 summary"><p>Deconstructs this rectangle into four floats.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Deconstruct(out float x, out float y, out float width, out float height)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">x</span></td>
+        <td><p>The out value for X.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">y</span></td>
+        <td><p>The out value for Y.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">width</span></td>
+        <td><p>The out value for the width.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">height</span></td>
+        <td><p>The out value for the height.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Fonts/new/master/apiSpec/new?filename=SixLabors_Fonts_FontRectangle_Equals_SixLabors_Fonts_FontRectangle_.md&amp;value=---%0Auid%3A%20SixLabors.Fonts.FontRectangle.Equals(SixLabors.Fonts.FontRectangle)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Fonts/blob/1e0d0ac9f1106eaea424e4a86279bf1fa711b88a/src/SixLabors.Fonts/FontRectangle.cs/#L367">View Source</a>
+  </span>
+  <a id="SixLabors_Fonts_FontRectangle_Equals_" data-uid="SixLabors.Fonts.FontRectangle.Equals*"></a>
+  <h4 id="SixLabors_Fonts_FontRectangle_Equals_SixLabors_Fonts_FontRectangle_" data-uid="SixLabors.Fonts.FontRectangle.Equals(SixLabors.Fonts.FontRectangle)">Equals(FontRectangle)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(FontRectangle other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Fonts/new/master/apiSpec/new?filename=SixLabors_Fonts_FontRectangle_Equals_System_Object_.md&amp;value=---%0Auid%3A%20SixLabors.Fonts.FontRectangle.Equals(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Fonts/blob/1e0d0ac9f1106eaea424e4a86279bf1fa711b88a/src/SixLabors.Fonts/FontRectangle.cs/#L364">View Source</a>
+  </span>
+  <a id="SixLabors_Fonts_FontRectangle_Equals_" data-uid="SixLabors.Fonts.FontRectangle.Equals*"></a>
+  <h4 id="SixLabors_Fonts_FontRectangle_Equals_System_Object_" data-uid="SixLabors.Fonts.FontRectangle.Equals(System.Object)">Equals(Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">obj</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetype.equals#System_ValueType_Equals_System_Object_">ValueType.Equals(Object)</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Fonts/new/master/apiSpec/new?filename=SixLabors_Fonts_FontRectangle_FromLTRB_System_Single_System_Single_System_Single_System_Single_.md&amp;value=---%0Auid%3A%20SixLabors.Fonts.FontRectangle.FromLTRB(System.Single%2CSystem.Single%2CSystem.Single%2CSystem.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Fonts/blob/1e0d0ac9f1106eaea424e4a86279bf1fa711b88a/src/SixLabors.Fonts/FontRectangle.cs/#L158">View Source</a>
+  </span>
+  <a id="SixLabors_Fonts_FontRectangle_FromLTRB_" data-uid="SixLabors.Fonts.FontRectangle.FromLTRB*"></a>
+  <h4 id="SixLabors_Fonts_FontRectangle_FromLTRB_System_Single_System_Single_System_Single_System_Single_" data-uid="SixLabors.Fonts.FontRectangle.FromLTRB(System.Single,System.Single,System.Single,System.Single)">FromLTRB(Single, Single, Single, Single)</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a> with the specified location and size. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FontRectangle FromLTRB(float left, float top, float right, float bottom)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">left</span></td>
+        <td><p>The left coordinate of the rectangle.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">top</span></td>
+        <td><p>The top coordinate of the rectangle.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">right</span></td>
+        <td><p>The right coordinate of the rectangle.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">bottom</span></td>
+        <td><p>The bottom coordinate of the rectangle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a></td>
+        <td><p>The <a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Fonts/new/master/apiSpec/new?filename=SixLabors_Fonts_FontRectangle_GetHashCode.md&amp;value=---%0Auid%3A%20SixLabors.Fonts.FontRectangle.GetHashCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Fonts/blob/1e0d0ac9f1106eaea424e4a86279bf1fa711b88a/src/SixLabors.Fonts/FontRectangle.cs/#L352">View Source</a>
+  </span>
+  <a id="SixLabors_Fonts_FontRectangle_GetHashCode_" data-uid="SixLabors.Fonts.FontRectangle.GetHashCode*"></a>
+  <h4 id="SixLabors_Fonts_FontRectangle_GetHashCode" data-uid="SixLabors.Fonts.FontRectangle.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetype.gethashcode#System_ValueType_GetHashCode">ValueType.GetHashCode()</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Fonts/new/master/apiSpec/new?filename=SixLabors_Fonts_FontRectangle_Inflate_SixLabors_Fonts_FontRectangle_System_Single_System_Single_.md&amp;value=---%0Auid%3A%20SixLabors.Fonts.FontRectangle.Inflate(SixLabors.Fonts.FontRectangle%2CSystem.Single%2CSystem.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Fonts/blob/1e0d0ac9f1106eaea424e4a86279bf1fa711b88a/src/SixLabors.Fonts/FontRectangle.cs/#L201">View Source</a>
+  </span>
+  <a id="SixLabors_Fonts_FontRectangle_Inflate_" data-uid="SixLabors.Fonts.FontRectangle.Inflate*"></a>
+  <h4 id="SixLabors_Fonts_FontRectangle_Inflate_SixLabors_Fonts_FontRectangle_System_Single_System_Single_" data-uid="SixLabors.Fonts.FontRectangle.Inflate(SixLabors.Fonts.FontRectangle,System.Single,System.Single)">Inflate(FontRectangle, Single, Single)</h4>
+  <div class="markdown level1 summary"><p>Creates a <a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a> that is inflated by the specified amount.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FontRectangle Inflate(FontRectangle rectangle, float x, float y)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a></td>
+        <td><span class="parametername">rectangle</span></td>
+        <td><p>The rectangle.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">x</span></td>
+        <td><p>The amount to inflate the width by.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">y</span></td>
+        <td><p>The amount to inflate the height by.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a></td>
+        <td><p>A new <a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Fonts/new/master/apiSpec/new?filename=SixLabors_Fonts_FontRectangle_Inflate_System_Numerics_Vector2_.md&amp;value=---%0Auid%3A%20SixLabors.Fonts.FontRectangle.Inflate(System.Numerics.Vector2)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Fonts/blob/1e0d0ac9f1106eaea424e4a86279bf1fa711b88a/src/SixLabors.Fonts/FontRectangle.cs/#L288">View Source</a>
+  </span>
+  <a id="SixLabors_Fonts_FontRectangle_Inflate_" data-uid="SixLabors.Fonts.FontRectangle.Inflate*"></a>
+  <h4 id="SixLabors_Fonts_FontRectangle_Inflate_System_Numerics_Vector2_" data-uid="SixLabors.Fonts.FontRectangle.Inflate(System.Numerics.Vector2)">Inflate(Vector2)</h4>
+  <div class="markdown level1 summary"><p>Inflates this <a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a> by the specified amount.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FontRectangle Inflate(Vector2 size)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a></td>
+        <td><span class="parametername">size</span></td>
+        <td><p>The size.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a></td>
+        <td><p>New <a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a> representing the inflated rectrangle</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Fonts/new/master/apiSpec/new?filename=SixLabors_Fonts_FontRectangle_Inflate_System_Single_System_Single_.md&amp;value=---%0Auid%3A%20SixLabors.Fonts.FontRectangle.Inflate(System.Single%2CSystem.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Fonts/blob/1e0d0ac9f1106eaea424e4a86279bf1fa711b88a/src/SixLabors.Fonts/FontRectangle.cs/#L273">View Source</a>
+  </span>
+  <a id="SixLabors_Fonts_FontRectangle_Inflate_" data-uid="SixLabors.Fonts.FontRectangle.Inflate*"></a>
+  <h4 id="SixLabors_Fonts_FontRectangle_Inflate_System_Single_System_Single_" data-uid="SixLabors.Fonts.FontRectangle.Inflate(System.Single,System.Single)">Inflate(Single, Single)</h4>
+  <div class="markdown level1 summary"><p>Inflates this <a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a> by the specified amount.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FontRectangle Inflate(float width, float height)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">width</span></td>
+        <td><p>The width.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">height</span></td>
+        <td><p>The height.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a></td>
+        <td><p>New <a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a> representing the inflated rectrangle</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Fonts/new/master/apiSpec/new?filename=SixLabors_Fonts_FontRectangle_Intersect_SixLabors_Fonts_FontRectangle_.md&amp;value=---%0Auid%3A%20SixLabors.Fonts.FontRectangle.Intersect(SixLabors.Fonts.FontRectangle)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Fonts/blob/1e0d0ac9f1106eaea424e4a86279bf1fa711b88a/src/SixLabors.Fonts/FontRectangle.cs/#L261">View Source</a>
+  </span>
+  <a id="SixLabors_Fonts_FontRectangle_Intersect_" data-uid="SixLabors.Fonts.FontRectangle.Intersect*"></a>
+  <h4 id="SixLabors_Fonts_FontRectangle_Intersect_SixLabors_Fonts_FontRectangle_" data-uid="SixLabors.Fonts.FontRectangle.Intersect(SixLabors.Fonts.FontRectangle)">Intersect(FontRectangle)</h4>
+  <div class="markdown level1 summary"><p>Creates a FontRectangle that represents the intersection between this FontRectangle and the <code data-dev-comment-type="paramref" class="paramref">rectangle</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FontRectangle Intersect(FontRectangle rectangle)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a></td>
+        <td><span class="parametername">rectangle</span></td>
+        <td><p>The rectangle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a></td>
+        <td><p>New <a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a> representing the intersections between the two rectrangles.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Fonts/new/master/apiSpec/new?filename=SixLabors_Fonts_FontRectangle_Intersect_SixLabors_Fonts_FontRectangle_SixLabors_Fonts_FontRectangle_.md&amp;value=---%0Auid%3A%20SixLabors.Fonts.FontRectangle.Intersect(SixLabors.Fonts.FontRectangle%2CSixLabors.Fonts.FontRectangle)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Fonts/blob/1e0d0ac9f1106eaea424e4a86279bf1fa711b88a/src/SixLabors.Fonts/FontRectangle.cs/#L178">View Source</a>
+  </span>
+  <a id="SixLabors_Fonts_FontRectangle_Intersect_" data-uid="SixLabors.Fonts.FontRectangle.Intersect*"></a>
+  <h4 id="SixLabors_Fonts_FontRectangle_Intersect_SixLabors_Fonts_FontRectangle_SixLabors_Fonts_FontRectangle_" data-uid="SixLabors.Fonts.FontRectangle.Intersect(SixLabors.Fonts.FontRectangle,SixLabors.Fonts.FontRectangle)">Intersect(FontRectangle, FontRectangle)</h4>
+  <div class="markdown level1 summary"><p>Creates a rectangle that represents the intersection between <code data-dev-comment-type="paramref" class="paramref">a</code> and
+<code data-dev-comment-type="paramref" class="paramref">b</code>. If there is no intersection, an empty rectangle is returned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FontRectangle Intersect(FontRectangle a, FontRectangle b)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a></td>
+        <td><span class="parametername">a</span></td>
+        <td><p>The first rectangle.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a></td>
+        <td><span class="parametername">b</span></td>
+        <td><p>The second rectangle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a></td>
+        <td><p>The <a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Fonts/new/master/apiSpec/new?filename=SixLabors_Fonts_FontRectangle_IntersectsWith_SixLabors_Fonts_FontRectangle_.md&amp;value=---%0Auid%3A%20SixLabors.Fonts.FontRectangle.IntersectsWith(SixLabors.Fonts.FontRectangle)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Fonts/blob/1e0d0ac9f1106eaea424e4a86279bf1fa711b88a/src/SixLabors.Fonts/FontRectangle.cs/#L326">View Source</a>
+  </span>
+  <a id="SixLabors_Fonts_FontRectangle_IntersectsWith_" data-uid="SixLabors.Fonts.FontRectangle.IntersectsWith*"></a>
+  <h4 id="SixLabors_Fonts_FontRectangle_IntersectsWith_SixLabors_Fonts_FontRectangle_" data-uid="SixLabors.Fonts.FontRectangle.IntersectsWith(SixLabors.Fonts.FontRectangle)">IntersectsWith(FontRectangle)</h4>
+  <div class="markdown level1 summary"><p>Determines if the specfied <a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a> intersects the rectangular region defined by
+this <a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IntersectsWith(FontRectangle rectangle)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a></td>
+        <td><span class="parametername">rectangle</span></td>
+        <td><p>The other Rectange. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>The <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Fonts/new/master/apiSpec/new?filename=SixLabors_Fonts_FontRectangle_Offset_System_Numerics_Vector2_.md&amp;value=---%0Auid%3A%20SixLabors.Fonts.FontRectangle.Offset(System.Numerics.Vector2)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Fonts/blob/1e0d0ac9f1106eaea424e4a86279bf1fa711b88a/src/SixLabors.Fonts/FontRectangle.cs/#L336">View Source</a>
+  </span>
+  <a id="SixLabors_Fonts_FontRectangle_Offset_" data-uid="SixLabors.Fonts.FontRectangle.Offset*"></a>
+  <h4 id="SixLabors_Fonts_FontRectangle_Offset_System_Numerics_Vector2_" data-uid="SixLabors.Fonts.FontRectangle.Offset(System.Numerics.Vector2)">Offset(Vector2)</h4>
+  <div class="markdown level1 summary"><p>Adjusts the location of this rectangle by the specified amount.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FontRectangle Offset(Vector2 point)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.numerics.vector2">Vector2</a></td>
+        <td><span class="parametername">point</span></td>
+        <td><p>The point.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a></td>
+        <td><p>New <a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a> representing the offset rectrangle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Fonts/new/master/apiSpec/new?filename=SixLabors_Fonts_FontRectangle_Offset_System_Single_System_Single_.md&amp;value=---%0Auid%3A%20SixLabors.Fonts.FontRectangle.Offset(System.Single%2CSystem.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Fonts/blob/1e0d0ac9f1106eaea424e4a86279bf1fa711b88a/src/SixLabors.Fonts/FontRectangle.cs/#L345">View Source</a>
+  </span>
+  <a id="SixLabors_Fonts_FontRectangle_Offset_" data-uid="SixLabors.Fonts.FontRectangle.Offset*"></a>
+  <h4 id="SixLabors_Fonts_FontRectangle_Offset_System_Single_System_Single_" data-uid="SixLabors.Fonts.FontRectangle.Offset(System.Single,System.Single)">Offset(Single, Single)</h4>
+  <div class="markdown level1 summary"><p>Adjusts the location of this rectangle by the specified amount.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FontRectangle Offset(float dx, float dy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">dx</span></td>
+        <td><p>The amount to offset the x-coordinate.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">dy</span></td>
+        <td><p>The amount to offset the y-coordinate.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a></td>
+        <td><p>New <a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a> representing the inflated rectrangle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Fonts/new/master/apiSpec/new?filename=SixLabors_Fonts_FontRectangle_ToString.md&amp;value=---%0Auid%3A%20SixLabors.Fonts.FontRectangle.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Fonts/blob/1e0d0ac9f1106eaea424e4a86279bf1fa711b88a/src/SixLabors.Fonts/FontRectangle.cs/#L358">View Source</a>
+  </span>
+  <a id="SixLabors_Fonts_FontRectangle_ToString_" data-uid="SixLabors.Fonts.FontRectangle.ToString*"></a>
+  <h4 id="SixLabors_Fonts_FontRectangle_ToString" data-uid="SixLabors.Fonts.FontRectangle.ToString">ToString()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetype.tostring#System_ValueType_ToString">ValueType.ToString()</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Fonts/new/master/apiSpec/new?filename=SixLabors_Fonts_FontRectangle_Transform_SixLabors_Fonts_FontRectangle_System_Numerics_Matrix3x2_.md&amp;value=---%0Auid%3A%20SixLabors.Fonts.FontRectangle.Transform(SixLabors.Fonts.FontRectangle%2CSystem.Numerics.Matrix3x2)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Fonts/blob/1e0d0ac9f1106eaea424e4a86279bf1fa711b88a/src/SixLabors.Fonts/FontRectangle.cs/#L215">View Source</a>
+  </span>
+  <a id="SixLabors_Fonts_FontRectangle_Transform_" data-uid="SixLabors.Fonts.FontRectangle.Transform*"></a>
+  <h4 id="SixLabors_Fonts_FontRectangle_Transform_SixLabors_Fonts_FontRectangle_System_Numerics_Matrix3x2_" data-uid="SixLabors.Fonts.FontRectangle.Transform(SixLabors.Fonts.FontRectangle,System.Numerics.Matrix3x2)">Transform(FontRectangle, Matrix3x2)</h4>
+  <div class="markdown level1 summary"><p>Transforms a rectangle by the given matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FontRectangle Transform(FontRectangle rectangle, Matrix3x2 matrix)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a></td>
+        <td><span class="parametername">rectangle</span></td>
+        <td><p>The source rectangle.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.numerics.matrix3x2">Matrix3x2</a></td>
+        <td><span class="parametername">matrix</span></td>
+        <td><p>The transformation matrix.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a></td>
+        <td><p>A transformed <a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Fonts/new/master/apiSpec/new?filename=SixLabors_Fonts_FontRectangle_Union_SixLabors_Fonts_FontRectangle_SixLabors_Fonts_FontRectangle_.md&amp;value=---%0Auid%3A%20SixLabors.Fonts.FontRectangle.Union(SixLabors.Fonts.FontRectangle%2CSixLabors.Fonts.FontRectangle)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Fonts/blob/1e0d0ac9f1106eaea424e4a86279bf1fa711b88a/src/SixLabors.Fonts/FontRectangle.cs/#L230">View Source</a>
+  </span>
+  <a id="SixLabors_Fonts_FontRectangle_Union_" data-uid="SixLabors.Fonts.FontRectangle.Union*"></a>
+  <h4 id="SixLabors_Fonts_FontRectangle_Union_SixLabors_Fonts_FontRectangle_SixLabors_Fonts_FontRectangle_" data-uid="SixLabors.Fonts.FontRectangle.Union(SixLabors.Fonts.FontRectangle,SixLabors.Fonts.FontRectangle)">Union(FontRectangle, FontRectangle)</h4>
+  <div class="markdown level1 summary"><p>Creates a rectangle that represents the union between <code data-dev-comment-type="paramref" class="paramref">a</code> and <code data-dev-comment-type="paramref" class="paramref">b</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FontRectangle Union(FontRectangle a, FontRectangle b)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a></td>
+        <td><span class="parametername">a</span></td>
+        <td><p>The first rectangle.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a></td>
+        <td><span class="parametername">b</span></td>
+        <td><p>The second rectangle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a></td>
+        <td><p>The <a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="operators">Operators
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Fonts/new/master/apiSpec/new?filename=SixLabors_Fonts_FontRectangle_op_Equality_SixLabors_Fonts_FontRectangle_SixLabors_Fonts_FontRectangle_.md&amp;value=---%0Auid%3A%20SixLabors.Fonts.FontRectangle.op_Equality(SixLabors.Fonts.FontRectangle%2CSixLabors.Fonts.FontRectangle)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Fonts/blob/1e0d0ac9f1106eaea424e4a86279bf1fa711b88a/src/SixLabors.Fonts/FontRectangle.cs/#L137">View Source</a>
+  </span>
+  <a id="SixLabors_Fonts_FontRectangle_op_Equality_" data-uid="SixLabors.Fonts.FontRectangle.op_Equality*"></a>
+  <h4 id="SixLabors_Fonts_FontRectangle_op_Equality_SixLabors_Fonts_FontRectangle_SixLabors_Fonts_FontRectangle_" data-uid="SixLabors.Fonts.FontRectangle.op_Equality(SixLabors.Fonts.FontRectangle,SixLabors.Fonts.FontRectangle)">Equality(FontRectangle, FontRectangle)</h4>
+  <div class="markdown level1 summary"><p>Compares two <a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a> objects for equality.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(FontRectangle left, FontRectangle right)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a></td>
+        <td><span class="parametername">left</span></td>
+        <td><p>The <a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a> on the left side of the operand.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a></td>
+        <td><span class="parametername">right</span></td>
+        <td><p>The <a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a> on the right side of the operand.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if the current left is equal to the <code data-dev-comment-type="paramref" class="paramref">right</code> parameter; otherwise, false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/Fonts/new/master/apiSpec/new?filename=SixLabors_Fonts_FontRectangle_op_Inequality_SixLabors_Fonts_FontRectangle_SixLabors_Fonts_FontRectangle_.md&amp;value=---%0Auid%3A%20SixLabors.Fonts.FontRectangle.op_Inequality(SixLabors.Fonts.FontRectangle%2CSixLabors.Fonts.FontRectangle)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/Fonts/blob/1e0d0ac9f1106eaea424e4a86279bf1fa711b88a/src/SixLabors.Fonts/FontRectangle.cs/#L148">View Source</a>
+  </span>
+  <a id="SixLabors_Fonts_FontRectangle_op_Inequality_" data-uid="SixLabors.Fonts.FontRectangle.op_Inequality*"></a>
+  <h4 id="SixLabors_Fonts_FontRectangle_op_Inequality_SixLabors_Fonts_FontRectangle_SixLabors_Fonts_FontRectangle_" data-uid="SixLabors.Fonts.FontRectangle.op_Inequality(SixLabors.Fonts.FontRectangle,SixLabors.Fonts.FontRectangle)">Inequality(FontRectangle, FontRectangle)</h4>
+  <div class="markdown level1 summary"><p>Compares two <a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a> objects for inequality.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(FontRectangle left, FontRectangle right)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a></td>
+        <td><span class="parametername">left</span></td>
+        <td><p>The <a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a> on the left side of the operand.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a></td>
+        <td><span class="parametername">right</span></td>
+        <td><p>The <a class="xref" href="SixLabors.Fonts.FontRectangle.html">FontRectangle</a> on the right side of the operand.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if the current left is unequal to the <code data-dev-comment-type="paramref" class="paramref">right</code> parameter; otherwise, false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iequatable-1">System.IEquatable&lt;T&gt;</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/SixLabors/Fonts/new/master/apiSpec/new?filename=SixLabors_Fonts_FontRectangle.md&amp;value=---%0Auid%3A%20SixLabors.Fonts.FontRectangle%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/SixLabors/Fonts/blob/1e0d0ac9f1106eaea424e4a86279bf1fa711b88a/src/SixLabors.Fonts/FontRectangle.cs/#L19" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © Six Labors<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

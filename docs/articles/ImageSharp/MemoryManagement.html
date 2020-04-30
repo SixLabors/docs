@@ -9,7 +9,7 @@
     <title>Memory Management </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Memory Management ">
-    <meta name="generator" content="docfx 2.47.0.0">
+    <meta name="generator" content="docfx 2.52.0.0">
     
     <link rel="shortcut icon" href="../../favicon.png">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -19,7 +19,7 @@
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
     
-    
+    <meta property="docfx:rel" content="../../">
     
   </head>
   <body data-spy="scroll" data-target="#affix">
@@ -58,6 +58,14 @@
           </div>
         </div>
       </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
       <div role="main" class="container body-content hide-when-search">
         
         <div class="sidenav hide-when-search">
@@ -71,15 +79,16 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="memory-management">Memory Management</h1>
 
-<h3 id="imagesharp-seems-to-retain-300-400-mb-of-managed-memory-even-after-disposing-all-my-images-is-this-a-memory-leak">ImageSharp seems to retain ~300-400 MB of managed memory even after disposing all my images. Is this a memory leak?</h3>
-<p>By default, ImageSharp uses <a href="http://adamsitnik.com/Array-Pool/">ArrayPool-s</a> for performance reasons, however this behavior is fully configurable. All large buffers are managed by the <a class="xref" href="../../api/Core/SixLabors.Memory.MemoryAllocator.html">MemoryAllocator</a> implementation associated to <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Configuration.html">Configuration</a>-s <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Configuration.html#SixLabors_ImageSharp_Configuration_MemoryAllocator">MemoryAllocator</a> property. We are using <a class="xref" href="../../api/Core/SixLabors.Memory.ArrayPoolMemoryAllocator.html">ArrayPoolMemoryAllocator</a> by default, in order to utilize the benefits of array pooling:</p>
+<blockquote><p>ImageSharp seems to retain ~300-400 MB of managed memory even after disposing all my images. Is this a memory leak?</p>
+</blockquote>
+<p>By default, ImageSharp uses <a href="http://adamsitnik.com/Array-Pool/">ArrayPool&#39;s</a> for performance reasons, however this behavior is fully configurable. All large buffers are managed by the <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Memory.MemoryAllocator.html">MemoryAllocator</a> implementation associated to <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Configuration.html">Configuration</a>&#39;s <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Configuration.html#SixLabors_ImageSharp_Configuration_MemoryAllocator">MemoryAllocator</a> property. We are using <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Memory.ArrayPoolMemoryAllocator.html">ArrayPoolMemoryAllocator</a> by default, in order to utilize the benefits of array pooling:</p>
 <ul>
 <li>Less pressure on GC, because buffers are being reused most of the time</li>
 <li>Reduced <a href="https://blogs.msdn.microsoft.com/maoni/2016/05/31/large-object-heap-uncovered-from-an-old-msdn-article/">LOH fragmentation</a></li>
 <li>When working with unclean buffers is acceptable, we can spare on GC-s array cleaning behavior too</li>
 </ul>
 <p><strong>Summary</strong>: pooling helps us to <em>reduce CPU work and increase throughput for the cost of a larger memory footprint.</em></p>
-<h3 id="working-in-memory-constrained-environments">Working in memory constrained environments</h3>
+<h3 id="working-in-memory-constrained-environments">Working in Memory Constrained Environments</h3>
 <p>Sometimes having ~300 MB memory footprint is not an option. Let&#39;s mention a few cases:</p>
 <ul>
 <li>When horizontal scaling is achieved by having multiple memory constrained containers in a cloud environment.</li>
@@ -90,15 +99,15 @@
 <li>Keep in mind that image processing is a <em>memory intensive</em> application! This may affect your scaling strategy. We don&#39;t recommend using containers with 1 GB or smaller memory limit!</li>
 <li>Make sure that you are running your service in a <strong>64 bit process</strong>!</li>
 </ul>
-<p>There are several pre-defined factory methods to create an <a class="xref" href="../../api/Core/SixLabors.Memory.ArrayPoolMemoryAllocator.html">ArrayPoolMemoryAllocator</a> instance for memory constrained environments. For example <a class="xref" href="../../api/Core/SixLabors.Memory.ArrayPoolMemoryAllocator.html#SixLabors_Memory_ArrayPoolMemoryAllocator_CreateWithModeratePooling">ArrayPoolMemoryAllocator.CreateWithModeratePooling</a> might be suitable in most constrained situations:</p>
+<p>There are several pre-defined factory methods to create an <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Memory.ArrayPoolMemoryAllocator.html">ArrayPoolMemoryAllocator</a> instance for memory constrained environments. For example <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Memory.ArrayPoolMemoryAllocator.html#SixLabors_ImageSharp_Memory_ArrayPoolMemoryAllocator_CreateWithModeratePooling">CreateWithModeratePooling()</a> might be suitable in most constrained situations:</p>
 <pre><code class="lang-cs">Configuration.Default.MemoryAllocator = ArrayPoolMemoryAllocator.CreateWithModeratePooling();
 </code></pre><p>Of course, you may also configure a MemoryAllocator on your own <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Configuration.html">Configuration</a> instance.</p>
-<p>You can find <a href="https://github.com/SixLabors/ImageSharp/pull/475">benchmark results in the original PR</a> which may help to select you a configuration, but they are bit outdated, because our throughput got better since then!</p>
-<h3 id="releasing-pools-programatically">Releasing pools programatically</h3>
-<p>If your application uses ImageSharp sporadically (eg. generating some images on startup, or on other non-frequent use-cases), you may want to release the retained pools using <a class="xref" href="../../api/Core/SixLabors.Memory.MemoryAllocator.html#SixLabors_Memory_MemoryAllocator_ReleaseRetainedResources">ReleaseRetainedResources</a>:</p>
+<p>You can find <a href="https://github.com/SixLabors/ImageSharp/pull/475">benchmark results in the original PR</a> which may help to select you a configuration, but they are bit outdated, because our throughput has improved since then!</p>
+<h3 id="releasing-pools-programmatically">Releasing Pools Programmatically</h3>
+<p>If your application uses ImageSharp sporadically (eg. generating some images on startup, or on other non-frequent use-cases), you may want to release the retained pools using <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Memory.MemoryAllocator.html#SixLabors_ImageSharp_Memory_MemoryAllocator_ReleaseRetainedResources">ReleaseRetainedResources()</a>:</p>
 <pre><code class="lang-cs">Configuration.Default.MemoryAllocator.ReleaseRetainedResources();
-</code></pre><h3 id="using-multiple-memoryallocator-instances-in-the-same-process">Using multiple MemoryAllocator instances in the same process</h3>
-<p>You need to create and maintain your own <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Configuration.html">Configuration</a> instance, setting a specific MemoryAllocator on it. It&#39;s possible to pass custom Configuration instances to methods accross our whole API.</p>
+</code></pre><h3 id="using-multiple-memoryallocator-instances-in-the-same-process">Using Multiple MemoryAllocator Instances in the Same Process</h3>
+<p>You need to create and maintain your own <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Configuration.html">Configuration</a> instance, setting a specific MemoryAllocator on it. It&#39;s possible to pass custom Configuration instances to methods across our whole API.</p>
 
 </article>
           </div>
@@ -108,7 +117,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/SixLabors/docs/blob/master/articles/ImageSharp/MemoryManagement.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/SixLabors/docs/blob/master/articles/imagesharp/memorymanagement.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

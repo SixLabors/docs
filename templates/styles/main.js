@@ -1,57 +1,24 @@
-// // Use container fluid
-// //var containers = $(".container");
-// //containers.removeClass("container");
-// //containers.addClass("container-fluid");
+$(function () {
 
-// // Navbar Hamburger
-// $(function() {
-//     $(".navbar-toggle").click(function() {
-//         $(this).toggleClass("change");
-//     })
-// })
+    // The default header breaking function is breaking on camel casing which
+    // screws up our longer namespace representations.
+    // Update to add break after keyword only. 
+    function breakPlainText(text) {
+        if (!text) return text;
+        return text.replace(/(Namespace|Class|Enum|Struct|Type|Interface)/g, '$1<wbr>');
+    }
 
-// // Select list to replace affix on small screens
-// $(function () {
-//     var navItems = $(".sideaffix .level1 > li");
+    $("h1.text-break").each(function () {
+        const $this = $(this);
 
-//     if (navItems.length == 0) {
-//         return;
-//     }
+        $this.html(breakPlainText($this.text()));
+    });
 
-//     var selector = $("<select/>");
-//     selector.addClass("form-control visible-sm visible-xs");
-//     var form = $("<form/>");
-//     form.append(selector);
-//     form.prependTo("article");
+    // Fix the width of the right sidebar so we don't lose content.
+    const scrollbarWidth = 3 * (window.innerWidth - document.body.offsetWidth);
+    $(".sideaffix").each(function () {
+        const $this = $(this);
 
-//     selector.change(function() {
-//         window.location = $(this).find("option:selected").val();
-//     })
-
-//     function work(item, level) {
-//         var link = item.children('a');
-
-//         var text = link.text();
-        
-//         for (var i = 0; i < level; ++i) {
-//             text = '&nbsp;&nbsp;' + text;
-//         }
-
-//         selector.append($('<option/>', {
-//             'value': link.attr('href'),
-//             'html': text
-//         }));
-
-//         var nested = item.children('ul');
-
-//         if (nested.length > 0) {
-//             nested.children('li').each(function () {
-//                 work($(this), level + 1);
-//             });
-//         }
-//     }
-
-//     navItems.each(function () {
-//         work($(this), 0);
-//     });
-// })
+        $this.width($this.parent().outerWidth() + scrollbarWidth);
+    });
+});

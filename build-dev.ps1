@@ -1,9 +1,5 @@
-# Ensure all submodules are checked out, but do not look for latest tags. (Useful for docs development.)
+# Ensure all submodules are checked out with the latest master. (Useful for docs development.)
 git submodule update --init --recursive
-
-Get-ChildItem ./ext -Directory | ForEach-Object {
-    $path = $_.FullName
-    git -C "$path" fetch
-}
+git submodule foreach git pull origin master --recurse-submodules
 
 docfx

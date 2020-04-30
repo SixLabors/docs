@@ -1,0 +1,468 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class LinearLineSegment
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class LinearLineSegment
+   ">
+    <meta name="generator" content="docfx 2.50.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.png">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="SixLabors.ImageSharp.LinearLineSegment">
+  
+  
+  <h1 id="SixLabors_ImageSharp_LinearLineSegment" data-uid="SixLabors.ImageSharp.LinearLineSegment" class="text-break">Class LinearLineSegment
+  </h1>
+  <div class="markdown level0 summary"><p>Represents a series of control points that will be joined by straight lines</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">LinearLineSegment</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="SixLabors.ImageSharp.ILineSegment.html">ILineSegment</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="SixLabors.ImageSharp.html">SixLabors.ImageSharp</a></h6>
+  <h6><strong>Assembly</strong>: SixLabors.ImageSharp.Drawing.dll</h6>
+  <h5 id="SixLabors_ImageSharp_LinearLineSegment_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class LinearLineSegment : ILineSegment</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/new/master/apiSpec/new?filename=SixLabors_ImageSharp_LinearLineSegment__ctor_PointF_PointF_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.LinearLineSegment.%23ctor(PointF%2CPointF)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/master/src/ImageSharp.Drawing/Shapes/LinearLineSegment.cs/#L26">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_LinearLineSegment__ctor_" data-uid="SixLabors.ImageSharp.LinearLineSegment.#ctor*"></a>
+  <h4 id="SixLabors_ImageSharp_LinearLineSegment__ctor_PointF_PointF_" data-uid="SixLabors.ImageSharp.LinearLineSegment.#ctor(PointF,PointF)">LinearLineSegment(PointF, PointF)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="SixLabors.ImageSharp.LinearLineSegment.html">LinearLineSegment</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LinearLineSegment(PointF start, PointF end)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">PointF</span></td>
+        <td><span class="parametername">start</span></td>
+        <td><p>The start.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">PointF</span></td>
+        <td><span class="parametername">end</span></td>
+        <td><p>The end.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/new/master/apiSpec/new?filename=SixLabors_ImageSharp_LinearLineSegment__ctor_PointF_PointF_PointF___.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.LinearLineSegment.%23ctor(PointF%2CPointF%2CPointF%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/master/src/ImageSharp.Drawing/Shapes/LinearLineSegment.cs/#L37">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_LinearLineSegment__ctor_" data-uid="SixLabors.ImageSharp.LinearLineSegment.#ctor*"></a>
+  <h4 id="SixLabors_ImageSharp_LinearLineSegment__ctor_PointF_PointF_PointF___" data-uid="SixLabors.ImageSharp.LinearLineSegment.#ctor(PointF,PointF,PointF[])">LinearLineSegment(PointF, PointF, PointF[])</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="SixLabors.ImageSharp.LinearLineSegment.html">LinearLineSegment</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LinearLineSegment(PointF point1, PointF point2, params PointF[] additionalPoints)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">PointF</span></td>
+        <td><span class="parametername">point1</span></td>
+        <td><p>The point1.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">PointF</span></td>
+        <td><span class="parametername">point2</span></td>
+        <td><p>The point2.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">PointF</span>[]</td>
+        <td><span class="parametername">additionalPoints</span></td>
+        <td><p>Additional points</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/new/master/apiSpec/new?filename=SixLabors_ImageSharp_LinearLineSegment__ctor_PointF___.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.LinearLineSegment.%23ctor(PointF%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/master/src/ImageSharp.Drawing/Shapes/LinearLineSegment.cs/#L46">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_LinearLineSegment__ctor_" data-uid="SixLabors.ImageSharp.LinearLineSegment.#ctor*"></a>
+  <h4 id="SixLabors_ImageSharp_LinearLineSegment__ctor_PointF___" data-uid="SixLabors.ImageSharp.LinearLineSegment.#ctor(PointF[])">LinearLineSegment(PointF[])</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="SixLabors.ImageSharp.LinearLineSegment.html">LinearLineSegment</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LinearLineSegment(PointF[] points)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">PointF</span>[]</td>
+        <td><span class="parametername">points</span></td>
+        <td><p>The points.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/new/master/apiSpec/new?filename=SixLabors_ImageSharp_LinearLineSegment_EndPoint.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.LinearLineSegment.EndPoint%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/master/src/ImageSharp.Drawing/Shapes/LinearLineSegment.cs/#L61">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_LinearLineSegment_EndPoint_" data-uid="SixLabors.ImageSharp.LinearLineSegment.EndPoint*"></a>
+  <h4 id="SixLabors_ImageSharp_LinearLineSegment_EndPoint" data-uid="SixLabors.ImageSharp.LinearLineSegment.EndPoint">EndPoint</h4>
+  <div class="markdown level1 summary"><p>Gets the end point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PointF EndPoint { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">PointF</span></td>
+        <td><p>The end point.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/new/master/apiSpec/new?filename=SixLabors_ImageSharp_LinearLineSegment_Flatten.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.LinearLineSegment.Flatten%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/master/src/ImageSharp.Drawing/Shapes/LinearLineSegment.cs/#L69">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_LinearLineSegment_Flatten_" data-uid="SixLabors.ImageSharp.LinearLineSegment.Flatten*"></a>
+  <h4 id="SixLabors_ImageSharp_LinearLineSegment_Flatten" data-uid="SixLabors.ImageSharp.LinearLineSegment.Flatten">Flatten()</h4>
+  <div class="markdown level1 summary"><p>Converts the <a class="xref" href="SixLabors.ImageSharp.ILineSegment.html">ILineSegment</a> into a simple linear path..</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;PointF&gt; Flatten()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<span class="xref">PointF</span>&gt;</td>
+        <td><p>Returns the current <a class="xref" href="SixLabors.ImageSharp.ILineSegment.html">ILineSegment</a> as simple linear path.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/new/master/apiSpec/new?filename=SixLabors_ImageSharp_LinearLineSegment_Transform_System_Numerics_Matrix3x2_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.LinearLineSegment.Transform(System.Numerics.Matrix3x2)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/master/src/ImageSharp.Drawing/Shapes/LinearLineSegment.cs/#L78">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_LinearLineSegment_Transform_" data-uid="SixLabors.ImageSharp.LinearLineSegment.Transform*"></a>
+  <h4 id="SixLabors_ImageSharp_LinearLineSegment_Transform_System_Numerics_Matrix3x2_" data-uid="SixLabors.ImageSharp.LinearLineSegment.Transform(System.Numerics.Matrix3x2)">Transform(Matrix3x2)</h4>
+  <div class="markdown level1 summary"><p>Transforms the current LineSegment using specified matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LinearLineSegment Transform(Matrix3x2 matrix)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Numerics.Matrix3x2</span></td>
+        <td><span class="parametername">matrix</span></td>
+        <td><p>The matrix.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.LinearLineSegment.html">LinearLineSegment</a></td>
+        <td><p>A line segment with the matrix applied to it.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/new/master/apiSpec/new?filename=SixLabors_ImageSharp_LinearLineSegment_SixLabors_ImageSharp_ILineSegment_Transform_System_Numerics_Matrix3x2_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.LinearLineSegment.SixLabors%23ImageSharp%23ILineSegment%23Transform(System.Numerics.Matrix3x2)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/master/src/ImageSharp.Drawing/Shapes/LinearLineSegment.cs/#L101">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_LinearLineSegment_SixLabors_ImageSharp_ILineSegment_Transform_" data-uid="SixLabors.ImageSharp.LinearLineSegment.SixLabors#ImageSharp#ILineSegment#Transform*"></a>
+  <h4 id="SixLabors_ImageSharp_LinearLineSegment_SixLabors_ImageSharp_ILineSegment_Transform_System_Numerics_Matrix3x2_" data-uid="SixLabors.ImageSharp.LinearLineSegment.SixLabors#ImageSharp#ILineSegment#Transform(System.Numerics.Matrix3x2)">ILineSegment.Transform(Matrix3x2)</h4>
+  <div class="markdown level1 summary"><p>Transforms the current LineSegment using specified matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ILineSegment ILineSegment.Transform(Matrix3x2 matrix)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Numerics.Matrix3x2</span></td>
+        <td><span class="parametername">matrix</span></td>
+        <td><p>The matrix.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.ILineSegment.html">ILineSegment</a></td>
+        <td><p>A line segment with the matrix applied to it.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.ILineSegment.html">ILineSegment</a>
+  </div>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><a class="xref" href="SixLabors.ImageSharp.ILineSegment.html">ILineSegment</a></div>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/SixLabors/ImageSharp.Drawing/new/master/apiSpec/new?filename=SixLabors_ImageSharp_LinearLineSegment.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.LinearLineSegment%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/master/src/ImageSharp.Drawing/Shapes/LinearLineSegment.cs/#L14" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © Six Labors<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

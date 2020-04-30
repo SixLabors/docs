@@ -5,37 +5,29 @@
         {
           "files": [
             "ext/ImageSharp/src/**.csproj"
-          ],
-          "exclude": [
-            "**/obj/**",
-            "**/bin/**",
-            "docs/**"
           ]
         }
       ],
       "dest": "api/ImageSharp",
       "disableGitFeatures": false,
+      "disableDefaultFilter": false,
       "properties": {
-        "TargetFramework": "netstandard2.0"
+        "TargetFramework": "netcoreapp3.1"
       }
     },
     {
       "src": [
         {
           "files": [
-            "ext/ImageSharp.Web/src/**.csproj"
-          ],
-          "exclude": [
-            "**/obj/**",
-            "**/bin/**",
-            "docs/**"
+            "ext/ImageSharp.Drawing/src/**.csproj"
           ]
         }
       ],
-      "dest": "api/ImageSharp.Web",
+      "dest": "api/ImageSharp.Drawing",
       "disableGitFeatures": false,
+      "disableDefaultFilter": false,
       "properties": {
-        "TargetFramework": "netstandard2.0"
+        "TargetFramework": "netcoreapp3.1"
       }
     },
     {
@@ -43,60 +35,54 @@
         {
           "files": [
             "ext/Fonts/src/**.csproj"
-          ],
-          "exclude": [
-            "**/obj/**",
-            "**/bin/**",
-            "docs/**"
           ]
         }
       ],
       "dest": "api/Fonts",
       "disableGitFeatures": false,
+      "disableDefaultFilter": false,
       "properties": {
-        "TargetFramework": "netstandard2.0"
+        "TargetFramework": "netcoreapp3.1"
       }
     },
     {
       "src": [
         {
           "files": [
-            "ext/Shapes/src/**.csproj"
-          ],
-          "exclude": [
-            "**/obj/**",
-            "**/bin/**",
-            "docs/**"
+            "ext/ImageSharp.Web/src/ImageSharp.Web/**.csproj"
           ]
         }
       ],
-      "dest": "api/Shapes",
+      "dest": "api/ImageSharp.Web",
       "disableGitFeatures": false,
+      "disableDefaultFilter": false,
       "properties": {
-        "TargetFramework": "netstandard2.0"
+        "TargetFramework": "netcoreapp3.1"
       }
     },
     {
       "src": [
         {
           "files": [
-            "ext/Core/src/**.csproj"
-          ],
-          "exclude": [
-            "**/obj/**",
-            "**/bin/**",
-            "docs/**"
+            "ext/ImageSharp.Web/src/ImageSharp.Web.Providers.Azure/**.csproj"
           ]
         }
       ],
-      "dest": "api/Core",
+      "dest": "api/ImageSharp.Web.Providers.Azure",
       "disableGitFeatures": false,
+      "disableDefaultFilter": false,
       "properties": {
-        "TargetFramework": "netstandard2.0"
+        "TargetFramework": "netcoreapp3.1"
       }
     }
   ],
   "build": {
+    "xref": [
+      "xrefmap.yml"
+    ],
+    "xrefService": [
+      "https://xref.docs.microsoft.com/query?uid={uid}"
+    ],
     "content": [
       {
         "files": [
@@ -124,7 +110,8 @@
     "resource": [
       {
         "files": [
-          "images/**"
+          "images/**",
+          "favicon.ico"
         ],
         "exclude": [
           "obj/**",
@@ -136,10 +123,10 @@
       {
         "files": [
           "ext/ImageSharp/apiSpec/**.md",
+          "ext/ImageSharp.Drawing/apiSpec/**.md",
           "ext/ImageSharp.Web/apiSpec/**.md",
-          "ext/Fonts/apiSpec/**.md",
-          "ext/Shapes/apiSpec/**.md",
-          "ext/Core/apiSpec/**.md"
+          "ext/ImageSharp.Web.Providers.Azure/apiSpec/**.md",
+          "ext/Fonts/apiSpec/**.md"
         ],
         "exclude": [
           "obj/**",
@@ -150,9 +137,9 @@
     "dest": "docs",
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
-    "fileMetadata":{
-    },
-    "globalMetadata" : {
+    "fileMetadata": {},
+    "globalMetadata": {
+      "_enableSearch": true,
       "_gitContribute": {
         "branch": "master"
       }
@@ -161,10 +148,12 @@
       "default",
       "templates"
     ],
-    "postProcessors": [],
+    "postProcessors": [
+      "ExtractSearchIndex"
+    ],
     "noLangKeyword": false,
     "keepFileLink": false,
     "cleanupCacheHistory": false,
-    "disableGitFeatures": false
+    "disableGitFeatures": false,
   }
 }
