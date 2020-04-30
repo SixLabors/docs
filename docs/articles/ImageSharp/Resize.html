@@ -99,6 +99,7 @@ using (Image image = Image.Load(inStream))
 </code></pre><p><strong>Resize the given image using the <code>Lanczos3</code> sampler:</strong></p>
 <pre><code class="lang-c#">using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Processing;
+using SixLabors.ImageSharp.Formats.Png; //used only for the PNG encoder below
 
 using (Image image = Image.Load(inStream))
 {
@@ -106,7 +107,7 @@ using (Image image = Image.Load(inStream))
     int height = image.Height / 2;
     image.Mutate(x =&gt; x.Resize(width, height, KnownResamplers.Lanczos3));
 
-    image.Save(outStream);
+    image.Save(outStream, new PngEncoder());//Replace Png encoder with the file format of choice
 }
 </code></pre><div class="NOTE"><h5>Note</h5><p>If you pass <code>0</code> as any of the values for <code>width</code> and <code>height</code> dimensions then ImageSharp will automatically determine the correct opposite dimensions size to preserve the original aspect ratio.</p>
 </div>
