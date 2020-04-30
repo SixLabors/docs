@@ -17,7 +17,7 @@ If you want to achieve killer speed in your own low-level pixel manipulation rou
 This is how you can implement efficient row-by-row pixel manipulation:
 
 ```C#
-using SixLabors.ImageSharp.Advanced;
+using SixLabors.ImageSharp;
 
 // ...
 

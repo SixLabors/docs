@@ -89,7 +89,7 @@
 <h3 id="efficient-pixel-manipulation">Efficient pixel manipulation</h3>
 <p>If you want to achieve killer speed in your own low-level pixel manipulation routines, you should utilize the per-row methods. These methods take advantage of the <a href="https://www.codemag.com/Article/1807051/Introducing-.NET-Core-2.1-Flagship-Types-Span-T-and-Memory-T">brand-new <code>Span&lt;T&gt;</code>-based memory manipulation primitives</a> from <a href="https://www.nuget.org/packages/System.Memory/">System.Memory</a>, providing a fast, yet safe low-level solution to manipulate pixel data.</p>
 <p>This is how you can implement efficient row-by-row pixel manipulation:</p>
-<pre><code class="lang-C#">using SixLabors.ImageSharp.Advanced;
+<pre><code class="lang-C#">using SixLabors.ImageSharp;
 
 // ...
 

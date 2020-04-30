@@ -1,6 +1,6 @@
 # Processing Image Operations
 
-The ImageSharp processing API is imperative. This means that the order in which you supply the individual processing operations is the order in which they are are compiled and applied. This allows the API to be very flexible, allowing you to combine processes in any order.
+The ImageSharp processing API is imperative. This means that the order in which you supply the individual processing operations is the order in which they are are compiled and applied. This allows the API to be very flexible, allowing you to combine processes in any order. Details of built in processing extensions can be found in the @"SixLabors.ImageSharp.Processing" documentation.
 
 Processing operations are implemented using one of two available method calls. 
 [`Mutate`](xref:SixLabors.ImageSharp.Processing.ProcessingExtensions.Mutate*?displayProperty=name) and [`Clone`](xref:SixLabors.ImageSharp.Processing.ProcessingExtensions.Clone*?displayProperty=name)
