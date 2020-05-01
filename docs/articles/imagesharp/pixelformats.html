@@ -1,0 +1,134 @@
+﻿
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Pixel Formats </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Pixel Formats ">
+    <meta name="generator" content="docfx 2.52.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.png">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+  <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="pixel-formats">Pixel Formats</h1>
+
+<h3 id="why-is-sixlaborsimagesharpimage1-a-generic-class">Why is <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> a generic class?</h3>
+<p>We support multiple pixel formats just like <em>System.Drawing</em> does. However, unlike their closed <a href="https://docs.microsoft.com/en-us/dotnet/api/system.drawing.imaging.pixelformat">PixelFormat</a> enumeration, our solution is extensible.
+A pixel is basically a small value object (struct), describing the color at a given point according to a pixel model we call Pixel Format. <code>Image&lt;TPixel&gt;</code> represents a pixel graphic bitmap stored as a <strong>generic, contiguous memory block</strong> of pixels, of size <code>image.Width * image.Height</code>.</p>
+<p>In the case of multi-frame images multiple bitmaps are stored in <code>image.Frames</code> as <code>ImageFrame&lt;TPixel&gt;</code> instances.</p>
+<h3 id="choosing-pixel-formats">Choosing Pixel Formats</h3>
+<p>Take a look at the various pixel formats available under <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.PixelFormats.html#structs">SixLabors.ImageSharp.PixelFormats</a> After picking the pixel format of your choice, use it as a generic argument for <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a>, eg. by instantiating <code>Image&lt;Bgr24&gt;</code>.</p>
+<h3 id="defining-custom-pixel-formats">Defining Custom Pixel Formats</h3>
+<p>Creating your own pixel format is a case of defining a struct implementing <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.PixelFormats.IPixel-1.html">IPixel&lt;TSelf&gt;</a> and using it as a generic argument for <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a>.
+Baseline batched pixel-conversion primitives are provided via <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.PixelFormats.PixelOperations-1.html">PixelOperations&lt;TPixel&gt;</a> but it is possible to override those baseline versions with your own optimized implementation.</p>
+<h3 id="i-have-a-monochrome-image-and-i-want-to-store-it-in-a-compact-way-can-i-store-a-pixel-on-a-single-bit">I have a monochrome image and I want to store it in a compact way. Can I store a pixel on a single bit?</h3>
+<p>No. Our architecture does not allow sub-byte pixel formats at the moment. This feature is incredibly complex to implement, and you are going to pay the price of the low memory footprint in processing speed / CPU load.</p>
+<h3 id="can-i-decode-into-pixel-formats-like-cmykhttpsenwikipediaorgwikicmykcolormodel-or-cielabhttpsenwikipediaorgwikilabcolorspace">Can I decode into pixel formats like <a href="https://en.wikipedia.org/wiki/CMYK_color_model">CMYK</a> or <a href="https://en.wikipedia.org/wiki/Lab_color_space">CIELAB</a>?</h3>
+<p>Unfortunately it&#39;s not possible and is unlikely to be in the future. Many image processing operations expect the pixels to be laid out in-memory in RGBA format. To manipulate images in exotic colorspaces we would have to translate each pixel to-and-from the colorspace multiple times, which would result in unusable performance and a loss of color information.</p>
+
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/SixLabors/docs/blob/master/articles/imagesharp/pixelformats.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © Six Labors<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
