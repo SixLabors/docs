@@ -6,8 +6,7 @@ ImageSharp.Web is a high performance ASP.NET Core Middleware built on top of Ima
 ImageSharp.Web is designed from the ground up to be flexible and extensible. The library provides API endpoints for common image processing operations and the building blocks to allow for the development of addtional extensions to add image sources, caching mechanisms or even your own processing API.  
 
 ### License  
-Imagesharp.Web is licensed under under the terms of [GNU Affero General
-Public License, version 3](https://www.gnu.org/licenses/agpl-3.0.en.html). Commercial licensing options are available in addition to this license, see https://sixlabors.com/pricing for details.
+Imagesharp.Web is licensed under under the terms of [Apache License, Version 2.0](https://opensource.org/licenses/Apache-2.0). Commercial support licensing options are available in addition to this license, see https://sixlabors.com/pricing for details.
   
 ### Installation
   

@@ -9,8 +9,7 @@ ImageSharp is designed from the ground up to be flexible and extensible. The lib
 Built against [.NET Standard 1.3](https://docs.microsoft.com/en-us/dotnet/standard/net-standard), ImageSharp can be used in device, cloud, and embedded/IoT scenarios.  
   
 ### License  
-Imagesharp is licensed under under the terms of [GNU Affero General
-Public License, version 3](https://www.gnu.org/licenses/agpl-3.0.en.html). Commercial licensing options are available in addition to this license, see https://sixlabors.com/pricing for details.
+Imagesharp is licensed under under the terms of [Apache License, Version 2.0](https://opensource.org/licenses/Apache-2.0). Commercial support licensing options are available in addition to this license, see https://sixlabors.com/pricing for details.
   
 ### Installation
   
