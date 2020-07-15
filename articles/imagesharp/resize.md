@@ -22,7 +22,7 @@ using (Image image = Image.Load(inStream))
     int height = image.Height / 2;
     image.Mutate(x => x.Resize(width, height));
 
-    image.Save(outStream);
+    image.Save(outPath);
 }
 ```
 
