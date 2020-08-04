@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Image&lt;TPixel&gt;
    ">
-    <meta name="generator" content="docfx 2.55.0.0">
+    <meta name="generator" content="docfx 2.56.1.0">
     
     <link rel="shortcut icon" href="../../favicon.png">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -119,7 +119,7 @@ For generic <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TP
       <a class="xref" href="SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_Save_System_IO_Stream_SixLabors_ImageSharp_Formats_IImageEncoder_">Image.Save(Stream, IImageEncoder)</a>
     </div>
     <div>
-      <a class="xref" href="SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_SaveAsync_System_IO_Stream_SixLabors_ImageSharp_Formats_IImageEncoder_">Image.SaveAsync(Stream, IImageEncoder)</a>
+      <a class="xref" href="SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_SaveAsync_System_IO_Stream_SixLabors_ImageSharp_Formats_IImageEncoder_System_Threading_CancellationToken_">Image.SaveAsync(Stream, IImageEncoder, CancellationToken)</a>
     </div>
     <div>
       <a class="xref" href="SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_CloneAs__1">Image.CloneAs&lt;TPixel2&gt;()</a>
@@ -236,6 +236,18 @@ For generic <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TP
       <a class="xref" href="SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_Identify_SixLabors_ImageSharp_Configuration_System_String_SixLabors_ImageSharp_Formats_IImageFormat__">Image.Identify(Configuration, String, IImageFormat)</a>
     </div>
     <div>
+      <a class="xref" href="SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_IdentifyAsync_System_String_System_Threading_CancellationToken_">Image.IdentifyAsync(String, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_IdentifyAsync_SixLabors_ImageSharp_Configuration_System_String_System_Threading_CancellationToken_">Image.IdentifyAsync(Configuration, String, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_IdentifyWithFormatAsync_System_String_System_Threading_CancellationToken_">Image.IdentifyWithFormatAsync(String, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_IdentifyWithFormatAsync_SixLabors_ImageSharp_Configuration_System_String_System_Threading_CancellationToken_">Image.IdentifyWithFormatAsync(Configuration, String, CancellationToken)</a>
+    </div>
+    <div>
       <a class="xref" href="SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_Load_System_String_">Image.Load(String)</a>
     </div>
     <div>
@@ -245,7 +257,31 @@ For generic <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TP
       <a class="xref" href="SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_Load_SixLabors_ImageSharp_Configuration_System_String_">Image.Load(Configuration, String)</a>
     </div>
     <div>
+      <a class="xref" href="SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_LoadAsync_SixLabors_ImageSharp_Configuration_System_String_System_Threading_CancellationToken_">Image.LoadAsync(Configuration, String, CancellationToken)</a>
+    </div>
+    <div>
       <a class="xref" href="SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_Load_SixLabors_ImageSharp_Configuration_System_String_SixLabors_ImageSharp_Formats_IImageDecoder_">Image.Load(Configuration, String, IImageDecoder)</a>
+    </div>
+    <div>
+      <a class="xref" href="SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_LoadAsync_System_String_System_Threading_CancellationToken_">Image.LoadAsync(String, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_LoadAsync_System_String_SixLabors_ImageSharp_Formats_IImageDecoder_">Image.LoadAsync(String, IImageDecoder)</a>
+    </div>
+    <div>
+      <a class="xref" href="SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_LoadAsync__1_System_String_SixLabors_ImageSharp_Formats_IImageDecoder_">Image.LoadAsync&lt;TPixel&gt;(String, IImageDecoder)</a>
+    </div>
+    <div>
+      <a class="xref" href="SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_LoadAsync_SixLabors_ImageSharp_Configuration_System_String_SixLabors_ImageSharp_Formats_IImageDecoder_System_Threading_CancellationToken_">Image.LoadAsync(Configuration, String, IImageDecoder, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_LoadAsync__1_SixLabors_ImageSharp_Configuration_System_String_SixLabors_ImageSharp_Formats_IImageDecoder_System_Threading_CancellationToken_">Image.LoadAsync&lt;TPixel&gt;(Configuration, String, IImageDecoder, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_LoadAsync__1_System_String_">Image.LoadAsync&lt;TPixel&gt;(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_LoadAsync__1_SixLabors_ImageSharp_Configuration_System_String_System_Threading_CancellationToken_">Image.LoadAsync&lt;TPixel&gt;(Configuration, String, CancellationToken)</a>
     </div>
     <div>
       <a class="xref" href="SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_Load_System_String_SixLabors_ImageSharp_Formats_IImageDecoder_">Image.Load(String, IImageDecoder)</a>
@@ -296,16 +332,16 @@ For generic <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TP
       <a class="xref" href="SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_Identify_SixLabors_ImageSharp_Configuration_System_IO_Stream_">Image.Identify(Configuration, Stream)</a>
     </div>
     <div>
-      <a class="xref" href="SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_IdentifyAsync_SixLabors_ImageSharp_Configuration_System_IO_Stream_">Image.IdentifyAsync(Configuration, Stream)</a>
+      <a class="xref" href="SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_IdentifyAsync_SixLabors_ImageSharp_Configuration_System_IO_Stream_System_Threading_CancellationToken_">Image.IdentifyAsync(Configuration, Stream, CancellationToken)</a>
     </div>
     <div>
       <a class="xref" href="SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_Identify_SixLabors_ImageSharp_Configuration_System_IO_Stream_SixLabors_ImageSharp_Formats_IImageFormat__">Image.Identify(Configuration, Stream, IImageFormat)</a>
     </div>
     <div>
-      <a class="xref" href="SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_IdentifyWithFormatAsync_System_IO_Stream_">Image.IdentifyWithFormatAsync(Stream)</a>
+      <a class="xref" href="SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_IdentifyWithFormatAsync_System_IO_Stream_System_Threading_CancellationToken_">Image.IdentifyWithFormatAsync(Stream, CancellationToken)</a>
     </div>
     <div>
-      <a class="xref" href="SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_IdentifyWithFormatAsync_SixLabors_ImageSharp_Configuration_System_IO_Stream_">Image.IdentifyWithFormatAsync(Configuration, Stream)</a>
+      <a class="xref" href="SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_IdentifyWithFormatAsync_SixLabors_ImageSharp_Configuration_System_IO_Stream_System_Threading_CancellationToken_">Image.IdentifyWithFormatAsync(Configuration, Stream, CancellationToken)</a>
     </div>
     <div>
       <a class="xref" href="SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_Load_System_IO_Stream_SixLabors_ImageSharp_Formats_IImageFormat__">Image.Load(Stream, IImageFormat)</a>
@@ -329,13 +365,13 @@ For generic <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TP
       <a class="xref" href="SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_Load_SixLabors_ImageSharp_Configuration_System_IO_Stream_SixLabors_ImageSharp_Formats_IImageDecoder_">Image.Load(Configuration, Stream, IImageDecoder)</a>
     </div>
     <div>
-      <a class="xref" href="SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_LoadAsync_SixLabors_ImageSharp_Configuration_System_IO_Stream_SixLabors_ImageSharp_Formats_IImageDecoder_">Image.LoadAsync(Configuration, Stream, IImageDecoder)</a>
+      <a class="xref" href="SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_LoadAsync_SixLabors_ImageSharp_Configuration_System_IO_Stream_SixLabors_ImageSharp_Formats_IImageDecoder_System_Threading_CancellationToken_">Image.LoadAsync(Configuration, Stream, IImageDecoder, CancellationToken)</a>
     </div>
     <div>
       <a class="xref" href="SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_Load_SixLabors_ImageSharp_Configuration_System_IO_Stream_">Image.Load(Configuration, Stream)</a>
     </div>
     <div>
-      <a class="xref" href="SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_LoadAsync_SixLabors_ImageSharp_Configuration_System_IO_Stream_">Image.LoadAsync(Configuration, Stream)</a>
+      <a class="xref" href="SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_LoadAsync_SixLabors_ImageSharp_Configuration_System_IO_Stream_System_Threading_CancellationToken_">Image.LoadAsync(Configuration, Stream, CancellationToken)</a>
     </div>
     <div>
       <a class="xref" href="SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_Load__1_System_IO_Stream_">Image.Load&lt;TPixel&gt;(Stream)</a>
@@ -353,13 +389,13 @@ For generic <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TP
       <a class="xref" href="SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_Load__1_System_IO_Stream_SixLabors_ImageSharp_Formats_IImageDecoder_">Image.Load&lt;TPixel&gt;(Stream, IImageDecoder)</a>
     </div>
     <div>
-      <a class="xref" href="SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_LoadAsync__1_System_IO_Stream_SixLabors_ImageSharp_Formats_IImageDecoder_">Image.LoadAsync&lt;TPixel&gt;(Stream, IImageDecoder)</a>
+      <a class="xref" href="SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_LoadAsync__1_System_IO_Stream_SixLabors_ImageSharp_Formats_IImageDecoder_System_Threading_CancellationToken_">Image.LoadAsync&lt;TPixel&gt;(Stream, IImageDecoder, CancellationToken)</a>
     </div>
     <div>
       <a class="xref" href="SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_Load__1_SixLabors_ImageSharp_Configuration_System_IO_Stream_SixLabors_ImageSharp_Formats_IImageDecoder_">Image.Load&lt;TPixel&gt;(Configuration, Stream, IImageDecoder)</a>
     </div>
     <div>
-      <a class="xref" href="SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_LoadAsync__1_SixLabors_ImageSharp_Configuration_System_IO_Stream_SixLabors_ImageSharp_Formats_IImageDecoder_">Image.LoadAsync&lt;TPixel&gt;(Configuration, Stream, IImageDecoder)</a>
+      <a class="xref" href="SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_LoadAsync__1_SixLabors_ImageSharp_Configuration_System_IO_Stream_SixLabors_ImageSharp_Formats_IImageDecoder_System_Threading_CancellationToken_">Image.LoadAsync&lt;TPixel&gt;(Configuration, Stream, IImageDecoder, CancellationToken)</a>
     </div>
     <div>
       <a class="xref" href="SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_Load__1_SixLabors_ImageSharp_Configuration_System_IO_Stream_">Image.Load&lt;TPixel&gt;(Configuration, Stream)</a>
@@ -368,13 +404,13 @@ For generic <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TP
       <a class="xref" href="SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_Load__1_SixLabors_ImageSharp_Configuration_System_IO_Stream_SixLabors_ImageSharp_Formats_IImageFormat__">Image.Load&lt;TPixel&gt;(Configuration, Stream, IImageFormat)</a>
     </div>
     <div>
-      <a class="xref" href="SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_LoadWithFormatAsync_SixLabors_ImageSharp_Configuration_System_IO_Stream_">Image.LoadWithFormatAsync(Configuration, Stream)</a>
+      <a class="xref" href="SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_LoadWithFormatAsync_SixLabors_ImageSharp_Configuration_System_IO_Stream_System_Threading_CancellationToken_">Image.LoadWithFormatAsync(Configuration, Stream, CancellationToken)</a>
     </div>
     <div>
-      <a class="xref" href="SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_LoadWithFormatAsync__1_SixLabors_ImageSharp_Configuration_System_IO_Stream_">Image.LoadWithFormatAsync&lt;TPixel&gt;(Configuration, Stream)</a>
+      <a class="xref" href="SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_LoadWithFormatAsync__1_SixLabors_ImageSharp_Configuration_System_IO_Stream_System_Threading_CancellationToken_">Image.LoadWithFormatAsync&lt;TPixel&gt;(Configuration, Stream, CancellationToken)</a>
     </div>
     <div>
-      <a class="xref" href="SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_LoadAsync__1_SixLabors_ImageSharp_Configuration_System_IO_Stream_">Image.LoadAsync&lt;TPixel&gt;(Configuration, Stream)</a>
+      <a class="xref" href="SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_LoadAsync__1_SixLabors_ImageSharp_Configuration_System_IO_Stream_System_Threading_CancellationToken_">Image.LoadAsync&lt;TPixel&gt;(Configuration, Stream, CancellationToken)</a>
     </div>
     <div>
       <a class="xref" href="SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_Load_SixLabors_ImageSharp_Configuration_System_IO_Stream_SixLabors_ImageSharp_Formats_IImageFormat__">Image.Load(Configuration, Stream, IImageFormat)</a>
@@ -469,7 +505,7 @@ For generic <a class="xref" href="SixLabors.ImageSharp.Image-1.html">Image&lt;TP
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Image_1__ctor_SixLabors_ImageSharp_Configuration_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Image%601.%23ctor(SixLabors.ImageSharp.Configuration%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/ab8ab3992a93f6682f0c48a591e5df84151081fe/src/ImageSharp/Image{TPixel}.cs/#L34">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/a31a541f8cb36fe2127161e0860f8a4b877d7c1e/src/ImageSharp/Image{TPixel}.cs/#L35">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Image_1__ctor_" data-uid="SixLabors.ImageSharp.Image`1.#ctor*"></a>
   <h4 id="SixLabors_ImageSharp_Image_1__ctor_SixLabors_ImageSharp_Configuration_System_Int32_System_Int32_" data-uid="SixLabors.ImageSharp.Image`1.#ctor(SixLabors.ImageSharp.Configuration,System.Int32,System.Int32)">Image(Configuration, Int32, Int32)</h4>
@@ -516,7 +552,7 @@ with the height and the width of the image.</p>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Image_1__ctor_SixLabors_ImageSharp_Configuration_System_Int32_System_Int32__0_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Image%601.%23ctor(SixLabors.ImageSharp.Configuration%2CSystem.Int32%2CSystem.Int32%2C%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/ab8ab3992a93f6682f0c48a591e5df84151081fe/src/ImageSharp/Image{TPixel}.cs/#L47">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/a31a541f8cb36fe2127161e0860f8a4b877d7c1e/src/ImageSharp/Image{TPixel}.cs/#L48">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Image_1__ctor_" data-uid="SixLabors.ImageSharp.Image`1.#ctor*"></a>
   <h4 id="SixLabors_ImageSharp_Image_1__ctor_SixLabors_ImageSharp_Configuration_System_Int32_System_Int32__0_" data-uid="SixLabors.ImageSharp.Image`1.#ctor(SixLabors.ImageSharp.Configuration,System.Int32,System.Int32,`0)">Image(Configuration, Int32, Int32, TPixel)</h4>
@@ -569,7 +605,7 @@ with the height and the width of the image.</p>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Image_1__ctor_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Image%601.%23ctor(System.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/ab8ab3992a93f6682f0c48a591e5df84151081fe/src/ImageSharp/Image{TPixel}.cs/#L70">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/a31a541f8cb36fe2127161e0860f8a4b877d7c1e/src/ImageSharp/Image{TPixel}.cs/#L71">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Image_1__ctor_" data-uid="SixLabors.ImageSharp.Image`1.#ctor*"></a>
   <h4 id="SixLabors_ImageSharp_Image_1__ctor_System_Int32_System_Int32_" data-uid="SixLabors.ImageSharp.Image`1.#ctor(System.Int32,System.Int32)">Image(Int32, Int32)</h4>
@@ -610,7 +646,7 @@ with the height and the width of the image.</p>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Image_1__ctor_System_Int32_System_Int32__0_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Image%601.%23ctor(System.Int32%2CSystem.Int32%2C%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/ab8ab3992a93f6682f0c48a591e5df84151081fe/src/ImageSharp/Image{TPixel}.cs/#L59">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/a31a541f8cb36fe2127161e0860f8a4b877d7c1e/src/ImageSharp/Image{TPixel}.cs/#L60">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Image_1__ctor_" data-uid="SixLabors.ImageSharp.Image`1.#ctor*"></a>
   <h4 id="SixLabors_ImageSharp_Image_1__ctor_System_Int32_System_Int32__0_" data-uid="SixLabors.ImageSharp.Image`1.#ctor(System.Int32,System.Int32,`0)">Image(Int32, Int32, TPixel)</h4>
@@ -659,7 +695,7 @@ with the height and the width of the image.</p>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Image_1_Frames.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Image%601.Frames%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/ab8ab3992a93f6682f0c48a591e5df84151081fe/src/ImageSharp/Image{TPixel}.cs/#L148">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/a31a541f8cb36fe2127161e0860f8a4b877d7c1e/src/ImageSharp/Image{TPixel}.cs/#L149">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Image_1_Frames_" data-uid="SixLabors.ImageSharp.Image`1.Frames*"></a>
   <h4 id="SixLabors_ImageSharp_Image_1_Frames" data-uid="SixLabors.ImageSharp.Image`1.Frames">Frames</h4>
@@ -690,7 +726,7 @@ with the height and the width of the image.</p>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Image_1_Item_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Image%601.Item(System.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/ab8ab3992a93f6682f0c48a591e5df84151081fe/src/ImageSharp/Image{TPixel}.cs/#L162">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/a31a541f8cb36fe2127161e0860f8a4b877d7c1e/src/ImageSharp/Image{TPixel}.cs/#L163">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Image_1_Item_" data-uid="SixLabors.ImageSharp.Image`1.Item*"></a>
   <h4 id="SixLabors_ImageSharp_Image_1_Item_System_Int32_System_Int32_" data-uid="SixLabors.ImageSharp.Image`1.Item(System.Int32,System.Int32)">Item[Int32, Int32]</h4>
@@ -762,7 +798,7 @@ with the height and the width of the image.</p>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Image_1_NonGenericFrameCollection.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Image%601.NonGenericFrameCollection%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/ab8ab3992a93f6682f0c48a591e5df84151081fe/src/ImageSharp/Image{TPixel}.cs/#L143">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/a31a541f8cb36fe2127161e0860f8a4b877d7c1e/src/ImageSharp/Image{TPixel}.cs/#L144">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Image_1_NonGenericFrameCollection_" data-uid="SixLabors.ImageSharp.Image`1.NonGenericFrameCollection*"></a>
   <h4 id="SixLabors_ImageSharp_Image_1_NonGenericFrameCollection" data-uid="SixLabors.ImageSharp.Image`1.NonGenericFrameCollection">NonGenericFrameCollection</h4>
@@ -796,7 +832,7 @@ with the height and the width of the image.</p>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Image_1_Clone.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Image%601.Clone%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/ab8ab3992a93f6682f0c48a591e5df84151081fe/src/ImageSharp/Image{TPixel}.cs/#L217">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/a31a541f8cb36fe2127161e0860f8a4b877d7c1e/src/ImageSharp/Image{TPixel}.cs/#L218">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Image_1_Clone_" data-uid="SixLabors.ImageSharp.Image`1.Clone*"></a>
   <h4 id="SixLabors_ImageSharp_Image_1_Clone" data-uid="SixLabors.ImageSharp.Image`1.Clone">Clone()</h4>
@@ -828,7 +864,7 @@ with the height and the width of the image.</p>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Image_1_Clone_SixLabors_ImageSharp_Configuration_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Image%601.Clone(SixLabors.ImageSharp.Configuration)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/ab8ab3992a93f6682f0c48a591e5df84151081fe/src/ImageSharp/Image{TPixel}.cs/#L224">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/a31a541f8cb36fe2127161e0860f8a4b877d7c1e/src/ImageSharp/Image{TPixel}.cs/#L225">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Image_1_Clone_" data-uid="SixLabors.ImageSharp.Image`1.Clone*"></a>
   <h4 id="SixLabors_ImageSharp_Image_1_Clone_SixLabors_ImageSharp_Configuration_" data-uid="SixLabors.ImageSharp.Image`1.Clone(SixLabors.ImageSharp.Configuration)">Clone(Configuration)</h4>
@@ -878,7 +914,7 @@ with the height and the width of the image.</p>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Image_1_CloneAs__1_SixLabors_ImageSharp_Configuration_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Image%601.CloneAs%60%601(SixLabors.ImageSharp.Configuration)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/ab8ab3992a93f6682f0c48a591e5df84151081fe/src/ImageSharp/Image{TPixel}.cs/#L243">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/a31a541f8cb36fe2127161e0860f8a4b877d7c1e/src/ImageSharp/Image{TPixel}.cs/#L244">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Image_1_CloneAs_" data-uid="SixLabors.ImageSharp.Image`1.CloneAs*"></a>
   <h4 id="SixLabors_ImageSharp_Image_1_CloneAs__1_SixLabors_ImageSharp_Configuration_" data-uid="SixLabors.ImageSharp.Image`1.CloneAs``1(SixLabors.ImageSharp.Configuration)">CloneAs&lt;TPixel2&gt;(Configuration)</h4>
@@ -948,7 +984,7 @@ with the height and the width of the image.</p>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Image_1_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Image%601.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/ab8ab3992a93f6682f0c48a591e5df84151081fe/src/ImageSharp/Image{TPixel}.cs/#L257">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/a31a541f8cb36fe2127161e0860f8a4b877d7c1e/src/ImageSharp/Image{TPixel}.cs/#L258">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Image_1_Dispose_" data-uid="SixLabors.ImageSharp.Image`1.Dispose*"></a>
   <h4 id="SixLabors_ImageSharp_Image_1_Dispose_System_Boolean_" data-uid="SixLabors.ImageSharp.Image`1.Dispose(System.Boolean)">Dispose(Boolean)</h4>
@@ -982,7 +1018,7 @@ with the height and the width of the image.</p>
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Image_1_GetPixelRowSpan_System_Int32_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Image%601.GetPixelRowSpan(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/ab8ab3992a93f6682f0c48a591e5df84151081fe/src/ImageSharp/Image{TPixel}.cs/#L186">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/a31a541f8cb36fe2127161e0860f8a4b877d7c1e/src/ImageSharp/Image{TPixel}.cs/#L187">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Image_1_GetPixelRowSpan_" data-uid="SixLabors.ImageSharp.Image`1.GetPixelRowSpan*"></a>
   <h4 id="SixLabors_ImageSharp_Image_1_GetPixelRowSpan_System_Int32_" data-uid="SixLabors.ImageSharp.Image`1.GetPixelRowSpan(System.Int32)">GetPixelRowSpan(Int32)</h4>
@@ -1049,7 +1085,7 @@ at row <code data-dev-comment-type="paramref" class="paramref">rowIndex</code> b
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Image_1_ToString.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Image%601.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/ab8ab3992a93f6682f0c48a591e5df84151081fe/src/ImageSharp/Image{TPixel}.cs/#L282">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/a31a541f8cb36fe2127161e0860f8a4b877d7c1e/src/ImageSharp/Image{TPixel}.cs/#L283">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Image_1_ToString_" data-uid="SixLabors.ImageSharp.Image`1.ToString*"></a>
   <h4 id="SixLabors_ImageSharp_Image_1_ToString" data-uid="SixLabors.ImageSharp.Image`1.ToString">ToString()</h4>
@@ -1081,7 +1117,7 @@ at row <code data-dev-comment-type="paramref" class="paramref">rowIndex</code> b
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Image_1_TryGetSinglePixelSpan_System_Span__0___.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Image%601.TryGetSinglePixelSpan(System.Span%7B%600%7D%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/ab8ab3992a93f6682f0c48a591e5df84151081fe/src/ImageSharp/Image{TPixel}.cs/#L200">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/a31a541f8cb36fe2127161e0860f8a4b877d7c1e/src/ImageSharp/Image{TPixel}.cs/#L201">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Image_1_TryGetSinglePixelSpan_" data-uid="SixLabors.ImageSharp.Image`1.TryGetSinglePixelSpan*"></a>
   <h4 id="SixLabors_ImageSharp_Image_1_TryGetSinglePixelSpan_System_Span__0___" data-uid="SixLabors.ImageSharp.Image`1.TryGetSinglePixelSpan(System.Span{`0}@)">TryGetSinglePixelSpan(out Span&lt;TPixel&gt;)</h4>
@@ -1139,46 +1175,151 @@ stored in row major order, if the backing buffer is contiguous.</p>
   </div>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
+      <a class="xref" href="SixLabors.ImageSharp.ImageExtensions.html#SixLabors_ImageSharp_ImageExtensions_SaveAsBmp_SixLabors_ImageSharp_Image_System_String_">ImageExtensions.SaveAsBmp(Image, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.ImageExtensions.html#SixLabors_ImageSharp_ImageExtensions_SaveAsBmpAsync_SixLabors_ImageSharp_Image_System_String_">ImageExtensions.SaveAsBmpAsync(Image, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.ImageExtensions.html#SixLabors_ImageSharp_ImageExtensions_SaveAsBmpAsync_SixLabors_ImageSharp_Image_System_String_System_Threading_CancellationToken_">ImageExtensions.SaveAsBmpAsync(Image, String, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.ImageExtensions.html#SixLabors_ImageSharp_ImageExtensions_SaveAsBmp_SixLabors_ImageSharp_Image_System_String_SixLabors_ImageSharp_Formats_Bmp_BmpEncoder_">ImageExtensions.SaveAsBmp(Image, String, BmpEncoder)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.ImageExtensions.html#SixLabors_ImageSharp_ImageExtensions_SaveAsBmpAsync_SixLabors_ImageSharp_Image_System_String_SixLabors_ImageSharp_Formats_Bmp_BmpEncoder_System_Threading_CancellationToken_">ImageExtensions.SaveAsBmpAsync(Image, String, BmpEncoder, CancellationToken)</a>
+  </div>
+  <div>
       <a class="xref" href="SixLabors.ImageSharp.ImageExtensions.html#SixLabors_ImageSharp_ImageExtensions_SaveAsBmp_SixLabors_ImageSharp_Image_System_IO_Stream_">ImageExtensions.SaveAsBmp(Image, Stream)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.ImageExtensions.html#SixLabors_ImageSharp_ImageExtensions_SaveAsBmpAsync_SixLabors_ImageSharp_Image_System_IO_Stream_System_Threading_CancellationToken_">ImageExtensions.SaveAsBmpAsync(Image, Stream, CancellationToken)</a>
   </div>
   <div>
       <a class="xref" href="SixLabors.ImageSharp.ImageExtensions.html#SixLabors_ImageSharp_ImageExtensions_SaveAsBmp_SixLabors_ImageSharp_Image_System_IO_Stream_SixLabors_ImageSharp_Formats_Bmp_BmpEncoder_">ImageExtensions.SaveAsBmp(Image, Stream, BmpEncoder)</a>
   </div>
   <div>
+      <a class="xref" href="SixLabors.ImageSharp.ImageExtensions.html#SixLabors_ImageSharp_ImageExtensions_SaveAsBmpAsync_SixLabors_ImageSharp_Image_System_IO_Stream_SixLabors_ImageSharp_Formats_Bmp_BmpEncoder_System_Threading_CancellationToken_">ImageExtensions.SaveAsBmpAsync(Image, Stream, BmpEncoder, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.ImageExtensions.html#SixLabors_ImageSharp_ImageExtensions_SaveAsGif_SixLabors_ImageSharp_Image_System_String_">ImageExtensions.SaveAsGif(Image, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.ImageExtensions.html#SixLabors_ImageSharp_ImageExtensions_SaveAsGifAsync_SixLabors_ImageSharp_Image_System_String_">ImageExtensions.SaveAsGifAsync(Image, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.ImageExtensions.html#SixLabors_ImageSharp_ImageExtensions_SaveAsGifAsync_SixLabors_ImageSharp_Image_System_String_System_Threading_CancellationToken_">ImageExtensions.SaveAsGifAsync(Image, String, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.ImageExtensions.html#SixLabors_ImageSharp_ImageExtensions_SaveAsGif_SixLabors_ImageSharp_Image_System_String_SixLabors_ImageSharp_Formats_Gif_GifEncoder_">ImageExtensions.SaveAsGif(Image, String, GifEncoder)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.ImageExtensions.html#SixLabors_ImageSharp_ImageExtensions_SaveAsGifAsync_SixLabors_ImageSharp_Image_System_String_SixLabors_ImageSharp_Formats_Gif_GifEncoder_System_Threading_CancellationToken_">ImageExtensions.SaveAsGifAsync(Image, String, GifEncoder, CancellationToken)</a>
+  </div>
+  <div>
       <a class="xref" href="SixLabors.ImageSharp.ImageExtensions.html#SixLabors_ImageSharp_ImageExtensions_SaveAsGif_SixLabors_ImageSharp_Image_System_IO_Stream_">ImageExtensions.SaveAsGif(Image, Stream)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.ImageExtensions.html#SixLabors_ImageSharp_ImageExtensions_SaveAsGifAsync_SixLabors_ImageSharp_Image_System_IO_Stream_System_Threading_CancellationToken_">ImageExtensions.SaveAsGifAsync(Image, Stream, CancellationToken)</a>
   </div>
   <div>
       <a class="xref" href="SixLabors.ImageSharp.ImageExtensions.html#SixLabors_ImageSharp_ImageExtensions_SaveAsGif_SixLabors_ImageSharp_Image_System_IO_Stream_SixLabors_ImageSharp_Formats_Gif_GifEncoder_">ImageExtensions.SaveAsGif(Image, Stream, GifEncoder)</a>
   </div>
   <div>
+      <a class="xref" href="SixLabors.ImageSharp.ImageExtensions.html#SixLabors_ImageSharp_ImageExtensions_SaveAsGifAsync_SixLabors_ImageSharp_Image_System_IO_Stream_SixLabors_ImageSharp_Formats_Gif_GifEncoder_System_Threading_CancellationToken_">ImageExtensions.SaveAsGifAsync(Image, Stream, GifEncoder, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.ImageExtensions.html#SixLabors_ImageSharp_ImageExtensions_SaveAsJpeg_SixLabors_ImageSharp_Image_System_String_">ImageExtensions.SaveAsJpeg(Image, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.ImageExtensions.html#SixLabors_ImageSharp_ImageExtensions_SaveAsJpegAsync_SixLabors_ImageSharp_Image_System_String_">ImageExtensions.SaveAsJpegAsync(Image, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.ImageExtensions.html#SixLabors_ImageSharp_ImageExtensions_SaveAsJpegAsync_SixLabors_ImageSharp_Image_System_String_System_Threading_CancellationToken_">ImageExtensions.SaveAsJpegAsync(Image, String, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.ImageExtensions.html#SixLabors_ImageSharp_ImageExtensions_SaveAsJpeg_SixLabors_ImageSharp_Image_System_String_SixLabors_ImageSharp_Formats_Jpeg_JpegEncoder_">ImageExtensions.SaveAsJpeg(Image, String, JpegEncoder)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.ImageExtensions.html#SixLabors_ImageSharp_ImageExtensions_SaveAsJpegAsync_SixLabors_ImageSharp_Image_System_String_SixLabors_ImageSharp_Formats_Jpeg_JpegEncoder_System_Threading_CancellationToken_">ImageExtensions.SaveAsJpegAsync(Image, String, JpegEncoder, CancellationToken)</a>
+  </div>
+  <div>
       <a class="xref" href="SixLabors.ImageSharp.ImageExtensions.html#SixLabors_ImageSharp_ImageExtensions_SaveAsJpeg_SixLabors_ImageSharp_Image_System_IO_Stream_">ImageExtensions.SaveAsJpeg(Image, Stream)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.ImageExtensions.html#SixLabors_ImageSharp_ImageExtensions_SaveAsJpegAsync_SixLabors_ImageSharp_Image_System_IO_Stream_System_Threading_CancellationToken_">ImageExtensions.SaveAsJpegAsync(Image, Stream, CancellationToken)</a>
   </div>
   <div>
       <a class="xref" href="SixLabors.ImageSharp.ImageExtensions.html#SixLabors_ImageSharp_ImageExtensions_SaveAsJpeg_SixLabors_ImageSharp_Image_System_IO_Stream_SixLabors_ImageSharp_Formats_Jpeg_JpegEncoder_">ImageExtensions.SaveAsJpeg(Image, Stream, JpegEncoder)</a>
   </div>
   <div>
+      <a class="xref" href="SixLabors.ImageSharp.ImageExtensions.html#SixLabors_ImageSharp_ImageExtensions_SaveAsJpegAsync_SixLabors_ImageSharp_Image_System_IO_Stream_SixLabors_ImageSharp_Formats_Jpeg_JpegEncoder_System_Threading_CancellationToken_">ImageExtensions.SaveAsJpegAsync(Image, Stream, JpegEncoder, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.ImageExtensions.html#SixLabors_ImageSharp_ImageExtensions_SaveAsPng_SixLabors_ImageSharp_Image_System_String_">ImageExtensions.SaveAsPng(Image, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.ImageExtensions.html#SixLabors_ImageSharp_ImageExtensions_SaveAsPngAsync_SixLabors_ImageSharp_Image_System_String_">ImageExtensions.SaveAsPngAsync(Image, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.ImageExtensions.html#SixLabors_ImageSharp_ImageExtensions_SaveAsPngAsync_SixLabors_ImageSharp_Image_System_String_System_Threading_CancellationToken_">ImageExtensions.SaveAsPngAsync(Image, String, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.ImageExtensions.html#SixLabors_ImageSharp_ImageExtensions_SaveAsPng_SixLabors_ImageSharp_Image_System_String_SixLabors_ImageSharp_Formats_Png_PngEncoder_">ImageExtensions.SaveAsPng(Image, String, PngEncoder)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.ImageExtensions.html#SixLabors_ImageSharp_ImageExtensions_SaveAsPngAsync_SixLabors_ImageSharp_Image_System_String_SixLabors_ImageSharp_Formats_Png_PngEncoder_System_Threading_CancellationToken_">ImageExtensions.SaveAsPngAsync(Image, String, PngEncoder, CancellationToken)</a>
+  </div>
+  <div>
       <a class="xref" href="SixLabors.ImageSharp.ImageExtensions.html#SixLabors_ImageSharp_ImageExtensions_SaveAsPng_SixLabors_ImageSharp_Image_System_IO_Stream_">ImageExtensions.SaveAsPng(Image, Stream)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.ImageExtensions.html#SixLabors_ImageSharp_ImageExtensions_SaveAsPngAsync_SixLabors_ImageSharp_Image_System_IO_Stream_System_Threading_CancellationToken_">ImageExtensions.SaveAsPngAsync(Image, Stream, CancellationToken)</a>
   </div>
   <div>
       <a class="xref" href="SixLabors.ImageSharp.ImageExtensions.html#SixLabors_ImageSharp_ImageExtensions_SaveAsPng_SixLabors_ImageSharp_Image_System_IO_Stream_SixLabors_ImageSharp_Formats_Png_PngEncoder_">ImageExtensions.SaveAsPng(Image, Stream, PngEncoder)</a>
   </div>
   <div>
+      <a class="xref" href="SixLabors.ImageSharp.ImageExtensions.html#SixLabors_ImageSharp_ImageExtensions_SaveAsPngAsync_SixLabors_ImageSharp_Image_System_IO_Stream_SixLabors_ImageSharp_Formats_Png_PngEncoder_System_Threading_CancellationToken_">ImageExtensions.SaveAsPngAsync(Image, Stream, PngEncoder, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.ImageExtensions.html#SixLabors_ImageSharp_ImageExtensions_SaveAsTga_SixLabors_ImageSharp_Image_System_String_">ImageExtensions.SaveAsTga(Image, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.ImageExtensions.html#SixLabors_ImageSharp_ImageExtensions_SaveAsTgaAsync_SixLabors_ImageSharp_Image_System_String_">ImageExtensions.SaveAsTgaAsync(Image, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.ImageExtensions.html#SixLabors_ImageSharp_ImageExtensions_SaveAsTgaAsync_SixLabors_ImageSharp_Image_System_String_System_Threading_CancellationToken_">ImageExtensions.SaveAsTgaAsync(Image, String, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.ImageExtensions.html#SixLabors_ImageSharp_ImageExtensions_SaveAsTga_SixLabors_ImageSharp_Image_System_String_SixLabors_ImageSharp_Formats_Tga_TgaEncoder_">ImageExtensions.SaveAsTga(Image, String, TgaEncoder)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.ImageExtensions.html#SixLabors_ImageSharp_ImageExtensions_SaveAsTgaAsync_SixLabors_ImageSharp_Image_System_String_SixLabors_ImageSharp_Formats_Tga_TgaEncoder_System_Threading_CancellationToken_">ImageExtensions.SaveAsTgaAsync(Image, String, TgaEncoder, CancellationToken)</a>
+  </div>
+  <div>
       <a class="xref" href="SixLabors.ImageSharp.ImageExtensions.html#SixLabors_ImageSharp_ImageExtensions_SaveAsTga_SixLabors_ImageSharp_Image_System_IO_Stream_">ImageExtensions.SaveAsTga(Image, Stream)</a>
+  </div>
+  <div>
+      <a class="xref" href="SixLabors.ImageSharp.ImageExtensions.html#SixLabors_ImageSharp_ImageExtensions_SaveAsTgaAsync_SixLabors_ImageSharp_Image_System_IO_Stream_System_Threading_CancellationToken_">ImageExtensions.SaveAsTgaAsync(Image, Stream, CancellationToken)</a>
   </div>
   <div>
       <a class="xref" href="SixLabors.ImageSharp.ImageExtensions.html#SixLabors_ImageSharp_ImageExtensions_SaveAsTga_SixLabors_ImageSharp_Image_System_IO_Stream_SixLabors_ImageSharp_Formats_Tga_TgaEncoder_">ImageExtensions.SaveAsTga(Image, Stream, TgaEncoder)</a>
   </div>
   <div>
+      <a class="xref" href="SixLabors.ImageSharp.ImageExtensions.html#SixLabors_ImageSharp_ImageExtensions_SaveAsTgaAsync_SixLabors_ImageSharp_Image_System_IO_Stream_SixLabors_ImageSharp_Formats_Tga_TgaEncoder_System_Threading_CancellationToken_">ImageExtensions.SaveAsTgaAsync(Image, Stream, TgaEncoder, CancellationToken)</a>
+  </div>
+  <div>
       <a class="xref" href="SixLabors.ImageSharp.ImageExtensions.html#SixLabors_ImageSharp_ImageExtensions_Save_SixLabors_ImageSharp_Image_System_String_">ImageExtensions.Save(Image, String)</a>
   </div>
   <div>
-      <a class="xref" href="SixLabors.ImageSharp.ImageExtensions.html#SixLabors_ImageSharp_ImageExtensions_SaveAsync_SixLabors_ImageSharp_Image_System_String_">ImageExtensions.SaveAsync(Image, String)</a>
+      <a class="xref" href="SixLabors.ImageSharp.ImageExtensions.html#SixLabors_ImageSharp_ImageExtensions_SaveAsync_SixLabors_ImageSharp_Image_System_String_System_Threading_CancellationToken_">ImageExtensions.SaveAsync(Image, String, CancellationToken)</a>
   </div>
   <div>
       <a class="xref" href="SixLabors.ImageSharp.ImageExtensions.html#SixLabors_ImageSharp_ImageExtensions_Save_SixLabors_ImageSharp_Image_System_String_SixLabors_ImageSharp_Formats_IImageEncoder_">ImageExtensions.Save(Image, String, IImageEncoder)</a>
   </div>
   <div>
-      <a class="xref" href="SixLabors.ImageSharp.ImageExtensions.html#SixLabors_ImageSharp_ImageExtensions_SaveAsync_SixLabors_ImageSharp_Image_System_String_SixLabors_ImageSharp_Formats_IImageEncoder_">ImageExtensions.SaveAsync(Image, String, IImageEncoder)</a>
+      <a class="xref" href="SixLabors.ImageSharp.ImageExtensions.html#SixLabors_ImageSharp_ImageExtensions_SaveAsync_SixLabors_ImageSharp_Image_System_String_SixLabors_ImageSharp_Formats_IImageEncoder_System_Threading_CancellationToken_">ImageExtensions.SaveAsync(Image, String, IImageEncoder, CancellationToken)</a>
   </div>
   <div>
       <a class="xref" href="SixLabors.ImageSharp.ImageExtensions.html#SixLabors_ImageSharp_ImageExtensions_Save_SixLabors_ImageSharp_Image_System_IO_Stream_SixLabors_ImageSharp_Formats_IImageFormat_">ImageExtensions.Save(Image, Stream, IImageFormat)</a>
@@ -1199,7 +1340,7 @@ stored in row major order, if the backing buffer is contiguous.</p>
       <a class="xref" href="SixLabors.ImageSharp.Advanced.AdvancedImageExtensions.html#SixLabors_ImageSharp_Advanced_AdvancedImageExtensions_AcceptVisitor_SixLabors_ImageSharp_Image_SixLabors_ImageSharp_Advanced_IImageVisitor_">AdvancedImageExtensions.AcceptVisitor(Image, IImageVisitor)</a>
   </div>
   <div>
-      <a class="xref" href="SixLabors.ImageSharp.Advanced.AdvancedImageExtensions.html#SixLabors_ImageSharp_Advanced_AdvancedImageExtensions_AcceptVisitorAsync_SixLabors_ImageSharp_Image_SixLabors_ImageSharp_Advanced_IImageVisitorAsync_">AdvancedImageExtensions.AcceptVisitorAsync(Image, IImageVisitorAsync)</a>
+      <a class="xref" href="SixLabors.ImageSharp.Advanced.AdvancedImageExtensions.html#SixLabors_ImageSharp_Advanced_AdvancedImageExtensions_AcceptVisitorAsync_SixLabors_ImageSharp_Image_SixLabors_ImageSharp_Advanced_IImageVisitorAsync_System_Threading_CancellationToken_">AdvancedImageExtensions.AcceptVisitorAsync(Image, IImageVisitorAsync, CancellationToken)</a>
   </div>
   <div>
       <a class="xref" href="SixLabors.ImageSharp.Advanced.AdvancedImageExtensions.html#SixLabors_ImageSharp_Advanced_AdvancedImageExtensions_GetConfiguration_SixLabors_ImageSharp_Image_">AdvancedImageExtensions.GetConfiguration(Image)</a>
@@ -1257,7 +1398,7 @@ stored in row major order, if the backing buffer is contiguous.</p>
                     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Image_1.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Image%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/SixLabors/ImageSharp/blob/ab8ab3992a93f6682f0c48a591e5df84151081fe/src/ImageSharp/Image{TPixel}.cs/#L22" class="contribution-link">View Source</a>
+                    <a href="https://github.com/SixLabors/ImageSharp/blob/a31a541f8cb36fe2127161e0860f8a4b877d7c1e/src/ImageSharp/Image{TPixel}.cs/#L23" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

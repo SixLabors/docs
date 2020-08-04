@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class EdgeDetectorProcessor
    ">
-    <meta name="generator" content="docfx 2.55.0.0">
+    <meta name="generator" content="docfx 2.56.1.0">
     
     <link rel="shortcut icon" href="../../favicon.png">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -82,23 +82,13 @@
   
   <h1 id="SixLabors_ImageSharp_Processing_Processors_Convolution_EdgeDetectorProcessor" data-uid="SixLabors.ImageSharp.Processing.Processors.Convolution.EdgeDetectorProcessor" class="text-break">Class EdgeDetectorProcessor
   </h1>
-  <div class="markdown level0 summary"><p>Defines a processor that detects edges within an image using a single two dimensional matrix.</p>
+  <div class="markdown level0 summary"><p>Defines edge detection using a single 2D gradient operator.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">EdgeDetectorProcessor</span></div>
-      <div class="level2"><a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Convolution.KayyaliProcessor.html">KayyaliProcessor</a></div>
-      <div class="level2"><a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Convolution.KirschProcessor.html">KirschProcessor</a></div>
-      <div class="level2"><a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Convolution.Laplacian3x3Processor.html">Laplacian3x3Processor</a></div>
-      <div class="level2"><a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Convolution.Laplacian5x5Processor.html">Laplacian5x5Processor</a></div>
-      <div class="level2"><a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Convolution.LaplacianOfGaussianProcessor.html">LaplacianOfGaussianProcessor</a></div>
-      <div class="level2"><a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Convolution.PrewittProcessor.html">PrewittProcessor</a></div>
-      <div class="level2"><a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Convolution.RobertsCrossProcessor.html">RobertsCrossProcessor</a></div>
-      <div class="level2"><a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Convolution.RobinsonProcessor.html">RobinsonProcessor</a></div>
-      <div class="level2"><a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Convolution.ScharrProcessor.html">ScharrProcessor</a></div>
-      <div class="level2"><a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Convolution.SobelProcessor.html">SobelProcessor</a></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
@@ -132,25 +122,25 @@
   <h6><strong>Assembly</strong>: SixLabors.ImageSharp.dll</h6>
   <h5 id="SixLabors_ImageSharp_Processing_Processors_Convolution_EdgeDetectorProcessor_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class EdgeDetectorProcessor : IImageProcessor</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class EdgeDetectorProcessor : IImageProcessor</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Convolution_EdgeDetectorProcessor__ctor_System_Boolean_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Convolution.EdgeDetectorProcessor.%23ctor(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Convolution_EdgeDetectorProcessor__ctor_SixLabors_ImageSharp_Processing_Processors_Convolution_EdgeDetectorKernel_System_Boolean_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Convolution.EdgeDetectorProcessor.%23ctor(SixLabors.ImageSharp.Processing.Processors.Convolution.EdgeDetectorKernel%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/ab8ab3992a93f6682f0c48a591e5df84151081fe/src/ImageSharp/Processing/Processors/Convolution/EdgeDetectorProcessor.cs/#L17">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/a31a541f8cb36fe2127161e0860f8a4b877d7c1e/src/ImageSharp/Processing/Processors/Convolution/EdgeDetectorProcessor.cs/#L20">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_Processors_Convolution_EdgeDetectorProcessor__ctor_" data-uid="SixLabors.ImageSharp.Processing.Processors.Convolution.EdgeDetectorProcessor.#ctor*"></a>
-  <h4 id="SixLabors_ImageSharp_Processing_Processors_Convolution_EdgeDetectorProcessor__ctor_System_Boolean_" data-uid="SixLabors.ImageSharp.Processing.Processors.Convolution.EdgeDetectorProcessor.#ctor(System.Boolean)">EdgeDetectorProcessor(Boolean)</h4>
+  <h4 id="SixLabors_ImageSharp_Processing_Processors_Convolution_EdgeDetectorProcessor__ctor_SixLabors_ImageSharp_Processing_Processors_Convolution_EdgeDetectorKernel_System_Boolean_" data-uid="SixLabors.ImageSharp.Processing.Processors.Convolution.EdgeDetectorProcessor.#ctor(SixLabors.ImageSharp.Processing.Processors.Convolution.EdgeDetectorKernel,System.Boolean)">EdgeDetectorProcessor(EdgeDetectorKernel, Boolean)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Convolution.EdgeDetectorProcessor.html">EdgeDetectorProcessor</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected EdgeDetectorProcessor(bool grayscale)</code></pre>
+    <pre><code class="lang-csharp hljs">public EdgeDetectorProcessor(EdgeDetectorKernel kernel, bool grayscale)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -163,9 +153,15 @@
     </thead>
     <tbody>
       <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Convolution.EdgeDetectorKernel.html">EdgeDetectorKernel</a></td>
+        <td><span class="parametername">kernel</span></td>
+        <td><p>The  edge detector kernel.</p>
+</td>
+      </tr>
+      <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><span class="parametername">grayscale</span></td>
-        <td><p>A value indicating whether to convert the image to grayscale before performing edge detection.</p>
+        <td><p>Whether to convert the image to grayscale before performing edge detection.</p>
 </td>
       </tr>
     </tbody>
@@ -177,11 +173,12 @@
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Convolution_EdgeDetectorProcessor_Grayscale.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Convolution.EdgeDetectorProcessor.Grayscale%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/ab8ab3992a93f6682f0c48a591e5df84151081fe/src/ImageSharp/Processing/Processors/Convolution/EdgeDetectorProcessor.cs/#L25">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/a31a541f8cb36fe2127161e0860f8a4b877d7c1e/src/ImageSharp/Processing/Processors/Convolution/EdgeDetectorProcessor.cs/#L35">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_Processors_Convolution_EdgeDetectorProcessor_Grayscale_" data-uid="SixLabors.ImageSharp.Processing.Processors.Convolution.EdgeDetectorProcessor.Grayscale*"></a>
   <h4 id="SixLabors_ImageSharp_Processing_Processors_Convolution_EdgeDetectorProcessor_Grayscale" data-uid="SixLabors.ImageSharp.Processing.Processors.Convolution.EdgeDetectorProcessor.Grayscale">Grayscale</h4>
-  <div class="markdown level1 summary"><p>Gets a value indicating whether to convert the image to grayscale before performing edge detection.</p>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether to convert the image to grayscale before performing
+edge detection.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -203,6 +200,37 @@
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Convolution_EdgeDetectorProcessor_Kernel.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Convolution.EdgeDetectorProcessor.Kernel%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp/blob/a31a541f8cb36fe2127161e0860f8a4b877d7c1e/src/ImageSharp/Processing/Processors/Convolution/EdgeDetectorProcessor.cs/#L29">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Processing_Processors_Convolution_EdgeDetectorProcessor_Kernel_" data-uid="SixLabors.ImageSharp.Processing.Processors.Convolution.EdgeDetectorProcessor.Kernel*"></a>
+  <h4 id="SixLabors_ImageSharp_Processing_Processors_Convolution_EdgeDetectorProcessor_Kernel" data-uid="SixLabors.ImageSharp.Processing.Processors.Convolution.EdgeDetectorProcessor.Kernel">Kernel</h4>
+  <div class="markdown level1 summary"><p>Gets the edge detector kernel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EdgeDetectorKernel Kernel { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Processing.Processors.Convolution.EdgeDetectorKernel.html">EdgeDetectorKernel</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
@@ -210,7 +238,7 @@
     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Convolution_EdgeDetectorProcessor_CreatePixelSpecificProcessor__1_SixLabors_ImageSharp_Configuration_SixLabors_ImageSharp_Image___0__SixLabors_ImageSharp_Rectangle_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Convolution.EdgeDetectorProcessor.CreatePixelSpecificProcessor%60%601(SixLabors.ImageSharp.Configuration%2CSixLabors.ImageSharp.Image%7B%60%600%7D%2CSixLabors.ImageSharp.Rectangle)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp/blob/ab8ab3992a93f6682f0c48a591e5df84151081fe/src/ImageSharp/Processing/Processors/Convolution/EdgeDetectorProcessor.cs/#L28">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp/blob/a31a541f8cb36fe2127161e0860f8a4b877d7c1e/src/ImageSharp/Processing/Processors/Convolution/EdgeDetectorProcessor.cs/#L38">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Processing_Processors_Convolution_EdgeDetectorProcessor_CreatePixelSpecificProcessor_" data-uid="SixLabors.ImageSharp.Processing.Processors.Convolution.EdgeDetectorProcessor.CreatePixelSpecificProcessor*"></a>
   <h4 id="SixLabors_ImageSharp_Processing_Processors_Convolution_EdgeDetectorProcessor_CreatePixelSpecificProcessor__1_SixLabors_ImageSharp_Configuration_SixLabors_ImageSharp_Image___0__SixLabors_ImageSharp_Rectangle_" data-uid="SixLabors.ImageSharp.Processing.Processors.Convolution.EdgeDetectorProcessor.CreatePixelSpecificProcessor``1(SixLabors.ImageSharp.Configuration,SixLabors.ImageSharp.Image{``0},SixLabors.ImageSharp.Rectangle)">CreatePixelSpecificProcessor&lt;TPixel&gt;(Configuration, Image&lt;TPixel&gt;, Rectangle)</h4>
@@ -218,7 +246,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract IImageProcessor&lt;TPixel&gt; CreatePixelSpecificProcessor&lt;TPixel&gt;(Configuration configuration, Image&lt;TPixel&gt; source, Rectangle sourceRectangle)
+    <pre><code class="lang-csharp hljs">public IImageProcessor&lt;TPixel&gt; CreatePixelSpecificProcessor&lt;TPixel&gt;(Configuration configuration, Image&lt;TPixel&gt; source, Rectangle sourceRectangle)
 
     where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
   </div>
@@ -294,7 +322,7 @@
                     <a href="https://github.com/SixLabors/ImageSharp/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Processing_Processors_Convolution_EdgeDetectorProcessor.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Processing.Processors.Convolution.EdgeDetectorProcessor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/SixLabors/ImageSharp/blob/ab8ab3992a93f6682f0c48a591e5df84151081fe/src/ImageSharp/Processing/Processors/Convolution/EdgeDetectorProcessor.cs/#L11" class="contribution-link">View Source</a>
+                    <a href="https://github.com/SixLabors/ImageSharp/blob/a31a541f8cb36fe2127161e0860f8a4b877d7c1e/src/ImageSharp/Processing/Processors/Convolution/EdgeDetectorProcessor.cs/#L11" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -9,7 +9,7 @@
     <title>Resizing Images </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Resizing Images ">
-    <meta name="generator" content="docfx 2.55.0.0">
+    <meta name="generator" content="docfx 2.56.1.0">
     
     <link rel="shortcut icon" href="../../favicon.png">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -94,7 +94,7 @@ using (Image image = Image.Load(inStream))
     int height = image.Height / 2;
     image.Mutate(x =&gt; x.Resize(width, height));
 
-    image.Save(outStream);
+    image.Save(outPath);
 }
 </code></pre><p><strong>Resize the given image using the <code>Lanczos3</code> sampler:</strong></p>
 <pre><code class="lang-c#">using SixLabors.ImageSharp;
