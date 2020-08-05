@@ -7260,7 +7260,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/imagesharp.drawing/index.html",
-          "hash": "b4zENdhinWRWBmvNrIRMSQ=="
+          "hash": "kKU2yhtoRmcDlDnniVuArA=="
         }
       },
       "is_incremental": false,
@@ -7475,13 +7475,13 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 20,
-          "skipped_file_count": 20
+          "skipped_file_count": 19
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 592,
-          "skipped_file_count": 295
+          "skipped_file_count": 592
         },
         "TocDocumentProcessor": {
           "can_incremental": false,
