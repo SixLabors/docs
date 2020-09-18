@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Interface IImageWebProcessor
    ">
-    <meta name="generator" content="docfx 2.56.1.0">
+    <meta name="generator" content="docfx 2.56.2.0">
     
     <link rel="shortcut icon" href="../../favicon.png">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -98,7 +98,7 @@
     <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_Processors_IImageWebProcessor_Commands.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.Processors.IImageWebProcessor.Commands%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2bce8036b34dd4872911fbff816dba07a9d690e2/src/ImageSharp.Web/Processors/IImageWebProcessor.cs/#L17">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2c5961e6161011b40ea7685da54017fcd92b7b87/src/ImageSharp.Web/Processors/IImageWebProcessor.cs/#L19">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Web_Processors_IImageWebProcessor_Commands_" data-uid="SixLabors.ImageSharp.Web.Processors.IImageWebProcessor.Commands*"></a>
   <h4 id="SixLabors_ImageSharp_Web_Processors_IImageWebProcessor_Commands" data-uid="SixLabors.ImageSharp.Web.Processors.IImageWebProcessor.Commands">Commands</h4>
@@ -128,19 +128,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_Processors_IImageWebProcessor_Process_SixLabors_ImageSharp_Web_FormattedImage_Microsoft_Extensions_Logging_ILogger_System_Collections_Generic_IDictionary_System_String_System_String__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.Processors.IImageWebProcessor.Process(SixLabors.ImageSharp.Web.FormattedImage%2CMicrosoft.Extensions.Logging.ILogger%2CSystem.Collections.Generic.IDictionary%7BSystem.String%2CSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_Processors_IImageWebProcessor_Process_SixLabors_ImageSharp_Web_FormattedImage_ILogger_System_Collections_Generic_IDictionary_System_String_System_String__SixLabors_ImageSharp_Web_Commands_CommandParser_System_Globalization_CultureInfo_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.Processors.IImageWebProcessor.Process(SixLabors.ImageSharp.Web.FormattedImage%2CILogger%2CSystem.Collections.Generic.IDictionary%7BSystem.String%2CSystem.String%7D%2CSixLabors.ImageSharp.Web.Commands.CommandParser%2CSystem.Globalization.CultureInfo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2bce8036b34dd4872911fbff816dba07a9d690e2/src/ImageSharp.Web/Processors/IImageWebProcessor.cs/#L26">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2c5961e6161011b40ea7685da54017fcd92b7b87/src/ImageSharp.Web/Processors/IImageWebProcessor.cs/#L32">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Web_Processors_IImageWebProcessor_Process_" data-uid="SixLabors.ImageSharp.Web.Processors.IImageWebProcessor.Process*"></a>
-  <h4 id="SixLabors_ImageSharp_Web_Processors_IImageWebProcessor_Process_SixLabors_ImageSharp_Web_FormattedImage_Microsoft_Extensions_Logging_ILogger_System_Collections_Generic_IDictionary_System_String_System_String__" data-uid="SixLabors.ImageSharp.Web.Processors.IImageWebProcessor.Process(SixLabors.ImageSharp.Web.FormattedImage,Microsoft.Extensions.Logging.ILogger,System.Collections.Generic.IDictionary{System.String,System.String})">Process(FormattedImage, ILogger, IDictionary&lt;String, String&gt;)</h4>
+  <h4 id="SixLabors_ImageSharp_Web_Processors_IImageWebProcessor_Process_SixLabors_ImageSharp_Web_FormattedImage_ILogger_System_Collections_Generic_IDictionary_System_String_System_String__SixLabors_ImageSharp_Web_Commands_CommandParser_System_Globalization_CultureInfo_" data-uid="SixLabors.ImageSharp.Web.Processors.IImageWebProcessor.Process(SixLabors.ImageSharp.Web.FormattedImage,ILogger,System.Collections.Generic.IDictionary{System.String,System.String},SixLabors.ImageSharp.Web.Commands.CommandParser,System.Globalization.CultureInfo)">Process(FormattedImage, ILogger, IDictionary&lt;String, String&gt;, CommandParser, CultureInfo)</h4>
   <div class="markdown level1 summary"><p>Processes the image based on the querystring commands.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">FormattedImage Process(FormattedImage image, ILogger logger, IDictionary&lt;string, string&gt; commands)</code></pre>
+    <pre><code class="lang-csharp hljs">FormattedImage Process(FormattedImage image, ILogger logger, IDictionary&lt;string, string&gt; commands, CommandParser parser, CultureInfo culture)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -159,7 +159,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a></td>
+        <td><span class="xref">ILogger</span></td>
         <td><span class="parametername">logger</span></td>
         <td><p>The type used for performing logging.</p>
 </td>
@@ -168,6 +168,18 @@
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
         <td><span class="parametername">commands</span></td>
         <td><p>The querystring collection containing the processing commands.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SixLabors.ImageSharp.Web.Commands.CommandParser.html">CommandParser</a></td>
+        <td><span class="parametername">parser</span></td>
+        <td><p>The command parser use for parting commands.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.globalization.cultureinfo">CultureInfo</a></td>
+        <td><span class="parametername">culture</span></td>
+        <td><p>The <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.globalization.cultureinfo">CultureInfo</a> to use as the current parsing culture.</p>
 </td>
       </tr>
     </tbody>
@@ -183,7 +195,7 @@
     <tbody>
       <tr>
         <td><a class="xref" href="SixLabors.ImageSharp.Web.FormattedImage.html">FormattedImage</a></td>
-        <td><p>The <see cref="!:Image&lt;Rgba32>"></see>.</p>
+        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Web.FormattedImage.html">FormattedImage</a>.</p>
 </td>
       </tr>
     </tbody>
@@ -199,7 +211,7 @@
                     <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_Processors_IImageWebProcessor.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.Processors.IImageWebProcessor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2bce8036b34dd4872911fbff816dba07a9d690e2/src/ImageSharp.Web/Processors/IImageWebProcessor.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2c5961e6161011b40ea7685da54017fcd92b7b87/src/ImageSharp.Web/Processors/IImageWebProcessor.cs/#L14" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

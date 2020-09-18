@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Struct ImageMetadata
    ">
-    <meta name="generator" content="docfx 2.56.1.0">
+    <meta name="generator" content="docfx 2.56.2.0">
     
     <link rel="shortcut icon" href="../../favicon.png">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -111,19 +111,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_ImageMetadata__ctor_System_DateTime_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.ImageMetadata.%23ctor(System.DateTime)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_ImageMetadata__ctor_System_DateTime_System_Int64_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.ImageMetadata.%23ctor(System.DateTime%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2bce8036b34dd4872911fbff816dba07a9d690e2/src/ImageSharp.Web/ImageMetadata.cs/#L18">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2c5961e6161011b40ea7685da54017fcd92b7b87/src/ImageSharp.Web/ImageMetadata.cs/#L21">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Web_ImageMetadata__ctor_" data-uid="SixLabors.ImageSharp.Web.ImageMetadata.#ctor*"></a>
-  <h4 id="SixLabors_ImageSharp_Web_ImageMetadata__ctor_System_DateTime_" data-uid="SixLabors.ImageSharp.Web.ImageMetadata.#ctor(System.DateTime)">ImageMetadata(DateTime)</h4>
+  <h4 id="SixLabors_ImageSharp_Web_ImageMetadata__ctor_System_DateTime_System_Int64_" data-uid="SixLabors.ImageSharp.Web.ImageMetadata.#ctor(System.DateTime,System.Int64)">ImageMetadata(DateTime, Int64)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="SixLabors.ImageSharp.Web.ImageMetadata.html">ImageMetadata</a> struct.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ImageMetadata(DateTime lastWriteTimeUtc)</code></pre>
+    <pre><code class="lang-csharp hljs">public ImageMetadata(DateTime lastWriteTimeUtc, long contentLength)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -141,23 +141,29 @@
         <td><p>The date and time in coordinated universal time (UTC) since the source file was last modified.</p>
 </td>
       </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="parametername">contentLength</span></td>
+        <td><p>The length of the image in bytes.</p>
+</td>
+      </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_ImageMetadata__ctor_System_DateTime_System_TimeSpan_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.ImageMetadata.%23ctor(System.DateTime%2CSystem.TimeSpan)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_ImageMetadata__ctor_System_DateTime_System_TimeSpan_System_Int64_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.ImageMetadata.%23ctor(System.DateTime%2CSystem.TimeSpan%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2bce8036b34dd4872911fbff816dba07a9d690e2/src/ImageSharp.Web/ImageMetadata.cs/#L28">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2c5961e6161011b40ea7685da54017fcd92b7b87/src/ImageSharp.Web/ImageMetadata.cs/#L36">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Web_ImageMetadata__ctor_" data-uid="SixLabors.ImageSharp.Web.ImageMetadata.#ctor*"></a>
-  <h4 id="SixLabors_ImageSharp_Web_ImageMetadata__ctor_System_DateTime_System_TimeSpan_" data-uid="SixLabors.ImageSharp.Web.ImageMetadata.#ctor(System.DateTime,System.TimeSpan)">ImageMetadata(DateTime, TimeSpan)</h4>
+  <h4 id="SixLabors_ImageSharp_Web_ImageMetadata__ctor_System_DateTime_System_TimeSpan_System_Int64_" data-uid="SixLabors.ImageSharp.Web.ImageMetadata.#ctor(System.DateTime,System.TimeSpan,System.Int64)">ImageMetadata(DateTime, TimeSpan, Int64)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="SixLabors.ImageSharp.Web.ImageMetadata.html">ImageMetadata</a> struct.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ImageMetadata(DateTime lastWriteTimeUtc, TimeSpan cacheControlMaxAge)</code></pre>
+    <pre><code class="lang-csharp hljs">public ImageMetadata(DateTime lastWriteTimeUtc, TimeSpan cacheControlMaxAge, long contentLength)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -181,6 +187,12 @@
         <td><p>The maximum amount of time a resource will be considered fresh.</p>
 </td>
       </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="parametername">contentLength</span></td>
+        <td><p>The length of the image in bytes.</p>
+</td>
+      </tr>
     </tbody>
   </table>
   <h3 id="properties">Properties
@@ -190,7 +202,7 @@
     <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_ImageMetadata_CacheControlMaxAge.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.ImageMetadata.CacheControlMaxAge%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2bce8036b34dd4872911fbff816dba07a9d690e2/src/ImageSharp.Web/ImageMetadata.cs/#L42">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2c5961e6161011b40ea7685da54017fcd92b7b87/src/ImageSharp.Web/ImageMetadata.cs/#L54">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Web_ImageMetadata_CacheControlMaxAge_" data-uid="SixLabors.ImageSharp.Web.ImageMetadata.CacheControlMaxAge*"></a>
   <h4 id="SixLabors_ImageSharp_Web_ImageMetadata_CacheControlMaxAge" data-uid="SixLabors.ImageSharp.Web.ImageMetadata.CacheControlMaxAge">CacheControlMaxAge</h4>
@@ -218,10 +230,41 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_ImageMetadata_ContentLength.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.ImageMetadata.ContentLength%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2c5961e6161011b40ea7685da54017fcd92b7b87/src/ImageSharp.Web/ImageMetadata.cs/#L59">View Source</a>
+  </span>
+  <a id="SixLabors_ImageSharp_Web_ImageMetadata_ContentLength_" data-uid="SixLabors.ImageSharp.Web.ImageMetadata.ContentLength*"></a>
+  <h4 id="SixLabors_ImageSharp_Web_ImageMetadata_ContentLength" data-uid="SixLabors.ImageSharp.Web.ImageMetadata.ContentLength">ContentLength</h4>
+  <div class="markdown level1 summary"><p>Gets the length of the image in bytes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long ContentLength { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_ImageMetadata_LastWriteTimeUtc.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.ImageMetadata.LastWriteTimeUtc%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2bce8036b34dd4872911fbff816dba07a9d690e2/src/ImageSharp.Web/ImageMetadata.cs/#L37">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2c5961e6161011b40ea7685da54017fcd92b7b87/src/ImageSharp.Web/ImageMetadata.cs/#L49">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Web_ImageMetadata_LastWriteTimeUtc_" data-uid="SixLabors.ImageSharp.Web.ImageMetadata.LastWriteTimeUtc*"></a>
   <h4 id="SixLabors_ImageSharp_Web_ImageMetadata_LastWriteTimeUtc" data-uid="SixLabors.ImageSharp.Web.ImageMetadata.LastWriteTimeUtc">LastWriteTimeUtc</h4>
@@ -254,7 +297,7 @@
     <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_ImageMetadata_Equals_SixLabors_ImageSharp_Web_ImageMetadata_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.ImageMetadata.Equals(SixLabors.ImageSharp.Web.ImageMetadata)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2bce8036b34dd4872911fbff816dba07a9d690e2/src/ImageSharp.Web/ImageMetadata.cs/#L67">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2c5961e6161011b40ea7685da54017fcd92b7b87/src/ImageSharp.Web/ImageMetadata.cs/#L86">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Web_ImageMetadata_Equals_" data-uid="SixLabors.ImageSharp.Web.ImageMetadata.Equals*"></a>
   <h4 id="SixLabors_ImageSharp_Web_ImageMetadata_Equals_SixLabors_ImageSharp_Web_ImageMetadata_" data-uid="SixLabors.ImageSharp.Web.ImageMetadata.Equals(SixLabors.ImageSharp.Web.ImageMetadata)">Equals(ImageMetadata)</h4>
@@ -301,7 +344,7 @@
     <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_ImageMetadata_Equals_System_Object_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.ImageMetadata.Equals(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2bce8036b34dd4872911fbff816dba07a9d690e2/src/ImageSharp.Web/ImageMetadata.cs/#L73">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2c5961e6161011b40ea7685da54017fcd92b7b87/src/ImageSharp.Web/ImageMetadata.cs/#L93">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Web_ImageMetadata_Equals_" data-uid="SixLabors.ImageSharp.Web.ImageMetadata.Equals*"></a>
   <h4 id="SixLabors_ImageSharp_Web_ImageMetadata_Equals_System_Object_" data-uid="SixLabors.ImageSharp.Web.ImageMetadata.Equals(System.Object)">Equals(Object)</h4>
@@ -350,7 +393,7 @@
     <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_ImageMetadata_GetHashCode.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.ImageMetadata.GetHashCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2bce8036b34dd4872911fbff816dba07a9d690e2/src/ImageSharp.Web/ImageMetadata.cs/#L76">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2c5961e6161011b40ea7685da54017fcd92b7b87/src/ImageSharp.Web/ImageMetadata.cs/#L97">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Web_ImageMetadata_GetHashCode_" data-uid="SixLabors.ImageSharp.Web.ImageMetadata.GetHashCode*"></a>
   <h4 id="SixLabors_ImageSharp_Web_ImageMetadata_GetHashCode" data-uid="SixLabors.ImageSharp.Web.ImageMetadata.GetHashCode">GetHashCode()</h4>
@@ -382,7 +425,7 @@
     <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_ImageMetadata_ToString.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.ImageMetadata.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2bce8036b34dd4872911fbff816dba07a9d690e2/src/ImageSharp.Web/ImageMetadata.cs/#L80">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2c5961e6161011b40ea7685da54017fcd92b7b87/src/ImageSharp.Web/ImageMetadata.cs/#L101">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Web_ImageMetadata_ToString_" data-uid="SixLabors.ImageSharp.Web.ImageMetadata.ToString*"></a>
   <h4 id="SixLabors_ImageSharp_Web_ImageMetadata_ToString" data-uid="SixLabors.ImageSharp.Web.ImageMetadata.ToString">ToString()</h4>
@@ -416,7 +459,7 @@
     <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_ImageMetadata_op_Equality_SixLabors_ImageSharp_Web_ImageMetadata__SixLabors_ImageSharp_Web_ImageMetadata__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.ImageMetadata.op_Equality(SixLabors.ImageSharp.Web.ImageMetadata%40%2CSixLabors.ImageSharp.Web.ImageMetadata%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2bce8036b34dd4872911fbff816dba07a9d690e2/src/ImageSharp.Web/ImageMetadata.cs/#L52">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2c5961e6161011b40ea7685da54017fcd92b7b87/src/ImageSharp.Web/ImageMetadata.cs/#L69">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Web_ImageMetadata_op_Equality_" data-uid="SixLabors.ImageSharp.Web.ImageMetadata.op_Equality*"></a>
   <h4 id="SixLabors_ImageSharp_Web_ImageMetadata_op_Equality_SixLabors_ImageSharp_Web_ImageMetadata__SixLabors_ImageSharp_Web_ImageMetadata__" data-uid="SixLabors.ImageSharp.Web.ImageMetadata.op_Equality(SixLabors.ImageSharp.Web.ImageMetadata@,SixLabors.ImageSharp.Web.ImageMetadata@)">Equality(ImageMetadata, ImageMetadata)</h4>
@@ -472,7 +515,7 @@
     <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_ImageMetadata_op_Inequality_SixLabors_ImageSharp_Web_ImageMetadata__SixLabors_ImageSharp_Web_ImageMetadata__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.ImageMetadata.op_Inequality(SixLabors.ImageSharp.Web.ImageMetadata%40%2CSixLabors.ImageSharp.Web.ImageMetadata%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2bce8036b34dd4872911fbff816dba07a9d690e2/src/ImageSharp.Web/ImageMetadata.cs/#L63">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2c5961e6161011b40ea7685da54017fcd92b7b87/src/ImageSharp.Web/ImageMetadata.cs/#L81">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Web_ImageMetadata_op_Inequality_" data-uid="SixLabors.ImageSharp.Web.ImageMetadata.op_Inequality*"></a>
   <h4 id="SixLabors_ImageSharp_Web_ImageMetadata_op_Inequality_SixLabors_ImageSharp_Web_ImageMetadata__SixLabors_ImageSharp_Web_ImageMetadata__" data-uid="SixLabors.ImageSharp.Web.ImageMetadata.op_Inequality(SixLabors.ImageSharp.Web.ImageMetadata@,SixLabors.ImageSharp.Web.ImageMetadata@)">Inequality(ImageMetadata, ImageMetadata)</h4>
@@ -538,7 +581,7 @@
                     <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_ImageMetadata.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.ImageMetadata%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2bce8036b34dd4872911fbff816dba07a9d690e2/src/ImageSharp.Web/ImageMetadata.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2c5961e6161011b40ea7685da54017fcd92b7b87/src/ImageSharp.Web/ImageMetadata.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -488,6 +488,14 @@ pre code {
   white-space: pre;
 }
 
+/* Fix for bad word break in tables.*/
+.table tr td:first-child,
+.table tr td:first-child * {
+  word-wrap: unset;
+  word-break: keep-all;
+  white-space: nowrap;
+}
+
 /* ########################
  * ### AFFIX NAVIGATION ###
  * ########################

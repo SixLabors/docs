@@ -4,11 +4,20 @@ $(function () {
     // screws up our longer namespace representations.
     // Update to add break after keyword only. 
     function breakPlainText(text) {
-        if (!text) return text;
+        if (!text) {
+            return text;
+        }
+
         return text.replace(/(Namespace|Class|Enum|Struct|Type|Interface)/g, '$1<wbr>');
     }
 
     $("h1.text-break").each(function () {
+        const $this = $(this);
+
+        $this.html(breakPlainText($this.text()));
+    });
+
+    $(".table tr td:first-child *").each(function () {
         const $this = $(this);
 
         $this.html(breakPlainText($this.text()));

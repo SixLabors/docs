@@ -15,6 +15,7 @@
 ## [Getting Started](imagesharp.web/gettingstarted.md)
 ### [Processing Commands](imagesharp.web/processingcommands.md)
 ### [Image Providers](imagesharp.web/imageproviders.md)
+### [Image Caches](imagesharp.web/imagecaches.md)
 
 # [Fonts](fonts/index.md)
 ## [Getting Started](fonts/gettingstarted.md)

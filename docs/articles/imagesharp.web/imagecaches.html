@@ -1,0 +1,171 @@
+﻿
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Image Caches </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Image Caches ">
+    <meta name="generator" content="docfx 2.56.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.png">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+  <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="image-caches">Image Caches</h1>
+
+<p>ImageSharp.Web caches the result of any valid processing operation to allow the fast retrieval of future identical requests. The cache is smart, storing additional metadata to allow the detection of updated source images and can be configured to a fine degree to determine the duration a processed image should be cached for.</p>
+<div class="NOTE"><h5>Note</h5><p>It is possible to configure your own image cache by implementing and registering your own version of the <a class="xref" href="../../api/ImageSharp.Web/SixLabors.ImageSharp.Web.Caching.IImageCache.html">IImageCache</a> interface.</p>
+</div>
+<p>The following caches are available for the middleware.</p>
+<h3 id="physicalfilesystemcache">PhysicalFileSystemCache</h3>
+<p>The <a class="xref" href="../../api/ImageSharp.Web/SixLabors.ImageSharp.Web.Caching.PhysicalFileSystemCache.html">PhysicalFileSystemCache</a> stores processed image files in the <a href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/?view=aspnetcore-3.1&amp;tabs=macos#web-root">web root</a> folder. This is the default cache installed when configuring the middleware.    </p>
+<p>Images are cached in separate folders based upon a hash of the request URL. this allows the caching of millions of image files without slowing down the file system.</p>
+<h3 id="azureblobstorageimagecache">AzureBlobStorageImageCache</h3>
+<p>This cache allows the caching of image files using <a href="https://docs.microsoft.com/en-us/azure/storage/blobs/">Azure Blob Storage</a> and is available as an external package installable via <a href="https://www.nuget.org/packages/SixLabors.ImageSharp.Web.Providers.Azure">NuGet</a></p>
+<div class="tabGroup" id="tabgroup_dp14xhl2HY">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_dp14xhl2HY_tabid-1" role="tab" aria-controls="tabpanel_dp14xhl2HY_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Package Manager</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_dp14xhl2HY_tabid-2" role="tab" aria-controls="tabpanel_dp14xhl2HY_tabid-2" data-tab="tabid-2" tabindex="-1">.NET CLI</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_dp14xhl2HY_tabid-3" role="tab" aria-controls="tabpanel_dp14xhl2HY_tabid-3" data-tab="tabid-3" tabindex="-1">PackageReference</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_dp14xhl2HY_tabid-4" role="tab" aria-controls="tabpanel_dp14xhl2HY_tabid-4" data-tab="tabid-4" tabindex="-1">Paket CLI</a>
+</li>
+</ul>
+<section id="tabpanel_dp14xhl2HY_tabid-1" role="tabpanel" data-tab="tabid-1">
+<pre><code class="lang-bash">PM &gt; Install-Package SixLabors.ImageSharp.Web.Providers.Azure -Version VERSION_NUMBER
+</code></pre></section>
+<section id="tabpanel_dp14xhl2HY_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
+<pre><code class="lang-bash">dotnet add package SixLabors.ImageSharp.Web.Providers.Azure --version VERSION_NUMBER
+</code></pre></section>
+<section id="tabpanel_dp14xhl2HY_tabid-3" role="tabpanel" data-tab="tabid-3" aria-hidden="true" hidden="hidden">
+<pre><code class="lang-xml">&lt;PackageReference Include=&quot;SixLabors.ImageSharp.Web.Providers.Azure&quot; Version=&quot;VERSION_NUMBER&quot; /&gt;
+</code></pre></section>
+<section id="tabpanel_dp14xhl2HY_tabid-4" role="tabpanel" data-tab="tabid-4" aria-hidden="true" hidden="hidden">
+<pre><code class="lang-bash">paket add SixLabors.ImageSharp.Web.Providers.Azure --version VERSION_NUMBER
+</code></pre></section>
+</div>
+<p>Once installed the cache <a class="xref" href="../../api/ImageSharp.Web.Providers.Azure/SixLabors.ImageSharp.Web.Caching.Azure.AzureBlobStorageCacheOptions.html">AzureBlobStorageCacheOptions</a> can be configured as follows:</p>
+<pre><code class="lang-c#">// Configure and register the container.  
+// Alteratively use `appsettings.json` to represent the class and bind those settings.
+.Configure&lt;AzureBlobStorageCacheOptions&gt;(options =&gt;
+{
+    options.ConnectionString = {AZURE_CONNECTION_STRING};
+    options.ContainerName = {AZURE_CONTAINER_NAME};
+
+    // Optionally create the cache container on startup if not already created.
+    AzureBlobStorageCache.CreateIfNotExists(options, PublicAccessType.None);
+})
+.SetCache&lt;AzureBlobStorageImageCache&gt;()
+</code></pre><p>Images are cached using a hash of the request URL as the blob name. All appropriate metadata is stored in the blob properties to correctly serve the blob with the correct response headers.</p>
+
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/SixLabors/docs/blob/master/articles/imagesharp.web/imagecaches.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © Six Labors<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

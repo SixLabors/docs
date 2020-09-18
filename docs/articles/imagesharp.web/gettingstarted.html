@@ -9,7 +9,7 @@
     <title>Getting Started </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Getting Started ">
-    <meta name="generator" content="docfx 2.56.1.0">
+    <meta name="generator" content="docfx 2.56.2.0">
     
     <link rel="shortcut icon" href="../../favicon.png">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -94,20 +94,23 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env) {
     // Add the image processing middleware.
     app.UseImageSharp();
 }
-</code></pre><p>The fluent configuration is flexible allowing you to configure a mutlitude of different options. For example you can add the default service and custom options.</p>
+</code></pre><p>The fluent configuration is flexible allowing you to configure a multitude of different options. For example you can add the default service and custom options.</p>
 <pre><code class="lang-c#">// Add the default service and custom options.
 services.AddImageSharp(
     options =&gt;
         {
-            // You only need to set the options you want to change here.
+            // You only need to set the options you want to change here
+            // All properties have been listed for demonstration purposes
+            // only.
             options.Configuration = Configuration.Default;
-            options.MaxBrowserCacheDays = 7;
-            options.MaxCacheDays = 365;
+            options.MemoryStreamManager = new RecyclableMemoryStreamManager();
+            options.BrowserMaxAge = TimeSpan.FromDays(7);
+            options.CacheMaxAge = TimeSpan.FromDays(365);
             options.CachedNameLength = 8;
-            options.OnParseCommands = _ =&gt; { };
-            options.OnBeforeSave = _ =&gt; { };
-            options.OnProcessed = _ =&gt; { };
-            options.OnPrepareResponse = _ =&gt; { };
+            options.OnParseCommandsAsync = _ =&gt; Task.CompletedTask;
+            options.OnBeforeSaveAsync = _ =&gt; Task.CompletedTask;
+            options.OnProcessedAsync = _ =&gt; Task.CompletedTask;
+            options.OnPrepareResponseAsync = _ =&gt; Task.CompletedTask;
         });
 </code></pre><p>Or you can fine-grain control adding the default options and configure other services.</p>
 <pre><code class="lang-c#">// Fine-grain control adding the default options and configure other services.
@@ -116,31 +119,13 @@ services.AddImageSharp()
         .RemoveProcessor&lt;BackgroundColorWebProcessor&gt;();
 </code></pre><p>There are also factory methods for each builder that will allow building from configuration files.</p>
 <pre><code class="lang-c#">// Use the factory methods to configure the PhysicalFileSystemCacheOptions
-services.AddImageSharpCore(
-    options =&gt;
-        {
-            options.Configuration = Configuration.Default;
-            options.MaxBrowserCacheDays = 7;
-            options.MaxCacheDays = 365;
-            options.CachedNameLength = 8;
-            options.OnParseCommands = _ =&gt; { };
-            options.OnBeforeSave = _ =&gt; { };
-            options.OnProcessed = _ =&gt; { };
-            options.OnPrepareResponse = _ =&gt; { };
-        })
-    .SetRequestParser&lt;QueryCollectionRequestParser&gt;()
-    .SetMemoryAllocator(provider =&gt; ArrayPoolMemoryAllocator.CreateWithMinimalPooling())
+services.AddImageSharp()
     .Configure&lt;PhysicalFileSystemCacheOptions&gt;(options =&gt;
     {
         options.CacheFolder = &quot;different-cache&quot;;
-    })
-    .SetCache&lt;PhysicalFileSystemCache&gt;()
-    .SetCacheHash&lt;CacheHash&gt;()
-    .AddProvider&lt;PhysicalFileSystemProvider&gt;()
-    .AddProcessor&lt;ResizeWebProcessor&gt;()
-    .AddProcessor&lt;FormatWebProcessor&gt;()
-    .AddProcessor&lt;BackgroundColorWebProcessor&gt;();
-</code></pre>
+    });
+</code></pre><p>Full Configuration API options are available <a class="xref" href="../../api/ImageSharp.Web/SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.html">here</a>.</p>
+
 </article>
           </div>
           

@@ -1,4 +1,4 @@
-# ImageProviders
+# Image Providers
 
 ImageSharp.Web determines the the location of a source image to process via the registration and application of image providers. 
   
@@ -43,7 +43,7 @@ paket add SixLabors.ImageSharp.Web.Providers.Azure --version VERSION_NUMBER
 
 ***
 
-Once installed the provider @"SixLabors.ImageSharp.Web.Providers.AzureBlobContainerClientOptions" can be configured as follows:
+Once installed the provider @"SixLabors.ImageSharp.Web.Providers.Azure.AzureBlobContainerClientOptions" can be configured as follows:
 
 
 ```c#  

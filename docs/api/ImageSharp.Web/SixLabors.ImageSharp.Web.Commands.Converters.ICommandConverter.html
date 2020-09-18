@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Interface ICommandConverter
    ">
-    <meta name="generator" content="docfx 2.56.1.0">
+    <meta name="generator" content="docfx 2.56.2.0">
     
     <link rel="shortcut icon" href="../../favicon.png">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -83,7 +83,7 @@
   <h1 id="SixLabors_ImageSharp_Web_Commands_Converters_ICommandConverter" data-uid="SixLabors.ImageSharp.Web.Commands.Converters.ICommandConverter" class="text-break">Interface ICommandConverter
   </h1>
   <div class="markdown level0 summary"><p>Defines a contract for converting the value of a string into a different data type.
-Implementations of this interface should be stateless by design.</p>
+Implementations should be stateless by design and also implement <a class="xref" href="SixLabors.ImageSharp.Web.Commands.Converters.ICommandConverter-1.html">ICommandConverter&lt;T&gt;</a>.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <h6><strong>Namespace</strong>: <a class="xref" href="SixLabors.ImageSharp.Web.Commands.Converters.html">SixLabors.ImageSharp.Web.Commands.Converters</a></h6>
@@ -92,139 +92,36 @@ Implementations of this interface should be stateless by design.</p>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public interface ICommandConverter</code></pre>
   </div>
-  <h3 id="methods">Methods
+  <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_Commands_Converters_ICommandConverter_ConvertFrom_System_Globalization_CultureInfo_System_String_System_Type_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.Commands.Converters.ICommandConverter.ConvertFrom(System.Globalization.CultureInfo%2CSystem.String%2CSystem.Type)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_Commands_Converters_ICommandConverter_Type.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.Commands.Converters.ICommandConverter.Type%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2bce8036b34dd4872911fbff816dba07a9d690e2/src/ImageSharp.Web/Commands/Converters/ICommandConverter.cs/#L27">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2c5961e6161011b40ea7685da54017fcd92b7b87/src/ImageSharp.Web/Commands/Converters/ICommandConverter.cs/#L18">View Source</a>
   </span>
-  <a id="SixLabors_ImageSharp_Web_Commands_Converters_ICommandConverter_ConvertFrom_" data-uid="SixLabors.ImageSharp.Web.Commands.Converters.ICommandConverter.ConvertFrom*"></a>
-  <h4 id="SixLabors_ImageSharp_Web_Commands_Converters_ICommandConverter_ConvertFrom_System_Globalization_CultureInfo_System_String_System_Type_" data-uid="SixLabors.ImageSharp.Web.Commands.Converters.ICommandConverter.ConvertFrom(System.Globalization.CultureInfo,System.String,System.Type)">ConvertFrom(CultureInfo, String, Type)</h4>
-  <div class="markdown level1 summary"><p>Converts the given string to the type of this converter, using the specified culture information.</p>
+  <a id="SixLabors_ImageSharp_Web_Commands_Converters_ICommandConverter_Type_" data-uid="SixLabors.ImageSharp.Web.Commands.Converters.ICommandConverter.Type*"></a>
+  <h4 id="SixLabors_ImageSharp_Web_Commands_Converters_ICommandConverter_Type" data-uid="SixLabors.ImageSharp.Web.Commands.Converters.ICommandConverter.Type">Type</h4>
+  <div class="markdown level1 summary"><p>Gets the type this converter returns.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">object ConvertFrom(CultureInfo culture, string value, Type propertyType)</code></pre>
+    <pre><code class="lang-csharp hljs">Type Type { get; }</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.globalization.cultureinfo">CultureInfo</a></td>
-        <td><span class="parametername">culture</span></td>
-        <td><p>The <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.globalization.cultureinfo">CultureInfo</a> to use as the current culture.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">value</span></td>
-        <td><p>The <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a> to convert. </p>
-</td>
-      </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
-        <td><span class="parametername">propertyType</span></td>
-        <td><p>The property type that the converter will convert to.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
-        <td><p>An <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a> that represents the converted value.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></td>
-        <td><p>The conversion cannot be performed.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_Commands_Converters_ICommandConverter_ConvertFromInvariantString_System_String_System_Type_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.Commands.Converters.ICommandConverter.ConvertFromInvariantString(System.String%2CSystem.Type)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2bce8036b34dd4872911fbff816dba07a9d690e2/src/ImageSharp.Web/Commands/Converters/ICommandConverter.cs/#L37">View Source</a>
-  </span>
-  <a id="SixLabors_ImageSharp_Web_Commands_Converters_ICommandConverter_ConvertFromInvariantString_" data-uid="SixLabors.ImageSharp.Web.Commands.Converters.ICommandConverter.ConvertFromInvariantString*"></a>
-  <h4 id="SixLabors_ImageSharp_Web_Commands_Converters_ICommandConverter_ConvertFromInvariantString_System_String_System_Type_" data-uid="SixLabors.ImageSharp.Web.Commands.Converters.ICommandConverter.ConvertFromInvariantString(System.String,System.Type)">ConvertFromInvariantString(String, Type)</h4>
-  <div class="markdown level1 summary"><p>Converts the given string to the converter&apos;s native type using the invariant culture.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">object ConvertFromInvariantString(string text, Type propertyType)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">text</span></td>
-        <td><p>The value to convert from.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
-        <td><span class="parametername">propertyType</span></td>
-        <td><p>The property type that the converter will convert to.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
-        <td><p>An <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a> that represents the converted value.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -239,7 +136,7 @@ Implementations of this interface should be stateless by design.</p>
                     <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_Commands_Converters_ICommandConverter.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.Commands.Converters.ICommandConverter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2bce8036b34dd4872911fbff816dba07a9d690e2/src/ImageSharp.Web/Commands/Converters/ICommandConverter.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2c5961e6161011b40ea7685da54017fcd92b7b87/src/ImageSharp.Web/Commands/Converters/ICommandConverter.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

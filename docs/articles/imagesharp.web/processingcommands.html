@@ -9,7 +9,7 @@
     <title>Processing Commands </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Processing Commands ">
-    <meta name="generator" content="docfx 2.56.1.0">
+    <meta name="generator" content="docfx 2.56.2.0">
     
     <link rel="shortcut icon" href="../../favicon.png">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -123,7 +123,16 @@ sampler to use.<ul>
 {PATH_TO_YOUR_IMAGE}?format=png
 {PATH_TO_YOUR_IMAGE}?format=bmp
 {PATH_TO_YOUR_IMAGE}?format=tga
-</code></pre><h4 id="background-color">Background Color</h4>
+</code></pre><h4 id="quality">Quality</h4>
+<p>Allows the encoding of the output image at the given quality.</p>
+<ul>
+<li>For Jpeg this ranges from 1-100.</li>
+</ul>
+<pre><code>{PATH_TO_YOUR_IMAGE}?quality=90
+{PATH_TO_YOUR_IMAGE}?format=jpg&amp;quality=42
+</code></pre><div class="NOTE"><h5>Note</h5><p>Only certain formats support adjustable quality. This is a constraint of individual image standards not the API.</p>
+</div>
+<h4 id="background-color">Background Color</h4>
 <p>Allows the changing of the background color of transparent images.</p>
 <pre><code>{PATH_TO_YOUR_IMAGE}?bgcolor=FFFF00
 {PATH_TO_YOUR_IMAGE}?bgcolor=C1FF0080

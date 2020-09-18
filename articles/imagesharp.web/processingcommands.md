@@ -55,6 +55,20 @@ Allows the encoding of the output image to a new image format. The available for
 {PATH_TO_YOUR_IMAGE}?format=tga
 ```
 
+#### Quality
+
+Allows the encoding of the output image at the given quality.
+
+- For Jpeg this ranges from 1-100.
+
+```
+{PATH_TO_YOUR_IMAGE}?quality=90
+{PATH_TO_YOUR_IMAGE}?format=jpg&quality=42
+```
+
+>[!NOTE]
+>Only certain formats support adjustable quality. This is a constraint of individual image standards not the API.
+
 #### Background Color
 
 Allows the changing of the background color of transparent images.

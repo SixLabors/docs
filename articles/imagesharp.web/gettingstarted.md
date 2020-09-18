@@ -22,22 +22,25 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env) {
 }
 ```
 
-The fluent configuration is flexible allowing you to configure a mutlitude of different options. For example you can add the default service and custom options.
+The fluent configuration is flexible allowing you to configure a multitude of different options. For example you can add the default service and custom options.
 
 ``` c#
 // Add the default service and custom options.
 services.AddImageSharp(
     options =>
         {
-            // You only need to set the options you want to change here.
+            // You only need to set the options you want to change here
+            // All properties have been listed for demonstration purposes
+            // only.
             options.Configuration = Configuration.Default;
-            options.MaxBrowserCacheDays = 7;
-            options.MaxCacheDays = 365;
+            options.MemoryStreamManager = new RecyclableMemoryStreamManager();
+            options.BrowserMaxAge = TimeSpan.FromDays(7);
+            options.CacheMaxAge = TimeSpan.FromDays(365);
             options.CachedNameLength = 8;
-            options.OnParseCommands = _ => { };
-            options.OnBeforeSave = _ => { };
-            options.OnProcessed = _ => { };
-            options.OnPrepareResponse = _ => { };
+            options.OnParseCommandsAsync = _ => Task.CompletedTask;
+            options.OnBeforeSaveAsync = _ => Task.CompletedTask;
+            options.OnProcessedAsync = _ => Task.CompletedTask;
+            options.OnPrepareResponseAsync = _ => Task.CompletedTask;
         });
 ```
 
@@ -54,28 +57,11 @@ There are also factory methods for each builder that will allow building from co
 
 ``` c#
 // Use the factory methods to configure the PhysicalFileSystemCacheOptions
-services.AddImageSharpCore(
-    options =>
-        {
-            options.Configuration = Configuration.Default;
-            options.MaxBrowserCacheDays = 7;
-            options.MaxCacheDays = 365;
-            options.CachedNameLength = 8;
-            options.OnParseCommands = _ => { };
-            options.OnBeforeSave = _ => { };
-            options.OnProcessed = _ => { };
-            options.OnPrepareResponse = _ => { };
-        })
-    .SetRequestParser<QueryCollectionRequestParser>()
-    .SetMemoryAllocator(provider => ArrayPoolMemoryAllocator.CreateWithMinimalPooling())
+services.AddImageSharp()
     .Configure<PhysicalFileSystemCacheOptions>(options =>
     {
         options.CacheFolder = "different-cache";
-    })
-    .SetCache<PhysicalFileSystemCache>()
-    .SetCacheHash<CacheHash>()
-    .AddProvider<PhysicalFileSystemProvider>()
-    .AddProcessor<ResizeWebProcessor>()
-    .AddProcessor<FormatWebProcessor>()
-    .AddProcessor<BackgroundColorWebProcessor>();
-```
+    });
+```  
+  
+Full Configuration API options are available [here](xref:SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions).
