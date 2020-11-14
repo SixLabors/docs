@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ImageSharpBuilderExtensions
    ">
-    <meta name="generator" content="docfx 2.56.2.0">
+    <meta name="generator" content="docfx 2.56.5.0">
     
     <link rel="shortcut icon" href="../../favicon.png">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -127,7 +127,7 @@
     <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_AddConverter__1_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpBuilder_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.AddConverter%60%601(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2c5961e6161011b40ea7685da54017fcd92b7b87/src/ImageSharp.Web/DependencyInjection/ImageSharpBuilderExtensions.cs/#L262">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/b72064b3b8cb8b883f8310c86b6d7e5643d80ad3/src/ImageSharp.Web/DependencyInjection/ImageSharpBuilderExtensions.cs/#L262">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_AddConverter_" data-uid="SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.AddConverter*"></a>
   <h4 id="SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_AddConverter__1_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpBuilder_" data-uid="SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.AddConverter``1(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpBuilder)">AddConverter&lt;TConverter&gt;(IImageSharpBuilder)</h4>
@@ -137,6 +137,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IImageSharpBuilder AddConverter&lt;TConverter&gt;(this IImageSharpBuilder builder)
+
     where TConverter : class, ICommandConverter</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -194,7 +195,7 @@
     <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_AddConverter__1_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpBuilder_System_Func_System_IServiceProvider___0__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.AddConverter%60%601(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpBuilder%2CSystem.Func%7BSystem.IServiceProvider%2C%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2c5961e6161011b40ea7685da54017fcd92b7b87/src/ImageSharp.Web/DependencyInjection/ImageSharpBuilderExtensions.cs/#L276">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/b72064b3b8cb8b883f8310c86b6d7e5643d80ad3/src/ImageSharp.Web/DependencyInjection/ImageSharpBuilderExtensions.cs/#L276">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_AddConverter_" data-uid="SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.AddConverter*"></a>
   <h4 id="SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_AddConverter__1_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpBuilder_System_Func_System_IServiceProvider___0__" data-uid="SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.AddConverter``1(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpBuilder,System.Func{System.IServiceProvider,``0})">AddConverter&lt;TConverter&gt;(IImageSharpBuilder, Func&lt;IServiceProvider, TConverter&gt;)</h4>
@@ -204,6 +205,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IImageSharpBuilder AddConverter&lt;TConverter&gt;(this IImageSharpBuilder builder, Func&lt;IServiceProvider, TConverter&gt; implementationFactory)
+
     where TConverter : class, ICommandConverter</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -267,7 +269,7 @@
     <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_AddProcessor__1_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpBuilder_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.AddProcessor%60%601(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2c5961e6161011b40ea7685da54017fcd92b7b87/src/ImageSharp.Web/DependencyInjection/ImageSharpBuilderExtensions.cs/#L200">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/b72064b3b8cb8b883f8310c86b6d7e5643d80ad3/src/ImageSharp.Web/DependencyInjection/ImageSharpBuilderExtensions.cs/#L200">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_AddProcessor_" data-uid="SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.AddProcessor*"></a>
   <h4 id="SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_AddProcessor__1_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpBuilder_" data-uid="SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.AddProcessor``1(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpBuilder)">AddProcessor&lt;TProcessor&gt;(IImageSharpBuilder)</h4>
@@ -277,6 +279,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IImageSharpBuilder AddProcessor&lt;TProcessor&gt;(this IImageSharpBuilder builder)
+
     where TProcessor : class, IImageWebProcessor</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -334,7 +337,7 @@
     <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_AddProcessor__1_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpBuilder_System_Func_System_IServiceProvider___0__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.AddProcessor%60%601(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpBuilder%2CSystem.Func%7BSystem.IServiceProvider%2C%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2c5961e6161011b40ea7685da54017fcd92b7b87/src/ImageSharp.Web/DependencyInjection/ImageSharpBuilderExtensions.cs/#L214">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/b72064b3b8cb8b883f8310c86b6d7e5643d80ad3/src/ImageSharp.Web/DependencyInjection/ImageSharpBuilderExtensions.cs/#L214">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_AddProcessor_" data-uid="SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.AddProcessor*"></a>
   <h4 id="SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_AddProcessor__1_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpBuilder_System_Func_System_IServiceProvider___0__" data-uid="SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.AddProcessor``1(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpBuilder,System.Func{System.IServiceProvider,``0})">AddProcessor&lt;TProcessor&gt;(IImageSharpBuilder, Func&lt;IServiceProvider, TProcessor&gt;)</h4>
@@ -344,6 +347,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IImageSharpBuilder AddProcessor&lt;TProcessor&gt;(this IImageSharpBuilder builder, Func&lt;IServiceProvider, TProcessor&gt; implementationFactory)
+
     where TProcessor : class, IImageWebProcessor</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -407,7 +411,7 @@
     <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_AddProvider__1_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpBuilder_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.AddProvider%60%601(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2c5961e6161011b40ea7685da54017fcd92b7b87/src/ImageSharp.Web/DependencyInjection/ImageSharpBuilderExtensions.cs/#L138">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/b72064b3b8cb8b883f8310c86b6d7e5643d80ad3/src/ImageSharp.Web/DependencyInjection/ImageSharpBuilderExtensions.cs/#L138">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_AddProvider_" data-uid="SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.AddProvider*"></a>
   <h4 id="SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_AddProvider__1_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpBuilder_" data-uid="SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.AddProvider``1(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpBuilder)">AddProvider&lt;TProvider&gt;(IImageSharpBuilder)</h4>
@@ -417,6 +421,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IImageSharpBuilder AddProvider&lt;TProvider&gt;(this IImageSharpBuilder builder)
+
     where TProvider : class, IImageProvider</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -474,7 +479,7 @@
     <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_AddProvider__1_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpBuilder_System_Func_System_IServiceProvider___0__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.AddProvider%60%601(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpBuilder%2CSystem.Func%7BSystem.IServiceProvider%2C%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2c5961e6161011b40ea7685da54017fcd92b7b87/src/ImageSharp.Web/DependencyInjection/ImageSharpBuilderExtensions.cs/#L152">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/b72064b3b8cb8b883f8310c86b6d7e5643d80ad3/src/ImageSharp.Web/DependencyInjection/ImageSharpBuilderExtensions.cs/#L152">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_AddProvider_" data-uid="SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.AddProvider*"></a>
   <h4 id="SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_AddProvider__1_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpBuilder_System_Func_System_IServiceProvider___0__" data-uid="SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.AddProvider``1(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpBuilder,System.Func{System.IServiceProvider,``0})">AddProvider&lt;TProvider&gt;(IImageSharpBuilder, Func&lt;IServiceProvider, TProvider&gt;)</h4>
@@ -484,6 +489,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IImageSharpBuilder AddProvider&lt;TProvider&gt;(this IImageSharpBuilder builder, Func&lt;IServiceProvider, TProvider&gt; implementationFactory)
+
     where TProvider : class, IImageProvider</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -547,7 +553,7 @@
     <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_ClearConverters_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpBuilder_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.ClearConverters(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2c5961e6161011b40ea7685da54017fcd92b7b87/src/ImageSharp.Web/DependencyInjection/ImageSharpBuilderExtensions.cs/#L311">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/b72064b3b8cb8b883f8310c86b6d7e5643d80ad3/src/ImageSharp.Web/DependencyInjection/ImageSharpBuilderExtensions.cs/#L311">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_ClearConverters_" data-uid="SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.ClearConverters*"></a>
   <h4 id="SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_ClearConverters_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpBuilder_" data-uid="SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.ClearConverters(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpBuilder)">ClearConverters(IImageSharpBuilder)</h4>
@@ -597,7 +603,7 @@
     <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_ClearProcessors_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpBuilder_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.ClearProcessors(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2c5961e6161011b40ea7685da54017fcd92b7b87/src/ImageSharp.Web/DependencyInjection/ImageSharpBuilderExtensions.cs/#L249">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/b72064b3b8cb8b883f8310c86b6d7e5643d80ad3/src/ImageSharp.Web/DependencyInjection/ImageSharpBuilderExtensions.cs/#L249">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_ClearProcessors_" data-uid="SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.ClearProcessors*"></a>
   <h4 id="SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_ClearProcessors_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpBuilder_" data-uid="SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.ClearProcessors(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpBuilder)">ClearProcessors(IImageSharpBuilder)</h4>
@@ -647,7 +653,7 @@
     <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_ClearProviders_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpBuilder_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.ClearProviders(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2c5961e6161011b40ea7685da54017fcd92b7b87/src/ImageSharp.Web/DependencyInjection/ImageSharpBuilderExtensions.cs/#L187">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/b72064b3b8cb8b883f8310c86b6d7e5643d80ad3/src/ImageSharp.Web/DependencyInjection/ImageSharpBuilderExtensions.cs/#L187">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_ClearProviders_" data-uid="SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.ClearProviders*"></a>
   <h4 id="SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_ClearProviders_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpBuilder_" data-uid="SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.ClearProviders(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpBuilder)">ClearProviders(IImageSharpBuilder)</h4>
@@ -694,19 +700,20 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_Configure__1_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpBuilder_IConfiguration_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.Configure%60%601(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpBuilder%2CIConfiguration)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_Configure__1_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpBuilder_Microsoft_Extensions_Configuration_IConfiguration_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.Configure%60%601(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpBuilder%2CMicrosoft.Extensions.Configuration.IConfiguration)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2c5961e6161011b40ea7685da54017fcd92b7b87/src/ImageSharp.Web/DependencyInjection/ImageSharpBuilderExtensions.cs/#L325">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/b72064b3b8cb8b883f8310c86b6d7e5643d80ad3/src/ImageSharp.Web/DependencyInjection/ImageSharpBuilderExtensions.cs/#L325">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_Configure_" data-uid="SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.Configure*"></a>
-  <h4 id="SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_Configure__1_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpBuilder_IConfiguration_" data-uid="SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.Configure``1(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpBuilder,IConfiguration)">Configure&lt;TOptions&gt;(IImageSharpBuilder, IConfiguration)</h4>
+  <h4 id="SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_Configure__1_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpBuilder_Microsoft_Extensions_Configuration_IConfiguration_" data-uid="SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.Configure``1(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpBuilder,Microsoft.Extensions.Configuration.IConfiguration)">Configure&lt;TOptions&gt;(IImageSharpBuilder, IConfiguration)</h4>
   <div class="markdown level1 summary"><p>Registers an action used to configure a particular type of options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IImageSharpBuilder Configure&lt;TOptions&gt;(this IImageSharpBuilder builder, IConfiguration configuration)
+
     where TOptions : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -726,7 +733,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">IConfiguration</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.extensions.configuration.iconfiguration">IConfiguration</a></td>
         <td><span class="parametername">configuration</span></td>
         <td><p>The configuration being bound.</p>
 </td>
@@ -770,7 +777,7 @@
     <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_Configure__1_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpBuilder_System_Action___0__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.Configure%60%601(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpBuilder%2CSystem.Action%7B%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2c5961e6161011b40ea7685da54017fcd92b7b87/src/ImageSharp.Web/DependencyInjection/ImageSharpBuilderExtensions.cs/#L339">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/b72064b3b8cb8b883f8310c86b6d7e5643d80ad3/src/ImageSharp.Web/DependencyInjection/ImageSharpBuilderExtensions.cs/#L339">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_Configure_" data-uid="SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.Configure*"></a>
   <h4 id="SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_Configure__1_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpBuilder_System_Action___0__" data-uid="SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.Configure``1(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpBuilder,System.Action{``0})">Configure&lt;TOptions&gt;(IImageSharpBuilder, Action&lt;TOptions&gt;)</h4>
@@ -780,6 +787,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IImageSharpBuilder Configure&lt;TOptions&gt;(this IImageSharpBuilder builder, Action&lt;TOptions&gt; configureOptions)
+
     where TOptions : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -843,7 +851,7 @@
     <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_RemoveConverter__1_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpBuilder_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.RemoveConverter%60%601(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2c5961e6161011b40ea7685da54017fcd92b7b87/src/ImageSharp.Web/DependencyInjection/ImageSharpBuilderExtensions.cs/#L289">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/b72064b3b8cb8b883f8310c86b6d7e5643d80ad3/src/ImageSharp.Web/DependencyInjection/ImageSharpBuilderExtensions.cs/#L289">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_RemoveConverter_" data-uid="SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.RemoveConverter*"></a>
   <h4 id="SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_RemoveConverter__1_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpBuilder_" data-uid="SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.RemoveConverter``1(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpBuilder)">RemoveConverter&lt;TConverter&gt;(IImageSharpBuilder)</h4>
@@ -853,6 +861,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IImageSharpBuilder RemoveConverter&lt;TConverter&gt;(this IImageSharpBuilder builder)
+
     where TConverter : class, ICommandConverter</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -910,7 +919,7 @@
     <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_RemoveProcessor__1_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpBuilder_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.RemoveProcessor%60%601(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2c5961e6161011b40ea7685da54017fcd92b7b87/src/ImageSharp.Web/DependencyInjection/ImageSharpBuilderExtensions.cs/#L227">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/b72064b3b8cb8b883f8310c86b6d7e5643d80ad3/src/ImageSharp.Web/DependencyInjection/ImageSharpBuilderExtensions.cs/#L227">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_RemoveProcessor_" data-uid="SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.RemoveProcessor*"></a>
   <h4 id="SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_RemoveProcessor__1_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpBuilder_" data-uid="SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.RemoveProcessor``1(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpBuilder)">RemoveProcessor&lt;TProcessor&gt;(IImageSharpBuilder)</h4>
@@ -920,6 +929,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IImageSharpBuilder RemoveProcessor&lt;TProcessor&gt;(this IImageSharpBuilder builder)
+
     where TProcessor : class, IImageWebProcessor</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -977,7 +987,7 @@
     <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_RemoveProvider__1_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpBuilder_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.RemoveProvider%60%601(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2c5961e6161011b40ea7685da54017fcd92b7b87/src/ImageSharp.Web/DependencyInjection/ImageSharpBuilderExtensions.cs/#L165">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/b72064b3b8cb8b883f8310c86b6d7e5643d80ad3/src/ImageSharp.Web/DependencyInjection/ImageSharpBuilderExtensions.cs/#L165">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_RemoveProvider_" data-uid="SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.RemoveProvider*"></a>
   <h4 id="SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_RemoveProvider__1_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpBuilder_" data-uid="SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.RemoveProvider``1(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpBuilder)">RemoveProvider&lt;TProvider&gt;(IImageSharpBuilder)</h4>
@@ -987,6 +997,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IImageSharpBuilder RemoveProvider&lt;TProvider&gt;(this IImageSharpBuilder builder)
+
     where TProvider : class, IImageProvider</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1044,7 +1055,7 @@
     <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_SetCache_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpBuilder_System_Func_System_IServiceProvider_SixLabors_ImageSharp_Web_Caching_IImageCache__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.SetCache(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpBuilder%2CSystem.Func%7BSystem.IServiceProvider%2CSixLabors.ImageSharp.Web.Caching.IImageCache%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2c5961e6161011b40ea7685da54017fcd92b7b87/src/ImageSharp.Web/DependencyInjection/ImageSharpBuilderExtensions.cs/#L98">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/b72064b3b8cb8b883f8310c86b6d7e5643d80ad3/src/ImageSharp.Web/DependencyInjection/ImageSharpBuilderExtensions.cs/#L98">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_SetCache_" data-uid="SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.SetCache*"></a>
   <h4 id="SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_SetCache_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpBuilder_System_Func_System_IServiceProvider_SixLabors_ImageSharp_Web_Caching_IImageCache__" data-uid="SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.SetCache(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpBuilder,System.Func{System.IServiceProvider,SixLabors.ImageSharp.Web.Caching.IImageCache})">SetCache(IImageSharpBuilder, Func&lt;IServiceProvider, IImageCache&gt;)</h4>
@@ -1100,7 +1111,7 @@
     <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_SetCache__1_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpBuilder_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.SetCache%60%601(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2c5961e6161011b40ea7685da54017fcd92b7b87/src/ImageSharp.Web/DependencyInjection/ImageSharpBuilderExtensions.cs/#L84">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/b72064b3b8cb8b883f8310c86b6d7e5643d80ad3/src/ImageSharp.Web/DependencyInjection/ImageSharpBuilderExtensions.cs/#L84">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_SetCache_" data-uid="SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.SetCache*"></a>
   <h4 id="SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_SetCache__1_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpBuilder_" data-uid="SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.SetCache``1(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpBuilder)">SetCache&lt;TCache&gt;(IImageSharpBuilder)</h4>
@@ -1110,6 +1121,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IImageSharpBuilder SetCache&lt;TCache&gt;(this IImageSharpBuilder builder)
+
     where TCache : class, IImageCache</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1167,7 +1179,7 @@
     <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_SetCacheHash_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpBuilder_System_Func_System_IServiceProvider_SixLabors_ImageSharp_Web_Caching_ICacheHash__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.SetCacheHash(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpBuilder%2CSystem.Func%7BSystem.IServiceProvider%2CSixLabors.ImageSharp.Web.Caching.ICacheHash%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2c5961e6161011b40ea7685da54017fcd92b7b87/src/ImageSharp.Web/DependencyInjection/ImageSharpBuilderExtensions.cs/#L125">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/b72064b3b8cb8b883f8310c86b6d7e5643d80ad3/src/ImageSharp.Web/DependencyInjection/ImageSharpBuilderExtensions.cs/#L125">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_SetCacheHash_" data-uid="SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.SetCacheHash*"></a>
   <h4 id="SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_SetCacheHash_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpBuilder_System_Func_System_IServiceProvider_SixLabors_ImageSharp_Web_Caching_ICacheHash__" data-uid="SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.SetCacheHash(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpBuilder,System.Func{System.IServiceProvider,SixLabors.ImageSharp.Web.Caching.ICacheHash})">SetCacheHash(IImageSharpBuilder, Func&lt;IServiceProvider, ICacheHash&gt;)</h4>
@@ -1223,7 +1235,7 @@
     <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_SetCacheHash__1_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpBuilder_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.SetCacheHash%60%601(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2c5961e6161011b40ea7685da54017fcd92b7b87/src/ImageSharp.Web/DependencyInjection/ImageSharpBuilderExtensions.cs/#L111">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/b72064b3b8cb8b883f8310c86b6d7e5643d80ad3/src/ImageSharp.Web/DependencyInjection/ImageSharpBuilderExtensions.cs/#L111">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_SetCacheHash_" data-uid="SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.SetCacheHash*"></a>
   <h4 id="SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_SetCacheHash__1_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpBuilder_" data-uid="SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.SetCacheHash``1(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpBuilder)">SetCacheHash&lt;TCacheHash&gt;(IImageSharpBuilder)</h4>
@@ -1233,6 +1245,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IImageSharpBuilder SetCacheHash&lt;TCacheHash&gt;(this IImageSharpBuilder builder)
+
     where TCacheHash : class, ICacheHash</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1290,7 +1303,7 @@
     <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_SetMemoryAllocator_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpBuilder_System_Func_System_IServiceProvider_MemoryAllocator__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.SetMemoryAllocator(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpBuilder%2CSystem.Func%7BSystem.IServiceProvider%2CMemoryAllocator%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2c5961e6161011b40ea7685da54017fcd92b7b87/src/ImageSharp.Web/DependencyInjection/ImageSharpBuilderExtensions.cs/#L57">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/b72064b3b8cb8b883f8310c86b6d7e5643d80ad3/src/ImageSharp.Web/DependencyInjection/ImageSharpBuilderExtensions.cs/#L57">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_SetMemoryAllocator_" data-uid="SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.SetMemoryAllocator*"></a>
   <h4 id="SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_SetMemoryAllocator_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpBuilder_System_Func_System_IServiceProvider_MemoryAllocator__" data-uid="SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.SetMemoryAllocator(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpBuilder,System.Func{System.IServiceProvider,MemoryAllocator})">SetMemoryAllocator(IImageSharpBuilder, Func&lt;IServiceProvider, MemoryAllocator&gt;)</h4>
@@ -1346,7 +1359,7 @@
     <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_SetMemoryAllocator__1_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpBuilder_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.SetMemoryAllocator%60%601(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2c5961e6161011b40ea7685da54017fcd92b7b87/src/ImageSharp.Web/DependencyInjection/ImageSharpBuilderExtensions.cs/#L70">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/b72064b3b8cb8b883f8310c86b6d7e5643d80ad3/src/ImageSharp.Web/DependencyInjection/ImageSharpBuilderExtensions.cs/#L70">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_SetMemoryAllocator_" data-uid="SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.SetMemoryAllocator*"></a>
   <h4 id="SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_SetMemoryAllocator__1_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpBuilder_" data-uid="SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.SetMemoryAllocator``1(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpBuilder)">SetMemoryAllocator&lt;TMemoryAllocator&gt;(IImageSharpBuilder)</h4>
@@ -1356,6 +1369,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IImageSharpBuilder SetMemoryAllocator&lt;TMemoryAllocator&gt;(this IImageSharpBuilder builder)
+
     where TMemoryAllocator : MemoryAllocator</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1413,7 +1427,7 @@
     <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_SetRequestParser_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpBuilder_System_Func_System_IServiceProvider_SixLabors_ImageSharp_Web_Commands_IRequestParser__.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.SetRequestParser(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpBuilder%2CSystem.Func%7BSystem.IServiceProvider%2CSixLabors.ImageSharp.Web.Commands.IRequestParser%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2c5961e6161011b40ea7685da54017fcd92b7b87/src/ImageSharp.Web/DependencyInjection/ImageSharpBuilderExtensions.cs/#L44">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/b72064b3b8cb8b883f8310c86b6d7e5643d80ad3/src/ImageSharp.Web/DependencyInjection/ImageSharpBuilderExtensions.cs/#L44">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_SetRequestParser_" data-uid="SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.SetRequestParser*"></a>
   <h4 id="SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_SetRequestParser_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpBuilder_System_Func_System_IServiceProvider_SixLabors_ImageSharp_Web_Commands_IRequestParser__" data-uid="SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.SetRequestParser(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpBuilder,System.Func{System.IServiceProvider,SixLabors.ImageSharp.Web.Commands.IRequestParser})">SetRequestParser(IImageSharpBuilder, Func&lt;IServiceProvider, IRequestParser&gt;)</h4>
@@ -1469,7 +1483,7 @@
     <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_SetRequestParser__1_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpBuilder_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.SetRequestParser%60%601(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2c5961e6161011b40ea7685da54017fcd92b7b87/src/ImageSharp.Web/DependencyInjection/ImageSharpBuilderExtensions.cs/#L30">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/b72064b3b8cb8b883f8310c86b6d7e5643d80ad3/src/ImageSharp.Web/DependencyInjection/ImageSharpBuilderExtensions.cs/#L30">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_SetRequestParser_" data-uid="SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.SetRequestParser*"></a>
   <h4 id="SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions_SetRequestParser__1_SixLabors_ImageSharp_Web_DependencyInjection_IImageSharpBuilder_" data-uid="SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions.SetRequestParser``1(SixLabors.ImageSharp.Web.DependencyInjection.IImageSharpBuilder)">SetRequestParser&lt;TParser&gt;(IImageSharpBuilder)</h4>
@@ -1479,6 +1493,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IImageSharpBuilder SetRequestParser&lt;TParser&gt;(this IImageSharpBuilder builder)
+
     where TParser : class, IRequestParser</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1542,7 +1557,7 @@
                     <a href="https://github.com/SixLabors/ImageSharp.Web/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Web_DependencyInjection_ImageSharpBuilderExtensions.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/2c5961e6161011b40ea7685da54017fcd92b7b87/src/ImageSharp.Web/DependencyInjection/ImageSharpBuilderExtensions.cs/#L22" class="contribution-link">View Source</a>
+                    <a href="https://github.com/SixLabors/ImageSharp.Web/blob/b72064b3b8cb8b883f8310c86b6d7e5643d80ad3/src/ImageSharp.Web/DependencyInjection/ImageSharpBuilderExtensions.cs/#L22" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
