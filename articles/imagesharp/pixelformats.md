@@ -9,7 +9,7 @@ In the case of multi-frame images multiple bitmaps are stored in `image.Frames` 
 
 ### Choosing Pixel Formats
 
-Take a look at the various pixel formats available under @"SixLabors.ImageSharp.PixelFormats#structs" After picking the pixel format of your choice, use it as a generic argument for @"SixLabors.ImageSharp.Image`1", eg. by instantiating `Image<Bgr24>`.
+Take a look at the various pixel formats available under @"SixLabors.ImageSharp.PixelFormats#structs" After picking the pixel format of your choice, use it as a generic argument for @"SixLabors.ImageSharp.Image`1", for example, by instantiating `Image<Bgr24>`.
 
 ### Defining Custom Pixel Formats
 

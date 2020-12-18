@@ -61,7 +61,7 @@ await Task.Run(() =>
 ```
 
 ### Exporting raw pixel data from an `Image<T>`
-You can use @"SixLabors.ImageSharp.Image`1.TryGetSinglePixelSpan*" to access the whole contigous pixel buffer, eg. to copy the pixel data into an array. For large, multu-megapixel images, however, the data must be accessed and copied per row:
+You can use @"SixLabors.ImageSharp.Image`1.TryGetSinglePixelSpan*" to access the whole contigous pixel buffer, for example, to copy the pixel data into an array. For large, multi-megapixel images, however, the data must be accessed and copied per row:
 ```C#
 if(image.TryGetSinglePixelSpan(out var pixelSpan))
 {
