@@ -59,7 +59,7 @@ Allows the encoding of the output image to a new image format. The available for
 
 Allows the encoding of the output image at the given quality.
 
-- For Jpeg this ranges from 1-100.
+- For Jpeg this ranges from 1—100.
 
 ```
 {PATH_TO_YOUR_IMAGE}?quality=90
