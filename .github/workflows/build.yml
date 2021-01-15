@@ -1,12 +1,19 @@
-name: Linting
-on: [push]
+name: Build
+
+on:
+    push:
+        branches:
+            - master
+    pull_request:
+        branches:
+            - master
 
 jobs:
   prose:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@master
+      uses: actions/checkout@v2
 
     - name: Vale
       uses: errata-ai/vale-action@master
@@ -15,3 +22,25 @@ jobs:
       env:
         # Required
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
+  deploy:
+    needs: [prose]
+
+    runs-on: ubuntu-latest
+
+    if: (github.event_name == 'push')
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: docfx-action
+        uses: nikeee/docfx-action@master
+        with:
+          args: docs/docfx.json
+      
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3.6.1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
