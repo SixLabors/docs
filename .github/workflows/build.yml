@@ -37,7 +37,7 @@ jobs:
       - name: docfx-action
         uses: nikeee/docfx-action@master
         with:
-          args: docs/docfx.json
+          args: docfx.json
       
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3.6.1
