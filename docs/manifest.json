@@ -14,6 +14,450 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Fonts/SixLabors.Fonts.ColorFontSupport.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fonts/SixLabors.Fonts.ColorFontSupport.html",
+          "hash": "69N1Bpd73fagN5ulzAlSXQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fonts/SixLabors.Fonts.Exceptions.FontException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fonts/SixLabors.Fonts.Exceptions.FontException.html",
+          "hash": "YOucQMF6BxOHMP/fxEyFKQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fonts/SixLabors.Fonts.Exceptions.FontFamilyNotFoundException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fonts/SixLabors.Fonts.Exceptions.FontFamilyNotFoundException.html",
+          "hash": "Qs4Fdw6KEHM8rMnDbOXIvQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fonts/SixLabors.Fonts.Exceptions.GlyphMissingException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fonts/SixLabors.Fonts.Exceptions.GlyphMissingException.html",
+          "hash": "h7UJLrWZ9rPegUeHvivndQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fonts/SixLabors.Fonts.Exceptions.InvalidFontFileException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fonts/SixLabors.Fonts.Exceptions.InvalidFontFileException.html",
+          "hash": "h7hOR0R1fs7ty0bH1e1heQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fonts/SixLabors.Fonts.Exceptions.InvalidFontTableException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fonts/SixLabors.Fonts.Exceptions.InvalidFontTableException.html",
+          "hash": "AEkDDEBi1gNjPfEa+h89MQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fonts/SixLabors.Fonts.Exceptions.MissingFontTableException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fonts/SixLabors.Fonts.Exceptions.MissingFontTableException.html",
+          "hash": "gzZVfPKrpbS9A+uzqXNCjg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fonts/SixLabors.Fonts.Exceptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fonts/SixLabors.Fonts.Exceptions.html",
+          "hash": "nT0H4/zlu7h8+avCtlnwSA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fonts/SixLabors.Fonts.Font.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fonts/SixLabors.Fonts.Font.html",
+          "hash": "dCsT7CmQIJMrSmT7GRYicA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fonts/SixLabors.Fonts.FontCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fonts/SixLabors.Fonts.FontCollection.html",
+          "hash": "YEnLBAbNg9SH5jcYKwIb6g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fonts/SixLabors.Fonts.FontDescription.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fonts/SixLabors.Fonts.FontDescription.html",
+          "hash": "/rkmMOJEsqIb+WimgAU9yQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fonts/SixLabors.Fonts.FontFamily.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fonts/SixLabors.Fonts.FontFamily.html",
+          "hash": "IhzjCPyQhJpAH5Vwh+PNNw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fonts/SixLabors.Fonts.FontFamilyCollectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fonts/SixLabors.Fonts.FontFamilyCollectionExtensions.html",
+          "hash": "plO4TFVQszROoLH3Q849RQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fonts/SixLabors.Fonts.FontInstance.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fonts/SixLabors.Fonts.FontInstance.html",
+          "hash": "6PuUge8hqk3qZInhQBU5HQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fonts/SixLabors.Fonts.FontRectangle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fonts/SixLabors.Fonts.FontRectangle.html",
+          "hash": "hsXzk3NiWuZVcDgaC8l67g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fonts/SixLabors.Fonts.FontStyle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fonts/SixLabors.Fonts.FontStyle.html",
+          "hash": "qzHBp7o98lR3GGGargjtdQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fonts/SixLabors.Fonts.Glyph.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fonts/SixLabors.Fonts.Glyph.html",
+          "hash": "/qGmMOENTLlrzHE+IPXKEA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fonts/SixLabors.Fonts.GlyphColor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fonts/SixLabors.Fonts.GlyphColor.html",
+          "hash": "ODM9EjiyREUTuAu/FisZNQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fonts/SixLabors.Fonts.GlyphInstance.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fonts/SixLabors.Fonts.GlyphInstance.html",
+          "hash": "U8yifweQPudZxJW6NKYlFg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fonts/SixLabors.Fonts.GlyphMetric.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fonts/SixLabors.Fonts.GlyphMetric.html",
+          "hash": "KKaBppSbTsTc3Y48Ayp2nQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fonts/SixLabors.Fonts.GlyphRendererParameters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fonts/SixLabors.Fonts.GlyphRendererParameters.html",
+          "hash": "M6BveaDV0+vWtAdu875hDg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fonts/SixLabors.Fonts.GlyphType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fonts/SixLabors.Fonts.GlyphType.html",
+          "hash": "XxDJAk8u+wDbHwJYcdHx1Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fonts/SixLabors.Fonts.HorizontalAlignment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fonts/SixLabors.Fonts.HorizontalAlignment.html",
+          "hash": "gvx8mWerDbBoCJseEm1Xew=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fonts/SixLabors.Fonts.IColorGlyphRenderer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fonts/SixLabors.Fonts.IColorGlyphRenderer.html",
+          "hash": "hBV8dm4ARzi9bwaRyLFx+w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fonts/SixLabors.Fonts.IFontCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fonts/SixLabors.Fonts.IFontCollection.html",
+          "hash": "qci8ab7Xpny318F+GdkRyA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fonts/SixLabors.Fonts.IFontInstance.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fonts/SixLabors.Fonts.IFontInstance.html",
+          "hash": "ZNuYLWmP1nvNIjInW2Aqxg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fonts/SixLabors.Fonts.IGlyphRenderer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fonts/SixLabors.Fonts.IGlyphRenderer.html",
+          "hash": "8JkGKH5PBFHx4GLZ568YSA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fonts/SixLabors.Fonts.IGlyphRendererExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fonts/SixLabors.Fonts.IGlyphRendererExtensions.html",
+          "hash": "7EG0VEfmkR5GE2SvTpWfwg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fonts/SixLabors.Fonts.IReadOnlyFontCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fonts/SixLabors.Fonts.IReadOnlyFontCollection.html",
+          "hash": "Sec08HGu+dtwZSafmCNzcQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fonts/SixLabors.Fonts.IReadonlyFontCollectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fonts/SixLabors.Fonts.IReadonlyFontCollectionExtensions.html",
+          "hash": "C1e3EuLsEJcWohv6L5L4XQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fonts/SixLabors.Fonts.RendererOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fonts/SixLabors.Fonts.RendererOptions.html",
+          "hash": "e2fl4HBl2hRBhmjDKqwkUA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fonts/SixLabors.Fonts.SystemFonts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fonts/SixLabors.Fonts.SystemFonts.html",
+          "hash": "P+2bUavrH6i/92hxsO/30A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fonts/SixLabors.Fonts.TextMeasurer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fonts/SixLabors.Fonts.TextMeasurer.html",
+          "hash": "l+10XhW0jRzvKqk94K5MrA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fonts/SixLabors.Fonts.TextRenderer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fonts/SixLabors.Fonts.TextRenderer.html",
+          "hash": "Wmg7pMUY4CHZhqcO9ecHsg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fonts/SixLabors.Fonts.VerticalAlignment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fonts/SixLabors.Fonts.VerticalAlignment.html",
+          "hash": "oj8SkkRFDWxLqHTlB3yNBA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fonts/SixLabors.Fonts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fonts/SixLabors.Fonts.html",
+          "hash": "KohkdgbOJBhLa7/+yjEKLw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/Fonts/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fonts/toc.html",
+          "hash": "cObI5EWVKIYT1DXwLcYedw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ImageSharp.Drawing/SixLabors.ImageSharp.Drawing.ClipperExtensions.yml",
       "output": {
         ".html": {
@@ -6832,8 +7276,8 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 538,
-          "skipped_file_count": 538
+          "total_file_count": 574,
+          "skipped_file_count": 574
         },
         "TocDocumentProcessor": {
           "can_incremental": false,

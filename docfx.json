@@ -34,7 +34,7 @@
       "src": [
         {
           "files": [
-            "ext/Fonts/src/**.csproj"
+            "ext/Fonts/src/SixLabors.Fonts/**.csproj"
           ]
         }
       ],
