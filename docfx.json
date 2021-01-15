@@ -34,7 +34,7 @@
       "src": [
         {
           "files": [
-            "ext/Fonts/src/**.csproj"
+            "ext/Fonts/src/SixLabors.Fonts/**.csproj"
           ]
         }
       ],
@@ -98,7 +98,8 @@
           "articles/**.md",
           "articles/**/toc.yml",
           "toc.yml",
-          "*.md"
+          "*.md",
+          "CNAME"
         ],
         "exclude": [
           "obj/**",
@@ -154,6 +155,6 @@
     "noLangKeyword": false,
     "keepFileLink": false,
     "cleanupCacheHistory": false,
-    "disableGitFeatures": false,
+    "disableGitFeatures": false
   }
 }

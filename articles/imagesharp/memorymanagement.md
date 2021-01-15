@@ -1,6 +1,6 @@
 # Memory Management
 
->ImageSharp seems to retain ~300-400 MB of managed memory even after disposing all my images. Is this a memory leak?
+>ImageSharp seems to retain ~300—400 MB of managed memory even after disposing all my images. Is this a memory leak?
 
 By default, ImageSharp uses [ArrayPool's](http://adamsitnik.com/Array-Pool/) for performance reasons, however this behavior is fully configurable. All large buffers are managed by the @"SixLabors.ImageSharp.Memory.MemoryAllocator" implementation associated to @"SixLabors.ImageSharp.Configuration"'s @"SixLabors.ImageSharp.Configuration.MemoryAllocator" property. We are using @"SixLabors.ImageSharp.Memory.ArrayPoolMemoryAllocator" by default, in order to utilize the benefits of array pooling:
 

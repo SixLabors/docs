@@ -1,6 +1,4 @@
-/* @import url("https://use.fontawesome.com/releases/v5.0.8/css/regular.css");
-@import url("https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css"); */
-
+@import url("https://use.fontawesome.com/releases/v5.15.1/css/all.css");
 @import url("vs2015.css");
 /* #############
  * ### RESET ###
@@ -351,6 +349,19 @@ header .navbar {
   padding: 0 10px 0 20px;
 }
 
+.toc-filter>.filter-icon {
+  top: 8px;
+}
+
+.filter-icon::before {
+  content: "\f0b0"!important;
+  font-size: .75rem;
+}
+
+#toc_filter_clear::before {
+  font-size: .75rem;
+}
+
 .toc-filter>input:focus {
   outline: #3b99fc solid 1px;
 }
@@ -489,8 +500,8 @@ pre code {
 }
 
 /* Fix for bad word break in tables.*/
-.table tr td:first-child,
-.table tr td:first-child * {
+
+.table tr td:first-child, .table tr td:first-child * {
   word-wrap: unset;
   word-break: keep-all;
   white-space: nowrap;
@@ -551,7 +562,7 @@ pre code {
  * ###################
  */
 
-.expand-stub, .contribution a {
+.expand-stub, .contribution a, .filter-icon {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   display: inline-block;
@@ -561,9 +572,22 @@ pre code {
   line-height: 1;
 }
 
-.expand-stub::before, .contribution a::before {
+.expand-stub::before, .contribution a::before, .filter-icon::before {
   margin-right: 4px;
-  font-family: "Font Awesome\ 5 Free", "Font Awesome\ 5 Brands";
+}
+
+/*fab*/
+
+.contribution a::before {
+  font-family: "Font Awesome 5 Brands", "Font Awesome 5 Free";
+  font-weight: 400;
+}
+
+/*fa, fas*/
+
+.expand-stub::before, .filter-icon::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
 }
 
 /* ###################
