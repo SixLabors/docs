@@ -10,12 +10,11 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class RegularPolygon
    ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
-    <link rel="shortcut icon" href="../../favicon.png">
+    <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../../styles/docfx.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
     <link rel="stylesheet" href="../../styles/main.css">
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
@@ -62,9 +61,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
-          <div class="sr-items"></div>
-          <ul id="pagination"></ul>
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -179,7 +180,7 @@
   <h6><strong>Assembly</strong>: SixLabors.ImageSharp.Drawing.dll</h6>
   <h5 id="SixLabors_ImageSharp_Drawing_RegularPolygon_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class RegularPolygon : Polygon, IPath, ISimplePath</code></pre>
+    <pre><code class="lang-csharp hljs">public class RegularPolygon : Polygon, IPath, ISimplePath, IInternalPathOwner</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -188,7 +189,7 @@
     <a href="https://github.com/SixLabors/ImageSharp.Drawing/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Drawing_RegularPolygon__ctor_PointF_System_Int32_System_Single_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Drawing.RegularPolygon.%23ctor(PointF%2CSystem.Int32%2CSystem.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/acf438bb7bd420a6dc349ebd1d076a1447097a6a/src/ImageSharp.Drawing/Shapes/RegularPolygon.cs/#L32">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/3d737b5d957c5f1e52c03a3e513f7769873db013/src/ImageSharp.Drawing/Shapes/RegularPolygon.cs/#L32">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Drawing_RegularPolygon__ctor_" data-uid="SixLabors.ImageSharp.Drawing.RegularPolygon.#ctor*"></a>
   <h4 id="SixLabors_ImageSharp_Drawing_RegularPolygon__ctor_PointF_System_Int32_System_Single_" data-uid="SixLabors.ImageSharp.Drawing.RegularPolygon.#ctor(PointF,System.Int32,System.Single)">RegularPolygon(PointF, Int32, Single)</h4>
@@ -234,7 +235,7 @@
     <a href="https://github.com/SixLabors/ImageSharp.Drawing/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Drawing_RegularPolygon__ctor_PointF_System_Int32_System_Single_System_Single_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Drawing.RegularPolygon.%23ctor(PointF%2CSystem.Int32%2CSystem.Single%2CSystem.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/acf438bb7bd420a6dc349ebd1d076a1447097a6a/src/ImageSharp.Drawing/Shapes/RegularPolygon.cs/#L21">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/3d737b5d957c5f1e52c03a3e513f7769873db013/src/ImageSharp.Drawing/Shapes/RegularPolygon.cs/#L21">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Drawing_RegularPolygon__ctor_" data-uid="SixLabors.ImageSharp.Drawing.RegularPolygon.#ctor*"></a>
   <h4 id="SixLabors_ImageSharp_Drawing_RegularPolygon__ctor_PointF_System_Int32_System_Single_System_Single_" data-uid="SixLabors.ImageSharp.Drawing.RegularPolygon.#ctor(PointF,System.Int32,System.Single,System.Single)">RegularPolygon(PointF, Int32, Single, Single)</h4>
@@ -286,7 +287,7 @@
     <a href="https://github.com/SixLabors/ImageSharp.Drawing/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Drawing_RegularPolygon__ctor_System_Single_System_Single_System_Int32_System_Single_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Drawing.RegularPolygon.%23ctor(System.Single%2CSystem.Single%2CSystem.Int32%2CSystem.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/acf438bb7bd420a6dc349ebd1d076a1447097a6a/src/ImageSharp.Drawing/Shapes/RegularPolygon.cs/#L57">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/3d737b5d957c5f1e52c03a3e513f7769873db013/src/ImageSharp.Drawing/Shapes/RegularPolygon.cs/#L57">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Drawing_RegularPolygon__ctor_" data-uid="SixLabors.ImageSharp.Drawing.RegularPolygon.#ctor*"></a>
   <h4 id="SixLabors_ImageSharp_Drawing_RegularPolygon__ctor_System_Single_System_Single_System_Int32_System_Single_" data-uid="SixLabors.ImageSharp.Drawing.RegularPolygon.#ctor(System.Single,System.Single,System.Int32,System.Single)">RegularPolygon(Single, Single, Int32, Single)</h4>
@@ -338,7 +339,7 @@
     <a href="https://github.com/SixLabors/ImageSharp.Drawing/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Drawing_RegularPolygon__ctor_System_Single_System_Single_System_Int32_System_Single_System_Single_.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Drawing.RegularPolygon.%23ctor(System.Single%2CSystem.Single%2CSystem.Int32%2CSystem.Single%2CSystem.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/acf438bb7bd420a6dc349ebd1d076a1447097a6a/src/ImageSharp.Drawing/Shapes/RegularPolygon.cs/#L45">View Source</a>
+    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/3d737b5d957c5f1e52c03a3e513f7769873db013/src/ImageSharp.Drawing/Shapes/RegularPolygon.cs/#L45">View Source</a>
   </span>
   <a id="SixLabors_ImageSharp_Drawing_RegularPolygon__ctor_" data-uid="SixLabors.ImageSharp.Drawing.RegularPolygon.#ctor*"></a>
   <h4 id="SixLabors_ImageSharp_Drawing_RegularPolygon__ctor_System_Single_System_Single_System_Int32_System_Single_System_Single_" data-uid="SixLabors.ImageSharp.Drawing.RegularPolygon.#ctor(System.Single,System.Single,System.Int32,System.Single,System.Single)">RegularPolygon(Single, Single, Int32, Single, Single)</h4>
@@ -458,12 +459,13 @@
                     <a href="https://github.com/SixLabors/ImageSharp.Drawing/new/master/apiSpec/new?filename=SixLabors_ImageSharp_Drawing_RegularPolygon.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Drawing.RegularPolygon%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/acf438bb7bd420a6dc349ebd1d076a1447097a6a/src/ImageSharp.Drawing/Shapes/RegularPolygon.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/3d737b5d957c5f1e52c03a3e513f7769873db013/src/ImageSharp.Drawing/Shapes/RegularPolygon.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>
@@ -478,7 +480,7 @@
               <a href="#top">Back to top</a>
             </span>
             
-            <span>Copyright © Six Labors<br>Generated by <strong>DocFX</strong></span>
+            <span>Generated by <strong>DocFX</strong></span>
           </div>
         </div>
       </footer>

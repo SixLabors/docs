@@ -1,5 +1,4 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -9,12 +8,11 @@
     <title>Pixel Formats </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Pixel Formats ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
-    <link rel="shortcut icon" href="../../favicon.png">
+    <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../../styles/docfx.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
     <link rel="stylesheet" href="../../styles/main.css">
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
@@ -22,8 +20,8 @@
     <meta property="docfx:rel" content="../../">
     
   </head>
-  <body data-spy="scroll" data-target="#affix">
-  <div id="wrapper">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
       <header>
         
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
@@ -61,9 +59,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
-          <div class="sr-items"></div>
-          <ul id="pagination"></ul>
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -84,7 +84,7 @@
 A pixel is basically a small value object (struct), describing the color at a given point according to a pixel model we call Pixel Format. <code>Image&lt;TPixel&gt;</code> represents a pixel graphic bitmap stored as a <strong>generic, discontiguous memory block</strong> of pixels, of total size <code>image.Width * image.Height</code>. Note that while the image memory should be considered discontiguous by default, if the image is small enough (less than ~4GB in memory, on 64-bit), it will be stored in a <strong>single, continuous memory block</strong> for improved performance. The reason why there is additional support for discontiguous buffers is to allow images at super high resolution, which couldn&#39;t otherwise be loaded due to limitations to the maximum size of objects in the .NET runtime, even on 64-bit systems.</p>
 <p>In the case of multi-frame images multiple bitmaps are stored in <code>image.Frames</code> as <code>ImageFrame&lt;TPixel&gt;</code> instances.</p>
 <h3 id="choosing-pixel-formats">Choosing Pixel Formats</h3>
-<p>Take a look at the various pixel formats available under <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.PixelFormats.html#structs">SixLabors.ImageSharp.PixelFormats</a> After picking the pixel format of your choice, use it as a generic argument for <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a>, eg. by instantiating <code>Image&lt;Bgr24&gt;</code>.</p>
+<p>Take a look at the various pixel formats available under <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.PixelFormats.html#structs">SixLabors.ImageSharp.PixelFormats</a> After picking the pixel format of your choice, use it as a generic argument for <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a>, for example, by instantiating <code>Image&lt;Bgr24&gt;</code>.</p>
 <h3 id="defining-custom-pixel-formats">Defining Custom Pixel Formats</h3>
 <p>Creating your own pixel format is a case of defining a struct implementing <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.PixelFormats.IPixel-1.html">IPixel&lt;TSelf&gt;</a> and using it as a generic argument for <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a>.
 Baseline batched pixel-conversion primitives are provided via <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.PixelFormats.PixelOperations-1.html">PixelOperations&lt;TPixel&gt;</a> but it is possible to override those baseline versions with your own optimized implementation.</p>
@@ -92,7 +92,6 @@ Baseline batched pixel-conversion primitives are provided via <a class="xref" hr
 <p>No. Our architecture does not allow sub-byte pixel formats at the moment. This feature is incredibly complex to implement, and you are going to pay the price of the low memory footprint in processing speed / CPU load.</p>
 <h3 id="can-i-decode-into-pixel-formats-like-cmykhttpsenwikipediaorgwikicmykcolormodel-or-cielabhttpsenwikipediaorgwikilabcolorspace">Can I decode into pixel formats like <a href="https://en.wikipedia.org/wiki/CMYK_color_model">CMYK</a> or <a href="https://en.wikipedia.org/wiki/Lab_color_space">CIELAB</a>?</h3>
 <p>Unfortunately it&#39;s not possible and is unlikely to be in the future. Many image processing operations expect the pixels to be laid out in-memory in RGBA format. To manipulate images in exotic colorspaces we would have to translate each pixel to-and-from the colorspace multiple times, which would result in unusable performance and a loss of color information.</p>
-
 </article>
           </div>
           
@@ -106,7 +105,8 @@ Baseline batched pixel-conversion primitives are provided via <a class="xref" hr
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>
@@ -121,7 +121,7 @@ Baseline batched pixel-conversion primitives are provided via <a class="xref" hr
               <a href="#top">Back to top</a>
             </span>
             
-            <span>Copyright © Six Labors<br>Generated by <strong>DocFX</strong></span>
+            <span>Generated by <strong>DocFX</strong></span>
           </div>
         </div>
       </footer>
