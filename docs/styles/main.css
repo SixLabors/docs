@@ -415,6 +415,10 @@ toc .nav>li>a {
   transform: rotate(0deg);
 }
 
+.level2 li.in > .expand-stub::before{
+  left: 0!important;
+}
+
 .toc .nav>li.active>.expand-stub::before {
   color: #fff;
 }
