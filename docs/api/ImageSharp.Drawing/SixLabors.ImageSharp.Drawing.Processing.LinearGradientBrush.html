@@ -200,12 +200,12 @@ Supported right now:</p>
   </span>
   <a id="SixLabors_ImageSharp_Drawing_Processing_LinearGradientBrush_CreateApplicator_" data-uid="SixLabors.ImageSharp.Drawing.Processing.LinearGradientBrush.CreateApplicator*"></a>
   <h4 id="SixLabors_ImageSharp_Drawing_Processing_LinearGradientBrush_CreateApplicator__1_Configuration_GraphicsOptions_ImageFrame___0__RectangleF_" data-uid="SixLabors.ImageSharp.Drawing.Processing.LinearGradientBrush.CreateApplicator``1(Configuration,GraphicsOptions,ImageFrame{``0},RectangleF)">CreateApplicator&lt;TPixel&gt;(Configuration, GraphicsOptions, ImageFrame&lt;TPixel&gt;, RectangleF)</h4>
-  <div class="markdown level1 summary"><p>Creates the applicator for this brush.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override BrushApplicator&lt;TPixel&gt; CreateApplicator&lt;TPixel&gt;(Configuration configuration, GraphicsOptions options, ImageFrame&lt;TPixel&gt; source, RectangleF region)
+
     where TPixel : struct, IPixel&lt;TPixel&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -221,26 +221,22 @@ Supported right now:</p>
       <tr>
         <td><span class="xref">Configuration</span></td>
         <td><span class="parametername">configuration</span></td>
-        <td><p>The configuration instance to use when performing operations.</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><span class="xref">GraphicsOptions</span></td>
         <td><span class="parametername">options</span></td>
-        <td><p>The graphic options.</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><span class="xref">ImageFrame</span>&lt;TPixel&gt;</td>
         <td><span class="parametername">source</span></td>
-        <td><p>The source image.</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><span class="xref">RectangleF</span></td>
         <td><span class="parametername">region</span></td>
-        <td><p>The region the brush will be applied to.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -255,8 +251,7 @@ Supported right now:</p>
     <tbody>
       <tr>
         <td><a class="xref" href="SixLabors.ImageSharp.Drawing.Processing.BrushApplicator-1.html">BrushApplicator</a>&lt;TPixel&gt;</td>
-        <td><p>The <a class="xref" href="SixLabors.ImageSharp.Drawing.Processing.BrushApplicator-1.html">BrushApplicator&lt;TPixel&gt;</a> for this brush.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -271,17 +266,12 @@ Supported right now:</p>
     <tbody>
       <tr>
         <td><span class="parametername">TPixel</span></td>
-        <td><p>The pixel type.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">SixLabors.ImageSharp.Drawing.Processing.GradientBrush.CreateApplicator&lt;TPixel&gt;(Configuration, GraphicsOptions, ImageFrame&lt;TPixel&gt;, RectangleF)</span></div>
-  <h5 id="SixLabors_ImageSharp_Drawing_Processing_LinearGradientBrush_CreateApplicator__1_Configuration_GraphicsOptions_ImageFrame___0__RectangleF__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>The <code data-dev-comment-type="paramref" class="paramref">region</code> when being applied to things like shapes would usually be the
-bounding box of the shape not necessarily the bounds of the whole image.</p>
-</div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="SixLabors.ImageSharp.Drawing.Processing.IBrush.html">IBrush</a>
