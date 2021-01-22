@@ -652,7 +652,7 @@ pre code {
   color: inherit;
   margin-bottom: 1rem;
   display: block;
-  border: 4px solid #FFF;
+  border: 4px solid #e30183;
   background-color: #FFF;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
 }
@@ -673,7 +673,7 @@ pre code {
 .project:hover, .project:focus {
   text-decoration: none;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.16);
-  border-color: #e30183;
+  border-color: #40064e;
 }
 
 .icon {
