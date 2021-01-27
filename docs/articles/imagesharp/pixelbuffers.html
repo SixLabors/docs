@@ -104,7 +104,22 @@ using (Image&lt;Rgba32&gt; image = new Image&lt;Rgba32&gt;(400, 400))
         }
     }
 }
-</code></pre><h3 id="spant-limitations"><code>Span&lt;T&gt;</code> limitations</h3>
+</code></pre><h3 id="parallel-pixel-format-agnostic-image-manipulation">Parallel, pixel-format agnostic image manipulation</h3>
+<p>There is a way to process image data that is even faster than using the approach mentioned before, and that also has the advantage of working on images of any underlying pixel-format, in a completely transparent way: using the @&quot;SixLabors.ImageSharp.Processing.PixelRowDelegateExtensions.ProcessPixelRowsAsVector4&quot; APIs.</p>
+<p>This is how you can use this extension to manipulate an image:</p>
+<pre><code class="lang-C#">// ...
+
+image.Mutate(c =&gt; c.ProcessPixelRowsAsVector4(row =&gt;
+{
+    for (int x = 0; x &lt; row.Length; x++)
+    {
+        // We can apply any custom processing logic here
+        row[x] = Vector4.SquareRoot(row[x]);
+    }
+}));
+</code></pre><p>This API receives a <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Processing.PixelRowOperation.html">PixelRowOperation</a> instance as input, and uses it to modify the pixel data of the target image. It does so by automatically executing the input operation in parallel, on multiple pixel rows at the same time, to fully leverage the power of modern multicore CPUs. The <code>ProcessPixelRowsAsVector4</code> extension also takes care of converting the pixel data to/from the <code>Vector4</code> format, which means the same operation can be used to easily process images of any existing pixel-format, without having to implement the processing logic again for each of them.</p>
+<p>This extension offers the fastest, easiest and most flexible way to implement custom image processors in ImageSharp.</p>
+<h3 id="spant-limitations"><code>Span&lt;T&gt;</code> limitations</h3>
 <p>Please be aware that <strong><code>Span&lt;T&gt;</code> has a very specific limitation</strong>: it is a stack-only type! Read the <em>Is There Anything Span Can’t Do?!</em> section in <a href="https://www.codemag.com/Article/1807051/Introducing-.NET-Core-2.1-Flagship-Types-Span-T-and-Memory-T">this article</a> for more details.
 A short summary of the limitations:</p>
 <ul>
