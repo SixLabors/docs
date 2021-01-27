@@ -105,7 +105,7 @@ using (Image&lt;Rgba32&gt; image = new Image&lt;Rgba32&gt;(400, 400))
     }
 }
 </code></pre><h3 id="parallel-pixel-format-agnostic-image-manipulation">Parallel, pixel-format agnostic image manipulation</h3>
-<p>There is a way to process image data that is even faster than using the approach mentioned before, and that also has the advantage of working on images of any underlying pixel-format, in a completely transparent way: using the @&quot;SixLabors.ImageSharp.Processing.PixelRowDelegateExtensions.ProcessPixelRowsAsVector4&quot; APIs.</p>
+<p>There is a way to process image data that is even faster than using the approach mentioned before, and that also has the advantage of working on images of any underlying pixel-format, in a completely transparent way: using the <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Processing.PixelRowDelegateExtensions.html#SixLabors_ImageSharp_Processing_PixelRowDelegateExtensions_ProcessPixelRowsAsVector4_SixLabors_ImageSharp_Processing_IImageProcessingContext_SixLabors_ImageSharp_Processing_PixelRowOperation_">ProcessPixelRowsAsVector4(IImageProcessingContext, PixelRowOperation)</a> APIs.</p>
 <p>This is how you can use this extension to manipulate an image:</p>
 <pre><code class="lang-C#">// ...
 
