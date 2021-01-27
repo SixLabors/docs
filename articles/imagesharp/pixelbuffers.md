@@ -32,8 +32,29 @@ using (Image<Rgba32> image = new Image<Rgba32>(400, 400))
 		}
 	}
 }
-
 ```
+
+### Parallel, pixel-format agnostic image manipulation
+There is a way to process image data that is even faster than using the approach mentioned before, and that also has the advantage of working on images of any underlying pixel-format, in a completely transparent way: using the @"SixLabors.ImageSharp.Processing.PixelRowDelegateExtensions.ProcessPixelRowsAsVector4" APIs.
+
+This is how you can use this extension to manipulate an image:
+
+```C#
+// ...
+
+image.Mutate(c => c.ProcessPixelRowsAsVector4(row =>
+{
+    for (int x = 0; x < row.Length; x++)
+    {
+        // We can apply any custom processing logic here
+        row[x] = Vector4.SquareRoot(row[x]);
+    }
+}));
+```
+
+This API receives a @"SixLabors.ImageSharp.Processing.PixelRowOperation" instance as input, and uses it to modify the pixel data of the target image. It does so by automatically executing the input operation in parallel, on multiple pixel rows at the same time, to fully leverage the power of modern multicore CPUs. The `ProcessPixelRowsAsVector4` extension also takes care of converting the pixel data to/from the `Vector4` format, which means the same operation can be used to easily process images of any existing pixel-format, without having to implement the processing logic again for each of them.
+
+This extension offers the fastest, easiest and most flexible way to implement custom image processors in ImageSharp.
 
 ### `Span<T>` limitations
 Please be aware that **`Span<T>` has a very specific limitation**: it is a stack-only type! Read the *Is There Anything Span Can’t Do?!* section in [this article](https://www.codemag.com/Article/1807051/Introducing-.NET-Core-2.1-Flagship-Types-Span-T-and-Memory-T) for more details.
