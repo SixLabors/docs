@@ -36,13 +36,19 @@ jobs:
         with:
           submodules: recursive
 
+      # Disable environmental variable for this step to disable deterministic builds
       - name: docfx-action
         uses: nikeee/docfx-action@master
         with:
           args: docfx.json
+        env:
+            GITHUB_ACTIONS : false
       
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3.6.1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs
+        env:
+            GITHUB_ACTIONS : true
+          
