@@ -1,6 +1,6 @@
 # Image Providers
 
-ImageSharp.Web determines the the location of a source image to process via the registration and application of image providers. 
+ImageSharp.Web determines the location of a source image to process via the registration and application of image providers. 
   
 >[!NOTE]
 >It is possible to configure your own image provider by implementing and registering your own version of the @"SixLabors.ImageSharp.Web.Providers.IImageProvider" interface.
