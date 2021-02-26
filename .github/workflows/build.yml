@@ -36,6 +36,20 @@ jobs:
         with:
           submodules: recursive
 
+      # See https://github.com/actions/checkout/issues/165#issuecomment-657673315
+      - name: Create LFS file list
+        run: git lfs ls-files -l | cut -d' ' -f1 | sort > .lfs-assets-id
+
+      - name: Restore LFS cache
+        uses: actions/cache@v2
+        id: lfs-cache
+        with:
+          path: .git/lfs
+          key: ${{ runner.os }}-lfs-${{ hashFiles('.lfs-assets-id') }}-v1
+
+      - name: Git LFS Pull
+        run: git lfs pull
+
       # Disable environmental variable for this step to disable deterministic builds
       - name: docfx-action
         uses: nikeee/docfx-action@master
