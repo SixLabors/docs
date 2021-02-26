@@ -26,7 +26,7 @@ jobs:
   deploy:
     needs: [prose]
 
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     if: (github.event_name == 'push')
 
@@ -55,14 +55,10 @@ jobs:
         uses: nikeee/docfx-action@master
         with:
           args: docfx.json
-        env:
-            GITHUB_ACTIONS : false
       
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3.6.1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs
-        env:
-            GITHUB_ACTIONS : true
           
