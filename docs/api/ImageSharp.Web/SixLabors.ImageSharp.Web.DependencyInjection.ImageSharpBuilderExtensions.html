@@ -138,6 +138,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IImageSharpBuilder AddConverter&lt;TConverter&gt;(this IImageSharpBuilder builder)
+
     where TConverter : class, ICommandConverter</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -205,6 +206,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IImageSharpBuilder AddConverter&lt;TConverter&gt;(this IImageSharpBuilder builder, Func&lt;IServiceProvider, TConverter&gt; implementationFactory)
+
     where TConverter : class, ICommandConverter</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -278,6 +280,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IImageSharpBuilder AddProcessor&lt;TProcessor&gt;(this IImageSharpBuilder builder)
+
     where TProcessor : class, IImageWebProcessor</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -345,6 +348,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IImageSharpBuilder AddProcessor&lt;TProcessor&gt;(this IImageSharpBuilder builder, Func&lt;IServiceProvider, TProcessor&gt; implementationFactory)
+
     where TProcessor : class, IImageWebProcessor</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -418,6 +422,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IImageSharpBuilder AddProvider&lt;TProvider&gt;(this IImageSharpBuilder builder)
+
     where TProvider : class, IImageProvider</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -485,6 +490,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IImageSharpBuilder AddProvider&lt;TProvider&gt;(this IImageSharpBuilder builder, Func&lt;IServiceProvider, TProvider&gt; implementationFactory)
+
     where TProvider : class, IImageProvider</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -708,6 +714,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IImageSharpBuilder Configure&lt;TOptions&gt;(this IImageSharpBuilder builder, IConfiguration configuration)
+
     where TOptions : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -781,6 +788,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IImageSharpBuilder Configure&lt;TOptions&gt;(this IImageSharpBuilder builder, Action&lt;TOptions&gt; configureOptions)
+
     where TOptions : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -854,6 +862,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IImageSharpBuilder RemoveConverter&lt;TConverter&gt;(this IImageSharpBuilder builder)
+
     where TConverter : class, ICommandConverter</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -921,6 +930,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IImageSharpBuilder RemoveProcessor&lt;TProcessor&gt;(this IImageSharpBuilder builder)
+
     where TProcessor : class, IImageWebProcessor</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -988,6 +998,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IImageSharpBuilder RemoveProvider&lt;TProvider&gt;(this IImageSharpBuilder builder)
+
     where TProvider : class, IImageProvider</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1111,6 +1122,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IImageSharpBuilder SetCache&lt;TCache&gt;(this IImageSharpBuilder builder)
+
     where TCache : class, IImageCache</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1234,6 +1246,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IImageSharpBuilder SetCacheHash&lt;TCacheHash&gt;(this IImageSharpBuilder builder)
+
     where TCacheHash : class, ICacheHash</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1357,6 +1370,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IImageSharpBuilder SetMemoryAllocator&lt;TMemoryAllocator&gt;(this IImageSharpBuilder builder)
+
     where TMemoryAllocator : MemoryAllocator</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1480,6 +1494,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IImageSharpBuilder SetRequestParser&lt;TParser&gt;(this IImageSharpBuilder builder)
+
     where TParser : class, IRequestParser</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>

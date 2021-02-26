@@ -98,8 +98,7 @@
           "articles/**.md",
           "articles/**/toc.yml",
           "toc.yml",
-          "*.md",
-          "CNAME"
+          "*.md"
         ],
         "exclude": [
           "obj/**",
@@ -112,7 +111,8 @@
       {
         "files": [
           "images/**",
-          "favicon.ico"
+          "favicon.ico",
+          "CNAME"
         ],
         "exclude": [
           "obj/**",

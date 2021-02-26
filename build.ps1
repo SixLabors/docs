@@ -1,4 +1,4 @@
-# ensure all submodules are currently checked out to the latest tag
+# Ensure all submodules are currently checked out to the latest tag.
 git submodule update --init --recursive
 Get-ChildItem ./ext -Directory | ForEach-Object {
     $path = $_.FullName
@@ -10,5 +10,9 @@ Get-ChildItem ./ext -Directory | ForEach-Object {
     Write-Host "$path => $lastTag"
     git -C "$path" reset --hard "$lastTag" --
 }
+
+# Ensure deterministic builds do not affect submodule build
+# TODO: Remove this once all projects are updated to latest build props.
+$env:CI = $false
 
 docfx
