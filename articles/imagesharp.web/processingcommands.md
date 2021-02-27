@@ -1,11 +1,11 @@
 # Processing Commands
 
-The ImageSharp.Web processing API is imperative. This means that the order in which you supply the individual processing operations is the order in which they are are compiled and applied. This allows the API to be very flexible, allowing you to combine processes in any order.  
+The ImageSharp.Web processing API is imperative. This means that the order in which you supply the individual processing operations is the order in which they are compiled and applied. This allows the API to be very flexible, allowing you to combine processes in any order.  
   
 >[!NOTE]
 >It is possible to configure your own processing command pipeline by implementing and registering your own version of the @"SixLabors.ImageSharp.Web.Commands.IRequestParser" interface.
 
-The following processors are built into the middleware. In addition extension points are available to register you own command processors.
+The following processors are built into the middleware. In addition extension points are available to register your own command processors.
 
 #### Resize
 
