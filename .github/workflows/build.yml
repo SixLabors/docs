@@ -10,7 +10,7 @@ on:
 
 jobs:
   prose:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
     - name: Checkout
       uses: actions/checkout@v2
@@ -26,7 +26,7 @@ jobs:
   deploy:
     needs: [prose]
 
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     if: (github.event_name == 'push')
 
@@ -35,9 +35,6 @@ jobs:
         uses: actions/checkout@v2
         with:
           submodules: recursive
-
-      - name: Install Latest Mono
-        run: sudo apt-get install mono-runtime mono-devel msbuild
 
       # See https://github.com/actions/checkout/issues/165#issuecomment-657673315
       - name: Create LFS file list
@@ -53,19 +50,15 @@ jobs:
       - name: Git LFS Pull
         run: git lfs pull
 
-      # Disable environmental variable for this step to disable deterministic builds
-      - name: docfx-action
-        uses: nikeee/docfx-action@master
-        with:
-          args: docfx.json
-        env:
-            GITHUB_ACTIONS : false
+      - name: Install DocFX
+        run: choco install docfx -y
+
+      - name: Build
+        run: build.cmd
       
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3.6.1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs
-        env:
-            GITHUB_ACTIONS : true
           
