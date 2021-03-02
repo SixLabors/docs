@@ -98,8 +98,6 @@
           "*.md"
         ],
         "exclude": [
-          "obj/**",
-          "_site/**",
           "README.md"
         ]
       }
