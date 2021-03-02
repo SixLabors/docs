@@ -135,7 +135,7 @@
       }
     },
     "template": [
-      "default",
+      "statictoc",
       "templates"
     ],
     "postProcessors": [

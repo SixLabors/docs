@@ -16,8 +16,8 @@
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../../styles/docfx.css">
     <link rel="stylesheet" href="../../styles/main.css">
-    <meta property="docfx:navrel" content="../../toc.html">
-    <meta property="docfx:tocrel" content="toc.html">
+    <meta property="docfx:navrel" content="../../toc">
+    <meta property="docfx:tocrel" content="toc">
     
     <meta property="docfx:rel" content="../../">
     
@@ -46,7 +46,15 @@
                   <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
                 </div>
               </form>
-            </div>
+                
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="../../articles/imagesharp/index.html" title="Articles">Articles</a>
+                      </li>
+                      <li>
+                          <a href="../../api/index.html" title="API Documentation">API Documentation</a>
+                      </li>
+                </ul>    </div>
           </div>
         </nav>
         
@@ -69,11 +77,62 @@
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+                  
+                  <ul class="nav level1">
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="SixLabors.ImageSharp.Web.Caching.Azure.html" title="SixLabors.ImageSharp.Web.Caching.Azure" class="">SixLabors.ImageSharp.Web.Caching.Azure</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="SixLabors.ImageSharp.Web.Caching.Azure.AzureBlobStorageCache.html" title="AzureBlobStorageCache" class="">AzureBlobStorageCache</a>
+                          </li>
+                          <li class="active">
+                            <a href="SixLabors.ImageSharp.Web.Caching.Azure.AzureBlobStorageCacheOptions.html" title="AzureBlobStorageCacheOptions" class="active">AzureBlobStorageCacheOptions</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="SixLabors.ImageSharp.Web.Providers.Azure.html" title="SixLabors.ImageSharp.Web.Providers.Azure" class="">SixLabors.ImageSharp.Web.Providers.Azure</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="SixLabors.ImageSharp.Web.Providers.Azure.AzureBlobContainerClientOptions.html" title="AzureBlobContainerClientOptions" class="">AzureBlobContainerClientOptions</a>
+                          </li>
+                          <li class="">
+                            <a href="SixLabors.ImageSharp.Web.Providers.Azure.AzureBlobStorageImageProvider.html" title="AzureBlobStorageImageProvider" class="">AzureBlobStorageImageProvider</a>
+                          </li>
+                          <li class="">
+                            <a href="SixLabors.ImageSharp.Web.Providers.Azure.AzureBlobStorageImageProviderOptions.html" title="AzureBlobStorageImageProviderOptions" class="">AzureBlobStorageImageProviderOptions</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="SixLabors.ImageSharp.Web.Resolvers.Azure.html" title="SixLabors.ImageSharp.Web.Resolvers.Azure" class="">SixLabors.ImageSharp.Web.Resolvers.Azure</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="SixLabors.ImageSharp.Web.Resolvers.Azure.AzureBlobStorageCacheResolver.html" title="AzureBlobStorageCacheResolver" class="">AzureBlobStorageCacheResolver</a>
+                          </li>
+                          <li class="">
+                            <a href="SixLabors.ImageSharp.Web.Resolvers.Azure.AzureBlobStorageImageResolver.html" title="AzureBlobStorageImageResolver" class="">AzureBlobStorageImageResolver</a>
+                          </li>
+                        </ul>  </li>
+                  </ul>        </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="article row grid-right">
