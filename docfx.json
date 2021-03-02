@@ -87,10 +87,7 @@
       {
         "files": [
           "api/**.yml",
-          "api/index.md",
-          "api/**/toc.yml",
-          "api/**/index.md",
-          "api/toc.md"
+          "api/index.md"
         ]
       },
       {
@@ -113,21 +110,13 @@
           "images/**",
           "favicon.ico",
           "CNAME"
-        ],
-        "exclude": [
-          "obj/**",
-          "docs/**"
         ]
       }
     ],
     "overwrite": [
       {
         "files": [
-          "ext/ImageSharp/apiSpec/**.md",
-          "ext/ImageSharp.Drawing/apiSpec/**.md",
-          "ext/ImageSharp.Web/apiSpec/**.md",
-          "ext/ImageSharp.Web.Providers.Azure/apiSpec/**.md",
-          "ext/Fonts/apiSpec/**.md"
+          "apidoc/**.md"
         ],
         "exclude": [
           "obj/**",
