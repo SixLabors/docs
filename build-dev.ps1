@@ -9,4 +9,6 @@ $env:GITHUB_ACTIONS = $false
 
 $env:SIXLABORS_TESTING = $true
 
+# https://github.com/dotnet/docfx/issues/1890#issuecomment-316258540
+docfx metadata
 docfx
