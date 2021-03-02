@@ -1,0 +1,10 @@
+- name: ImageSharp
+  href: ImageSharp/SixLabors.ImageSharp.yml
+- name: ImageSharp.Drawing
+  href: ImageSharp.Drawing/SixLabors.ImageSharp.Drawing.yml
+- name: ImageSharp.Web
+  href: ImageSharp.Web/SixLabors.ImageSharp.Web.yml
+- name: ImageSharp.Web.Providers.Azure
+  href: ImageSharp.Web.Providers.Azure/SixLabors.ImageSharp.Web.Providers.Azure.yml
+- name: Fonts
+  href: Fonts/SixLabors.Fonts.yml
