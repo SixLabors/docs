@@ -99,7 +99,7 @@
         ],
         "exclude": [
           "obj/**",
-          "docs/**",
+          "_site/**",
           "README.md"
         ]
       }
@@ -120,11 +120,11 @@
         ],
         "exclude": [
           "obj/**",
-          "docs/**"
+          "_site/**"
         ]
       }
     ],
-    "dest": "docs",
+    "dest": "_site",
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
     "fileMetadata": {},
