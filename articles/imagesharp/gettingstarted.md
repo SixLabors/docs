@@ -29,6 +29,7 @@ using SixLabors.ImageSharp.Processing;
 // Open the file automatically detecting the file type to decode it.
 // Our image is now in an uncompressed, file format agnostic, structure in-memory as
 // a series of pixels.
+// You can also specify the pixel format using a type parameter (e.g. Image<Rgba32> image = Image.Load<Rgba32>("foo.jpg"))
 using (Image image = Image.Load("foo.jpg")) 
 {
     // Resize the image in place and return it for chaining.
