@@ -260,6 +260,11 @@ h3 {
   margin: 1.245rem 0;
 }
 
+h4,
+h5 {
+  font-weight: 600;
+}
+
 a,
 .a {
   color: #e35052;
@@ -792,6 +797,10 @@ pre code {
 
 .product img {
   max-height: 150px;
+}
+
+.product h5 {
+  font-size: 1.25rem;
 }
 
 .product h5 a {
