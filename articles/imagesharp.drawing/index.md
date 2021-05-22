@@ -1,7 +1,7 @@
 # Introduction
 
 >[!WARNING]
->ImageSharp.Drawing is still considered BETA quality and we reserve the right to change the API shape. We are yet to prioritize performance in our drawing APIs.
+>ImageSharp.Drawing is still considered BETA quality and we reserve the right to change the API shape.
 
 ### What is ImageSharp.Drawing?
 ImageSharp.Drawing is a library built on top of ImageSharp to providing 2D Drawing extensions.
