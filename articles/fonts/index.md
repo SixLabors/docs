@@ -1,7 +1,7 @@
 # Introduction
 
 >[!WARNING]
->Fonts is still considered BETA quality and we still reserve the rights to change the API shapes. We are yet to priorities performance in our drawing APIs.
+>Fonts is still considered BETA quality and we still reserve the rights to change the API shapes.
 
 ### What is Fonts?
 Fonts is a font loading and layout library built primarily to provide text drawing support to ImageSharp.Drawing.
