@@ -9,7 +9,6 @@ Get-ChildItem ./ext -Directory | ForEach-Object {
 
     Write-Host "$path => $lastTag"
     git -C "$path" reset --hard "$lastTag" --
-    git submodule update --init --recursive
 }
 
 # Ensure deterministic builds do not affect submodule build
