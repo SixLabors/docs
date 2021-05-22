@@ -359,6 +359,28 @@ header .navbar {
   text-decoration: none;
 }
 
+.navbar-form {
+  padding: 8px 0;
+  margin: 8px 0;
+}
+
+.navbar-inverse .navbar-toggle {
+  border-color: #fff;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+  background-color: #212529;
+}
+
+.navbar-inverse .navbar-toggle:focus,
+.navbar-inverse .navbar-toggle:hover {
+  background-color: #fff;
+}
+
+.navbar-inverse .navbar-collapse,
+.navbar-inverse .navbar-form {
+  border: none;
+}
 /* Fix loss of drop shadow by overriding DocFX "static"*/
 
 @media only screen and (max-width: 768px) {
@@ -798,6 +820,15 @@ pre code {
   height: 100%;
   padding-bottom: 2.3667rem;
   margin-bottom: 2rem;
+}
+
+@media (min-width: 992px) {
+  .products {
+    display: flex;
+  }
+  .product {
+    padding-bottom: 0;
+  }
 }
 
 .product img {
