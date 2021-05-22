@@ -1,7 +1,7 @@
 # Custom Rendering
 
 >[!WARNING]
->Fonts is still considered BETA quality and we still reserve the rights to change the API shapes. We are yet to priorities performance in our font loading and layout APIs.
+>Fonts is still considered BETA quality and we still reserve the rights to change the API shapes.
 
 >[!NOTE]
 >ImageSharp.Drawing already implements the glyph rendering for you unless you are rendering on other platforms we would recommend using the version provided by that library.. This is a more advanced topic.
