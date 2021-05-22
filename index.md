@@ -14,7 +14,7 @@ Our graphics libraries are split into different projects. They cover different c
 
 You can find documentation for each project in the links below.
 
-<div class="row projects">
+<div class="row products">
     <div class="col-sm-6 col-md-3">
         <div class="product">
             <img src="https://raw.githubusercontent.com/SixLabors/Branding/master/icons/imagesharp/sixlabors.imagesharp.svg?sanitize=true" alt="ImageSharp Logo">

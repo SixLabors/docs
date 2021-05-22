@@ -782,6 +782,10 @@ pre code {
  * ###################
  */
 
+.products {
+  margin-top: 2rem;
+}
+
 .product {
   position: relative;
   display: flex;
@@ -793,6 +797,7 @@ pre code {
   text-align: center;
   height: 100%;
   padding-bottom: 2.3667rem;
+  margin-bottom: 2rem;
 }
 
 .product img {
@@ -823,45 +828,6 @@ pre code {
   .product .btn {
     max-width: 50%;
   }
-}
-.projects {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.projects > [class*="col-"] {
-  padding-bottom: 16px;
-}
-
-.project {
-  height: 100%;
-  padding: 1rem 0.5rem 0;
-  color: inherit;
-  margin-bottom: 1rem;
-  display: block;
-  border: 4px solid #e30183;
-  background-color: #fff;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
-}
-
-.project img {
-  height: 137px;
-}
-
-.project h3 {
-  text-decoration: none;
-  font-size: 1rem;
-}
-
-.project h3 a::after {
-  display: none;
-}
-
-.project:hover,
-.project:focus {
-  text-decoration: none;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.16);
-  border-color: #40064e;
 }
 
 .icon {
