@@ -64,7 +64,7 @@ We have implemented short self-contained sample projects for a few specific use 
 1. [Avatar with rounded corners](https://github.com/SixLabors/Samples/tree/master/ImageSharp/AvatarWithRoundedCorner)<br/>
    Crops rounded corners of a source image leaving a nice rounded avatar.
 2. [Draw watermark on image](https://github.com/SixLabors/Samples/tree/master/ImageSharp/DrawWaterMarkOnImage)<br/>
-   Draw water mark over an image automaticaly scaling the font size to fill the avalible space.
+   Draw water mark over an image automaticaly scaling the font size to fill the available space.
 3. [Change default encoder options](https://github.com/SixLabors/Samples/tree/master/ImageSharp/ChangeDefaultEncoderOptions)<br/>
    Provides an example on how you go about switching out the registered encoder for a file format and changing its default options in the process.
 4. [Draw text along a path](https://github.com/SixLabors/Samples/tree/master/ImageSharp/DrawingTextAlongAPath)<br/>
