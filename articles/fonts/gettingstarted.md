@@ -24,7 +24,7 @@ using SixLabors.Fonts;
 
 FontCollection collection = new FontCollection();
 FontFamily family = collection.Install("path/to/font.ttf");
-Font font = family.Create(12, FontStyle.Italic);
+Font font = family.CreateFont(12, FontStyle.Italic);
 
 // "font" can now be used in calls to DrawText from our ImageSharp.Drawing library.
 
@@ -45,7 +45,7 @@ if(collection.TryFind("Font Name", out FontFamily family))
 if(collection.TryFind("Emoji Font Name", out FontFamily emojiFamily))
 {
     // family will not be null here
-    Font font = family.Create(12, FontStyle.Italic);
+    Font font = family.CreateFont(12, FontStyle.Italic);
     RendererOptions options = new RendererOptions(font, dpi: 72)
     {
         ApplyKerning  = true, 
