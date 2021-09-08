@@ -13,7 +13,7 @@ Allows the resizing of images.
 
 ``` bash
 {PATH_TO_YOUR_IMAGE}?width=300
-{PATH_TO_YOUR_IMAGE}?width=300&height=120&rxy=30,30
+{PATH_TO_YOUR_IMAGE}?width=300&height=120&rxy=0.37,0.78
 {PATH_TO_YOUR_IMAGE}?width=50&height=50&rsampler=nearest&rmode=stretch
 ```
 Resize commands represent the @"SixLabors.ImageSharp.Processing.ResizeOptions" class.
@@ -38,8 +38,8 @@ sampler to use.
   - `spline` @"SixLabors.ImageSharp.Processing.KnownResamplers.Spline"  
   - `triangle` @"SixLabors.ImageSharp.Processing.KnownResamplers.Triangle"  
   - `hermite` @"SixLabors.ImageSharp.Processing.KnownResamplers.Hermite"  
-- `rxy` The center position to anchor the image center point to.
 - `ranchor`The @"SixLabors.ImageSharp.Processing.AnchorPositionMode" to use.
+- `rxy` Use an exact anchor position point. The comma-separated x and y values range from 0-1.
 - `compand` Whether to compress and expand individual pixel colors values to/from a linear color space when processing.
 
 
