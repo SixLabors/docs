@@ -58,7 +58,7 @@ Once installed the cache @SixLabors.ImageSharp.Web.Caching.Azure.AzureBlobStorag
     // Optionally create the cache container on startup if not already created.
     AzureBlobStorageCache.CreateIfNotExists(options, PublicAccessType.None);
 })
-.SetCache<AzureBlobStorageImageCache>()
+.SetCache<AzureBlobStorageCache>()
 ```
 
 Images are cached using a hash of the request URL as the blob name. All appropriate metadata is stored in the blob properties to correctly serve the blob with the correct response headers.
