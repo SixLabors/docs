@@ -110,16 +110,20 @@ if(image.TryGetSinglePixelSpan(out var pixelSpan))
 ### Loading raw pixel data into an `Image<T>`
 
 ```C#
+int width = ...;
+int height = ...;
 Rgba32[] rgbaData = GetMyRgbaArray();
-using (var image = Image.LoadPixelData(rgbaData))
+using (var image = Image.LoadPixelData(rgbaData, width, height))
 {
 	// Work with the image
 }
 ```
 
 ```C#
+int width = ...;
+int height = ...;
 byte[] rgbaBytes = GetMyRgbaBytes();
-using (var image = Image.LoadPixelData<Rgba32>(rgbaBytes))
+using (var image = Image.LoadPixelData<Rgba32>(rgbaBytes, width, height))
 {
 	// Work with the image
 }
