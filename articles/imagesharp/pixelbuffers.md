@@ -103,7 +103,7 @@ Or:
 ```C#
 if(image.TryGetSinglePixelSpan(out var pixelSpan))
 {
-    byte[] rgbaBytes = MemoryMarshal.AsBytes(pixelSpan()).ToArray();
+    byte[] rgbaBytes = MemoryMarshal.AsBytes(pixelSpan).ToArray();
 }
 ```
 
