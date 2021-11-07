@@ -95,7 +95,7 @@ Or:
 Rgba32[] pixelArray = /* your pixel buffer being reused */
 if(image.TryGetSinglePixelSpan(out var pixelSpan))
 {
-    pixelSpan().CopyTo(pixelArray);
+    pixelSpan.CopyTo(pixelArray);
 }
 ```
 
