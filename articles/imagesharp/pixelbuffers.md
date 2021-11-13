@@ -9,7 +9,7 @@ using (Image<Rgba32> image = new Image<Rgba32>(400, 400))
 }
 ```
 
-The idexer is much faster than the `.GetPixel(x, y)` and `.SetPixel(x,y)` methods of `System.Drawing` but, it's still quite slow.
+The idexer is an order of magnitude faster than the `.GetPixel(x, y)` and `.SetPixel(x,y)` methods of `System.Drawing` but there's still room for improvement.
 
 ### Efficient pixel manipulation
 If you want to achieve killer speed in your own low-level pixel manipulation routines, you should utilize the per-row methods. These methods take advantage of the [brand-new `Span<T>`-based memory manipulation primitives](https://www.codemag.com/Article/1807051/Introducing-.NET-Core-2.1-Flagship-Types-Span-T-and-Memory-T) from [System.Memory](https://www.nuget.org/packages/System.Memory/), providing a fast, yet safe low-level solution to manipulate pixel data.
