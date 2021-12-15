@@ -15,6 +15,7 @@ A full list of out-of-the-box sampling algorithms can be found [here](xref:SixLa
 ```c#
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Processing;
+using SixLabors.ImageSharp.Formats.Png;
 
 using (Image image = Image.Load(inStream))
 {
@@ -22,7 +23,7 @@ using (Image image = Image.Load(inStream))
     int height = image.Height / 2;
     image.Mutate(x => x.Resize(width, height));
 
-    image.Save(outPath);
+    image.Save(outPath, new PngEncoder());
 }
 ```
 
