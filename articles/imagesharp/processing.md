@@ -15,13 +15,13 @@ For example:
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Processing;
 
-using (Image image = Image.Load(inStream)) 
+using (Image image = Image.Load(inPath)) 
 {
     // Resize the given image in place and return it for chaining.
     // 'x' signifies the current image processing context.
     image.Mutate(x => x.Resize(image.Width / 2, image.Height / 2)); 
 
-    image.Save(outStream); 
+    image.Save(outPath); 
 } // Dispose - releasing memory into a memory pool ready for the next image you wish to process.
 ```
 
@@ -30,13 +30,14 @@ using (Image image = Image.Load(inStream))
 ```c#
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Processing;
+using SixLabors.ImageSharp.Formats.Png;
 
 using (Image image = Image.Load(inStream)) 
 {
     // Create a deep copy of the given image, resize it, and return it for chaining.
    using (Image copy = image.Clone(x => x.Resize(image.Width / 2, image.Height / 2)))
    {
-       copy.Save(outStream); 
+       copy.Save(outStream, new PngEncoder()); 
    }
 } // Dispose - releasing memory into a memory pool ready for the next image you wish to process.
 ```
