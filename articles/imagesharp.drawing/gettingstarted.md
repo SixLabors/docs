@@ -28,7 +28,7 @@ using SixLabors.ImageSharp.Drawing.Processing;
 
 Image image = ...; // create any way you like.
 
-IPath yourPolygon = new Star(x: 100.0f, y: 100.0f, prongs: 5, innerRadii: 20.0f, outerRadii:30.0f)
+IPath yourPolygon = new Star(x: 100.0f, y: 100.0f, prongs: 5, innerRadii: 20.0f, outerRadii:30.0f);
 
 image.Mutate( x=> x.Fill(Color.Red, yourPolygon)); // fill the star with red
 
@@ -52,7 +52,7 @@ ShapeGraphicsOptions options = new ShapeGraphicsOptions()
 
 IBrush brush = Brushes.Horizontal(Color.Red, Color.Blue);
 IPen pen = Pens.DashDot(Color.Green, 5);
-IPath yourPolygon = new Star(x: 100.0f, y: 100.0f, prongs: 5, innerRadii: 20.0f, outerRadii:30.0f)
+IPath yourPolygon = new Star(x: 100.0f, y: 100.0f, prongs: 5, innerRadii: 20.0f, outerRadii:30.0f);
 
 // draws a star with Horizontal red and blue hatching with a dash dot pattern outline.
 image.Mutate( x=> x.Fill(options, brush, yourPolygon)
@@ -80,7 +80,7 @@ Image image = ...; // create any way you like.
 Font font = ...; // see our Fonts library for best practices on retriving one of these.
 string yourText = "this is some sample text";
 
-image.Mutate( x=> x.DrawText(yourText, font, Color.Black, new PointF(10, 10))); 
+image.Mutate( x=> x.DrawText(yourText, font, Color.Black, new PointF(10, 10)));
 ```
 
 #### Expanded Example
