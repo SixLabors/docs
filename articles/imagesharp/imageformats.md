@@ -48,10 +48,8 @@ Real life image streams are usually stored / transferred in standardized formats
 Sometimes it's worth to efficiently decode image metadata ignoring the memory and CPU heavy pixel information inside the stream. ImageSharp allows this by using one of the several [Image.Identify](xref:SixLabors.ImageSharp.Image) overloads:
 
 ```C#
-using (IImageInfo imageInfo = Image.Identify(inputStream))
-{
-    Console.WriteLine($"{imageInfo.Width}x{imageInfo.Height} | BPP: {imageInfo.PixelType.BitsPerPixel}");
-}
+IImageInfo imageInfo = Image.Identify(inputStream);
+Console.WriteLine($"{imageInfo.Width}x{imageInfo.Height} | BPP: {imageInfo.PixelType.BitsPerPixel}");
 ```
 
 See [`IImageInfo`](xref:SixLabors.ImageSharp.IImageInfo) for more details about the identification result. Note that [`Image<TPixel>`](xref:SixLabors.ImageSharp.Image`1) also implements `IImageInfo`.
