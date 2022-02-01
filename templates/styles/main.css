@@ -206,6 +206,27 @@ hr {
   padding: 0;
 }
 
+/* Works on Firefox */
+body * {
+  scrollbar-width: thin;
+  scrollbar-color: #fff #f5bebf;
+}
+
+/* Works on Chrome, Edge, and Safari */
+body * ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+body * ::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+body * ::-webkit-scrollbar-thumb {
+  background-color: #f5bebf;
+  border: 3px solid #fff;
+}
+
 /* ##################
  * ### TYPOGRAPHY ###
  * ##################
@@ -467,9 +488,8 @@ header .navbar {
   overflow-x: auto !important;
 }
 
-  /* Blast the default styles out of the way so the side nav is usable*/
+/* Blast the default styles out of the way so the side nav is usable*/
 .sidetoc * {
-
   font-size: 13px !important;
   overflow-x: visible !important;
 }
