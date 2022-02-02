@@ -9,29 +9,36 @@ using (Image<Rgba32> image = new Image<Rgba32>(400, 400))
 }
 ```
 
-The idexer is an order of magnitude faster than the `.GetPixel(x, y)` and `.SetPixel(x,y)` methods of `System.Drawing` but there's still room for improvement.
+The indexer is an order of magnitude faster than the `.GetPixel(x, y)` and `.SetPixel(x,y)` methods of `System.Drawing` but there's still room for improvement.
 
 ### Efficient pixel manipulation
 If you want to achieve killer speed in your own low-level pixel manipulation routines, you should utilize the per-row methods. These methods take advantage of the [brand-new `Span<T>`-based memory manipulation primitives](https://www.codemag.com/Article/1807051/Introducing-.NET-Core-2.1-Flagship-Types-Span-T-and-Memory-T) from [System.Memory](https://www.nuget.org/packages/System.Memory/), providing a fast, yet safe low-level solution to manipulate pixel data.
 
-This is how you can implement efficient row-by-row pixel manipulation:
+This is how you can implement efficient row-by-row pixel manipulation. This API receives a @"SixLabors.ImageSharp.PixelAccessor`1" which ensures that the span is never [transferred to the heap](#spant-limitations) making the operation safe.
 
 ```C#
 using SixLabors.ImageSharp;
 
 // ...
-
-using (Image<Rgba32> image = new Image<Rgba32>(400, 400))
+using Image<Rgba32> image = new(400, 400);
+image.ProcessPixelRows(accessor =>
 {
-    for (int y = 0; y < image.Height; y++)
-	{
-		Span<Rgba32> pixelRowSpan = image.GetPixelRowSpan(y);
-		for (int x = 0; x < image.Width; x++)
-		{
-			pixelRowSpan[x] = new Rgba32(x/255, y/255, 50, 255);
-		}
-	}
-}
+    Rgba32 rgba32 = default;
+    Rgba32 transparent = Color.Transparent;
+    for (int y = 0; y < accessor.Height; y++)
+    {
+        Span<TPixel> span = accessor.GetRowSpan(y);
+        for (int x = 0; x < accessor.Width; x++)
+        {
+            span[x].ToRgba32(ref rgba32);
+
+            if (rgba32.A == 0)
+            {
+                span[x].FromRgba32(transparent);
+            }
+        }
+    }
+});
 ```
 
 ### Parallel, pixel-format agnostic image manipulation
@@ -52,7 +59,7 @@ image.Mutate(c => c.ProcessPixelRowsAsVector4(row =>
 }));
 ```
 
-This API receives a @"SixLabors.ImageSharp.Processing.PixelRowOperation" instance as input, and uses it to modify the pixel data of the target image. It does so by automatically executing the input operation in parallel, on multiple pixel rows at the same time, to fully leverage the power of modern multicore CPUs. The `ProcessPixelRowsAsVector4` extension also takes care of converting the pixel data to/from the `Vector4` format, which means the same operation can be used to easily process images of any existing pixel-format, without having to implement the processing logic again for each of them.
+This API receives a @"SixLabors.ImageSharp.Processing.PixelRowOperation" instance as input, and uses it to modify the pixel data of the target image. It does so by automatically executing the input operation in parallel, on multiple pixel rows at the same time, to fully leverage the power of modern multi-core CPUs. The `ProcessPixelRowsAsVector4` extension also takes care of converting the pixel data to/from the `Vector4` format, which means the same operation can be used to easily process images of any existing pixel-format, without having to implement the processing logic again for each of them.
 
 This extension offers the fastest, easiest and most flexible way to implement custom image processors in ImageSharp.
 
@@ -67,7 +74,7 @@ A short summary of the limitations:
 
 **Non-conformant code:**
 ```C#
-Span<Rgba32> span = image.GetRowSpan(y);
+Span<Rgba32> span = imageFrame.PixelBuffer.DangerousGetRowSpan(y);
 
 await Task.Run(() =>
 	{   
@@ -82,29 +89,16 @@ await Task.Run(() =>
 ```
 
 ### Exporting raw pixel data from an `Image<T>`
-You can use @"SixLabors.ImageSharp.Image`1.TryGetSinglePixelSpan*" to access the whole contigous pixel buffer, for example, to copy the pixel data into an array. For large, multi-megapixel images, however, the data must be accessed and copied per row:
+You can use @"SixLabors.ImageSharp.Image`1.CopyPixelDataTo*" to access the whole contiguous pixel buffer, for example, to copy the pixel data into an array. For large, multi-megapixel images, however, the data must be accessed and copied per row:
 ```C#
-if(image.TryGetSinglePixelSpan(out var pixelSpan))
-{
-    Rgba32[] pixelArray = pixelSpan.ToArray();
-}
+Rgb32[] pixelArray = new Rgba32[image.Width * image.Height]
+image.CopyPixelDataTo(pixelArray);
 ```
 
 Or:
 ```C#
-Rgba32[] pixelArray = /* your pixel buffer being reused */
-if(image.TryGetSinglePixelSpan(out var pixelSpan))
-{
-    pixelSpan.CopyTo(pixelArray);
-}
-```
-
-Or:
-```C#
-if(image.TryGetSinglePixelSpan(out var pixelSpan))
-{
-    byte[] rgbaBytes = MemoryMarshal.AsBytes(pixelSpan).ToArray();
-}
+byte[] pixelBytes = new byte[image.Width * image.Height * Unsafe.SizeOf<Rgba32>()]
+image.CopyPixelDataTo(pixelBytes);
 ```
 
 ### Loading raw pixel data into an `Image<T>`
