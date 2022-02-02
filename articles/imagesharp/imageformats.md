@@ -2,11 +2,14 @@
 
 Out of the box ImageSharp supports the following image formats:
 
-- Jpeg
-- Png
 - Bmp
 - Gif
+- Jpeg
+- Pbm
+- Png
+- Tiff
 - Tga
+- WebP
 
 ImageSharp's API however, is designed to support extension by the registration of additional [`IImageFormat`](xref:SixLabors.ImageSharp.Formats.IImageFormat) implementations.
 
@@ -29,11 +32,13 @@ using (var image = Image.Load(inputStream, out format))
 > [!NOTE]
 > ImageSharp provides common extension methods to save an image into a stream using a specific format.
 
-- `image.SaveAsJpeg()` (shortcut for `image.Save(new JpegEncoder())`)
-- `image.SaveAsPng()` (shortcut for `image.Save(new PngEncoder())`)
-- `image.SaveAsGif()` (shortcut for `image.Save(new GifEncoder())`)
 - `image.SaveAsBmp()` (shortcut for `image.Save(new BmpEncoder())`)
+- `image.SaveAsGif()` (shortcut for `image.Save(new GifEncoder())`)
+- `image.SaveAsJpeg()` (shortcut for `image.Save(new JpegEncoder())`)
+- `image.SaveAsPbm()` (shortcut for `image.Save(new PbmEncoder())`)
+- `image.SaveAsPng()` (shortcut for `image.Save(new PngEncoder())`)
 - `image.SaveAsTga()` (shortcut for `image.Save(new TgaEncoder())`)
+- `image.SaveAsTiff()` (shortcut for `image.Save(new TiffEncoder())`)
 
 ### A Deeper Overview of ImageSharp Format Management
 
