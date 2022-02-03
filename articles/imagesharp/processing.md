@@ -47,3 +47,4 @@ using (Image image = Image.Load(inStream))
 Examples of common operations can be found in the following documentation pages.
 
 - [Resizing](resize.md) images using different options.
+- Create [animated gif](animatedgif.md).

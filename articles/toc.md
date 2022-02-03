@@ -4,6 +4,7 @@
 ### [Image Formats](imagesharp/imageformats.md)
 ### [Processing Images](imagesharp/processing.md)
 #### [Resizing Images](imagesharp/resize.md)
+#### [Create animated GIF](imagesharp/animatedgif.md)
 ### [Working with Pixel Buffers](imagesharp/pixelbuffers.md)
 ### [Configuration](imagesharp/configuration.md)
 
