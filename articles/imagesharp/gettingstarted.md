@@ -47,6 +47,19 @@ In this very basic example you are actually utilizing several core ImageSharp fe
 - [Image Formats](imageformats.md) by loading and saving an image.
 - [Image Processors](processing.md) by calling `Mutate()` and `Resize()`
 
+### Identify image
+
+If you are only interested in the image dimensions or metadata of the image, you can achieve this with `Image.Identify`.
+This will avoid decoding the complete image and therfore be much faster.
+
+For example:
+
+```c#
+var imageInfo = Image.Identify(@"image.jpg");
+Console.WriteLine($"Width: {imageInfo.Width}");
+Console.WriteLine($"Height: {imageInfo.Width}");
+```
+
 ### Initializing New Images
 
 ```c#
