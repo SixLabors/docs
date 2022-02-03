@@ -60,6 +60,30 @@ Console.WriteLine($"Width: {imageInfo.Width}");
 Console.WriteLine($"Height: {imageInfo.Width}");
 ```
 
+### Image metadata
+
+To retrieve image metadata, either load an image with `Image.Load` or use `Image.Identify` (this will not decode the complete image, just the metadata). In both cases you will get the image dimensions and additional the the image
+metadata in the `Metadata` property.
+
+This will contain the following profiles, if present in the image:
+
+- ExifProfile
+- IccProfile
+- IptcProfile
+- XmpProfile
+
+##### Format specific metadata
+
+Further there are format specific metadata, which can be obtained for example like this:
+
+```c#
+var image = Image.Load(@"image.jpg");
+var imageMetaData = image.Metadata;
+var jpegData = imageMetaData.GetFormatMetadata(JpegFormat.Instance);
+```
+
+And similar for the other supported formats.
+
 ### Initializing New Images
 
 ```c#
