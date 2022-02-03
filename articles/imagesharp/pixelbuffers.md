@@ -72,22 +72,6 @@ A short summary of the limitations:
 - Span cannot be an instance field of a type that itself is not stack-only.
 - Span cannot be used within asynchronous methods.
 
-**Non-conformant code:**
-```C#
-Span<Rgba32> span = imageFrame.PixelBuffer.DangerousGetRowSpan(y);
-
-await Task.Run(() =>
-	{   
-		// ☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠
-		// ☠☠☠ BANG! YOU HAVE CAPTURED A SPAN ON THE HEAP! ☠☠☠
-
-		for (int i = 0; i < span.Length; i++)
-		{
-			span[i] = /* ... */;
-		}
-	});
-```
-
 ### Exporting raw pixel data from an `Image<T>`
 You can use @"SixLabors.ImageSharp.Image`1.CopyPixelDataTo*" to copy the pixel data to a user buffer. Note that the following sample code leads to to significant extra GC allocation in case of large images, which can be avoided by processing the image row-by row instead.
 ```C#
