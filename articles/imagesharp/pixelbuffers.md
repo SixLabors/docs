@@ -16,6 +16,7 @@ If you want to achieve killer speed in your own low-level pixel manipulation rou
 
 This is how you can implement efficient row-by-row pixel manipulation. This API receives a @"SixLabors.ImageSharp.PixelAccessor`1" which ensures that the span is never [transferred to the heap](#spant-limitations) making the operation safe.
 
+
 ```C#
 using SixLabors.ImageSharp;
 
@@ -23,18 +24,35 @@ using SixLabors.ImageSharp;
 using Image<Rgba32> image = new(400, 400);
 image.ProcessPixelRows(accessor =>
 {
-    Rgba32 rgba32 = default;
+    // Color is pixel-agnostic, but it's implicitly convertible to the Rgba32 pixel type
     Rgba32 transparent = Color.Transparent;
+
     for (int y = 0; y < accessor.Height; y++)
     {
-        Span<TPixel> span = accessor.GetRowSpan(y);
-        for (int x = 0; x < accessor.Width; x++)
-        {
-            span[x].ToRgba32(ref rgba32);
+        Span<Rgba32> pixelRow = accessor.GetRowSpan(y);
 
-            if (rgba32.A == 0)
+        // pixelRow.Length has the same value as accessor.Width,
+        // but using pixelRow.Length allows the JIT to optimize away bounds checks:
+        for (int x = 0; x < pixelRow.Length; x++)
+        {
+            // Get a reference to the pixel at position x
+            ref Rgba32 pixel = ref pixelRow[x];
+            if (pixel.A == 0)
             {
-                span[x].FromRgba32(transparent);
+                // overwrite the pixel referenced by 'ref Rgba32 pixel':
+                pixel = transparent;
+            }
+        }
+
+        // We can greatly simplify the code above thanks to 7.3
+        // which allows foreach with 'ref'. The following foreach loop is equivalent
+        // to the previous 'for' loop:
+        foreach (ref Rgba32 pixel in pixelRow)
+        {
+            if (pixel.A == 0)
+            {
+                // overwrite the pixel referenced by 'ref Rgba32 pixel':
+                pixel = transparent;
             }
         }
     }
