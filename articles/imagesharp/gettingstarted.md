@@ -55,7 +55,7 @@ This will avoid decoding the complete image and therfore be much faster.
 For example:
 
 ```c#
-var imageInfo = Image.Identify(@"image.jpg");
+IImageInfo imageInfo = Image.Identify(@"image.jpg");
 Console.WriteLine($"Width: {imageInfo.Width}");
 Console.WriteLine($"Height: {imageInfo.Width}");
 ```
@@ -77,9 +77,11 @@ This will contain the following profiles, if present in the image:
 Further there are format specific metadata, which can be obtained for example like this:
 
 ```c#
-var image = Image.Load(@"image.jpg");
-var imageMetaData = image.Metadata;
-var jpegData = imageMetaData.GetFormatMetadata(JpegFormat.Instance);
+Image image = Image.Load(@"image.jpg");
+ImageMetadata imageMetaData = image.Metadata;
+
+// Syntactic sugar for imageMetaData.GetFormatMetadata(JpegFormat.Instance)
+JpegMetadata jpegData = imageMetaData.GetJpegMetadata();
 ```
 
 And similar for the other supported formats.
@@ -95,7 +97,7 @@ int width = 640;
 int height = 480;
 
 // Creates a new image with empty pixel data. 
-using(var image = new Image<Rgba32>(width, height)) 
+using(Image<Rgba32> image = new(width, height)) 
 {
   // Do your drawing in here...
 
