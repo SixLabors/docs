@@ -12,8 +12,7 @@ const int height = 100;
 const int frameDelay = 100;
 
 // For demonstration: use images with different colors.
-var colors = new Color[]
-{
+Color[] colors = {
     Color.Green,
     Color.Red
 };

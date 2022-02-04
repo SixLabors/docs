@@ -485,6 +485,8 @@ header .navbar {
   background-color: #fff;
   border: none;
   top: 166px;
+  bottom: auto;
+  max-height: calc(100% - 166px);
   overflow-x: auto !important;
 }
 
@@ -920,24 +922,8 @@ pre code {
 .bs-docs-sidebar.affix {
   overflow-y: auto;
   overflow-x: auto;
-  height: calc(100% - 100px);
-  background: linear-gradient(#fff 30%, rgba(255, 255, 255, 0)),
-    linear-gradient(rgba(255, 255, 255, 0), #fff 70%) 0 100%,
-    radial-gradient(
-      farthest-side at 50% 0,
-      rgba(0, 0, 0, 0.24),
-      rgba(0, 0, 0, 0)
-    ),
-    radial-gradient(
-        farthest-side at 50% 100%,
-        rgba(0, 0, 0, 0.24),
-        rgba(0, 0, 0, 0)
-      )
-      0 100%;
-  background-color: #fff;
-  background-repeat: no-repeat;
-  background-attachment: local, local, scroll, scroll;
-  background-size: 100% 10px, 100% 10px, 100% 5px, 100% 5px;
+  height: fit-content;
+  max-height: calc(100% - 100px);
 }
 
 .bs-docs-sidebar.affix > ul.level1 {
