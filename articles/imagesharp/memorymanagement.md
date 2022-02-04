@@ -47,3 +47,27 @@ using (Image<Rgba32> image = new(customConfig, 4096, 4096))
 ### Wrapping existing buffers as `Image<TPixel>`
 
 It's also possible to do the other way around, and wrap an existing native buffer to process it as an `Image<TPixel>`. You can use one of the @"SixLabors.ImageSharp.Image.WrapMemory*" overloads for this. Note that the resulting image is not suitable for operations that would change the dimensions of the image, such an attempt will lead to an @"SixLabors.ImageSharp.Memory.InvalidMemoryOperationException".
+
+### Troubleshooting memory leaks
+
+Strictly speaking, ImageSharp is safe against memory leaks, because finalizers will take care of the native memory resources leaked by omitting `Dispose()` or `using` blocks. However, letting the memory leak to finalizers may lead to performance issues and if GC execution can't keep up with the leaks, to `OutOfMemoryException`. Application code should take care of disposing any @`SixLabors.ImageSharp.Image` allocated.
+
+In complex and large apps, this might be hard to verify. ImageSharp 2.0+ exposes some code-first diagnostic API-s that may help detecting leaks.
+
+Query and log @"SixLabors.ImageSharp.Diagnostics.MemoryDiagnostics.TotalUndisposedAllocationCount" to track if the number of undisposed allocations is increasing during your application's lifetime:
+
+```C#
+myLogger.Log(@"Number of undisposed ImageSharp buffers: {MemoryDiagnostics.TotalUndisposedAllocationCount}");
+```
+
+For troubleshooting you can also subscribe to the event @"SixLabors.ImageSharp.Diagnostics.MemoryDiagnostics.UndisposedAllocation". When the event fires, it will report the stack trace of leaking allocations, which may help tracking down bugs. Subscribing to this event has *significant* performance overhead, so avoid it in the final production deployment of your app.
+
+```C#
+#if TROUBLESHOOTING_TESTING_NOT_PRODUCTION
+MemoryDiagnostics.UndisposedAllocation += allocationStackTrace =>
+{
+    Console.WriteLine($@"Undisposed allocation detected at:{Environment.NewLine}{allocationStackTrace}");
+    Environment.Exit(1);
+};
+#endif
+```
