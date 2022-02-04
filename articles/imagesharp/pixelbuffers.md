@@ -59,6 +59,29 @@ image.ProcessPixelRows(accessor =>
 });
 ```
 
+Need to process two images simultaneously? Sure!
+
+```C#
+// Extract sub-region of sourceImage, bounded by sourceArea as a new image
+private static Image<Rgba32> Extract(Image<Rgba32> sourceImage, Rectangle sourceArea)
+{
+    Image<Rgba32> targetImage = new (sourceArea.Width, sourceArea.Height);
+    int height = sourceArea.Height;
+    sourceImage.ProcessPixelRows(targetImage, (sourceAccessor, targetAccessor) =>
+    {
+        for (int i = 0; i < height; i++)
+        {
+            Span<Rgba32> sourceRow = sourceAccessor.GetRowSpan(sourceArea.Y + i);
+            Span<Rgba32> targetRow = targetAccessor.GetRowSpan(i);
+
+            sourceRow.Slice(sourceArea.X, sourceArea.Width).CopyTo(targetRow);
+        }
+    });
+
+    return targetImage;
+}
+```
+
 ### Parallel, pixel-format agnostic image manipulation
 There is a way to process image data that is even faster than using the approach mentioned before, and that also has the advantage of working on images of any underlying pixel-format, in a completely transparent way: using the @"SixLabors.ImageSharp.Processing.PixelRowDelegateExtensions.ProcessPixelRowsAsVector4(SixLabors.ImageSharp.Processing.IImageProcessingContext,SixLabors.ImageSharp.Processing.PixelRowOperation)" APIs.
 
