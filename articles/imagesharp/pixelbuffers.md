@@ -9,10 +9,10 @@ using (Image<Rgba32> image = new Image<Rgba32>(400, 400))
 }
 ```
 
-The indexer is an order of magnitude faster than the `.GetPixel(x, y)` and `.SetPixel(x,y)` methods of `System.Drawing` but there's still room for improvement.
+The indexer is an order of magnitude faster than the `.GetPixel(x, y)` and `.SetPixel(x, y)` methods of `System.Drawing`, but individual `[x, y]` indexing has inherent overhead compared to more sophisticated approaches demnonstrated below.
 
 ### Efficient pixel manipulation
-If you want to achieve killer speed in your own low-level pixel manipulation routines, you should utilize the per-row methods. These methods take advantage of the [brand-new `Span<T>`-based memory manipulation primitives](https://www.codemag.com/Article/1807051/Introducing-.NET-Core-2.1-Flagship-Types-Span-T-and-Memory-T) from [System.Memory](https://www.nuget.org/packages/System.Memory/), providing a fast, yet safe low-level solution to manipulate pixel data.
+If you want to achieve killer speed in your pixel manipulation routines, you should utilize the per-row methods. These methods take advantage of the [`Span<T>`-based memory manipulation primitives](https://www.codemag.com/Article/1807051/Introducing-.NET-Core-2.1-Flagship-Types-Span-T-and-Memory-T) from [System.Memory](https://www.nuget.org/packages/System.Memory/), providing a fast, yet safe low-level solution to manipulate pixel data.
 
 This is how you can implement efficient row-by-row pixel manipulation. This API receives a @"SixLabors.ImageSharp.PixelAccessor`1" which ensures that the span is never [transferred to the heap](#spant-limitations) making the operation safe.
 
@@ -44,9 +44,8 @@ image.ProcessPixelRows(accessor =>
             }
         }
 
-        // We can greatly simplify the code above thanks to 7.3
-        // which allows foreach with 'ref'. The following foreach loop is equivalent
-        // to the previous 'for' loop:
+        // We can greatly simplify the code above thanks to C# 7.3 foreach with 'ref'.
+        // The following foreach loop is equivalent to the previous 'for' loop:
         foreach (ref Rgba32 pixel in pixelRow)
         {
             if (pixel.A == 0)
@@ -62,7 +61,7 @@ image.ProcessPixelRows(accessor =>
 Need to process two images simultaneously? Sure!
 
 ```C#
-// Extract sub-region of sourceImage, bounded by sourceArea as a new image
+// Extract sub-region of sourceImage as a new image
 private static Image<Rgba32> Extract(Image<Rgba32> sourceImage, Rectangle sourceArea)
 {
     Image<Rgba32> targetImage = new (sourceArea.Width, sourceArea.Height);
@@ -148,3 +147,8 @@ using (var image = Image.LoadPixelData<Rgba32>(rgbaBytes, width, height))
 }
 ```
 
+### That's all nice, but how do I get a single pointer or span to the underlying pixel buffer?
+
+That's the neat part, youd don't. 🙂
+
+We highly recommend to use the methods introduced above, since ImageSharp buffers are discontiguous by default. If you *really* need to overcome this limitation, please read the [Memory Management](memorymanagement.md) paragraph.
