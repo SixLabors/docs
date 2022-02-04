@@ -83,7 +83,7 @@ private static Image<Rgba32> Extract(Image<Rgba32> sourceImage, Rectangle source
 ```
 
 ### Parallel, pixel-format agnostic image manipulation
-There is a way to process image data that is even faster than using the approach mentioned before, and that also has the advantage of working on images of any underlying pixel-format, in a completely transparent way: using the @"SixLabors.ImageSharp.Processing.PixelRowDelegateExtensions.ProcessPixelRowsAsVector4(SixLabors.ImageSharp.Processing.IImageProcessingContext,SixLabors.ImageSharp.Processing.PixelRowOperation)" APIs.
+There is a way to process image data in a floating-point format that might be faster for  multi-core client applications, and also has the advantage of working on images of any underlying pixel-format, in a completely transparent way: using the @"SixLabors.ImageSharp.Processing.PixelRowDelegateExtensions.ProcessPixelRowsAsVector4(SixLabors.ImageSharp.Processing.IImageProcessingContext,SixLabors.ImageSharp.Processing.PixelRowOperation)" APIs.
 
 This is how you can use this extension to manipulate an image:
 
@@ -102,7 +102,7 @@ image.Mutate(c => c.ProcessPixelRowsAsVector4(row =>
 
 This API receives a @"SixLabors.ImageSharp.Processing.PixelRowOperation" instance as input, and uses it to modify the pixel data of the target image. It does so by automatically executing the input operation in parallel, on multiple pixel rows at the same time, to fully leverage the power of modern multi-core CPUs. The `ProcessPixelRowsAsVector4` extension also takes care of converting the pixel data to/from the `Vector4` format, which means the same operation can be used to easily process images of any existing pixel-format, without having to implement the processing logic again for each of them.
 
-This extension offers the fastest, easiest and most flexible way to implement custom image processors in ImageSharp.
+This extension offers fast and flexible way to implement custom image processors in ImageSharp, although the processor-level parallelism might be less optimal for high-load server-side applications. To address this, the level of parallelism can be customized by changing @"SixLabors.ImageSharp.Configuration.MaxDegreeOfParallelism".
 
 ### `Span<T>` limitations
 Please be aware that **`Span<T>` has a very specific limitation**: it is a stack-only type! Read the *Is There Anything Span Can’t Do?!* section in [this article](https://www.codemag.com/Article/1807051/Introducing-.NET-Core-2.1-Flagship-Types-Span-T-and-Memory-T) for more details.
