@@ -16,12 +16,15 @@ If you want to achieve killer speed in your pixel manipulation routines, you sho
 
 This is how you can implement efficient row-by-row pixel manipulation. This API receives a @"SixLabors.ImageSharp.PixelAccessor`1" which ensures that the span is never [transferred to the heap](#spant-limitations) making the operation safe.
 
+> [!Note]
+> The pixel manipulation APIs have been changed in ImageSharp 2.0.
+> If you are interested about the background of these changes, see the [API discussion on GitHub](https://github.com/SixLabors/ImageSharp/issues/1739).
 
 ```C#
 using SixLabors.ImageSharp;
 
 // ...
-using Image<Rgba32> image = new(400, 400);
+using Image<Rgba32> image = Image.Load<Rgba32>("my_file.png");
 image.ProcessPixelRows(accessor =>
 {
     // Color is pixel-agnostic, but it's implicitly convertible to the Rgba32 pixel type
@@ -43,19 +46,21 @@ image.ProcessPixelRows(accessor =>
                 pixel = transparent;
             }
         }
-
-        // We can greatly simplify the code above thanks to C# 7.3 foreach with 'ref'.
-        // The following foreach loop is equivalent to the previous 'for' loop:
-        foreach (ref Rgba32 pixel in pixelRow)
-        {
-            if (pixel.A == 0)
-            {
-                // overwrite the pixel referenced by 'ref Rgba32 pixel':
-                pixel = transparent;
-            }
-        }
     }
 });
+```
+
+It's possible to simplify the part dealing with `pixelRow` using C# 7.3 `foreach ref`:
+
+```C#
+foreach (ref Rgba32 pixel in pixelRow)
+{
+    if (pixel.A == 0)
+    {
+        // overwrite the pixel referenced by 'ref Rgba32 pixel':
+        pixel = transparent;
+    }
+}
 ```
 
 Need to process two images simultaneously? Sure!
@@ -82,7 +87,7 @@ private static Image<Rgba32> Extract(Image<Rgba32> sourceImage, Rectangle source
 ```
 
 ### Parallel, pixel-format agnostic image manipulation
-There is a way to process image data in a floating-point format that might be faster for  multi-core client applications, and also has the advantage of working on images of any underlying pixel-format, in a completely transparent way: using the @"SixLabors.ImageSharp.Processing.PixelRowDelegateExtensions.ProcessPixelRowsAsVector4(SixLabors.ImageSharp.Processing.IImageProcessingContext,SixLabors.ImageSharp.Processing.PixelRowOperation)" APIs.
+There is a way to process image data in a pixel-agnostic floating-point format that has the advantage of working on images of any underlying pixel-format, in a completely transparent way: using the @"SixLabors.ImageSharp.Processing.PixelRowDelegateExtensions.ProcessPixelRowsAsVector4(SixLabors.ImageSharp.Processing.IImageProcessingContext,SixLabors.ImageSharp.Processing.PixelRowOperation)" APIs.
 
 This is how you can use this extension to manipulate an image:
 
@@ -101,7 +106,7 @@ image.Mutate(c => c.ProcessPixelRowsAsVector4(row =>
 
 This API receives a @"SixLabors.ImageSharp.Processing.PixelRowOperation" instance as input, and uses it to modify the pixel data of the target image. It does so by automatically executing the input operation in parallel, on multiple pixel rows at the same time, to fully leverage the power of modern multi-core CPUs. The `ProcessPixelRowsAsVector4` extension also takes care of converting the pixel data to/from the `Vector4` format, which means the same operation can be used to easily process images of any existing pixel-format, without having to implement the processing logic again for each of them.
 
-This extension offers fast and flexible way to implement custom image processors in ImageSharp, although the processor-level parallelism might be less optimal for high-load server-side applications. To address this, the level of parallelism can be customized by changing @"SixLabors.ImageSharp.Configuration.MaxDegreeOfParallelism".
+This extension offers fast and flexible way to implement custom image processors in ImageSharp. In certain cases (typically desktop apps running on multi-core CPU) the processor-level parallelism might be faster and desirable, but in case of high-load server-side applications it usually hurts throughput. To address this, the level of parallelism can be customized via @"SixLabors.ImageSharp.Configuration"'s @"SixLabors.ImageSharp.Configuration.MaxDegreeOfParallelism" property.
 
 ### `Span<T>` limitations
 Please be aware that **`Span<T>` has a very specific limitation**: it is a stack-only type! Read the *Is There Anything Span Can’t Do?!* section in [this article](https://www.codemag.com/Article/1807051/Introducing-.NET-Core-2.1-Flagship-Types-Span-T-and-Memory-T) for more details.
@@ -147,8 +152,8 @@ using (var image = Image.LoadPixelData<Rgba32>(rgbaBytes, width, height))
 }
 ```
 
-### That's all nice, but how do I get a single pointer or span to the underlying pixel buffer?
+### OK nice, but how do I get a single pointer or span to the underlying pixel buffer?
 
-That's the neat part, youd don't. 🙂
+That's the neat part, youd don't. 🙂 Well ... normally.
 
-We highly recommend to use the methods introduced above, since ImageSharp buffers are discontiguous by default. If you *really* need to overcome this limitation, please read the [Memory Management](memorymanagement.md) paragraph.
+For custom image processing code written in C#, we highly recommend to use the methods introduced above, since ImageSharp buffers are discontiguous by default. However, certain interop use-cases may require to overcome this limitation, and we support that. Please read the [Memory Management](memorymanagement.md) section for more information.
