@@ -90,11 +90,3 @@ Allows the changing of the background color of transparent images.
 {PATH_TO_YOUR_IMAGE}?bgcolor=128,64,32
 {PATH_TO_YOUR_IMAGE}?bgcolor=128,64,32,16
 ```
-
-#### Auto Orient
-
-Allows the normalization of image orientation based on the source EXIF metadata.
-
-```
-{PATH_TO_YOUR_IMAGE}?autoorient=true
-```
