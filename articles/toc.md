@@ -7,6 +7,7 @@
 #### [Create an animated GIF](imagesharp/animatedgif.md)
 ### [Working with Pixel Buffers](imagesharp/pixelbuffers.md)
 ### [Configuration](imagesharp/configuration.md)
+### [Memory Management](imagesharp/memorymanagement.md)
 
 # [ImageSharp.Drawing](imagesharp.drawing/index.md)
 ## [Getting Started](imagesharp.drawing/gettingstarted.md)
