@@ -9,7 +9,7 @@ using (Image<Rgba32> image = new Image<Rgba32>(400, 400))
 }
 ```
 
-The indexer is an order of magnitude faster than the `.GetPixel(x, y)` and `.SetPixel(x, y)` methods of `System.Drawing`, but individual `[x, y]` indexing has inherent overhead compared to more sophisticated approaches demnonstrated below.
+The indexer is an order of magnitude faster than the `.GetPixel(x, y)` and `.SetPixel(x, y)` methods of `System.Drawing`, but individual `[x, y]` indexing has inherent overhead compared to more sophisticated approaches demonstrated below.
 
 ### Efficient pixel manipulation
 If you want to achieve killer speed in your pixel manipulation routines, you should utilize the per-row methods. These methods take advantage of the [`Span<T>`-based memory manipulation primitives](https://www.codemag.com/Article/1807051/Introducing-.NET-Core-2.1-Flagship-Types-Span-T-and-Memory-T) from [System.Memory](https://www.nuget.org/packages/System.Memory/), providing a fast, yet safe low-level solution to manipulate pixel data.
@@ -42,7 +42,7 @@ image.ProcessPixelRows(accessor =>
             ref Rgba32 pixel = ref pixelRow[x];
             if (pixel.A == 0)
             {
-                // overwrite the pixel referenced by 'ref Rgba32 pixel':
+                // Overwrite the pixel referenced by 'ref Rgba32 pixel':
                 pixel = transparent;
             }
         }
@@ -66,10 +66,10 @@ foreach (ref Rgba32 pixel in pixelRow)
 Need to process two images simultaneously? Sure!
 
 ```C#
-// Extract sub-region of sourceImage as a new image
+// Extract a sub-region of sourceImage as a new image
 private static Image<Rgba32> Extract(Image<Rgba32> sourceImage, Rectangle sourceArea)
 {
-    Image<Rgba32> targetImage = new (sourceArea.Width, sourceArea.Height);
+    Image<Rgba32> targetImage = new(sourceArea.Width, sourceArea.Height);
     int height = sourceArea.Height;
     sourceImage.ProcessPixelRows(targetImage, (sourceAccessor, targetAccessor) =>
     {
@@ -154,6 +154,6 @@ using (var image = Image.LoadPixelData<Rgba32>(rgbaBytes, width, height))
 
 ### OK nice, but how do I get a single pointer or span to the underlying pixel buffer?
 
-That's the neat part, youd don't. 🙂 Well ... normally.
+That's the neat part, you don't. 🙂 Well ... normally.
 
 For custom image processing code written in C#, we highly recommend to use the methods introduced above, since ImageSharp buffers are discontiguous by default. However, certain interop use-cases may require to overcome this limitation, and we support that. Please read the [Memory Management](memorymanagement.md) section for more information.
