@@ -490,6 +490,10 @@ header .navbar {
   overflow-x: auto !important;
 }
 
+.sidetoc.shiftup {
+  bottom: auto;
+}
+
 /* Blast the default styles out of the way so the side nav is usable*/
 .sidetoc * {
   font-size: 13px !important;

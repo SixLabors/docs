@@ -9,7 +9,7 @@ The following caches are available for the middleware.
 
 ### PhysicalFileSystemCache
 
-The @"SixLabors.ImageSharp.Web.Caching.PhysicalFileSystemCache" stores processed image files in the [web root](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/?view=aspnetcore-3.1&tabs=macos#web-root) folder. This is the default cache installed when configuring the middleware.    
+The @"SixLabors.ImageSharp.Web.Caching.PhysicalFileSystemCache", by default, stores processed image files in the [web root](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/?view=aspnetcore-3.1&tabs=macos#web-root) folder. This is the default cache installed when configuring the middleware.    
   
 Images are cached in separate folders based upon a hash of the request URL. this allows the caching of millions of image files without slowing down the file system.
   
@@ -62,3 +62,56 @@ Once installed the cache @SixLabors.ImageSharp.Web.Caching.Azure.AzureBlobStorag
 ```
 
 Images are cached using a hash of the request URL as the blob name. All appropriate metadata is stored in the blob properties to correctly serve the blob with the correct response headers.
+
+
+### AWSS3StorageCache  
+  
+This cache allows the caching of image files using [Amazon Simple Storage Service (Amazon S3)](https://aws.amazon.com/s3/) and is available as an external package installable via [NuGet](https://www.nuget.org/packages/SixLabors.ImageSharp.Web.Providers.AWS)
+
+# [Package Manager](#tab/tabid-1a)
+
+```bash
+PM > Install-Package SixLabors.ImageSharp.Web.Providers.AWS -Version VERSION_NUMBER
+```
+
+# [.NET CLI](#tab/tabid-2a)
+
+```bash
+dotnet add package SixLabors.ImageSharp.Web.Providers.AWS --version VERSION_NUMBER
+```
+
+# [PackageReference](#tab/tabid-3a)
+
+```xml
+<PackageReference Include="SixLabors.ImageSharp.Web.Providers.AWS" Version="VERSION_NUMBER" />
+```
+
+# [Paket CLI](#tab/tabid-4a)
+
+```bash
+paket add SixLabors.ImageSharp.Web.Providers.AWS --version VERSION_NUMBER
+```
+
+***
+
+Once installed the cache @SixLabors.ImageSharp.Web.Caching.AWS.AWSS3StorageCacheOptions can be configured as follows:
+
+
+```c#  
+// Configure and register the bucket.  
+// Alteratively use `appsettings.json` to represent the class and bind those settings.
+.Configure<AWSS3StorageCacheOptions>(options =>
+{
+    options.Endpoint = {AWS_ENDPOINT};
+    options.BucketName = {AWS_BUCKET_NAME};
+    options.AccessKey = {AWS_ACCESS_KEY};
+    options.AccessSecret = {AWS_ACCESS_SECRET};
+    options.Region = {AWS_REGION};
+    
+    // Optionally create the cache bucket on startup if not already created.
+    AWSS3StorageCache.CreateIfNotExists(options, S3CannedACL.Private);
+})
+.SetCache<AzureBlobStorageCache>()
+```
+
+Images are cached using a hash of the request URL as the object name. All appropriate metadata is stored in the object properties to correctly serve the object with the correct response headers.

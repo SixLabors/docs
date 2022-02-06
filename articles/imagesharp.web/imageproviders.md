@@ -47,7 +47,7 @@ Once installed the provider @"SixLabors.ImageSharp.Web.Providers.Azure.AzureBlob
 
 
 ```c#  
-// Configure and register the container.  
+// Configure and register the containers.  
 // Alteratively use `appsettings.json` to represent the class and bind those settings.
 .Configure<AzureBlobStorageImageProviderOptions>(options =>
 {
@@ -65,4 +65,61 @@ Url requests are matched in accordance to the following rule:
   
 ```bash
 /{CONTAINER_NAME}/{BLOB_FILENAME} 
+```
+
+### AWSS3StorageImageProvider  
+  
+This provider allows the processing and serving of image files from [Amazon Simple Storage Service (Amazon S3)](https://aws.amazon.com/s3/) and is available as an external package installable via [NuGet](https://www.nuget.org/packages/SixLabors.ImageSharp.Web.Providers.AWS)
+
+# [Package Manager](#tab/tabid-1a)
+
+```bash
+PM > Install-Package SixLabors.ImageSharp.Web.Providers.AWS -Version VERSION_NUMBER
+```
+
+# [.NET CLI](#tab/tabid-2a)
+
+```bash
+dotnet add package SixLabors.ImageSharp.Web.Providers.AWS --version VERSION_NUMBER
+```
+
+# [PackageReference](#tab/tabid-3a)
+
+```xml
+<PackageReference Include="SixLabors.ImageSharp.Web.Providers.AWS" Version="VERSION_NUMBER" />
+```
+
+# [Paket CLI](#tab/tabid-4a)
+
+```bash
+paket add SixLabors.ImageSharp.Web.Providers.AWS --version VERSION_NUMBER
+```
+
+***
+
+Once installed the cache @SixLabors.ImageSharp.Web.Providers.AWS.AWSS3StorageImageProviderOptions can be configured as follows:
+
+
+```c#  
+// Configure and register the buckets.  
+// Alteratively use `appsettings.json` to represent the class and bind those settings.
+.Configure<AWSS3StorageImageProviderOptions>(options =>
+{
+    // The "S3Buckets" collection allows registration of multiple buckets.
+    options.S3Buckets.Add(new AWSS3BucketClientOptions
+    {
+        options.Endpoint = {AWS_ENDPOINT};
+        options.BucketName = {AWS_BUCKET_NAME};
+        options.AccessKey = {AWS_ACCESS_KEY};
+        options.AccessSecret = {AWS_ACCESS_SECRET};
+        options.Region = {AWS_REGION};
+    });
+})
+.AddProvider<AWSS3StorageImageProviderOptions>()
+```
+
+Url requests are matched in accordance to the following rule:  
+  
+```bash
+/{BUCKET_NAME}/{OBJECT_FILENAME} 
 ```
