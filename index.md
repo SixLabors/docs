@@ -4,6 +4,9 @@ We aim to provide modern, cross-platform, incredibly powerful yet beautifully si
 
 You can find tutorials, examples and API details covering all Six Labors projects.
 
+>[!NOTE]
+>Documentation for previous releases can be found at https://docs-v1.sixlabors.com/.
+
 ### [API documentation](api/index.md)
 
 Detailed documentation for the entire API available across our projects.

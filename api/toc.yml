@@ -6,5 +6,7 @@
   href: ImageSharp.Web/SixLabors.ImageSharp.Web.yml
 - name: ImageSharp.Web.Providers.Azure
   href: ImageSharp.Web.Providers.Azure/SixLabors.ImageSharp.Web.Providers.Azure.yml
+- name: ImageSharp.Web.Providers.AWS
+  href: ImageSharp.Web.Providers.AWS/SixLabors.ImageSharp.Web.Providers.AWS.yml
 - name: Fonts
   href: Fonts/SixLabors.Fonts.yml

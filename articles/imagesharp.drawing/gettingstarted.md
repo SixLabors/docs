@@ -42,20 +42,23 @@ using SixLabors.ImageSharp.Processing;
 using SixLabors.ImageSharp.Drawing.Processing;
 using SixLabors.ImageSharp.PixelFormats;
 
-Image image = ...; // create any way you like.
+Image image = ...; // Create any way you like.
 
 // The options are optional
-ShapeGraphicsOptions options = new ShapeGraphicsOptions()
+DrawingOptions options = new()
 {
-    ColorBlendingMode  = PixelColorBlendingMode.Multiply
+    GraphicsOptions = new()
+    {
+        ColorBlendingMode  = PixelColorBlendingMode.Multiply
+    }
 };
 
 IBrush brush = Brushes.Horizontal(Color.Red, Color.Blue);
 IPen pen = Pens.DashDot(Color.Green, 5);
 IPath yourPolygon = new Star(x: 100.0f, y: 100.0f, prongs: 5, innerRadii: 20.0f, outerRadii:30.0f);
 
-// draws a star with Horizontal red and blue hatching with a dash dot pattern outline.
-image.Mutate( x=> x.Fill(options, brush, yourPolygon)
+// Draws a star with horizontal red and blue hatching with a dash dot pattern outline.
+image.Mutate(x=> x.Fill(options, brush, yourPolygon)
                    .Draw(option, pen, yourPolygon));
 ```
 
@@ -72,41 +75,43 @@ ImageSharp.Drawing provides several options for drawing text all overloads of a 
 #### Minimal Example
 
 ```c#
+using SixLabors.Fonts;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Processing;
 using SixLabors.ImageSharp.Drawing.Processing;
 
-Image image = ...; // create any way you like.
-Font font = ...; // see our Fonts library for best practices on retriving one of these.
+Image image = ...; // Create any way you like.
+Font font = ...; // See our Fonts library for best practices on retrieving one of these.
 string yourText = "this is some sample text";
 
-image.Mutate( x=> x.DrawText(yourText, font, Color.Black, new PointF(10, 10)));
+image.Mutate(x=> x.DrawText(yourText, font, Color.Black, new PointF(10, 10)));
 ```
 
 #### Expanded Example
 
 ```c#
+using SixLabors.Fonts;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Processing;
 using SixLabors.ImageSharp.Drawing.Processing;
 using SixLabors.ImageSharp.PixelFormats;
 
-Image image = ...; // create any way you like.
-Font font = ...; // see our Fonts library for best practices on retriving one of these.
+Image image = ...; // Create any way you like.
+Font font = ...; // See our Fonts library for best practices on retrieving one of these.
 
 // The options are optional
-TextGraphicsOptions options = new TextGraphicsOptions()
+TextOptions options = new(font)
 {
-    ApplyKerning = true,
-    TabWidth = 8, // a tab renders as 8 spaces wide
-    WrapTextWidth = 100, // greater than zero so we will word wrap at 100 pixels wide
-    HorizontalAlignment = HorizontalAlignment.Right // right align
+    Origin = new PointF(100, 100), // Set the rendering origin.
+    TabWidth = 8, // A tab renders as 8 spaces wide
+    WrappingLength = 100, // Greater than zero so we will word wrap at 100 pixels wide
+    HorizontalAlignment = HorizontalAlignment.Right // Right align
 };
 
 IBrush brush = Brushes.Horizontal(Color.Red, Color.Blue);
 IPen pen = Pens.DashDot(Color.Green, 5);
 string text = "sample text";
 
-// draws a star with Horizontal red and blue hatching with a dash dot pattern outline.
-image.Mutate( x=> x.DrawText(options, text, font, brush, pen, new PointF(100, 100));
+// Draws the text with horizontal red and blue hatching with a dash dot pattern outline.
+image.Mutate(x=> x.DrawText(options, text, brush, pen);
 ```

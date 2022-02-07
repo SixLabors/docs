@@ -24,7 +24,7 @@ $(function () {
     });
 
     // Fix the width of the right sidebar so we don't lose content.
-    const scrollbarWidth = 3 * (window.innerWidth - document.body.offsetWidth);
+    const scrollbarWidth = 3.5 * (window.innerWidth - document.body.offsetWidth);
     $(".sideaffix").each(function () {
         const $this = $(this);
 

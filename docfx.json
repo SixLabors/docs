@@ -74,6 +74,21 @@
       "properties": {
         "TargetFramework": "netcoreapp3.1"
       }
+    },
+    {
+      "src": [
+        {
+          "files": [
+            "ext/ImageSharp.Web/src/ImageSharp.Web.Providers.AWS/**.csproj"
+          ]
+        }
+      ],
+      "dest": "api/ImageSharp.Web.Providers.AWS",
+      "disableGitFeatures": false,
+      "disableDefaultFilter": false,
+      "properties": {
+        "TargetFramework": "netcoreapp3.1"
+      }
     }
   ],
   "build": {

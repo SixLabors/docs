@@ -47,6 +47,45 @@ In this very basic example you are actually utilizing several core ImageSharp fe
 - [Image Formats](imageformats.md) by loading and saving an image.
 - [Image Processors](processing.md) by calling `Mutate()` and `Resize()`
 
+### Identify image
+
+If you are only interested in the image dimensions or metadata of the image, you can achieve this with `Image.Identify`.
+This will avoid decoding the complete image and therfore be much faster.
+
+For example:
+
+```c#
+IImageInfo imageInfo = Image.Identify(@"image.jpg");
+Console.WriteLine($"Width: {imageInfo.Width}");
+Console.WriteLine($"Height: {imageInfo.Width}");
+```
+
+### Image metadata
+
+To retrieve image metadata, either load an image with `Image.Load` or use `Image.Identify` (this will not decode the complete image, just the metadata). In both cases you will get the image dimensions and additional the the image
+metadata in the `Metadata` property.
+
+This will contain the following profiles, if present in the image:
+
+- ExifProfile
+- IccProfile
+- IptcProfile
+- XmpProfile
+
+##### Format specific metadata
+
+Further there are format specific metadata, which can be obtained for example like this:
+
+```c#
+Image image = Image.Load(@"image.jpg");
+ImageMetadata imageMetaData = image.Metadata;
+
+// Syntactic sugar for imageMetaData.GetFormatMetadata(JpegFormat.Instance)
+JpegMetadata jpegData = imageMetaData.GetJpegMetadata();
+```
+
+And similar for the other supported formats.
+
 ### Initializing New Images
 
 ```c#
@@ -58,7 +97,7 @@ int width = 640;
 int height = 480;
 
 // Creates a new image with empty pixel data. 
-using(var image = new Image<Rgba32>(width, height)) 
+using(Image<Rgba32> image = new(width, height)) 
 {
   // Do your drawing in here...
 
