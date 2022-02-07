@@ -50,7 +50,7 @@ It's also possible to do the other way around, and wrap an existing native buffe
 
 ### Troubleshooting memory leaks
 
-Strictly speaking, ImageSharp is safe against memory leaks, because finalizers will take care of the native memory resources leaked by omitting `Dispose()` or `using` blocks. However, letting the memory leak to finalizers may lead to performance issues and if GC execution can't keep up with the leaks, to `OutOfMemoryException`. Application code should take care of disposing any @`SixLabors.ImageSharp.Image` allocated.
+Strictly speaking, ImageSharp is safe against memory leaks, because finalizers will take care of the native memory resources leaked by omitting `Dispose()` or `using` blocks. However, letting the memory leak to finalizers may lead to performance issues and if GC execution can't keep up with the leaks, to `OutOfMemoryException`. Application code should take care of disposing any @"SixLabors.ImageSharp.Image`1" allocated.
 
 In complex and large apps, this might be hard to verify. ImageSharp 2.0+ exposes some code-first diagnostic API-s that may help detecting leaks.
 
