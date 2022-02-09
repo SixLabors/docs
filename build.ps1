@@ -1,5 +1,7 @@
 # Ensure all submodules are currently checked out to the latest tag.
 git submodule update --init --recursive
+git submodule foreach git rm --cached -r .
+
 Get-ChildItem ./ext -Directory | ForEach-Object {
     $path = $_.FullName
 
