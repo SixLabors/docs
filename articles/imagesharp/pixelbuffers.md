@@ -152,8 +152,8 @@ using (var image = Image.LoadPixelData<Rgba32>(rgbaBytes, width, height))
 }
 ```
 
-### OK nice, but how do I get a single pointer or span to the underlying pixel buffer?
+### OK nice, but how do you get a single pointer or span to the underlying pixel buffer?
 
-That's the neat part, you don't. 🙂 Well ... normally.
+That's the neat part, you don't. 🙂 Well, normally.
 
 For custom image processing code written in C#, we highly recommend to use the methods introduced above, since ImageSharp buffers are discontiguous by default. However, certain interop use-cases may require to overcome this limitation, and we support that. Please read the [Memory Management](memorymanagement.md) section for more information.
