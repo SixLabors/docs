@@ -19,6 +19,10 @@ Color[] colors = {
 
 // Create empty image.
 using Image<Rgba32> gif = new(width, height, Color.Blue);
+
+// Set animation loop repeat count to 5.
+var gifMetaData = gif.Metadata.GetGifMetadata();
+gifMetaData.RepeatCount = 5;
 for (int i = 0; i < colors.Length; i++)
 {
     // Create a color image, which will be added to the gif.
