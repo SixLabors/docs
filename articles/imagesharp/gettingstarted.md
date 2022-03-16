@@ -57,7 +57,7 @@ For example:
 ```c#
 IImageInfo imageInfo = Image.Identify(@"image.jpg");
 Console.WriteLine($"Width: {imageInfo.Width}");
-Console.WriteLine($"Height: {imageInfo.Width}");
+Console.WriteLine($"Height: {imageInfo.Height}");
 ```
 
 ### Image metadata

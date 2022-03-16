@@ -19,13 +19,21 @@ Color[] colors = {
 
 // Create empty image.
 using Image<Rgba32> gif = new(width, height, Color.Blue);
+
+// Set animation loop repeat count to 5.
+var gifMetaData = gif.Metadata.GetGifMetadata();
+gifMetaData.RepeatCount = 5;
+
+// Set the delay until the next image is displayed.
+GifFrameMetadata metadata = gif.Frames.RootFrame.Metadata.GetGifMetadata();
+metadata.FrameDelay = frameDelay;
 for (int i = 0; i < colors.Length; i++)
 {
     // Create a color image, which will be added to the gif.
     using Image<Rgba32> image = new(width, height, colors[i]);
 
-    // Set the duration of the frame delay.
-    GifFrameMetadata metadata = image.Frames.RootFrame.Metadata.GetGifMetadata();
+    // Set the delay until the next image is displayed.
+    metadata = image.Frames.RootFrame.Metadata.GetGifMetadata();
     metadata.FrameDelay = frameDelay;
 
     // Add the color image to the gif.
