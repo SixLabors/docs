@@ -111,7 +111,7 @@ Once installed the cache @SixLabors.ImageSharp.Web.Caching.AWS.AWSS3StorageCache
     // Optionally create the cache bucket on startup if not already created.
     AWSS3StorageCache.CreateIfNotExists(options, S3CannedACL.Private);
 })
-.SetCache<AzureBlobStorageCache>()
+.SetCache<AWSS3StorageCache>()
 ```
 
 Images are cached using a hash of the request URL as the object name. All appropriate metadata is stored in the object properties to correctly serve the object with the correct response headers.
