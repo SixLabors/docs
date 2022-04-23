@@ -13,7 +13,6 @@ The @"SixLabors.ImageSharp.Web.Caching.PhysicalFileSystemCache", by default, sto
   
 Images are cached in separate folders based upon a hash of the request URL. this allows the caching of millions of image files without slowing down the file system.
   
-
 ### AzureBlobStorageImageCache  
   
 This cache allows the caching of image files using [Azure Blob Storage](https://docs.microsoft.com/en-us/azure/storage/blobs/) and is available as an external package installable via [NuGet](https://www.nuget.org/packages/SixLabors.ImageSharp.Web.Providers.Azure)

@@ -90,3 +90,34 @@ Allows the changing of the background color of transparent images.
 {PATH_TO_YOUR_IMAGE}?bgcolor=128,64,32
 {PATH_TO_YOUR_IMAGE}?bgcolor=128,64,32,16
 ```
+
+## Securing Processing Commands
+
+With ImageSharp.Web it is possible to configure an action to generate an HMAC by setting the @SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.HMACSecretKey property to any byte array value. This triggers checks in the middleware to look for and compare a HMAC hash of the request URL with the hash that is passed alongside the commands.
+
+In cryptography, an HMAC (sometimes expanded as either keyed-hash message authentication code or hash-based message authentication code) is a specific type of message authentication code (MAC) involving a cryptographic hash function and a secret cryptographic key. As with any MAC, it may be used to simultaneously verify both the data integrity and authenticity of a message.
+
+HMAC can provide authentication using a shared secret instead of using digital signatures with asymmetric cryptography. It trades off the need for a complex public key infrastructure by delegating the key exchange to the communicating parties, who are responsible for establishing and using a trusted channel to agree on the key prior to communication.
+
+Any cryptographic hash function, such as SHA-2 or SHA-3, may be used in the calculation of an HMAC; the resulting MAC algorithm is termed HMAC-X, where X is the hash function used (e.g. HMAC-SHA256 or HMAC-SHA3-512). The cryptographic strength of the HMAC depends upon the cryptographic strength of the underlying hash function, the size of its hash output, and the size and quality of the key.
+
+HMAC does not encrypt the message. Instead, the message (encrypted or not) must be sent alongside the HMAC hash. Parties with the secret key will hash the message again themselves, and if it is authentic, the received and computed hashes will match.
+
+By default ImageSharp.Web will use a HMAC-SHA256 algorithm.
+
+```c#
+private Func<ImageCommandContext, byte[], Task<string>> onComputeHMACAsync = (context, secret) =>
+{
+    string uri = CaseHandlingUriBuilder.BuildRelative(
+            CaseHandlingUriBuilder.CaseHandling.LowerInvariant,
+            context.Context.Request.PathBase,
+            context.Context.Request.Path,
+            QueryString.Create(context.Commands));
+
+    return Task.FromResult(HMACUtilities.ComputeHMACSHA256(uri, secret));
+};
+```
+
+Users can replicate that key using the same @SixLabors.ImageSharp.Web.CaseHandlingUriBuilder and @SixLabors.ImageSharp.Web.HMACUtilities APIs to generate the HMAC hash on the client. The hash must be passed via a command using the @SixLabors.ImageSharp.Web.HMACUtilities.TokenCommand constant.
+
+Any invalid matches are rejected at the very start of the processing pipeline with a 400 HttpResponse code.

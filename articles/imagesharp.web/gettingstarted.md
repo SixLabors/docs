@@ -63,5 +63,58 @@ services.AddImageSharp()
         options.CacheFolder = "different-cache";
     });
 ```  
-  
+
+>[!IMPORTANT]
+>ImageSharp.Web v2.0.0 contains breaking changes to caching which require additional configuration for v1.x installs.
+
+With ImageSharp.Web v2.0.0 a new concept @SixLabors.ImageSharp.Web.Caching.ICacheKey was introduced to allow greater flexibility when generating cached file names. To preserve the v1.x cache format users must configure two settings:
+
+1. @SixLabors.ImageSharp.Web.Caching.ICacheKey should be configured to use @SixLabors.ImageSharp.Web.Caching.LegacyV1CacheKey
+2. @SixLabors.ImageSharp.Web.Caching.PhysicalFileSystemCacheOptions.CacheFolderDepth should be configured to use the same value as @SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.CacheHashLength - Default `12`.
+
+A complete configuration sample allowing the replication of legacy v1.x behavior can be found below:
+
+```c#
+services.AddImageSharp(options =>
+{
+    // Set to previous default value of CachedNameLength
+    options.CacheHashLength = 12;
+
+    // Use the same command parsing as v1.x
+    options.OnParseCommandsAsync = c =>
+    {
+        if (c.Commands.Count == 0)
+        {
+            return Task.CompletedTask;
+        }
+
+        // It's a good idea to have this to provide very basic security.
+        // We can safely use the static resize processor properties.
+        uint width = c.Parser.ParseValue<uint>(
+            c.Commands.GetValueOrDefault(ResizeWebProcessor.Width),
+            c.Culture);
+
+        uint height = c.Parser.ParseValue<uint>(
+            c.Commands.GetValueOrDefault(ResizeWebProcessor.Height),
+            c.Culture);
+
+        if (width > 4000 && height > 4000)
+        {
+            c.Commands.Remove(ResizeWebProcessor.Width);
+            c.Commands.Remove(ResizeWebProcessor.Height);
+        }
+
+        return Task.CompletedTask;
+    });
+})
+.Configure<PhysicalFileSystemCacheOptions>(options =>
+{
+    // Ensure this value is the same as CacheHashLength to generate a backwards-compatible cache folder structure
+    options.CacheFolderDepth = 12;
+})
+.SetCacheKey<LegacyV1CacheKey>()
+.ClearProviders()
+.AddProvider<WebRootImageProvider>();
+```
+
 Full Configuration API options are available [here](xref:SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions).
