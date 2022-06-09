@@ -40,6 +40,7 @@ using (var image = Image.Load(inputStream, out format))
 - `image.SaveAsTga()` (shortcut for `image.Save(new TgaEncoder())`)
 - `image.SaveAsTiff()` (shortcut for `image.Save(new TiffEncoder())`)
 - `image.SaveAsWebp()` (shortcut for `image.Save(new WebpEncoder())`)
+
 ### A Deeper Overview of ImageSharp Format Management
 
 Real life image streams are usually stored / transferred in standardized formats like Jpeg, Png, Bmp, Gif etc. An image format is represented by an [`IImageFormat`](xref:SixLabors.ImageSharp.Formats.IImageFormat) implementation.
