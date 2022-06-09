@@ -120,7 +120,7 @@ A short summary of the limitations:
 ### Exporting raw pixel data from an `Image<T>`
 You can use @"SixLabors.ImageSharp.Image`1.CopyPixelDataTo*" to copy the pixel data to a user buffer. Note that the following sample code leads to to significant extra GC allocation in case of large images, which can be avoided by processing the image row-by row instead.
 ```C#
-Rgb32[] pixelArray = new Rgba32[image.Width * image.Height]
+Rgba32[] pixelArray = new Rgba32[image.Width * image.Height]
 image.CopyPixelDataTo(pixelArray);
 ```
 
