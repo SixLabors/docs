@@ -121,5 +121,7 @@ Once installed the cache @SixLabors.ImageSharp.Web.Providers.AWS.AWSS3StorageIma
 Url requests are matched in accordance to the following rule:  
   
 ```bash
-/{BUCKET_NAME}/{OBJECT_FILENAME} 
+/{AWS_BUCKET_NAME}/{OBJECT_FILENAME} 
 ```
+
+Which is to say that the AWS S3 bucket name must appear in the Url so it can be matched with the correct S3 configuration. If you wished to override this and provide a deafult, this can be done using [URL Rewriting middleware](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/url-rewriting?view=aspnetcore-6.0).
