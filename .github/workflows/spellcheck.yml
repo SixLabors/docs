@@ -3,7 +3,7 @@ name: Documentation Checks
 on:
   push:
     branches:
-      - main #or main if that's what the project is using
+      - main
   pull_request:
     branches:
       - main
@@ -20,5 +20,5 @@ jobs:
           node-version: "16"
       - run: npm install -g cspell
         name: Install cSpell
-      - run: cspell --config ./cSpell.json **/*.md" --no-progress # Update for path to the markdown files
+      - run: cspell --config ./cSpell.json **/*.md" --no-progress
         name: Run cSpell
