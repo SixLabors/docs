@@ -2,6 +2,22 @@
     "version": "0.2",
     "language": "en",
     "words": [
+        "CMYK",
+        "colorspace",
+        "coreclr",
+        "docfx",
+        "EXIF",
+        "HMAC",
+        "Imagesharp",
+        "parameterizing",
+        "rasterization",
+        "rasterizer",
+        "RGBA",
+        "runtimes",
+        "SIMD",
+        "struct",
+        "structs",
+        "unmanaged"
     ],
     "ignoreWords": [],
     "patterns": [
