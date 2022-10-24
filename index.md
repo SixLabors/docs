@@ -1,11 +1,11 @@
-# Six Labors Documentation.
+# Six Labors Documentation
 
 We aim to provide modern, cross-platform, incredibly powerful yet beautifully simple graphics libraries. Built against .NET Standard, our libraries can be used in device, cloud, and embedded/IoT scenarios.
 
 You can find tutorials, examples and API details covering all Six Labors projects.
 
 >[!NOTE]
->Documentation for previous releases can be found at https://docs-v1.sixlabors.com/.
+>Documentation for previous releases can be found at <https://docs-v1.sixlabors.com/>.
 
 ### [API documentation](api/index.md)
 
@@ -67,7 +67,7 @@ We have implemented short self-contained sample projects for a few specific use 
 1. [Avatar with rounded corners](https://github.com/SixLabors/Samples/tree/main/ImageSharp/AvatarWithRoundedCorner)<br/>
    Crops rounded corners of a source image leaving a nice rounded avatar.
 2. [Draw watermark on image](https://github.com/SixLabors/Samples/tree/main/ImageSharp/DrawWaterMarkOnImage)<br/>
-   Draw water mark over an image automaticaly scaling the font size to fill the available space.
+   Draw water mark over an image automatically scaling the font size to fill the available space.
 3. [Change default encoder options](https://github.com/SixLabors/Samples/tree/main/ImageSharp/ChangeDefaultEncoderOptions)<br/>
    Provides an example on how you go about switching out the registered encoder for a file format and changing its default options in the process.
 4. [Draw text along a path](https://github.com/SixLabors/Samples/tree/main/ImageSharp/DrawingTextAlongAPath)<br/>

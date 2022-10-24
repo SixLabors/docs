@@ -1,6 +1,6 @@
 # Memory Management
 
-Starting with ImageSharp 2.0, the library uses large (~4MB) discontigous chunks of unmanaged memory to represent multi-megapixel images. Internally, these buffers are heavily pooled to reduce OS allocation overhead. Unlike in ImageSharp 1.0, the pools are automatically trimmed after a certain amount of allocation inactivity, releasing the buffers to the OS, making the library more suitable for applications that do imaging operations in a periodic manner.
+Starting with ImageSharp 2.0, the library uses large (~4MB) discontiguous chunks of unmanaged memory to represent multi-megapixel images. Internally, these buffers are heavily pooled to reduce OS allocation overhead. Unlike in ImageSharp 1.0, the pools are automatically trimmed after a certain amount of allocation inactivity, releasing the buffers to the OS, making the library more suitable for applications that do imaging operations in a periodic manner.
 
 The buffer allocation and pooling behavior is implemented by @"SixLabors.ImageSharp.Memory.MemoryAllocator" which is being used through @"SixLabors.ImageSharp.Configuration"'s @"SixLabors.ImageSharp.Configuration.MemoryAllocator" property within the library, therefore it's configurable and replaceable by the user.
 
