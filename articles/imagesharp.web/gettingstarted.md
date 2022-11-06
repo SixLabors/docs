@@ -36,7 +36,7 @@ services.AddImageSharp(
             options.MemoryStreamManager = new RecyclableMemoryStreamManager();
             options.BrowserMaxAge = TimeSpan.FromDays(7);
             options.CacheMaxAge = TimeSpan.FromDays(365);
-            options.CachedHashLength = 8;
+            options.CacheHashLength = 8;
             options.OnParseCommandsAsync = _ => Task.CompletedTask;
             options.OnBeforeSaveAsync = _ => Task.CompletedTask;
             options.OnProcessedAsync = _ => Task.CompletedTask;
