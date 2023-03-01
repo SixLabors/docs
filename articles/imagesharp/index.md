@@ -1,15 +1,15 @@
 # Introduction
 
 ### What is ImageSharp?
-ImageSharp is a new, fully featured, fully managed, cross-platform, 2D graphics library.
+ImageSharp is a modern, fully featured, fully managed, cross-platform, 2D graphics library.
 Designed to simplify image processing, ImageSharp brings you an incredibly powerful yet beautifully simple API.
 
 ImageSharp is designed from the ground up to be flexible and extensible. The library provides API endpoints for common image processing operations and the building blocks to allow for the development of additional operations.  
 
-Built against [.NET Standard 2.0](https://docs.microsoft.com/en-us/dotnet/standard/net-standard), ImageSharp can be used in device, cloud, and embedded/IoT scenarios.  
+Built against [.NET 6](https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-6), ImageSharp can be used in device, cloud, and embedded/IoT scenarios.  
   
 ### License  
-ImageSharp is licensed under the terms of [Apache License, Version 2.0](https://opensource.org/licenses/Apache-2.0). Commercial support licensing options are available in addition to this license, see https://sixlabors.com/pricing for details.
+ImageSharp is licensed under the terms of the [Six Labors Split License, Version 1.0](https://github.com/SixLabors/ImageSharp/blob/main/LICENSE). See https://sixlabors.com/pricing for commercial licensing details.
   
 ### Installation
   

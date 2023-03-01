@@ -1,9 +1,6 @@
 # Ensure all submodules are checked out with the latest main. (Useful for docs development.)
-git submodule update --init --recursive
-
-# Enable the following lines should there be any issues.
-# git submodule foreach git rm --cached -r .
-# git submodule foreach git reset --hard origin/main
+git submodule foreach git rm --cached -r .
+git submodule foreach git reset --hard origin/main
 
 git submodule foreach git pull -f origin main --recurse-submodules
 
