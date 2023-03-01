@@ -47,6 +47,14 @@ Real life image streams are usually stored / transferred in standardized formats
 - [`ImageEncoder`](xref:SixLabors.ImageSharp.Formats.ImageEncoder) is responsible for writing [`Image<TPixel>`](xref:SixLabors.ImageSharp.Image`1) into a stream using a given format.
 - Decoders/encoders and [`IImageFormatDetector`](xref:SixLabors.ImageSharp.Formats.IImageFormatDetector)'s are mapped to image formats in [`ImageFormatsManager`](xref:SixLabors.ImageSharp.Configuration.ImageFormatsManager). It's possible to register new formats, or drop existing ones. See [Configuration](configuration.md) for more details.
 
+### Working with Decoders
+
+The behavior of the various decoders during the decoding process can be controlled by passing [`DecoderOptions`](xref:SixLabors.ImageSharp.Formats.DecoderOptions) instances to our general `Load` APIs. These options contain means to control metadata handling, the decoded frame count, and properties to allow directly decoding the encoded image to a given target size.
+
+### Specialized Decoding
+
+In addition to the general decoding API we offer additional specialized decoding options [`ISpecializedDecoderOptions`](xref:SixLabors.ImageSharp.Formats.ISpecializedDecoderOptions) that can be accessed directly against [`ISpecializedDecoder<T>`](xref:SixLabors.ImageSharp.Formats.ISpecializedImageDecoder`1) instances which provide further options for decoding.
+
 ### Metadata-only Decoding
 
 Sometimes it's worth to efficiently decode image metadata ignoring the memory and CPU heavy pixel information inside the stream. ImageSharp allows this by using one of the several [Image.Identify](xref:SixLabors.ImageSharp.Image) overloads:
