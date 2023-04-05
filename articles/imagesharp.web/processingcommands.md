@@ -12,7 +12,7 @@ The following processors are built into the middleware. In addition extension po
 Allows the resizing of images.
 
 >[!NOTE]
->In V2 this processor will automatically correct the order of dimensional commands based on the presence of EXIF metadata indicating rotated (not flipped) images.
+>In V3 this processor will automatically correct the order of dimensional commands based on the presence of EXIF metadata indicating rotated (not flipped) images.
 >This behavior can be turned off per request.
 
 ``` bash
@@ -121,3 +121,48 @@ private Func<ImageCommandContext, byte[], Task<string>> onComputeHMACAsync = (co
 Users can replicate that key using the same @SixLabors.ImageSharp.Web.CaseHandlingUriBuilder and @SixLabors.ImageSharp.Web.HMACUtilities APIs to generate the HMAC hash on the client. The hash must be passed via a command using the @SixLabors.ImageSharp.Web.HMACUtilities.TokenCommand constant.
 
 Any invalid matches are rejected at the very start of the processing pipeline with a 400 HttpResponse code.
+
+## ImageTagHelper
+
+ASP.NET tag helpers are useful because they provide a more natural syntax for creating HTML elements in server-side code. They allow developers to create HTML elements in a way that is similar to how they would write HTML markup in a Razor view.
+
+Some of the benefits of using tag helpers include:
+
+1. Improved readability: Tag helpers make it easier to understand the purpose of the code by providing a clear and concise syntax that is closer to HTML.
+2. Reduced complexity: Tag helpers simplify the creation of complex HTML elements by reducing the amount of boilerplate code needed.
+3. Type safety: Tag helpers are strongly typed, which means that the compiler can catch errors at compile time rather than at runtime.
+4. Testability: Tag helpers make it easier to unit test server-side code by providing a cleaner separation of concerns between the server-side code and the HTML markup.
+5. Code reuse: Tag helpers can be used to encapsulate commonly used HTML elements, making it easier to reuse code across multiple views and pages.
+
+Overall, ASP.NET tag helpers provide a more efficient and maintainable way to create HTML elements in server-side code.
+
+ImageSharp.Web v3.0.0 comes equipped with a custom tag helper that allows the generation of all the commands supported by the middleware in an easily accessible manner. This includes automatic generation of HMAC command tokens.
+
+>[!NOTE]
+>Using @SixLabors.ImageSharp.Web.TagHelpers.ImageTagHelper is the recommended way to generate processing commands.
+
+To use @SixLabors.ImageSharp.Web.TagHelpers.ImageTagHelper, add the following imports command to `_ViewImports.cshtml` in your project.
+
+```html
+@addTagHelper *, SixLabors.ImageSharp.Web
+```
+
+All ImageSharp.Web commands are strongly typed and prefixed with `imagesharp` to namespace them against potentially conflicting commands. Visual Studio intellisense with automatically provide guidance
+once you start typing. For example, the following markup...
+
+```html
+<img
+    src="sixlabors.imagesharp.web.png"
+    imagesharp-width="300"
+    imagesharp-height="200"
+    imagesharp-rmode="ResizeMode.Pad"
+    imagesharp-rcolor="Color.LimeGreen" />
+```
+
+Will generate the following command when HMAC is enabled.
+
+```bash
+/sixlabors.imagesharp.web.png?width=300&height=200&rmode=Pad&rcolor=32CD32FF&hmac=21f93e41021df0d3f88b5e2a8753bb273f292598e1511df67ec7cfb63f0b2994
+```
+
+The @SixLabors.ImageSharp.Web.TagHelpers.ImageTagHelper type is unsealed so that you can inherit the type and support your own custom commands. 
