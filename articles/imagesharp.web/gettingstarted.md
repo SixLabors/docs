@@ -65,7 +65,7 @@ services.AddImageSharp()
 ```  
 
 >[!IMPORTANT]
->ImageSharp.Web v2.0.0 contains breaking changes to caching which require additional configuration for v1.x installs.
+>ImageSharp.Web v2.0.0 and above contains breaking changes to caching which require additional configuration when migrating from v1.x installs.
 
 With ImageSharp.Web v2.0.0 a new concept @SixLabors.ImageSharp.Web.Caching.ICacheKey was introduced to allow greater flexibility when generating cached file names. To preserve the v1.x cache format users must configure two settings:
 
