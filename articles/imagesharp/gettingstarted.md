@@ -55,7 +55,7 @@ This will avoid decoding the complete image and therfore be much faster.
 For example:
 
 ```c#
-IImageInfo imageInfo = Image.Identify(@"image.jpg");
+ImageInfo imageInfo = Image.Identify(@"image.jpg");
 Console.WriteLine($"Width: {imageInfo.Width}");
 Console.WriteLine($"Height: {imageInfo.Height}");
 ```
