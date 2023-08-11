@@ -1,12 +1,9 @@
 # Introduction
 
->[!WARNING]
->Fonts is still considered BETA quality and we still reserve the rights to change the API shapes.
-
 ### What is Fonts?
 Fonts is a font loading and layout library built primarily to provide text drawing support to ImageSharp.Drawing.
 
-Built against [.NET Standard 1.3](https://docs.microsoft.com/en-us/dotnet/standard/net-standard), Fonts can be used in device, cloud, and embedded/IoT scenarios.  
+Built against [.NET Standard 2.0](https://docs.microsoft.com/en-us/dotnet/standard/net-standard), Fonts can be used in device, cloud, and embedded/IoT scenarios.  
   
 ### License  
 Fonts is licensed under under the terms of [Apache License, Version 2.0](https://opensource.org/licenses/Apache-2.0). Commercial support licensing options are available in addition to this license, see https://sixlabors.com/pricing for details.
