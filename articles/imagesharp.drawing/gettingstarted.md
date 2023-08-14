@@ -1,8 +1,5 @@
 # Getting Started
 
->[!WARNING]
->ImageSharp.Drawing is still considered BETA quality and we still reserve the rights to change the API shapes.
-
 >[!NOTE]
 >The official guide assumes intermediate level knowledge of C# and .NET. If you are totally new to .NET development, it might not be the best idea to jump right into a framework as your first step - grasp the basics then come back. Prior experience with other languages and frameworks helps, but is not required.
 
@@ -53,8 +50,8 @@ DrawingOptions options = new()
     }
 };
 
-IBrush brush = Brushes.Horizontal(Color.Red, Color.Blue);
-IPen pen = Pens.DashDot(Color.Green, 5);
+Brush brush = Brushes.Horizontal(Color.Red, Color.Blue);
+Pen pen = Pens.DashDot(Color.Green, 5);
 IPath yourPolygon = new Star(x: 100.0f, y: 100.0f, prongs: 5, innerRadii: 20.0f, outerRadii:30.0f);
 
 // Draws a star with horizontal red and blue hatching with a dash dot pattern outline.
@@ -100,7 +97,7 @@ Image image = ...; // Create any way you like.
 Font font = ...; // See our Fonts library for best practices on retrieving one of these.
 
 // The options are optional
-TextOptions options = new(font)
+RichTextOptions options = new(font)
 {
     Origin = new PointF(100, 100), // Set the rendering origin.
     TabWidth = 8, // A tab renders as 8 spaces wide
