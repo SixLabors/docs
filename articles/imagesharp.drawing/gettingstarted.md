@@ -5,7 +5,7 @@
 
 ### ImageSharp.Drawing - Paths and Polygons
 
-ImageSharp.Drawing provides several classes for build and manipulating various shapes and paths.
+ImageSharp.Drawing provides several classes for building and manipulating various shapes and paths.
 
 - @"SixLabors.ImageSharp.Drawing.IPath" Root interface defining a path/polygon and the type that the rasterizer uses to generate pixel output.
 - This `SixLabors.ImageSharp.Drawing` namespace contains a variety of available polygons to speed up your drawing process.
@@ -54,7 +54,7 @@ Brush brush = Brushes.Horizontal(Color.Red, Color.Blue);
 Pen pen = Pens.DashDot(Color.Green, 5);
 IPath yourPolygon = new Star(x: 100.0f, y: 100.0f, prongs: 5, innerRadii: 20.0f, outerRadii:30.0f);
 
-// Draws a star with horizontal red and blue hatching with a dash dot pattern outline.
+// Draws a star with horizontal red and blue hatching with a dash-dot pattern outline.
 image.Mutate(x=> x.Fill(options, brush, yourPolygon)
                    .Draw(option, pen, yourPolygon));
 ```
@@ -105,10 +105,10 @@ RichTextOptions options = new(font)
     HorizontalAlignment = HorizontalAlignment.Right // Right align
 };
 
-IBrush brush = Brushes.Horizontal(Color.Red, Color.Blue);
-IPen pen = Pens.DashDot(Color.Green, 5);
+var brush = Brushes.Horizontal(Color.Red, Color.Blue);
+var pen = Pens.DashDot(Color.Green, 5);
 string text = "sample text";
 
-// Draws the text with horizontal red and blue hatching with a dash dot pattern outline.
-image.Mutate(x=> x.DrawText(options, text, brush, pen);
+// Draws the text with horizontal red and blue hatching with a dash-dot pattern outline.
+image.Mutate(x=> x.DrawText(options, text, brush, pen));
 ```
