@@ -5,10 +5,10 @@ ImageSharp.Drawing is a library built on top of ImageSharp to providing 2D Drawi
 
 ImageSharp.Drawing is designed from the ground up to be flexible and extensible. The library provides API endpoints for common vector and text processing operations adding the building blocks for building custom images.
 
-Built against [.NET Standard 2.0](https://docs.microsoft.com/en-us/dotnet/standard/net-standard), ImageSharp.Drawing can be used in device, cloud, and embedded/IoT scenarios.  
+Built against [.NET 6](https://docs.microsoft.com/en-us/dotnet/standard/net-standard), ImageSharp.Drawing can be used in device, cloud, and embedded/IoT scenarios.  
   
 ### License  
-ImageSharp.Drawing is licensed under under the terms of [Apache License, Version 2.0](https://opensource.org/licenses/Apache-2.0). Commercial support licensing options are available in addition to this license, see https://sixlabors.com/pricing for details.
+ImageSharp.Drawing is licensed under the terms of the [Six Labors Split License, Version 1.0](https://github.com/SixLabors/ImageSharp.Drawing/blob/main/LICENSE). See https://sixlabors.com/pricing for commercial licensing details.
   
 ### Installation
   

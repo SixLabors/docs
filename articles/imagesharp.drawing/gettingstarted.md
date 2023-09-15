@@ -25,9 +25,9 @@ using SixLabors.ImageSharp.Drawing.Processing;
 
 Image image = ...; // create any way you like.
 
-IPath yourPolygon = new Star(x: 100.0f, y: 100.0f, prongs: 5, innerRadii: 20.0f, outerRadii:30.0f);
+Star star = new(x: 100.0f, y: 100.0f, prongs: 5, innerRadii: 20.0f, outerRadii:30.0f);
 
-image.Mutate( x=> x.Fill(Color.Red, yourPolygon)); // fill the star with red
+image.Mutate( x=> x.Fill(Color.Red, star)); // fill the star with red
 
 ```
 
@@ -50,13 +50,13 @@ DrawingOptions options = new()
     }
 };
 
-Brush brush = Brushes.Horizontal(Color.Red, Color.Blue);
-Pen pen = Pens.DashDot(Color.Green, 5);
-IPath yourPolygon = new Star(x: 100.0f, y: 100.0f, prongs: 5, innerRadii: 20.0f, outerRadii:30.0f);
+PatternBrush brush = Brushes.Horizontal(Color.Red, Color.Blue);
+PatternPen pen = Pens.DashDot(Color.Green, 5);
+Star star = new(x: 100.0f, y: 100.0f, prongs: 5, innerRadii: 20.0f, outerRadii:30.0f);
 
 // Draws a star with horizontal red and blue hatching with a dash-dot pattern outline.
-image.Mutate(x=> x.Fill(options, brush, yourPolygon)
-                   .Draw(option, pen, yourPolygon));
+image.Mutate(x=> x.Fill(options, brush, star)
+                   .Draw(option, pen, star));
 ```
 
 ### API Cornerstones for Polygon Rasterization
@@ -105,8 +105,8 @@ RichTextOptions options = new(font)
     HorizontalAlignment = HorizontalAlignment.Right // Right align
 };
 
-var brush = Brushes.Horizontal(Color.Red, Color.Blue);
-var pen = Pens.DashDot(Color.Green, 5);
+PatternBrush brush = Brushes.Horizontal(Color.Red, Color.Blue);
+PatternPen pen = Pens.DashDot(Color.Green, 5);
 string text = "sample text";
 
 // Draws the text with horizontal red and blue hatching with a dash-dot pattern outline.
