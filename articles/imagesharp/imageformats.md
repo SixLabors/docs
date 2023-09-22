@@ -64,7 +64,7 @@ ImageInfo imageInfo = Image.Identify(inputStream);
 Console.WriteLine($"{imageInfo.Width}x{imageInfo.Height} | BPP: {imageInfo.PixelType.BitsPerPixel}");
 ```
 
-See [`ImageInfo`](xref:SixLabors.ImageSharp.ImageInfo) for more details about the identification result. Note that [`Image<TPixel>`](xref:SixLabors.ImageSharp.Image`1) also implements `ImageInfo`.
+See [`ImageInfo`](xref:SixLabors.ImageSharp.ImageInfo) for more details about the identification result.
 
 ### Working with Encoders
 
