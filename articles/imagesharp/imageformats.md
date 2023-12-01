@@ -38,6 +38,7 @@ using (var image = Image.Load(inputStream))
 - `image.SaveAsTga()` (shortcut for `image.Save(new TgaEncoder())`)
 - `image.SaveAsTiff()` (shortcut for `image.Save(new TiffEncoder())`)
 - `image.SaveAsWebp()` (shortcut for `image.Save(new WebpEncoder())`)
+- `image.SaveAsQoi()` (shortcut for `image.Save(new QoiEncoder())`)
 
 ### A Deeper Overview of ImageSharp Format Management
 
