@@ -38,8 +38,8 @@ collection.Add("path/to/font2.ttf");
 collection.Add("path/to/emojiFont.ttf");
 collection.AddCollection("path/to/font.ttc");
 
-if(collection.TryFind("Font Name", out FontFamily family))
-if(collection.TryFind("Emoji Font Name", out FontFamily emojiFamily))
+if(collection.TryGet("Font Name", out FontFamily family))
+if(collection.TryGet("Emoji Font Name", out FontFamily emojiFamily))
 {
     // family will not be null here
     Font font = family.CreateFont(12, FontStyle.Italic);
