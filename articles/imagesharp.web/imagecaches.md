@@ -53,6 +53,9 @@ Once installed the cache @SixLabors.ImageSharp.Web.Caching.Azure.AzureBlobStorag
 {
     options.ConnectionString = {AZURE_CONNECTION_STRING};
     options.ContainerName = {AZURE_CONTAINER_NAME};
+
+    // Optionally use a cache folder under the container.
+    options.CacheFolder = {AZURE_CACHE_FOLDER};
     
     // Optionally create the cache container on startup if not already created.
     AzureBlobStorageCache.CreateIfNotExists(options, PublicAccessType.None);
@@ -106,6 +109,9 @@ Once installed the cache @SixLabors.ImageSharp.Web.Caching.AWS.AWSS3StorageCache
     options.AccessKey = {AWS_ACCESS_KEY};
     options.AccessSecret = {AWS_ACCESS_SECRET};
     options.Region = {AWS_REGION};
+
+    // Optionally use a cache folder under the bucket.
+    options.CacheFolder = {AWS_CACHE_FOLDER};
     
     // Optionally create the cache bucket on startup if not already created.
     AWSS3StorageCache.CreateIfNotExists(options, S3CannedACL.Private);
