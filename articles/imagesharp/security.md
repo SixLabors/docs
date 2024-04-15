@@ -1,6 +1,6 @@
 # Security Considerations
 
-Image processing is a memory-intensive application. Most image processing libraries (including ImageSharp, SkiaSharp and Magick.NET) decode images into in-memory buffers for further processing. Without additional measures, any publicly facing service that consumes images coming from untrusted sources might be vulnerable to DoS attacks attempting to deplate process memory.
+Image processing is a memory-intensive application. Most image processing libraries (including ImageSharp, SkiaSharp, and Magick.NET) decode images into in-memory buffers for further processing. Without additional measures, any publicly facing service that consumes images coming from untrusted sources might be vulnerable to DoS attacks attempting to deplete process memory.
 
 Such measures can be:
 - Authentication, for example by using HMAC. See [Securing Processing Commands in ImageSharp.Web](../imagesharp.web/processingcommands.md#securing-processing-commands).
