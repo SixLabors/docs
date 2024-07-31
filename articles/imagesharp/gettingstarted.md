@@ -122,7 +122,7 @@ A few troubleshooting steps to try:
 
 - Check the value of [Vector.IsHardwareAccelerated](https://docs.microsoft.com/en-us/dotnet/api/system.numerics.vector.ishardwareaccelerated?view=netcore-2.1&viewFallbackFrom=netstandard-2.0#System_Numerics_Vector_IsHardwareAccelerated). If the output is false, it means there is no SIMD support in your runtime!
 
-### MAUI
+#### MAUI Performance
 ImageSharp performs well with MAUI on both iOS and Android in release mode when correctly configured. For Android we recommend enabling LLVM and AOT compilation in the project file:
 
 ```xml
@@ -133,4 +133,5 @@ ImageSharp performs well with MAUI on both iOS and Android in release mode when 
 </PropertyGroup>
 ```
 
->[!NOTE] Android performance in Debug mode appears to be significantly slower than in Release mode, this is not due to issues within the library itself rather upstream issues in the .NET Runtime. The following [.NET Runtime issue](https://github.com/dotnet/runtime/issues/71210) contains more information.
+>[!NOTE] 
+>Android performance in Debug mode appears to be significantly slower than in Release mode, this is not due to issues within the library itself rather upstream issues in the .NET Runtime. The following [.NET Runtime issue](https://github.com/dotnet/runtime/issues/71210) contains more information.
