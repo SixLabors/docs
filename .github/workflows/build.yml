@@ -51,7 +51,7 @@ jobs:
         run: git lfs pull
 
       - name: Install DocFX
-        run: choco install docfx -y
+        run: dotnet tool install -g docfx
 
       - name: Build
         shell: pwsh
