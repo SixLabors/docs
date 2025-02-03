@@ -10,6 +10,7 @@ Out of the box ImageSharp supports the following image formats:
 - Tiff
 - Tga
 - WebP
+- Qoi
 
 ImageSharp's API however, is designed to support extension by the registration of additional [`IImageFormat`](xref:SixLabors.ImageSharp.Formats.IImageFormat) implementations.
 
