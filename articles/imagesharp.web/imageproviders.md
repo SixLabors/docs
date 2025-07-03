@@ -97,7 +97,7 @@ paket add SixLabors.ImageSharp.Web.Providers.AWS --version VERSION_NUMBER
 
 ***
 
-Once installed the cache @SixLabors.ImageSharp.Web.Providers.AWS.AWSS3StorageImageProviderOptions can be configured as follows:
+Once installed the provider @SixLabors.ImageSharp.Web.Providers.AWS.AWSS3StorageImageProviderOptions can be configured as follows:
 
 ```c#  
 // Configure and register the buckets.  
