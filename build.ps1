@@ -10,8 +10,12 @@ Get-ChildItem ./ext -Directory | ForEach-Object {
     # Fetch tags and check out the latest tag
     git -C "$path" fetch --tags
 
-    # Get all tags, sort them alphabetically, and select the highest one
-    $highestTag = (git -C "$path" tag | Sort-Object -Descending)[0] | Out-String
+    # Get all tags, sort them by semantic version, and select the highest one
+    $highestTag = git -C "$path" tag |
+    Where-Object { $_ -match '^v\d+\.\d+\.\d+$' } |
+    Sort-Object { [Version]($_ -replace '^v', '') } -Descending |
+    Select-Object -First 1
+
     $highestTag = $highestTag.Trim()
     Write-Host "$path => $highestTag"
 

@@ -40,3 +40,25 @@ paket add SixLabors.ImageSharp.Web --version VERSION_NUMBER
 
 >[!WARNING]
 >Prerelease versions installed via the [Visual Studio NuGet Package Manager](https://docs.microsoft.com/en-us/nuget/consume-packages/install-use-packages-visual-studio) require the "include prerelease" checkbox to be checked.
+
+### Implicit Usings
+
+The `UseImageSharp` property controls whether **implicit `global using` directives** for ImageSharp are included in your C# project. This feature is available in projects targeting **.NET 6 or later** with **C# 10 or later**.
+
+When enabled, a predefined set of `global using` directives for common ImageSharp namespaces (such as `SixLabors.ImageSharp`, `SixLabors.ImageSharp.Processing`, `SixLabors.ImageSharp.Web` etc.) is automatically added to the compilation. This eliminates the need to manually add `using` statements in every file.
+
+To enable implicit ImageSharp usings, set the property in your project file:
+
+```xml
+<PropertyGroup>
+  <UseImageSharp>true</UseImageSharp>
+</PropertyGroup>
+```
+
+To disable the feature, either remove the property or set it to `false`:
+
+```xml
+<PropertyGroup>
+  <UseImageSharp>false</UseImageSharp>
+</PropertyGroup>
+```

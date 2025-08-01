@@ -141,9 +141,13 @@ ImageSharp.Web v3.0.0 comes equipped with a custom tag helper that allows the ge
 >[!NOTE]
 >Using @SixLabors.ImageSharp.Web.TagHelpers.ImageTagHelper is the recommended way to generate processing commands.
 
-To use @SixLabors.ImageSharp.Web.TagHelpers.ImageTagHelper, add the following imports command to `_ViewImports.cshtml` in your project.
+To use @SixLabors.ImageSharp.Web.TagHelpers.ImageTagHelper, add the following `using` and `addTagHelper` commands to `_ViewImports.cshtml` in your project.
 
 ```html
+@using SixLabors.ImageSharp
+@using SixLabors.ImageSharp.Processing
+@using SixLabors.ImageSharp.Web
+
 @addTagHelper *, SixLabors.ImageSharp.Web
 ```
 
