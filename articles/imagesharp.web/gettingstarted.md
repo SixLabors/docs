@@ -17,8 +17,11 @@ public void ConfigureServices(IServiceCollection services) {
 
 public void Configure(IApplicationBuilder app, IWebHostEnvironment env) {
 
-    // Add the image processing middleware.
+    // Add the image processing middleware. Make sure this appears BEFORE app.UseStaticFiles(),
+    // otherwise images will be served by ASP.NET's static file middleware before ImageSharp can process them.
     app.UseImageSharp();
+
+    app.UseStaticFiles();
 }
 ```
 
