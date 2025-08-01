@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Custom Rendering </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Custom Rendering ">
+    
+    
+      <link rel="shortcut icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../styles/docfx.css">
+      <link rel="stylesheet" href="../../styles/main.css">
+      <meta property="docfx:navrel" content="../../toc.json">
+      <meta property="docfx:tocrel" content="../toc.json">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="../../articles/imagesharp/index.html" title="Articles">Articles</a>
+                      </li>
+                      <li>
+                          <a href="../../api/index.html" title="API Documentation">API Documentation</a>
+                      </li>
+                </ul>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+
+                  <ul class="nav level1">
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="../imagesharp/index.html" title="ImageSharp" class="">ImageSharp</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <span class="expand-stub"></span>
+                            <a href="../imagesharp/gettingstarted.html" title="Getting Started" class="">Getting Started</a>
+
+                              <ul class="nav level3">
+                                <li class="">
+                                  <a href="../imagesharp/pixelformats.html" title="Pixel Formats" class="">Pixel Formats</a>
+                                </li>
+                                <li class="">
+                                  <a href="../imagesharp/imageformats.html" title="Image Formats" class="">Image Formats</a>
+                                </li>
+                                <li class="">
+                                  <span class="expand-stub"></span>
+                                  <a href="../imagesharp/processing.html" title="Processing Images" class="">Processing Images</a>
+
+                                    <ul class="nav level4">
+                                      <li class="">
+                                        <a href="../imagesharp/resize.html" title="Resizing Images" class="">Resizing Images</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="../imagesharp/animatedgif.html" title="Create an animated GIF" class="">Create an animated GIF</a>
+                                      </li>
+                                    </ul>
+                                </li>
+                                <li class="">
+                                  <a href="../imagesharp/pixelbuffers.html" title="Working with Pixel Buffers" class="">Working with Pixel Buffers</a>
+                                </li>
+                                <li class="">
+                                  <a href="../imagesharp/configuration.html" title="Configuration" class="">Configuration</a>
+                                </li>
+                                <li class="">
+                                  <a href="../imagesharp/memorymanagement.html" title="Memory Management" class="">Memory Management</a>
+                                </li>
+                                <li class="">
+                                  <a href="../imagesharp/security.html" title="Security Considerations" class="">Security Considerations</a>
+                                </li>
+                              </ul>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="../imagesharp.drawing/index.html" title="ImageSharp.Drawing" class="">ImageSharp.Drawing</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../imagesharp.drawing/gettingstarted.html" title="Getting Started" class="">Getting Started</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="../imagesharp.web/index.html" title="ImageSharp.Web" class="">ImageSharp.Web</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <span class="expand-stub"></span>
+                            <a href="../imagesharp.web/gettingstarted.html" title="Getting Started" class="">Getting Started</a>
+
+                              <ul class="nav level3">
+                                <li class="">
+                                  <a href="../imagesharp.web/processingcommands.html" title="Processing Commands" class="">Processing Commands</a>
+                                </li>
+                                <li class="">
+                                  <a href="../imagesharp.web/imageproviders.html" title="Image Providers" class="">Image Providers</a>
+                                </li>
+                                <li class="">
+                                  <a href="../imagesharp.web/imagecaches.html" title="Image Caches" class="">Image Caches</a>
+                                </li>
+                              </ul>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="../fonts/index.html" title="Fonts" class="">Fonts</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../fonts/gettingstarted.html" title="Getting Started" class="">Getting Started</a>
+                          </li>
+                          <li class="active">
+                            <a href="../fonts/customrendering.html" title="Custom Rendering" class="active">Custom Rendering</a>
+                          </li>
+                        </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="custom-rendering">Custom Rendering</h1>
+
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Fonts is still considered BETA quality and we still reserve the rights to change the API shapes.</p>
+</div>
+<div class="NOTE">
+<h5>Note</h5>
+<p>ImageSharp.Drawing already implements the glyph rendering for you unless you are rendering on other platforms we would recommend using the version provided by that library.. This is a more advanced topic.</p>
+</div>
+<h3 id="implementing-a-glyph-renderer">Implementing a glyph renderer</h3>
+<p>The abstraction used by <code>Fonts</code> to allow implementing glyph rendering is the <code>IGlyphRenderer</code> and its brother <code>IColoredGlypheRenderer</code> (for colored emoji support).</p>
+<pre><code class="lang-c#"> // `IColoredGlyphRenderer` implements `IGlyphRenderer` so if you don't want colored font support just implement `IGlyphRenderer`.
+public class CustomGlyphRenderer : IColoredGlyphRenderer 
+{
+
+    /// &lt;summary&gt;
+    /// Called before any glyphs have been rendered.
+    /// &lt;/summary&gt;
+    /// &lt;param name=&quot;bounds&quot;&gt;The bounds the text will be rendered at and at whats size.&lt;/param&gt;
+    void IGlyphRenderer.BeginText(FontRectangle bounds)
+    {
+        // called before any thing else to provide access to the total required size to redner the text
+    }
+
+    /// &lt;summary&gt;
+    /// Begins the glyph.
+    /// &lt;/summary&gt;
+    /// &lt;param name=&quot;bounds&quot;&gt;The bounds the glyph will be rendered at and at what size.&lt;/param&gt;
+    /// &lt;param name=&quot;paramaters&quot;&gt;The set of paramaters that uniquely represents a version of a glyph in at particular font size, font family, font style and DPI.&lt;/param&gt;
+    /// &lt;returns&gt;Returns true if the glyph should be rendered othersie it returns false.&lt;/returns&gt;
+    bool IGlyphRenderer.BeginGlyph(FontRectangle bounds, GlyphRendererParameters paramaters)
+    {
+        // called before each glyph/glyph layer is rendered.
+        // The paramaters can be used to detect the exact details
+        // of the glyph so that duplicate glyphs could optionally 
+        // be cached to reduce processing.
+
+        // You can return false to skip all the figures within the glyph (if you return false EndGlyph will still be called)
+    }
+
+    /// &lt;summary&gt;
+    /// Sets the color to use for the current glyph.
+    /// &lt;/summary&gt;
+    /// &lt;param name=&quot;color&quot;&gt;The color to override the renders brush with.&lt;/param&gt;
+    void IColorGlyphRenderer.SetColor(GlyphColor color)
+    {
+        // from the IColorGlyphRenderer version, onlt called if the current glyph should override the forgound color of current glyph/layer        
+    }
+
+    /// &lt;summary&gt;
+    /// Begins the figure.
+    /// &lt;/summary&gt;
+    void IGlyphRenderer.BeginFigure()
+    {
+        // called at the start of the figure within the single glyph/layer
+        // glyphs are rendered as a serise of arcs, lines and movements 
+        // which together describe a complex shape.
+    }
+
+    /// &lt;summary&gt;
+    /// Sets a new start point to draw lines from
+    /// &lt;/summary&gt;
+    /// &lt;param name=&quot;point&quot;&gt;The point.&lt;/param&gt;
+    void IGlyphRenderer.MoveTo(Vector2 point)
+    {
+        // move current point to location marked by point without describing a line;
+    }
+
+    /// &lt;summary&gt;
+    /// Draw a quadratic bezier curve connecting the previous point to &lt;paramref name=&quot;point&quot;/&gt;.
+    /// &lt;/summary&gt;
+    /// &lt;param name=&quot;secondControlPoint&quot;&gt;The second control point.&lt;/param&gt;
+    /// &lt;param name=&quot;point&quot;&gt;The point.&lt;/param&gt;
+    void IGlyphRenderer.QuadraticBezierTo(Vector2 secondControlPoint, Vector2 point)
+    {
+        // describes Quadratic Bezier curve from the 'current point' using the 
+        // 'second control point' and final 'point' leaving the 'current point'
+        // at 'point'
+    }
+
+    /// &lt;summary&gt;
+    /// Draw a Cubics bezier curve connecting the previous point to &lt;paramref name=&quot;point&quot;/&gt;.
+    /// &lt;/summary&gt;
+    /// &lt;param name=&quot;secondControlPoint&quot;&gt;The second control point.&lt;/param&gt;
+    /// &lt;param name=&quot;thirdControlPoint&quot;&gt;The third control point.&lt;/param&gt;
+    /// &lt;param name=&quot;point&quot;&gt;The point.&lt;/param&gt;
+    void IGlyphRenderer.CubicBezierTo(Vector2 secondControlPoint, Vector2 thirdControlPoint, Vector2 point)
+    {
+        // describes Cubic Bezier curve from the 'current point' using the 
+        // 'second control point', 'third control point' and final 'point' 
+        // leaving the 'current point' at 'point'
+    }
+
+    /// &lt;summary&gt;
+    /// Draw a straight line connecting the previous point to &lt;paramref name=&quot;point&quot;/&gt;.
+    /// &lt;/summary&gt;
+    /// &lt;param name=&quot;point&quot;&gt;The point.&lt;/param&gt;
+    void IGlyphRenderer.LineTo(Vector2 point)
+    {
+        // describes straight line from the 'current point' to the final 'point' 
+        // leaving the 'current point' at 'point'
+    }
+
+    /// &lt;summary&gt;
+    /// Ends the figure.
+    /// &lt;/summary&gt;
+    void IGlyphRenderer.EndFigure()
+    {
+        // Called after the figure has completed denoting a straight line should 
+        // be drawn from the current point to the first point
+    }
+
+    /// &lt;summary&gt;
+    /// Ends the glyph.
+    /// &lt;/summary&gt;
+    void IGlyphRenderer.EndGlyph()
+    {
+        // says the all figures have completed for the current glyph/layer.
+        // NOTE this will be called even if BeginGlyph return false.
+    }
+
+
+    /// &lt;summary&gt;
+    /// Called once all glyphs have completed rendering
+    /// &lt;/summary&gt;
+    void IGlyphRenderer.EndText()
+    {
+        //once all glyphs/layers have been drawn this is called.
+    }
+}
+</code></pre>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/SixLabors/docs/blob/main/articles/fonts/customrendering.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

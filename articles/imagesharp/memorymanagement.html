@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Memory Management </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Memory Management ">
+    
+    
+      <link rel="shortcut icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../styles/docfx.css">
+      <link rel="stylesheet" href="../../styles/main.css">
+      <meta property="docfx:navrel" content="../../toc.json">
+      <meta property="docfx:tocrel" content="../toc.json">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="../../articles/imagesharp/index.html" title="Articles">Articles</a>
+                      </li>
+                      <li>
+                          <a href="../../api/index.html" title="API Documentation">API Documentation</a>
+                      </li>
+                </ul>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+
+                  <ul class="nav level1">
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="../imagesharp/index.html" title="ImageSharp" class="">ImageSharp</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <span class="expand-stub"></span>
+                            <a href="../imagesharp/gettingstarted.html" title="Getting Started" class="">Getting Started</a>
+
+                              <ul class="nav level3">
+                                <li class="">
+                                  <a href="../imagesharp/pixelformats.html" title="Pixel Formats" class="">Pixel Formats</a>
+                                </li>
+                                <li class="">
+                                  <a href="../imagesharp/imageformats.html" title="Image Formats" class="">Image Formats</a>
+                                </li>
+                                <li class="">
+                                  <span class="expand-stub"></span>
+                                  <a href="../imagesharp/processing.html" title="Processing Images" class="">Processing Images</a>
+
+                                    <ul class="nav level4">
+                                      <li class="">
+                                        <a href="../imagesharp/resize.html" title="Resizing Images" class="">Resizing Images</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="../imagesharp/animatedgif.html" title="Create an animated GIF" class="">Create an animated GIF</a>
+                                      </li>
+                                    </ul>
+                                </li>
+                                <li class="">
+                                  <a href="../imagesharp/pixelbuffers.html" title="Working with Pixel Buffers" class="">Working with Pixel Buffers</a>
+                                </li>
+                                <li class="">
+                                  <a href="../imagesharp/configuration.html" title="Configuration" class="">Configuration</a>
+                                </li>
+                                <li class="active">
+                                  <a href="../imagesharp/memorymanagement.html" title="Memory Management" class="active">Memory Management</a>
+                                </li>
+                                <li class="">
+                                  <a href="../imagesharp/security.html" title="Security Considerations" class="">Security Considerations</a>
+                                </li>
+                              </ul>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="../imagesharp.drawing/index.html" title="ImageSharp.Drawing" class="">ImageSharp.Drawing</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../imagesharp.drawing/gettingstarted.html" title="Getting Started" class="">Getting Started</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="../imagesharp.web/index.html" title="ImageSharp.Web" class="">ImageSharp.Web</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <span class="expand-stub"></span>
+                            <a href="../imagesharp.web/gettingstarted.html" title="Getting Started" class="">Getting Started</a>
+
+                              <ul class="nav level3">
+                                <li class="">
+                                  <a href="../imagesharp.web/processingcommands.html" title="Processing Commands" class="">Processing Commands</a>
+                                </li>
+                                <li class="">
+                                  <a href="../imagesharp.web/imageproviders.html" title="Image Providers" class="">Image Providers</a>
+                                </li>
+                                <li class="">
+                                  <a href="../imagesharp.web/imagecaches.html" title="Image Caches" class="">Image Caches</a>
+                                </li>
+                              </ul>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="../fonts/index.html" title="Fonts" class="">Fonts</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../fonts/gettingstarted.html" title="Getting Started" class="">Getting Started</a>
+                          </li>
+                          <li class="">
+                            <a href="../fonts/customrendering.html" title="Custom Rendering" class="">Custom Rendering</a>
+                          </li>
+                        </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="memory-management">Memory Management</h1>
+
+<p>Starting with ImageSharp 2.0, the library uses large (~4MB) discontiguous chunks of unmanaged memory to represent multi-megapixel images. Internally, these buffers are heavily pooled to reduce OS allocation overhead. Unlike in ImageSharp 1.0, the pools are automatically trimmed after a certain amount of allocation inactivity, releasing the buffers to the OS, making the library more suitable for applications that do imaging operations in a periodic manner.</p>
+<p>The buffer allocation and pooling behavior is implemented by <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Memory.MemoryAllocator.html">MemoryAllocator</a> which is being used through <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Configuration.html">Configuration</a>'s <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Configuration.html#SixLabors_ImageSharp_Configuration_MemoryAllocator">MemoryAllocator</a> property within the library, therefore it's configurable and replaceable by the user.</p>
+<h3 id="configuring-the-pool-size">Configuring the pool size</h3>
+<p>By default, the maximum pool size is platform-specific, defaulting to a portion of the available physical memory on 64 bit coreclr, and to a 128MB constant size on other platforms / runtimes.</p>
+<p>We highly recommend to go with these defaults, however in certain cases it might be desirable to override the pool limit. In such cases the most straightforward solution is to replace the memory allocator globally:</p>
+<pre><code class="lang-C#">Configuration.Default.MemoryAllocator = MemoryAllocator.Create(new MemoryAllocatorOptions()
+{
+    MaximumPoolSizeMegabytes = 64
+});
+</code></pre>
+<h3 id="enforcing-contiguous-buffers">Enforcing contiguous buffers</h3>
+<p>Certain interop use cases may require multi-megapixel images to be layed out contiguously in memory so a single buffer pointer can be passed to native API-s. This can be enforced by setting <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Configuration.html">Configuration</a>'s <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Configuration.html#SixLabors_ImageSharp_Configuration_PreferContiguousImageBuffers">PreferContiguousImageBuffers</a> to <code>true</code>. Note that this will lead to significantly reduced pooling that may hurt overall processing throughput. We don't recommend to flip this option globally. Instead, you can enable it locally for the image instances that are expected to be contiguous:</p>
+<pre><code class="lang-C#">Configuration customConfig = Configuration.Default.Clone();
+customConfig.PreferContiguousImageBuffers = true;
+
+using (Image&lt;Rgba32&gt; image = new(customConfig, 4096, 4096))
+{
+    if (!image.DangerousTryGetSinglePixelMemory(out Memory&lt;Rgba32&gt; memory))
+    {
+        throw new Exception(
+            &quot;This can only happen with multi-GB images or when PreferContiguousImageBuffers is not set to true.&quot;);
+    }
+
+    using (MemoryHandle pinHandle = memory.Pin())
+    {
+        void* ptr = pinHandle.Pointer;
+
+        // You can now pass 'ptr' to native API-s.
+        // Make sure to keep 'pinHandle', and 'image' alive while native resource work with the pointer.
+        // Make sure to Dispose() them afterwards.
+    }
+}
+</code></pre>
+<h3 id="wrapping-existing-buffers-as-imagetpixel">Wrapping existing buffers as <code>Image&lt;TPixel&gt;</code></h3>
+<p>It's also possible to do the other way around, and wrap an existing native buffer to process it as an <code>Image&lt;TPixel&gt;</code>. You can use one of the <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Image.html#SixLabors_ImageSharp_Image_WrapMemory_">WrapMemory</a> overloads for this. Note that the resulting image is not suitable for operations that would change the dimensions of the image, such an attempt will lead to an <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Memory.InvalidMemoryOperationException.html">InvalidMemoryOperationException</a>.</p>
+<h3 id="troubleshooting-memory-leaks">Troubleshooting memory leaks</h3>
+<p>Strictly speaking, ImageSharp is safe against memory leaks, because finalizers will take care of the native memory resources leaked by omitting <code>Dispose()</code> or <code>using</code> blocks. However, letting the memory leak to finalizers may lead to performance issues and if GC execution can't keep up with the leaks, to <code>OutOfMemoryException</code>. Application code should take care of disposing any <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Image-1.html">Image&lt;TPixel&gt;</a> allocated.</p>
+<p>In complex and large apps, this might be hard to verify. ImageSharp 2.0+ exposes some code-first diagnostic API-s that may help detecting leaks.</p>
+<p>Query and log <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Diagnostics.MemoryDiagnostics.html#SixLabors_ImageSharp_Diagnostics_MemoryDiagnostics_TotalUndisposedAllocationCount">TotalUndisposedAllocationCount</a> to track if the number of undisposed allocations is increasing during your application's lifetime:</p>
+<pre><code class="lang-C#">myLogger.Log(@&quot;Number of undisposed ImageSharp buffers: {MemoryDiagnostics.TotalUndisposedAllocationCount}&quot;);
+</code></pre>
+<p>For troubleshooting you can also subscribe to the event <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Diagnostics.MemoryDiagnostics.html#SixLabors_ImageSharp_Diagnostics_MemoryDiagnostics_UndisposedAllocation">UndisposedAllocation</a>. When the event fires, it will report the stack trace of leaking allocations, which may help tracking down bugs. Subscribing to this event has <em>significant</em> performance overhead, so avoid it in the final production deployment of your app.</p>
+<pre><code class="lang-C#">#if TROUBLESHOOTING_TESTING_NOT_PRODUCTION
+MemoryDiagnostics.UndisposedAllocation += allocationStackTrace =&gt;
+{
+    Console.WriteLine($@&quot;Undisposed allocation detected at:{Environment.NewLine}{allocationStackTrace}&quot;);
+    Environment.Exit(1);
+};
+#endif
+</code></pre>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/SixLabors/docs/blob/main/articles/imagesharp/memorymanagement.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
