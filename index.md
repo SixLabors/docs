@@ -11,14 +11,14 @@ You can find tutorials, examples and API details covering all Six Labors project
 
 Detailed documentation for the entire API available across our projects.
 
-### [Conceptual Documentation](articles/imagesharp/index.md)
+### Project Documentation
 
-Our graphics libraries are split into different projects. They cover different concerns separately, but there is strong cohesion in order to provide the best developer experience.
+Our libraries are split into focused projects that work well together. They cover image processing, drawing, web middleware, fonts, and polygon clipping while keeping a consistent developer experience across the stack.
 
 You can find documentation for each project in the links below.
 
 <div class="row products">
-    <div class="col-sm-6 col-md-3">
+    <div class="col-sm-6 col-md-4">
         <div class="product">
             <img src="https://raw.githubusercontent.com/SixLabors/Branding/main/icons/imagesharp/sixlabors.imagesharp.svg?sanitize=true" alt="ImageSharp Logo">
             <h5>ImageSharp</h5>
@@ -28,7 +28,7 @@ You can find documentation for each project in the links below.
             </a>
         </div>
     </div>
-    <div class="col-sm-6 col-md-3">
+    <div class="col-sm-6 col-md-4">
         <div class="product">
             <img src="https://raw.githubusercontent.com/SixLabors/Branding/main/icons/imagesharp.drawing/sixlabors.imagesharp.drawing.svg?sanitize=true">
             <h5>ImageSharp.Drawing</h5>
@@ -38,7 +38,7 @@ You can find documentation for each project in the links below.
             </a>
         </div>
     </div>
-    <div class="col-sm-6 col-md-3">
+    <div class="col-sm-6 col-md-4">
         <div class="product">
             <img src="https://raw.githubusercontent.com/SixLabors/Branding/main/icons/imagesharp.web/sixlabors.imagesharp.web.svg?sanitize=true">
             <h5>ImageSharp.Web</h5>
@@ -48,14 +48,24 @@ You can find documentation for each project in the links below.
             </a>
         </div>
     </div>
-    <div class="col-sm-6 col-md-3">
+    <div class="col-sm-6 col-md-4">
         <div class="product">
             <img src="https://raw.githubusercontent.com/SixLabors/Branding/main/icons/fonts/sixlabors.fonts.svg?sanitize=true">
-        <h5>Fonts</h5>
-        <p>Font Loading and Drawing API.</p>
-        <a href="articles/fonts/index.md" class="btn btn-primary">
-            Learn More
-        </a>
+            <h5>Fonts</h5>
+            <p>Font Loading and Drawing API.</p>
+            <a href="articles/fonts/index.md" class="btn btn-primary">
+                Learn More
+            </a>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+        <div class="product">
+            <img src="https://raw.githubusercontent.com/SixLabors/Branding/main/icons/polygonclipper/sixlabors.polygonclipper.svg?sanitize=true" alt="PolygonClipper Logo">
+            <h5>PolygonClipper</h5>
+            <p>High-performance polygon clipping and stroking.</p>
+            <a href="articles/polygonclipper/index.md" class="btn btn-primary">
+                Learn More
+            </a>
         </div>
     </div>
 </div>

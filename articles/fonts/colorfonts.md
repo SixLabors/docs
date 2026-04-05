@@ -1,0 +1,105 @@
+# Color Fonts
+
+Color fonts let glyphs carry paint information instead of only a monochrome outline.
+
+Fonts has comprehensive support for the major OpenType color-font technologies it exposes publicly:
+
+- `ColorFontSupport.ColrV0` for layered solid-color glyphs defined by COLR and CPAL tables
+- `ColorFontSupport.ColrV1` for paint-graph glyphs with gradients, transforms, and richer composition
+- `ColorFontSupport.Svg` for color glyphs stored in the OpenType SVG table
+
+### Enable or restrict color-font support
+
+`TextOptions.ColorFontSupport` controls which color-font technologies are honored during layout and rendering.
+
+```csharp
+using SixLabors.Fonts;
+
+FontCollection collection = new();
+FontFamily family = collection.Add("fonts/NotoColorEmoji-Regular.ttf");
+Font font = family.CreateFont(32);
+
+TextOptions options = new(font)
+{
+    ColorFontSupport = ColorFontSupport.ColrV1 | ColorFontSupport.ColrV0 | ColorFontSupport.Svg
+};
+```
+
+`TextOptions` enables all three by default, so you usually only need to set this property when you want to disable color glyphs or restrict the allowed formats.
+
+### Force monochrome output
+
+Set `ColorFontSupport.None` when you want color-font-capable text to fall back to monochrome outline rendering.
+
+```csharp
+using SixLabors.Fonts;
+
+FontCollection collection = new();
+FontFamily family = collection.Add("fonts/NotoColorEmoji-Regular.ttf");
+Font font = family.CreateFont(32);
+
+TextOptions options = new(font)
+{
+    ColorFontSupport = ColorFontSupport.None
+};
+```
+
+### What happens in custom renderers
+
+When a resolved glyph is a painted color glyph, Fonts streams it through `IGlyphRenderer` as one or more layers.
+
+That means custom renderers should pay attention to:
+
+- `GlyphRendererParameters.GlyphType`
+- `BeginLayer(...)`
+- `Paint`
+- `FillRule`
+- `ClipQuad`
+
+Depending on the font technology in use, the `Paint` passed to `BeginLayer(...)` may be:
+
+- `SolidPaint`
+- `LinearGradientPaint`
+- `RadialGradientPaint`
+- `SweepGradientPaint`
+
+If your renderer ignores paint information, the glyph can still be drawn, but it will no longer preserve the font's intended color presentation.
+
+### Inspect color glyphs directly
+
+If you need to inspect a glyph without running full text layout, use `Font.TryGetGlyphs(...)` with explicit color support.
+
+```csharp
+using SixLabors.Fonts;
+using SixLabors.Fonts.Unicode;
+
+FontCollection collection = new();
+FontFamily family = collection.Add("fonts/NotoColorEmoji-Regular.ttf");
+Font font = family.CreateFont(32);
+
+if (font.TryGetGlyphs(
+        new CodePoint(0x1F600),
+        ColorFontSupport.ColrV1 | ColorFontSupport.ColrV0 | ColorFontSupport.Svg,
+        out Glyph? glyph))
+{
+    bool isPainted = glyph.GlyphMetrics.GlyphType == GlyphType.Painted;
+}
+```
+
+### COLR vs SVG in practice
+
+At a high level:
+
+- COLR v0 uses layered shapes with palette colors
+- COLR v1 extends that model with richer paint graphs, gradients, transforms, and clipping
+- SVG glyphs carry SVG-authored painted content
+
+Fonts resolves those technologies into a common painted-glyph rendering flow, which is why custom renderers can consume them through the same layer and paint callbacks.
+
+### Measurement and rendering stay aligned
+
+Color-font support is part of text layout, not just final painting. If you measure text with one `ColorFontSupport` configuration and render with another, you can create drift between the measured and rendered result.
+
+Use the same `TextOptions` instance for both `TextMeasurer` and `TextRenderer` when you want a guaranteed match.
+
+For renderer implementation details, see [Custom Rendering](customrendering.md). For fallback across multiple families, see [Fallback Fonts and Multilingual Text](fallbackfonts.md).

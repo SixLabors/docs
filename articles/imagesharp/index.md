@@ -2,6 +2,13 @@
 
 ImageSharp is a fully managed, cross-platform 2D graphics library for .NET. It provides a format-agnostic in-memory image model, a rich processing pipeline, flexible encoders and decoders, and low-level pixel APIs for advanced workloads.
 
+## License
+
+ImageSharp is licensed under the terms of the [Six Labors Split License, Version 1.0](https://github.com/SixLabors/ImageSharp/blob/main/LICENSE). See https://sixlabors.com/pricing for commercial licensing details.
+
+>[!IMPORTANT]
+>Starting with ImageSharp 4.0.0, projects that directly depend on ImageSharp require a `sixlabors.lic` file to compile. By default, place the file next to your project file, or set `SixLaborsLicenseFile` in your project or shared props file to point to a central location. This enforcement applies to direct dependencies only. See [License Enforcement Changes and a New Subscription Tier](https://sixlabors.com/posts/licence-enforcement-changes/) for details.
+
 ## Install ImageSharp
 
 ImageSharp is distributed on [NuGet](https://www.nuget.org/packages/SixLabors.ImageSharp) with preview and nightly builds available on [Feedz](https://f.feedz.io/sixlabors/sixlabors/nuget/index.json).
@@ -68,10 +75,3 @@ When enabled, ImageSharp adds implicit `global using` directives for:
 - `SixLabors.ImageSharp.Processing`
 
 You can turn this off by removing the property or setting it to `false`.
-
-## License
-
-ImageSharp is licensed under the terms of the [Six Labors Split License, Version 1.0](https://github.com/SixLabors/ImageSharp/blob/main/LICENSE). See https://sixlabors.com/pricing for commercial licensing details.
-
->[!IMPORTANT]
->Starting with ImageSharp 4.0.0, projects that directly depend on ImageSharp require a `sixlabors.lic` file to compile. By default, place the file next to your project file, or set `SixLaborsLicenseFile` in your project or shared props file to point to a central location. This enforcement applies to direct dependencies only. See [License Enforcement Changes and a New Subscription Tier](https://sixlabors.com/posts/licence-enforcement-changes/) for details.
