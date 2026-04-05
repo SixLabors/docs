@@ -1,11 +1,11 @@
 # Six Labors Documentation
 
-We aim to provide modern, cross-platform, incredibly powerful yet beautifully simple graphics libraries. Built against .NET Standard, our libraries can be used in device, cloud, and embedded/IoT scenarios.
+We aim to provide modern, cross-platform, incredibly powerful yet beautifully simple graphics libraries. Built against .NET, our libraries can be used in device, cloud, and embedded/IoT scenarios.
 
 You can find tutorials, examples and API details covering all Six Labors projects.
 
 >[!NOTE]
->Documentation for previous releases can be found at <https://docs-v2.sixlabors.com/>.
+>Documentation for previous releases can be found at <https://docs-v3.sixlabors.com/>.
 
 ### [API documentation](api/index.md)
 

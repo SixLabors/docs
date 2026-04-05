@@ -1,50 +1,82 @@
-# Processing Image Operations
+# Processing Images
 
-The ImageSharp processing API is imperative. This means that the order in which you supply the individual processing operations is the order in which they are are compiled and applied. This allows the API to be very flexible, allowing you to combine processes in any order. Details of built in processing extensions can be found in the @"SixLabors.ImageSharp.Processing" documentation.
+ImageSharp processing pipelines are imperative and ordered. The processors you add inside `Mutate()` or `Clone()` run in the same order you write them, which makes the pipeline easy to reason about and compose.
 
-Processing operations are implemented using one of two available method calls. 
-[`Mutate`](xref:SixLabors.ImageSharp.Processing.ProcessingExtensions.Mutate*?displayProperty=name) and [`Clone`](xref:SixLabors.ImageSharp.Processing.ProcessingExtensions.Clone*?displayProperty=name)
+The main entry points are [`Mutate`](xref:SixLabors.ImageSharp.Processing.ProcessingExtensions.Mutate*?displayProperty=name) and [`Clone`](xref:SixLabors.ImageSharp.Processing.ProcessingExtensions.Clone*?displayProperty=name):
 
-The difference being that the former applies the given processing operations to the current image whereas the latter applies the operations to a deep copy of the original image.
+- `Mutate()` applies processors to the current image.
+- `Clone()` creates a deep copy and applies the processors to that copy.
 
-For example:
+## Mutate the Current Image
 
-**Mutate**
+Use `Mutate()` when you want to transform the current image in place:
 
-```c#
+```csharp
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Processing;
 
-using (Image image = Image.Load(inPath)) 
-{
-    // Resize the given image in place and return it for chaining.
-    // 'x' signifies the current image processing context.
-    image.Mutate(x => x.Resize(image.Width / 2, image.Height / 2)); 
+using Image image = Image.Load("input.jpg");
 
-    image.Save(outPath); 
-} // Dispose - releasing memory into a memory pool ready for the next image you wish to process.
+image.Mutate(x => x
+    .AutoOrient()
+    .Resize(1200, 800)
+    .Grayscale());
+
+image.Save("output.jpg");
 ```
 
-**Clone**
+This is the most common choice for request processing, thumbnails, and one-way export workflows.
 
-```c#
+## Clone When You Need to Preserve the Original
+
+Use `Clone()` when the original image must remain unchanged:
+
+```csharp
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Processing;
-using SixLabors.ImageSharp.Formats.Png;
 
-using (Image image = Image.Load(inStream)) 
-{
-    // Create a deep copy of the given image, resize it, and return it for chaining.
-   using (Image copy = image.Clone(x => x.Resize(image.Width / 2, image.Height / 2)))
-   {
-       copy.Save(outStream, new PngEncoder()); 
-   }
-} // Dispose - releasing memory into a memory pool ready for the next image you wish to process.
+using Image image = Image.Load("input.jpg");
+using Image thumbnail = image.Clone(x => x
+    .Resize(160, 160)
+    .Sepia());
+
+thumbnail.Save("thumbnail.jpg");
 ```
 
-### Common Examples
+This is useful when you need multiple derived outputs from the same source image.
 
-Examples of common operations can be found in the following documentation pages.
+## Build Ordered Pipelines
 
-- [Resizing](resize.md) images using different options.
-- Create [animated gif](animatedgif.md).
+Processor order matters. For example, auto-orienting before resizing usually produces more predictable results than resizing first and correcting orientation later:
+
+```csharp
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.Processing;
+
+using Image image = Image.Load("input.jpg");
+
+image.Mutate(x => x
+    .AutoOrient()
+    .Crop(new Rectangle(200, 100, 1200, 800))
+    .Resize(600, 400)
+    .BackgroundColor(Color.White));
+```
+
+As a rule of thumb:
+
+- Normalize orientation early.
+- Crop before expensive down-stream work when the crop meaningfully reduces the pixel area.
+- Apply output-specific effects near the end of the pipeline.
+
+## Common Processing Topics
+
+- [Resizing Images](resize.md) covers `Resize()` and [`ResizeOptions`](xref:SixLabors.ImageSharp.Processing.ResizeOptions).
+- [Crop, Pad, and Canvas](cropandcanvas.md) covers `Crop()`, `Pad()`, `BackgroundColor()`, and `EntropyCrop()`.
+- [Rotate, Flip, and Auto-Orient](orientation.md) covers `AutoOrient()`, `Rotate()`, `Flip()`, and `RotateFlip()`.
+- [Color and Effects](colorandeffects.md) covers `Grayscale()`, `Sepia()`, `Brightness()`, `Contrast()`, `Hue()`, `Saturate()`, and `Opacity()`.
+- [Quantization, Palettes, and Dithering](quantization.md) covers `Quantize()`, palette selection, encoder quantizers, and dithering algorithms.
+- [Create an animated GIF](animatedgif.md) covers a multi-frame workflow.
+
+## Related APIs
+
+Most built-in processors live under the [`SixLabors.ImageSharp.Processing`](xref:SixLabors.ImageSharp.Processing) namespace. Import that namespace in files where you build processing pipelines.

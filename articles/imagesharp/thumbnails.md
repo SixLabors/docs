@@ -1,0 +1,82 @@
+# Generate Thumbnails
+
+Thumbnail generation is one of the most common ImageSharp workflows. The two usual patterns are:
+
+- fit the image within a bounding box while preserving aspect ratio, and
+- create a fixed-size thumbnail that fills the target area by cropping.
+
+## Fit Within a Bounding Box
+
+Use [`ResizeOptions`](xref:SixLabors.ImageSharp.Processing.ResizeOptions) with [`ResizeMode.Max`](xref:SixLabors.ImageSharp.Processing.ResizeMode) when you want the full image to fit inside a target box:
+
+```csharp
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.Formats.Jpeg;
+using SixLabors.ImageSharp.Processing;
+
+using Image image = Image.Load("input.jpg");
+
+image.Mutate(x => x
+    .AutoOrient()
+    .Resize(new ResizeOptions
+    {
+        Size = new Size(300, 300),
+        Mode = ResizeMode.Max
+    }));
+
+image.Save("thumbnail.jpg", new JpegEncoder { Quality = 85 });
+```
+
+This keeps the whole image visible and preserves aspect ratio.
+
+## Create a Square Center-Crop Thumbnail
+
+Use [`ResizeMode.Crop`](xref:SixLabors.ImageSharp.Processing.ResizeMode.Crop) to fill the target bounds and crop the overflow:
+
+```csharp
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.Processing;
+
+using Image image = Image.Load("input.jpg");
+
+image.Mutate(x => x
+    .AutoOrient()
+    .Resize(new ResizeOptions
+    {
+        Size = new Size(256, 256),
+        Mode = ResizeMode.Crop,
+        Position = AnchorPositionMode.Center
+    }));
+
+image.Save("avatar.jpg");
+```
+
+This is the usual pattern for avatars, cards, and tile-based UI.
+
+## Keep Transparency in Thumbnails
+
+If the source image uses transparency and you want to preserve it, save the thumbnail to a format that supports alpha, such as PNG or WebP:
+
+```csharp
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.Formats.Png;
+using SixLabors.ImageSharp.Processing;
+
+using Image image = Image.Load("input.png");
+
+image.Mutate(x => x.Resize(new ResizeOptions
+{
+    Size = new Size(256, 256),
+    Mode = ResizeMode.Max
+}));
+
+image.Save("thumbnail.png", new PngEncoder());
+```
+
+## Notes
+
+- `AutoOrient()` is usually the right first step for user-uploaded photos.
+- `ResizeMode.Max` is for fit-within-box results.
+- `ResizeMode.Crop` is for fixed output dimensions that must be fully filled.
+
+For more detail on resizing behavior, see [Resizing Images](resize.md).

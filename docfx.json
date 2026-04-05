@@ -118,7 +118,8 @@
         ],
         "exclude": [
           "README.md",
-          "_site/**"
+          "_site/**",
+          "**/codecov.yml"
         ]
       }
     ],

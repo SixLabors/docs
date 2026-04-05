@@ -1,25 +1,52 @@
 # Pixel Formats
 
-### Why is @"SixLabors.ImageSharp.Image`1" a generic class?
+[`Image<TPixel>`](xref:SixLabors.ImageSharp.Image`1) is generic because the in-memory pixel type is part of the image contract. An [`Image<Rgba32>`](xref:SixLabors.ImageSharp.Image`1) and an [`Image<L8>`](xref:SixLabors.ImageSharp.Image`1) can represent the same picture, but they differ in channel layout, precision, memory usage, and what direct pixel access means for your code.
 
-We support multiple pixel formats just like _System.Drawing_ does. However, unlike their closed [PixelFormat](https://docs.microsoft.com/en-us/dotnet/api/system.drawing.imaging.pixelformat) enumeration, our solution is extensible.
-A pixel is basically a small value object (struct), describing the color at a given point according to a pixel model we call Pixel Format. `Image<TPixel>` represents a pixel graphic bitmap stored as a **generic, discontiguous memory block** of pixels, of total size `image.Width * image.Height`. Note that while the image memory should be considered discontiguous by default, if the image is small enough (less than ~4MB in memory, on 64-bit), it will be stored in a single, contiguous memory block. In addition to memory optimization advantages, discontigous buffers also enable us to load images at super high resolution, which couldn't otherwise be loaded due to limitations to the maximum size of `Span<T>` in the .NET runtime, even on 64-bit systems. Please read the [Memory Management](memorymanagement.md) section for more information.
+Image memory is usually treated as discontiguous, even though smaller images may fit in a single backing buffer. See [Memory Management](memorymanagement.md) for more detail on how ImageSharp stores large images efficiently.
 
-In the case of multi-frame images multiple bitmaps are stored in `image.Frames` as `ImageFrame<TPixel>` instances.
+For multi-frame images, the individual bitmaps live in `image.Frames` as [`ImageFrame<TPixel>`](xref:SixLabors.ImageSharp.ImageFrame`1) instances.
 
-### Choosing Pixel Formats
+## What Counts as a Pixel Format
 
-Take a look at the various pixel formats available under @"SixLabors.ImageSharp.PixelFormats#structs" After picking the pixel format of your choice, use it as a generic argument for @"SixLabors.ImageSharp.Image`1", for example, by instantiating `Image<Bgr24>`.
+A pixel format in ImageSharp is not just any color-related struct. To be used as `TPixel`, a type must implement [`IPixel<TSelf>`](xref:SixLabors.ImageSharp.PixelFormats.IPixel`1).
 
-### Defining Custom Pixel Formats
+That contract includes conversion members such as:
 
-Creating your own pixel format is a case of defining a struct implementing @"SixLabors.ImageSharp.PixelFormats.IPixel`1" and using it as a generic argument for @"SixLabors.ImageSharp.Image`1".
-Baseline batched pixel-conversion primitives are provided via @"SixLabors.ImageSharp.PixelFormats.PixelOperations`1" but it is possible to override those baseline versions with your own optimized implementation.
+- [`ToRgba32()`](xref:SixLabors.ImageSharp.PixelFormats.IPixel.ToRgba32)
+- [`ToScaledVector4()`](xref:SixLabors.ImageSharp.PixelFormats.IPixel.ToScaledVector4)
+- [`ToVector4()`](xref:SixLabors.ImageSharp.PixelFormats.IPixel.ToVector4)
+- `FromScaledVector4(...)`
+- `FromVector4(...)`
+- conversions to and from canonical pixel types such as [`Rgba32`](xref:SixLabors.ImageSharp.PixelFormats.Rgba32), [`Rgb24`](xref:SixLabors.ImageSharp.PixelFormats.Rgb24), [`Bgra32`](xref:SixLabors.ImageSharp.PixelFormats.Bgra32), [`L8`](xref:SixLabors.ImageSharp.PixelFormats.L8), and [`Rgba64`](xref:SixLabors.ImageSharp.PixelFormats.Rgba64)
 
-### Is it possible to store a pixel on a single bit for monochrome images?
+This is what keeps the image processing pipeline practical. Many operations and batched conversion paths assume pixels can move efficiently through RGBA-oriented [`Vector4`](xref:System.Numerics.Vector4) representations, and some optimized paths are specifically designed for [`Rgba32`](xref:SixLabors.ImageSharp.PixelFormats.Rgba32)-compatible pixel types where `ToVector4()` and `FromVector4(...)` are not expensive.
 
-No. Our architecture does not allow sub-byte pixel formats at the moment. This feature is incredibly complex to implement, and you are going to pay the price of the low memory footprint in processing speed / CPU load.
+## Pixel Formats Are Not Color Profile Types
 
-### It is possible to decode into pixel formats like [CMYK](https://en.wikipedia.org/wiki/CMYK_color_model) or [CIELAB](https://en.wikipedia.org/wiki/Lab_color_space)?
+This is separate from the color-profile conversion APIs described in [Color Profiles and Color Conversion](colorprofiles.md).
 
-Unfortunately it's not possible and is unlikely to be in the future. Many image processing operations expect the pixels to be laid out in-memory in RGBA format. To manipulate images in exotic colorspaces we would have to translate each pixel to-and-from the colorspace multiple times, which would result in unusable performance and a loss of color information.
+Types such as [`Rgb`](xref:SixLabors.ImageSharp.ColorProfiles.Rgb), [`Cmyk`](xref:SixLabors.ImageSharp.ColorProfiles.Cmyk), [`Hsl`](xref:SixLabors.ImageSharp.ColorProfiles.Hsl), [`YCbCr`](xref:SixLabors.ImageSharp.ColorProfiles.YCbCr), [`CieLab`](xref:SixLabors.ImageSharp.ColorProfiles.CieLab), and [`CieXyz`](xref:SixLabors.ImageSharp.ColorProfiles.CieXyz) are color value types used by [`ColorProfileConverter`](xref:SixLabors.ImageSharp.ColorProfiles.ColorProfileConverter). They are not `TPixel` implementations for [`Image<TPixel>`](xref:SixLabors.ImageSharp.Image`1).
+
+That means ImageSharp can convert color values between spaces like RGB, CMYK, Lab, and XYZ without treating those color models as general-purpose in-memory image storage formats. ImageSharp pixel formats are intentionally limited to types that fit the RGBA-oriented processing pipeline without expensive per-pixel translation on every operation.
+
+## Choosing Pixel Formats
+
+Choose a `TPixel` based on the kind of in-memory work you need to do:
+
+- Use [`Rgba32`](xref:SixLabors.ImageSharp.PixelFormats.Rgba32) as the general-purpose default.
+- Use lower-memory formats such as [`Rgb24`](xref:SixLabors.ImageSharp.PixelFormats.Rgb24) or [`L8`](xref:SixLabors.ImageSharp.PixelFormats.L8) when you know you do not need the extra channels or precision.
+- Use higher-precision formats such as [`Rgb48`](xref:SixLabors.ImageSharp.PixelFormats.Rgb48), [`Rgba64`](xref:SixLabors.ImageSharp.PixelFormats.Rgba64), or [`RgbaVector`](xref:SixLabors.ImageSharp.PixelFormats.RgbaVector) when your pipeline benefits from more precision.
+
+If you want to inspect pixel characteristics before a full decode, [`ImageInfo.PixelType`](xref:SixLabors.ImageSharp.ImageInfo.PixelType) exposes [`PixelTypeInfo`](xref:SixLabors.ImageSharp.PixelFormats.PixelTypeInfo). See [Read Image Info Without Decoding](identify.md) for more on that workflow.
+
+## Defining Custom Pixel Formats
+
+You can define a custom pixel format by creating a struct that implements [`IPixel<TSelf>`](xref:SixLabors.ImageSharp.PixelFormats.IPixel`1) and using it as the generic argument for [`Image<TPixel>`](xref:SixLabors.ImageSharp.Image`1).
+
+Baseline batched conversion primitives are provided by [`PixelOperations<TPixel>`](xref:SixLabors.ImageSharp.PixelFormats.PixelOperations`1), and you can override those implementations if you have a more efficient specialization.
+
+In practice, custom `TPixel` types should still fit the same RGBA-compatible conversion model as the built-in formats. Many of the packed and vector-style pixel types are deliberately in the same family as graphics-oriented packed color representations, and [`IPackedVector<TPacked>`](xref:SixLabors.ImageSharp.PixelFormats.IPackedVector`1) follows the same packed-value shape used by MonoGame and XNA types, which allows signature compatibility with them.
+
+## Single-Bit Monochrome Pixels
+
+ImageSharp does not currently support sub-byte `TPixel` formats such as a true 1-bit pixel type. That trade-off keeps the processing model and API surface much simpler, and it avoids paying a heavy CPU cost across the rest of the pipeline for a niche storage optimization.

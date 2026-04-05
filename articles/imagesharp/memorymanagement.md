@@ -1,73 +1,102 @@
 # Memory Management
 
-Starting with ImageSharp 2.0, the library uses large (~4MB) discontiguous chunks of unmanaged memory to represent multi-megapixel images. Internally, these buffers are heavily pooled to reduce OS allocation overhead. Unlike in ImageSharp 1.0, the pools are automatically trimmed after a certain amount of allocation inactivity, releasing the buffers to the OS, making the library more suitable for applications that do imaging operations in a periodic manner.
+ImageSharp stores image pixels in pooled buffers managed by [`MemoryAllocator`](xref:SixLabors.ImageSharp.Memory.MemoryAllocator). In normal use, you should assume large images are not backed by one giant contiguous span.
 
-The buffer allocation and pooling behavior is implemented by @"SixLabors.ImageSharp.Memory.MemoryAllocator" which is being used through @"SixLabors.ImageSharp.Configuration"'s @"SixLabors.ImageSharp.Configuration.MemoryAllocator" property within the library, therefore it's configurable and replaceable by the user.
+That design keeps large-image handling practical, but it also means interop-heavy code should be explicit about when it truly needs contiguous memory.
 
-### Configuring the pool size
+## Default Behavior
 
-By default, the maximum pool size is platform-specific, defaulting to a portion of the available physical memory on 64 bit coreclr, and to a 128MB constant size on other platforms / runtimes.
+[`Configuration.MemoryAllocator`](xref:SixLabors.ImageSharp.Configuration.MemoryAllocator) defaults to [`MemoryAllocator.Default`](xref:SixLabors.ImageSharp.Memory.MemoryAllocator.Default). For most applications, that default allocator is the right choice.
 
-We highly recommend to go with these defaults, however in certain cases it might be desirable to override the pool limit. In such cases the most straightforward solution is to replace the memory allocator globally:
+The ImageSharp source explicitly recommends using a single busy allocator per process. If you customize allocation behavior, prefer doing so by replacing the allocator on a shared configuration rather than creating many short-lived allocators.
 
-```C#
-Configuration.Default.MemoryAllocator = MemoryAllocator.Create(new MemoryAllocatorOptions()
+## Customize the Allocator
+
+If you need tighter control over pool size or allocation limits, create a custom allocator with [`MemoryAllocator.Create(...)`](xref:SixLabors.ImageSharp.Memory.MemoryAllocator.Create*) and [`MemoryAllocatorOptions`](xref:SixLabors.ImageSharp.Memory.MemoryAllocatorOptions):
+
+```csharp
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.Memory;
+
+Configuration config = Configuration.Default.Clone();
+config.MemoryAllocator = MemoryAllocator.Create(new MemoryAllocatorOptions
 {
-    MaximumPoolSizeMegabytes = 64
+    MaximumPoolSizeMegabytes = 128,
+    AllocationLimitMegabytes = 1024
 });
 ```
 
-### Enforcing contiguous buffers
+[`MaximumPoolSizeMegabytes`](xref:SixLabors.ImageSharp.Memory.MemoryAllocatorOptions.MaximumPoolSizeMegabytes) controls retained pool size. [`AllocationLimitMegabytes`](xref:SixLabors.ImageSharp.Memory.MemoryAllocatorOptions.AllocationLimitMegabytes) controls the maximum discontiguous buffer size the allocator will allow.
 
-Certain interop use cases may require multi-megapixel images to be layed out contiguously in memory so a single buffer pointer can be passed to native API-s. This can be enforced by setting @"SixLabors.ImageSharp.Configuration"'s @"SixLabors.ImageSharp.Configuration.PreferContiguousImageBuffers" to `true`. Note that this will lead to significantly reduced pooling that may hurt overall processing throughput. We don't recommend to flip this option globally. Instead, you can enable it locally for the image instances that are expected to be contiguous:
+## Prefer Contiguous Buffers Only When You Need Them
 
-```C#
-Configuration customConfig = Configuration.Default.Clone();
-customConfig.PreferContiguousImageBuffers = true;
+[`PreferContiguousImageBuffers`](xref:SixLabors.ImageSharp.Configuration.PreferContiguousImageBuffers) asks ImageSharp to use contiguous image buffers whenever possible:
 
-using (Image<Rgba32> image = new(customConfig, 4096, 4096))
+```csharp
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.PixelFormats;
+
+Configuration config = Configuration.Default.Clone();
+config.PreferContiguousImageBuffers = true;
+
+using Image<Rgba32> image = new(config, 2048, 2048);
+
+bool contiguous = image.DangerousTryGetSinglePixelMemory(out Memory<Rgba32> pixels);
+```
+
+This is primarily for interop scenarios. It is not something to enable globally without a reason, because it reduces ImageSharp's flexibility around large pooled allocations and can hurt throughput.
+
+For more on that workflow, see [Interop and Raw Memory](interop.md).
+
+## Dispose Images Promptly
+
+`Image` and `Image<TPixel>` own unmanaged resources. Always dispose them with `using` or `await using` patterns where appropriate.
+
+ImageSharp includes finalizer-based safety nets, but relying on finalization instead of deterministic disposal can still create avoidable memory pressure and latency.
+
+## Track Undisposed Allocations
+
+[`MemoryDiagnostics`](xref:SixLabors.ImageSharp.Diagnostics.MemoryDiagnostics) exposes two useful diagnostics:
+
+- [`TotalUndisposedAllocationCount`](xref:SixLabors.ImageSharp.Diagnostics.MemoryDiagnostics.TotalUndisposedAllocationCount)
+- [`UndisposedAllocation`](xref:SixLabors.ImageSharp.Diagnostics.MemoryDiagnostics.UndisposedAllocation)
+
+```csharp
+using SixLabors.ImageSharp.Diagnostics;
+
+Console.WriteLine(MemoryDiagnostics.TotalUndisposedAllocationCount);
+```
+
+For troubleshooting, you can subscribe to `UndisposedAllocation` to capture allocation stack traces for resources that leaked to the finalizer. That event is intended for diagnostics and carries significant overhead, so it should not stay enabled in normal production traffic.
+
+## Releasing Retained Resources
+
+If you create a custom allocator and later retire it, dispose all associated images first and then call [`ReleaseRetainedResources()`](xref:SixLabors.ImageSharp.Memory.MemoryAllocator.ReleaseRetainedResources):
+
+```csharp
+using SixLabors.ImageSharp.Memory;
+
+MemoryAllocator allocator = MemoryAllocator.Create(new MemoryAllocatorOptions
 {
-    if (!image.DangerousTryGetSinglePixelMemory(out Memory<Rgba32> memory))
-    {
-        throw new Exception(
-            "This can only happen with multi-GB images or when PreferContiguousImageBuffers is not set to true.");
-    }
+    MaximumPoolSizeMegabytes = 64
+});
 
-    using (MemoryHandle pinHandle = memory.Pin())
-    {
-        void* ptr = pinHandle.Pointer;
-
-        // You can now pass 'ptr' to native API-s.
-        // Make sure to keep 'pinHandle', and 'image' alive while native resource work with the pointer.
-        // Make sure to Dispose() them afterwards.
-    }
-}
+allocator.ReleaseRetainedResources();
 ```
 
-### Wrapping existing buffers as `Image<TPixel>`
+That tells the allocator to drop retained pooled buffers that are no longer needed.
 
-It's also possible to do the other way around, and wrap an existing native buffer to process it as an `Image<TPixel>`. You can use one of the @"SixLabors.ImageSharp.Image.WrapMemory*" overloads for this. Note that the resulting image is not suitable for operations that would change the dimensions of the image, such an attempt will lead to an @"SixLabors.ImageSharp.Memory.InvalidMemoryOperationException".
+## Practical Guidance
 
-### Troubleshooting memory leaks
+- Keep [`MemoryAllocator.Default`](xref:SixLabors.ImageSharp.Memory.MemoryAllocator.Default) unless profiling shows a real need to customize it.
+- Use one shared allocator per process rather than many temporary allocators.
+- Avoid forcing contiguous buffers unless you truly need a single `Memory<T>` or pointer.
+- Use [`DecoderOptions.TargetSize`](xref:SixLabors.ImageSharp.Formats.DecoderOptions.TargetSize) and [`DecoderOptions.MaxFrames`](xref:SixLabors.ImageSharp.Formats.DecoderOptions.MaxFrames) when you want to limit decode cost up front.
+- Track leaked images with [`MemoryDiagnostics`](xref:SixLabors.ImageSharp.Diagnostics.MemoryDiagnostics) if disposal bugs are suspected.
 
-Strictly speaking, ImageSharp is safe against memory leaks, because finalizers will take care of the native memory resources leaked by omitting `Dispose()` or `using` blocks. However, letting the memory leak to finalizers may lead to performance issues and if GC execution can't keep up with the leaks, to `OutOfMemoryException`. Application code should take care of disposing any @"SixLabors.ImageSharp.Image`1" allocated.
+## Related Topics
 
-In complex and large apps, this might be hard to verify. ImageSharp 2.0+ exposes some code-first diagnostic API-s that may help detecting leaks.
-
-Query and log @"SixLabors.ImageSharp.Diagnostics.MemoryDiagnostics.TotalUndisposedAllocationCount" to track if the number of undisposed allocations is increasing during your application's lifetime:
-
-```C#
-myLogger.Log(@"Number of undisposed ImageSharp buffers: {MemoryDiagnostics.TotalUndisposedAllocationCount}");
-```
-
-For troubleshooting you can also subscribe to the event @"SixLabors.ImageSharp.Diagnostics.MemoryDiagnostics.UndisposedAllocation". When the event fires, it will report the stack trace of leaking allocations, which may help tracking down bugs. Subscribing to this event has *significant* performance overhead, so avoid it in the final production deployment of your app.
-
-```C#
-#if TROUBLESHOOTING_TESTING_NOT_PRODUCTION
-MemoryDiagnostics.UndisposedAllocation += allocationStackTrace =>
-{
-    Console.WriteLine($@"Undisposed allocation detected at:{Environment.NewLine}{allocationStackTrace}");
-    Environment.Exit(1);
-};
-#endif
-```
+- [Configuration](configuration.md)
+- [Working with Pixel Buffers](pixelbuffers.md)
+- [Interop and Raw Memory](interop.md)
+- [Troubleshooting](troubleshooting.md)

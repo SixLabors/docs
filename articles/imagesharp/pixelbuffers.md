@@ -1,159 +1,154 @@
 # Working with Pixel Buffers
 
-### Setting individual pixels using indexers
-A very basic and readable way for manipulating individual pixels is to use the indexer either on `Image<T>` or `ImageFrame<T>`:
-```C#
-using (Image<Rgba32> image = new Image<Rgba32>(400, 400))
-{
-    image[200, 200] = Rgba32.White; // also works on ImageFrame<T>
-}
+ImageSharp gives you several ways to work directly with pixel data. The right one depends on whether you care most about simplicity, throughput, pixel-format independence, or interop.
+
+## Choose the Right Access Pattern
+
+Use:
+
+- indexers for occasional pixel reads or writes;
+- `ProcessPixelRows(...)` for fast row-by-row work in a known `TPixel`;
+- `ProcessPixelRowsAsVector4(...)` for reusable pixel-format-agnostic processing;
+- `CopyPixelDataTo(...)`, `LoadPixelData(...)`, and `WrapMemory(...)` when exchanging raw data with other systems.
+
+## Use Indexers for Simple Cases
+
+If you only need to touch a few pixels, the indexer is the simplest option:
+
+```csharp
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.PixelFormats;
+
+using Image<Rgba32> image = new(400, 400);
+image[200, 200] = Rgba32.White;
 ```
 
-The indexer is an order of magnitude faster than the `.GetPixel(x, y)` and `.SetPixel(x, y)` methods of `System.Drawing`, but individual `[x, y]` indexing has inherent overhead compared to more sophisticated approaches demonstrated below.
+That is fine for small amounts of work, but repeated random pixel access has more overhead than processing full rows.
 
-### Efficient pixel manipulation
-If you want to achieve killer speed in your pixel manipulation routines, you should utilize the per-row methods. These methods take advantage of the [`Span<T>`-based memory manipulation primitives](https://www.codemag.com/Article/1807051/Introducing-.NET-Core-2.1-Flagship-Types-Span-T-and-Memory-T) from [System.Memory](https://www.nuget.org/packages/System.Memory/), providing a fast, yet safe low-level solution to manipulate pixel data.
+## Use `ProcessPixelRows(...)` for Fast Known-Format Access
 
-This is how you can implement efficient row-by-row pixel manipulation. This API receives a @"SixLabors.ImageSharp.PixelAccessor`1" which ensures that the span is never [transferred to the heap](#spant-limitations) making the operation safe.
+[`Image<TPixel>`](xref:SixLabors.ImageSharp.Image`1) and [`ImageFrame<TPixel>`](xref:SixLabors.ImageSharp.ImageFrame`1) expose `ProcessPixelRows(...)` so you can work with row spans directly:
 
-> [!Note]
-> The pixel manipulation APIs have been changed in ImageSharp 2.0.
-> If you are interested about the background of these changes, see the [API discussion on GitHub](https://github.com/SixLabors/ImageSharp/issues/1739).
-
-```C#
+```csharp
 using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.PixelFormats;
 
-// ...
-using Image<Rgba32> image = Image.Load<Rgba32>("my_file.png");
+using Image<Rgba32> image = Image.Load<Rgba32>("input.png");
+
 image.ProcessPixelRows(accessor =>
 {
-    // Color is pixel-agnostic, but it's implicitly convertible to the Rgba32 pixel type
-    Rgba32 transparent = Color.Transparent;
-
     for (int y = 0; y < accessor.Height; y++)
     {
-        Span<Rgba32> pixelRow = accessor.GetRowSpan(y);
+        Span<Rgba32> row = accessor.GetRowSpan(y);
 
-        // pixelRow.Length has the same value as accessor.Width,
-        // but using pixelRow.Length allows the JIT to optimize away bounds checks:
-        for (int x = 0; x < pixelRow.Length; x++)
+        for (int x = 0; x < row.Length; x++)
         {
-            // Get a reference to the pixel at position x
-            ref Rgba32 pixel = ref pixelRow[x];
+            ref Rgba32 pixel = ref row[x];
             if (pixel.A == 0)
             {
-                // Overwrite the pixel referenced by 'ref Rgba32 pixel':
-                pixel = transparent;
+                pixel = Rgba32.Transparent;
             }
         }
     }
 });
 ```
 
-It's possible to simplify the part dealing with `pixelRow` using C# 7.3 `foreach ref`:
+This is the usual replacement for `LockBits`-style workflows when your algorithm already knows the working pixel format.
 
-```C#
-foreach (ref Rgba32 pixel in pixelRow)
+## Process Multiple Images Row by Row
+
+There are overloads for processing multiple images together:
+
+```csharp
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.PixelFormats;
+
+using Image<Rgba32> source = Image.Load<Rgba32>("source.png");
+using Image<Rgba32> target = new(source.Width, source.Height);
+
+source.ProcessPixelRows(target, (sourceAccessor, targetAccessor) =>
 {
-    if (pixel.A == 0)
+    for (int y = 0; y < sourceAccessor.Height; y++)
     {
-        // overwrite the pixel referenced by 'ref Rgba32 pixel':
-        pixel = transparent;
+        Span<Rgba32> sourceRow = sourceAccessor.GetRowSpan(y);
+        Span<Rgba32> targetRow = targetAccessor.GetRowSpan(y);
+        sourceRow.CopyTo(targetRow);
     }
-}
+});
 ```
 
-Need to process two images simultaneously? Sure!
+This is a good fit for compositing, comparisons, or custom copy/merge logic.
 
-```C#
-// Extract a sub-region of sourceImage as a new image
-private static Image<Rgba32> Extract(Image<Rgba32> sourceImage, Rectangle sourceArea)
-{
-    Image<Rgba32> targetImage = new(sourceArea.Width, sourceArea.Height);
-    int height = sourceArea.Height;
-    sourceImage.ProcessPixelRows(targetImage, (sourceAccessor, targetAccessor) =>
-    {
-        for (int i = 0; i < height; i++)
-        {
-            Span<Rgba32> sourceRow = sourceAccessor.GetRowSpan(sourceArea.Y + i);
-            Span<Rgba32> targetRow = targetAccessor.GetRowSpan(i);
+## Use `ProcessPixelRowsAsVector4(...)` for Pixel-Format-Agnostic Logic
 
-            sourceRow.Slice(sourceArea.X, sourceArea.Width).CopyTo(targetRow);
-        }
-    });
+If you want one processor that can run on many `TPixel` formats, use `ProcessPixelRowsAsVector4(...)`:
 
-    return targetImage;
-}
-```
+```csharp
+using System.Numerics;
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.Processing;
 
-### Parallel, pixel-format agnostic image manipulation
-There is a way to process image data in a pixel-agnostic floating-point format that has the advantage of working on images of any underlying pixel-format, in a completely transparent way: using the @"SixLabors.ImageSharp.Processing.PixelRowDelegateExtensions.ProcessPixelRowsAsVector4(SixLabors.ImageSharp.Processing.IImageProcessingContext,SixLabors.ImageSharp.Processing.PixelRowOperation)" APIs.
-
-This is how you can use this extension to manipulate an image:
-
-```C#
-// ...
-
-image.Mutate(c => c.ProcessPixelRowsAsVector4(row =>
+image.Mutate(context => context.ProcessPixelRowsAsVector4(row =>
 {
     for (int x = 0; x < row.Length; x++)
     {
-        // We can apply any custom processing logic here
         row[x] = Vector4.SquareRoot(row[x]);
     }
 }));
 ```
 
-This API receives a @"SixLabors.ImageSharp.Processing.PixelRowOperation" instance as input, and uses it to modify the pixel data of the target image. It does so by automatically executing the input operation in parallel, on multiple pixel rows at the same time, to fully leverage the power of modern multi-core CPUs. The `ProcessPixelRowsAsVector4` extension also takes care of converting the pixel data to/from the `Vector4` format, which means the same operation can be used to easily process images of any existing pixel-format, without having to implement the processing logic again for each of them.
+This is extremely useful for reusable processing logic, but remember that it introduces conversion work to and from `Vector4`. It is often a great tradeoff for flexibility, but it is not always the fastest possible path for a hot server-side workload.
 
-This extension offers fast and flexible way to implement custom image processors in ImageSharp. In certain cases (typically desktop apps running on multi-core CPU) the processor-level parallelism might be faster and desirable, but in case of high-load server-side applications it usually hurts throughput. To address this, the level of parallelism can be customized via @"SixLabors.ImageSharp.Configuration"'s @"SixLabors.ImageSharp.Configuration.MaxDegreeOfParallelism" property.
+## Convert to a Working Pixel Format
 
-### `Span<T>` limitations
-Please be aware that **`Span<T>` has a very specific limitation**: it is a stack-only type! Read the *Is There Anything Span Can’t Do?!* section in [this article](https://www.codemag.com/Article/1807051/Introducing-.NET-Core-2.1-Flagship-Types-Span-T-and-Memory-T) for more details.
-A short summary of the limitations:
-- Span can only live on the execution stack.
-- Span cannot be boxed or put on the heap.
-- Span cannot be used as a generic type argument.
-- Span cannot be an instance field of a type that itself is not stack-only.
-- Span cannot be used within asynchronous methods.
+Sometimes the cleanest approach is to convert the image into a known working format first:
 
-### Exporting raw pixel data from an `Image<T>`
-You can use @"SixLabors.ImageSharp.Image`1.CopyPixelDataTo*" to copy the pixel data to a user buffer. Note that the following sample code leads to to significant extra GC allocation in case of large images, which can be avoided by processing the image row-by row instead.
-```C#
-Rgba32[] pixelArray = new Rgba32[image.Width * image.Height]
-image.CopyPixelDataTo(pixelArray);
+```csharp
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.PixelFormats;
+
+using Image source = Image.Load("input.tiff");
+using Image<Rgba32> working = source.CloneAs<Rgba32>();
 ```
 
-Or:
-```C#
-byte[] pixelBytes = new byte[image.Width * image.Height * Unsafe.SizeOf<Rgba32>()]
-image.CopyPixelDataTo(pixelBytes);
+[`CloneAs<TPixel>()`](xref:SixLabors.ImageSharp.Image.CloneAs*) is especially useful when you want to standardize a pipeline on [`Rgba32`](xref:SixLabors.ImageSharp.PixelFormats.Rgba32), [`Bgra32`](xref:SixLabors.ImageSharp.PixelFormats.Bgra32), or another specific working format.
+
+## Copy Raw Pixels In and Out
+
+Use `CopyPixelDataTo(...)` when you need a flattened copy of the root frame pixel buffer:
+
+```csharp
+using SixLabors.ImageSharp.PixelFormats;
+
+Rgba32[] pixels = new Rgba32[image.Width * image.Height];
+image.CopyPixelDataTo(pixels);
 ```
 
-### Loading raw pixel data into an `Image<T>`
+Use `LoadPixelData(...)` when you want ImageSharp to create an owned image from raw input:
 
-```C#
-int width = ...;
-int height = ...;
-Rgba32[] rgbaData = GetMyRgbaArray();
-using (var image = Image.LoadPixelData(rgbaData, width, height))
-{
-	// Work with the image
-}
+```csharp
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.PixelFormats;
+
+byte[] rgba = GetRgbaBytes();
+using Image<Rgba32> image = Image.LoadPixelData<Rgba32>(rgba, width, height);
 ```
 
-```C#
-int width = ...;
-int height = ...;
-byte[] rgbaBytes = GetMyRgbaBytes();
-using (var image = Image.LoadPixelData<Rgba32>(rgbaBytes, width, height))
-{
-	// Work with the image
-}
-```
+There are stride-aware overloads for both pixel and byte input. For zero-copy interop, see [Interop and Raw Memory](interop.md).
 
-### OK nice, but how do you get a single pointer or span to the underlying pixel buffer?
+## `Span<T>` Rules Still Apply
 
-That's the neat part, you don't. 🙂 Well, normally.
+The row spans you get from pixel accessors are [`Span<T>`](xref:System.Span`1) values. That means they are stack-only:
 
-For custom image processing code written in C#, we highly recommend to use the methods introduced above, since ImageSharp buffers are discontiguous by default. However, certain interop use-cases may require to overcome this limitation, and we support that. Please read the [Memory Management](memorymanagement.md) section for more information.
+- They cannot be stored on the heap.
+- They cannot cross `await` boundaries.
+- They cannot be captured and used after the callback returns.
+
+Keep all row work inside the callback that received the accessor.
+
+## Related Topics
+
+- [Pixel Formats](pixelformats.md)
+- [Interop and Raw Memory](interop.md)
+- [Memory Management](memorymanagement.md)
+- [Migrating from System.Drawing](migratingfromsystemdrawing.md)

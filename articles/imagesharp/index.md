@@ -1,19 +1,10 @@
-# Introduction
+# ImageSharp
 
-### What is ImageSharp?
-ImageSharp is a modern, fully featured, fully managed, cross-platform, 2D graphics library.
-Designed to simplify image processing, ImageSharp brings you an incredibly powerful yet beautifully simple API.
+ImageSharp is a fully managed, cross-platform 2D graphics library for .NET. It provides a format-agnostic in-memory image model, a rich processing pipeline, flexible encoders and decoders, and low-level pixel APIs for advanced workloads.
 
-ImageSharp is designed from the ground up to be flexible and extensible. The library provides API endpoints for common image processing operations and the building blocks to allow for the development of additional operations.  
+## Install ImageSharp
 
-Built against [.NET 8](https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-8/overview), ImageSharp can be used in device, cloud, and embedded/IoT scenarios.  
-  
-### License  
-ImageSharp is licensed under the terms of the [Six Labors Split License, Version 1.0](https://github.com/SixLabors/ImageSharp/blob/main/LICENSE). See https://sixlabors.com/pricing for commercial licensing details.
-  
-### Installation
-  
-ImageSharp is installed via [NuGet](https://www.nuget.org/packages/SixLabors.ImageSharp) with nightly builds available on [MyGet](https://www.myget.org/feed/sixlabors/package/nuget/SixLabors.ImageSharp).
+ImageSharp is distributed on [NuGet](https://www.nuget.org/packages/SixLabors.ImageSharp) with preview and nightly builds available on [Feedz](https://f.feedz.io/sixlabors/sixlabors/nuget/index.json).
 
 # [Package Manager](#tab/tabid-1)
 
@@ -44,13 +35,25 @@ paket add SixLabors.ImageSharp --version VERSION_NUMBER
 >[!WARNING]
 >Prerelease versions installed via the [Visual Studio NuGet Package Manager](https://docs.microsoft.com/en-us/nuget/consume-packages/install-use-packages-visual-studio) require the "include prerelease" checkbox to be checked.
 
-### Implicit Usings
+## Start Here
 
-The `UseImageSharp` property controls whether **implicit `global using` directives** for ImageSharp are included in your C# project. This feature is available in projects targeting **.NET 6 or later** with **C# 10 or later**.
+- [Getting Started](gettingstarted.md) walks through the core image types and the first end-to-end processing workflow.
+- [Loading, Identifying, and Saving](loadingandsaving.md) covers file, stream, and buffer-based APIs plus encoder selection.
+- [Working with Metadata](metadata.md) explains how to read and preserve EXIF, ICC, IPTC, XMP, and format-specific metadata.
+- [Color Profiles and Color Conversion](colorprofiles.md) covers ICC and CICP metadata, decode-time profile handling, and explicit working-space conversion.
+- [Image Formats](imageformats.md) explains format detection, encoders, decoders, and format registration.
+- [Processing Images](processing.md) introduces `Mutate()` and `Clone()` pipelines.
+- [Quantization, Palettes, and Dithering](quantization.md) explains `Quantize()`, palette-based encoders, and dithering tradeoffs.
+- [Pixel Formats](pixelformats.md) and [Working with Pixel Buffers](pixelbuffers.md) cover direct pixel access and advanced processing.
+- [Interop and Raw Memory](interop.md) covers `LoadPixelData(...)`, `WrapMemory(...)`, and contiguous-buffer interop.
+- [Configuration](configuration.md), [Memory Management](memorymanagement.md), and [Security Considerations](security.md) cover production-focused setup.
+- [Troubleshooting](troubleshooting.md) covers the common failure modes around format detection, streams, memory, and disposal.
+- [Migrating from System.Drawing](migratingfromsystemdrawing.md) maps common GDI-style workflows to ImageSharp APIs.
+- [Recipes](recipes.md) provides copy-pasteable solutions for common tasks.
 
-When enabled, a predefined set of `global using` directives for common ImageSharp namespaces (such as `SixLabors.ImageSharp`, `SixLabors.ImageSharp.Processing`, etc.) is automatically added to the compilation. This eliminates the need to manually add `using` statements in every file.
+## Implicit Usings
 
-To enable implicit ImageSharp usings, set the property in your project file:
+Set `UseImageSharp` in your project file to automatically import the most common ImageSharp namespaces:
 
 ```xml
 <PropertyGroup>
@@ -58,11 +61,17 @@ To enable implicit ImageSharp usings, set the property in your project file:
 </PropertyGroup>
 ```
 
-To disable the feature, either remove the property or set it to `false`:
+When enabled, ImageSharp adds implicit `global using` directives for:
 
-```xml
-<PropertyGroup>
-  <UseImageSharp>false</UseImageSharp>
-</PropertyGroup>
-```
+- `SixLabors.ImageSharp`
+- `SixLabors.ImageSharp.PixelFormats`
+- `SixLabors.ImageSharp.Processing`
 
+You can turn this off by removing the property or setting it to `false`.
+
+## License
+
+ImageSharp is licensed under the terms of the [Six Labors Split License, Version 1.0](https://github.com/SixLabors/ImageSharp/blob/main/LICENSE). See https://sixlabors.com/pricing for commercial licensing details.
+
+>[!IMPORTANT]
+>Starting with ImageSharp 4.0.0, projects that directly depend on ImageSharp require a `sixlabors.lic` file to compile. By default, place the file next to your project file, or set `SixLaborsLicenseFile` in your project or shared props file to point to a central location. This enforcement applies to direct dependencies only. See [License Enforcement Changes and a New Subscription Tier](https://sixlabors.com/posts/licence-enforcement-changes/) for details.

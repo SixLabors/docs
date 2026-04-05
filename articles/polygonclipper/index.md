@@ -7,10 +7,13 @@ Built against [.NET 8](https://learn.microsoft.com/en-us/dotnet/core/whats-new/d
   
 ### License  
 PolygonClipper is licensed under the terms of the [Six Labors Split License, Version 1.0](https://github.com/SixLabors/PolygonClipper/blob/main/LICENSE). See https://sixlabors.com/pricing for commercial licensing details.
+
+>[!IMPORTANT]
+>Starting with PolygonClipper 1.0.0, projects that directly depend on SixLabors.PolygonClipper require a `sixlabors.lic` file to compile. By default, place the file next to your project file, or set `SixLaborsLicenseFile` in your project or shared props file to point to a central location. This enforcement applies to direct dependencies only. See [License Enforcement Changes and a New Subscription Tier](https://sixlabors.com/posts/licence-enforcement-changes/) for details.
   
 ### Installation
   
-PolygonClipper is installed via [NuGet](https://www.nuget.org/packages/SixLabors.PolygonClipper) with nightly builds available on [MyGet](https://www.myget.org/feed/sixlabors/package/nuget/SixLabors.PolygonClipper).
+PolygonClipper is installed via [NuGet](https://www.nuget.org/packages/SixLabors.PolygonClipper) with nightly builds available on [Feedz](https://f.feedz.io/sixlabors/sixlabors/nuget/index.json).
 
 # [Package Manager](#tab/tabid-1)
 
