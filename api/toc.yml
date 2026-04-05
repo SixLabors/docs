@@ -10,3 +10,5 @@
   href: ImageSharp.Web.Providers.AWS/SixLabors.ImageSharp.Web.Providers.AWS.yml
 - name: Fonts
   href: Fonts/SixLabors.Fonts.yml
+- name: PolygonClipper
+  href: PolygonClipper/SixLabors.PolygonClipper.yml

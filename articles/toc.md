@@ -22,3 +22,5 @@
 # [Fonts](fonts/index.md)
 ## [Getting Started](fonts/gettingstarted.md)
 ## [Custom Rendering](fonts/customrendering.md)
+
+# [PolygonClipper](polygonclipper/index.md)

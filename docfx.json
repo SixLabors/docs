@@ -90,6 +90,21 @@
       "properties": {
         
       }
+    },
+        {
+      "src": [
+        {
+          "files": [
+            "ext/PolygonClipper/src/PolygonClipper/**.csproj"
+          ]
+        }
+      ],
+      "output": "api/PolygonClipper",
+      "disableGitFeatures": false,
+      "disableDefaultFilter": false,
+      "properties": {
+        
+      }
     }
   ],
   "build": {
