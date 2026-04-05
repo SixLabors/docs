@@ -18,7 +18,7 @@ Our libraries are split into focused projects that work well together. They cove
 You can find documentation for each project in the links below.
 
 <div class="row products">
-    <div class="col-sm-6 col-md-4">
+    <div class="col-sm-6 col-md-4 mb-5">
         <div class="product">
             <img src="https://raw.githubusercontent.com/SixLabors/Branding/main/icons/imagesharp/sixlabors.imagesharp.svg?sanitize=true" alt="ImageSharp Logo">
             <h5>ImageSharp</h5>
@@ -28,7 +28,7 @@ You can find documentation for each project in the links below.
             </a>
         </div>
     </div>
-    <div class="col-sm-6 col-md-4">
+    <div class="col-sm-6 col-md-4 mb-5">
         <div class="product">
             <img src="https://raw.githubusercontent.com/SixLabors/Branding/main/icons/imagesharp.drawing/sixlabors.imagesharp.drawing.svg?sanitize=true">
             <h5>ImageSharp.Drawing</h5>
@@ -38,7 +38,7 @@ You can find documentation for each project in the links below.
             </a>
         </div>
     </div>
-    <div class="col-sm-6 col-md-4">
+    <div class="col-sm-6 col-md-4 mb-5">
         <div class="product">
             <img src="https://raw.githubusercontent.com/SixLabors/Branding/main/icons/imagesharp.web/sixlabors.imagesharp.web.svg?sanitize=true">
             <h5>ImageSharp.Web</h5>
@@ -48,7 +48,7 @@ You can find documentation for each project in the links below.
             </a>
         </div>
     </div>
-    <div class="col-sm-6 col-md-4">
+    <div class="col-sm-6 col-md-4 mb-5">
         <div class="product">
             <img src="https://raw.githubusercontent.com/SixLabors/Branding/main/icons/fonts/sixlabors.fonts.svg?sanitize=true">
             <h5>Fonts</h5>
@@ -58,7 +58,7 @@ You can find documentation for each project in the links below.
             </a>
         </div>
     </div>
-    <div class="col-sm-6 col-md-4">
+    <div class="col-sm-6 col-md-4 mb-5">
         <div class="product">
             <img src="https://raw.githubusercontent.com/SixLabors/Branding/main/icons/polygonclipper/sixlabors.polygonclipper.svg?sanitize=true" alt="PolygonClipper Logo">
             <h5>PolygonClipper</h5>

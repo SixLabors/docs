@@ -5,7 +5,7 @@
  * ##################
  */
 
-body{
+body {
   font-family: "Inter", sans-serif;
 }
 
@@ -106,16 +106,86 @@ h3 a {
   fill: #fff;
 }
 
-body>header, body[data-layout=landing]>header {
-    box-shadow: 0 0 8px rgb(0 0 0 / 12%);
-    border-bottom: 0;
+body>header,
+body[data-layout=landing]>header {
+  box-shadow: 0 0 8px rgb(0 0 0 / 12%);
+  border-bottom: 0;
 }
 
-[data-bs-theme="dark"] body>header, html[data-bs-theme="dark"] body[data-layout=landing]>header {
-    box-shadow: 0 0 8px rgb(0 0 0 / 48%);
-    border-bottom: 0;
+[data-bs-theme="dark"] body>header,
+html[data-bs-theme="dark"] body[data-layout=landing]>header {
+  box-shadow: 0 0 8px rgb(0 0 0 / 48%);
+  border-bottom: 0;
 }
 
 header .navbar {
   text-transform: uppercase;
+}
+
+/* ###################
+ * ##### PRODUCTS ####
+ * ###################
+ */
+
+.products {
+  margin-top: 2rem;
+}
+
+.product {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  text-align: center;
+  height: 100%;
+  padding-bottom: 2.3667rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 992px) {
+  .products {
+    display: flex;
+  }
+
+  .product {
+    padding-bottom: 0;
+  }
+}
+
+.product img {
+  max-height: 150px;
+}
+
+.product h5 {
+  font-size: 1.25rem;
+}
+
+.product h5 a {
+  text-decoration: none;
+}
+
+.product h5 a::after {
+  display: none;
+}
+
+.product .btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+@media (min-width: 1200px) {
+  .product .btn {
+    max-width: 50%;
+  }
+}
+
+.icon {
+  max-width: 20px;
+  margin-right: 0.5rem;
 }

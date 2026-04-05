@@ -62,3 +62,8 @@
 ## [Troubleshooting](fonts/troubleshooting.md)
 
 # [PolygonClipper](polygonclipper/index.md)
+## [Getting Started](polygonclipper/gettingstarted.md)
+## [Polygons, Contours, and Holes](polygonclipper/polygonsandcontours.md)
+## [Boolean Operations](polygonclipper/booleanoperations.md)
+## [Normalization and Winding](polygonclipper/normalization.md)
+## [Stroking](polygonclipper/stroking.md)
