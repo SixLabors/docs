@@ -1,6 +1,6 @@
 # List System Fonts and Resolve by Culture
 
-Use this recipe when you want to inspect what the current machine exposes through `SystemFonts`.
+This recipe is useful when you want a quick picture of what the current machine can actually provide through `SystemFonts`, whether for diagnostics, UI pickers, or culture-aware name resolution.
 
 ### List installed families
 

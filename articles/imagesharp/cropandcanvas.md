@@ -1,6 +1,8 @@
 # Crop, Pad, and Canvas
 
-ImageSharp includes several processors for changing the visible region of an image or the size of its canvas. The most commonly used are `Crop()`, `Pad()`, `BackgroundColor()`, and `EntropyCrop()`.
+Cropping and canvas operations are closely related, but they solve different problems. Cropping decides which part of the current pixels you keep. Canvas operations decide how much room the image has and where those pixels sit inside it.
+
+Thinking about those as separate questions makes the API much easier to navigate.
 
 ## Crop to an Explicit Rectangle
 

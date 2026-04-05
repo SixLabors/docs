@@ -1,6 +1,8 @@
 # Working with Pixel Buffers
 
-ImageSharp gives you several ways to work directly with pixel data. The right one depends on whether you care most about simplicity, throughput, pixel-format independence, or interop.
+When you first start with ImageSharp, the indexer is often enough. As soon as performance, reuse across pixel formats, or interop enter the picture, it helps to know the other buffer-access patterns the library offers and why they exist.
+
+This page is the map for that lower-level work.
 
 ## Choose the Right Access Pattern
 

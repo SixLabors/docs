@@ -1,6 +1,6 @@
 # Inspect Font Files and Collections
 
-Use this recipe when you want to inspect a font file before adding it to a `FontCollection`.
+This recipe is a good starting point when you have a font file in hand and want to learn what it contains before you add it to your app's normal font collection.
 
 ### Read a single font file
 

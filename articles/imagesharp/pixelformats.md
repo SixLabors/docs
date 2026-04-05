@@ -1,5 +1,7 @@
 # Pixel Formats
 
+Pixel formats are one of the places where ImageSharp differs most clearly from older imaging APIs. The pixel type is not an afterthought or a hidden enum value; it is part of the image's actual type, which makes low-level code more explicit and more predictable once the model clicks.
+
 [`Image<TPixel>`](xref:SixLabors.ImageSharp.Image`1) is generic because the in-memory pixel type is part of the image contract. An [`Image<Rgba32>`](xref:SixLabors.ImageSharp.Image`1) and an [`Image<L8>`](xref:SixLabors.ImageSharp.Image`1) can represent the same picture, but they differ in channel layout, precision, memory usage, and what direct pixel access means for your code.
 
 Image memory is usually treated as discontiguous, even though smaller images may fit in a single backing buffer. See [Memory Management](memorymanagement.md) for more detail on how ImageSharp stores large images efficiently.

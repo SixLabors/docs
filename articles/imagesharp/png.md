@@ -1,6 +1,8 @@
 # PNG
 
-PNG is the standard lossless choice for UI assets, screenshots, icons, and any workflow where transparency or exact pixel preservation matters. ImageSharp also supports animated PNG metadata and encoding scenarios.
+PNG is the format people usually reach for when they want the saved pixels to stay exactly as they were processed in memory. That makes it a natural fit for UI assets, screenshots, diagrams, icons, and any workflow where transparency and crisp edges matter more than aggressive compression.
+
+ImageSharp also supports animated PNG metadata and encoding scenarios.
 
 ## Format Characteristics
 

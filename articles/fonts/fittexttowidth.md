@@ -1,6 +1,6 @@
 # Fit Text to a Target Width
 
-This recipe is useful when you need a heading, label, or short line of text to fit inside a fixed width.
+Fitting text into a fixed width is one of those jobs that sounds simple until you decide how aggressively you want to shrink, wrap, or restyle it. This recipe covers the straightforward single-line measurement loop many apps start with.
 
 For single-line text, the usual pattern is:
 

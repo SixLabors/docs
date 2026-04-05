@@ -1,6 +1,6 @@
 # Troubleshooting
 
-Most ImageSharp problems fall into a few common categories: format detection, invalid content, stream positioning, memory pressure, interop assumptions, and disposal bugs.
+Most ImageSharp issues turn out to be understandable once you know which layer is complaining: format detection, decoding, memory, streams, or disposal. This page groups the common failures that way so it is easier to move from symptom to likely cause.
 
 ## "Image format is unknown"
 

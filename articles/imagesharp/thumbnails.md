@@ -1,6 +1,8 @@
 # Generate Thumbnails
 
-Thumbnail generation is one of the most common ImageSharp workflows. The two usual patterns are:
+Thumbnail generation is one of those jobs that sounds trivial until you have to decide what "good enough" means. Do you keep the whole image visible? Do you crop to fill? Do you normalize orientation first? This page covers the two thumbnail patterns people use most often.
+
+The usual patterns are:
 
 - fit the image within a bounding box while preserving aspect ratio, and
 - create a fixed-size thumbnail that fills the target area by cropping.

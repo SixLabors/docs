@@ -1,6 +1,8 @@
 # Interop and Raw Memory
 
-ImageSharp supports both copy-based and zero-copy workflows for raw pixel data. Which API you choose depends on who owns the memory and whether you need ImageSharp to keep its own copy.
+Most applications can stay inside ImageSharp's managed image model. When you need to exchange raw buffers with another library, device API, or native component, the important question becomes who owns the memory and whether you want a copy or a view.
+
+That is the lens this page uses for the interop APIs.
 
 ## Choose the Right API
 
@@ -131,7 +133,7 @@ bool contiguous = image.DangerousTryGetSinglePixelMemory(out _); // false
 
 Important consequences of a strided wrapper:
 
-- [`DangerousTryGetSinglePixelMemory(...)`](xref:SixLabors.ImageSharp.Image`1.DangerousTryGetSinglePixelMemory*) will usually return `false`;
+- [`DangerousTryGetSinglePixelMemory(...)`](xref:SixLabors.ImageSharp.Image`1.DangerousTryGetSinglePixelMemory*) returns `false`, because it only succeeds when the image's logical pixels can be exposed as one tightly packed `width * height` block;
 - [`CopyPixelDataTo(...)`](xref:SixLabors.ImageSharp.Image`1.CopyPixelDataTo*) uses the backing row layout, so destination length must account for stride, not only `width * height`;
 - row padding belongs to the wrapped view contract, so make sure the caller and callee agree on it.
 

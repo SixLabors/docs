@@ -3,6 +3,8 @@
 >[!NOTE]
 >If you want to draw text onto images, [ImageSharp.Drawing](../imagesharp.drawing/index.md) already provides the rendering layer for you. This page is for cases where you want to render glyphs to your own surface or extract geometry for another system.
 
+Most developers meet Fonts through [ImageSharp.Drawing](../imagesharp.drawing/index.md), where the rendering surface is already handled for you. This page is for the next step down: when you want Fonts to do the shaping and glyph decomposition, but you want to decide how those glyphs are painted or exported.
+
 Custom rendering in Fonts is built around `IGlyphRenderer`. `TextRenderer.RenderTextTo(...)` performs layout and shaping, then sends the result to your renderer as glyphs, layers, figures, and path commands.
 
 ### When to use it

@@ -1,6 +1,8 @@
 # Resizing Images
 
-Resizing is one of the most common ImageSharp operations. The simple `Resize()` overloads are good for direct width and height changes, while [`ResizeOptions`](xref:SixLabors.ImageSharp.Processing.ResizeOptions) gives you control over fit mode, anchor position, background padding, sampler choice, alpha handling, and manual target rectangles.
+Resizing looks simple on the surface, but it is also one of the easiest places to make an image look subtly wrong. Aspect ratio, resampler choice, fit mode, alpha handling, and decode-time downscaling all influence the result, so this page walks through the common paths in the order most people need them.
+
+The simple `Resize()` overloads are good for direct width and height changes, while [`ResizeOptions`](xref:SixLabors.ImageSharp.Processing.ResizeOptions) gives you control over fit mode, anchor position, background padding, sampler choice, alpha handling, and manual target rectangles.
 
 ## Basic Resize
 

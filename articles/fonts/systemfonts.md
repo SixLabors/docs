@@ -1,6 +1,6 @@
 # System Fonts
 
-`SystemFonts` gives you access to the fonts installed on the current machine.
+System fonts are convenient because they let you get moving without shipping font files yourself. They also come with the tradeoff that the available families depend on the machine you are running on, so this page treats portability as part of the topic rather than an afterthought.
 
 Use it when you want to work with platform fonts directly instead of loading files into your own `FontCollection`.
 

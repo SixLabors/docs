@@ -1,7 +1,8 @@
 # Create an Animated GIF
 
-ImageSharp builds animated GIFs by creating a multi-frame [`Image<TPixel>`](xref:SixLabors.ImageSharp.Image`1), configuring GIF metadata, and then saving with [`GifEncoder`](xref:SixLabors.ImageSharp.Formats.Gif.GifEncoder) when you need encoder-specific control.
-When you start from [`Color`](xref:SixLabors.ImageSharp.Color) values, convert them to the target pixel type with `ToPixel<TPixel>()` before passing them to generic image constructors.
+Creating an animated GIF in ImageSharp is really about building a multi-frame image on purpose. Once that mental model is in place, the rest of the API starts to feel straightforward: create frames, set per-frame metadata, configure the animation metadata, then save with the encoder you want.
+
+ImageSharp builds animated GIFs by creating a multi-frame [`Image<TPixel>`](xref:SixLabors.ImageSharp.Image`1), configuring GIF metadata, and then saving with [`GifEncoder`](xref:SixLabors.ImageSharp.Formats.Gif.GifEncoder) when you need encoder-specific control. When you start from [`Color`](xref:SixLabors.ImageSharp.Color) values, convert them to the target pixel type with `ToPixel<TPixel>()` before passing them to generic image constructors.
 
 For format background and palette tradeoffs, see [GIF and Animation](gif.md). This page focuses on the actual authoring workflow.
 

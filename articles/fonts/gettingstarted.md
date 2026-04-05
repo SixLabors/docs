@@ -1,6 +1,8 @@
 # Loading Fonts and Collections
 
-Fonts separates font discovery from text layout:
+The quickest way to get comfortable with Fonts is to separate three ideas: where fonts come from, how a family becomes a concrete font instance, and how that font is later used for measurement or rendering. This page walks through that path before the more advanced layout guides.
+
+The main types you will meet first are:
 
 - `FontCollection` stores the families you load.
 - `FontFamily` represents a family and the styles available for it.

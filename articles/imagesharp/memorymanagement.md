@@ -1,8 +1,8 @@
 # Memory Management
 
-ImageSharp stores image pixels in pooled buffers managed by [`MemoryAllocator`](xref:SixLabors.ImageSharp.Memory.MemoryAllocator). In normal use, you should assume large images are not backed by one giant contiguous span.
+ImageSharp is designed so large images are practical to process without forcing every workload into one giant contiguous allocation. That is a big part of why the library scales well, but it also means memory behavior is worth understanding once you move beyond simple load-process-save samples.
 
-That design keeps large-image handling practical, but it also means interop-heavy code should be explicit about when it truly needs contiguous memory.
+This page explains the parts most developers eventually need: the default pooled allocator, when to customize it, and how those choices affect lower-level interop code.
 
 ## Default Behavior
 

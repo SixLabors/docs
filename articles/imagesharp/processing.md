@@ -1,6 +1,6 @@
 # Processing Images
 
-ImageSharp processing pipelines are imperative and ordered. The processors you add inside `Mutate()` or `Clone()` run in the same order you write them, which makes the pipeline easy to reason about and compose.
+Once an image is in memory, most work in ImageSharp happens through small ordered processing pipelines. That is one of the library's strengths: the code you write usually reads in the same order the pixels are transformed, which makes even longer pipelines approachable for newcomers.
 
 The main entry points are [`Mutate`](xref:SixLabors.ImageSharp.Processing.ProcessingExtensions.Mutate*?displayProperty=name) and [`Clone`](xref:SixLabors.ImageSharp.Processing.ProcessingExtensions.Clone*?displayProperty=name):
 

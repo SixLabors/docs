@@ -1,8 +1,8 @@
 # Configuration
 
-[`Configuration`](xref:SixLabors.ImageSharp.Configuration) controls how ImageSharp discovers formats, allocates memory, reads streams, and runs processor pipelines.
+Most applications can use ImageSharp exactly as it comes out of the box. [`Configuration`](xref:SixLabors.ImageSharp.Configuration) only becomes interesting when you need to change what formats are available, how memory is allocated, how streams are read, or how aggressively work is parallelized.
 
-For most applications, [`Configuration.Default`](xref:SixLabors.ImageSharp.Configuration.Default) is the right place for process-wide defaults. When you need different behavior for one workload, clone it and use the cloned instance locally.
+That is why this page treats configuration as an opt-in advanced topic. Start with [`Configuration.Default`](xref:SixLabors.ImageSharp.Configuration.Default), and customize only the parts your workload truly needs.
 
 ## Use a Local Configuration for Targeted Overrides
 

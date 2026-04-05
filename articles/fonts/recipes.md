@@ -1,6 +1,6 @@
 # Recipes
 
-These short recipes show common Fonts workflows without the full conceptual discussion from the main guides.
+These pages are the quick-start side of the Fonts docs. They are meant for the moment when you know roughly what you want to do and would rather start from a short working example than read the full conceptual guide first.
 
 - [Fit Text to a Target Width](fittexttowidth.md)
 - [Inspect Font Files and Collections](inspectfontfiles.md)

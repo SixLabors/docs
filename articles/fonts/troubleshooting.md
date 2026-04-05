@@ -1,6 +1,6 @@
 # Troubleshooting
 
-This page covers the most common issues people hit when working with Fonts.
+When text does not measure or render the way you expect, the underlying cause is usually one of a few things: family resolution, font-file validity, fallback, shaping assumptions, or misunderstanding the different measurement APIs. This page starts with those common failure modes.
 
 ### A font family cannot be found
 

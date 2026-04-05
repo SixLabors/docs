@@ -1,7 +1,9 @@
 # Introduction
 
 ### What is Fonts?
-Fonts is a cross-platform library for loading, measuring, and laying out fonts and text.
+Fonts is the part of the Six Labors stack that handles font loading, text measurement, layout, shaping, and custom text rendering.
+
+If you are new to the library, the easiest way to think about it is in layers: load families, create concrete `Font` instances, then measure or render text with `TextOptions`. The rest of this section is organized around that path so you can start simple and move into shaping, Unicode, fallback, and custom rendering only when you need them.
 
 It supports TrueType and OpenType fonts, including CFF1 and CFF2 outlines, WOFF and WOFF2 web fonts, variable fonts, color fonts, advanced OpenType layout, complex script shaping, and bidirectional text rendering.
 
@@ -49,7 +51,8 @@ paket add SixLabors.Fonts --version VERSION_NUMBER
 
 ### Start Here
 
-- [Loading Fonts and Collections](gettingstarted.md)
+If you are new to Fonts, start with [Loading Fonts and Collections](gettingstarted.md) and then use the pages below to branch into the topics your application needs.
+
 - [System Fonts](systemfonts.md)
 - [Font Metadata and Inspection](fontmetadata.md)
 - [Font Metrics](fontmetrics.md)

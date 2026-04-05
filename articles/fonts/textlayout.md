@@ -1,6 +1,8 @@
 # Text Layout and Options
 
-`TextOptions` is the central layout object in Fonts. The same options type is used by both `TextMeasurer` and `TextRenderer`, which makes it easy to keep measurement and rendering in sync.
+Once you have a `Font`, `TextOptions` becomes the center of almost everything else. It is where you tell Fonts how text should flow, wrap, align, shape, and render, so getting comfortable with this type pays off quickly.
+
+The same options type is used by both `TextMeasurer` and `TextRenderer`, which makes it easy to keep measurement and rendering in sync.
 
 ### Core units
 

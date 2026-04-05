@@ -1,5 +1,7 @@
 # Color Profiles and Color Conversion
 
+Color management can feel intimidating at first because there are really two related topics hiding under one name: the profiles attached to image files, and the value-level color conversions you may apply in your own code. This page separates those concerns so it is easier to decide when you need metadata preservation, when you need actual color conversion, and when you need both.
+
 ImageSharp exposes color management in two different layers:
 
 - Embedded color metadata on decoded images, such as [`IccProfile`](xref:SixLabors.ImageSharp.Metadata.Profiles.Icc.IccProfile) and [`CicpProfile`](xref:SixLabors.ImageSharp.Metadata.Profiles.Cicp.CicpProfile).

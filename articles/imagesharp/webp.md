@@ -1,6 +1,8 @@
 # WebP
 
-WebP supports lossy and lossless compression, transparency, and animation. In ImageSharp, it is one of the most flexible general-purpose web output formats.
+WebP is often the first format to consider when you want one codec that can cover several common web scenarios. It can handle photographs, transparency, and animation, which makes it a flexible alternative to juggling separate JPEG, PNG, and GIF outputs.
+
+In ImageSharp, it is one of the most flexible general-purpose web output formats.
 
 ## Format Characteristics
 

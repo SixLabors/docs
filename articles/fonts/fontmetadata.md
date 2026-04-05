@@ -1,8 +1,6 @@
 # Font Metadata and Inspection
 
-You do not need to fully load a font into a `FontCollection` just to inspect its names and basic face metadata.
-
-Fonts exposes `FontDescription` for that purpose.
+Sometimes you need to inspect a font long before you care about laying text out with it. Maybe you are building an importer, a picker, or a diagnostics tool. `FontDescription` is the lightweight part of the API for that job.
 
 ### Read metadata without loading the font for layout
 

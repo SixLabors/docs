@@ -1,6 +1,6 @@
 # Recipes
 
-This section collects common ImageSharp tasks into small, copy-pasteable examples. These recipes are intentionally practical and build on the broader guidance in the conceptual docs.
+These pages are the fast path through the ImageSharp docs. They skip most of the background explanation and focus on the handful of workflows people reach for over and over again, while linking back to the deeper guides when you need more context.
 
 ## Common Tasks
 

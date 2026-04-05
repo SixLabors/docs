@@ -1,6 +1,6 @@
 # Unicode, Code Points, and Graphemes
 
-Fonts works with several different levels of text units. It is important to keep them separate, because they are not interchangeable.
+Text handling gets easier once you stop treating every `char` as a whole character. Fonts exposes the text-unit levels it actually uses during layout so you can reason about indexing, fallback, shaping, and glyph coverage with the same vocabulary as the library.
 
 ### The text-unit levels
 

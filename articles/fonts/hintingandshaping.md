@@ -1,6 +1,6 @@
 # Hinting and Shaping
 
-Hinting and shaping both affect the final appearance of text, but they are not the same stage and they do not solve the same problem.
+Hinting and shaping are often mentioned in the same breath because both influence the final appearance of text. For newcomers, it helps to separate them early: shaping decides which glyphs and positions the layout engine should use, while hinting adjusts outlines for pixel-oriented rendering.
 
 Shaping answers "which glyphs should this text use, and where do those glyphs go?"
 

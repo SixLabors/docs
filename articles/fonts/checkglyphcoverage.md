@@ -1,6 +1,6 @@
 # Check Glyph Coverage Before Choosing Fallbacks
 
-This recipe is useful when you want to know whether a font can cover the text you plan to render before you choose fallback families.
+Before you wire up fallback families, it helps to know what your primary font can already cover. This recipe shows a quick way to probe individual scalar values or scan a string so you can make fallback decisions based on actual glyph coverage instead of guesswork.
 
 ### Check individual code points
 

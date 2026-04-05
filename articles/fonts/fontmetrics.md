@@ -2,7 +2,7 @@
 
 `FontDescription` tells you what a face is called. `FontMetrics` tells you how that face behaves.
 
-Use `FontMetrics` when you need inspection data that affects layout, glyph selection, decoration placement, variation support, or code-point coverage.
+Once you know what a font is, the next question is usually how it behaves. `FontMetrics` is where you inspect the measurements and coverage data that explain line spacing, decoration placement, variation support, and glyph availability.
 
 ### How to get `FontMetrics`
 

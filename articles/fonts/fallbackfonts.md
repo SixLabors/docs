@@ -1,6 +1,8 @@
 # Fallback Fonts and Multilingual Text
 
-Modern text often mixes scripts, emoji, and symbols that do not all exist in a single font. Fonts handles that through `TextOptions.FallbackFontFamilies`.
+Real text rarely stays inside one script or one font. User names, emoji, CJK text, math, and symbols all show up in the same application, so fallback is what turns a nice Latin-only demo into a text stack that survives real-world input.
+
+Fonts handles that through `TextOptions.FallbackFontFamilies`.
 
 When the primary `Font` does not contain a glyph for part of the text, the layout engine searches the fallback families in order and uses the first family that can supply the missing glyphs.
 

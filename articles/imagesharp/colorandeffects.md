@@ -1,5 +1,7 @@
 # Color and Effects
 
+Color adjustments are where many small ImageSharp processors start to feel composable instead of isolated. You can reach for named helpers like `Grayscale()` and `Sepia()`, or drop down to [`ColorMatrix`](xref:SixLabors.ImageSharp.ColorMatrix) when you want to express the transformation yourself.
+
 ImageSharp includes a wide range of processors for tonal adjustment, color transforms, and simple stylistic effects. Common entry points include `Grayscale()`, `Sepia()`, `Brightness()`, `Contrast()`, `Hue()`, `Saturate()`, and `Opacity()`. Under the hood, many of these effects are expressed as a [`ColorMatrix`](xref:SixLabors.ImageSharp.ColorMatrix) and applied with [`Filter()`](xref:SixLabors.ImageSharp.Processing.FilterExtensions.Filter*).
 
 ## Convert to Grayscale

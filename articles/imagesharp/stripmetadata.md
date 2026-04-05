@@ -1,6 +1,6 @@
 # Strip Metadata
 
-Stripping metadata is useful when reducing file size, removing personal information, or normalizing exported assets.
+Removing metadata is usually about one of three goals: smaller files, less personal information, or a cleaner normalized export. ImageSharp makes that straightforward, but it helps to be clear about whether you want the encoder to skip metadata on write or whether you want to clear profiles in memory first.
 
 ## Strip Metadata with the Encoder
 

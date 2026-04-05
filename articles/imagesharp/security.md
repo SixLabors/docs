@@ -1,8 +1,6 @@
 # Security Considerations
 
-Image processing is resource-intensive by nature. Public or semi-public systems that accept untrusted images should treat decode and processing as potentially expensive work and put explicit limits around what is accepted.
-
-ImageSharp gives you several practical controls for doing that.
+Image processing is powerful, but it is also one of the easier places for an application to burn CPU, memory, and time on untrusted input. This page is written as a practical hardening guide: what to check early, what to limit, and which ImageSharp hooks help you keep risky inputs under control.
 
 ## Preflight with Identify When Possible
 

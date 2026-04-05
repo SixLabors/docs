@@ -1,6 +1,6 @@
 # Use OpenType Features for Numbers and Fractions
 
-Use `TextOptions.FeatureTags` when you want to request discretionary OpenType features from the font.
+This recipe shows the most common way people first encounter discretionary OpenType features: asking fonts to align figures more neatly or substitute fraction glyphs for number-heavy text.
 
 ### Align numeric columns with tabular figures
 

@@ -1,6 +1,8 @@
 # Rotate, Flip, and Auto-Orient
 
-ImageSharp provides several processors for correcting orientation and applying geometric transforms. The most common are `AutoOrient()`, `Rotate()`, `Flip()`, and `RotateFlip()`.
+Orientation issues usually show up the first time a phone photo looks rotated even though the file came straight from a camera roll. This page covers the small set of operations you will use most often to normalize orientation metadata or apply explicit geometric transforms.
+
+The most common entry points are `AutoOrient()`, `Rotate()`, `Flip()`, and `RotateFlip()`.
 
 ## Correct Orientation from EXIF Metadata
 

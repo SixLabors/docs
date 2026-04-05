@@ -1,6 +1,8 @@
 # GIF and Animation
 
-GIF is a palette-based format commonly used for simple animations. In ImageSharp, GIF encoding is built on a quantizing animated encoder, which means palette generation and frame metadata are both important parts of the workflow.
+GIF is one of the oldest formats ImageSharp supports, and it comes with tradeoffs that matter more than many newcomers expect. It is still useful for simple animation and very broad compatibility, but because it is palette based, color reduction and frame metadata are part of the story from the start.
+
+In ImageSharp, GIF encoding is built on a quantizing animated encoder, which means palette generation and frame metadata are both important parts of the workflow.
 
 ## Format Characteristics
 

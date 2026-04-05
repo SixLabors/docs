@@ -1,6 +1,6 @@
 # Read Image Info Without Decoding
 
-Use `Image.Identify()` and `Image.DetectFormat()` when you need to inspect an image without fully decoding the pixel data. This is useful for upload validation, metadata extraction, and planning later processing work.
+When you are working with uploads, queues, or validation rules, fully decoding every image is often unnecessary work. `Image.Identify()` and `Image.DetectFormat()` let you answer the early questions first: what is this file, how large is it, how many frames does it have, and what kind of pixel data does it claim to contain?
 
 ## Read Dimensions, Frame Count, and Pixel Info
 

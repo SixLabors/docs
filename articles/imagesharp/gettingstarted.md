@@ -1,6 +1,8 @@
 # Getting Started
 
-ImageSharp centers around a small set of core types:
+ImageSharp is easiest to learn if you think in terms of a simple flow: load or identify an image, optionally process it, then save it in the format you need. This page introduces the handful of types that show up most often in that flow so the rest of the docs feel familiar more quickly.
+
+The main types you will run into first are:
 
 - [`Image`](xref:SixLabors.ImageSharp.Image) is the format-agnostic image container used by the main loading, processing, and saving APIs.
 - `Image<TPixel>` is the generic image container to use when you know the pixel format and want direct pixel access. See [Pixel Formats](pixelformats.md) for more detail.

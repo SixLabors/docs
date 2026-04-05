@@ -1,6 +1,8 @@
 # Working with Metadata
 
-ImageSharp exposes image metadata through [`ImageMetadata`](xref:SixLabors.ImageSharp.Metadata.ImageMetadata). You can access it from a fully decoded image through `image.Metadata`, or from [`ImageInfo`](xref:SixLabors.ImageSharp.ImageInfo) when using `Image.Identify()`.
+Metadata is where ImageSharp stores the information around the pixels: resolution, format details, EXIF, ICC profiles, and other auxiliary data. For newcomers, the key idea is that you can inspect or preserve this information without treating it as part of the pixel-processing pipeline itself.
+
+ImageSharp exposes that data through [`ImageMetadata`](xref:SixLabors.ImageSharp.Metadata.ImageMetadata). You can access it from a fully decoded image through `image.Metadata`, or from [`ImageInfo`](xref:SixLabors.ImageSharp.ImageInfo) when using `Image.Identify()`.
 
 ## Read Metadata from a File
 

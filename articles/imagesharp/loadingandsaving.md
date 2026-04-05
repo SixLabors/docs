@@ -1,6 +1,8 @@
 # Loading, Identifying, and Saving
 
-ImageSharp provides a consistent set of APIs for working with image files, streams, and in-memory buffers. The main entry points are `Image.Load()`, `Image.Identify()`, `Image.DetectFormat()`, and the corresponding async APIs.
+Most ImageSharp applications start here. Whether images come from disk, streams, or upload buffers, the same load, identify, and save model applies, which makes it easy to move from a quick sample to a production pipeline without relearning the API surface.
+
+The core idea is straightforward: use `Image.Load()` when you need pixels, `Image.Identify()` when you only need dimensions or metadata, and `Image.DetectFormat()` when you only need to know what kind of file you were given.
 
 ## Load Images
 

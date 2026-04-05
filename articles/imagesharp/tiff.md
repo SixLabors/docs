@@ -1,6 +1,8 @@
 # TIFF
 
-TIFF is useful in workflows where compression mode, pixel layout, and metadata fidelity matter more than broad browser support. ImageSharp exposes a range of TIFF-specific encoder and metadata options for those cases.
+TIFF is less about browser delivery and more about control. When a workflow cares about archival fidelity, scanning, publishing, print, or carrying richer metadata and pixel-layout choices forward, TIFF is often the format that gives you the room to do it.
+
+ImageSharp exposes a range of TIFF-specific encoder and metadata options for those cases.
 
 ## Format Characteristics
 

@@ -1,6 +1,6 @@
 # Variable Fonts
 
-Variable fonts expose one or more design axes, such as weight, width, slant, or optical size, from a single font file. Fonts models those axes with `FontVariation`.
+Variable fonts let one font file behave more like a design space than a single static face. Once that idea clicks, `FontVariation` becomes a practical way to ask for weight, width, slant, or optical-size variants without switching families.
 
 ### Create a variable-font instance
 

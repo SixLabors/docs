@@ -1,6 +1,8 @@
 # Quantization, Palettes, and Dithering
 
-Quantization reduces an image to a limited set of colors. In ImageSharp, that matters both as an explicit processing step and as part of formats that write indexed or palette-constrained output.
+Quantization is the part of image processing where you stop thinking in terms of continuous color and start thinking in terms of a limited palette. Even if you never call `Quantize()` directly, it still matters because formats like GIF, indexed PNG, CUR, and ICO rely on the same ideas.
+
+In ImageSharp, quantization matters both as an explicit processing step and as part of formats that write indexed or palette-constrained output.
 
 ## Where Quantization Shows Up
 

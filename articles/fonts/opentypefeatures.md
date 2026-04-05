@@ -1,6 +1,6 @@
 # OpenType Features
 
-Fonts applies the shaping features that are required for correct layout automatically. `TextOptions.FeatureTags` is for the additional OpenType features you want to request on top of that baseline behavior.
+Fonts already applies the OpenType features that are required for correct shaping and layout. `TextOptions.FeatureTags` is where you ask for the extra typographic touches a font may support, such as tabular figures, fractions, stylistic alternates, or discretionary ligatures.
 
 That makes it a typography control, not a substitute for the shaping engine.
 

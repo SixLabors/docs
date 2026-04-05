@@ -1,6 +1,8 @@
 # Convert Between Formats
 
-Format conversion in ImageSharp is a decode-and-re-encode operation, but it is not a blind one. Once an image is loaded, the processing pipeline works with format-agnostic pixel data, while the metadata layer still carries enough information for the destination format to choose the best representation it supports.
+Format conversion is one of the most common reasons people adopt ImageSharp in the first place. The nice part is that you usually do not have to think in terms of format-to-format adapters; you load into ImageSharp's common image model, make any changes you need, and then save with the target encoder.
+
+That decode-and-re-encode flow is not a blind one. Once an image is loaded, the processing pipeline works with format-agnostic pixel data, while the metadata layer still carries enough information for the destination format to choose the best representation it supports.
 
 ## How ImageSharp Bridges Formats
 

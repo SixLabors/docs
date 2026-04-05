@@ -1,6 +1,8 @@
 # Image Formats
 
-ImageSharp supports a broad set of built-in image formats and is designed so additional formats can be registered through configuration when needed.
+ImageSharp keeps the in-memory image model separate from the file format on disk. That means the same processing code can work across JPEG, PNG, WebP, TIFF, GIF, and the other built-in codecs, while the encoder and metadata layers handle the format-specific details at the edges.
+
+This page is the format map for the library: which built-in formats ship by default, what each one is good at, and where to go next for format-specific guidance.
 
 ## Built-In Formats
 

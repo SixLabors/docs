@@ -1,6 +1,6 @@
 # Measuring Text
 
-`TextMeasurer` lets you run the same layout engine that rendering uses, without drawing anything. This is the right tool when you need to size a container, choose a wrapping width, place labels, or inspect line metrics before you render.
+Measurement is often the point where text layout stops being abstract and starts affecting a real UI. `TextMeasurer` lets you run the same shaping and layout engine that rendering uses, which means you can decide widths, line breaks, placements, and bounds before anything is drawn.
 
 ### Choose the right measurement
 

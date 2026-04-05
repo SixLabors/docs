@@ -1,6 +1,6 @@
 # Color Fonts
 
-Color fonts let glyphs carry paint information instead of only a monochrome outline.
+Color fonts are one of the clearest signs of how much richer modern text rendering has become. Instead of a single monochrome outline, a glyph can carry layers, gradients, or even SVG content, and Fonts exposes that support explicitly.
 
 Fonts has comprehensive support for the major OpenType color-font technologies it exposes publicly:
 

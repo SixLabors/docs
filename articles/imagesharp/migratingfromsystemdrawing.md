@@ -1,6 +1,8 @@
 # Migrating from System.Drawing
 
-ImageSharp is not a one-for-one clone of `System.Drawing`, but most common workflows map cleanly once you shift from GDI-style APIs to ImageSharp's generic image and processing model.
+If you are coming from `System.Drawing`, the biggest adjustment is not learning a brand-new set of image concepts. It is mostly learning that ImageSharp makes a few things explicit that GDI+ used to hide: pixel type, processing pipelines, and encoder choices.
+
+Once that shift lands, most everyday workflows map over cleanly.
 
 ## Core Type Mapping
 

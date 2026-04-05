@@ -1,6 +1,6 @@
 # JPEG
 
-JPEG is typically the right choice for photographic images and other continuous-tone content where smaller file sizes matter more than lossless preservation.
+JPEG remains the workhorse format for photographs on the web and in many application pipelines. It is best when you care about keeping file sizes small and are willing to trade away some exact pixel fidelity to get there.
 
 ## Format Characteristics
 
