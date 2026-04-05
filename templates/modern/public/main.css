@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swaps");
+
+/* ##################
+ * ### TYPOGRAPHY ###
+ * ##################
+ */
+
+body{
+  font-family: "Inter", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 800;
+  text-decoration: none;
+  line-height: 1.15;
+  word-wrap: none !important;
+  word-break: normal !important;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin: 1rem 0;
+}
+
+h1[data-uid] {
+  text-transform: none;
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 1.34rem 0;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin: 1.245rem 0;
+}
+
+h4,
+h5 {
+  font-weight: 600;
+}
+
+a {
+  color: #e35052;
+  text-decoration: none;
+}
+
+a:hover,
+a:hover .a,
+a:focus,
+a:focus .a {
+  color: #0a58ca;
+  text-decoration: underline;
+}
+
+.a {
+  text-transform: uppercase;
+}
+
+h1 a,
+h2 a,
+h3 a {
+  color: inherit;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  color: #fff;
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+}
+
+.btn-primary:active,
+.btn-primary:active:focus {
+  color: #fff;
+  background-color: #0a58ca;
+  border-color: #0a53be;
+}
+
+.btn-primary:active:focus {
+  box-shadow: 0 0 0 0.25rem rgb(49 132 253 / 50%);
+}
+
+/* #######################
+ * ### MAIN NAVIGATION ###
+ * #######################
+ */
+
+#logo {
+  width: 160px;
+  height: 50px;
+  margin-right: 1rem;
+}
+
+[data-bs-theme="dark"] #logo {
+  fill: #fff;
+}
+
+body>header, body[data-layout=landing]>header {
+    box-shadow: 0 0 8px rgb(0 0 0 / 12%);
+    border-bottom: 0;
+}
+
+[data-bs-theme="dark"] body>header, html[data-bs-theme="dark"] body[data-layout=landing]>header {
+    box-shadow: 0 0 8px rgb(0 0 0 / 48%);
+    border-bottom: 0;
+}
+
+header .navbar {
+  text-transform: uppercase;
+}
