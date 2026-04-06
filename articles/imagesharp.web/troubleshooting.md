@@ -55,6 +55,17 @@ By default, ImageSharp.Web parses commands with invariant culture. If you set [`
 
 That is useful for specialized local workflows, but it also means a value like `0.5` versus `0,5` can behave differently across environments.
 
+## Colors or Compression Changed After I Replaced `options.Configuration`
+
+Check whether you replaced [`ImageSharpMiddlewareOptions.Configuration`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.Configuration) with `Configuration.Default.Clone()` or another custom configuration.
+
+That changes two things at once:
+
+- You replace the middleware's built-in JPEG, PNG, and WebP encoder registrations.
+- If [`OnBeforeLoadAsync`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.OnBeforeLoadAsync) still returns `null`, decode falls back to [`ColorProfileHandling.Compact`](xref:SixLabors.ImageSharp.Formats.ColorProfileHandling.Compact) instead of [`ColorProfileHandling.Convert`](xref:SixLabors.ImageSharp.Formats.ColorProfileHandling.Convert).
+
+If you want custom encoders and the original ICC-conversion behavior, clone the current middleware configuration, assign it back, and return explicit [`DecoderOptions`](xref:SixLabors.ImageSharp.Formats.DecoderOptions) from `OnBeforeLoadAsync`.
+
 ## Cached Output Does Not Refresh
 
 ImageSharp.Web keeps using a cached result until one of these changes:

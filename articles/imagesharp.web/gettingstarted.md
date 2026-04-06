@@ -30,6 +30,7 @@ app.Run();
 - [`PhysicalFileSystemCache`](xref:SixLabors.ImageSharp.Web.Caching.PhysicalFileSystemCache) stores processed output under `wwwroot/is-cache` by default.
 - [`UriRelativeLowerInvariantCacheKey`](xref:SixLabors.ImageSharp.Web.Caching.UriRelativeLowerInvariantCacheKey) and [`SHA256CacheHash`](xref:SixLabors.ImageSharp.Web.Caching.SHA256CacheHash) create hashed cache filenames.
 - [`ResizeWebProcessor`](xref:SixLabors.ImageSharp.Web.Processors.ResizeWebProcessor), [`FormatWebProcessor`](xref:SixLabors.ImageSharp.Web.Processors.FormatWebProcessor), [`BackgroundColorWebProcessor`](xref:SixLabors.ImageSharp.Web.Processors.BackgroundColorWebProcessor), [`QualityWebProcessor`](xref:SixLabors.ImageSharp.Web.Processors.QualityWebProcessor), and [`AutoOrientWebProcessor`](xref:SixLabors.ImageSharp.Web.Processors.AutoOrientWebProcessor) provide the built-in command set.
+- A middleware-specific ImageSharp [`Configuration`](xref:SixLabors.ImageSharp.Configuration) with web-oriented [`JpegEncoder`](xref:SixLabors.ImageSharp.Formats.Jpeg.JpegEncoder), [`PngEncoder`](xref:SixLabors.ImageSharp.Formats.Png.PngEncoder), and [`WebpEncoder`](xref:SixLabors.ImageSharp.Formats.Webp.WebpEncoder) defaults.
 
 With that setup in place, requests like these are processed automatically:
 
@@ -38,6 +39,12 @@ With that setup in place, requests like these are processed automatically:
 /images/photo.jpg?width=400&height=250&rmode=crop
 /images/logo.png?bgcolor=white&format=jpg&quality=85
 ```
+
+That default configuration is intentionally opinionated for web output. Processed JPEGs use quality `75` with progressive, interleaved `YCbCrRatio420` encoding, processed PNGs use `BestCompression` with adaptive filtering, and processed WebP output uses quality `75` with `BestQuality` encoding method.
+
+When you keep the default middleware configuration and do not return custom [`DecoderOptions`](xref:SixLabors.ImageSharp.Formats.DecoderOptions) from [`OnBeforeLoadAsync`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.OnBeforeLoadAsync), the middleware also decodes with [`ColorProfileHandling.Convert`](xref:SixLabors.ImageSharp.Formats.ColorProfileHandling.Convert). That normalizes embedded ICC profiles for web-oriented re-encoding instead of blindly carrying source color encodings through the pipeline.
+
+If you later replace [`ImageSharpMiddlewareOptions.Configuration`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.Configuration), you also replace those encoder defaults. See [Configuration and Pipeline](configuration.md) for the details and the explicit ICC-profile override pattern.
 
 ## A Useful Default Mental Model
 

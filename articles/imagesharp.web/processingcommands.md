@@ -57,6 +57,8 @@ Use `autoorient=true` when you want the output pixels themselves to be normalize
 
 Any file extension registered with the active [`ImageFormatsManager`](xref:SixLabors.ImageSharp.Configuration.ImageFormatsManager) can be used here. The exact set therefore depends on the underlying ImageSharp configuration.
 
+The selected format uses the encoder currently registered in [`ImageSharpMiddlewareOptions.Configuration`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.Configuration). With the default middleware configuration, that means `format=jpg`, `format=png`, and `format=webp` all use web-oriented encoder settings rather than the raw ImageSharp library defaults.
+
 ## Quality
 
 [`QualityWebProcessor`](xref:SixLabors.ImageSharp.Web.Processors.QualityWebProcessor) controls encoder quality for JPEG and WebP output.
@@ -68,6 +70,8 @@ Any file extension registered with the active [`ImageFormatsManager`](xref:SixLa
 ```
 
 Quality values are clamped by the target encoder. For WebP, values below `100` switch the encoder to lossy mode.
+
+When no `quality` command is supplied, the default middleware configuration still encodes JPEG and WebP at quality `75`. If you replace [`ImageSharpMiddlewareOptions.Configuration`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.Configuration), you also change those no-query defaults.
 
 ## Background Color
 

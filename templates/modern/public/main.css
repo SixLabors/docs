@@ -137,7 +137,6 @@ header .navbar {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #fff;
   background-clip: border-box;
   text-align: center;
   height: 100%;
@@ -157,6 +156,7 @@ header .navbar {
 
 .product img {
   max-height: 150px;
+  margin-bottom: .5rem;
 }
 
 .product h5 {

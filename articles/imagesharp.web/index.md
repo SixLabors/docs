@@ -47,7 +47,7 @@ paket add SixLabors.ImageSharp.Web --version VERSION_NUMBER
 ## Start Here
 
 - [Getting Started](gettingstarted.md) covers the minimal ASP.NET Core setup and the default provider and cache behavior.
-- [Configuration and Pipeline](configuration.md) explains what `AddImageSharp()` registers and how to replace or reorder the moving parts.
+- [Configuration and Pipeline](configuration.md) explains what `AddImageSharp()` registers, the middleware's web-focused encoder defaults, ICC profile handling, and how to replace or reorder the moving parts.
 - [Processing Commands](processingcommands.md) documents the built-in resize, auto-orient, format, quality, and background-color commands.
 - [Image Providers](imageproviders.md) covers filesystem, Azure Blob Storage, and AWS S3 source images.
 - [Image Caches](imagecaches.md) covers the default physical cache, cloud cache backends, cache keys, and cache lifetime.

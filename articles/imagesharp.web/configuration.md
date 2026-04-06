@@ -20,19 +20,18 @@ That gives you a fully working middleware out of the box, but every one of those
 [`ImageSharpMiddlewareOptions`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions) controls the shared middleware behavior:
 
 - [`Configuration`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.Configuration) is the underlying ImageSharp [`Configuration`](xref:SixLabors.ImageSharp.Configuration).
+- By default, that `Configuration` is not raw `Configuration.Default`; ImageSharp.Web installs web-oriented JPEG, PNG, and WebP encoders into it.
 - [`MemoryStreamManager`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.MemoryStreamManager) controls pooled response streams.
 - [`UseInvariantParsingCulture`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.UseInvariantParsingCulture) controls whether command parsing is culture-invariant.
 - [`BrowserMaxAge`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.BrowserMaxAge), [`CacheMaxAge`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.CacheMaxAge), and [`CacheHashLength`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.CacheHashLength) control cache behavior.
 
 ```csharp
-using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Web;
 using SixLabors.ImageSharp.Web.Caching;
 using SixLabors.ImageSharp.Web.Providers;
 
 builder.Services.AddImageSharp(options =>
 {
-    options.Configuration = Configuration.Default.Clone();
     options.UseInvariantParsingCulture = true;
     options.BrowserMaxAge = TimeSpan.FromDays(7);
     options.CacheMaxAge = TimeSpan.FromDays(30);
@@ -51,7 +50,58 @@ builder.Services.AddImageSharp(options =>
 });
 ```
 
-Use a cloned ImageSharp configuration when you need a different format set, allocator behavior, or other base ImageSharp customization for the middleware.
+If you do not need to change format registrations or encoder defaults, leave [`ImageSharpMiddlewareOptions.Configuration`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.Configuration) alone. Replacing it opts you out of the middleware's built-in web defaults.
+
+## Default Encoder and ICC Behavior
+
+The default middleware [`Configuration`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.Configuration) is a cloned ImageSharp configuration with web-oriented encoder registrations:
+
+- [`JpegEncoder`](xref:SixLabors.ImageSharp.Formats.Jpeg.JpegEncoder) uses `Quality = 75`, `Progressive = true`, `Interleaved = true`, and `ColorType = YCbCrRatio420`.
+- [`PngEncoder`](xref:SixLabors.ImageSharp.Formats.Png.PngEncoder) uses `CompressionLevel = BestCompression` and `FilterMethod = Adaptive`.
+- [`WebpEncoder`](xref:SixLabors.ImageSharp.Formats.Webp.WebpEncoder) uses `Quality = 75` and `Method = BestQuality`.
+
+Those registrations are used whenever the middleware saves processed output in JPEG, PNG, or WebP format, whether the format came from the source image or from the `format` command.
+
+If [`OnBeforeLoadAsync`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.OnBeforeLoadAsync) returns `null`, the middleware also creates fallback [`DecoderOptions`](xref:SixLabors.ImageSharp.Formats.DecoderOptions) for you. The ICC-profile behavior depends on whether you kept the default configuration:
+
+- With the default middleware configuration, [`DecoderOptions.ColorProfileHandling`](xref:SixLabors.ImageSharp.Formats.DecoderOptions.ColorProfileHandling) is [`ColorProfileHandling.Convert`](xref:SixLabors.ImageSharp.Formats.ColorProfileHandling.Convert).
+- If you replace `options.Configuration`, the fallback changes to [`ColorProfileHandling.Compact`](xref:SixLabors.ImageSharp.Formats.ColorProfileHandling.Compact).
+
+`Compact` only removes canonical sRGB ICC profile data. It does not convert non-sRGB source images. That distinction matters most when you transcode or resize JPEGs that arrive with CMYK or other non-sRGB profiles.
+
+## Customize Encoders Without Losing ICC Conversion
+
+If you want your own encoder registrations but still want the middleware to decode with [`ColorProfileHandling.Convert`](xref:SixLabors.ImageSharp.Formats.ColorProfileHandling.Convert), clone the current configuration, replace the encoders you care about, then return explicit decoder options:
+
+```csharp
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.Formats;
+using SixLabors.ImageSharp.Formats.Jpeg;
+using SixLabors.ImageSharp.Web;
+
+builder.Services.AddImageSharp(options =>
+{
+    Configuration configuration = options.Configuration.Clone();
+
+    configuration.ImageFormatsManager.SetEncoder(JpegFormat.Instance, new JpegEncoder
+    {
+        Quality = 82,
+        Progressive = true,
+        Interleaved = true,
+        ColorType = JpegColorType.YCbCrRatio420
+    });
+
+    options.Configuration = configuration;
+
+    options.OnBeforeLoadAsync = (_, _) => Task.FromResult<DecoderOptions?>(new()
+    {
+        Configuration = configuration,
+        ColorProfileHandling = ColorProfileHandling.Convert
+    });
+});
+```
+
+Use this pattern when you want to keep ImageSharp.Web's ICC-conversion behavior but need different encoder quality, chroma subsampling, format registrations, allocator settings, or other base ImageSharp customization.
 
 ## Change Individual Pipeline Pieces
 
@@ -99,7 +149,7 @@ That turns requests like `/images/photo.jpg?preset=thumb` into a controlled, nam
 [`ImageSharpMiddlewareOptions`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions) also exposes targeted callbacks for app-specific customization:
 
 - [`OnParseCommandsAsync`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.OnParseCommandsAsync) runs after a provider has matched the request and after the command set has been sanitized, but before the source image is resolved.
-- [`OnBeforeLoadAsync`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.OnBeforeLoadAsync) can return custom [`DecoderOptions`](xref:SixLabors.ImageSharp.Formats.DecoderOptions) before the source image is decoded.
+- [`OnBeforeLoadAsync`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.OnBeforeLoadAsync) can return custom [`DecoderOptions`](xref:SixLabors.ImageSharp.Formats.DecoderOptions) before the source image is decoded. If it returns `null`, the middleware supplies defaults based on the current `Configuration`.
 - [`OnBeforeSaveAsync`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.OnBeforeSaveAsync) can adjust the [`FormattedImage`](xref:SixLabors.ImageSharp.Web.FormattedImage) after processing but before encoding.
 - [`OnProcessedAsync`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.OnProcessedAsync) receives an [`ImageProcessingContext`](xref:SixLabors.ImageSharp.Web.Middleware.ImageProcessingContext) after encoding but before the result is cached.
 - [`OnPrepareResponseAsync`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.OnPrepareResponseAsync) runs after status code and headers are set but before the body is written.
