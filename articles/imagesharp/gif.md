@@ -1,4 +1,4 @@
-# GIF and Animation
+# GIF
 
 GIF is one of the oldest formats ImageSharp supports, and it comes with tradeoffs that matter more than many newcomers expect. It is still useful for simple animation and very broad compatibility, but because it is palette based, color reduction and frame metadata are part of the story from the start.
 
@@ -131,4 +131,4 @@ GIF is usually a poor fit when:
 - You want efficient compression.
 - You need modern transparency behavior.
 
-For a step-by-step recipe, see [Create an animated GIF](animatedgif.md). For a more modern animated format, see [WebP](webp.md).
+For a step-by-step multi-frame workflow, see [Working with Animations](animations.md). For a more modern animated format, see [WebP](webp.md).

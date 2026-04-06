@@ -121,7 +121,7 @@ Transparency handling matters most for GIF, palette PNG, ICO, and CUR output. [`
 
 ## Related Topics
 
-- [GIF and Animation](gif.md)
+- [GIF](gif.md)
 - [PNG](png.md)
 - [Convert Between Formats](formatconversion.md)
 - [Read Image Info Without Decoding](identify.md)

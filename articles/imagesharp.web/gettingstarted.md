@@ -1,123 +1,87 @@
 # Getting Started
 
->[!NOTE]
->The official guide assumes intermediate level knowledge of C# and .NET. If you are totally new to .NET development, it might not be the best idea to jump right into a framework as your first step - grasp the basics then come back. Prior experience with other languages and frameworks helps, but is not required.
+ImageSharp.Web is easiest to understand as a request pipeline: match a source image, parse commands, process with ImageSharp, cache the result, then serve the cached bytes on later requests. This page shows the smallest setup first and then explains what the default registration gives you.
 
-### Setup and Configuration
+## Minimal ASP.NET Core Setup
 
-Once installed you will need to add the following code  to `ConfigureServices` and `Configure` in your `Startup.cs` file.
+```csharp
+using SixLabors.ImageSharp.Web;
 
-This installs the the default service and options.
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
-``` c#
-public void ConfigureServices(IServiceCollection services) {
-    // Add the default service and options.
-    services.AddImageSharp();
-}
+builder.Services.AddImageSharp();
 
-public void Configure(IApplicationBuilder app, IWebHostEnvironment env) {
+WebApplication app = builder.Build();
 
-    // Add the image processing middleware. Make sure this appears BEFORE app.UseStaticFiles(),
-    // otherwise images will be served by ASP.NET's static file middleware before ImageSharp can process them.
-    app.UseImageSharp();
+app.UseImageSharp();
+app.UseStaticFiles();
 
-    app.UseStaticFiles();
-}
+app.Run();
 ```
 
-The fluent configuration is flexible allowing you to configure a multitude of different options. For example you can add the default service and custom options.
+`app.UseImageSharp()` must appear before `app.UseStaticFiles()`. If static files run first, requests such as `/images/photo.jpg?width=400` will be served directly from disk and ImageSharp.Web will never see them.
 
-``` c#
-// Add the default service and custom options.
-services.AddImageSharp(
-    options =>
-        {
-            // You only need to set the options you want to change here
-            // All properties have been listed for demonstration purposes
-            // only.
-            options.Configuration = Configuration.Default;
-            options.MemoryStreamManager = new RecyclableMemoryStreamManager();
-            options.BrowserMaxAge = TimeSpan.FromDays(7);
-            options.CacheMaxAge = TimeSpan.FromDays(365);
-            options.CacheHashLength = 8;
-            options.OnParseCommandsAsync = _ => Task.CompletedTask;
-            options.OnBeforeSaveAsync = _ => Task.CompletedTask;
-            options.OnProcessedAsync = _ => Task.CompletedTask;
-            options.OnPrepareResponseAsync = _ => Task.CompletedTask;
-        });
+## What the Default Registration Includes
+
+`AddImageSharp()` wires up the core middleware services plus a sensible default pipeline:
+
+- [`QueryCollectionRequestParser`](xref:SixLabors.ImageSharp.Web.Commands.QueryCollectionRequestParser) reads commands from the query string.
+- [`PhysicalFileSystemProvider`](xref:SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider) resolves source images from the web root by default.
+- [`PhysicalFileSystemCache`](xref:SixLabors.ImageSharp.Web.Caching.PhysicalFileSystemCache) stores processed output under `wwwroot/is-cache` by default.
+- [`UriRelativeLowerInvariantCacheKey`](xref:SixLabors.ImageSharp.Web.Caching.UriRelativeLowerInvariantCacheKey) and [`SHA256CacheHash`](xref:SixLabors.ImageSharp.Web.Caching.SHA256CacheHash) create hashed cache filenames.
+- [`ResizeWebProcessor`](xref:SixLabors.ImageSharp.Web.Processors.ResizeWebProcessor), [`FormatWebProcessor`](xref:SixLabors.ImageSharp.Web.Processors.FormatWebProcessor), [`BackgroundColorWebProcessor`](xref:SixLabors.ImageSharp.Web.Processors.BackgroundColorWebProcessor), [`QualityWebProcessor`](xref:SixLabors.ImageSharp.Web.Processors.QualityWebProcessor), and [`AutoOrientWebProcessor`](xref:SixLabors.ImageSharp.Web.Processors.AutoOrientWebProcessor) provide the built-in command set.
+
+With that setup in place, requests like these are processed automatically:
+
+```text
+/images/photo.jpg?width=400
+/images/photo.jpg?width=400&height=250&rmode=crop
+/images/logo.png?bgcolor=white&format=jpg&quality=85
 ```
 
-Or you can fine-grain control adding the default options and configure other services.
+## A Useful Default Mental Model
 
-``` c#
-// Fine-grain control adding the default options and configure other services.
-services.AddImageSharp()
-        .RemoveProcessor<FormatWebProcessor>()
-        .RemoveProcessor<BackgroundColorWebProcessor>();
-```
+With the default [`PhysicalFileSystemProvider`](xref:SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider), plain file requests still fall through to static files because it uses [`ProcessingBehavior.CommandOnly`](xref:SixLabors.ImageSharp.Web.Providers.ProcessingBehavior.CommandOnly). That means:
 
-There are also factory methods for each builder that will allow building from configuration files.
+- `/images/photo.jpg` is served by ASP.NET Core static files.
+- `/images/photo.jpg?width=400` is intercepted and processed by ImageSharp.Web.
 
-``` c#
-// Use the factory methods to configure the PhysicalFileSystemCacheOptions
-services.AddImageSharp()
-    .Configure<PhysicalFileSystemCacheOptions>(options =>
-    {
-        options.CacheFolder = "different-cache";
-    });
-```  
+This is usually the behavior you want for local images because it keeps the unmodified path fast and predictable.
 
->[!IMPORTANT]
->ImageSharp.Web v2.0.0 and above contains breaking changes to caching which require additional configuration when migrating from v1.x installs.
+## Configure the Physical Provider and Cache
 
-With ImageSharp.Web v2.0.0 a new concept @SixLabors.ImageSharp.Web.Caching.ICacheKey was introduced to allow greater flexibility when generating cached file names. To preserve the v1.x cache format users must configure two settings:
+If your source images or cache should live somewhere other than the default web root locations, configure the provider and cache options explicitly:
 
-1. @SixLabors.ImageSharp.Web.Caching.ICacheKey should be configured to use @SixLabors.ImageSharp.Web.Caching.LegacyV1CacheKey
-2. @SixLabors.ImageSharp.Web.Caching.PhysicalFileSystemCacheOptions.CacheFolderDepth should be configured to use the same value as @SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.CacheHashLength - Default `12`.
+```csharp
+using SixLabors.ImageSharp.Web;
+using SixLabors.ImageSharp.Web.Caching;
+using SixLabors.ImageSharp.Web.Providers;
 
-A complete configuration sample allowing the replication of legacy v1.x behavior can be found below:
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
-```c#
-services.AddImageSharp(options =>
+builder.Services.AddImageSharp(options =>
 {
-    // Set to previous default value of CachedNameLength
-    options.CacheHashLength = 12;
-
-    // Use the same command parsing as v1.x
-    options.OnParseCommandsAsync = c =>
-    {
-        if (c.Commands.Count == 0)
-        {
-            return Task.CompletedTask;
-        }
-
-        // It's a good idea to have this to provide very basic security.
-        // We can safely use the static resize processor properties.
-        uint width = c.Parser.ParseValue<uint>(
-            c.Commands.GetValueOrDefault(ResizeWebProcessor.Width),
-            c.Culture);
-
-        uint height = c.Parser.ParseValue<uint>(
-            c.Commands.GetValueOrDefault(ResizeWebProcessor.Height),
-            c.Culture);
-
-        if (width > 4000 && height > 4000)
-        {
-            c.Commands.Remove(ResizeWebProcessor.Width);
-            c.Commands.Remove(ResizeWebProcessor.Height);
-        }
-
-        return Task.CompletedTask;
-    });
+    options.BrowserMaxAge = TimeSpan.FromDays(7);
+    options.CacheMaxAge = TimeSpan.FromDays(30);
+})
+.Configure<PhysicalFileSystemProviderOptions>(options =>
+{
+    options.ProviderRootPath = "assets";
 })
 .Configure<PhysicalFileSystemCacheOptions>(options =>
 {
-    // Ensure this value is the same as CacheHashLength to generate a backwards-compatible cache folder structure
-    options.CacheFolderDepth = 12;
-})
-.SetCacheKey<LegacyV1CacheKey>()
-.ClearProviders()
-.AddProvider<WebRootImageProvider>();
+    options.CacheRootPath = "cache";
+    options.CacheFolder = "imagesharp";
+    options.CacheFolderDepth = 8;
+});
 ```
 
-Full Configuration API options are available [here](xref:SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions).
+Relative paths are resolved against the application content root. If your app does not define a web root, set both `ProviderRootPath` and `CacheRootPath` explicitly.
+
+## Next Steps
+
+- [Configuration and Pipeline](configuration.md)
+- [Processing Commands](processingcommands.md)
+- [Image Providers](imageproviders.md)
+- [Image Caches](imagecaches.md)
+- [Securing Requests](security.md)

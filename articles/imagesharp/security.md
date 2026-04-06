@@ -105,7 +105,7 @@ Use your hosting layer to enforce:
 - reverse proxy limits; and
 - service or container isolation for expensive workloads.
 
-For ImageSharp.Web command signing, see [Securing Processing Commands in ImageSharp.Web](../imagesharp.web/processingcommands.md#securing-processing-commands).
+For ImageSharp.Web command signing, see [Securing Requests in ImageSharp.Web](../imagesharp.web/security.md).
 
 ## Practical Security Defaults
 

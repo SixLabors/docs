@@ -1,126 +1,126 @@
 # Image Providers
 
-ImageSharp.Web determines the location of a source image to process via the registration and application of image providers. 
-  
->[!NOTE]
->It is possible to configure your own image provider by implementing and registering your own version of the @"SixLabors.ImageSharp.Web.Providers.IImageProvider" interface.
+Image providers answer one question: where does the source image come from? Every incoming request is offered to the registered providers in order, and the first provider whose `Match` function returns `true` owns the request.
 
-The following providers are available for the middleware. Multiples providers can be registered and will be queried for a URL match in the order of registration.
+That means provider order matters. If two providers can both match the same path, put the more specific one first or narrow its `Match` predicate so the wrong provider does not claim the request.
 
-### PhysicalFileSystemProvider
+## Default Physical Filesystem Provider
 
-The @"SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider" will allow the processing and serving of image files from the [web root](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/?view=aspnetcore-3.1&tabs=macos#web-root) folder. This is the default provider installed when configuring the middleware.  
-  
-Url matching for this provider follows the same rules as conventional static files.
+[`PhysicalFileSystemProvider`](xref:SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider) is the default source provider registered by `AddImageSharp()`.
 
-### AzureBlobStorageImageProvider  
-  
-This provider allows the processing and serving of image files from [Azure Blob Storage](https://docs.microsoft.com/en-us/azure/storage/blobs/) and is available as an external package installable via [NuGet](https://www.nuget.org/packages/SixLabors.ImageSharp.Web.Providers.Azure)
+- It resolves images from the web root by default.
+- [`PhysicalFileSystemProviderOptions.ProviderRootPath`](xref:SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProviderOptions.ProviderRootPath) can be `null`, absolute, or relative to the application content root.
+- [`PhysicalFileSystemProviderOptions.ProcessingBehavior`](xref:SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProviderOptions.ProcessingBehavior) defaults to [`ProcessingBehavior.CommandOnly`](xref:SixLabors.ImageSharp.Web.Providers.ProcessingBehavior.CommandOnly), so commandless requests still fall through to static files.
 
-# [Package Manager](#tab/tabid-1)
+```csharp
+using SixLabors.ImageSharp.Web;
+using SixLabors.ImageSharp.Web.Providers;
 
-```bash
-PM > Install-Package SixLabors.ImageSharp.Web.Providers.Azure -Version VERSION_NUMBER
-```
-
-# [.NET CLI](#tab/tabid-2)
-
-```bash
-dotnet add package SixLabors.ImageSharp.Web.Providers.Azure --version VERSION_NUMBER
-```
-
-# [PackageReference](#tab/tabid-3)
-
-```xml
-<PackageReference Include="SixLabors.ImageSharp.Web.Providers.Azure" Version="VERSION_NUMBER" />
-```
-
-# [Paket CLI](#tab/tabid-4)
-
-```bash
-paket add SixLabors.ImageSharp.Web.Providers.Azure --version VERSION_NUMBER
-```
-
-***
-
-Once installed the provider @"SixLabors.ImageSharp.Web.Providers.Azure.AzureBlobContainerClientOptions" can be configured as follows:
-
-
-```c#  
-// Configure and register the containers.  
-// Alteratively use `appsettings.json` to represent the class and bind those settings.
-.Configure<AzureBlobStorageImageProviderOptions>(options =>
-{
-    // The "BlobContainers" collection allows registration of multiple containers.
-    options.BlobContainers.Add(new AzureBlobContainerClientOptions
+builder.Services.AddImageSharp()
+    .Configure<PhysicalFileSystemProviderOptions>(options =>
     {
-        ConnectionString = {AZURE_CONNECTION_STRING},
-        ContainerName = {AZURE_CONTAINER_NAME}
+        options.ProviderRootPath = "assets";
+        options.ProcessingBehavior = ProcessingBehavior.CommandOnly;
     });
-})
-.AddProvider<AzureBlobStorageImageProvider>()
 ```
 
-Url requests are matched in accordance to the following rule:  
-  
-```bash
-/{CONTAINER_NAME}/{BLOB_FILENAME} 
-```
+If you want a provider fixed to `IWebHostEnvironment.WebRootFileProvider` with no extra options, [`WebRootImageProvider`](xref:SixLabors.ImageSharp.Web.Providers.WebRootImageProvider) is also available.
 
-### AWSS3StorageImageProvider  
-  
-This provider allows the processing and serving of image files from [Amazon Simple Storage Service (Amazon S3)](https://aws.amazon.com/s3/) and is available as an external package installable via [NuGet](https://www.nuget.org/packages/SixLabors.ImageSharp.Web.Providers.AWS)
+## Provider Matching and Ordering
 
-# [Package Manager](#tab/tabid-1a)
+ImageSharp.Web stops at the first provider whose `Match` function returns `true`. It does not continue searching if that provider later decides the request is invalid, so keep these rules in mind:
 
-```bash
-PM > Install-Package SixLabors.ImageSharp.Web.Providers.AWS -Version VERSION_NUMBER
-```
+- Register more specific providers before more general ones.
+- Keep `Match` predicates mutually exclusive whenever possible.
+- Use `InsertProvider(...)` when provider precedence matters more than registration order.
 
-# [.NET CLI](#tab/tabid-2a)
+Cloud providers in particular usually want a path prefix such as a container or bucket name so they can distinguish their requests cheaply.
+
+## Azure Blob Storage
+
+Install the Azure provider package:
 
 ```bash
-dotnet add package SixLabors.ImageSharp.Web.Providers.AWS --version VERSION_NUMBER
+dotnet add package SixLabors.ImageSharp.Web.Providers.Azure
 ```
 
-# [PackageReference](#tab/tabid-3a)
+Then configure one or more containers:
 
-```xml
-<PackageReference Include="SixLabors.ImageSharp.Web.Providers.AWS" Version="VERSION_NUMBER" />
-```
+```csharp
+using SixLabors.ImageSharp.Web;
+using SixLabors.ImageSharp.Web.Azure.Providers;
 
-# [Paket CLI](#tab/tabid-4a)
-
-```bash
-paket add SixLabors.ImageSharp.Web.Providers.AWS --version VERSION_NUMBER
-```
-
-***
-
-Once installed the provider @SixLabors.ImageSharp.Web.Providers.AWS.AWSS3StorageImageProviderOptions can be configured as follows:
-
-```c#  
-// Configure and register the buckets.  
-// Alteratively use `appsettings.json` to represent the class and bind those settings.
-.Configure<AWSS3StorageImageProviderOptions>(options =>
-{
-    // The "S3Buckets" collection allows registration of multiple buckets.
-    options.S3Buckets.Add(new AWSS3BucketClientOptions
+builder.Services.AddImageSharp()
+    .ClearProviders()
+    .Configure<AzureBlobStorageImageProviderOptions>(options =>
     {
-        Endpoint = AWS_ENDPOINT,
-        BucketName = AWS_BUCKET_NAME,
-        AccessKey = AWS_ACCESS_KEY,
-        AccessSecret = AWS_ACCESS_SECRET,
-        Region = AWS_REGION
-    });
-})
-.AddProvider<AWSS3StorageImageProvider>()
+        options.BlobContainers.Add(new AzureBlobContainerClientOptions
+        {
+            ConnectionString = builder.Configuration["Azure:ConnectionString"]!,
+            ContainerName = "public-images"
+        });
+    })
+    .AddProvider<AzureBlobStorageImageProvider>();
 ```
 
-Url requests are matched in accordance to the following rule:  
-  
+Requests are matched by container name at the start of the path:
+
+```text
+/public-images/avatars/jane.png?width=200
+```
+
+[`AzureBlobStorageImageProvider`](xref:SixLabors.ImageSharp.Web.Azure.Providers.AzureBlobStorageImageProvider) uses [`ProcessingBehavior.All`](xref:SixLabors.ImageSharp.Web.Providers.ProcessingBehavior.All), so it can serve both processed and commandless requests.
+
+## AWS S3
+
+Install the AWS provider package:
+
 ```bash
-/{AWS_BUCKET_NAME}/{OBJECT_FILENAME} 
+dotnet add package SixLabors.ImageSharp.Web.Providers.AWS
 ```
 
-Which is to say that the AWS S3 bucket name must appear in the Url so it can be matched with the correct S3 configuration. If you wished to override this and provide a deafult, this can be done using [URL Rewriting middleware](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/url-rewriting?view=aspnetcore-6.0).
+Then configure one or more buckets:
+
+```csharp
+using SixLabors.ImageSharp.Web;
+using SixLabors.ImageSharp.Web.AWS.Providers;
+
+builder.Services.AddImageSharp()
+    .ClearProviders()
+    .Configure<AWSS3StorageImageProviderOptions>(options =>
+    {
+        options.S3Buckets.Add(new AWSS3BucketClientOptions
+        {
+            BucketName = "public-images",
+            Region = "us-east-1",
+            AccessKey = builder.Configuration["AWS:AccessKey"],
+            AccessSecret = builder.Configuration["AWS:SecretKey"]
+        });
+    })
+    .AddProvider<AWSS3StorageImageProvider>();
+```
+
+Requests are matched by bucket name at the start of the path:
+
+```text
+/public-images/avatars/jane.png?width=200
+```
+
+If your public URL shape does not naturally include the bucket name, use URL rewriting before ImageSharp.Web or implement a custom provider.
+
+## Implementing Your Own Provider
+
+Implement [`IImageProvider`](xref:SixLabors.ImageSharp.Web.Providers.IImageProvider) when you need a new source backend. Your provider is responsible for three things:
+
+- deciding whether it owns the request via `Match`;
+- deciding whether the request is valid via `IsValidRequest(...)`;
+- returning an [`IImageResolver`](xref:SixLabors.ImageSharp.Web.Resolvers.IImageResolver) that can open the source stream and report source metadata.
+
+If your source already fits an `IFileProvider`-style model, [`FileProviderImageProvider`](xref:SixLabors.ImageSharp.Web.Providers.FileProviderImageProvider) is the easiest base class to start from.
+
+## Related Topics
+
+- [Getting Started](gettingstarted.md)
+- [Image Caches](imagecaches.md)
+- [Extensibility](extensibility.md)
+- [Troubleshooting](troubleshooting.md)

@@ -1,19 +1,19 @@
-﻿# Introduction
+# ImageSharp.Web
 
-### What is ImageSharp.Web?
-ImageSharp.Web is a high performance ASP.NET 6 Middleware built on top of ImageSharp that allows the processing and caching of image requests via a simple API.
+ImageSharp.Web is Six Labors' ASP.NET Core image middleware for on-the-fly processing and caching. It sits in front of one or more image providers, parses URL commands, runs the matching ImageSharp processors, and stores the result so repeated requests are inexpensive after the first hit.
 
-ImageSharp.Web is designed from the ground up to be flexible and extensible. The library provides API endpoints for common image processing operations and the building blocks to allow for the development of additional extensions to add image sources, caching mechanisms or even your own processing API.  
+The current package targets .NET 8 and is built on top of [ImageSharp](../imagesharp/index.md). The middleware is intentionally modular: you can change how commands are parsed, where source images come from, how cache keys are built, where processed images are stored, and whether image requests must be signed.
 
-### License  
+## License
+
 ImageSharp.Web is licensed under the terms of the [Six Labors Split License, Version 1.0](https://github.com/SixLabors/ImageSharp.Web/blob/main/LICENSE). See https://sixlabors.com/pricing for commercial licensing details.
 
 >[!IMPORTANT]
 >Starting with ImageSharp.Web 4.0.0, projects that directly depend on ImageSharp.Web require a `sixlabors.lic` file to compile. By default, place the file next to your project file, or set `SixLaborsLicenseFile` in your project or shared props file to point to a central location. This enforcement applies to direct dependencies only. See [License Enforcement Changes and a New Subscription Tier](https://sixlabors.com/posts/licence-enforcement-changes/) for details.
-  
-### Installation
-  
-ImageSharp.Web is installed via [NuGet](https://www.nuget.org/packages/SixLabors.ImageSharp.Web) with nightly builds available on [Feedz](https://f.feedz.io/sixlabors/sixlabors/nuget/index.json).
+
+## Install ImageSharp.Web
+
+ImageSharp.Web is distributed on [NuGet](https://www.nuget.org/packages/SixLabors.ImageSharp.Web) with preview and nightly builds available on [Feedz](https://f.feedz.io/sixlabors/sixlabors/nuget/index.json).
 
 # [Package Manager](#tab/tabid-1)
 
@@ -44,13 +44,21 @@ paket add SixLabors.ImageSharp.Web --version VERSION_NUMBER
 >[!WARNING]
 >Prerelease versions installed via the [Visual Studio NuGet Package Manager](https://docs.microsoft.com/en-us/nuget/consume-packages/install-use-packages-visual-studio) require the "include prerelease" checkbox to be checked.
 
-### Implicit Usings
+## Start Here
 
-The `UseImageSharp` property controls whether **implicit `global using` directives** for ImageSharp are included in your C# project. This feature is available in projects targeting **.NET 6 or later** with **C# 10 or later**.
+- [Getting Started](gettingstarted.md) covers the minimal ASP.NET Core setup and the default provider and cache behavior.
+- [Configuration and Pipeline](configuration.md) explains what `AddImageSharp()` registers and how to replace or reorder the moving parts.
+- [Processing Commands](processingcommands.md) documents the built-in resize, auto-orient, format, quality, and background-color commands.
+- [Image Providers](imageproviders.md) covers filesystem, Azure Blob Storage, and AWS S3 source images.
+- [Image Caches](imagecaches.md) covers the default physical cache, cloud cache backends, cache keys, and cache lifetime.
+- [Securing Requests](security.md) explains HMAC signing and preset-only parsing.
+- [Tag Helpers](taghelpers.md) covers Razor integration and automatic HMAC generation.
+- [Extensibility](extensibility.md) walks through custom processors, parsers, providers, caches, and converters.
+- [Troubleshooting](troubleshooting.md) covers the most common middleware-order, provider, cache, and signing problems.
 
-When enabled, a predefined set of `global using` directives for common ImageSharp namespaces (such as `SixLabors.ImageSharp`, `SixLabors.ImageSharp.Processing`, `SixLabors.ImageSharp.Web` etc.) is automatically added to the compilation. This eliminates the need to manually add `using` statements in every file.
+## Implicit Usings
 
-To enable implicit ImageSharp usings, set the property in your project file:
+Set `UseImageSharp` in your project file to automatically import the most common ImageSharp and ImageSharp.Web namespaces:
 
 ```xml
 <PropertyGroup>
@@ -58,10 +66,10 @@ To enable implicit ImageSharp usings, set the property in your project file:
 </PropertyGroup>
 ```
 
-To disable the feature, either remove the property or set it to `false`:
+When enabled, ImageSharp.Web adds implicit `global using` directives for:
 
-```xml
-<PropertyGroup>
-  <UseImageSharp>false</UseImageSharp>
-</PropertyGroup>
-```
+- `SixLabors.ImageSharp`
+- `SixLabors.ImageSharp.Processing`
+- `SixLabors.ImageSharp.Web`
+
+You can turn this off by removing the property or setting it to `false`.

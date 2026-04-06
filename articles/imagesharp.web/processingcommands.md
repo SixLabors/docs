@@ -1,172 +1,95 @@
 # Processing Commands
 
-The ImageSharp.Web processing API is imperative. This means that the order in which you supply the individual processing operations is the order in which they are compiled and applied. This allows the API to be very flexible, allowing you to combine processes in any order.  
-  
->[!NOTE]
->It is possible to configure your own processing command pipeline by implementing and registering your own version of the @"SixLabors.ImageSharp.Web.Commands.IRequestParser" interface.
+ImageSharp.Web ships with a small set of built-in processors that cover the most common web-image tasks: resize, EXIF-aware orientation, format conversion, quality control, and alpha flattening. By default those commands come from the query string, but the same processors also work with custom request parsers or Razor tag helpers.
 
-The following processors are built into the middleware. In addition extension points are available to register your own command processors.
+## How Command Execution Works
 
-#### Resize
+The default [`QueryCollectionRequestParser`](xref:SixLabors.ImageSharp.Web.Commands.QueryCollectionRequestParser) reads query-string pairs into an ordered [`CommandCollection`](xref:SixLabors.ImageSharp.Web.Commands.CommandCollection). A few details are worth knowing:
 
-Allows the resizing of images.
+- If the same command key appears more than once, the last value wins.
+- Unknown commands are stripped before HMAC validation and before the processor pipeline runs.
+- Processors run in the order their first recognized command appears in the request, not in a hard-coded global order.
+- Values are parsed with invariant culture by default. If you turn that off, parsing follows `CultureInfo.CurrentCulture`.
 
->[!NOTE]
->In V3 this processor will automatically correct the order of dimensional commands based on the presence of EXIF metadata indicating rotated (not flipped) images.
->This behavior can be turned off per request.
+## Resize
 
-``` bash
-{PATH_TO_YOUR_IMAGE}?width=300
-{PATH_TO_YOUR_IMAGE}?width=300&height=120&rxy=0.37,0.78
-{PATH_TO_YOUR_IMAGE}?width=50&height=50&rsampler=nearest&rmode=stretch
-{PATH_TO_YOUR_IMAGE}?width=300&compand=true&orient=false
-```
-Resize commands represent the @"SixLabors.ImageSharp.Processing.ResizeOptions" class.
+Resize commands are handled by [`ResizeWebProcessor`](xref:SixLabors.ImageSharp.Web.Processors.ResizeWebProcessor) and map to [`ResizeOptions`](xref:SixLabors.ImageSharp.Processing.ResizeOptions).
 
-- `width` The width of the image in px. Use only one dimension to preseve the aspect ratio.
-- `height` The height of the image in px. Use only one dimension to preseve the aspect ratio.
-- `rmode` The @"SixLabors.ImageSharp.Processing.ResizeMode" to use.
-- `rsampler` The @"SixLabors.ImageSharp.Processing.Processors.Transforms.IResampler"
-sampler to use.
-  - `bicubic` @"SixLabors.ImageSharp.Processing.KnownResamplers.Bicubic"
-  - `nearest` @"SixLabors.ImageSharp.Processing.KnownResamplers.NearestNeighbor"
-  - `box` @"SixLabors.ImageSharp.Processing.KnownResamplers.Box"
-  - `mitchell` @"SixLabors.ImageSharp.Processing.KnownResamplers.MitchellNetravali"
-  - `catmull` @"SixLabors.ImageSharp.Processing.KnownResamplers.CatmullRom"  
-  - `lanczos2` @"SixLabors.ImageSharp.Processing.KnownResamplers.Lanczos2"  
-  - `lanczos3` @"SixLabors.ImageSharp.Processing.KnownResamplers.Lanczos3"
-  - `lanczos5` @"SixLabors.ImageSharp.Processing.KnownResamplers.Lanczos5"
-  - `lanczos8` @"SixLabors.ImageSharp.Processing.KnownResamplers.Lanczos8"
-  - `welch` @"SixLabors.ImageSharp.Processing.KnownResamplers.Welch"  
-  - `robidoux` @"SixLabors.ImageSharp.Processing.KnownResamplers.Robidoux"  
-  - `robidouxsharp` @"SixLabors.ImageSharp.Processing.KnownResamplers.RobidouxSharp"
-  - `spline` @"SixLabors.ImageSharp.Processing.KnownResamplers.Spline"  
-  - `triangle` @"SixLabors.ImageSharp.Processing.KnownResamplers.Triangle"  
-  - `hermite` @"SixLabors.ImageSharp.Processing.KnownResamplers.Hermite"  
-- `ranchor`The @"SixLabors.ImageSharp.Processing.AnchorPositionMode" to use.
-- `rxy` Use an exact anchor position point. The comma-separated x and y values range from 0-1.
-- `orient` Whether to swap command dimensions based on the presence of EXIF metadata indicating rotated (not flipped) images. Defaults to `true`
-- `compand` Whether to compress and expand individual pixel colors values to/from a linear color space when processing. Defaults to `false`
-
-
-#### Format
-
-Allows the encoding of the output image to a new image format. The available formats depend on your configuration settings.
-
-```
-{PATH_TO_YOUR_IMAGE}?format=bmp
-{PATH_TO_YOUR_IMAGE}?format=gif
-{PATH_TO_YOUR_IMAGE}?format=jpg
-{PATH_TO_YOUR_IMAGE}?format=pbm
-{PATH_TO_YOUR_IMAGE}?format=png
-{PATH_TO_YOUR_IMAGE}?format=tga
-{PATH_TO_YOUR_IMAGE}?format=tiff
-{PATH_TO_YOUR_IMAGE}?format=webp
+```text
+/images/photo.jpg?width=300
+/images/photo.jpg?width=300&height=200&rmode=crop
+/images/photo.jpg?width=300&height=200&rmode=pad&rcolor=limegreen
+/images/photo.jpg?width=300&height=200&rxy=0.37,0.78
+/images/photo.jpg?width=300&rsampler=lanczos3&compand=true
 ```
 
-#### Quality
+- `width` and `height` set the target dimensions in pixels. If you provide only one dimension, the original aspect ratio is preserved.
+- `rmode` selects the [`ResizeMode`](xref:SixLabors.ImageSharp.Processing.ResizeMode). Common values are `crop`, `pad`, `boxpad`, `max`, `min`, `stretch`, and `manual`.
+- `ranchor` selects the [`AnchorPositionMode`](xref:SixLabors.ImageSharp.Processing.AnchorPositionMode). Valid values are `center`, `top`, `bottom`, `left`, `right`, `topleft`, `topright`, `bottomright`, and `bottomleft`.
+- `rxy` supplies an exact focal point as `x,y`, where both values are between `0` and `1`.
+- `rcolor` sets the pad color for resize modes that add canvas area.
+- `rsampler` selects the resampler. Built-in keywords are `bicubic`, `nearest`, `box`, `mitchell`, `catmull`, `lanczos2`, `lanczos3`, `lanczos5`, `lanczos8`, `welch`, `robidoux`, `robidouxsharp`, `spline`, `triangle`, and `hermite`.
+- `orient` defaults to `true` and changes how resize interprets EXIF rotation when mapping dimensions, anchors, and focal points. It does not physically rotate the pixels.
+- `compand` toggles linear-light companding during the resize.
 
-Allows the encoding of the output image at the given quality.
+`orient` is easy to confuse with `autoorient`. The short version is that `orient` only changes resize math, while `autoorient` actually rotates or flips the decoded image.
 
-- For Jpeg this ranges from 1—100.
-- For WebP this ranges from 1—100.
+## Auto-Orient
 
-```
-{PATH_TO_YOUR_IMAGE}?quality=90
-{PATH_TO_YOUR_IMAGE}?format=jpg&quality=42
-```
+[`AutoOrientWebProcessor`](xref:SixLabors.ImageSharp.Web.Processors.AutoOrientWebProcessor) applies EXIF orientation to the decoded image before later processors run.
 
->[!NOTE]
->Only certain formats support adjustable quality. This is a constraint of individual image standards not the API.
-
-#### Background Color
-
-Allows the changing of the background color of transparent images.
-
-```
-{PATH_TO_YOUR_IMAGE}?bgcolor=FFFF00
-{PATH_TO_YOUR_IMAGE}?bgcolor=C1FF0080
-{PATH_TO_YOUR_IMAGE}?bgcolor=red
-{PATH_TO_YOUR_IMAGE}?bgcolor=128,64,32
-{PATH_TO_YOUR_IMAGE}?bgcolor=128,64,32,16
+```text
+/images/photo.jpg?autoorient=true
+/images/photo.jpg?autoorient=true&width=300&height=200&rmode=crop
 ```
 
-## Securing Processing Commands
+Use `autoorient=true` when you want the output pixels themselves to be normalized to the display orientation.
 
-With ImageSharp.Web it is possible to configure an action to generate an HMAC by setting the @SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.HMACSecretKey property to any byte array value. This triggers checks in the middleware to look for and compare a HMAC hash of the request URL with the hash that is passed alongside the commands.
+## Format
 
-In cryptography, an HMAC (sometimes expanded as either keyed-hash message authentication code or hash-based message authentication code) is a specific type of message authentication code (MAC) involving a cryptographic hash function and a secret cryptographic key. As with any MAC, it may be used to simultaneously verify both the data integrity and authenticity of a message.
+[`FormatWebProcessor`](xref:SixLabors.ImageSharp.Web.Processors.FormatWebProcessor) switches the encoder used for the response and cached output.
 
-HMAC can provide authentication using a shared secret instead of using digital signatures with asymmetric cryptography. It trades off the need for a complex public key infrastructure by delegating the key exchange to the communicating parties, who are responsible for establishing and using a trusted channel to agree on the key prior to communication.
-
-Any cryptographic hash function, such as SHA-2 or SHA-3, may be used in the calculation of an HMAC; the resulting MAC algorithm is termed HMAC-X, where X is the hash function used (e.g. HMAC-SHA256 or HMAC-SHA3-512). The cryptographic strength of the HMAC depends upon the cryptographic strength of the underlying hash function, the size of its hash output, and the size and quality of the key.
-
-HMAC does not encrypt the message. Instead, the message (encrypted or not) must be sent alongside the HMAC hash. Parties with the secret key will hash the message again themselves, and if it is authentic, the received and computed hashes will match.
-
-By default ImageSharp.Web will use a HMAC-SHA256 algorithm.
-
-```c#
-private Func<ImageCommandContext, byte[], Task<string>> onComputeHMACAsync = (context, secret) =>
-{
-    string uri = CaseHandlingUriBuilder.BuildRelative(
-            CaseHandlingUriBuilder.CaseHandling.LowerInvariant,
-            context.Context.Request.PathBase,
-            context.Context.Request.Path,
-            QueryString.Create(context.Commands));
-
-    return Task.FromResult(HMACUtilities.ComputeHMACSHA256(uri, secret));
-};
+```text
+/images/logo.png?format=jpg
+/images/logo.png?format=webp
+/images/logo.png?width=300&format=gif
 ```
 
-Users can replicate that key using the same @SixLabors.ImageSharp.Web.CaseHandlingUriBuilder and @SixLabors.ImageSharp.Web.HMACUtilities APIs to generate the HMAC hash on the client. The hash must be passed via a command using the @SixLabors.ImageSharp.Web.HMACUtilities.TokenCommand constant.
+Any file extension registered with the active [`ImageFormatsManager`](xref:SixLabors.ImageSharp.Configuration.ImageFormatsManager) can be used here. The exact set therefore depends on the underlying ImageSharp configuration.
 
-Any invalid matches are rejected at the very start of the processing pipeline with a 400 HttpResponse code.
+## Quality
 
-## ImageTagHelper
+[`QualityWebProcessor`](xref:SixLabors.ImageSharp.Web.Processors.QualityWebProcessor) controls encoder quality for JPEG and WebP output.
 
-ASP.NET tag helpers are useful because they provide a more natural syntax for creating HTML elements in server-side code. They allow developers to create HTML elements in a way that is similar to how they would write HTML markup in a Razor view.
-
-Some of the benefits of using tag helpers include:
-
-1. Improved readability: Tag helpers make it easier to understand the purpose of the code by providing a clear and concise syntax that is closer to HTML.
-2. Reduced complexity: Tag helpers simplify the creation of complex HTML elements by reducing the amount of boilerplate code needed.
-3. Type safety: Tag helpers are strongly typed, which means that the compiler can catch errors at compile time rather than at runtime.
-4. Testability: Tag helpers make it easier to unit test server-side code by providing a cleaner separation of concerns between the server-side code and the HTML markup.
-5. Code reuse: Tag helpers can be used to encapsulate commonly used HTML elements, making it easier to reuse code across multiple views and pages.
-
-Overall, ASP.NET tag helpers provide a more efficient and maintainable way to create HTML elements in server-side code.
-
-ImageSharp.Web v3.0.0 comes equipped with a custom tag helper that allows the generation of all the commands supported by the middleware in an easily accessible manner. This includes automatic generation of HMAC command tokens.
-
->[!NOTE]
->Using @SixLabors.ImageSharp.Web.TagHelpers.ImageTagHelper is the recommended way to generate processing commands.
-
-To use @SixLabors.ImageSharp.Web.TagHelpers.ImageTagHelper, add the following `using` and `addTagHelper` commands to `_ViewImports.cshtml` in your project.
-
-```html
-@using SixLabors.ImageSharp
-@using SixLabors.ImageSharp.Processing
-@using SixLabors.ImageSharp.Web
-
-@addTagHelper *, SixLabors.ImageSharp.Web
+```text
+/images/photo.jpg?quality=90
+/images/photo.jpg?format=jpg&quality=42
+/images/photo.jpg?format=webp&quality=75
 ```
 
-All ImageSharp.Web commands are strongly typed and prefixed with `imagesharp` to namespace them against potentially conflicting commands. Visual Studio intellisense with automatically provide guidance
-once you start typing. For example, the following markup...
+Quality values are clamped by the target encoder. For WebP, values below `100` switch the encoder to lossy mode.
 
-```html
-<img
-    src="sixlabors.imagesharp.web.png"
-    imagesharp-width="300"
-    imagesharp-height="200"
-    imagesharp-rmode="ResizeMode.Pad"
-    imagesharp-rcolor="Color.LimeGreen" />
+## Background Color
+
+[`BackgroundColorWebProcessor`](xref:SixLabors.ImageSharp.Web.Processors.BackgroundColorWebProcessor) fills transparent areas with a color.
+
+```text
+/images/logo.png?bgcolor=FFFF00
+/images/logo.png?bgcolor=C1FF0080
+/images/logo.png?bgcolor=red
+/images/logo.png?bgcolor=128,64,32
+/images/logo.png?bgcolor=128,64,32,16
 ```
 
-Will generate the following command when HMAC is enabled.
+This is most useful when flattening transparent images before converting them to opaque formats such as JPEG:
 
-```bash
-/sixlabors.imagesharp.web.png?width=300&height=200&rmode=Pad&rcolor=32CD32FF&hmac=21f93e41021df0d3f88b5e2a8753bb273f292598e1511df67ec7cfb63f0b2994
+```text
+/images/logo.png?bgcolor=white&format=jpg&quality=85
 ```
 
-The @SixLabors.ImageSharp.Web.TagHelpers.ImageTagHelper type is unsealed so that you can inherit the type and support your own custom commands. 
+## Related Topics
+
+- [Configuration and Pipeline](configuration.md)
+- [Securing Requests](security.md)
+- [Tag Helpers](taghelpers.md)
+- [Extensibility](extensibility.md)

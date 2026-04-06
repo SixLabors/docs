@@ -148,7 +148,7 @@ Use the format-specific guides for the common cases:
 
 - [JPEG](jpeg.md) for photographic output and quality-focused lossy compression.
 - [PNG](png.md) for lossless output, transparency, and APNG metadata.
-- [GIF and Animation](gif.md) for palette-based animation workflows.
+- [GIF](gif.md) for palette-based animation workflows.
 - [WebP](webp.md) for lossy, lossless, transparent, and animated WebP output.
 - [TIFF](tiff.md) for workflows where compression mode, pixel layout, and TIFF metadata matter.
 

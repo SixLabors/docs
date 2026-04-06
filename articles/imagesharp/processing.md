@@ -75,7 +75,7 @@ As a rule of thumb:
 - [Rotate, Flip, and Auto-Orient](orientation.md) covers `AutoOrient()`, `Rotate()`, `Flip()`, and `RotateFlip()`.
 - [Color and Effects](colorandeffects.md) covers `Grayscale()`, `Sepia()`, `Brightness()`, `Contrast()`, `Hue()`, `Saturate()`, and `Opacity()`.
 - [Quantization, Palettes, and Dithering](quantization.md) covers `Quantize()`, palette selection, encoder quantizers, and dithering algorithms.
-- [Create an animated GIF](animatedgif.md) covers a multi-frame workflow.
+- [Working with Animations](animations.md) covers multi-frame workflows for GIF, APNG, and WebP.
 
 ## Related APIs
 
