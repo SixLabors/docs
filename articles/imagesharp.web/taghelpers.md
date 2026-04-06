@@ -47,12 +47,14 @@ The built-in typed values mirror the processor APIs:
 The supported built-in attributes are:
 
 - `imagesharp-width`, `imagesharp-height`, `imagesharp-rmode`, `imagesharp-ranchor`, `imagesharp-rxy`, `imagesharp-rcolor`, `imagesharp-rsampler`, `imagesharp-compand`, and `imagesharp-orient` for resize behavior.
-- `imagesharp-autoorient` for EXIF-based rotation and flipping.
+- `imagesharp-autoorient` for explicitly controlling EXIF-based rotation and flipping.
 - `imagesharp-format` for output format selection.
 - `imagesharp-bgcolor` for flattening transparency.
 - `imagesharp-quality` for JPEG and WebP quality.
 
 If the `<img>` element does not already have literal `width` and `height` attributes, `ImageTagHelper` also writes them to the markup from the processing dimensions. That helps avoid layout shift for simple resize scenarios.
+
+Because the middleware injects `autoorient=true` by default, you usually do not need `imagesharp-autoorient="true"` just to get correctly oriented output. The main reason to set the attribute explicitly is to opt out with `imagesharp-autoorient="false"` or to make the behavior explicit in markup.
 
 ## Local URLs Versus External URLs
 

@@ -19,7 +19,7 @@ app.UseStaticFiles();
 app.Run();
 ```
 
-`app.UseImageSharp()` must appear before `app.UseStaticFiles()`. If static files run first, requests such as `/images/photo.jpg?width=400` will be served directly from disk and ImageSharp.Web will never see them.
+`app.UseImageSharp()` must appear before `app.UseStaticFiles()`. If static files run first, requests such as `/images/photo.jpg` or `/images/photo.jpg?width=400` will be served directly from disk and ImageSharp.Web will never see them.
 
 ## What the Default Registration Includes
 
@@ -30,6 +30,7 @@ app.Run();
 - [`PhysicalFileSystemCache`](xref:SixLabors.ImageSharp.Web.Caching.PhysicalFileSystemCache) stores processed output under `wwwroot/is-cache` by default.
 - [`UriRelativeLowerInvariantCacheKey`](xref:SixLabors.ImageSharp.Web.Caching.UriRelativeLowerInvariantCacheKey) and [`SHA256CacheHash`](xref:SixLabors.ImageSharp.Web.Caching.SHA256CacheHash) create hashed cache filenames.
 - [`ResizeWebProcessor`](xref:SixLabors.ImageSharp.Web.Processors.ResizeWebProcessor), [`FormatWebProcessor`](xref:SixLabors.ImageSharp.Web.Processors.FormatWebProcessor), [`BackgroundColorWebProcessor`](xref:SixLabors.ImageSharp.Web.Processors.BackgroundColorWebProcessor), [`QualityWebProcessor`](xref:SixLabors.ImageSharp.Web.Processors.QualityWebProcessor), and [`AutoOrientWebProcessor`](xref:SixLabors.ImageSharp.Web.Processors.AutoOrientWebProcessor) provide the built-in command set.
+- A default [`OnParseCommandsAsync`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.OnParseCommandsAsync) callback that inserts `autoorient=true` when the request does not already specify `autoorient`.
 - A middleware-specific ImageSharp [`Configuration`](xref:SixLabors.ImageSharp.Configuration) with web-oriented [`JpegEncoder`](xref:SixLabors.ImageSharp.Formats.Jpeg.JpegEncoder), [`PngEncoder`](xref:SixLabors.ImageSharp.Formats.Png.PngEncoder), and [`WebpEncoder`](xref:SixLabors.ImageSharp.Formats.Webp.WebpEncoder) defaults.
 
 With that setup in place, requests like these are processed automatically:
@@ -42,18 +43,22 @@ With that setup in place, requests like these are processed automatically:
 
 That default configuration is intentionally opinionated for web output. Processed JPEGs use quality `75` with progressive, interleaved `YCbCrRatio420` encoding, processed PNGs use `BestCompression` with adaptive filtering, and processed WebP output uses quality `75` with `BestQuality` encoding method.
 
+The default command path is opinionated too: ImageSharp.Web transparently adds `autoorient=true` unless the request already contains an `autoorient` value. That means processed output is EXIF-normalized by default, which is especially important for WebP delivery where browser orientation support is inconsistent.
+
 When you keep the default middleware configuration and do not return custom [`DecoderOptions`](xref:SixLabors.ImageSharp.Formats.DecoderOptions) from [`OnBeforeLoadAsync`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.OnBeforeLoadAsync), the middleware also decodes with [`ColorProfileHandling.Convert`](xref:SixLabors.ImageSharp.Formats.ColorProfileHandling.Convert). That normalizes embedded ICC profiles for web-oriented re-encoding instead of blindly carrying source color encodings through the pipeline.
 
-If you later replace [`ImageSharpMiddlewareOptions.Configuration`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.Configuration), you also replace those encoder defaults. See [Configuration and Pipeline](configuration.md) for the details and the explicit ICC-profile override pattern.
+If you later replace [`ImageSharpMiddlewareOptions.Configuration`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.Configuration), you also replace those encoder defaults. If you replace [`OnParseCommandsAsync`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.OnParseCommandsAsync), you replace the default auto-orientation injection unless you explicitly preserve it. See [Configuration and Pipeline](configuration.md) for both patterns.
 
 ## A Useful Default Mental Model
 
-With the default [`PhysicalFileSystemProvider`](xref:SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider), plain file requests still fall through to static files because it uses [`ProcessingBehavior.CommandOnly`](xref:SixLabors.ImageSharp.Web.Providers.ProcessingBehavior.CommandOnly). That means:
+With the default [`PhysicalFileSystemProvider`](xref:SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider), the provider itself still uses [`ProcessingBehavior.CommandOnly`](xref:SixLabors.ImageSharp.Web.Providers.ProcessingBehavior.CommandOnly), but the default middleware callback inserts `autoorient=true` when no `autoorient` command is present. In practice that means:
 
-- `/images/photo.jpg` is served by ASP.NET Core static files.
-- `/images/photo.jpg?width=400` is intercepted and processed by ImageSharp.Web.
+- `/images/photo.jpg` is intercepted, auto-oriented, cached, and served by ImageSharp.Web.
+- `/images/photo.jpg?width=400` is also intercepted and processed by ImageSharp.Web.
 
-This is usually the behavior you want for local images because it keeps the unmodified path fast and predictable.
+That default favors display correctness over passthrough behavior, especially for formats such as WebP where browser EXIF-orientation support is unreliable.
+
+If you want passthrough behavior that only processes URLs that already contain commands, you must replace [`OnParseCommandsAsync`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.OnParseCommandsAsync) or otherwise bypass the middleware for those paths. `ProcessingBehavior.CommandOnly` by itself is not enough while the default auto-orientation callback is active.
 
 ## Configure the Physical Provider and Cache
 

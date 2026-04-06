@@ -7,12 +7,12 @@ Most ImageSharp.Web problems come down to one of five layers: middleware order, 
 If `/images/photo.jpg?width=400` behaves the same as `/images/photo.jpg`, check these first:
 
 - `app.UseImageSharp()` must run before `app.UseStaticFiles()`.
-- The default [`PhysicalFileSystemProvider`](xref:SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider) only processes requests that actually contain commands because it uses [`ProcessingBehavior.CommandOnly`](xref:SixLabors.ImageSharp.Web.Providers.ProcessingBehavior.CommandOnly).
+- If you replaced [`OnParseCommandsAsync`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.OnParseCommandsAsync), make sure you did not accidentally remove the default `autoorient=true` insertion or other command mutations you rely on.
 - A provider may be matching the request before the provider you expected. Provider order matters.
 
 ## I Get HTTP 400 After Enabling HMAC
 
-Once [`ImageSharpMiddlewareOptions.HMACSecretKey`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.HMACSecretKey) is configured, any request with recognized commands must include a valid `hmac` token.
+Once [`ImageSharpMiddlewareOptions.HMACSecretKey`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.HMACSecretKey) is configured, requests that include ImageSharp commands must include a valid `hmac` token.
 
 Useful checks:
 
@@ -54,6 +54,25 @@ If `imagesharp-*` attributes are not changing the rendered `src`, check these fi
 By default, ImageSharp.Web parses commands with invariant culture. If you set [`UseInvariantParsingCulture`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.UseInvariantParsingCulture) to `false`, separators and decimal parsing follow `CultureInfo.CurrentCulture`.
 
 That is useful for specialized local workflows, but it also means a value like `0.5` versus `0,5` can behave differently across environments.
+
+## Images Stopped Auto-Rotating After I Customized `OnParseCommandsAsync`
+
+The default [`OnParseCommandsAsync`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.OnParseCommandsAsync) callback inserts `autoorient=true` when the request does not already contain `autoorient`.
+
+If you assign your own callback without chaining the previous delegate, you remove that default behavior. Preserve the existing callback first unless you intentionally want to opt out:
+
+```csharp
+using SixLabors.ImageSharp.Web.Middleware;
+
+Func<ImageCommandContext, Task> defaultParse = options.OnParseCommandsAsync;
+
+options.OnParseCommandsAsync = async context =>
+{
+    await defaultParse(context);
+
+    // Your additional command mutations here.
+};
+```
 
 ## Colors or Compression Changed After I Replaced `options.Configuration`
 

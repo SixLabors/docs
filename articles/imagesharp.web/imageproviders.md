@@ -10,7 +10,7 @@ That means provider order matters. If two providers can both match the same path
 
 - It resolves images from the web root by default.
 - [`PhysicalFileSystemProviderOptions.ProviderRootPath`](xref:SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProviderOptions.ProviderRootPath) can be `null`, absolute, or relative to the application content root.
-- [`PhysicalFileSystemProviderOptions.ProcessingBehavior`](xref:SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProviderOptions.ProcessingBehavior) defaults to [`ProcessingBehavior.CommandOnly`](xref:SixLabors.ImageSharp.Web.Providers.ProcessingBehavior.CommandOnly), so commandless requests still fall through to static files.
+- [`PhysicalFileSystemProviderOptions.ProcessingBehavior`](xref:SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProviderOptions.ProcessingBehavior) still defaults to [`ProcessingBehavior.CommandOnly`](xref:SixLabors.ImageSharp.Web.Providers.ProcessingBehavior.CommandOnly), but the default middleware callback injects `autoorient=true` when the request does not already contain `autoorient`, so local image requests are usually processed anyway.
 
 ```csharp
 using SixLabors.ImageSharp.Web;
@@ -25,6 +25,8 @@ builder.Services.AddImageSharp()
 ```
 
 If you want a provider fixed to `IWebHostEnvironment.WebRootFileProvider` with no extra options, [`WebRootImageProvider`](xref:SixLabors.ImageSharp.Web.Providers.WebRootImageProvider) is also available.
+
+If you want truly command-only processing for local files, changing `ProcessingBehavior` is no longer sufficient on its own. You must also replace or suppress the default [`OnParseCommandsAsync`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.OnParseCommandsAsync) behavior that inserts `autoorient=true`.
 
 ## Provider Matching and Ordering
 

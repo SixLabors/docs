@@ -16,7 +16,7 @@ builder.Services.AddImageSharp(options =>
 });
 ```
 
-Once a non-empty secret key is configured, any request that still contains recognized commands after sanitization must also include a matching `hmac` query parameter. If the token is missing or invalid, the middleware returns HTTP 400.
+Once a non-empty secret key is configured, ImageSharp command URLs must also include a matching `hmac` query parameter. If the token is missing or invalid, the middleware returns HTTP 400.
 
 Use one stable secret across all app instances that must validate the same URLs. Rotating the secret invalidates previously generated signed URLs.
 
@@ -29,9 +29,6 @@ By default, ImageSharp.Web computes HMAC-SHA256 over a lower-invariant relative 
 - the sanitized command collection.
 
 That behavior is important because the middleware strips unknown commands before validation. The easiest way to stay in sync with the server is to let ImageSharp.Web compute the token for you instead of re-implementing the canonicalization rules yourself.
-
->[!NOTE]
->`OnParseCommandsAsync` runs after the middleware computes the HMAC candidate value. If you mutate commands there, treat that callback as trusted server-side logic rather than part of the client-signable contract.
 
 ## Generate Signed URLs on the Server
 

@@ -21,6 +21,7 @@ That gives you a fully working middleware out of the box, but every one of those
 
 - [`Configuration`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.Configuration) is the underlying ImageSharp [`Configuration`](xref:SixLabors.ImageSharp.Configuration).
 - By default, that `Configuration` is not raw `Configuration.Default`; ImageSharp.Web installs web-oriented JPEG, PNG, and WebP encoders into it.
+- [`OnParseCommandsAsync`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.OnParseCommandsAsync) defaults to a callback that injects `autoorient=true` when the request does not already contain `autoorient`.
 - [`MemoryStreamManager`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.MemoryStreamManager) controls pooled response streams.
 - [`UseInvariantParsingCulture`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.UseInvariantParsingCulture) controls whether command parsing is culture-invariant.
 - [`BrowserMaxAge`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.BrowserMaxAge), [`CacheMaxAge`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.CacheMaxAge), and [`CacheHashLength`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.CacheHashLength) control cache behavior.
@@ -51,6 +52,21 @@ builder.Services.AddImageSharp(options =>
 ```
 
 If you do not need to change format registrations or encoder defaults, leave [`ImageSharpMiddlewareOptions.Configuration`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.Configuration) alone. Replacing it opts you out of the middleware's built-in web defaults.
+
+Likewise, if you do not need custom command augmentation, leave [`OnParseCommandsAsync`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.OnParseCommandsAsync) alone. Replacing it opts you out of the default EXIF-normalization behavior unless you chain the existing callback yourself.
+
+## Default Orientation Behavior
+
+The default [`OnParseCommandsAsync`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.OnParseCommandsAsync) callback inserts `autoorient=true` when the request does not already specify `autoorient`.
+
+That makes EXIF normalization part of the default middleware behavior rather than an opt-in query-string feature. The main reason is web delivery: some browsers still ignore EXIF orientation in formats such as WebP, so relying on the encoded metadata alone does not produce consistent display results.
+
+Two details matter in practice:
+
+- `autoorient=false` still disables the behavior for that request because the middleware only inserts the command when it is absent.
+- Replacing `OnParseCommandsAsync` with your own delegate removes the built-in insertion unless you invoke the previous delegate.
+
+With the out-of-the-box local filesystem setup, that also means commandless image URLs are usually processed and cached instead of falling through to static files unchanged.
 
 ## Default Encoder and ICC Behavior
 
@@ -156,17 +172,21 @@ That turns requests like `/images/photo.jpg?preset=thumb` into a controlled, nam
 
 ```csharp
 using SixLabors.ImageSharp.Web;
+using SixLabors.ImageSharp.Web.Middleware;
 
 builder.Services.AddImageSharp(options =>
 {
-    options.OnParseCommandsAsync = context =>
+    Func<ImageCommandContext, Task> defaultParse = options.OnParseCommandsAsync;
+
+    options.OnParseCommandsAsync = async context =>
     {
+        await defaultParse(context);
+
         if (!context.Commands.Contains("format"))
         {
             context.Commands["format"] = "webp";
         }
 
-        return Task.CompletedTask;
     };
 
     options.OnPrepareResponseAsync = context =>
@@ -177,10 +197,7 @@ builder.Services.AddImageSharp(options =>
 });
 ```
 
-These callbacks are often the right tool when you need small workflow adjustments without inventing a custom provider, parser, or processor.
-
->[!NOTE]
->`OnParseCommandsAsync` runs after HMAC generation. If you sign requests, keep any command mutations in that callback deterministic and within your own trust boundary.
+These callbacks are often the right tool when you need small workflow adjustments without inventing a custom provider, parser, or processor. If you override `OnParseCommandsAsync`, preserve the existing delegate unless you intentionally want to remove the middleware's default `autoorient=true` insertion.
 
 ## Related Topics
 

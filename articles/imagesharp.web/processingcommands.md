@@ -8,6 +8,7 @@ The default [`QueryCollectionRequestParser`](xref:SixLabors.ImageSharp.Web.Comma
 
 - If the same command key appears more than once, the last value wins.
 - Unknown commands are stripped before HMAC validation and before the processor pipeline runs.
+- If `autoorient` is absent, the default middleware callback inserts `autoorient=true` before processing continues.
 - Processors run in the order their first recognized command appears in the request, not in a hard-coded global order.
 - Values are parsed with invariant culture by default. If you turn that off, parsing follows `CultureInfo.CurrentCulture`.
 
@@ -41,9 +42,12 @@ Resize commands are handled by [`ResizeWebProcessor`](xref:SixLabors.ImageSharp.
 ```text
 /images/photo.jpg?autoorient=true
 /images/photo.jpg?autoorient=true&width=300&height=200&rmode=crop
+/images/photo.jpg?autoorient=false
 ```
 
-Use `autoorient=true` when you want the output pixels themselves to be normalized to the display orientation.
+ImageSharp.Web behaves as though `autoorient=true` were present unless you explicitly provide `autoorient=false`. That means processed output is EXIF-normalized by default, which avoids format- and browser-specific orientation inconsistencies during web delivery.
+
+Use `autoorient=false` only when you intentionally want to preserve the original pixel orientation and rely on EXIF metadata downstream.
 
 ## Format
 
