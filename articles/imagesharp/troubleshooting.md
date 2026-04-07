@@ -57,6 +57,8 @@ using Image image = Image.Load(options, stream);
 
 If decoding fails with an [`InvalidImageContentException`](xref:SixLabors.ImageSharp.InvalidImageContentException) that wraps an [`InvalidMemoryOperationException`](xref:SixLabors.ImageSharp.Memory.InvalidMemoryOperationException), the requested image size or frame set may be beyond the allocator limits or practical memory budget.
 
+Before loading, run `Identify(...)` and inspect [`ImageInfo.GetPixelMemorySize()`](xref:SixLabors.ImageSharp.ImageInfo.GetPixelMemorySize). That gives you a decoded pixel-memory estimate up front and is often the fastest way to spot small encoded files that expand into very large multi-frame allocations.
+
 Ways to reduce decode cost:
 
 - use [`DecoderOptions.TargetSize`](xref:SixLabors.ImageSharp.Formats.DecoderOptions.TargetSize) when a smaller decode is acceptable;

@@ -14,9 +14,12 @@ ImageInfo info = Image.Identify("upload.bin");
 Console.WriteLine($"{info.Width}x{info.Height}");
 Console.WriteLine($"Frames: {info.FrameCount}");
 Console.WriteLine($"Bits per pixel: {info.PixelType.BitsPerPixel}");
+Console.WriteLine($"Estimated pixel memory: {info.GetPixelMemorySize():N0} bytes");
 ```
 
 This lets you reject obviously unsuitable files before allocating the full decoded image buffers.
+
+[`ImageInfo.GetPixelMemorySize()`](xref:SixLabors.ImageSharp.ImageInfo.GetPixelMemorySize) is particularly useful here. It gives you a decoded pixel-memory estimate up front, which helps protect services against inputs that are cheap to upload but expensive to expand into memory, especially when many frames are involved.
 
 ## Reduce Decode Cost with DecoderOptions
 
@@ -110,6 +113,7 @@ For ImageSharp.Web command signing, see [Securing Requests in ImageSharp.Web](..
 ## Practical Security Defaults
 
 - Use `Identify()` first whenever a full decode is not necessary.
+- Use `GetPixelMemorySize()` during identify-based preflight when you need a decoded memory budget check.
 - Use `TargetSize`, `MaxFrames`, and `SkipMetadata` to shrink decode cost up front.
 - Prefer `IgnoreNone` or the default `IgnoreNonCritical` over broader error ignoring on untrusted inputs.
 - Restrict the enabled format modules when your workload only needs a few codecs.

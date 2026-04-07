@@ -1,6 +1,6 @@
 # Read Image Info Without Decoding
 
-When you are working with uploads, queues, or validation rules, fully decoding every image is often unnecessary work. `Image.Identify()` and `Image.DetectFormat()` let you answer the early questions first: what is this file, how large is it, how many frames does it have, and what kind of pixel data does it claim to contain?
+When you are working with uploads, queues, or validation rules, fully decoding every image is often unnecessary work. `Image.Identify()` and `Image.DetectFormat()` let you answer the early questions first: what is this file, how large is it, how many frames does it have, what kind of pixel data does it claim to contain, and how much pixel memory might a full decode require?
 
 ## Read Dimensions, Frame Count, and Pixel Info
 
@@ -14,7 +14,26 @@ ImageInfo imageInfo = Image.Identify("input.webp");
 Console.WriteLine($"{imageInfo.Width}x{imageInfo.Height}");
 Console.WriteLine($"Frames: {imageInfo.FrameCount}");
 Console.WriteLine($"Bits per pixel: {imageInfo.PixelType.BitsPerPixel}");
+Console.WriteLine($"Estimated pixel memory: {imageInfo.GetPixelMemorySize():N0} bytes");
 ```
+
+## Estimate Pixel Memory Before Decoding
+
+[`ImageInfo.GetPixelMemorySize()`](xref:SixLabors.ImageSharp.ImageInfo.GetPixelMemorySize) reports the estimated in-memory size of the decoded pixel data represented by the identified image.
+
+```csharp
+using SixLabors.ImageSharp;
+
+ImageInfo imageInfo = Image.Identify("input.gif");
+long pixelBytes = imageInfo.GetPixelMemorySize();
+
+if (pixelBytes > 256L * 1024 * 1024)
+{
+    throw new InvalidOperationException("Image is too large to decode safely.");
+}
+```
+
+This is especially useful for upload validation and other untrusted-input workflows. A file can be small on disk but still expand into a very large decoded pixel budget, especially for multi-frame formats such as GIF, animated WebP, or TIFF. If frame metadata is available, the reported size includes all frames.
 
 ## Inspect the Encoded Pixel Type
 
@@ -73,6 +92,7 @@ Console.WriteLine(imageInfo.Height);
 - `Image.Identify()` is usually much cheaper than `Image.Load()` for inspection-only workflows.
 - `ImageInfo.Metadata` still gives you access to metadata without allocating a full pixel buffer.
 - `ImageInfo.PixelType` includes color model, alpha behavior, bit depth, and component precision without decoding the full image.
+- `ImageInfo.GetPixelMemorySize()` estimates decoded pixel memory before you commit to a full load.
 - `Image.DetectFormat()` is focused on encoded format detection, while `Image.Identify()` returns the broader inspection result.
 
 For more detail, see [Loading, Identifying, and Saving](loadingandsaving.md), [Working with Metadata](metadata.md), [Convert Between Formats](formatconversion.md), and [Pixel Formats](pixelformats.md).

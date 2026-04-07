@@ -41,7 +41,7 @@ Use the async overloads when your application already uses asynchronous I/O, for
 
 ## Identify Without Decoding Pixel Data
 
-Use `Image.Identify()` when you only need dimensions, pixel information, or metadata:
+Use `Image.Identify()` when you only need dimensions, pixel information, metadata, or a quick decoded memory estimate:
 
 ```csharp
 using SixLabors.ImageSharp;
@@ -51,9 +51,10 @@ ImageInfo imageInfo = Image.Identify("input.jpg");
 Console.WriteLine($"{imageInfo.Width}x{imageInfo.Height}");
 Console.WriteLine($"Bits per pixel: {imageInfo.PixelType.BitsPerPixel}");
 Console.WriteLine($"Frames: {imageInfo.FrameCount}");
+Console.WriteLine($"Estimated pixel memory: {imageInfo.GetPixelMemorySize():N0} bytes");
 ```
 
-This avoids allocating the full pixel buffer and is usually the right choice for validation, metadata extraction, and thumbnail planning.
+This avoids allocating the full pixel buffer and is usually the right choice for validation, metadata extraction, thumbnail planning, and rejecting images whose decoded pixel budget is too large for your workload.
 
 ## Detect the Encoded Format
 
