@@ -60,6 +60,8 @@ When you choose palette PNG output, ImageSharp uses the same quantization buildi
 - [`PixelSamplingStrategy`](xref:SixLabors.ImageSharp.Formats.QuantizingImageEncoder.PixelSamplingStrategy) controls how pixels are sampled when building the palette.
 - [`TransparentColorMode`](xref:SixLabors.ImageSharp.Formats.AlphaAwareImageEncoder.TransparentColorMode) controls how fully transparent pixels are normalized during encoding.
 
+If you pass a quantizer with custom [`QuantizerOptions`](xref:SixLabors.ImageSharp.Processing.Processors.Quantization.QuantizerOptions), palette matching is configured through [`ColorMatchingMode`](xref:SixLabors.ImageSharp.Processing.Processors.Quantization.ColorMatchingMode), which offers the `Coarse` and `Exact` choices.
+
 ```csharp
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Formats;

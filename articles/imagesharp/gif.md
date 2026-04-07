@@ -66,9 +66,11 @@ The main knobs are:
 
 Common choices include:
 
-- [`OctreeQuantizer`](xref:SixLabors.ImageSharp.Processing.Processors.Quantization.OctreeQuantizer) for a solid general-purpose adaptive palette.
+- [`HexadecatreeQuantizer`](xref:SixLabors.ImageSharp.Processing.Processors.Quantization.HexadecatreeQuantizer) for a solid general-purpose adaptive palette.
 - [`WuQuantizer`](xref:SixLabors.ImageSharp.Processing.Processors.Quantization.WuQuantizer) when you want a high-quality adaptive palette with configurable [`QuantizerOptions`](xref:SixLabors.ImageSharp.Processing.Processors.Quantization.QuantizerOptions).
 - [`PaletteQuantizer`](xref:SixLabors.ImageSharp.Processing.Processors.Quantization.PaletteQuantizer) when you need to lock output to a known palette.
+
+`QuantizerOptions` also exposes [`ColorMatchingMode`](xref:SixLabors.ImageSharp.Processing.Processors.Quantization.ColorMatchingMode) with the simplified `Coarse` and `Exact` choices for palette matching.
 
 ```csharp
 using SixLabors.ImageSharp;
