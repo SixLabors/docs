@@ -49,7 +49,7 @@ JpegMetadata jpegMetadata = image.Metadata.GetJpegMetadata();
 PngMetadata pngMetadata = image.Metadata.GetPngMetadata();
 ```
 
-Similar helpers exist for other built-in formats, including GIF, TIFF, and WebP.
+Similar helpers exist for other built-in formats, including EXR, GIF, TIFF, and WebP.
 
 ## Access Frame Metadata
 

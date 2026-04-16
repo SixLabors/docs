@@ -1,6 +1,6 @@
 # Image Formats
 
-ImageSharp keeps the in-memory image model separate from the file format on disk. That means the same processing code can work across JPEG, PNG, WebP, TIFF, GIF, and the other built-in codecs, while the encoder and metadata layers handle the format-specific details at the edges.
+ImageSharp keeps the in-memory image model separate from the file format on disk. That means the same processing code can work across JPEG, PNG, WebP, TIFF, OpenEXR, GIF, and the other built-in codecs, while the encoder and metadata layers handle the format-specific details at the edges.
 
 This page is the format map for the library: which built-in formats ship by default, what each one is good at, and where to go next for format-specific guidance.
 
@@ -12,6 +12,7 @@ The source of truth for the built-in format list is [`Configuration`](xref:SixLa
 | --- | --- | --- |
 | BMP | [`BmpFormat`](xref:SixLabors.ImageSharp.Formats.Bmp.BmpFormat) | Read and write |
 | CUR | [`CurFormat`](xref:SixLabors.ImageSharp.Formats.Cur.CurFormat) | Read and write |
+| EXR | [`ExrFormat`](xref:SixLabors.ImageSharp.Formats.Exr.ExrFormat) | Read and write |
 | GIF | [`GifFormat`](xref:SixLabors.ImageSharp.Formats.Gif.GifFormat) | Read and write |
 | ICO | [`IcoFormat`](xref:SixLabors.ImageSharp.Formats.Ico.IcoFormat) | Read and write |
 | JPEG | [`JpegFormat`](xref:SixLabors.ImageSharp.Formats.Jpeg.JpegFormat) | Read and write |
@@ -33,11 +34,13 @@ If you only need a quick rule of thumb:
 - GIF is mainly useful for simple palette-based animation and legacy compatibility.
 - WebP covers lossy, lossless, transparency, and animation in one format family.
 - TIFF is primarily for archival, print, interchange, and imaging-pipeline workflows.
+- OpenEXR is the format to consider for HDR and higher-precision imaging pipelines.
 
 Another way to think about it:
 
 - Lossy formats: JPEG, lossy WebP.
 - Lossless formats: PNG, lossless WebP, TIFF, QOI, BMP.
+- Higher-precision and HDR workflows: OpenEXR and TIFF.
 - Transparency-friendly formats: PNG, WebP, TIFF, TGA, QOI.
 - Animation-friendly formats: GIF, animated PNG workflows through [`PngEncoder`](xref:SixLabors.ImageSharp.Formats.Png.PngEncoder), and animated WebP.
 
@@ -100,6 +103,7 @@ ImageSharp also provides format-specific helpers:
 
 - `image.SaveAsBmp()` (shortcut for `image.Save(new BmpEncoder())`)
 - `image.SaveAsCur()` (shortcut for `image.Save(new CurEncoder())`)
+- `image.SaveAsExr()` (shortcut for `image.Save(new ExrEncoder())`)
 - `image.SaveAsGif()` (shortcut for `image.Save(new GifEncoder())`)
 - `image.SaveAsIco()` (shortcut for `image.Save(new IcoEncoder())`)
 - `image.SaveAsJpeg()` (shortcut for `image.Save(new JpegEncoder())`)
@@ -144,22 +148,23 @@ For a format-agnostic guide to palettes and dithered output, see [Quantization, 
 
 ## Format Guides
 
-Use the format-specific guides for the common cases:
+Use the format-specific guides for the common cases and specialized workflows:
 
 - [JPEG](jpeg.md) for photographic output and quality-focused lossy compression.
 - [PNG](png.md) for lossless output, transparency, and APNG metadata.
 - [GIF](gif.md) for palette-based animation workflows.
 - [WebP](webp.md) for lossy, lossless, transparent, and animated WebP output.
 - [TIFF](tiff.md) for workflows where compression mode, pixel layout, and TIFF metadata matter.
+- [OpenEXR](exr.md) for HDR and higher-precision imaging workflows.
 
 The less commonly used built-in formats still have valid niches:
 
-- BMP is simple and broadly understood, but usually much larger than modern alternatives.
-- ICO stores Windows icon files, often with multiple embedded image sizes.
-- CUR stores Windows cursor files and hotspot metadata.
-- PBM is useful for Netpbm-family workflows and simple interchange scenarios.
-- TGA appears most often in graphics and content-pipeline tooling.
-- QOI is a fast, simple lossless format with a much smaller ecosystem than PNG or WebP.
+- [BMP](bmp.md) is simple and broadly understood, but usually much larger than modern alternatives.
+- [ICO](ico.md) stores Windows icon files, often with one or more embedded icon images.
+- [CUR](cur.md) stores Windows cursor files and hotspot metadata.
+- [PBM](pbm.md) covers PBM/PGM/PPM-style Netpbm-family workflows and simple interchange scenarios.
+- [TGA](tga.md) appears most often in graphics and content-pipeline tooling.
+- [QOI](qoi.md) is a fast, simple lossless format with a much smaller ecosystem than PNG or WebP.
 
 ## Custom Format Registration
 

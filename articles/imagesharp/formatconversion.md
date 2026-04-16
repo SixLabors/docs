@@ -24,7 +24,7 @@ Before converting, [`Image.Identify()`](xref:SixLabors.ImageSharp.Image.Identify
 - [`AlphaRepresentation`](xref:SixLabors.ImageSharp.PixelFormats.PixelTypeInfo.AlphaRepresentation)
 - [`ComponentInfo`](xref:SixLabors.ImageSharp.PixelFormats.PixelTypeInfo.ComponentInfo) for component count and precision
 
-This is useful when you need to decide whether to flatten transparency for JPEG, keep higher-precision data in PNG or TIFF, or preserve indexed workflows where the target format supports them.
+This is useful when you need to decide whether to flatten transparency for JPEG, keep higher-precision data in PNG, TIFF, or OpenEXR, or preserve indexed workflows where the target format supports them.
 
 ## Convert PNG to JPEG
 
