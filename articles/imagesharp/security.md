@@ -90,9 +90,12 @@ Configuration config = Configuration.Default.Clone();
 config.MemoryAllocator = MemoryAllocator.Create(new MemoryAllocatorOptions
 {
     // Roughly limits the workload to about 64 megapixels of Rgba32 data.
-    AllocationLimitMegabytes = 256
+    AllocationLimitMegabytes = 256,
+    AccumulativeAllocationLimitMegabytes = 512
 });
 ```
+
+[`AllocationLimitMegabytes`](xref:SixLabors.ImageSharp.Memory.MemoryAllocatorOptions.AllocationLimitMegabytes) limits the size of any one live allocation group. [`AccumulativeAllocationLimitMegabytes`](xref:SixLabors.ImageSharp.Memory.MemoryAllocatorOptions.AccumulativeAllocationLimitMegabytes) limits the total live memory reserved through that allocator, which is useful when several requests or frames may overlap.
 
 This is one of the most important safeguards for services that handle arbitrary uploads. For broader guidance on allocator behavior and tradeoffs, see [Memory Management](memorymanagement.md).
 

@@ -22,11 +22,14 @@ Configuration config = Configuration.Default.Clone();
 config.MemoryAllocator = MemoryAllocator.Create(new MemoryAllocatorOptions
 {
     MaximumPoolSizeMegabytes = 128,
-    AllocationLimitMegabytes = 1024
+    AllocationLimitMegabytes = 1024,
+    AccumulativeAllocationLimitMegabytes = 2048
 });
 ```
 
-[`MaximumPoolSizeMegabytes`](xref:SixLabors.ImageSharp.Memory.MemoryAllocatorOptions.MaximumPoolSizeMegabytes) controls retained pool size. [`AllocationLimitMegabytes`](xref:SixLabors.ImageSharp.Memory.MemoryAllocatorOptions.AllocationLimitMegabytes) controls the maximum discontiguous buffer size the allocator will allow.
+[`MaximumPoolSizeMegabytes`](xref:SixLabors.ImageSharp.Memory.MemoryAllocatorOptions.MaximumPoolSizeMegabytes) controls retained pool size. [`AllocationLimitMegabytes`](xref:SixLabors.ImageSharp.Memory.MemoryAllocatorOptions.AllocationLimitMegabytes) controls the maximum discontiguous buffer size the allocator will allow. [`AccumulativeAllocationLimitMegabytes`](xref:SixLabors.ImageSharp.Memory.MemoryAllocatorOptions.AccumulativeAllocationLimitMegabytes) caps the allocator's total live allocations across all active owners and memory groups.
+
+Use [`AccumulativeAllocationLimitMegabytes`](xref:SixLabors.ImageSharp.Memory.MemoryAllocatorOptions.AccumulativeAllocationLimitMegabytes) when you want multiple concurrent images, frames, or intermediate buffers to share one fixed allocator budget. Disposing the image or memory owner releases that reservation so later allocations can succeed. When both limits are set, keep the accumulative limit at or above the single-allocation limit.
 
 ## Prefer Contiguous Buffers Only When You Need Them
 

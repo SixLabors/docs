@@ -29,7 +29,7 @@ This pattern is usually better than mutating [`Configuration.Default`](xref:SixL
 The main knobs on [`Configuration`](xref:SixLabors.ImageSharp.Configuration) are:
 
 - [`ImageFormatsManager`](xref:SixLabors.ImageSharp.Configuration.ImageFormatsManager) for format registration, encoders, decoders, and detectors.
-- [`MemoryAllocator`](xref:SixLabors.ImageSharp.Configuration.MemoryAllocator) for pooled buffer allocation.
+- [`MemoryAllocator`](xref:SixLabors.ImageSharp.Configuration.MemoryAllocator) for pooled buffer allocation and custom allocator limits.
 - [`MaxDegreeOfParallelism`](xref:SixLabors.ImageSharp.Configuration.MaxDegreeOfParallelism) for row and processor parallelism.
 - [`PreferContiguousImageBuffers`](xref:SixLabors.ImageSharp.Configuration.PreferContiguousImageBuffers) for interop-oriented contiguous buffers.
 - [`StreamProcessingBufferSize`](xref:SixLabors.ImageSharp.Configuration.StreamProcessingBufferSize) for stream copy buffer size.

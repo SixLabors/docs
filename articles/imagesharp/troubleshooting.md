@@ -64,7 +64,7 @@ Ways to reduce decode cost:
 - use [`DecoderOptions.TargetSize`](xref:SixLabors.ImageSharp.Formats.DecoderOptions.TargetSize) when a smaller decode is acceptable;
 - use [`DecoderOptions.MaxFrames`](xref:SixLabors.ImageSharp.Formats.DecoderOptions.MaxFrames) to cap animated formats;
 - use [`DecoderOptions.SkipMetadata`](xref:SixLabors.ImageSharp.Formats.DecoderOptions.SkipMetadata) when metadata is not needed;
-- adjust [`MemoryAllocatorOptions.AllocationLimitMegabytes`](xref:SixLabors.ImageSharp.Memory.MemoryAllocatorOptions.AllocationLimitMegabytes) if you truly need a larger allocator budget.
+- adjust [`MemoryAllocatorOptions.AllocationLimitMegabytes`](xref:SixLabors.ImageSharp.Memory.MemoryAllocatorOptions.AllocationLimitMegabytes) for a larger per-allocation budget, or [`MemoryAllocatorOptions.AccumulativeAllocationLimitMegabytes`](xref:SixLabors.ImageSharp.Memory.MemoryAllocatorOptions.AccumulativeAllocationLimitMegabytes) for a larger total live allocator budget.
 
 Also avoid turning on [`PreferContiguousImageBuffers`](xref:SixLabors.ImageSharp.Configuration.PreferContiguousImageBuffers) unless you explicitly need contiguous memory for interop.
 
