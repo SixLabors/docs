@@ -1,6 +1,6 @@
 # PolygonClipper
 
-PolygonClipper is Six Labors' focused geometry library for polygon boolean operations, contour normalization, and stroke-outline generation in managed .NET. It is designed for real 2D geometry workloads: non-convex shapes, holes, multiple contours, overlapping edges, and inputs that need canonicalized output.
+PolygonClipper is Six Labors' high-performance focused geometry library for polygon boolean operations, contour normalization, and stroke-outline generation in managed .NET. It is designed for real 2D geometry workloads: non-convex shapes, holes, multiple contours, overlapping edges, and inputs that need canonicalized output.
 
 The current package targets [.NET 8](https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-8/overview). If you already use [ImageSharp.Drawing](../imagesharp.drawing/index.md), you may already be relying on PolygonClipper indirectly: ImageSharp.Drawing uses it internally for boolean operations against paths and for stroke geometry generation.
 
@@ -49,6 +49,6 @@ paket add SixLabors.PolygonClipper --version VERSION_NUMBER
 
 - [Getting Started](gettingstarted.md) walks through building a polygon from contours and vertices, then running a first boolean operation.
 - [Polygons, Contours, and Holes](polygonsandcontours.md) explains the library's core data model and how hierarchy is represented.
-- [Boolean Operations](booleanoperations.md) covers `Intersection`, `Union`, `Difference`, and `Xor`, including subject-versus-clip semantics.
-- [Normalization and Winding](normalization.md) explains when to use `Normalize(...)` to resolve self-intersections and overlaps into positive-winding output.
-- [Stroking](stroking.md) covers `PolygonStroker`, `StrokeOptions`, joins, caps, and open-versus-closed path behavior.
+- [Boolean Operations](booleanoperations.md) covers [`Intersection`](xref:SixLabors.PolygonClipper.PolygonClipper.Intersection*), [`Union`](xref:SixLabors.PolygonClipper.PolygonClipper.Union*), [`Difference`](xref:SixLabors.PolygonClipper.PolygonClipper.Difference*), and [`Xor`](xref:SixLabors.PolygonClipper.PolygonClipper.Xor*), including subject-versus-clip semantics.
+- [Normalization and Winding](normalization.md) explains when to use [`Normalize(...)`](xref:SixLabors.PolygonClipper.PolygonClipper.Normalize*) to resolve self-intersections and overlaps into positive-winding output.
+- [Stroking](stroking.md) covers [`PolygonStroker`](xref:SixLabors.PolygonClipper.PolygonStroker), [`StrokeOptions`](xref:SixLabors.PolygonClipper.StrokeOptions), joins, caps, and open-versus-closed path behavior.

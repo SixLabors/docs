@@ -4,10 +4,10 @@ Boolean operations are the center of PolygonClipper. They let you combine or sub
 
 The public entry points are the static methods on [`PolygonClipper`](xref:SixLabors.PolygonClipper.PolygonClipper):
 
-- `Intersection(subject, clip)`
-- `Union(subject, clip)`
-- `Difference(subject, clip)`
-- `Xor(subject, clip)`
+- [`Intersection(subject, clip)`](xref:SixLabors.PolygonClipper.PolygonClipper.Intersection*)
+- [`Union(subject, clip)`](xref:SixLabors.PolygonClipper.PolygonClipper.Union*)
+- [`Difference(subject, clip)`](xref:SixLabors.PolygonClipper.PolygonClipper.Difference*)
+- [`Xor(subject, clip)`](xref:SixLabors.PolygonClipper.PolygonClipper.Xor*)
 
 These are also the recommended entry points in the source, because they route work through internal reusable instances.
 
@@ -28,7 +28,7 @@ A few quick cases make the behavior easier to picture:
 - if the two polygons are identical, `Xor` returns an empty result;
 - if one polygon sits inside the other, `Xor` keeps the outer region and removes the shared inner region.
 
-`Difference` is the one where argument order matters most. `Difference(a, b)` is not the same as `Difference(b, a)`.
+[`Difference`](xref:SixLabors.PolygonClipper.PolygonClipper.Difference*) is the one where argument order matters most. `Difference(a, b)` is not the same as `Difference(b, a)`.
 
 ## Run a Boolean Operation
 

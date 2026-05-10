@@ -39,7 +39,7 @@ DecoderOptions options = new()
     MaxFrames = 1,
     SkipMetadata = true,
     TargetSize = new Size(1600, 1600),
-    SegmentIntegrityHandling = SegmentIntegrityHandling.IgnoreNone
+    SegmentIntegrityHandling = SegmentIntegrityHandling.Strict
 };
 
 using Image image = Image.Load(options, stream);
@@ -51,9 +51,9 @@ For public upload endpoints, `MaxFrames = 1` is often appropriate when you only 
 
 [`SegmentIntegrityHandling`](xref:SixLabors.ImageSharp.Formats.DecoderOptions.SegmentIntegrityHandling) is a tradeoff between strictness and recovery:
 
-- [`IgnoreNone`](xref:SixLabors.ImageSharp.Formats.SegmentIntegrityHandling.IgnoreNone) rejects files on any segment validation error.
-- [`IgnoreNonCritical`](xref:SixLabors.ImageSharp.Formats.SegmentIntegrityHandling.IgnoreNonCritical) is the library default.
-- [`IgnoreData`](xref:SixLabors.ImageSharp.Formats.SegmentIntegrityHandling.IgnoreData) and [`IgnoreAll`](xref:SixLabors.ImageSharp.Formats.SegmentIntegrityHandling.IgnoreAll) are better suited to recovery tools than to public-facing ingest paths.
+- [`Strict`](xref:SixLabors.ImageSharp.Formats.SegmentIntegrityHandling.Strict) rejects files on any recoverable segment validation error.
+- [`IgnoreAncillary`](xref:SixLabors.ImageSharp.Formats.SegmentIntegrityHandling.IgnoreAncillary) is the library default and ignores recoverable errors in optional metadata or other ancillary segments.
+- [`IgnoreImageData`](xref:SixLabors.ImageSharp.Formats.SegmentIntegrityHandling.IgnoreImageData) also ignores recoverable image data segment errors and is better suited to recovery tools than to public-facing ingest paths.
 
 That recommendation is an inference from the enum semantics: the more errors you ignore, the more "best effort" your decode path becomes.
 
@@ -89,13 +89,13 @@ using SixLabors.ImageSharp.Memory;
 Configuration config = Configuration.Default.Clone();
 config.MemoryAllocator = MemoryAllocator.Create(new MemoryAllocatorOptions
 {
+
     // Roughly limits the workload to about 64 megapixels of Rgba32 data.
-    AllocationLimitMegabytes = 256,
-    AccumulativeAllocationLimitMegabytes = 512
+    AllocationLimitMegabytes = 256
 });
 ```
 
-[`AllocationLimitMegabytes`](xref:SixLabors.ImageSharp.Memory.MemoryAllocatorOptions.AllocationLimitMegabytes) limits the size of any one live allocation group. [`AccumulativeAllocationLimitMegabytes`](xref:SixLabors.ImageSharp.Memory.MemoryAllocatorOptions.AccumulativeAllocationLimitMegabytes) limits the total live memory reserved through that allocator, which is useful when several requests or frames may overlap.
+[`AllocationLimitMegabytes`](xref:SixLabors.ImageSharp.Memory.MemoryAllocatorOptions.AllocationLimitMegabytes) limits the size of any one live allocation group.
 
 This is one of the most important safeguards for services that handle arbitrary uploads. For broader guidance on allocator behavior and tradeoffs, see [Memory Management](memorymanagement.md).
 
@@ -118,6 +118,6 @@ For ImageSharp.Web command signing, see [Securing Requests in ImageSharp.Web](..
 - Use `Identify()` first whenever a full decode is not necessary.
 - Use `GetPixelMemorySize()` during identify-based preflight when you need a decoded memory budget check.
 - Use `TargetSize`, `MaxFrames`, and `SkipMetadata` to shrink decode cost up front.
-- Prefer `IgnoreNone` or the default `IgnoreNonCritical` over broader error ignoring on untrusted inputs.
+- Prefer [`Strict`](xref:SixLabors.ImageSharp.Formats.SegmentIntegrityHandling.Strict) or the default [`IgnoreAncillary`](xref:SixLabors.ImageSharp.Formats.SegmentIntegrityHandling.IgnoreAncillary) over broader error ignoring on untrusted inputs.
 - Restrict the enabled format modules when your workload only needs a few codecs.
 - Use allocator limits and host-level request limits together rather than relying on only one layer.

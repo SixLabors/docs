@@ -5,7 +5,7 @@
 
 Most developers meet Fonts through [ImageSharp.Drawing](../imagesharp.drawing/index.md), where the rendering surface is already handled for you. This page is for the next step down: when you want Fonts to do the shaping and glyph decomposition, but you want to decide how those glyphs are painted or exported.
 
-Custom rendering in Fonts is built around `IGlyphRenderer`. `TextRenderer.RenderTextTo(...)` performs layout and shaping, then sends the result to your renderer as glyphs, layers, figures, and path commands.
+Custom rendering in Fonts is built around [`IGlyphRenderer`](xref:SixLabors.Fonts.Rendering.IGlyphRenderer). [`TextRenderer.RenderTextTo(...)`](xref:SixLabors.Fonts.Rendering.TextRenderer.RenderTextTo*) performs layout and shaping, then sends the result to your renderer as glyphs, layers, figures, and path commands.
 
 ### When to use it
 
@@ -18,18 +18,18 @@ Custom rendering is useful when you want to:
 
 ### Rendering flow
 
-The callbacks are delivered in this order:
+For monochrome outline glyphs, the path callbacks are delivered inside [`BeginGlyph(...)`](xref:SixLabors.Fonts.Rendering.IGlyphRenderer.BeginGlyph*) / [`EndGlyph()`](xref:SixLabors.Fonts.Rendering.IGlyphRenderer.EndGlyph*):
 
 1. `BeginText(...)`
 2. `BeginGlyph(...)`
-3. `BeginLayer(...)`
-4. `BeginFigure()`, `MoveTo(...)`, `LineTo(...)`, `QuadraticBezierTo(...)`, `CubicBezierTo(...)`, `ArcTo(...)`, `EndFigure()`
-5. `EndLayer()`
-6. `EndGlyph()`
-7. `SetDecoration(...)` for any decorations requested by `EnabledDecorations()`
-8. `EndText()`
+3. `BeginFigure()`, `MoveTo(...)`, `LineTo(...)`, `QuadraticBezierTo(...)`, `CubicBezierTo(...)`, `ArcTo(...)`, `EndFigure()`
+4. `EndGlyph()`
+5. `SetDecoration(...)` for any decorations requested by `EnabledDecorations()`
+6. `EndText()`
 
-`BeginGlyph(...)` receives `GlyphRendererParameters`, which identify the glyph instance being rendered, including the glyph ID, the glyph's `CodePoint` value, font style, point size, DPI, layout mode, and active `TextRun`. Return `false` from `BeginGlyph(...)` if you want to skip rendering that glyph.
+Painted color glyphs add [`BeginLayer(...)`](xref:SixLabors.Fonts.Rendering.IGlyphRenderer.BeginLayer*) / [`EndLayer()`](xref:SixLabors.Fonts.Rendering.IGlyphRenderer.EndLayer*) around each painted layer between [`BeginGlyph(...)`](xref:SixLabors.Fonts.Rendering.IGlyphRenderer.BeginGlyph*) and [`EndGlyph()`](xref:SixLabors.Fonts.Rendering.IGlyphRenderer.EndGlyph*).
+
+[`BeginGlyph(...)`](xref:SixLabors.Fonts.Rendering.IGlyphRenderer.BeginGlyph*) receives [`GlyphRendererParameters`](xref:SixLabors.Fonts.Rendering.GlyphRendererParameters), which identify the glyph instance being rendered, including the glyph ID, the glyph's [`CodePoint`](xref:SixLabors.Fonts.Unicode.CodePoint) value, font style, point size, DPI, layout mode, and active [`TextRun`](xref:SixLabors.Fonts.TextRun). Return `false` from `BeginGlyph(...)` if you want to skip rendering that glyph.
 
 ### A minimal renderer
 
@@ -121,21 +121,21 @@ Replace `"Segoe UI"` with any installed family that exists on your machine.
 
 ### Layers, paints, and color fonts
 
-`BeginLayer(...)` is where Fonts communicates how the current glyph layer should be filled:
+[`BeginLayer(...)`](xref:SixLabors.Fonts.Rendering.IGlyphRenderer.BeginLayer*) is where Fonts communicates how the current glyph layer should be filled:
 
-- `paint` may be `null` for outline-only content
-- `SolidPaint` represents a single color
-- `LinearGradientPaint`, `RadialGradientPaint`, and `SweepGradientPaint` are used for richer color-font layers
+- `paint` may be `null` when a painted layer does not specify paint information
+- [`SolidPaint`](xref:SixLabors.Fonts.Rendering.SolidPaint) represents a single color
+- [`LinearGradientPaint`](xref:SixLabors.Fonts.Rendering.LinearGradientPaint), [`RadialGradientPaint`](xref:SixLabors.Fonts.Rendering.RadialGradientPaint), and [`SweepGradientPaint`](xref:SixLabors.Fonts.Rendering.SweepGradientPaint) are used for richer color-font layers
 - `fillRule` tells you how the path should be filled
 - `clipBounds` provides an optional clip quad for the layer
 
-If your renderer only supports monochrome output, you can ignore `paint` and render every layer with your own brush. If you want color-font output, honor both `ColorFontSupport` in `TextOptions` and the `Paint` information delivered to `BeginLayer(...)`.
+If your renderer only supports monochrome output, you can ignore `paint` when a painted layer is delivered and fill that layer with your own brush. If you want color-font output, honor both [`ColorFontSupport`](xref:SixLabors.Fonts.TextOptions.ColorFontSupport) in [`TextOptions`](xref:SixLabors.Fonts.TextOptions) and the [`Paint`](xref:SixLabors.Fonts.Rendering.Paint) information delivered to [`BeginLayer(...)`](xref:SixLabors.Fonts.Rendering.IGlyphRenderer.BeginLayer*).
 
 See [Color Fonts](colorfonts.md) for a fuller guide to `ColorFontSupport`, painted glyphs, and the different color-font technologies that Fonts can surface.
 
 ### Decorations
 
-Decorations are opt-in. Return the decorations you care about from `EnabledDecorations()`, and Fonts will call `SetDecoration(...)` after the glyph geometry has been emitted.
+Decorations are opt-in. Return the decorations you care about from [`EnabledDecorations()`](xref:SixLabors.Fonts.Rendering.IGlyphRenderer.EnabledDecorations*) and Fonts will call [`SetDecoration(...)`](xref:SixLabors.Fonts.Rendering.IGlyphRenderer.SetDecoration*) after the glyph geometry has been emitted.
 
 ```csharp
 public TextDecorations EnabledDecorations()

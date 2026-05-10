@@ -1,6 +1,6 @@
 # List System Fonts and Resolve by Culture
 
-This recipe is useful when you want a quick picture of what the current machine can actually provide through `SystemFonts`, whether for diagnostics, UI pickers, or culture-aware name resolution.
+This recipe is useful when you want a quick picture of what the current machine can actually provide through [`SystemFonts`](xref:SixLabors.Fonts.SystemFonts), whether for diagnostics, UI pickers, or culture-aware name resolution.
 
 ### List installed families
 

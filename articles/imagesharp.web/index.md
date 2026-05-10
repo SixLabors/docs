@@ -1,6 +1,6 @@
 # ImageSharp.Web
 
-ImageSharp.Web is Six Labors' ASP.NET Core image middleware for on-the-fly processing and caching. It sits in front of one or more image providers, parses URL commands, runs the matching ImageSharp processors, and stores the result so repeated requests are inexpensive after the first hit.
+ImageSharp.Web is Six Labors' high-performance ASP.NET Core image middleware for on-the-fly processing and caching. It sits in front of one or more image providers, parses URL commands, runs the matching ImageSharp processors, and stores the result so repeated requests are inexpensive after the first hit.
 
 The current package targets .NET 8 and is built on top of [ImageSharp](../imagesharp/index.md). The middleware is intentionally modular: you can change how commands are parsed, where source images come from, how cache keys are built, where processed images are stored, and whether image requests must be signed.
 

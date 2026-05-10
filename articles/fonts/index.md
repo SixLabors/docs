@@ -1,7 +1,7 @@
 # Introduction
 
 ### What is Fonts?
-Fonts is the part of the Six Labors stack that handles font loading, text measurement, layout, shaping, and custom text rendering.
+Fonts is the high-performance part of the Six Labors stack that handles font loading, text measurement, layout, shaping, and custom text rendering.
 
 If you are new to the library, the easiest way to think about it is in layers: load families, create concrete `Font` instances, then measure or render text with `TextOptions`. The rest of this section is organized around that path so you can start simple and move into shaping, Unicode, fallback, and custom rendering only when you need them.
 
@@ -57,6 +57,9 @@ If you are new to Fonts, start with [Loading Fonts and Collections](gettingstart
 - [Font Metadata and Inspection](fontmetadata.md)
 - [Font Metrics](fontmetrics.md)
 - [Measuring Text](measuringtext.md)
+- [Prepared Text with TextBlock](textblock.md)
+- [Hit Testing and Caret Movement](texthittesting.md)
+- [Selection and Bidi Drag](caretsandselection.md)
 - [Text Layout and Options](textlayout.md)
 - [OpenType Features](opentypefeatures.md)
 - [Hinting and Shaping](hintingandshaping.md)

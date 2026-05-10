@@ -4,7 +4,7 @@ Boolean operations combine two polygons. Normalization is different: it cleans u
 
 That makes [`PolygonClipper.Normalize(...)`](xref:SixLabors.PolygonClipper.PolygonClipper.Normalize*) the right tool when your input geometry is already yours, but its contours are messy enough that you want a cleaner region description before export, rendering, or further processing.
 
-## When to Use `Normalize(...)`
+## When to Use [`Normalize(...)`](xref:SixLabors.PolygonClipper.PolygonClipper.Normalize*)
 
 Normalization is useful when:
 
@@ -44,7 +44,7 @@ Normalization is a separate pipeline from the two-input boolean operations. In P
 
 ## Normalization Is Not Required for Every Workflow
 
-You do not need to call `Normalize(...)` before every boolean operation. The boolean APIs already process complex polygon inputs.
+You do not need to call [`Normalize(...)`](xref:SixLabors.PolygonClipper.PolygonClipper.Normalize*) before every boolean operation. The boolean APIs already process complex polygon inputs.
 
 Reach for normalization when your goal is specifically:
 

@@ -13,7 +13,7 @@ For each processed request, the middleware:
 
 ## Default Physical Cache
 
-[`PhysicalFileSystemCache`](xref:SixLabors.ImageSharp.Web.Caching.PhysicalFileSystemCache) is the default backend registered by `AddImageSharp()`.
+[`PhysicalFileSystemCache`](xref:SixLabors.ImageSharp.Web.Caching.PhysicalFileSystemCache) is the default backend registered by [`AddImageSharp()`](xref:SixLabors.ImageSharp.Web.ServiceCollectionExtensions.AddImageSharp*).
 
 - It stores cached files under the web root by default.
 - [`PhysicalFileSystemCacheOptions.CacheFolder`](xref:SixLabors.ImageSharp.Web.Caching.PhysicalFileSystemCacheOptions.CacheFolder) defaults to `is-cache`.
@@ -32,7 +32,7 @@ builder.Services.AddImageSharp()
     });
 ```
 
-If your app does not define a web root, set `CacheRootPath` explicitly. Relative paths are resolved against the application content root.
+If your app does not define a web root, set [`CacheRootPath`](xref:SixLabors.ImageSharp.Web.Caching.PhysicalFileSystemCacheOptions.CacheRootPath) explicitly. Relative paths are resolved against the application content root.
 
 ## Browser Lifetime Versus Backend Lifetime
 
@@ -51,7 +51,7 @@ By default, ImageSharp.Web uses:
 - [`SHA256CacheHash`](xref:SixLabors.ImageSharp.Web.Caching.SHA256CacheHash) to hash that key into the stored filename.
 - [`ImageSharpMiddlewareOptions.CacheHashLength`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.CacheHashLength) to control how many hash characters are kept.
 
-If you need cache entries to vary by host or some other request detail, swap the key implementation:
+If you need cache entries to vary by host or some other request detail, swap the key implementation with [`SetCacheKey<T>()`](xref:SixLabors.ImageSharp.Web.ImageSharpBuilderExtensions.SetCacheKey*) or [`SetCacheHash<T>()`](xref:SixLabors.ImageSharp.Web.ImageSharpBuilderExtensions.SetCacheHash*):
 
 ```csharp
 using SixLabors.ImageSharp.Web;
@@ -92,7 +92,7 @@ Install the Azure provider package:
 dotnet add package SixLabors.ImageSharp.Web.Providers.Azure
 ```
 
-Then replace the default cache backend:
+Then replace the default cache backend with [`SetCache<T>()`](xref:SixLabors.ImageSharp.Web.ImageSharpBuilderExtensions.SetCache*):
 
 ```csharp
 using Azure.Storage.Blobs.Models;
@@ -121,7 +121,7 @@ Install the AWS provider package:
 dotnet add package SixLabors.ImageSharp.Web.Providers.AWS
 ```
 
-Then replace the default cache backend:
+Then replace the default cache backend with [`SetCache<T>()`](xref:SixLabors.ImageSharp.Web.ImageSharpBuilderExtensions.SetCache*):
 
 ```csharp
 using Amazon.S3;

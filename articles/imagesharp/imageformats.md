@@ -50,7 +50,7 @@ No single format is best everywhere. The right choice depends on whether your pr
 
 [`Image<TPixel>`](xref:SixLabors.ImageSharp.Image`1) represents decoded pixel data. Once an image is loaded into memory, it is no longer tied to a specific file format unless you explicitly inspect or preserve that information.
 
-ImageSharp can detect the encoded format of a source before loading it:
+ImageSharp can detect the encoded format of a source before loading it with [`Image.DetectFormat()`](xref:SixLabors.ImageSharp.Image.DetectFormat*):
 
 ```csharp
 using SixLabors.ImageSharp;
@@ -80,7 +80,7 @@ if (image.Metadata.DecodedImageFormat is not null)
 }
 ```
 
-When you save by path, `image.Save("output.jpg")` or `image.Save("output.png")` selects the encoder from the destination file extension.
+When you save by path, [`image.Save("output.jpg")`](xref:SixLabors.ImageSharp.ImageExtensions.Save*) or `image.Save("output.png")` selects the encoder from the destination file extension.
 
 You can also choose a format explicitly by passing an encoder or by using the `SaveAs...()` helpers.
 
@@ -101,22 +101,22 @@ image.Save("output.png", new PngEncoder());
 
 ImageSharp also provides format-specific helpers:
 
-- `image.SaveAsBmp()` (shortcut for `image.Save(new BmpEncoder())`)
-- `image.SaveAsCur()` (shortcut for `image.Save(new CurEncoder())`)
-- `image.SaveAsExr()` (shortcut for `image.Save(new ExrEncoder())`)
-- `image.SaveAsGif()` (shortcut for `image.Save(new GifEncoder())`)
-- `image.SaveAsIco()` (shortcut for `image.Save(new IcoEncoder())`)
-- `image.SaveAsJpeg()` (shortcut for `image.Save(new JpegEncoder())`)
-- `image.SaveAsPbm()` (shortcut for `image.Save(new PbmEncoder())`)
-- `image.SaveAsPng()` (shortcut for `image.Save(new PngEncoder())`)
-- `image.SaveAsQoi()` (shortcut for `image.Save(new QoiEncoder())`)
-- `image.SaveAsTga()` (shortcut for `image.Save(new TgaEncoder())`)
-- `image.SaveAsTiff()` (shortcut for `image.Save(new TiffEncoder())`)
-- `image.SaveAsWebp()` (shortcut for `image.Save(new WebpEncoder())`)
+- `image.SaveAsBmp()` uses [`BmpEncoder`](xref:SixLabors.ImageSharp.Formats.Bmp.BmpEncoder).
+- `image.SaveAsCur()` uses [`CurEncoder`](xref:SixLabors.ImageSharp.Formats.Cur.CurEncoder).
+- `image.SaveAsExr()` uses [`ExrEncoder`](xref:SixLabors.ImageSharp.Formats.Exr.ExrEncoder).
+- `image.SaveAsGif()` uses [`GifEncoder`](xref:SixLabors.ImageSharp.Formats.Gif.GifEncoder).
+- `image.SaveAsIco()` uses [`IcoEncoder`](xref:SixLabors.ImageSharp.Formats.Ico.IcoEncoder).
+- `image.SaveAsJpeg()` uses [`JpegEncoder`](xref:SixLabors.ImageSharp.Formats.Jpeg.JpegEncoder).
+- `image.SaveAsPbm()` uses [`PbmEncoder`](xref:SixLabors.ImageSharp.Formats.Pbm.PbmEncoder).
+- `image.SaveAsPng()` uses [`PngEncoder`](xref:SixLabors.ImageSharp.Formats.Png.PngEncoder).
+- `image.SaveAsQoi()` uses [`QoiEncoder`](xref:SixLabors.ImageSharp.Formats.Qoi.QoiEncoder).
+- `image.SaveAsTga()` uses [`TgaEncoder`](xref:SixLabors.ImageSharp.Formats.Tga.TgaEncoder).
+- `image.SaveAsTiff()` uses [`TiffEncoder`](xref:SixLabors.ImageSharp.Formats.Tiff.TiffEncoder).
+- `image.SaveAsWebp()` uses [`WebpEncoder`](xref:SixLabors.ImageSharp.Formats.Webp.WebpEncoder).
 
 ## General Decoder Options
 
-Use [`DecoderOptions`](xref:SixLabors.ImageSharp.Formats.DecoderOptions) with the general `Load()` APIs when you want to control metadata handling, frame limits, or decode-to-size behavior:
+Use [`DecoderOptions`](xref:SixLabors.ImageSharp.Formats.DecoderOptions) with the general [`Load()`](xref:SixLabors.ImageSharp.Image.Load*) APIs when you want to control metadata handling, frame limits, or decode-to-size behavior:
 
 ```csharp
 using SixLabors.ImageSharp;
@@ -138,10 +138,10 @@ Format-specific decoder option types also exist for specialized scenarios such a
 
 Several formats share useful option sets through common encoder base types:
 
-- [`ImageEncoder`](xref:SixLabors.ImageSharp.Formats.ImageEncoder) exposes `SkipMetadata`.
-- [`AlphaAwareImageEncoder`](xref:SixLabors.ImageSharp.Formats.AlphaAwareImageEncoder) adds `TransparentColorMode`.
-- [`QuantizingImageEncoder`](xref:SixLabors.ImageSharp.Formats.QuantizingImageEncoder) adds `Quantizer` and `PixelSamplingStrategy`.
-- [`AnimatedImageEncoder`](xref:SixLabors.ImageSharp.Formats.AnimatedImageEncoder) adds `RepeatCount`, `BackgroundColor`, and `AnimateRootFrame`.
+- [`ImageEncoder`](xref:SixLabors.ImageSharp.Formats.ImageEncoder) exposes [`SkipMetadata`](xref:SixLabors.ImageSharp.Formats.ImageEncoder.SkipMetadata).
+- [`AlphaAwareImageEncoder`](xref:SixLabors.ImageSharp.Formats.AlphaAwareImageEncoder) adds [`TransparentColorMode`](xref:SixLabors.ImageSharp.Formats.AlphaAwareImageEncoder.TransparentColorMode).
+- [`QuantizingImageEncoder`](xref:SixLabors.ImageSharp.Formats.QuantizingImageEncoder) adds [`Quantizer`](xref:SixLabors.ImageSharp.Formats.QuantizingImageEncoder.Quantizer) and [`PixelSamplingStrategy`](xref:SixLabors.ImageSharp.Formats.QuantizingImageEncoder.PixelSamplingStrategy).
+- [`AnimatedImageEncoder`](xref:SixLabors.ImageSharp.Formats.AnimatedImageEncoder) adds [`RepeatCount`](xref:SixLabors.ImageSharp.Formats.AnimatedImageEncoder.RepeatCount), [`BackgroundColor`](xref:SixLabors.ImageSharp.Formats.AnimatedImageEncoder.BackgroundColor), and [`AnimateRootFrame`](xref:SixLabors.ImageSharp.Formats.AnimatedImageEncoder.AnimateRootFrame).
 
 Those inherited options are especially useful when working with GIF, APNG, and animated WebP.
 For a format-agnostic guide to palettes and dithered output, see [Quantization, Palettes, and Dithering](quantization.md).

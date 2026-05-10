@@ -6,7 +6,7 @@ That makes it useful both for standalone geometry workflows and for renderers th
 
 ## Use the Static Entry Point
 
-Most callers should use the static method:
+Most callers should use the static [`PolygonStroker.Stroke(...)`](xref:SixLabors.PolygonClipper.PolygonStroker.Stroke*) method:
 
 ```csharp
 using SixLabors.PolygonClipper;
@@ -45,9 +45,7 @@ StrokeOptions options = new()
 {
     LineJoin = LineJoin.Round,
     LineCap = LineCap.Round,
-    InnerJoin = InnerJoin.Round,
     MiterLimit = 4,
-    InnerMiterLimit = 1.01,
     ArcDetailScale = 1,
     NormalizeOutput = true
 };
@@ -57,12 +55,11 @@ Polygon outline = PolygonStroker.Stroke(source, 12, options);
 
 The main knobs are:
 
-- `LineJoin` for outer corners;
-- `LineCap` for open-path ends;
-- `InnerJoin` for sharp interior turns;
-- `MiterLimit` and `InnerMiterLimit` for clamping long miters;
-- `ArcDetailScale` for the smoothness-versus-vertex-count tradeoff on round joins and caps;
-- `NormalizeOutput` when you want overlaps and self-intersections in the emitted stroke geometry resolved before returning.
+- [`LineJoin`](xref:SixLabors.PolygonClipper.StrokeOptions.LineJoin) for outer corners;
+- [`LineCap`](xref:SixLabors.PolygonClipper.StrokeOptions.LineCap) for open-path ends;
+- [`MiterLimit`](xref:SixLabors.PolygonClipper.StrokeOptions.MiterLimit) for clamping long outer miters;
+- [`ArcDetailScale`](xref:SixLabors.PolygonClipper.StrokeOptions.ArcDetailScale) for the smoothness-versus-vertex-count tradeoff on round joins and caps;
+- [`NormalizeOutput`](xref:SixLabors.PolygonClipper.StrokeOptions.NormalizeOutput) when you want overlaps and self-intersections in the emitted stroke geometry resolved before returning.
 
 `NormalizeOutput` defaults to `false` for throughput. When you leave it off, render the returned geometry with a non-zero winding fill rule.
 
@@ -89,4 +86,4 @@ Negative widths are supported for advanced scenarios. They flip the emitted side
 
 ## Used by ImageSharp.Drawing
 
-ImageSharp.Drawing also uses PolygonClipper for stroke geometry generation. Its higher-level stroke options are mapped down to PolygonClipper's `LineJoin`, `LineCap`, `InnerJoin`, miter, and normalization settings before outline polygons are generated.
+ImageSharp.Drawing also uses PolygonClipper for stroke geometry generation. Its higher-level stroke options are mapped down to PolygonClipper's `LineJoin`, `LineCap`, miter, and normalization settings before outline polygons are generated.

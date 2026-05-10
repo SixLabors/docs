@@ -5,7 +5,7 @@ Fitting text into a fixed width is one of those jobs that sounds simple until yo
 For single-line text, the usual pattern is:
 
 1. start with a candidate font size
-2. measure with `TextMeasurer.MeasureAdvance(...)`
+2. measure with [`TextMeasurer.MeasureAdvance(...)`](xref:SixLabors.Fonts.TextMeasurer.MeasureAdvance*)
 3. reduce the size until the width fits
 
 ```csharp

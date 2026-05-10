@@ -50,7 +50,7 @@ public sealed class SepiaWebProcessor : IImageWebProcessor
 }
 ```
 
-Register it with the builder:
+Register it with [`AddProcessor<T>()`](xref:SixLabors.ImageSharp.Web.ImageSharpBuilderExtensions.AddProcessor*):
 
 ```csharp
 builder.Services.AddImageSharp()
@@ -61,7 +61,7 @@ Processor order is driven by the order of the recognized command keys in the req
 
 ## Custom Command Converters
 
-The built-in converters already cover integral types, floating-point values, booleans, strings, arrays, lists, colors, and enums. If your processor wants a custom command type, implement `ICommandConverter<T>`, register it with `AddConverter<TConverter>()`, then parse it inside the processor with `CommandParser.ParseValue<T>()`.
+The built-in converters already cover integral types, floating-point values, booleans, strings, arrays, lists, colors, and enums. If your processor wants a custom command type, implement [`ICommandConverter<T>`](xref:SixLabors.ImageSharp.Web.Commands.Converters.ICommandConverter`1), register it with [`AddConverter<TConverter>()`](xref:SixLabors.ImageSharp.Web.ImageSharpBuilderExtensions.AddConverter*), then parse it inside the processor with [`CommandParser.ParseValue<T>()`](xref:SixLabors.ImageSharp.Web.Commands.CommandParser.ParseValue*).
 
 This is the right place to centralize parsing rules for custom value syntaxes instead of repeating string parsing inside each processor.
 
@@ -71,9 +71,9 @@ Implement a custom provider when your source image is not on disk, in Azure Blob
 
 - open the source stream;
 - report source last-write and cache metadata;
-- decide whether requests are `CommandOnly` or always handled.
+- decide whether requests use [`ProcessingBehavior.CommandOnly`](xref:SixLabors.ImageSharp.Web.Providers.ProcessingBehavior.CommandOnly) or are always handled.
 
-When the source maps naturally to an `IFileProvider`, [`FileProviderImageProvider`](xref:SixLabors.ImageSharp.Web.Providers.FileProviderImageProvider) is the easiest base class.
+When the source maps naturally to an [`IFileProvider`](xref:Microsoft.Extensions.FileProviders.IFileProvider), [`FileProviderImageProvider`](xref:SixLabors.ImageSharp.Web.Providers.FileProviderImageProvider) is the easiest base class.
 
 Implement a custom cache when processed images should live somewhere other than the built-in physical filesystem cache or the cloud caches. A cache receives the hashed key, encoded stream, and [`ImageCacheMetadata`](xref:SixLabors.ImageSharp.Web.ImageCacheMetadata), then later returns an [`IImageCacheResolver`](xref:SixLabors.ImageSharp.Web.Resolvers.IImageCacheResolver) that can reopen the cached entry.
 
@@ -92,7 +92,7 @@ Your parser returns an ordered [`CommandCollection`](xref:SixLabors.ImageSharp.W
 
 ## Extend Razor Integration
 
-If you add custom processors and want equally natural Razor markup, derive from [`ImageTagHelper`](xref:SixLabors.ImageSharp.Web.TagHelpers.ImageTagHelper) and override `AddProcessingCommands(...)` to write your custom command keys into the outgoing URL.
+If you add custom processors and want equally natural Razor markup, derive from [`ImageTagHelper`](xref:SixLabors.ImageSharp.Web.TagHelpers.ImageTagHelper) and override [`AddProcessingCommands(...)`](xref:SixLabors.ImageSharp.Web.TagHelpers.ImageTagHelper.AddProcessingCommands*) to write your custom command keys into the outgoing URL.
 
 That lets your Razor layer stay strongly typed instead of falling back to raw query-string fragments.
 

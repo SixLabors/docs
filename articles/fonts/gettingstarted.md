@@ -4,14 +4,14 @@ The quickest way to get comfortable with Fonts is to separate three ideas: where
 
 The main types you will meet first are:
 
-- `FontCollection` stores the families you load.
-- `FontFamily` represents a family and the styles available for it.
-- `Font` represents a concrete instance of a family at a given point size, style, and optional variation settings.
-- `SystemFonts` gives you access to the fonts installed on the current machine.
+- [`FontCollection`](xref:SixLabors.Fonts.FontCollection) stores the families you load.
+- [`FontFamily`](xref:SixLabors.Fonts.FontFamily) represents a family and the styles available for it.
+- [`Font`](xref:SixLabors.Fonts.Font) represents a concrete instance of a family at a given point size, style, and optional variation settings.
+- [`SystemFonts`](xref:SixLabors.Fonts.SystemFonts) gives you access to the fonts installed on the current machine.
 
 ### Load a single font
 
-Use `FontCollection.Add(...)` when you want to register an individual font file such as a `.ttf`, `.otf`, `.woff`, or `.woff2`.
+Use [`FontCollection.Add(...)`](xref:SixLabors.Fonts.FontCollection.Add*) when you want to register an individual font file such as a `.ttf`, `.otf`, `.woff`, or `.woff2`.
 
 ```csharp
 using SixLabors.Fonts;
@@ -21,7 +21,7 @@ FontFamily family = collection.Add("fonts/SourceSans3-Regular.ttf");
 Font font = family.CreateFont(16, FontStyle.Regular);
 ```
 
-`Font.Size` is expressed in points. Measurement and rendering are then converted to pixels using `TextOptions.Dpi`.
+[`Font.Size`](xref:SixLabors.Fonts.Font.Size) is expressed in points. Measurement and rendering are then converted to pixels using [`TextOptions.Dpi`](xref:SixLabors.Fonts.TextOptions.Dpi).
 
 ### Load from a stream and inspect metadata
 
@@ -40,11 +40,11 @@ string familyName = description.FontFamilyInvariantCulture;
 Font font = family.CreateFont(16);
 ```
 
-If you only need metadata, use `FontDescription.LoadDescription(...)` or `FontDescription.LoadFontCollectionDescriptions(...)` instead of adding the font to a collection. See [Font Metadata and Inspection](fontmetadata.md) for more detail.
+If you only need metadata, use [`FontDescription.LoadDescription(...)`](xref:SixLabors.Fonts.FontDescription.LoadDescription*) or [`FontDescription.LoadFontCollectionDescriptions(...)`](xref:SixLabors.Fonts.FontDescription.LoadFontCollectionDescriptions*) instead of adding the font to a collection. See [Font Metadata and Inspection](fontmetadata.md) for more detail.
 
 ### Load a font collection
 
-Use `AddCollection(...)` for files that contain multiple faces, such as `.ttc` collections.
+Use [`AddCollection(...)`](xref:SixLabors.Fonts.FontCollection.AddCollection*) for files that contain multiple faces, such as `.ttc` collections.
 
 ```csharp
 using SixLabors.Fonts;
@@ -55,7 +55,7 @@ var families = collection.AddCollection("fonts/NotoSansCJK-Regular.ttc");
 
 ### Resolve families by name
 
-Once fonts are loaded, resolve a family with `Get(...)` or `TryGet(...)`.
+Once fonts are loaded, resolve a family with [`Get(...)`](xref:SixLabors.Fonts.FontCollection.Get*) or [`TryGet(...)`](xref:SixLabors.Fonts.FontCollection.TryGet*).
 
 ```csharp
 using SixLabors.Fonts;
@@ -69,16 +69,16 @@ if (collection.TryGet("Source Sans 3", out FontFamily textFamily) &&
 {
     TextOptions options = new(textFamily.CreateFont(16))
     {
-        FallbackFontFamilies = new[] { emojiFamily }
+        FallbackFontFamilies = [emojiFamily]
     };
 }
 ```
 
-`FallbackFontFamilies` is a list of `FontFamily` instances, not `Font` instances. Fonts are created after the fallback family is selected for a run.
+[`FallbackFontFamilies`](xref:SixLabors.Fonts.TextOptions.FallbackFontFamilies) is a list of [`FontFamily`](xref:SixLabors.Fonts.FontFamily) instances, not [`Font`](xref:SixLabors.Fonts.Font) instances. Fonts are created after the fallback family is selected for a run.
 
 ### Use system fonts
 
-If you want to work with fonts installed on the current machine, use `SystemFonts`.
+If you want to work with fonts installed on the current machine, use [`SystemFonts`](xref:SixLabors.Fonts.SystemFonts).
 
 ```csharp
 using SixLabors.Fonts;
@@ -99,13 +99,13 @@ collection.AddSystemFonts();
 collection.Add("fonts/BrandSans-Regular.ttf");
 ```
 
-When you need localized family-name lookup, use `AddWithCulture(...)`, `GetByCulture(...)`, or `TryGetByCulture(...)`.
+When you need localized family-name lookup, use [`AddWithCulture(...)`](xref:SixLabors.Fonts.FontCollection.AddWithCulture*), [`GetByCulture(...)`](xref:SixLabors.Fonts.FontCollection.GetByCulture*), or [`TryGetByCulture(...)`](xref:SixLabors.Fonts.FontCollection.TryGetByCulture*).
 
 See [System Fonts](systemfonts.md) for the fuller system-font API surface, including enumeration, culture-aware lookup, and `SearchDirectories`.
 
 ### Create variable-font instances
 
-Variable fonts are exposed through `FontVariation` and `KnownVariationAxes`.
+Variable fonts are exposed through [`FontVariation`](xref:SixLabors.Fonts.FontVariation) and [`KnownVariationAxes`](xref:SixLabors.Fonts.KnownVariationAxes).
 
 ```csharp
 using SixLabors.Fonts;
@@ -119,7 +119,7 @@ Font font = family.CreateFont(
     new FontVariation(KnownVariationAxes.OpticalSize, 16));
 ```
 
-The active variation values become part of the `Font` instance, so the same family can be reused to create multiple design-space instances.
+The active variation values become part of the [`Font`](xref:SixLabors.Fonts.Font) instance, so the same family can be reused to create multiple design-space instances.
 
 ### Next steps
 

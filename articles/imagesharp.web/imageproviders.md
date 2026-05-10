@@ -1,12 +1,12 @@
 # Image Providers
 
-Image providers answer one question: where does the source image come from? Every incoming request is offered to the registered providers in order, and the first provider whose `Match` function returns `true` owns the request.
+Image providers answer one question: where does the source image come from? Every incoming request is offered to the registered providers in order, and the first provider whose [`Match`](xref:SixLabors.ImageSharp.Web.Providers.IImageProvider.Match) function returns `true` owns the request.
 
-That means provider order matters. If two providers can both match the same path, put the more specific one first or narrow its `Match` predicate so the wrong provider does not claim the request.
+That means provider order matters. If two providers can both match the same path, put the more specific one first or narrow its [`Match`](xref:SixLabors.ImageSharp.Web.Providers.IImageProvider.Match) predicate so the wrong provider does not claim the request.
 
 ## Default Physical Filesystem Provider
 
-[`PhysicalFileSystemProvider`](xref:SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider) is the default source provider registered by `AddImageSharp()`.
+[`PhysicalFileSystemProvider`](xref:SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider) is the default source provider registered by [`AddImageSharp()`](xref:SixLabors.ImageSharp.Web.ServiceCollectionExtensions.AddImageSharp*).
 
 - It resolves images from the web root by default.
 - [`PhysicalFileSystemProviderOptions.ProviderRootPath`](xref:SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProviderOptions.ProviderRootPath) can be `null`, absolute, or relative to the application content root.
@@ -30,11 +30,11 @@ If you want truly command-only processing for local files, changing `ProcessingB
 
 ## Provider Matching and Ordering
 
-ImageSharp.Web stops at the first provider whose `Match` function returns `true`. It does not continue searching if that provider later decides the request is invalid, so keep these rules in mind:
+ImageSharp.Web stops at the first provider whose [`Match`](xref:SixLabors.ImageSharp.Web.Providers.IImageProvider.Match) function returns `true`. It does not continue searching if that provider later decides the request is invalid, so keep these rules in mind:
 
 - Register more specific providers before more general ones.
-- Keep `Match` predicates mutually exclusive whenever possible.
-- Use `InsertProvider(...)` when provider precedence matters more than registration order.
+- Keep [`Match`](xref:SixLabors.ImageSharp.Web.Providers.IImageProvider.Match) predicates mutually exclusive whenever possible.
+- Use [`InsertProvider(...)`](xref:SixLabors.ImageSharp.Web.ImageSharpBuilderExtensions.InsertProvider*) when provider precedence matters more than registration order.
 
 Cloud providers in particular usually want a path prefix such as a container or bucket name so they can distinguish their requests cheaply.
 
@@ -114,8 +114,8 @@ If your public URL shape does not naturally include the bucket name, use URL rew
 
 Implement [`IImageProvider`](xref:SixLabors.ImageSharp.Web.Providers.IImageProvider) when you need a new source backend. Your provider is responsible for three things:
 
-- deciding whether it owns the request via `Match`;
-- deciding whether the request is valid via `IsValidRequest(...)`;
+- deciding whether it owns the request via [`Match`](xref:SixLabors.ImageSharp.Web.Providers.IImageProvider.Match);
+- deciding whether the request is valid via [`IsValidRequest(...)`](xref:SixLabors.ImageSharp.Web.Providers.IImageProvider.IsValidRequest*);
 - returning an [`IImageResolver`](xref:SixLabors.ImageSharp.Web.Resolvers.IImageResolver) that can open the source stream and report source metadata.
 
 If your source already fits an `IFileProvider`-style model, [`FileProviderImageProvider`](xref:SixLabors.ImageSharp.Web.Providers.FileProviderImageProvider) is the easiest base class to start from.

@@ -5,8 +5,8 @@ Text handling gets easier once you stop treating every `char` as a whole charact
 ### The text-unit levels
 
 - `char`: a single UTF-16 code unit in a .NET `string`
-- `CodePoint`: a Unicode scalar value, represented by <xref:SixLabors.Fonts.Unicode.CodePoint>
-- grapheme: a user-perceived text element, represented by a `ReadOnlySpan<char>` returned from `SpanGraphemeEnumerator`
+- [`CodePoint`](xref:SixLabors.Fonts.Unicode.CodePoint): a Unicode scalar value
+- grapheme: a user-perceived text element, represented by a `ReadOnlySpan<char>` returned from [`SpanGraphemeEnumerator`](xref:SixLabors.Fonts.Unicode.SpanGraphemeEnumerator)
 
 In everyday text, those levels often line up for simple ASCII. Once you move beyond that, they diverge quickly.
 
@@ -33,7 +33,7 @@ In strict Unicode terminology:
 
 That makes it the right unit when you want to talk about valid Unicode text values directly.
 
-Useful `CodePoint` members include:
+Useful [`CodePoint`](xref:SixLabors.Fonts.Unicode.CodePoint) members include:
 
 - `Value`
 - `Utf16SequenceLength`
@@ -43,7 +43,7 @@ Useful `CodePoint` members include:
 - `Plane`
 - `ReplacementChar`
 
-This is also the unit used by glyph-probing APIs such as `Font.TryGetGlyphs(...)`.
+This is also the unit used by glyph-probing APIs such as [`Font.TryGetGlyphs(...)`](xref:SixLabors.Fonts.Font.TryGetGlyphs*).
 
 ### What is a grapheme?
 
@@ -56,9 +56,9 @@ Examples:
 - many emoji sequences joined with zero-width joiners are one grapheme
 - a flag emoji made from two regional indicators is one grapheme
 
-Fonts exposes grapheme enumeration through `SpanGraphemeEnumerator`, which implements the Unicode grapheme cluster algorithm from UAX #29.
+Fonts exposes grapheme enumeration through [`SpanGraphemeEnumerator`](xref:SixLabors.Fonts.Unicode.SpanGraphemeEnumerator), which implements the Unicode grapheme cluster algorithm from UAX #29.
 
-This is why `TextRun.Start` and `TextRun.End` are grapheme indices rather than raw `char` indices.
+This is why [`TextRun.Start`](xref:SixLabors.Fonts.TextRun.Start) and [`TextRun.End`](xref:SixLabors.Fonts.TextRun.End) are grapheme indices rather than raw `char` indices.
 
 ### Enumerate `CodePoint` values
 
@@ -68,7 +68,9 @@ The Unicode enumeration helpers live in `SixLabors.Fonts.Unicode`.
 using System;
 using SixLabors.Fonts.Unicode;
 
-string text = "A\u0301 \U0001F600";
+// 'A' + combining acute accent (U+0301) renders as a single accented A grapheme,
+// followed by a space and the grinning-face emoji (U+1F600).
+string text = "Á 😀";
 
 foreach (CodePoint codePoint in text.AsSpan().EnumerateCodePoints())
 {
@@ -77,14 +79,16 @@ foreach (CodePoint codePoint in text.AsSpan().EnumerateCodePoints())
 }
 ```
 
-`EnumerateCodePoints()` returns a <xref:SixLabors.Fonts.Unicode.SpanCodePointEnumerator>. It yields `CodePoint` values, which means the enumeration surface is Unicode scalar values. Invalid UTF-16 sequences are surfaced as `CodePoint.ReplacementChar`.
+[`EnumerateCodePoints()`](xref:SixLabors.Fonts.Unicode.MemoryExtensions.EnumerateCodePoints*) returns a [`SpanCodePointEnumerator`](xref:SixLabors.Fonts.Unicode.SpanCodePointEnumerator). It yields [`CodePoint`](xref:SixLabors.Fonts.Unicode.CodePoint) values, which means the enumeration surface is Unicode scalar values. Invalid UTF-16 sequences are surfaced as [`CodePoint.ReplacementChar`](xref:SixLabors.Fonts.Unicode.CodePoint.ReplacementChar).
 
 Count helpers are also available:
 
 ```csharp
 using SixLabors.Fonts.Unicode;
 
-int count = "A\u0301 \U0001F600".GetCodePointCount();
+// 'A' + combining acute (U+0301), space, grinning-face emoji (U+1F600).
+// 4 code points: 'A', U+0301, ' ', U+1F600.
+int count = "Á 😀".GetCodePointCount();
 ```
 
 ### Enumerate graphemes
@@ -95,7 +99,8 @@ Use grapheme enumeration when you need units that better match what a reader see
 using System;
 using SixLabors.Fonts.Unicode;
 
-string text = "A\u0301 \U0001F600";
+// Same text as before, but graphemes group the accented A into one cluster.
+string text = "Á 😀";
 int index = 0;
 
 foreach (ReadOnlySpan<char> grapheme in text.AsSpan().EnumerateGraphemes())
@@ -104,15 +109,52 @@ foreach (ReadOnlySpan<char> grapheme in text.AsSpan().EnumerateGraphemes())
 }
 ```
 
-`EnumerateGraphemes()` returns a <xref:SixLabors.Fonts.Unicode.SpanGraphemeEnumerator>.
+[`EnumerateGraphemes()`](xref:SixLabors.Fonts.Unicode.MemoryExtensions.EnumerateGraphemes*) returns a [`SpanGraphemeEnumerator`](xref:SixLabors.Fonts.Unicode.SpanGraphemeEnumerator).
 
 Count helpers are available here too:
 
 ```csharp
 using SixLabors.Fonts.Unicode;
 
-int count = "A\u0301 \U0001F600".GetGraphemeCount();
+// 3 graphemes: the accented A, the space, and the emoji.
+int count = "Á 😀".GetGraphemeCount();
 ```
+
+### Enumerate word-boundary segments
+
+Use word enumeration when the surface needs to reason about whole words — caret movement that jumps a word at a time, double-click word selection, search-as-you-type tokenization. Word segmentation follows the Unicode Word Boundary Algorithm in UAX #29.
+
+```csharp
+using System;
+using SixLabors.Fonts.Unicode;
+
+string text = "Don't stop.";
+
+foreach (WordSegment word in text.AsSpan().EnumerateWordSegments())
+{
+    Console.WriteLine(
+        $"[{word.Utf16Offset}..{word.Utf16Offset + word.Utf16Length}] '{word.Span.ToString()}'");
+}
+```
+
+The output for the example above is:
+
+```text
+[0..5] 'Don't'
+[5..6] ' '
+[6..10] 'stop'
+[10..11] '.'
+```
+
+UAX #29 segments include separators — the space between `Don't` and `stop` is its own segment, and the trailing `.` is another. Higher-level editor commands can decide whether to stop on those segments or skip past them; the raw enumerator stays aligned with the standard.
+
+[`EnumerateWordSegments()`](xref:SixLabors.Fonts.Unicode.MemoryExtensions.EnumerateWordSegments*) returns a [`SpanWordEnumerator`](xref:SixLabors.Fonts.Unicode.SpanWordEnumerator). Each [`WordSegment`](xref:SixLabors.Fonts.Unicode.WordSegment) exposes:
+
+- `Span` — the UTF-16 slice of the segment.
+- `Utf16Offset` and `Utf16Length` — UTF-16 indices into the original text.
+- `CodePointOffset` and `CodePointCount` — code-point indices into the original text.
+
+This is the same Unicode word-boundary model used by [`TextMetrics.WordMetrics`](xref:SixLabors.Fonts.TextMetrics.WordMetrics), [`MoveCaret(CaretMovement.NextWord)`](xref:SixLabors.Fonts.TextMetrics.MoveCaret*), and [`GetWordMetrics(hit)`](xref:SixLabors.Fonts.TextMetrics.GetWordMetrics*). Use the enumerator when you need word boundaries against raw text without going through a full layout pass; use the metrics APIs when you need positioned word geometry as well. See [Hit Testing and Caret Movement](texthittesting.md) for the layout-aware side.
 
 ### Which unit should you use?
 
@@ -124,13 +166,13 @@ Use `char` when:
 Use `CodePoint` when:
 
 - you are inspecting Unicode scalar values
-- you are probing glyph availability with `TryGetGlyphs(...)`
+- you are probing glyph availability with [`TryGetGlyphs(...)`](xref:SixLabors.Fonts.Font.TryGetGlyphs*)
 - you care about Unicode values, planes, or encoded sequence lengths
 
 Use graphemes when:
 
 - you are slicing visible text ranges
-- you are working with `TextRun.Start` and `TextRun.End`
+- you are working with [`TextRun.Start`](xref:SixLabors.Fonts.TextRun.Start) and [`TextRun.End`](xref:SixLabors.Fonts.TextRun.End)
 - you want indices that align better with user-visible text elements
 
 ### Relation to layout

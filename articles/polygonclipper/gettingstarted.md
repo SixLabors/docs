@@ -44,12 +44,12 @@ You do not need to repeat the first vertex at the end of a contour for normal po
 
 Most applications should call the static methods:
 
-- `PolygonClipper.Intersection(...)`
-- `PolygonClipper.Union(...)`
-- `PolygonClipper.Difference(...)`
-- `PolygonClipper.Xor(...)`
-- `PolygonClipper.Normalize(...)`
-- `PolygonStroker.Stroke(...)`
+- [`PolygonClipper.Intersection(...)`](xref:SixLabors.PolygonClipper.PolygonClipper.Intersection*)
+- [`PolygonClipper.Union(...)`](xref:SixLabors.PolygonClipper.PolygonClipper.Union*)
+- [`PolygonClipper.Difference(...)`](xref:SixLabors.PolygonClipper.PolygonClipper.Difference*)
+- [`PolygonClipper.Xor(...)`](xref:SixLabors.PolygonClipper.PolygonClipper.Xor*)
+- [`PolygonClipper.Normalize(...)`](xref:SixLabors.PolygonClipper.PolygonClipper.Normalize*)
+- [`PolygonStroker.Stroke(...)`](xref:SixLabors.PolygonClipper.PolygonStroker.Stroke*)
 
 Those are the recommended entry points in the source and route work through internal reusable instances. The instance constructors are there for advanced manual flows, but they are not the usual starting point.
 

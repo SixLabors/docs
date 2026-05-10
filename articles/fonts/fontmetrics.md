@@ -1,8 +1,8 @@
 # Font Metrics
 
-`FontDescription` tells you what a face is called. `FontMetrics` tells you how that face behaves.
+[`FontDescription`](xref:SixLabors.Fonts.FontDescription) tells you what a face is called. [`FontMetrics`](xref:SixLabors.Fonts.FontMetrics) tells you how that face behaves.
 
-Once you know what a font is, the next question is usually how it behaves. `FontMetrics` is where you inspect the measurements and coverage data that explain line spacing, decoration placement, variation support, and glyph availability.
+Once you know what a font is, the next question is usually how it behaves. [`FontMetrics`](xref:SixLabors.Fonts.FontMetrics) is where you inspect the measurements and coverage data that explain line spacing, decoration placement, variation support, and glyph availability.
 
 ### How to get `FontMetrics`
 
@@ -38,15 +38,15 @@ if (family.TryGetMetrics(FontStyle.Regular, out FontMetrics? metrics))
 
 The core identity and scaling properties are:
 
-- `Description` for the face metadata
-- `UnitsPerEm` for the design-space resolution of the font
-- `ScaleFactor` for the face-level unit-to-point scaling used by glyph metrics
+- [`Description`](xref:SixLabors.Fonts.FontMetrics.Description) for the face metadata
+- [`UnitsPerEm`](xref:SixLabors.Fonts.FontMetrics.UnitsPerEm) for the design-space resolution of the font
+- [`ScaleFactor`](xref:SixLabors.Fonts.FontMetrics.ScaleFactor) for the face-level unit-to-point scaling used by glyph metrics
 
 `UnitsPerEm` is the important anchor for understanding almost every other metric on the typeface. Values like ascenders, underline positions, or glyph advances are stored in font units and should be interpreted relative to that em square.
 
 ### Horizontal and vertical metrics
 
-`FontMetrics` exposes both `HorizontalMetrics` and `VerticalMetrics`.
+[`FontMetrics`](xref:SixLabors.Fonts.FontMetrics) exposes both [`HorizontalMetrics`](xref:SixLabors.Fonts.FontMetrics.HorizontalMetrics) and [`VerticalMetrics`](xref:SixLabors.Fonts.FontMetrics.VerticalMetrics).
 
 Both headers provide the same core fields:
 
@@ -124,7 +124,7 @@ These values are expressed in font units, not pixels.
 
 ### Decoration and script-positioning metrics
 
-`FontMetrics` also exposes the face-level metrics that support decoration and typographic adjustments:
+[`FontMetrics`](xref:SixLabors.Fonts.FontMetrics) also exposes the face-level metrics that support decoration and typographic adjustments:
 
 - `UnderlinePosition`
 - `UnderlineThickness`
@@ -144,7 +144,7 @@ These are useful when you are building your own renderer, diagnostics, or typogr
 
 ### Variable-font support
 
-`FontMetrics.TryGetVariationAxes(...)` lets you inspect the variation axes that the resolved face supports.
+[`FontMetrics.TryGetVariationAxes(...)`](xref:SixLabors.Fonts.FontMetrics.TryGetVariationAxes*) lets you inspect the variation axes that the resolved face supports.
 
 ```csharp
 using System;
@@ -155,16 +155,16 @@ FontCollection collection = new();
 FontFamily family = collection.Add("fonts/RobotoFlex.ttf");
 Font font = family.CreateFont(16);
 
-if (font.FontMetrics.TryGetVariationAxes(out VariationAxis[]? axes))
+if (font.FontMetrics.TryGetVariationAxes(out ReadOnlyMemory<VariationAxis> axes))
 {
-    foreach (VariationAxis axis in axes)
+    foreach (VariationAxis axis in axes.Span)
     {
         Console.WriteLine($"{axis.Tag}: {axis.Min}..{axis.Max} (default {axis.Default})");
     }
 }
 ```
 
-Each `VariationAxis` gives you:
+Each [`VariationAxis`](xref:SixLabors.Fonts.Tables.AdvancedTypographic.Variations.VariationAxis) gives you:
 
 - `Name`
 - `Tag`
@@ -172,26 +172,26 @@ Each `VariationAxis` gives you:
 - `Max`
 - `Default`
 
-The registered tags in `KnownVariationAxes` such as `wght`, `wdth`, `opsz`, `slnt`, and `ital` are useful when you want to relate those exposed axes back to font creation with `FontVariation`.
+The registered tags in [`KnownVariationAxes`](xref:SixLabors.Fonts.KnownVariationAxes) such as `wght`, `wdth`, `opsz`, `slnt`, and `ital` are useful when you want to relate those exposed axes back to font creation with [`FontVariation`](xref:SixLabors.Fonts.FontVariation).
 
 ### Code-point coverage
 
-Use `GetAvailableCodePoints()` when you need to know which Unicode scalar values the face can map directly.
+Use [`GetAvailableCodePoints()`](xref:SixLabors.Fonts.FontMetrics.GetAvailableCodePoints*) when you need to know which Unicode scalar values the face can map directly.
 
 ```csharp
-using System.Collections.Generic;
+using System;
 using SixLabors.Fonts;
 using SixLabors.Fonts.Unicode;
 
 Font font = SystemFonts.CreateFont("Segoe UI", 16);
-IReadOnlyList<CodePoint> codePoints = font.FontMetrics.GetAvailableCodePoints();
+ReadOnlyMemory<CodePoint> codePoints = font.FontMetrics.GetAvailableCodePoints();
 ```
 
 This is useful for diagnostics, glyph coverage tooling, fallback decisions, and script-support inspection.
 
 ### Inspect glyph metrics directly
 
-If you need glyph-level inspection without going through full text layout, use `TryGetGlyphMetrics(...)`.
+If you need glyph-level inspection without going through full text layout, use [`TryGetGlyphMetrics(...)`](xref:SixLabors.Fonts.FontMetrics.TryGetGlyphMetrics*).
 
 ```csharp
 using SixLabors.Fonts;
@@ -205,7 +205,7 @@ if (font.FontMetrics.TryGetGlyphMetrics(
         TextDecorations.None,
         LayoutMode.HorizontalTopBottom,
         ColorFontSupport.None,
-        out GlyphMetrics? glyphMetrics))
+        out FontGlyphMetrics? glyphMetrics))
 {
     float width = glyphMetrics.Width;
     ushort advance = glyphMetrics.AdvanceWidth;
@@ -213,13 +213,13 @@ if (font.FontMetrics.TryGetGlyphMetrics(
 }
 ```
 
-This is the lower-level face inspection API behind the higher-level `Font.TryGetGlyphs(...)` helpers.
+This is the lower-level face inspection API behind the higher-level [`Font.TryGetGlyphs(...)`](xref:SixLabors.Fonts.Font.TryGetGlyphs*) helpers.
 
 ### When to use `FontMetrics` vs `FontDescription`
 
-Use `FontDescription` when you care about names and face identity.
+Use [`FontDescription`](xref:SixLabors.Fonts.FontDescription) when you care about names and face identity.
 
-Use `FontMetrics` when you care about:
+Use [`FontMetrics`](xref:SixLabors.Fonts.FontMetrics) when you care about:
 
 - line and em metrics
 - underline and strikeout placement

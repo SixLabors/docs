@@ -18,7 +18,7 @@ Fonts has comprehensive support for both, but the scope is different:
 | Input | Unicode text, script, direction, font selection, OpenType features | A concrete glyph outline, size, and DPI |
 | Output | The final glyph sequence and glyph positions | A grid-fitted outline for raster-oriented rendering |
 | Main goal | Correct text layout and glyph choice | Better small-size screen rendering |
-| Controlled by | `TextDirection`, `FeatureTags`, `KerningMode`, `Tracking`, `TextRuns`, `FallbackFontFamilies`, `LayoutMode` | `HintingMode` |
+| Controlled by | [`TextDirection`](xref:SixLabors.Fonts.TextOptions.TextDirection), [`FeatureTags`](xref:SixLabors.Fonts.TextOptions.FeatureTags), [`KerningMode`](xref:SixLabors.Fonts.TextOptions.KerningMode), [`Tracking`](xref:SixLabors.Fonts.TextOptions.Tracking), [`TextRuns`](xref:SixLabors.Fonts.TextOptions.TextRuns), [`FallbackFontFamilies`](xref:SixLabors.Fonts.TextOptions.FallbackFontFamilies), [`LayoutMode`](xref:SixLabors.Fonts.TextOptions.LayoutMode) | [`HintingMode`](xref:SixLabors.Fonts.TextOptions.HintingMode) |
 
 ### What shaping means
 
@@ -50,21 +50,21 @@ That shaping support includes:
 - kerning, ligatures, fractions, tabular figures, vertical alternates, and other OpenType feature-driven behaviors
 - font fallback and per-range font selection through `FallbackFontFamilies` and `TextRuns`
 
-This is why measurement and rendering stay aligned when you use the same `TextOptions` instance for both. Fonts measures shaped text, not a simplified pre-layout approximation.
+This is why measurement and rendering stay aligned when you use the same [`TextOptions`](xref:SixLabors.Fonts.TextOptions) instance for both. Fonts measures shaped text, not a simplified pre-layout approximation.
 
 ### What you control in shaping
 
 The main shaping controls are:
 
-- `TextDirection` to force left-to-right, right-to-left, or automatic bidi resolution
-- `LayoutMode` for horizontal and vertical layout behavior
-- `FeatureTags` to request additional OpenType features such as fractions or tabular figures
-- `KerningMode` to enable or disable font-provided kerning during shaping
-- `Tracking` to add uniform letter spacing after the font's own spacing behavior
-- `FallbackFontFamilies` when the main font does not cover every glyph you need
-- `TextRuns` when different text ranges need different fonts, attributes, or decorations
+- [`TextDirection`](xref:SixLabors.Fonts.TextOptions.TextDirection) to force left-to-right, right-to-left, or automatic bidi resolution
+- [`LayoutMode`](xref:SixLabors.Fonts.TextOptions.LayoutMode) for horizontal and vertical layout behavior
+- [`FeatureTags`](xref:SixLabors.Fonts.TextOptions.FeatureTags) to request additional OpenType features such as fractions or tabular figures
+- [`KerningMode`](xref:SixLabors.Fonts.TextOptions.KerningMode) to enable or disable font-provided kerning during shaping
+- [`Tracking`](xref:SixLabors.Fonts.TextOptions.Tracking) to add uniform letter spacing after the font's own spacing behavior
+- [`FallbackFontFamilies`](xref:SixLabors.Fonts.TextOptions.FallbackFontFamilies) when the main font does not cover every glyph you need
+- [`TextRuns`](xref:SixLabors.Fonts.TextOptions.TextRuns) when different text ranges need different fonts, attributes, or decorations
 
-Required script shaping still happens automatically. `FeatureTags` is for extra typographic features you want to request on top of that baseline shaping behavior.
+Required script shaping still happens automatically. [`FeatureTags`](xref:SixLabors.Fonts.TextOptions.FeatureTags) is for extra typographic features you want to request on top of that baseline shaping behavior.
 
 ```csharp
 using SixLabors.Fonts;
@@ -75,11 +75,11 @@ TextOptions options = new(font)
 {
     TextDirection = TextDirection.Auto,
     KerningMode = KerningMode.Standard,
-    FeatureTags = new Tag[]
-    {
+    FeatureTags =
+    [
         KnownFeatureTags.Fractions,
         KnownFeatureTags.TabularFigures
-    }
+    ]
 };
 
 FontRectangle bounds = TextMeasurer.MeasureAdvance("9/2", options);
@@ -103,7 +103,7 @@ At larger sizes the difference is usually much smaller because the outline alrea
 
 Within the scope of TrueType outlines, Fonts has comprehensive hinting support.
 
-`TextOptions.HintingMode` controls whether that hinting path is active:
+[`TextOptions.HintingMode`](xref:SixLabors.Fonts.TextOptions.HintingMode) controls whether that hinting path is active:
 
 - `HintingMode.None` leaves outlines unhinted
 - `HintingMode.Standard` applies the library's FreeType v40-compatible TrueType hinting behavior
@@ -118,7 +118,7 @@ The hinting pipeline in Fonts includes:
 - `cvar`-driven control-value adjustments for variable TrueType fonts before hinting runs
 - hinted contour-point resolution for GPOS anchor data when the font uses contour-point anchors
 
-This is specifically a TrueType feature. Fonts only applies this hinting path to TrueType glyph data, so CFF and CFF2 outlines do not gain extra hinting behavior from `HintingMode.Standard`.
+This is specifically a TrueType feature. Fonts only applies this hinting path to TrueType glyph data, so CFF and CFF2 outlines do not gain extra hinting behavior from [`HintingMode.Standard`](xref:SixLabors.Fonts.HintingMode.Standard).
 
 ```csharp
 using SixLabors.Fonts;
@@ -150,10 +150,10 @@ Shaping does not grid-fit outlines. It decides the typographic result that hinti
 
 ### Practical guidance
 
-- Use `TextDirection.Auto` unless you have a specific reason to force directionality.
-- Use `FallbackFontFamilies` for multilingual text, emoji, and scripts your main font does not cover.
-- Use `FeatureTags` for discretionary features such as fractions, stylistic sets, or tabular figures.
-- Use `HintingMode.Standard` when rendering small TrueType UI text and leave it off when you want the raw outline behavior.
+- Use [`TextDirection.Auto`](xref:SixLabors.Fonts.TextDirection.Auto) unless you have a specific reason to force directionality.
+- Use [`FallbackFontFamilies`](xref:SixLabors.Fonts.TextOptions.FallbackFontFamilies) for multilingual text, emoji, and scripts your main font does not cover.
+- Use [`FeatureTags`](xref:SixLabors.Fonts.TextOptions.FeatureTags) for discretionary features such as fractions, stylistic sets, or tabular figures.
+- Use [`HintingMode.Standard`](xref:SixLabors.Fonts.HintingMode.Standard) when rendering small TrueType UI text and leave it off when you want the raw outline behavior.
 - Treat shaping as a typography and layout concern.
 - Treat hinting as a size-dependent TrueType raster-quality concern.
 

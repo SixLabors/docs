@@ -123,13 +123,13 @@ Use this pattern when you want to keep ImageSharp.Web's ICC-conversion behavior 
 
 The builder methods let you replace only the layer you actually need to change:
 
-- `SetRequestParser<TParser>()` replaces the request parser.
-- `SetCache<TCache>()` replaces the backend cache.
-- `SetCacheKey<TCacheKey>()` and `SetCacheHash<TCacheHash>()` change cache naming.
-- `AddProvider<TProvider>()`, `InsertProvider<TProvider>()`, `RemoveProvider<TProvider>()`, and `ClearProviders()` manage source providers.
-- `AddProcessor<TProcessor>()`, `RemoveProcessor<TProcessor>()`, and `ClearProcessors()` manage the processing command set.
-- `AddConverter<TConverter>()`, `RemoveConverter<TConverter>()`, and `ClearConverters()` manage typed command parsing.
-- `Configure<TOptions>(...)` binds or mutates option objects for any registered provider, cache, or parser.
+- [`SetRequestParser<TParser>()`](xref:SixLabors.ImageSharp.Web.ImageSharpBuilderExtensions.SetRequestParser*) replaces the request parser.
+- [`SetCache<TCache>()`](xref:SixLabors.ImageSharp.Web.ImageSharpBuilderExtensions.SetCache*) replaces the backend cache.
+- [`SetCacheKey<TCacheKey>()`](xref:SixLabors.ImageSharp.Web.ImageSharpBuilderExtensions.SetCacheKey*) and [`SetCacheHash<TCacheHash>()`](xref:SixLabors.ImageSharp.Web.ImageSharpBuilderExtensions.SetCacheHash*) change cache naming.
+- [`AddProvider<TProvider>()`](xref:SixLabors.ImageSharp.Web.ImageSharpBuilderExtensions.AddProvider*), [`InsertProvider<TProvider>()`](xref:SixLabors.ImageSharp.Web.ImageSharpBuilderExtensions.InsertProvider*), [`RemoveProvider<TProvider>()`](xref:SixLabors.ImageSharp.Web.ImageSharpBuilderExtensions.RemoveProvider*), and [`ClearProviders()`](xref:SixLabors.ImageSharp.Web.ImageSharpBuilderExtensions.ClearProviders*) manage source providers.
+- [`AddProcessor<TProcessor>()`](xref:SixLabors.ImageSharp.Web.ImageSharpBuilderExtensions.AddProcessor*), [`RemoveProcessor<TProcessor>()`](xref:SixLabors.ImageSharp.Web.ImageSharpBuilderExtensions.RemoveProcessor*), and [`ClearProcessors()`](xref:SixLabors.ImageSharp.Web.ImageSharpBuilderExtensions.ClearProcessors*) manage the processing command set.
+- [`AddConverter<TConverter>()`](xref:SixLabors.ImageSharp.Web.ImageSharpBuilderExtensions.AddConverter*), [`RemoveConverter<TConverter>()`](xref:SixLabors.ImageSharp.Web.ImageSharpBuilderExtensions.RemoveConverter*), and [`ClearConverters()`](xref:SixLabors.ImageSharp.Web.ImageSharpBuilderExtensions.ClearConverters*) manage typed command parsing.
+- [`Configure<TOptions>(...)`](xref:SixLabors.ImageSharp.Web.ImageSharpBuilderExtensions.Configure*) binds or mutates option objects for any registered provider, cache, or parser.
 
 For example, if you want to keep the default middleware but remove format conversion:
 

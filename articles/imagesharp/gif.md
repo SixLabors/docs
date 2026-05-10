@@ -25,12 +25,12 @@ using SixLabors.ImageSharp.Formats;
 using SixLabors.ImageSharp.Formats.Gif;
 using SixLabors.ImageSharp.PixelFormats;
 
-using Image<Rgba32> gif = new(120, 120, Color.Black);
+using Image<Rgba32> gif = new(120, 120, Color.Black.ToPixel<Rgba32>());
 
 gif.Metadata.GetGifMetadata().RepeatCount = 0;
 gif.Frames.RootFrame.Metadata.GetGifMetadata().FrameDelay = 10;
 
-using Image<Rgba32> frame = new(120, 120, Color.Orange);
+using Image<Rgba32> frame = new(120, 120, Color.Orange.ToPixel<Rgba32>());
 frame.Frames.RootFrame.Metadata.GetGifMetadata().FrameDelay = 10;
 
 gif.Frames.AddFrame(frame.Frames.RootFrame);

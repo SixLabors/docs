@@ -1,6 +1,6 @@
 # Inspect Font Files and Collections
 
-This recipe is a good starting point when you have a font file in hand and want to learn what it contains before you add it to your app's normal font collection.
+This recipe is a good starting point when you have a font file in hand and want to learn what it contains before you add it to your app's normal font collection with [`FontDescription`](xref:SixLabors.Fonts.FontDescription).
 
 ### Read a single font file
 
@@ -25,15 +25,15 @@ This is useful for import tools, font pickers, diagnostics, and file-inspection 
 using System;
 using SixLabors.Fonts;
 
-FontDescription[] descriptions =
+ReadOnlyMemory<FontDescription> descriptions =
     FontDescription.LoadFontCollectionDescriptions("fonts/NotoSansCJK-Regular.ttc");
 
-foreach (FontDescription description in descriptions)
+foreach (FontDescription description in descriptions.Span)
 {
     Console.WriteLine(description.FontNameInvariantCulture);
 }
 ```
 
-If you do want to load the collection afterward, use `FontCollection.AddCollection(...)`.
+If you do want to load the collection afterward, use [`FontCollection.AddCollection(...)`](xref:SixLabors.Fonts.FontCollection.AddCollection*).
 
 For the broader metadata API, see [Font Metadata and Inspection](fontmetadata.md).

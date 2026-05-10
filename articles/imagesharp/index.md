@@ -1,6 +1,6 @@
 # ImageSharp
 
-ImageSharp is the part of the Six Labors stack you reach for when you need to load, inspect, process, and save images entirely in managed .NET code. It gives you one consistent image model whether you are building a thumbnail service, a photo workflow, a web upload pipeline, or a lower-level imaging tool.
+ImageSharp is the high-performance part of the Six Labors stack you reach for when you need to load, inspect, process, and save images entirely in managed .NET code. It gives you one consistent image model whether you are building a thumbnail service, a photo workflow, a web upload pipeline, or a lower-level imaging tool.
 
 This section is written as a guided set of articles rather than a flat feature list. Start with [Getting Started](gettingstarted.md) if you are new to the library, then branch into loading, processing, formats, or lower-level pixel work as your needs get more specific.
 

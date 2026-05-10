@@ -1,10 +1,10 @@
 # Variable Fonts
 
-Variable fonts let one font file behave more like a design space than a single static face. Once that idea clicks, `FontVariation` becomes a practical way to ask for weight, width, slant, or optical-size variants without switching families.
+Variable fonts let one font file behave more like a design space than a single static face. Once that idea clicks, [`FontVariation`](xref:SixLabors.Fonts.FontVariation) becomes a practical way to ask for weight, width, slant, or optical-size variants without switching families.
 
 ### Create a variable-font instance
 
-Use `FontFamily.CreateFont(...)` with one or more `FontVariation` values.
+Use [`FontFamily.CreateFont(...)`](xref:SixLabors.Fonts.FontFamily.CreateFont*) with one or more [`FontVariation`](xref:SixLabors.Fonts.FontVariation) values.
 
 ```csharp
 using SixLabors.Fonts;
@@ -19,11 +19,11 @@ Font font = family.CreateFont(
     new FontVariation(KnownVariationAxes.OpticalSize, 16));
 ```
 
-The tag must be exactly four characters. Common registered axis tags are available in `KnownVariationAxes`, but custom axes can also be addressed directly.
+The tag must be exactly four characters. Common registered axis tags are available in [`KnownVariationAxes`](xref:SixLabors.Fonts.KnownVariationAxes), but custom axes can also be addressed directly.
 
 ### Use a prototype font
 
-If you already have a base `Font`, you can derive a new instance from it.
+If you already have a base [`Font`](xref:SixLabors.Fonts.Font), you can derive a new instance from it.
 
 ```csharp
 using SixLabors.Fonts;
@@ -41,7 +41,7 @@ This is useful when you want to keep the same family, size, and requested style 
 
 ### Inspect supported axes
 
-You can query the variable axes exposed by the current font through `FontMetrics.TryGetVariationAxes(...)`.
+You can query the variable axes exposed by the current font through [`FontMetrics.TryGetVariationAxes(...)`](xref:SixLabors.Fonts.FontMetrics.TryGetVariationAxes*).
 
 ```csharp
 using System;
@@ -52,16 +52,16 @@ FontCollection collection = new();
 FontFamily family = collection.Add("fonts/RobotoFlex.ttf");
 Font font = family.CreateFont(16);
 
-if (font.FontMetrics.TryGetVariationAxes(out VariationAxis[] axes))
+if (font.FontMetrics.TryGetVariationAxes(out ReadOnlyMemory<VariationAxis> axes))
 {
-    foreach (VariationAxis axis in axes)
+    foreach (VariationAxis axis in axes.Span)
     {
         Console.WriteLine($"{axis.Tag}: {axis.Min}..{axis.Max} (default {axis.Default})");
     }
 }
 ```
 
-Each `VariationAxis` exposes:
+Each [`VariationAxis`](xref:SixLabors.Fonts.Tables.AdvancedTypographic.Variations.VariationAxis) exposes:
 
 - `Name`
 - `Tag`
@@ -73,7 +73,7 @@ That makes it possible to build UI controls or configuration validation based on
 
 ### Registered and custom axes
 
-`KnownVariationAxes` includes the registered tags most users expect:
+[`KnownVariationAxes`](xref:SixLabors.Fonts.KnownVariationAxes) includes the registered tags most users expect:
 
 - `Weight` (`wght`)
 - `Width` (`wdth`)
@@ -97,7 +97,7 @@ Font font = family.CreateFont(
 
 ### How values behave
 
-`FontVariation` follows CSS `font-variation-settings` semantics. Variation values are clamped to the axis range defined by the font.
+[`FontVariation`](xref:SixLabors.Fonts.FontVariation) follows CSS `font-variation-settings` semantics. Variation values are clamped to the axis range defined by the font.
 
 That means:
 
@@ -107,7 +107,7 @@ That means:
 
 ### Non-variable fonts
 
-Applying `FontVariation` values to a non-variable font is harmless but has no effect. If you need to know whether a font is actually variable, check `TryGetVariationAxes(...)` before building variation-driven UI or configuration.
+Applying [`FontVariation`](xref:SixLabors.Fonts.FontVariation) values to a non-variable font is harmless but has no effect. If you need to know whether a font is actually variable, check [`TryGetVariationAxes(...)`](xref:SixLabors.Fonts.FontMetrics.TryGetVariationAxes*) before building variation-driven UI or configuration.
 
 ### When to use variable fonts
 
