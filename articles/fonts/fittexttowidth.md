@@ -42,6 +42,10 @@ This is a simple and predictable approach for titles and short labels. If you ne
 
 For multiline text, also set `WrappingLength` and measure with the same layout options you plan to render with.
 
+The important rule is that fitting and rendering must use the same layout inputs. Font family, style, size, DPI, culture, wrapping length, fallback fonts, OpenType features, and text direction can all affect measured advance. If any of those differ between the fitting pass and the final drawing pass, the text can still overflow or wrap differently.
+
+For interactive systems, consider a two-stage search: probe coarse sizes first, then refine around the best candidate. That keeps the recipe easy to adapt without turning every label fit into a long linear measurement loop.
+
 >[!NOTE]
 >This example is intentionally naive. It remeasures from scratch on each iteration to keep the recipe easy to follow. Production layout engines would usually cache measurements, font instances, or intermediate fit results instead of doing a full linear probe every time.
 

@@ -7,6 +7,8 @@ The usual patterns are:
 - fit the image within a bounding box while preserving aspect ratio, and
 - create a fixed-size thumbnail that fills the target area by cropping.
 
+Before choosing between them, decide what the thumbnail promises to users. A catalog image often needs to show the whole object, so fit-within-box is safer. Avatars, cards, and masonry layouts usually need consistent dimensions, so crop-to-fill is a better match. That product decision should drive the resize mode rather than the other way around.
+
 ## Fit Within a Bounding Box
 
 Use [`ResizeOptions`](xref:SixLabors.ImageSharp.Processing.ResizeOptions) with [`ResizeMode.Max`](xref:SixLabors.ImageSharp.Processing.ResizeMode) when you want the full image to fit inside a target box:
@@ -31,6 +33,8 @@ image.Save("thumbnail.jpg", new JpegEncoder { Quality = 85 });
 
 This keeps the whole image visible and preserves aspect ratio.
 
+The output may be smaller than the requested box in one dimension. That is the point of `ResizeMode.Max`: it respects both the maximum bounds and the source aspect ratio. If your downstream layout requires an exact canvas size, resize first and then pad onto a fixed background.
+
 ## Create a Square Center-Crop Thumbnail
 
 Use [`ResizeMode.Crop`](xref:SixLabors.ImageSharp.Processing.ResizeMode.Crop) to fill the target bounds and crop the overflow:
@@ -54,6 +58,8 @@ image.Save("avatar.jpg");
 ```
 
 This is the usual pattern for avatars, cards, and tile-based UI.
+
+For user-generated photos, consider exposing a focal point or crop anchor instead of always using the center. Faces, products, and text are not always centered in the source image.
 
 ## Keep Transparency in Thumbnails
 
@@ -80,5 +86,6 @@ image.Save("thumbnail.png", new PngEncoder());
 - `AutoOrient()` is usually the right first step for user-uploaded photos.
 - `ResizeMode.Max` is for fit-within-box results.
 - `ResizeMode.Crop` is for fixed output dimensions that must be fully filled.
+- Use explicit encoders when thumbnail quality, metadata, color profile behavior, or file size needs to be predictable.
 
 For more detail on resizing behavior, see [Resizing Images](resize.md).

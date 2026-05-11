@@ -45,6 +45,8 @@ image.Save("output.jpg", new JpegEncoder
 });
 ```
 
+Choose the flattening color deliberately. White is common for documents and many web layouts, but logos, UI assets, and product imagery may need a brand color, a page background color, or a checkerboard-style review workflow before final export.
+
 ## Convert JPEG to WebP
 
 Use a WebP encoder when you want to move a photographic source to a more modern delivery format:
@@ -62,6 +64,8 @@ image.Save("output.webp", new WebpEncoder
 });
 ```
 
+For web delivery, compare both file size and visual quality against your JPEG baseline. WebP often wins for photographic content, but the right quality value is product-specific and should be chosen against representative images rather than one sample.
+
 ## Convert Any Input to PNG
 
 PNG is a good target when you want lossless output or transparency support:
@@ -74,6 +78,8 @@ using Image image = Image.Load("input.bin");
 
 image.Save("output.png", new PngEncoder());
 ```
+
+PNG is not automatically the best "safe" target for every input. It preserves sharp graphics and transparency well, but photographic sources can become much larger than JPEG or WebP. Use PNG when lossless output, alpha, indexed color, or broad compatibility matter more than smallest file size.
 
 ## Choose the Output Based on Pixel Info
 
@@ -114,5 +120,6 @@ else
 - Converting a transparent image to JPEG requires flattening or compositing first.
 - ImageSharp uses bridged metadata and pixel-type information to pick good destination settings when the target format can represent them.
 - If you care about exact output tradeoffs, use an explicit encoder rather than relying only on the file extension.
+- Format conversion is also a metadata decision. Decide whether orientation, color profiles, animation timing, and authoring metadata should be preserved, transformed, or stripped.
 
 For more on format behavior and encoder options, see [Image Formats](imageformats.md). For more on inspecting pixel types before a conversion, see [Read Image Info Without Decoding](identify.md) and [Pixel Formats](pixelformats.md).

@@ -6,6 +6,10 @@ The current package targets [.NET 8](https://learn.microsoft.com/en-us/dotnet/co
 
 Under the hood, the boolean-operation pipeline is based on a Martinez-Rueda sweep-line approach for complex polygon clipping, while normalization uses a separate Vatti/Clipper2-inspired cleanup path for resolving self-intersections and overlaps into positive-winding output. You do not need to understand those algorithms to use the library well, but it helps explain why PolygonClipper is comfortable with complex contour topology.
 
+The library works with geometry, not pixels. Coordinates are numeric vertices, contours are rings, and polygons are collections of rings with explicit hierarchy for holes. That makes PolygonClipper useful before rendering, export, hit testing, path cleanup, or any workflow where you need the region itself rather than a raster mask.
+
+Most users should begin with the static boolean, normalization, and stroking entry points. They take ordinary polygon inputs and return new polygon geometry, so the result can be inspected, transformed, rendered, serialized, or handed to another geometry pipeline.
+
 ### License
 PolygonClipper is licensed under the terms of the [Six Labors Split License, Version 1.0](https://github.com/SixLabors/PolygonClipper/blob/main/LICENSE). See https://sixlabors.com/pricing for commercial licensing details.
 

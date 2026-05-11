@@ -2,6 +2,8 @@
 
 Annotations are just normal drawing commands layered over an existing image. Use pens for outlines and guides, transparent fills for highlights, and text layout options for labels.
 
+Treat annotation geometry as part of the image coordinate system. That makes the overlay deterministic: the highlight rectangle, guide line, and label origin all describe exact positions on the final image. If you resize the image first, compute the annotation positions after resizing so the callouts still point at the right pixels.
+
 ```csharp
 using SixLabors.Fonts;
 using SixLabors.ImageSharp;
@@ -39,6 +41,8 @@ image.Save("annotated.jpg");
 ```
 
 Keep annotation geometry in image coordinates. If you need a local coordinate system for a panel or inset, use `CreateRegion(...)` or a saved transform.
+
+Prefer translucent fills for highlighting because they preserve the source image context. Use an outline pen or text stroke when the annotation must remain readable over both light and dark image regions.
 
 ## Related Topics
 

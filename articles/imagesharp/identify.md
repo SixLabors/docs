@@ -74,6 +74,8 @@ Console.WriteLine(format.Name);
 
 This is useful when file extensions are missing or untrustworthy.
 
+Use `DetectFormat()` when routing depends only on the encoded format. Use `Identify()` when you need dimensions, frame count, pixel type, or metadata-driven decisions. `DetectFormat()` answers a narrower question and does less work.
+
 ## Use Async APIs
 
 For asynchronous workflows, use `IdentifyAsync()`:
@@ -94,5 +96,6 @@ Console.WriteLine(imageInfo.Height);
 - `ImageInfo.PixelType` includes color model, alpha behavior, bit depth, and component precision without decoding the full image.
 - `ImageInfo.GetPixelMemorySize()` estimates decoded pixel memory before you commit to a full load.
 - `Image.DetectFormat()` is focused on encoded format detection, while `Image.Identify()` returns the broader inspection result.
+- Identification is not a replacement for decode-time error handling. It is a cheap preflight step; malformed input can still fail later when pixels are decoded.
 
 For more detail, see [Loading, Identifying, and Saving](loadingandsaving.md), [Working with Metadata](metadata.md), [Convert Between Formats](formatconversion.md), and [Pixel Formats](pixelformats.md).

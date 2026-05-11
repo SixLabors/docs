@@ -21,6 +21,8 @@ app.Run();
 
 `app.UseImageSharp()` must appear before `app.UseStaticFiles()`. If static files run first, requests such as `/images/photo.jpg` or `/images/photo.jpg?width=400` will be served directly from disk and ImageSharp.Web will never see them.
 
+Treat the middleware order as part of the image contract for your application. Anything registered before ImageSharp.Web can short-circuit the request before image processing happens. Anything registered after it will normally see the processed response only when ImageSharp.Web chooses not to handle the request.
+
 ## What the Default Registration Includes
 
 `AddImageSharp()` wires up the core middleware services plus a sensible default pipeline:
@@ -89,6 +91,8 @@ builder.Services.AddImageSharp(options =>
 ```
 
 Relative paths are resolved against the application content root. If your app does not define a web root, set both `ProviderRootPath` and `CacheRootPath` explicitly.
+
+Keep source storage and cache storage conceptually separate. The provider root is where original images come from. The cache root is disposable derived output and can usually be cleared, rebuilt, or moved to cheaper storage without losing source assets. In clustered deployments, choose cache storage that matches your invalidation and sharing requirements.
 
 ## Next Steps
 

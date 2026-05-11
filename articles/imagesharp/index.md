@@ -4,6 +4,10 @@ ImageSharp is the high-performance part of the Six Labors stack you reach for wh
 
 This section is written as a guided set of articles rather than a flat feature list. Start with [Getting Started](gettingstarted.md) if you are new to the library, then branch into loading, processing, formats, or lower-level pixel work as your needs get more specific.
 
+The core model is: choose an image type, load or create pixels, run ordered processing operations, then save with an explicit encoder when output behavior matters. `Image` is convenient when you do not need direct pixel access, while `Image<TPixel>` makes the in-memory pixel format part of the type so high-performance row processing and format-specific work stay explicit.
+
+For production code, the important choices are usually not individual method names. They are whether to identify before decoding, which pixel format to use in memory, how much metadata to preserve, which encoder settings define acceptable output, and when to customize configuration for formats, memory, or security.
+
 ## License
 
 ImageSharp is licensed under the terms of the [Six Labors Split License, Version 1.0](https://github.com/SixLabors/ImageSharp/blob/main/LICENSE). See https://sixlabors.com/pricing for commercial licensing details.

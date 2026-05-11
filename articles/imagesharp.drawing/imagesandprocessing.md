@@ -2,6 +2,8 @@
 
 ImageSharp.Drawing can draw images through the canvas, use images as brushes, and run ImageSharp processors inside drawing regions.
 
+Use `DrawImage(...)` when you want to place a rectangular source image into a rectangular destination. Use an image brush when the image should behave like a fill for arbitrary geometry. Use `Apply(...)` when you need normal ImageSharp processors to affect only the pixels covered by a rectangle or path.
+
 ## Draw an Image
 
 `DrawImage(...)` copies a source rectangle from an image into a destination rectangle on the canvas. The destination is affected by the current transform and clip state.
@@ -40,6 +42,8 @@ image.Mutate(ctx => ctx.Paint(canvas =>
 
 Keep the source image alive until the canvas has replayed the command. With `Paint(...)`, that means the source must remain alive until `Mutate(...)` completes.
 
+Choose the source rectangle in source-image coordinates and the destination rectangle in canvas coordinates. That separation is useful when you want to crop from a large source image while placing the selected pixels into a fixed layout region.
+
 ## Use an Image as a Brush
 
 Use `ImageBrush<TPixel>` when an image should fill any path as a texture. This is different from `DrawImage(...)`: the brush samples image pixels while the supplied path controls coverage.
@@ -60,12 +64,13 @@ ImageBrush<Rgba32> brush = new(source, sourceRegion, new Point(-120, -70));
 
 image.Mutate(ctx => ctx.Paint(canvas =>
 {
-
     // The star path controls coverage; the brush supplies the sampled image pixels.
     canvas.Fill(brush, star);
     canvas.Draw(Pens.Solid(Color.DarkSlateGray, 3), star);
 }));
 ```
+
+An image brush is best when the same texture should fill a shape, text path, or repeated decorative element. For one-off rectangular placement, `DrawImage(...)` is usually easier to reason about.
 
 ## Apply Processors Inside a Shape
 
@@ -95,3 +100,5 @@ image.Mutate(ctx => ctx.Paint(canvas =>
 ```
 
 On GPU-backed canvases, `Apply(...)` requires the affected pixels to be read back, processed by the CPU pipeline, and written back before presentation. Keep regions as small as the effect allows.
+
+The placement of `Apply(...)` matters. Commands recorded before it contribute pixels to the processor input; commands recorded after it are drawn over the processed result. This makes it possible to blur or pixelate an image region, then draw a crisp outline or label on top.

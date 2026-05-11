@@ -19,6 +19,8 @@ string version = description.GetNameById(CultureInfo.InvariantCulture, KnownName
 
 This is useful for import tools, font pickers, diagnostics, and file-inspection utilities.
 
+Use invariant names when you need stable storage, configuration, or logs. Use culture-specific names when presenting font choices to people, because many families expose localized names that are more useful in UI than the invariant English metadata.
+
 ### Inspect a font collection such as a `.ttc`
 
 ```csharp
@@ -35,5 +37,7 @@ foreach (FontDescription description in descriptions.Span)
 ```
 
 If you do want to load the collection afterward, use [`FontCollection.AddCollection(...)`](xref:SixLabors.Fonts.FontCollection.AddCollection*).
+
+Inspection does not add the font to a collection. That separation is useful for upload validation and tooling: you can reject, categorize, or display font metadata before deciding whether the file should participate in normal font resolution.
 
 For the broader metadata API, see [Font Metadata and Inspection](fontmetadata.md).

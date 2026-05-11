@@ -4,7 +4,11 @@ Primitive helpers are convenience methods on [`DrawingCanvas`](xref:SixLabors.Im
 
 The helpers still follow the same rules as path drawing: fills use brushes, strokes use pens, [`DrawingOptions`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingOptions) controls antialiasing and transforms, and active canvas state applies to the recorded command.
 
+Primitive calls record a drawing command immediately. They are a good fit for marks, guides, simple badges, outlines, and other geometry that is only used once. If the same geometry must be filled, stroked, clipped, transformed, measured, or shared between commands, create a path or polygon object instead.
+
 ## Rectangles, Ellipses, Lines, and Beziers
+
+Rectangle helpers use a top-left coordinate plus width and height. Ellipse helpers use a center point plus size, matching [`EllipsePolygon`](xref:SixLabors.ImageSharp.Drawing.EllipsePolygon). Lines and Beziers use explicit points in canvas coordinates, so they are easy to combine with image-space measurements.
 
 ```csharp
 using SixLabors.ImageSharp;
@@ -37,9 +41,13 @@ image.Mutate(ctx => ctx.Paint(canvas =>
 }));
 ```
 
+Use the rectangle and ellipse helpers when the geometry exists only for that command. For example, `DrawEllipse(...)` is concise for a one-off ring, while `new EllipsePolygon(...)` is better when the same ellipse must be clipped, filled, and outlined.
+
 ## Arcs and Pies
 
 Arc and pie helpers take a center point, a size, a rotation angle, a start angle, and a sweep angle. Positive and negative sweeps are both valid, which makes clockwise and counter-clockwise segments easy to express.
+
+Arc helpers draw or fill the curved segment of an ellipse. Pie helpers close the segment back to the center, creating a wedge. Use [`PiePolygon`](xref:SixLabors.ImageSharp.Drawing.PiePolygon) when the wedge is part of reusable geometry.
 
 ```csharp
 using SixLabors.ImageSharp;

@@ -32,6 +32,8 @@ TextOptions options = new(font)
 
 This only has an effect if the font actually provides the requested feature.
 
+Feature requests are not guaranteed substitutions. Fonts decide which features they expose and which scripts, languages, and glyph sequences those features apply to. If output must be exact, test with the production font files rather than assuming a tag will be honored everywhere.
+
 ### Combine multiple features
 
 ```csharp
@@ -54,5 +56,7 @@ TextOptions options = new(font)
 ```
 
 Use the same `TextOptions` for both `TextMeasurer` and `TextRenderer` so the measured result matches the rendered result.
+
+OpenType features can change glyph choice, advance widths, ligature formation, and mark placement. That means they are layout inputs, not just visual decoration applied after measuring.
 
 For the fuller feature model, see [OpenType Features](opentypefeatures.md).

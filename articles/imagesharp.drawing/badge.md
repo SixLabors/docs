@@ -2,6 +2,8 @@
 
 Small generated badges usually combine a filled shape, an outline, and centered text. Build the shape once, then use the same path for fill and stroke so the border exactly follows the filled area.
 
+This pattern works well for status chips, Open Graph badges, generated labels, and small UI assets. Keep the badge geometry, gradient, and text layout separate: the same path controls fill and stroke, while `RichTextOptions` controls how the label sits inside the shape.
+
 ```csharp
 using SixLabors.Fonts;
 using SixLabors.ImageSharp;
@@ -45,6 +47,8 @@ image.Save("badge.png");
 ```
 
 Use a path type that matches the badge geometry you want. [`RectanglePolygon`](xref:SixLabors.ImageSharp.Drawing.RectanglePolygon), [`EllipsePolygon`](xref:SixLabors.ImageSharp.Drawing.EllipsePolygon), [`RegularPolygon`](xref:SixLabors.ImageSharp.Drawing.RegularPolygon), [`StarPolygon`](xref:SixLabors.ImageSharp.Drawing.StarPolygon), and custom [`PathBuilder`](xref:SixLabors.ImageSharp.Drawing.PathBuilder) paths can all be filled and stroked through the same canvas calls.
+
+If the label can vary, set `WrappingLength` smaller than the badge width and use centered alignment. That gives long values room to wrap instead of spilling into the border.
 
 ## Related Topics
 

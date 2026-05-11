@@ -2,6 +2,8 @@
 
 Use `DrawText(...)` with alignment options when a watermark should stay anchored to an image edge. The text layout options keep the placement declarative, so you do not need to measure the string manually.
 
+Anchor the watermark by choosing an origin near the desired edge, then set horizontal and vertical alignment relative to that origin. This keeps the code stable when the watermark text changes length or the image size changes.
+
 ```csharp
 using SixLabors.Fonts;
 using SixLabors.ImageSharp;
@@ -34,6 +36,8 @@ image.Save("watermarked.jpg");
 ```
 
 Use a subtle fill alpha and a darker outline when the watermark must remain readable over mixed image content.
+
+For repeated export workflows, create the font and text options once per image size, then draw inside the `Paint(...)` callback. Use wrapping when the watermark can contain user or tenant names that may be longer than expected.
 
 ## Related Topics
 

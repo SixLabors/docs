@@ -4,6 +4,10 @@ ImageSharp.Web is Six Labors' high-performance ASP.NET Core image middleware for
 
 The current package targets .NET 8 and is built on top of [ImageSharp](../imagesharp/index.md). The middleware is intentionally modular: you can change how commands are parsed, where source images come from, how cache keys are built, where processed images are stored, and whether image requests must be signed.
 
+The practical model is a web request pipeline. A provider resolves the original image, a parser turns the request into commands, processors transform the image, an encoder writes the response, and a cache stores the result so the next matching request can avoid the expensive work. Most configuration choices are about one of those stages.
+
+Use ImageSharp.Web when image variants are determined by HTTP requests: responsive thumbnails, CDN-backed transformations, signed URLs, tenant-specific providers, or cached format conversion. Use core ImageSharp directly when processing is an offline job, queue worker, or application workflow that is not naturally request-driven.
+
 ## License
 
 ImageSharp.Web is licensed under the terms of the [Six Labors Split License, Version 1.0](https://github.com/SixLabors/ImageSharp.Web/blob/main/LICENSE). See https://sixlabors.com/pricing for commercial licensing details.

@@ -2,6 +2,8 @@
 
 Use `Save(DrawingOptions, params IPath[])` with `BooleanOperation.Intersection` when later drawing should be limited to a shape. This is useful for avatars, shaped thumbnails, masked hero images, and photo badges.
 
+The important idea is that clipping is canvas state. Once saved, the clip applies to every later command until `Restore()` is called. Draw the clipped image while that state is active, then restore before drawing borders, labels, shadows, or other elements that should sit outside the mask.
+
 ```csharp
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Drawing;
@@ -41,6 +43,8 @@ image.Save("avatar.png");
 ```
 
 Keep the source image alive until the drawing operation has replayed. The `Paint(...)` pipeline handles the canvas lifetime for this example.
+
+Use a destination rectangle that matches the visible shape bounds when you want predictable cropping. Use a larger destination rectangle when the source image should intentionally bleed beyond the shape, for example to zoom into a face inside an avatar.
 
 ## Related Topics
 

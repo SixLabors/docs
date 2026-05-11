@@ -7,6 +7,8 @@ The main entry points are [`Mutate`](xref:SixLabors.ImageSharp.Processing.Proces
 - `Mutate()` applies processors to the current image.
 - `Clone()` creates a deep copy and applies the processors to that copy.
 
+Processors are deliberately composable. Each call in the pipeline receives the result of the previous call, so the code order is also the image-processing order. That makes pipelines easy to read, but it also means a misplaced operation can change the result significantly.
+
 ## Mutate the Current Image
 
 Use `Mutate()` when you want to transform the current image in place:
@@ -27,6 +29,8 @@ image.Save("output.jpg");
 
 This is the most common choice for request processing, thumbnails, and one-way export workflows.
 
+Use `Mutate()` when the loaded image is an intermediate value and there is no need to keep the original pixels. This keeps ownership simple and avoids a second full image allocation.
+
 ## Clone When You Need to Preserve the Original
 
 Use `Clone()` when the original image must remain unchanged:
@@ -44,6 +48,8 @@ thumbnail.Save("thumbnail.jpg");
 ```
 
 This is useful when you need multiple derived outputs from the same source image.
+
+Use `Clone()` when the original image is a reusable source asset: for example, generating several thumbnail sizes, producing multiple export formats, or running a preview operation while keeping an editable original.
 
 ## Build Ordered Pipelines
 
@@ -67,6 +73,7 @@ As a rule of thumb:
 - Normalize orientation early.
 - Crop before expensive down-stream work when the crop meaningfully reduces the pixel area.
 - Apply output-specific effects near the end of the pipeline.
+- Save with an explicit encoder when output quality, metadata, compression, or compatibility matters.
 
 ## Common Processing Topics
 

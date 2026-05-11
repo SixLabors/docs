@@ -8,6 +8,8 @@ The fastest way to get comfortable with PolygonClipper is to think in terms of t
 
 From there, most applications either run a boolean operation with [`PolygonClipper`](xref:SixLabors.PolygonClipper.PolygonClipper) or generate stroke-outline geometry with [`PolygonStroker`](xref:SixLabors.PolygonClipper.PolygonStroker).
 
+PolygonClipper does not attach units or coordinate-system meaning to vertices. Your application decides whether a vertex represents pixels, points, millimeters, tiles, or world coordinates. The important part is to use one consistent coordinate space for all inputs to a single operation.
+
 ## Build Two Input Polygons
 
 This example creates two rectangles, then intersects them:
@@ -40,6 +42,8 @@ Console.WriteLine($"Vertices: {result.VertexCount}");
 
 You do not need to repeat the first vertex at the end of a contour for normal polygon operations. Contours are treated as implicitly closed.
 
+The example builds contours clockwise, but real inputs often arrive from drawing tools, path importers, or GIS-style data with mixed orientation. Use [Normalization and Winding](normalization.md) when you need to turn messy single-polygon input into clean positive-winding output before a downstream system consumes it.
+
 ## Prefer the Static Entry Points
 
 Most applications should call the static methods:
@@ -68,3 +72,5 @@ for (int i = 0; i < result.Count; i++)
 ```
 
 That contour hierarchy is one of the main things PolygonClipper preserves for you. If you want to understand how parent contours, holes, and winding fit together, the next page to read is [Polygons, Contours, and Holes](polygonsandcontours.md).
+
+Do not assume that one operation returns one contour. Intersections can split a region into multiple islands, differences can create holes, and normalization can reorganize self-intersecting input. Production callers should usually iterate the returned polygon rather than indexing directly into the first contour.

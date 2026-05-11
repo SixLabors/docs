@@ -4,6 +4,8 @@ Cropping and canvas operations are closely related, but they solve different pro
 
 Thinking about those as separate questions makes the API much easier to navigate.
 
+Coordinate choices matter here. Crop rectangles describe source pixels you want to keep. Padding and canvas-style operations describe the destination bounds you want after the operation. When a workflow feels confusing, write those two rectangles down separately: source region first, output canvas second.
+
 ## Crop to an Explicit Rectangle
 
 Use `Crop()` when you know the exact rectangle you want to keep:
@@ -18,6 +20,8 @@ image.Mutate(x => x.Crop(new Rectangle(100, 80, 1200, 800)));
 ```
 
 This removes everything outside the requested bounds.
+
+The crop rectangle is expressed in the image's current coordinate space. If the source may contain EXIF orientation, call `AutoOrient()` before choosing crop coordinates that should match what a person sees.
 
 ## Crop by Width and Height
 
@@ -46,6 +50,8 @@ image.Mutate(x => x.Pad(1200, 1200, Color.White));
 ```
 
 This is useful when generating square thumbnails, social cards, or export assets that require a fixed output size.
+
+Padding does not scale the original image. If the image must fit inside a larger box with a background, resize to the intended content size first, then pad to the final canvas size.
 
 ## Fill Transparent Areas or Flatten Onto a Background
 
@@ -76,6 +82,8 @@ image.Mutate(x => x.EntropyCrop());
 ```
 
 This can be useful for removing large flat borders or whitespace-like areas before additional processing.
+
+Automatic cropping is content-driven, so treat it as a convenience rather than a layout contract. It is useful for cleanup workflows, but explicit rectangles or resize anchors are better when output dimensions must be predictable.
 
 ## Combine Crop and Resize
 

@@ -9,6 +9,10 @@ It supports TrueType and OpenType fonts, including CFF1 and CFF2 outlines, WOFF 
 
 Fonts is often used underneath [ImageSharp.Drawing](../imagesharp.drawing/index.md), but it is not limited to image rendering. You can also use it for font inspection, text measurement, shaping, and custom rendering pipelines.
 
+The main thing to learn early is the difference between font assets, font instances, and text layout. A font collection tells you what families are available, a `Font` chooses a family/style/size, and `TextOptions` describes how a specific piece of text should be shaped, wrapped, aligned, measured, or rendered. `TextBlock` builds on that by preparing layout once so you can inspect lines, hit-test, move carets, or draw the same shaped text consistently.
+
+The Unicode pages are part of the practical API story, not a side topic. Most real text is not one UTF-16 code unit per visible character, and indexes used for rich text, placeholders, selection, and hit testing need to be understood in terms of graphemes and shaped layout rather than raw `char` positions.
+
 ### License
 
 Fonts is licensed under the terms of the [Six Labors Split License, Version 1.0](https://github.com/SixLabors/Fonts/blob/main/LICENSE). See https://sixlabors.com/pricing for commercial licensing details.

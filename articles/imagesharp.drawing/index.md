@@ -5,6 +5,10 @@ ImageSharp.Drawing is a library built on top of ImageSharp to provide 2D drawing
 
 ImageSharp.Drawing is designed from the ground up to be high-performance, flexible, and extensible. It provides vector geometry, brush and pen styling, canvas drawing, image compositing, and text rendering building blocks for custom images.
 
+The core model is deliberately small: geometry describes coverage, brushes and pens describe how pixels are produced, drawing options describe state, and [`DrawingCanvas`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas) records commands that are replayed into an ImageSharp processing pipeline. That makes the same drawing code useful for one-off image generation, templated graphics, server-side rendering, retained canvas scenes, and GPU-backed output.
+
+Read the articles as a progression. Start with the canvas workflow, learn the geometry and styling types, then move into text, image composition, transforms, and WebGPU when the job needs them.
+
 ### Start Here
 
 - [Getting Started](gettingstarted.md) introduces the [`Paint(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.PaintExtensions) and [`DrawingCanvas`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas) workflow.

@@ -2,6 +2,8 @@
 
 Canvas state controls where later commands can draw and how grouped commands are composed. The three main tools are `Save(...)` with clip paths, `CreateRegion(...)`, and `SaveLayer(...)`.
 
+Use a clip when later commands should be constrained by vector geometry. Use a region when you want a rectangular child layout with local coordinates. Use a layer when several commands should be rendered together first, then blended or composited back as one result.
+
 ## Clip Later Commands
 
 `Save(DrawingOptions, params IPath[])` pushes a new state with the supplied options and clip paths. The clip paths are combined with each command by `ShapeOptions.BooleanOperation`.

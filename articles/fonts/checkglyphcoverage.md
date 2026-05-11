@@ -39,4 +39,8 @@ This is a simple way to decide whether you need `FallbackFontFamilies` before yo
 
 If you want a broader face-level view instead of checking a specific string, use [`Font.FontMetrics.GetAvailableCodePoints()`](xref:SixLabors.Fonts.FontMetrics.GetAvailableCodePoints*).
 
+Glyph coverage is only the first question. A font can contain glyphs for individual code points but still lack the shaping behavior, marks, variation sequences, or color glyph data needed for the text to look right in a real script. Use coverage checks to choose candidate fallback families, then measure or render with the same `TextOptions` you will use in production.
+
+Emoji and complex scripts are the usual cases where this distinction matters. A visible emoji can be a grapheme made from several code points, and Arabic, Indic, or Southeast Asian scripts can require shaping features that are not captured by a one-code-point probe.
+
 For the conceptual fallback guidance, see [Fallback Fonts and Multilingual Text](fallbackfonts.md). For face-level coverage inspection, see [Font Metrics](fontmetrics.md).

@@ -12,6 +12,10 @@ The default [`QueryCollectionRequestParser`](xref:SixLabors.ImageSharp.Web.Comma
 - Processors run in the order their first recognized command appears in the request, not in a hard-coded global order.
 - Values are parsed with invariant culture by default. If you turn that off, parsing follows `CultureInfo.CurrentCulture`.
 
+That ordering rule is important when you add custom processors. A processor should declare the command keys that activate it, and callers should build URLs in the order they want the pipeline to run. For example, resizing before a custom watermark processor is not the same as watermarking before resizing.
+
+Command parsing and HMAC validation are also connected. Unknown commands are removed before the final command collection is validated and executed, so a signed URL only protects the command surface the application actually recognizes. If you need a locked-down public API, combine HMAC with presets or a custom parser that exposes only the transformations you want users to request.
+
 ## Resize
 
 Resize commands are handled by [`ResizeWebProcessor`](xref:SixLabors.ImageSharp.Web.Processors.ResizeWebProcessor) and map to [`ResizeOptions`](xref:SixLabors.ImageSharp.Processing.ResizeOptions).
@@ -34,6 +38,8 @@ Resize commands are handled by [`ResizeWebProcessor`](xref:SixLabors.ImageSharp.
 - `compand` toggles linear-light companding during the resize.
 
 `orient` is easy to confuse with `autoorient`. The short version is that `orient` only changes resize math, while `autoorient` actually rotates or flips the decoded image.
+
+For responsive-image URLs, prefer specifying only the dimension that is actually constrained by layout. Use both `width` and `height` only when the output must occupy an exact box, then choose the `rmode` that matches the design: `max` to fit inside, `crop` to fill, `pad` to preserve everything with extra canvas, and `stretch` only when distortion is acceptable.
 
 ## Auto-Orient
 
@@ -94,6 +100,8 @@ This is most useful when flattening transparent images before converting them to
 ```text
 /images/logo.png?bgcolor=white&format=jpg&quality=85
 ```
+
+If `bgcolor` is omitted and the output format cannot represent alpha, transparent pixels must still be resolved by the encoder or format behavior. Set the background color explicitly when brand colors, UI previews, or predictable JPEG output matter.
 
 ## Related Topics
 

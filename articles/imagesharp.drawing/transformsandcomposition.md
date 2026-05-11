@@ -2,6 +2,8 @@
 
 [`DrawingOptions`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingOptions) carries the transform, graphics options, and shape options used by canvas commands. Use it when drawing state should change for a group of operations.
 
+The safest way to think about transforms and composition is as scoped canvas state. Save the options that should affect a group, draw the affected commands, then restore the previous state before drawing labels, guides, or other unaffected output.
+
 ## Transform Drawing
 
 `DrawingOptions.Transform` is applied to vector output before rasterization. For strokes, the path is stroked in local geometry space and the generated outline is transformed for drawing.
@@ -15,6 +17,8 @@ For normal drawing, construct the value from `Matrix3x2`. That keeps rotation, s
 ```csharp
 Matrix4x4 transform = new(Matrix3x2.CreateRotation(angle, center));
 ```
+
+When more than one 2D operation is needed, compose the `Matrix3x2` expression first and wrap the final result in `Matrix4x4`. Keeping the 2D operations together makes order explicit and avoids hand-written matrix values for ordinary scale, rotate, skew, and translate cases.
 
 Use the full `Matrix4x4` form when you need transforms that cannot be expressed by `Matrix3x2`, such as perspective-style projection. The canvas, path, text, brush, image, and WebGPU paths all carry the same transform type, so code can move between CPU drawing, retained scenes, and GPU rendering without changing the public drawing model.
 
@@ -109,7 +113,6 @@ DrawingOptions aliased = new()
 
 image.Mutate(ctx => ctx.Paint(aliased, canvas =>
 {
-
     // With antialiasing disabled, integer rectangle corners render as full covered pixels.
     canvas.Fill(Brushes.Solid(Color.White), new Rectangle(10, 10, 44, 28));
 }));
