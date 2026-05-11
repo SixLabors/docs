@@ -111,3 +111,10 @@ When an ImageSharp.Web request misbehaves, this order is usually productive:
 - [Configuration and Pipeline](configuration.md)
 - [Securing Requests](security.md)
 - [Extensibility](extensibility.md)
+
+## Practical Guidance
+
+- Check middleware order before provider or cache details.
+- Confirm the parsed command collection before debugging processor behavior.
+- Validate HMAC with the same canonicalization path used by the middleware.
+- Separate source misses from cache misses when diagnosing 404s or stale output.

@@ -8,6 +8,12 @@ ImageSharp exposes ICO-specific APIs through [`IcoEncoder`](xref:SixLabors.Image
 
 ICO is best thought of as a container for one or more icon images.
 
+An ICO file can contain multiple frames for different icon sizes and bit depths. That lets Windows and other consumers choose the most appropriate embedded image for a particular scale or display context. A single-frame ICO can work, but multi-size icon assets are often more useful in real applications.
+
+Frames can be stored using BMP-style data or PNG-compressed data. PNG-compressed icon frames are common for larger or more detailed icons because they can preserve alpha and reduce file size. BMP-style frames can still matter for older compatibility workflows.
+
+The encoded width and height are part of the frame metadata, not just a consequence of the decoded ImageSharp frame size. When generating icons, keep frame metadata aligned with the asset sizes your target platform expects.
+
 A few practical implications:
 
 - Existing ICO files can contain one or more embedded icon images.
@@ -45,6 +51,8 @@ The most useful ICO-specific values live on [`IcoFrameMetadata`](xref:SixLabors.
 
 [`IcoMetadata`](xref:SixLabors.ImageSharp.Formats.Ico.IcoMetadata) mirrors the root frame's compression, bit depth, and color-table information at the image level.
 
+Treat each frame as an icon candidate, not just a page in an image sequence. If you create a multi-frame ICO, inspect every frame's dimensions, compression, and bit depth before saving.
+
 ## Read ICO Metadata
 
 Use `Image.Identify()` when you want to inspect the icon container without decoding every embedded image:
@@ -78,3 +86,10 @@ ICO is usually a poor fit when:
 - You want a broadly portable web or application image format.
 
 For ordinary image delivery or storage, [PNG](png.md), [WebP](webp.md), and [JPEG](jpeg.md) are usually better choices.
+
+## Practical Guidance
+
+- Include the sizes your target platform expects instead of assuming one frame is enough.
+- Inspect frame metadata when converting existing icons so dimensions and compression remain intentional.
+- Use ICO for Windows icon assets, not general image storage.
+- Keep source artwork separately; generated icon files are usually deployment artifacts.

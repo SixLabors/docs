@@ -41,3 +41,10 @@ If you do want to load the collection afterward, use [`FontCollection.AddCollect
 Inspection does not add the font to a collection. That separation is useful for upload validation and tooling: you can reject, categorize, or display font metadata before deciding whether the file should participate in normal font resolution.
 
 For the broader metadata API, see [Font Metadata and Inspection](fontmetadata.md).
+
+### Practical guidance
+
+- Inspect uploaded font files before adding them to an application collection.
+- Use collection inspection for `.ttc` and `.otc` files because one file can contain multiple faces.
+- Store invariant names for stable configuration and localized names for display.
+- Load the font only after metadata inspection says it belongs in the normal resolution path.

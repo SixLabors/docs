@@ -47,3 +47,10 @@ This is especially useful when a family's localized name differs from the invari
 Culture-aware lookup is about names, not shaping. After you resolve a family, still use the correct `TextOptions.Culture`, fallback families, and layout settings for the text you are measuring or rendering.
 
 For the fuller system-font API surface, see [System Fonts](systemfonts.md).
+
+### Practical guidance
+
+- Use system font enumeration for diagnostics, not for deterministic rendering guarantees.
+- Log search directories when investigating missing fonts in production.
+- Prefer private font collections for document generation, tests, and server-rendered assets.
+- Treat culture-aware resolution as name lookup; shaping still depends on `TextOptions` and font support.

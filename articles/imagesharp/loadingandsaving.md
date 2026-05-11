@@ -83,7 +83,6 @@ using Image image = Image.Load("input.jpg");
 image.Save("output.png");
 ```
 
-If you want to preserve the original encoded format after processing, reuse the decoded format stored in metadata:
 If you save by path, ImageSharp already chooses the encoder from the destination file extension. Use `DecodedImageFormat` when you want to explicitly save to the originally decoded format, especially when writing to a stream:
 
 ```csharp
@@ -99,6 +98,8 @@ if (image.Metadata.DecodedImageFormat is not null)
 ```
 
 `DecodedImageFormat` is only populated for images that were decoded from an existing source. Images created from scratch do not have an original encoded format to preserve.
+
+Preserving the original format is not always the right choice. Choose the output format based on the job: JPEG or WebP for photographic delivery, PNG for lossless graphics or transparency, GIF/APNG/WebP for animations, TIFF or OpenEXR for workflows that need richer image data.
 
 ## Choose Encoders Explicitly
 
@@ -136,6 +137,16 @@ using Image image = Image.Load(options, "animated.webp");
 ```
 
 These options let you limit decoded frames, skip metadata work, or decode directly to a target size when the format supports it.
+
+Use `DecoderOptions` at trust boundaries. For upload validation, background queues, and web requests, it is better to decide frame limits, metadata policy, color-profile handling, and target decode size before allocating a full image.
+
+## Practical Guidance
+
+For production code, decide how much information you need before you decode pixels. `DetectFormat(...)` is the cheapest useful step when the only question is "which decoder would handle this?". `Identify(...)` is the better preflight when routing, validation, or policy depends on dimensions, frame count, encoded pixel type, or metadata. `Load(...)` should be the point where you have already decided the image is worth decoding.
+
+Streams must remain open and readable until the load operation completes. In web and queue-based systems, prefer the async overloads so image I/O follows the rest of the application’s asynchronous flow. Once the image is decoded, treat it as a significant resource: decoded pixel buffers can be much larger than the source file, especially for high-resolution photos and multi-frame formats.
+
+Saving deserves the same deliberate boundary. Save by extension for quick tools and samples; pass an explicit encoder when output quality, metadata, color profiles, animation settings, or compression tradeoffs are part of the contract. If a file crosses an API boundary, is cached publicly, or is compared in tests, the encoder settings should usually be visible in code.
 
 ## Related Topics
 

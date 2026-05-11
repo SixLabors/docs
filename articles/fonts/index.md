@@ -112,3 +112,10 @@ If you are new to Fonts, start with [Loading Fonts and Collections](gettingstart
 - [Custom Rendering](customrendering.md)
 - [Recipes](recipes.md)
 - [Troubleshooting](troubleshooting.md)
+
+### How to Use These Docs
+
+- Start with font loading and measurement before moving into shaping, fallback, and rendering.
+- Use the Unicode pages whenever text ranges, caret movement, styling, or placeholders are involved.
+- Use `TextBlock` pages when layout must be measured, inspected, interacted with, and rendered consistently.
+- Use custom rendering only after the layout model is clear.

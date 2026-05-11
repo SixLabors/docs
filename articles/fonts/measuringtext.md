@@ -149,3 +149,10 @@ See [Hit Testing and Caret Movement](texthittesting.md) and [Selection and Bidi 
 Always measure with the same `TextOptions` that you intend to render with. `Dpi`, `LineSpacing`, `WrappingLength`, `TextDirection`, `LayoutMode`, `KerningMode`, `Tracking`, `FeatureTags`, `TextRuns`, and fallback fonts all affect the final layout.
 
 For repeated measurement of the same string at different wrapping lengths, prefer [`TextBlock`](xref:SixLabors.Fonts.TextBlock) over calling [`TextMeasurer`](xref:SixLabors.Fonts.TextMeasurer) multiple times — it shapes the text once and varies wrapping per call.
+
+### Practical guidance
+
+- Measure advance when you need layout flow; measure bounds when you need ink or selection geometry.
+- Keep the same `TextOptions` for measuring, rendering, hit testing, and selection.
+- Use `TextBlock` when the same shaped text will be inspected or wrapped more than once.
+- For UI text, test with the longest localized strings and fallback fonts, not only the default language.

@@ -102,3 +102,10 @@ The available system fonts are environment-specific.
 - If predictable output matters, prefer shipping the fonts you need and loading them into a [`FontCollection`](xref:SixLabors.Fonts.FontCollection).
 
 For file-based loading, see [Loading Fonts and Collections](gettingstarted.md). For metadata-only inspection, see [Font Metadata and Inspection](fontmetadata.md).
+
+### Practical guidance
+
+- Use `SystemFonts` for host-specific behavior and diagnostics.
+- Use a private `FontCollection` for deterministic rendering.
+- Log `SearchDirectories` when diagnosing missing fonts in containers or CI.
+- Resolve by culture-aware names only when the user-facing font name is localized.

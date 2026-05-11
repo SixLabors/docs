@@ -8,6 +8,8 @@ PolygonClipper's public model is intentionally small. Most of the time you only 
 
 That small model is enough to describe simple shapes, complex multi-contour shapes, and polygons with holes.
 
+The important mental model is that contours are topology, not styling. PolygonClipper does not know about brushes, pens, fill colors, or pixels. It returns geometry that another layer can render, serialize, hit-test, or combine with more geometry.
+
 ## A `Contour` Is One Ring
 
 A [`Contour`](xref:SixLabors.PolygonClipper.Contour) is a sequence of vertices. For clipping and normalization, it is treated as implicitly closed, so the library always considers an edge between the last vertex and the first vertex.
@@ -25,6 +27,8 @@ contour.Add(new Vertex(0, 60));
 ```
 
 There is no need to append `(0, 0)` again at the end unless you are deliberately feeding the stroker a contour you want treated as explicitly closed.
+
+Avoid duplicate closing vertices in boolean inputs unless your data source naturally includes them and you have chosen to preserve them. Repeating the first vertex usually adds no information for region operations.
 
 ## A `Polygon` Is a Collection of Contours
 
@@ -77,6 +81,8 @@ outer.AddHoleIndex(1);
 
 When you do not already know the hierarchy, boolean operations and normalization will compute it for the returned polygon.
 
+If you construct hierarchy yourself, keep `ParentIndex`, `Depth`, and hole indexes consistent. Those values are part of how consumers understand which contours are exterior regions and which contours subtract from a parent region.
+
 ## Orientation Helpers
 
 [`Contour`](xref:SixLabors.PolygonClipper.Contour) also exposes orientation helpers:
@@ -104,3 +110,10 @@ polygon.Translate(10, 20);
 ```
 
 Those helpers are especially useful when you are staging input, culling broad regions, or preparing geometry for a later clip or stroke pass.
+
+## Practical Guidance
+
+- Store source geometry in one consistent coordinate space before clipping.
+- Treat returned polygons as region results, not as a promise to preserve input contour order.
+- Inspect `Depth` and `ParentIndex` when exporting to formats that need exterior and hole rings separately.
+- Use bounding boxes for broad-phase rejection before expensive geometry work when you have many polygons.

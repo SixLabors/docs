@@ -74,3 +74,10 @@ for (int i = 0; i < result.Count; i++)
 That contour hierarchy is one of the main things PolygonClipper preserves for you. If you want to understand how parent contours, holes, and winding fit together, the next page to read is [Polygons, Contours, and Holes](polygonsandcontours.md).
 
 Do not assume that one operation returns one contour. Intersections can split a region into multiple islands, differences can create holes, and normalization can reorganize self-intersecting input. Production callers should usually iterate the returned polygon rather than indexing directly into the first contour.
+
+## Practical Guidance
+
+- Keep all vertices in one coordinate system for a given operation.
+- Do not repeat the first vertex at the end of ordinary boolean-operation contours.
+- Prefer the static entry points unless you are building an advanced manual flow.
+- Iterate every returned contour and inspect hierarchy when exporting or rendering the result.

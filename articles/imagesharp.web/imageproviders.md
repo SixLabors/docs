@@ -126,3 +126,10 @@ If your source already fits an `IFileProvider`-style model, [`FileProviderImageP
 - [Image Caches](imagecaches.md)
 - [Extensibility](extensibility.md)
 - [Troubleshooting](troubleshooting.md)
+
+## Practical Guidance
+
+- Put providers in the order you want requests to be matched.
+- Keep original source storage separate from processed cache storage.
+- Return accurate source metadata so stale cache detection works.
+- Implement a custom provider only when existing filesystem, Azure, or S3 providers do not match the source model.

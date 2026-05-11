@@ -8,6 +8,10 @@ ImageSharp exposes QOI-specific APIs through [`QoiEncoder`](xref:SixLabors.Image
 
 QOI is best thought of as a small, focused lossless format.
 
+QOI is intentionally simple: it stores RGB or RGBA pixel streams using a compact set of operations that are easy to encode and decode. That simplicity is the appeal. It can be fast and convenient in controlled pipelines where both sides agree to use the format.
+
+The tradeoff is ecosystem breadth. QOI does not carry the same metadata surface as PNG, WebP, or TIFF, and it is not a browser delivery format. Use it when simple lossless interchange is valuable and the producer and consumer are both under your control.
+
 A few practical implications:
 
 - QOI is lossless.
@@ -40,6 +44,8 @@ The most useful QOI-specific values are:
 - `Channels`, which records whether the image is RGB or RGBA.
 - `ColorSpace`, which records whether the image is tagged as sRGB with linear alpha or all-channels-linear.
 
+Those values describe how consumers should interpret the stored pixel stream. They are not a substitute for full color-management metadata, so QOI is usually a poor choice when ICC workflows or rich metadata are part of the contract.
+
 ## Read QOI Metadata
 
 Use `GetQoiMetadata()` to inspect QOI-specific metadata:
@@ -69,3 +75,10 @@ QOI is usually a poor fit when:
 - You need richer metadata or more mature ecosystem support.
 
 For wider compatibility, [PNG](png.md) and [WebP](webp.md) are usually better starting points.
+
+## Practical Guidance
+
+- Use QOI in controlled pipelines where both producer and consumer agree on the format.
+- Prefer PNG or WebP when files need to be opened broadly by browsers, design tools, or operating systems.
+- Treat QOI as an interchange or internal-storage choice, not a general publishing format.
+- Test size and speed against representative data; simple formats are not automatically smaller for every image.

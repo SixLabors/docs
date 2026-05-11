@@ -1,8 +1,12 @@
 # Draw a Badge or Label
 
-Small generated badges usually combine a filled shape, an outline, and centered text. Build the shape once, then use the same path for fill and stroke so the border exactly follows the filled area.
+Small generated badges usually combine a filled shape, an outline, and centered text. Define the badge bounds once, then use the same geometry for fill and stroke so the border exactly follows the filled area.
 
-This pattern works well for status chips, Open Graph badges, generated labels, and small UI assets. Keep the badge geometry, gradient, and text layout separate: the same path controls fill and stroke, while `RichTextOptions` controls how the label sits inside the shape.
+This pattern works well for status chips, Open Graph badges, generated labels, and small UI assets. Keep the badge geometry, gradient, and text layout separate: the same rectangle controls fill and stroke, while `RichTextOptions` controls how the label sits inside the shape.
+
+Generated badges tend to be consumed by other layout systems, so stable output dimensions matter. Decide the canvas size and badge bounds first, then fit text inside that region with wrapping and centered alignment. If labels can vary by localization, tenant name, or status text, leave more horizontal padding than the ideal English sample appears to need.
+
+The same geometry should usually drive the fill and the stroke. That avoids one-pixel mismatches where a border no longer follows the filled shape. For more complex badge shapes, build a custom path once and reuse it for the gradient fill, outline, clipping, and any hit-test or layout calculations.
 
 ```csharp
 using SixLabors.Fonts;
@@ -14,7 +18,7 @@ using SixLabors.ImageSharp.Processing;
 
 using Image<Rgba32> image = new(420, 180, Color.Transparent.ToPixel<Rgba32>());
 
-RectanglePolygon badge = new(24, 36, 372, 108);
+Rectangle badge = new(24, 36, 372, 108);
 Font font = SystemFonts.CreateFont("Arial", 38, FontStyle.Bold);
 PointF gradientStart = new(24, 36);
 PointF gradientEnd = new(396, 144);
@@ -55,3 +59,7 @@ If the label can vary, set `WrappingLength` smaller than the badge width and use
 - [Primitive Drawing Helpers](primitives.md)
 - [Brushes and Pens](brushesandpens.md)
 - [Drawing Text](text.md)
+
+## Practical Guidance
+
+Build badge geometry once and reuse it for fill and stroke. Keep source dimensions stable when generated badges are consumed by layout systems. Set text wrapping shorter than the badge width when labels can vary, and use centered alignment instead of manual text offsets.

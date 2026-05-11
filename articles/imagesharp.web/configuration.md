@@ -205,3 +205,11 @@ These callbacks are often the right tool when you need small workflow adjustment
 - [Processing Commands](processingcommands.md)
 - [Securing Requests](security.md)
 - [Extensibility](extensibility.md)
+
+## Practical Guidance
+
+Most ImageSharp.Web configuration changes affect one stage of the request pipeline: command parsing, source resolution, image processing, encoding, caching, or response behavior. Change the stage that owns the behavior you need, and keep the others boring. For example, a provider should resolve source images; it should not also reinterpret resize commands. A parser should shape the command collection; it should not open streams.
+
+Be careful when replacing callbacks. The default `OnParseCommandsAsync` inserts `autoorient=true` when the request does not specify orientation behavior, so replacing it without preserving the existing delegate also changes default output. That can be correct for passthrough scenarios, but it should be a deliberate compatibility decision.
+
+For public URLs, presets are often a better product surface than arbitrary query strings. They limit the transformation vocabulary, simplify HMAC signing, reduce cache explosion, and make generated variants easier to reason about. When you do allow free-form commands, keep the middleware ImageSharp configuration aligned with your encoder and ICC expectations so a URL means the same thing across deployments.

@@ -113,3 +113,10 @@ FontDescription description = font.FontMetrics.Description;
 For loading fonts into collections, see [Loading Fonts and Collections](gettingstarted.md). For working with installed machine fonts, see [System Fonts](systemfonts.md).
 
 If you want the face-level metrics that drive layout and glyph inspection rather than just the descriptive metadata, see [Font Metrics](fontmetrics.md).
+
+### Practical guidance
+
+- Use metadata inspection before loading untrusted or user-supplied font files into normal collections.
+- Store invariant names for stable configuration and localized names for UI.
+- Inspect family styles before assuming bold or italic faces are available.
+- Use font paths for diagnostics, not as the only identity for a face.

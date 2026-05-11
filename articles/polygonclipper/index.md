@@ -94,3 +94,10 @@ Build as normal after the file or property is configured. If the license is miss
 - [Boolean Operations](booleanoperations.md) covers [`Intersection`](xref:SixLabors.PolygonClipper.PolygonClipper.Intersection*), [`Union`](xref:SixLabors.PolygonClipper.PolygonClipper.Union*), [`Difference`](xref:SixLabors.PolygonClipper.PolygonClipper.Difference*), and [`Xor`](xref:SixLabors.PolygonClipper.PolygonClipper.Xor*), including subject-versus-clip semantics.
 - [Normalization and Winding](normalization.md) explains when to use [`Normalize(...)`](xref:SixLabors.PolygonClipper.PolygonClipper.Normalize*) to resolve self-intersections and overlaps into positive-winding output.
 - [Stroking](stroking.md) covers [`PolygonStroker`](xref:SixLabors.PolygonClipper.PolygonStroker), [`StrokeOptions`](xref:SixLabors.PolygonClipper.StrokeOptions), joins, caps, and open-versus-closed path behavior.
+
+### How to Use These Docs
+
+- Start with contours and polygons before choosing a boolean or stroking operation.
+- Use boolean operations when combining two regions.
+- Use normalization when cleaning one messy region.
+- Use stroking when a line or path needs to become filled outline geometry.

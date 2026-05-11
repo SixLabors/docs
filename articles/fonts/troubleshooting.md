@@ -103,3 +103,10 @@ Use [`font.FontMetrics.TryGetVariationAxes(...)`](xref:SixLabors.Fonts.FontMetri
 [`SystemFonts`](xref:SixLabors.Fonts.SystemFonts) is convenient, but it is not deterministic across environments. Different machines can have different installed families, versions, and script coverage.
 
 If you need repeatable output across CI, servers, containers, and user machines, ship your own fonts and load them through `FontCollection`.
+
+### Debugging checklist
+
+- Confirm the font file or system family is actually available in the current environment.
+- Confirm measurement and rendering use the same `TextOptions`.
+- Check whether indexes are grapheme indexes, code-point indexes, or UTF-16 indexes.
+- Inspect fallback coverage before assuming a missing glyph is a renderer problem.

@@ -209,3 +209,10 @@ For most migrations, the least painful path is:
 - [Working with Pixel Buffers](pixelbuffers.md)
 - [Interop and Raw Memory](interop.md)
 - [Pixel Formats](pixelformats.md)
+
+## Practical Guidance
+
+- Replace `Bitmap` with the `Image<TPixel>` type that matches your working pixel model.
+- Replace `LockBits` loops with row-based processing.
+- Keep rendering concerns in ImageSharp.Drawing when the old code used `Graphics`.
+- Validate behavior on non-Windows systems when the migration goal is cross-platform support.

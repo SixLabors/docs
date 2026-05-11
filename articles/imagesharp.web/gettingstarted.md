@@ -101,3 +101,10 @@ Keep source storage and cache storage conceptually separate. The provider root i
 - [Image Providers](imageproviders.md)
 - [Image Caches](imagecaches.md)
 - [Securing Requests](security.md)
+
+## Practical Guidance
+
+- Put `UseImageSharp()` before middleware that would otherwise serve source image files directly.
+- Keep source storage separate from derived cache storage.
+- Configure provider and cache roots explicitly when the app has no web root or runs in a container.
+- Read the security page before exposing free-form transformation URLs publicly.

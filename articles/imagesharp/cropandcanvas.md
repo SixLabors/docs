@@ -23,6 +23,8 @@ This removes everything outside the requested bounds.
 
 The crop rectangle is expressed in the image's current coordinate space. If the source may contain EXIF orientation, call `AutoOrient()` before choosing crop coordinates that should match what a person sees.
 
+Cropping changes the image size and shifts the remaining pixels so the cropped rectangle becomes the new image. Any coordinates you calculated before the crop no longer refer to the same positions afterward. In workflows that add overlays, annotations, or drawing after cropping, calculate those later positions against the post-crop image.
+
 ## Crop by Width and Height
 
 If the crop should start at the top-left corner, you can pass just width and height:
@@ -35,6 +37,8 @@ using Image image = Image.Load("input.jpg");
 
 image.Mutate(x => x.Crop(800, 600));
 ```
+
+This overload is intentionally simple: it keeps the top-left region of the current image. Use the rectangle overload when the crop needs to be centered, anchored, or based on detected content.
 
 ## Pad to a Larger Canvas
 
@@ -67,6 +71,8 @@ image.Mutate(x => x.BackgroundColor(Color.White));
 ```
 
 This is a common step before saving a transparent source image to a format that does not support transparency.
+
+The background color becomes real pixel data. If you flatten before resizing, the background participates in interpolation at transparent edges. If you resize first and flatten later, transparent edge pixels are resized with alpha preserved and then composited onto the chosen background. For logos and cutouts, the difference can be visible around antialiased edges.
 
 ## Crop Automatically Based on Content
 
@@ -108,3 +114,7 @@ Cropping first can reduce the amount of pixel data that later processors need to
 - [Processing Images](processing.md)
 - [Resizing Images](resize.md)
 - [Rotate, Flip, and Auto-Orient](orientation.md)
+
+## Practical Guidance
+
+Normalize orientation before choosing crop rectangles that should match what users see. Keep source-region decisions separate from final canvas-size decisions: crop decides what pixels survive, resize decides how large they become, and padding decides how much output room surrounds them. Use automatic cropping for cleanup, but prefer explicit rectangles, anchors, or resize options when the output dimensions are part of a layout contract.

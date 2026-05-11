@@ -1,21 +1,21 @@
 # Troubleshooting
 
-This page collects common issues you can hit when moving from simple drawing samples to full ImageSharp.Drawing pipelines. Most problems come from three areas: deferred canvas replay, clipping and fill-rule choices, or text layout state.
+This page collects common issues you can hit when moving from simple drawing samples to full ImageSharp.Drawing pipelines. Most problems come from three areas: canvas replay lifetime, clipping and fill-rule choices, or text layout state.
 
-If the issue is WebGPU-specific, start with the WebGPU section below and then check the dedicated [WebGPU](webgpu.md) page.
+If the issue is WebGPU-specific, start with the WebGPU section below and then check the dedicated [WebGPU](webgpu.md), [environment](webgpuenvironment.md), [window](webgpuwindow.md), [external surface](webgpuexternalsurface.md), and [render target](webgpurendertarget.md) pages.
 
 ## Nothing Appears on the Image
 
 If you are drawing through `image.Mutate(ctx => ctx.Paint(...))`, the processing pipeline owns the canvas lifetime and replays the recorded drawing commands for you.
 
-If you create a canvas manually, make sure the canvas is disposed or flushed before you inspect the destination image. Canvas drawing is recorded and replayed in order, so pending commands are not visible until the canvas replays them.
+If you create a canvas manually, make sure the canvas is disposed before you inspect the destination image. Canvas drawing is recorded and replayed in order, so pending commands are not visible until the root canvas replays them. [`Flush()`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.Flush) only seals queued commands into the replay timeline; it does not render them by itself.
 
 ```csharp
 using Image<Rgba32> image = new(400, 240, Color.White.ToPixel<Rgba32>());
 
 using (DrawingCanvas canvas = image.CreateCanvas())
 {
-    canvas.Fill(Color.CornflowerBlue, new Rectangle(40, 40, 180, 100));
+    canvas.Fill(Brushes.Solid(Color.CornflowerBlue), new Rectangle(40, 40, 180, 100));
 
     // Disposing the canvas replays the recorded drawing commands onto the image.
 }
@@ -44,7 +44,7 @@ SizeF clipSize = new(260, 160);
 EllipsePolygon clip = new(clipCenter, clipSize);
 
 canvas.Save(options, clip);
-canvas.Fill(Color.HotPink, new Rectangle(0, 0, 400, 240));
+canvas.Fill(Brushes.Solid(Color.HotPink), new Rectangle(0, 0, 400, 240));
 canvas.Restore();
 ```
 
@@ -66,7 +66,9 @@ DrawingOptions options = new()
     }
 };
 
-canvas.Fill(options, Color.MediumSeaGreen, complexPolygon);
+_ = canvas.Save(options);
+canvas.Fill(Brushes.Solid(Color.MediumSeaGreen), complexPolygon);
+canvas.Restore();
 ```
 
 ## Text Is Not Centered Where Expected
@@ -86,7 +88,7 @@ This matters for emoji, combining marks, flags, and other user-perceived charact
 Canvas operations are ordered, but image processors operate at replay barriers. A processor such as blur, opacity, or a mask operation includes drawing that was recorded before the `Apply(...)` call.
 
 ```csharp
-canvas.Fill(Color.Black, shadowShape);
+canvas.Fill(Brushes.Solid(Color.Black), shadowShape);
 
 // Apply seals the shadow geometry before the blur processor is applied.
 canvas.Apply(x => x.GaussianBlur(8));
@@ -96,18 +98,18 @@ This is most useful when you mix vector drawing with ImageSharp processors in th
 
 ## Images, Brushes, or Masks Stop Working After Disposal
 
-Drawing commands can be replayed later than the point where the command is recorded. Keep any source `Image<TPixel>` used by `DrawImage`, masks, or `ImageBrush<TPixel>` alive until the canvas has been disposed or flushed.
+Drawing commands can be replayed later than the point where the command is recorded. Keep any source `Image<TPixel>` used by `DrawImage`, masks, or `ImageBrush<TPixel>` alive until the root canvas has been disposed.
 
 The canvas does not own images passed into it. Dispose those images after the drawing scope that uses them has completed.
 
 ## WebGPU Produces a Blank Frame
 
-Probe WebGPU support before creating GPU-backed drawing resources. WebGPU depends on the runtime environment, adapter, device, texture format, and browser or native surface.
+Probe WebGPU support before creating GPU-backed drawing resources. WebGPU depends on the runtime environment, adapter, device, texture format, and native surface or offscreen target.
 
 For window or surface rendering, acquire a frame, draw into its canvas, and dispose the frame. Disposing the frame completes the drawing scope and presents it to the surface.
 
 ```csharp
-if (!surface.TryAcquireFrame(out WebGPUSurfaceFrame frame))
+if (!surface.TryAcquireFrame(out WebGPUSurfaceFrame? frame))
 {
     return;
 }
@@ -117,8 +119,8 @@ using (frame)
     DrawingCanvas canvas = frame.CreateCanvas();
 
     // Drawing commands are presented when the frame is disposed.
-    canvas.Clear(Color.White);
-    canvas.Fill(Color.SteelBlue, new Rectangle(40, 40, 180, 120));
+    canvas.Clear(Brushes.Solid(Color.White));
+    canvas.Fill(Brushes.Solid(Color.SteelBlue), new Rectangle(40, 40, 180, 120));
 }
 ```
 
@@ -126,7 +128,7 @@ Resize the [`WebGPUExternalSurface`](xref:SixLabors.ImageSharp.Drawing.Processin
 
 ## A Good Debugging Order
 
-1. Confirm the canvas scope is disposed or flushed before checking the output.
+1. Confirm the root canvas scope is disposed before checking the output.
 2. Check source image lifetimes when using image brushes, masks, or `DrawImage`.
 3. Check `ShapeOptions.BooleanOperation` when clipping.
 4. Check `ShapeOptions.IntersectionRule` and contour winding for complex polygons.
@@ -141,3 +143,14 @@ Resize the [`WebGPUExternalSurface`](xref:SixLabors.ImageSharp.Drawing.Processin
 - [Paths and Shapes](pathsandshapes.md)
 - [Drawing Text](text.md)
 - [WebGPU](webgpu.md)
+- [WebGPU Environment and Support](webgpuenvironment.md)
+- [WebGPU Window Rendering](webgpuwindow.md)
+- [WebGPU External Surfaces](webgpuexternalsurface.md)
+- [WebGPU Offscreen Render Targets](webgpurendertarget.md)
+
+## Practical Guidance
+
+- Start with lifetime and replay issues before debugging visual details.
+- Reduce complex examples to one shape, one clip, or one text block to isolate state.
+- Check canvas ordering around `Apply(...)` whenever processors see unexpected pixels.
+- Check font availability and grapheme ranges before changing text drawing code.

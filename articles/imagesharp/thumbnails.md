@@ -89,3 +89,10 @@ image.Save("thumbnail.png", new PngEncoder());
 - Use explicit encoders when thumbnail quality, metadata, color profile behavior, or file size needs to be predictable.
 
 For more detail on resizing behavior, see [Resizing Images](resize.md).
+
+## Practical Guidance
+
+- Choose `Max` when the whole source must remain visible.
+- Choose `Crop` when the output box must be fully filled.
+- Normalize orientation before generating thumbnails from user-uploaded photos.
+- Use explicit encoders so thumbnail quality, metadata, and file size are predictable.

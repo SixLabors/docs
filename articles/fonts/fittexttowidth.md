@@ -50,3 +50,10 @@ For interactive systems, consider a two-stage search: probe coarse sizes first, 
 >This example is intentionally naive. It remeasures from scratch on each iteration to keep the recipe easy to follow. Production layout engines would usually cache measurements, font instances, or intermediate fit results instead of doing a full linear probe every time.
 
 See [Measuring Text](measuringtext.md) and [Text Layout and Options](textlayout.md) for the fuller discussion.
+
+### Practical guidance
+
+- Fit with the same options you will use to render.
+- Define a minimum readable size before starting the search.
+- Use wrapping or truncation when shrinking would make the text unusable.
+- Cache fit results when the same string, font family, and target width repeat often.

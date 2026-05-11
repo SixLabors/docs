@@ -159,3 +159,10 @@ Hard line breaks at the end of non-empty lines are trimmed with other trailing b
 In `TextInteractionMode.Editor`, a terminal hard break also produces a blank line at the end of the text so the caret can land on it after the user types `Enter`. In `TextInteractionMode.Paragraph` that trailing blank line is omitted, matching paragraph-style layout.
 
 For more on the underlying measurement model and the `TextMetrics` shape, see [Measuring Text](measuringtext.md). For the full selection API, see [Selection and Bidi Drag](caretsandselection.md).
+
+### Practical guidance
+
+- Use `TextMetrics` for interaction that can cross line boundaries.
+- Use `LineLayout` only when the caller already knows the interaction is line-local.
+- Choose `TextInteractionMode.Editor` for editable text and `Paragraph` for display layout.
+- Keep hit testing, caret movement, and selection tied to the same measured layout.

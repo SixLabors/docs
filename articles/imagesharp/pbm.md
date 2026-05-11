@@ -8,6 +8,10 @@ ImageSharp exposes PNM-specific APIs through [`PbmEncoder`](xref:SixLabors.Image
 
 The PNM family is best thought of as a simple interchange family rather than a compact delivery format.
 
+The family covers three related subformats. PBM stores black-and-white images. PGM stores grayscale images. PPM stores RGB images. Each can be useful for tests, examples, and simple tooling because the structure is easy to generate and inspect.
+
+Plain-text encoding is human-readable, which can be valuable for debugging small fixtures. Binary encoding is more compact and more appropriate for larger files, but it is still not a modern compressed delivery format. The formats do not carry alpha transparency or rich metadata.
+
 A few practical implications:
 
 - `PbmColorType.BlackAndWhite` maps to PBM output.
@@ -41,6 +45,8 @@ The most commonly used `PbmEncoder` options are:
 - `ColorType` selects PBM, PGM, or PPM style output.
 - `ComponentType` selects 1-bit, 8-bit, or 16-bit component storage where that subformat allows it.
 - `Encoding` selects plain-text or binary pixel encoding.
+
+Choose the subformat from the data model. A mask or thresholded image belongs in PBM, grayscale analysis output belongs in PGM, and ordinary RGB test data belongs in PPM. Choose plain text when inspection matters more than size.
 
 ## Read PNM Metadata
 
@@ -79,3 +85,10 @@ It is usually a poor fit when:
 - You need richer metadata, transparency, or modern delivery characteristics.
 
 For more compact or full-featured output, start with [PNG](png.md), [WebP](webp.md), or [QOI](qoi.md).
+
+## Practical Guidance
+
+- Use Netpbm formats for simple tooling, tests, and interchange workflows where readability matters.
+- Avoid them for public delivery or storage where compression, metadata, or alpha support matters.
+- Be explicit about plain versus binary encoding when files are consumed by external tools.
+- Prefer PNG when you need a simple lossless format with a much broader ecosystem.

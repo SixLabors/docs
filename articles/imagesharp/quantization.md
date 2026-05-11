@@ -134,3 +134,10 @@ Transparency handling matters most for GIF, palette PNG, ICO, and CUR output. [`
 - [PNG](png.md)
 - [Convert Between Formats](formatconversion.md)
 - [Read Image Info Without Decoding](identify.md)
+
+## Practical Guidance
+
+- Choose quantization when palette output is a requirement, not as a default quality improvement.
+- Pick dithering based on the content; it can hide banding but add visible texture.
+- Use extensive sampling only when rare colors matter enough to justify the extra work.
+- Pay special attention to transparency for GIF, palette PNG, ICO, and CUR output.

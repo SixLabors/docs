@@ -8,6 +8,12 @@ ImageSharp supports OpenEXR read and write workflows and exposes EXR-specific me
 
 OpenEXR is best thought of as a high-precision interchange format rather than a delivery format.
 
+OpenEXR is designed for scene-referred and high-dynamic-range image data. Values are often intended to survive rendering, compositing, lighting, or color-grading steps before they are tone mapped for display. That makes EXR very different from web formats, where pixels are usually already display-referred.
+
+The pixel type matters. Half-float storage is common because it gives much more range than 8-bit formats while keeping file size lower than full 32-bit float data. Full float output is useful when the pipeline needs the extra precision. Unsigned integer storage exists for workflows that require it, but it is not the common "HDR image" choice.
+
+Compression should be chosen with the consuming pipeline in mind. ZIP and ZIPS are both lossless options, but they organize compression differently. Renderer, compositor, and asset-pipeline expectations are often more important than theoretical compression ratios.
+
 A few practical implications:
 
 - OpenEXR is common in VFX, rendering, compositing, and HDR-oriented workflows.
@@ -40,6 +46,8 @@ The most commonly used `ExrEncoder` options are:
 
 - `PixelType` controls whether channels are written as `Half`, `Float`, or `UnsignedInt`.
 - `Compression` controls the current EXR encoder compression mode. Use `None`, `Zip`, or `Zips`.
+
+Do not use OpenEXR only because an image is "high quality." Use it when the numeric range and precision are needed by the pipeline. If the next step is ordinary display, web delivery, or a thumbnail, tone mapping or conversion to a delivery format is usually the next deliberate step.
 
 ## Read OpenEXR Metadata
 
@@ -78,3 +86,10 @@ OpenEXR is usually a poor fit when:
 - You want the broadest ecosystem compatibility for day-to-day assets.
 
 For everyday application and web output, [PNG](png.md), [JPEG](jpeg.md), [WebP](webp.md), and [TIFF](tiff.md) are usually easier starting points.
+
+## Practical Guidance
+
+- Use OpenEXR when high dynamic range, floating-point data, or rendering-pipeline interchange is the real requirement.
+- Keep tone mapping and display conversion separate from storing scene-referred data.
+- Test compression and channel layout with the downstream renderer or compositing tool.
+- Prefer TIFF, PNG, or WebP when the workflow does not need EXR-specific precision or metadata.

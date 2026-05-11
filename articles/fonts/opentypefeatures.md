@@ -127,3 +127,10 @@ Some OpenType features are especially relevant in vertical layout, such as [`Kno
 Those work alongside [`LayoutMode`](xref:SixLabors.Fonts.TextOptions.LayoutMode); they do not replace it.
 
 For the surrounding layout controls, see [Text Layout and Options](textlayout.md). For the broader shaping pipeline, see [Hinting and Shaping](hintingandshaping.md).
+
+### Practical guidance
+
+- Treat feature tags as shaping inputs that affect both measurement and rendering.
+- Prefer known feature tags where available and raw four-character tags for font-specific features.
+- Validate requested features with the actual production font.
+- Be careful combining features that intentionally choose competing glyph forms.

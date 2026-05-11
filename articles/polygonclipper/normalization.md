@@ -57,3 +57,10 @@ Reach for normalization when your goal is specifically:
 - cleaning up one polygon rather than combining two;
 - resolving self-overlap into a canonical result;
 - preparing output for systems that rely on positive-winding contour semantics.
+
+## Practical Guidance
+
+- Normalize at import, export, or cache boundaries rather than after every small edit.
+- Use normalization for one messy polygon; use boolean operations for combining two regions.
+- Expect contour count and hierarchy to change when self-intersections are resolved.
+- Preserve positive-winding semantics when passing output to renderers or geometry systems that depend on winding.

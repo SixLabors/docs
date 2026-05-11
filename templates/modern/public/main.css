@@ -195,6 +195,14 @@ header .navbar {
  * ###################
  */
 
+code {
+  background-color: #ebebeb;
+}
+
+[data-bs-theme="dark"] code {
+  background-color: #333;
+}
+
 .frame {
   position: relative;
   margin: 2rem 1rem;
@@ -222,16 +230,16 @@ header .navbar {
   background-image: linear-gradient(45deg, #e4d101 0%, #e30183 100%);
 }
 
-.frame > pre {
+.frame>pre {
   border-radius: 0.75rem;
   position: relative;
   z-index: 1;
   overflow-x: hidden;
 }
 
-.frame > pre::before,
-.frame > pre::after,
-.frame > pre code::before {
+.frame>pre::before,
+.frame>pre::after,
+.frame>pre code::before {
   content: "";
   position: absolute;
   z-index: 1;
@@ -243,21 +251,21 @@ header .navbar {
   height: 0.75rem;
 }
 
-.frame > pre::before {
+.frame>pre::before {
   background-color: #ef4444;
 }
 
-.frame > pre::after {
+.frame>pre::after {
   left: 1.75rem;
   background-color: #fbbf24;
 }
 
-.frame > pre code::before {
+.frame>pre code::before {
   left: 2.75rem;
   background-color: #4ade80;
 }
 
-.frame > pre code::after {
+.frame>pre code::after {
   content: "";
   position: absolute;
   z-index: 1;
@@ -270,13 +278,14 @@ header .navbar {
   opacity: 0.25;
 }
 
-.frame > pre code {
+.frame>pre code {
   padding: 3.5rem 0.75rem 0.75rem 0.75rem !important;
   max-width: 100%;
   overflow-x: auto;
 }
 
 @media (min-width: 1200px) {
+
   .frame::before,
   .frame::after {
     left: -0.5rem;
@@ -293,6 +302,6 @@ header .navbar {
 }
 
 /* Fixes for code action disapearring due to the dark-mode hack for pre */
-pre>.code-action{
-  color: #fff!important;
+pre>.code-action {
+  color: #fff !important;
 }

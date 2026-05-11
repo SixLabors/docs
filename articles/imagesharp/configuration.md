@@ -99,3 +99,10 @@ Use a custom or cloned configuration when:
 - [Memory Management](memorymanagement.md)
 - [Interop and Raw Memory](interop.md)
 - [Troubleshooting](troubleshooting.md)
+
+## Practical Guidance
+
+- Use the default configuration unless you have a specific format, allocator, parallelism, or stream behavior to change.
+- Clone configuration for targeted overrides instead of mutating global defaults.
+- Restrict formats at trust boundaries when your workload only supports a known subset.
+- Profile before changing allocator, buffer, or parallelism settings.

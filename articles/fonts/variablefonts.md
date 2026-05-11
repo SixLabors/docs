@@ -119,3 +119,10 @@ Variable fonts are especially useful when you want to:
 - keep a single family while exploring many design-space instances
 
 If you run into unexpected results, see [Troubleshooting](troubleshooting.md).
+
+### Practical guidance
+
+- Inspect available axes before exposing variation controls.
+- Store axis tags and values with the chosen font family so output can be reproduced.
+- Use optical size intentionally; it is not just another scale factor.
+- Fall back gracefully when a configured axis is missing from a replacement font.

@@ -109,3 +109,11 @@ If `bgcolor` is omitted and the output format cannot represent alpha, transparen
 - [Securing Requests](security.md)
 - [Tag Helpers](taghelpers.md)
 - [Extensibility](extensibility.md)
+
+## Practical Guidance
+
+Command order is part of the processing contract. ImageSharp.Web runs processors in the order their first recognized command appears, so URL generation should be treated like pipeline construction. If a custom watermark should happen after resize, generate the resize command first and the watermark command later.
+
+For normal web delivery, leave auto-orientation enabled unless preserving raw source orientation is intentional. For transparent images converted to opaque formats, specify a background color explicitly so output is predictable across encoders and future defaults.
+
+Before exposing command URLs publicly, decide whether clients should have a free-form transformation API. HMAC protects generated URLs, while presets reduce the command surface itself. Many applications want both: presets for a small public vocabulary and signing to prevent tampering.

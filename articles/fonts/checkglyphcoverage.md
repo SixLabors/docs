@@ -44,3 +44,10 @@ Glyph coverage is only the first question. A font can contain glyphs for individ
 Emoji and complex scripts are the usual cases where this distinction matters. A visible emoji can be a grapheme made from several code points, and Arabic, Indic, or Southeast Asian scripts can require shaping features that are not captured by a one-code-point probe.
 
 For the conceptual fallback guidance, see [Fallback Fonts and Multilingual Text](fallbackfonts.md). For face-level coverage inspection, see [Font Metrics](fontmetrics.md).
+
+### Practical guidance
+
+- Use coverage checks to choose fallback candidates, not to prove final rendered quality.
+- Test grapheme clusters such as emoji sequences as whole strings with production layout options.
+- Prefer face-level coverage inspection when building diagnostics or font picker tooling.
+- Keep fallback order intentional so broad-coverage fonts do not hide preferred design choices.

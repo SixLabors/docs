@@ -229,3 +229,10 @@ Use [`FontMetrics`](xref:SixLabors.Fonts.FontMetrics) when you care about:
 - direct glyph inspection
 
 For face names and other descriptive metadata, see [Font Metadata and Inspection](fontmetadata.md). For variable-font usage, see [Variable Fonts](variablefonts.md).
+
+### Practical guidance
+
+- Use font metrics when layout, decoration, glyph coverage, or variation axes matter.
+- Use font descriptions when the question is identity, naming, style, or version metadata.
+- Treat glyph availability as a layout input, not as a guarantee of final script quality.
+- Cache metrics-derived decisions with the font face and variation values that produced them.

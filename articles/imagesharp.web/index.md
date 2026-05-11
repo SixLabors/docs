@@ -115,3 +115,10 @@ When enabled, ImageSharp.Web adds implicit `global using` directives for:
 - `SixLabors.ImageSharp.Web`
 
 You can turn this off by removing the property or setting it to `false`.
+
+## How to Use These Docs
+
+- Start with getting started and processing commands to understand the default request pipeline.
+- Read configuration, providers, and caches before deploying beyond a single local filesystem setup.
+- Read security before exposing arbitrary command URLs to clients.
+- Use extensibility only after choosing which pipeline stage actually owns the behavior you need.

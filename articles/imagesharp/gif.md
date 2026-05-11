@@ -8,6 +8,12 @@ In ImageSharp, GIF encoding is built on a quantizing animated encoder, which mea
 
 GIF is fundamentally a palette format. Each frame is limited to indexed colors rather than storing full true-color pixel data, which is why quantization and palette choice matter so much.
 
+GIF stores each pixel as an index into a color table. A frame can use a global color table shared by the animation or a local color table for that frame. That design keeps the format simple and compatible, but it means full-color source images must be reduced to a limited palette before they can be written.
+
+Transparency in GIF is also index based. A palette entry can be treated as transparent, but GIF does not have smooth per-pixel alpha like PNG or WebP. Soft edges, shadows, and semitransparent UI elements can therefore look jagged or require a matte color baked into the pixels.
+
+Animation behavior is controlled by frame metadata. Frame delay, disposal mode, transparency index, repeat count, and color table mode all affect how the animation plays. When a converted GIF looks wrong, the issue is often frame metadata rather than the pixels alone.
+
 A few practical implications:
 
 - GIF is well known and widely compatible for simple animations.
@@ -53,6 +59,10 @@ Because `GifEncoder` inherits from [`QuantizingAnimatedImageEncoder`](xref:SixLa
 - `Quantizer`
 - `PixelSamplingStrategy`
 - `TransparentColorMode`
+
+A global palette can keep animation output more consistent and can reduce overhead when frames share a similar color set. Local palettes can improve quality when frames differ significantly, but they can increase file size and make palette behavior harder to reason about. Choose based on the animation, not as a fixed rule.
+
+`RepeatCount` controls looping. A value of `0` represents infinite looping in normal GIF usage. Frame delays are stored on frame metadata, so set them on the frames whose timing matters rather than assuming the encoder will infer the intended animation speed.
 
 ## Quantization and Palette Control
 
@@ -134,3 +144,11 @@ GIF is usually a poor fit when:
 - You need modern transparency behavior.
 
 For a step-by-step multi-frame workflow, see [Working with Animations](animations.md). For a more modern animated format, see [WebP](webp.md).
+
+## Practical Guidance
+
+Use GIF for compatibility. It remains useful for simple looping animations and legacy-friendly workflows, but it is palette-constrained and rarely the most efficient modern animated format.
+
+Control quantization deliberately because GIF quality depends heavily on palette choice. Gradients, photos, and subtle color changes can degrade quickly if the palette is poorly matched. Dithering can hide banding, but it can also add visible texture.
+
+When converting existing animations, inspect frame delay, disposal mode, transparency, and repeat count. Those values define the animation behavior just as much as the pixels do. Prefer animated WebP or APNG when modern compression, alpha behavior, or color quality matters more than legacy support.

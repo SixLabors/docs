@@ -6,15 +6,16 @@ export default {
       return;
     }
 
-    // API reference pages contain many generated signature blocks. Keep the
-    // framed treatment for authored article pages.
-    if (document.body.dataset.yamlMime === "ManagedReference") {
-      return;
-    }
-
     const article = document.querySelector("article");
     if (!article) {
       return;
+    }
+
+    const isApiReference = document.body.dataset.yamlMime === "ManagedReference";
+
+    for (const codeWrapper of article.querySelectorAll(".codewrapper")) {
+      // API reference pages wrap generated pre blocks in codewrapper containers.
+      codeWrapper.dataset.bsTheme = "dark";
     }
 
     for (const pre of article.querySelectorAll("pre")) {

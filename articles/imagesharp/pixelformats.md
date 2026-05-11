@@ -56,3 +56,11 @@ In practice, custom `TPixel` types should still fit the same RGBA-compatible con
 ## Single-Bit Monochrome Pixels
 
 ImageSharp does not currently support sub-byte `TPixel` formats such as a true 1-bit pixel type. That trade-off keeps the processing model and API surface much simpler, and it avoids paying a heavy CPU cost across the rest of the pipeline for a niche storage optimization.
+
+## Choosing a Working Pixel Format
+
+Use `Image<Rgba32>` as the default when you need predictable direct pixel access and no special memory or precision constraint pushes you elsewhere. It is a practical working format for composition, overlays, custom row processing, and interop with APIs that expect RGBA-like data.
+
+Choose lower-memory formats only when the missing channels or precision are genuinely unnecessary. `L8` is a good fit for masks and grayscale analysis; `Rgb24` can be useful when alpha is not part of the workflow. Choose higher-precision formats because the processing pipeline benefits from them, such as repeated color transforms or high-bit-depth output, not simply because the source file is "high quality".
+
+Pixel format and color profile are related but separate decisions. `Image<Rgba32>` tells you the in-memory channel layout and numeric representation; ICC and CICP handling tell you how color values should be interpreted or converted. A robust pipeline chooses both deliberately.

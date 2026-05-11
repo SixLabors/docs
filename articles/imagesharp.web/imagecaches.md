@@ -2,6 +2,8 @@
 
 ImageSharp.Web caches processed output so that identical requests do not repeatedly decode, process, and re-encode the source image. The cache stores both the encoded bytes and metadata about the source and response so the middleware can detect stale entries and serve correct headers.
 
+Think of the cache as derived output, not source-of-truth storage. It should be safe to clear and rebuild, but it must be configured carefully enough that all application instances agree on keys, freshness, and storage location.
+
 ## How the Cache Works
 
 For each processed request, the middleware:
@@ -42,6 +44,8 @@ ImageSharp.Web tracks two different lifetimes:
 - [`ImageSharpMiddlewareOptions.CacheMaxAge`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.CacheMaxAge) controls how long the processed result stays valid in the backend cache.
 
 If the source provider supplies a source `Cache-Control` max-age, that value overrides `BrowserMaxAge` for the response.
+
+Set browser lifetime based on how long clients may keep a response without revalidation. Set backend cache lifetime based on how long your server-side derived output should be trusted before checking the source again. Those are related, but they are not the same operational decision.
 
 ## Cache Keys and Hashes
 
@@ -143,6 +147,14 @@ builder.Services.AddImageSharp()
 ```
 
 Cached objects use the hashed request key as the object key, and the response metadata needed by the middleware is stored with the object.
+
+## Practical Guidance
+
+Treat the cache as derived output. It should be safe to clear and rebuild, but it must be separate from source storage so cleanup jobs cannot delete originals. In single-instance deployments a physical cache may be enough; in multi-instance deployments, use shared storage when all instances should reuse the same processed variants.
+
+Cache lifetime has two audiences. Browser lifetime controls how long clients may reuse a response without coming back. Backend cache lifetime controls how long the server trusts a generated variant before checking source freshness. Those values should match source update frequency, CDN behavior, and the cost of regeneration.
+
+If you customize cache keys, include every output-affecting request detail. Host, tenant, preset expansion, command values, and source path can all matter depending on the application. Monitor cache growth when public URLs expose many dimensions or quality values, because variant counts can grow faster than source image counts.
 
 ## Related Topics
 

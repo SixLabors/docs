@@ -60,7 +60,7 @@ The main shaping controls are:
 - [`LayoutMode`](xref:SixLabors.Fonts.TextOptions.LayoutMode) for horizontal and vertical layout behavior
 - [`FeatureTags`](xref:SixLabors.Fonts.TextOptions.FeatureTags) to request additional OpenType features such as fractions or tabular figures
 - [`KerningMode`](xref:SixLabors.Fonts.TextOptions.KerningMode) to enable or disable font-provided kerning during shaping
-- [`Tracking`](xref:SixLabors.Fonts.TextOptions.Tracking) to add uniform letter spacing after the font's own spacing behavior
+- [`Tracking`](xref:SixLabors.Fonts.TextOptions.Tracking) to add uniform em-based spacing after rendered graphemes, after the font's own spacing behavior
 - [`FallbackFontFamilies`](xref:SixLabors.Fonts.TextOptions.FallbackFontFamilies) when the main font does not cover every glyph you need
 - [`TextRuns`](xref:SixLabors.Fonts.TextOptions.TextRuns) when different text ranges need different fonts, attributes, or decorations
 

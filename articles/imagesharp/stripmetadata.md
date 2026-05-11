@@ -52,3 +52,10 @@ This approach is useful when you want to inspect or edit metadata before decidin
 - If orientation matters, call `AutoOrient()` before stripping EXIF orientation metadata so the pixels are physically normalized.
 
 For more detail, see [Working with Metadata](metadata.md).
+
+## Practical Guidance
+
+- Use encoder-level `SkipMetadata` when the output should simply omit metadata.
+- Clear profiles manually when you need to inspect, keep, or remove specific metadata groups.
+- Convert or preserve color profiles intentionally before stripping ICC or CICP data.
+- Apply `AutoOrient()` before stripping EXIF orientation metadata when display orientation matters.

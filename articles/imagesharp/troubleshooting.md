@@ -130,3 +130,10 @@ When an image pipeline misbehaves, this order is usually productive:
 - [Configuration](configuration.md)
 - [Memory Management](memorymanagement.md)
 - [Interop and Raw Memory](interop.md)
+
+## Practical Guidance
+
+- Start by separating encoded-format detection, metadata inspection, full decode, and processing.
+- Check stream position and configuration before assuming a codec bug.
+- Use identify-based memory estimates before decoding large or untrusted images.
+- Reduce the failing pipeline to the first processor or interop boundary that changes behavior.

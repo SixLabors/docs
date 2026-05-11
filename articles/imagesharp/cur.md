@@ -8,6 +8,10 @@ ImageSharp exposes CUR-specific APIs through [`CurEncoder`](xref:SixLabors.Image
 
 CUR is best thought of as a cursor container rather than a normal image file format.
 
+CUR shares much of the icon-container shape with ICO, but cursor files add hotspot coordinates. The hotspot is the active point of the cursor: for an arrow it is normally the tip; for a crosshair it may be the center. If the hotspot is wrong, the image can look correct while clicking and hit testing feel wrong.
+
+Like ICO, a CUR file can contain multiple embedded images for different sizes. Consumers can choose a frame based on display scale or cursor size. Hotspot metadata is per frame, so every embedded cursor image needs correct hotspot coordinates.
+
 A few practical implications:
 
 - Existing CUR files can contain one or more cursor images.
@@ -43,6 +47,8 @@ The most useful CUR-specific values live on [`CurFrameMetadata`](xref:SixLabors.
 
 [`CurMetadata`](xref:SixLabors.ImageSharp.Formats.Cur.CurMetadata) mirrors the root frame's compression, bit depth, and color-table information at the image level.
 
+Treat hotspot coordinates as part of the user interaction contract. They should be chosen from the cursor design, not copied blindly from another size unless the coordinate scales correctly.
+
 ## Read CUR Metadata
 
 Use `Image.Identify()` when you want cursor metadata without a full decode:
@@ -76,3 +82,10 @@ CUR is usually a poor fit when:
 - You want broad compatibility outside Windows cursor workflows.
 
 For Windows icon assets without cursor hotspots, see [ICO](ico.md).
+
+## Practical Guidance
+
+- Treat hotspot coordinates as part of the cursor asset, not incidental metadata.
+- Validate all embedded frames when generating multi-size cursor files.
+- Use CUR only when the output is meant to behave as a cursor.
+- Use ICO, PNG, or another ordinary image format when hotspot metadata is not required.

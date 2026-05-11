@@ -1,8 +1,16 @@
 # Brushes and Pens
 
-Brushes fill covered pixels. Pens define the outline generated when you stroke a path, line, or shape.
+Brushes and pens separate *coverage* from *style*. A shape, path, text glyph, or generated stroke decides which pixels are covered. The brush then shades those covered pixels using a solid color, gradient, repeated pattern, image tile, or other brush source.
+
+Pens are built on top of brushes. A pen does not directly paint a centerline; it expands the source line, path, or shape into stroke geometry using the pen width, caps, joins, miter limit, and dash pattern. That generated outline is then filled with the pen's brush. This matters when you debug output: stroke shape problems belong to `StrokeOptions`, while color, gradient, hatch, and image-fill problems belong to the brush.
+
+Brushes and pens are recorded as part of canvas drawing intent, so keep any referenced resources alive until the canvas has replayed. This is especially important for `ImageBrush<TPixel>`, which references the source image rather than taking ownership of it.
 
 ## Solid Brushes and Pens
+
+Solid brushes and solid pens are the simplest styling objects. Use them for flat fills, outlines, guides, and most annotation work. The same brush can be used directly in `Fill(...)` or as the fill used by a pen stroke.
+
+The pen width is expressed in the path's local coordinate space before the active drawing transform is applied. If you save a scaled transform on the canvas, the stroke geometry is prepared with that state during replay, so a scaled drawing state can scale the visible stroke as well as the path.
 
 ```csharp
 using SixLabors.ImageSharp;
@@ -19,15 +27,16 @@ image.Mutate(ctx => ctx.Paint(canvas =>
     canvas.Fill(Brushes.Solid(Color.LightSkyBlue), panel);
     canvas.Draw(Pens.Solid(Color.Navy, 4), panel);
 
-    EllipsePolygon ellipse = new(new PointF(230, 118), new SizeF(118, 72));
-    canvas.Fill(Brushes.Solid(Color.Gold), ellipse);
-    canvas.Draw(Pens.Solid(Color.DarkOrange, 5), ellipse);
+    canvas.FillEllipse(Brushes.Solid(Color.Gold), new(230, 118), new(118, 72));
+    canvas.DrawEllipse(Pens.Solid(Color.DarkOrange, 5), new(230, 118), new(118, 72));
 }));
 ```
 
 ## Pattern Brushes and Pattern Pens
 
-The [`Brushes`](xref:SixLabors.ImageSharp.Drawing.Processing.Brushes) and [`Pens`](xref:SixLabors.ImageSharp.Drawing.Processing.Pens) factories include common hatch and dash styles.
+Pattern brushes are small repeating color matrices. The built-in hatch helpers on [`Brushes`](xref:SixLabors.ImageSharp.Drawing.Processing.Brushes) create common foreground/background matrices such as horizontal, vertical, diagonal, and percentage patterns. Use a transparent background when the pattern should sit over existing pixels, or pass an opaque background color when the pattern should fully cover the area.
+
+Pattern pens combine the same stroke-generation model as other pens with a dash pattern. [`Pens.Dash(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.Pens.Dash*), [`Pens.Dot(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.Pens.Dot*), [`Pens.DashDot(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.Pens.DashDot*), and [`Pens.DashDotDot(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.Pens.DashDotDot*) are convenience factories for the common sequences. Pass a brush instead of a color when the stroke itself should be filled with a gradient, hatch, or image pattern.
 
 ```csharp
 using SixLabors.ImageSharp;
@@ -91,7 +100,9 @@ image.Mutate(ctx => ctx.Paint(canvas =>
 
 ## Gradient Brushes
 
-Gradient brushes shade fills across space. Use color stops to describe the gradient ramp.
+Gradient brushes shade covered pixels from positions in canvas space. The color stops describe the ramp, and the brush geometry describes how that ramp is mapped into the drawn area. A linear gradient moves along a line between two points. A radial gradient expands from a center point and radius. Repetition mode controls what happens outside the primary gradient span: clamp to the edge colors, repeat the ramp, or reflect it.
+
+Because the brush is evaluated over the covered pixels, the same gradient can be reused across several shapes to make them appear lit by one continuous source. If each shape needs its own independent gradient, create a brush whose points and radius match that shape instead of sharing one global brush.
 
 ```csharp
 using SixLabors.ImageSharp;
@@ -117,12 +128,10 @@ RadialGradientBrush radial = new(
     new(0F, Color.Orange),
     new(1F, Color.MediumVioletRed.WithAlpha(0.25F)));
 
-EllipsePolygon radialShape = new(new PointF(306, 116), new SizeF(156, 112));
-
 image.Mutate(ctx => ctx.Paint(canvas =>
 {
     canvas.Fill(linear, new Rectangle(24, 24, 190, 132));
-    canvas.Fill(radial, radialShape);
+    canvas.FillEllipse(radial, new(306, 116), new(156, 112));
 }));
 ```
 
@@ -169,7 +178,9 @@ image.Mutate(ctx => ctx.Paint(canvas =>
 
 ## Stroke Shape Options
 
-`StrokeOptions` controls how outlines are generated before rasterization.
+`StrokeOptions` controls the geometry produced before the pen's brush is applied. `LineCap` affects the ends of open paths and line segments. `LineJoin` affects corners where segments meet. `MiterLimit` limits how far sharp miter joins can extend before the join falls back to a bevel-style shape. `ArcDetailScale` controls the detail used when rounded joins and caps are converted into geometry.
+
+Use stroke options when the outline itself is wrong: squared ends, overly sharp corners, clipped-looking miters, or rounded joins that need more detail. Use a different brush when the outline shape is correct but the stroke color, gradient, pattern, or image fill is wrong.
 
 ```csharp
 using SixLabors.ImageSharp;
@@ -243,7 +254,7 @@ using SixLabors.ImageSharp.Processing;
 
 using Image<Rgba32> image = new(420, 240, Color.White.ToPixel<Rgba32>());
 
-EllipsePolygon clip = new(new PointF(210, 120), new SizeF(300, 150));
+EllipsePolygon clip = new(210, 120, 300, 150);
 LinearGradientBrush brush = new(
     new PointF(40, 40),
     new PointF(380, 200),
@@ -270,3 +281,9 @@ image.Mutate(ctx => ctx.Paint(canvas =>
     canvas.Draw(Pens.Solid(Color.DarkSlateGray, 2), clip);
 }));
 ```
+
+## Practical Guidance
+
+Brushes and pens answer different questions. A brush shades covered pixels. A pen describes how a stroke outline is generated and how that outline is filled. Keeping that distinction clear prevents a lot of awkward geometry code: cap, join, miter, dash, and stroke-width decisions belong on the pen, not in hand-built outline paths.
+
+Create reusable pens and brushes when the same style appears across many commands. That keeps examples readable and production drawing code easier to audit. Use canvas clipping state when a style should be constrained to a region; clipping is part of drawing state, not something each brush or pen needs to know about.

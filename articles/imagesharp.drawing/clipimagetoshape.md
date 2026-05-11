@@ -4,6 +4,12 @@ Use `Save(DrawingOptions, params IPath[])` with `BooleanOperation.Intersection` 
 
 The important idea is that clipping is canvas state. Once saved, the clip applies to every later command until `Restore()` is called. Draw the clipped image while that state is active, then restore before drawing borders, labels, shadows, or other elements that should sit outside the mask.
 
+Think about the image placement and the mask separately. The clip path decides where pixels are allowed to appear. The `DrawImage(...)` destination rectangle decides how the source image is cropped and scaled into the canvas. Matching the destination rectangle to the shape bounds gives predictable avatar-style crops; using a larger rectangle intentionally zooms or pans the source behind the mask.
+
+Clipping is also stateful, so restore as soon as the clipped drawing is complete. If you forget to restore, later borders, shadows, and labels will be clipped too, which often looks like missing drawing rather than a clipping bug.
+
+The clip path and destination rectangle do not need to be identical, but they should be chosen deliberately. Equal bounds give a simple fit. A larger destination rectangle zooms the source behind the mask. An offset destination rectangle pans the source without moving the mask. That separation is what lets one avatar shape support several crop choices.
+
 ```csharp
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Drawing;
@@ -51,3 +57,7 @@ Use a destination rectangle that matches the visible shape bounds when you want 
 - [Clipping, Regions, and Layers](clippingregionslayers.md)
 - [Images, Masks, and Processing](imagesandprocessing.md)
 - [Troubleshooting](troubleshooting.md)
+
+## Practical Guidance
+
+Save clipped state only around the commands that should be constrained, then restore before drawing borders, labels, or shadows that should sit outside the clip. Keep the source image alive until canvas replay has finished. Match the destination rectangle to the visible shape unless an intentional zoom or bleed is required.

@@ -186,3 +186,11 @@ Fonts uses additional Unicode logic internally during layout, including line-bre
 - `CodePoint`
 
 If you are debugging a `TextRun` range, a missing glyph, or a mismatch between visible text and string indices, start by checking whether you are reasoning in `char`, `CodePoint`, or grapheme units.
+
+### Practical guidance
+
+Use grapheme indexes for user-visible ranges: styling, selection, caret movement, placeholder insertion, and rich text runs. That is the unit closest to what a person thinks of as one visible text element, even when it is made from multiple code points.
+
+Use code points when the question is about Unicode scalar values: probing glyph availability, inspecting script coverage, or understanding encoded sequence length. Use UTF-16 indexes only when interoperating with raw .NET string storage or APIs that explicitly require `char` offsets.
+
+Never assume visible characters, code points, and UTF-16 code units have the same count. That assumption is the root cause of most off-by-one text range bugs in emoji, combining marks, and complex scripts.

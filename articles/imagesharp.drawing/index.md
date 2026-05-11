@@ -1,13 +1,11 @@
 # Introduction
 
 ### What is ImageSharp.Drawing?
-ImageSharp.Drawing is a library built on top of ImageSharp to provide 2D drawing extensions.
+ImageSharp.Drawing is the high-performance 2D drawing layer for ImageSharp. It adds vector geometry, strokes, fills, text rendering, image composition, clipping, layers, and optional WebGPU-backed rendering while keeping the same cross-platform, managed-code deployment model as ImageSharp.
 
-ImageSharp.Drawing is designed from the ground up to be high-performance, flexible, and extensible. It provides vector geometry, brush and pen styling, canvas drawing, image compositing, and text rendering building blocks for custom images.
+The core model is deliberately small: geometry describes coverage, brushes and pens describe how pixels are produced, drawing options describe state, and [`DrawingCanvas`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas) records ordered drawing work into a replay timeline. That makes the same drawing code useful for one-off image generation, templated graphics, server-side rendering, retained backend scenes, and GPU-backed output.
 
-The core model is deliberately small: geometry describes coverage, brushes and pens describe how pixels are produced, drawing options describe state, and [`DrawingCanvas`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas) records commands that are replayed into an ImageSharp processing pipeline. That makes the same drawing code useful for one-off image generation, templated graphics, server-side rendering, retained canvas scenes, and GPU-backed output.
-
-Read the articles as a progression. Start with the canvas workflow, learn the geometry and styling types, then move into text, image composition, transforms, and WebGPU when the job needs them.
+Read the articles as a progression. Start with the canvas workflow because replay, state, and lifetime explain the rest of the API. Then learn geometry, brushes, pens, clipping, text, image composition, transforms, and WebGPU as separate pieces that combine into one drawing pipeline.
 
 ### Start Here
 
@@ -20,7 +18,11 @@ Read the articles as a progression. Start with the canvas workflow, learn the ge
 - [Images, Masks, and Processing](imagesandprocessing.md) covers [`DrawImage(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.DrawImage*), image brushes, clipping masks, and [`Apply(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.Apply*).
 - [Transforms and Composition](transformsandcomposition.md) covers transforms, blending, alpha composition, and antialiasing.
 - [Drawing Text](text.md) covers [`RichTextOptions`](xref:SixLabors.ImageSharp.Drawing.Processing.RichTextOptions), measuring, and text along paths.
-- [WebGPU](webgpu.md) covers GPU-backed windows, external surfaces, and offscreen render targets.
+- [WebGPU](webgpu.md) introduces GPU-backed drawing targets and links to the focused WebGPU pages.
+- [WebGPU Environment and Support](webgpuenvironment.md) covers startup configuration, availability probes, compute-pipeline checks, and native error logging.
+- [WebGPU Window Rendering](webgpuwindow.md) covers `WebGPUWindow`, frame loops, window state, framebuffer sizing, and presentation.
+- [WebGPU External Surfaces](webgpuexternalsurface.md) covers `WebGPUExternalSurface`, native surface hosts, host-owned resize, and frame acquisition.
+- [WebGPU Offscreen Render Targets](webgpurendertarget.md) covers `WebGPURenderTarget`, offscreen canvases, texture formats, and readback.
 - [Migrating from System.Drawing](migratingfromsystemdrawing.md) maps common GDI+ drawing concepts to ImageSharp.Drawing.
 - [Migrating from SkiaSharp](migratingfromskiasharp.md) maps common SkiaSharp drawing concepts to ImageSharp.Drawing.
 - [Recipes](recipes.md) provides copy-pasteable solutions for common drawing tasks.
@@ -104,3 +106,10 @@ dotnet publish -p:SixLaborsLicenseKey="$SIXLABORS_LICENSE_KEY"
 ```
 
 Build as normal after the file or property is configured. If the license is missing or invalid, the build fails with a clear error. You do not need to reference the licensing package directly; it is carried by Six Labors libraries.
+
+### How to Use These Docs
+
+- Start with the canvas model, because replay, state, and lifetime explain the rest of the API.
+- Use paths and brushes pages when geometry and styling decisions are still unclear.
+- Use text and image-processing pages when drawing must combine rich text, source images, clipping, and effects.
+- Use WebGPU pages only when the output target genuinely benefits from GPU-backed rendering.

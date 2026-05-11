@@ -19,6 +19,8 @@ image.Mutate(x => x.Grayscale());
 
 ImageSharp also supports [`GrayscaleMode`](xref:SixLabors.ImageSharp.Processing.GrayscaleMode) when you need a specific conversion mode.
 
+Grayscale conversion is not just averaging red, green, and blue. Different modes weight channels differently, and those choices affect perceived brightness. Use a specific `GrayscaleMode` when output must match a known visual or analytical expectation.
+
 ## Apply a Sepia Tone
 
 Use `Sepia()` for a classic warm-tone effect:
@@ -49,6 +51,8 @@ image.Mutate(x => x
 
 Values greater than `1` increase the effect. Values less than `1` reduce it.
 
+Brightness and contrast are simple global operations. They are useful for quick output tuning, but they do not replace tone mapping, exposure recovery, or color-managed workflows. Apply them after geometry changes when the effect is meant for the final exported image.
+
 ## Shift Hue and Saturation
 
 Use `Hue()` and `Saturate()` when you want to push color balance or intensity:
@@ -64,6 +68,8 @@ image.Mutate(x => x
     .Saturate(1.25F));
 ```
 
+Hue shifts rotate color relationships, while saturation changes color intensity. Both can create out-of-gamut or unnatural-looking results if pushed too far. Use small values for photographic correction and stronger values for intentional stylized output.
+
 ## Adjust Opacity
 
 Use `Opacity()` to reduce alpha values across the image:
@@ -78,6 +84,8 @@ image.Mutate(x => x.Opacity(0.5F));
 ```
 
 This is most useful when working with images that already include transparency.
+
+Opacity changes alpha values; it does not composite the image onto a background. If the final format cannot store alpha, use `BackgroundColor()` or another compositing step before saving.
 
 ## Use ColorMatrix for Custom Filters
 
@@ -147,3 +155,7 @@ As with other processors, order matters when combining effects.
 - [Processing Images](processing.md)
 - [Rotate, Flip, and Auto-Orient](orientation.md)
 - [Crop, Pad, and Canvas](cropandcanvas.md)
+
+## Practical Guidance
+
+Apply color effects after geometry changes when the effect is output-specific. Keep source images in a suitable working color space before judging color adjustments, and use explicit encoder settings afterward so compression does not hide the result you tuned. Test effects on representative images, because a setting that flatters one sample can damage skin tones, brand colors, gradients, or shadows elsewhere.

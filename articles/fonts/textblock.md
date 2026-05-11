@@ -110,3 +110,11 @@ Use `TextBlock` when:
 - You want to measure once and render later with the same prepared shaping.
 - You need per-line interaction (hit testing, carets, selection) — see [Hit Testing and Caret Movement](texthittesting.md).
 - You want to walk the laid-out text line by line without materializing every line up front.
+
+### Practical guidance
+
+Use `TextMeasurer` for one-off answers. Use `TextBlock` when the shaped text becomes state: it will be measured more than once, rendered later, inspected line by line, hit-tested, or used for caret and selection behavior. Preparing the block once keeps measurement and rendering tied to the same shaping result.
+
+The line-layout APIs differ by coordinate model. `GetLineLayouts(...)` returns lines positioned as one stacked block, which is what you want when the text paints as a normal paragraph or label. `EnumerateLineLayouts()` returns line-local layouts, which is what you want when another system places each line into columns, frames, paths, or virtualized rows. Choosing the wrong one usually shows up as doubled offsets or lines that are positioned correctly by themselves but not as a block.
+
+Keep the prepared block tied to the `TextOptions` that created it. If font, culture, fallback, feature tags, or direction changes, prepare a new block rather than trying to reuse old layout state.

@@ -143,3 +143,10 @@ public TextDecorations EnabledDecorations()
 ```
 
 This makes it possible to render underline, overline, or strikeout using the same backend as the glyph outlines.
+
+### Practical guidance
+
+- Implement only the renderer callbacks your backend can honor correctly.
+- Keep layout in Fonts and rendering in your backend; do not recompute shaping inside the renderer.
+- Honor layer and paint callbacks when color-font output matters.
+- Use decoration callbacks instead of drawing underlines from guessed metrics.

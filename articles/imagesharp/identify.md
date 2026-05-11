@@ -99,3 +99,10 @@ Console.WriteLine(imageInfo.Height);
 - Identification is not a replacement for decode-time error handling. It is a cheap preflight step; malformed input can still fail later when pixels are decoded.
 
 For more detail, see [Loading, Identifying, and Saving](loadingandsaving.md), [Working with Metadata](metadata.md), [Convert Between Formats](formatconversion.md), and [Pixel Formats](pixelformats.md).
+
+## Practical Guidance
+
+- Use `DetectFormat(...)` for routing by encoded format only.
+- Use `Identify(...)` when dimensions, frame count, pixel type, or metadata affect the decision.
+- Use `GetPixelMemorySize()` before decoding untrusted or very large inputs.
+- Still handle decode failures; identification is preflight, not a guarantee that the full image is valid.

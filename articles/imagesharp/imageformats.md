@@ -179,3 +179,10 @@ The right encoder settings depend on the tradeoff you want to make between:
 - Image quality
 
 The format-specific pages below are the best place to start when you need to tune those tradeoffs.
+
+## Practical Guidance
+
+- Use explicit encoders when output behavior matters; file extensions are convenient but hide important defaults.
+- Inspect the source with `Identify(...)` before conversion when alpha, animation, bit depth, or metadata changes the output decision.
+- Treat metadata as part of format conversion: orientation, ICC profiles, animation timing, and comments may or may not survive a target format.
+- Register only the formats your application needs when you want a smaller or more controlled decoding surface.

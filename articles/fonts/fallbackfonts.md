@@ -108,3 +108,10 @@ If a script needs shaping support, make sure the selected font actually supports
 - Mixing many broad-coverage fonts can make fallback order hard to reason about.
 
 If layout still looks wrong after fallback is configured, see [Troubleshooting](troubleshooting.md).
+
+### Practical guidance
+
+- Put the preferred design family first, then add fallbacks in the order you want missing glyphs to be searched.
+- Use `TextRuns` when a specific grapheme range must use a specific font rather than normal fallback.
+- Validate fallback with real content, especially emoji, RTL text, CJK text, and combining marks.
+- Remember that fallback solves missing glyphs; it does not guarantee matching style, metrics, or shaping behavior.

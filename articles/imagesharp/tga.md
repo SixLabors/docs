@@ -8,6 +8,10 @@ ImageSharp exposes TGA-specific APIs through [`TgaEncoder`](xref:SixLabors.Image
 
 TGA is best thought of as a simple raster format for tooling and interchange.
 
+TGA is common in graphics pipelines because it is straightforward and historically supported by many tools. It can store 8, 16, 24, or 32-bit output, and the alpha-channel bit count is part of the metadata story. That makes it useful when an asset pipeline expects a simple raster file with predictable channel layout.
+
+Run-length encoding can reduce file size for images with repeated runs of pixels, such as flat-color artwork or masks. It is much less useful for noisy images or photographs. Choose compression based on the assets being exchanged and the expectations of the consuming tool.
+
 A few practical implications:
 
 - ImageSharp can write TGA output at 8, 16, 24, or 32 bits per pixel.
@@ -38,6 +42,8 @@ The most commonly used `TgaEncoder` options are:
 
 - `BitsPerPixel` controls the encoded TGA bit depth.
 - `Compression` switches between uncompressed and run-length encoded output.
+
+Bit depth controls more than file size. A 32-bit TGA can carry alpha, while lower bit depths may not represent the same source data. Check `AlphaChannelBits` when moving assets through tools that care about alpha channels.
 
 ## Read TGA Metadata
 
@@ -73,3 +79,10 @@ TGA is usually a poor fit when:
 - You need richer metadata or broader ecosystem support.
 
 For ordinary web or application output, [PNG](png.md), [JPEG](jpeg.md), and [WebP](webp.md) are usually better starting points.
+
+## Practical Guidance
+
+- Use TGA when an asset pipeline or graphics toolchain explicitly expects it.
+- Check alpha-channel bit depth when moving assets between tools.
+- Keep an editable source format alongside generated TGA assets.
+- Prefer PNG, JPEG, or WebP for application and web delivery.

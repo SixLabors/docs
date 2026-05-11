@@ -1,6 +1,6 @@
 # Paths and Shapes
 
-ImageSharp.Drawing separates geometry from painting. Shapes and paths describe where drawing happens; brushes and pens describe how pixels are shaded.
+ImageSharp.Drawing separates geometry from painting. Shapes and paths describe where drawing happens; brushes and pens describe how pixels are shaded. Keeping that split clear makes drawing code easier to reuse: the same path can be filled, stroked, clipped, measured, transformed, used as a text baseline, or combined with other paths without duplicating the styling code.
 
 The core geometry types are:
 
@@ -16,7 +16,9 @@ The core geometry types are:
 
 ## Built-In Shapes
 
-Built-in shape types are closed paths. They can be filled directly and stroked with a pen.
+Built-in shape types are closed paths with a clear geometric meaning. Use them when the shape is part of the drawing model, not just a one-off primitive call. For example, an ellipse object can be reused for fill, stroke, clipping, hit testing, and layout bounds, while a primitive `DrawEllipse(...)` call only records that one drawing command.
+
+The shape constructors use the coordinate model of the shape itself. Rectangle-like shapes use a position and size. Ellipses, regular polygons, stars, and pies are normally expressed from a center point plus radii or size. If a translated example looks offset, check whether the source API used top-left bounds while the ImageSharp.Drawing shape expects a center.
 
 ```csharp
 using SixLabors.ImageSharp;
@@ -27,9 +29,9 @@ using SixLabors.ImageSharp.Processing;
 
 using Image<Rgba32> image = new(420, 260, Color.White.ToPixel<Rgba32>());
 
-EllipsePolygon ellipse = new(new PointF(120, 110), new SizeF(160, 96));
+EllipsePolygon ellipse = new(120, 110, 160, 96);
 StarPolygon star = new(x: 292, y: 128, prongs: 7, innerRadii: 34, outerRadii: 72);
-PiePolygon pie = new(new PointF(120, 202), new SizeF(120, 86), startAngle: -30, sweepAngle: 245);
+PiePolygon pie = new(120, 202, radiusX: 120, radiusY: 86, startAngle: -30, sweepAngle: 245);
 
 image.Mutate(ctx => ctx.Paint(canvas =>
 {
@@ -46,7 +48,7 @@ image.Mutate(ctx => ctx.Paint(canvas =>
 
 ## Open and Closed Paths
 
-Open paths are useful for strokes, polylines, and curved baselines. Closed paths enclose an area and are the normal input for fills.
+Open paths are useful for strokes, polylines, and curved baselines. Closed paths enclose an area and are the normal input for fills. The distinction affects both fill behavior and stroke joins: a closed figure has a final join between the last and first segment, while an open figure has start and end caps.
 
 [`Path`](xref:SixLabors.ImageSharp.Drawing.Path) is open by default. [`Polygon`](xref:SixLabors.ImageSharp.Drawing.Polygon) is closed. [`PathBuilder.CloseFigure()`](xref:SixLabors.ImageSharp.Drawing.PathBuilder.CloseFigure) closes the current figure before starting the next one.
 
@@ -169,7 +171,7 @@ Polygon outer = new(
     new PointF(60, 204)
 ]);
 
-EllipsePolygon hole = new(new PointF(210, 120), new SizeF(178, 96));
+EllipsePolygon hole = new(210, 120, 178, 96);
 ComplexPolygon complex = new(outer, hole);
 
 DrawingOptions options = new()
@@ -229,7 +231,7 @@ using SixLabors.ImageSharp.Processing;
 
 using Image<Rgba32> image = new(420, 240, Color.White.ToPixel<Rgba32>());
 
-EllipsePolygon subject = new(new PointF(190, 120), new SizeF(260, 154));
+EllipsePolygon subject = new(190, 120, 260, 154);
 StarPolygon cutout = new(x: 226, y: 120, prongs: 6, innerRadii: 38, outerRadii: 82);
 
 ShapeOptions clipOptions = new()
@@ -298,8 +300,8 @@ using SixLabors.ImageSharp.Processing;
 
 using Image<Rgba32> image = new(360, 220, Color.White.ToPixel<Rgba32>());
 
-EllipsePolygon outer = new(new PointF(180, 110), new SizeF(260, 150));
-EllipsePolygon inner = new(new PointF(180, 110), new SizeF(126, 76));
+EllipsePolygon outer = new(180, 110, 260, 150);
+EllipsePolygon inner = new(180, 110, 126, 76);
 PathCollection shape = new(outer, inner);
 
 DrawingOptions options = new()
@@ -318,3 +320,11 @@ image.Mutate(ctx => ctx.Paint(options, canvas =>
 ```
 
 For lower-level polygon boolean operations, see [PolygonClipper](../polygonclipper/index.md).
+
+## Practical Guidance
+
+Use primitive helpers when geometry exists only for one command. Move to path and polygon objects when geometry becomes part of the model: the same shape is filled, stroked, clipped, transformed, measured, or shared between commands. That makes the relationship between layout and painting explicit.
+
+Build closed paths deliberately when the shape represents an area. Filling an open path can work because the path is closed for fill processing, but a deliberately closed figure communicates intent and gives stroke joins closed-contour behavior. Use `ComplexPolygon` when multiple contours should be interpreted together as one region, especially when holes are involved.
+
+The fill rule is part of the geometry contract. `NonZero` is the default and matches normal SVG and web canvas expectations, where winding direction is meaningful. Use `EvenOdd` when contour direction should not matter and nested contours should alternate inside/outside status.

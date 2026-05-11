@@ -8,6 +8,12 @@ ImageSharp also supports animated PNG metadata and encoding scenarios.
 
 PNG is a lossless format. It preserves pixel data exactly, which makes it a strong fit for graphics where edges, text, and flat-color regions need to stay crisp.
 
+PNG compresses image data without discarding pixel information. Before compression, scanline filters can transform rows into forms that compress better. The chosen filter does not change the decoded pixels, but it can change encoding speed and file size. Adaptive filtering lets the encoder choose filters per row and is usually a good default for mixed content.
+
+PNG supports several pixel representations, including grayscale, grayscale with alpha, RGB, RGB with alpha, and palette-indexed color. That is why `ColorType` and `BitDepth` matter: they decide how pixels are represented in the file, not just how strongly the file is compressed. A screenshot with a small number of colors may be much smaller as a palette PNG, while a translucent UI asset usually needs RGBA-style output.
+
+PNG can store ancillary information such as gamma, text chunks, and color-management data. Those chunks can be important for appearance or workflow, but they can also increase file size or carry information you do not want to publish. Treat metadata as part of the output decision.
+
 A few practical implications:
 
 - PNG is excellent for screenshots, icons, logos, diagrams, and UI assets.
@@ -47,6 +53,10 @@ The most commonly used `PngEncoder` options are:
 - `Gamma` lets you write a gamma value into the output metadata.
 
 Because `PngEncoder` inherits from [`QuantizingAnimatedImageEncoder`](xref:SixLabors.ImageSharp.Formats.QuantizingAnimatedImageEncoder), it also supports `Quantizer`, `PixelSamplingStrategy`, and `TransparentColorMode` when you are writing palette-based PNG data.
+
+Compression level is a speed-versus-size choice. Higher compression can reduce output size, but it costs more CPU and does not improve image quality because PNG is already lossless. For high-volume services, benchmark realistic images before choosing the slowest compression level globally.
+
+Adam7 interlacing allows a progressively refined display as bytes arrive. That can help in some delivery scenarios, but it can also increase file size. For small UI assets and cached application images, non-interlaced PNG is often simpler.
 
 ## Quantization and Palette PNGs
 
@@ -127,3 +137,11 @@ PNG is usually a poor fit when:
 - You only need a web-first animated format and modern browser-oriented compression matters more than static PNG compatibility.
 
 If you want a lossy photographic format, start with [JPEG](jpeg.md). If you want a modern alternative that supports both lossy and lossless output, see [WebP](webp.md).
+
+## Practical Guidance
+
+Use PNG when lossless pixels, transparency, screenshots, diagrams, or UI assets matter more than the smallest possible file. It is a strong default for sharp graphics because it avoids lossy artifacts around text, icons, and hard edges.
+
+When PNG size matters, consider palette output and quantization rather than switching formats immediately. A palette PNG can be much smaller for limited-color graphics, but that choice should be tested against gradients, shadows, and transparency because quantization can introduce visible banding or dithering texture.
+
+Preserve or convert color profiles intentionally. PNG is often used in workflows where exact appearance matters, so silently dropping profile information can be a real output bug. For photographic delivery where smaller files matter more than lossless pixels, compare JPEG and WebP instead.

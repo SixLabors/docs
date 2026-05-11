@@ -4,6 +4,8 @@ If you are coming from `System.Drawing`, the biggest adjustment is moving from a
 
 The drawing concepts still map cleanly. `Graphics` becomes [`DrawingCanvas`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas), `Brush` and `Pen` become ImageSharp.Drawing brushes and pens, `GraphicsPath` becomes [`PathBuilder`](xref:SixLabors.ImageSharp.Drawing.PathBuilder) or [`IPath`](xref:SixLabors.ImageSharp.Drawing.IPath), and text moves to the Fonts-powered [`DrawText(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.DrawText*) APIs.
 
+Treat migration as a behavior-matching exercise first. Keep the same image size, geometry, colors, alpha, transform order, clipping behavior, and font choice while translating the API shape. Once the output is equivalent, simplify the ImageSharp.Drawing code to use higher-level shapes, text layout, and image processing where they make the intent clearer.
+
 For core image loading, saving, pixel formats, and raw pixel access, see the ImageSharp [Migrating from System.Drawing](../imagesharp/migratingfromsystemdrawing.md) guide. This page focuses on drawing code.
 
 ## Core Type Mapping
@@ -15,8 +17,8 @@ For core image loading, saving, pixel formats, and raw pixel access, see the Ima
 | `System.Drawing.Color` | `SixLabors.ImageSharp.Color`, or a concrete pixel type such as `Rgba32` |
 | `SolidBrush` / `TextureBrush` | `Brushes.Solid(...)`, image brushes, pattern brushes, gradient brushes |
 | `Pen` | [`SixLabors.ImageSharp.Drawing.Processing.Pen`](xref:SixLabors.ImageSharp.Drawing.Processing.Pen), usually through [`Pens.Solid(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.Pens.Solid*) |
-| `Rectangle` / `RectangleF` | `Rectangle` / `RectangleF` |
-| `GraphicsPath` | [`PathBuilder`](xref:SixLabors.ImageSharp.Drawing.PathBuilder), [`Path`](xref:SixLabors.ImageSharp.Drawing.Path), [`IPath`](xref:SixLabors.ImageSharp.Drawing.IPath), and built-in shape types |
+| `Rectangle` / `RectangleF` | `Rectangle` for rectangle fill, stroke, and clear helpers; `RectangleF` for APIs that explicitly accept floating-point bounds such as image destination rectangles |
+| `GraphicsPath` | [`PathBuilder`](xref:SixLabors.ImageSharp.Drawing.PathBuilder), [`Path`](xref:SixLabors.ImageSharp.Drawing.Path), [`IPath`](xref:SixLabors.ImageSharp.Drawing.IPath), and built-in shape types when geometry must be reused |
 | `Matrix` | `Matrix4x4`, commonly constructed from `Matrix3x2` |
 | `Graphics.DrawImage(...)` | `DrawingCanvas.DrawImage(...)` |
 | `Graphics.DrawString(...)` | [`DrawingCanvas.DrawText(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.DrawText*) with [`RichTextOptions`](xref:SixLabors.ImageSharp.Drawing.Processing.RichTextOptions) |
@@ -56,11 +58,13 @@ image.Mutate(context => context.Paint(canvas =>
 }));
 ```
 
-Use `Mutate(...)` when you want to update an image in place. Use `Clone(...)` when the old code created a separate output bitmap while keeping the source unchanged.
+Use `Mutate(...)` when you want to update an image in place. Use `Clone(...)` when the old code created a separate output bitmap while keeping the source unchanged. The `Paint(...)` processor owns the canvas lifetime for this common case: commands recorded inside the callback are replayed into the image at the correct point in the ImageSharp processing pipeline.
 
 ## Brushes and Pens
 
-`System.Drawing` separates filled shapes and stroked outlines through `Brush` and `Pen`. ImageSharp.Drawing keeps the same mental model, but uses its own brush and pen types.
+`System.Drawing` separates filled shapes and stroked outlines through `Brush` and `Pen`. ImageSharp.Drawing keeps the same drawing vocabulary, but the objects belong to the ImageSharp.Drawing pipeline rather than the GDI+ object model.
+
+A brush supplies color, gradient, pattern, or image samples for covered pixels. A pen describes how to turn a source line, path, or shape into stroke geometry: width, dash pattern, joins, caps, and miter behavior all affect that generated outline. The generated outline is then filled by the pen brush. That distinction matters when migrating dashed strokes, image-filled outlines, or paths where cap and join behavior changes the visible shape.
 
 System.Drawing:
 
@@ -84,14 +88,16 @@ using SixLabors.ImageSharp.Processing;
 
 image.Mutate(context => context.Paint(canvas =>
 {
-    canvas.Fill(Brushes.Solid(Color.FromPixel(new Rgba32(47, 128, 237, 255))), new RectangleF(48, 42, 280, 126));
-    canvas.Draw(Pens.Solid(Color.FromPixel(new Rgba32(27, 63, 114, 255)), 4), new RectangleF(48, 42, 280, 126));
+    canvas.Fill(Brushes.Solid(Color.FromPixel(new Rgba32(47, 128, 237, 255))), new Rectangle(48, 42, 280, 126));
+    canvas.Draw(Pens.Solid(Color.FromPixel(new Rgba32(27, 63, 114, 255)), 4), new Rectangle(48, 42, 280, 126));
 }));
 ```
 
 ## Paths and Shapes
 
-`GraphicsPath` maps to [`PathBuilder`](xref:SixLabors.ImageSharp.Drawing.PathBuilder) when you are constructing custom geometry. For simple rectangles, ellipses, arcs, and lines, prefer the built-in Drawing helpers and shape types.
+`GraphicsPath` maps to [`PathBuilder`](xref:SixLabors.ImageSharp.Drawing.PathBuilder) when you are constructing custom geometry. Build the path in the same coordinate space as the original `GraphicsPath`, then fill or stroke it with ImageSharp.Drawing brushes and pens.
+
+Keep open and closed figures deliberate. A closed figure represents an area boundary, so fill rules, joins, and holes are part of the shape contract. An open figure is usually a stroke path, where caps and joins define the visible ends and corners. For direct migrations of simple rectangles, ellipses, arcs, pies, lines, and Beziers, prefer the canvas helpers. Rectangles use `Fill(brush, Rectangle)` and `Draw(pen, Rectangle)` overloads; ellipses, arcs, pies, lines, and Beziers have named helpers. Use shape objects such as `EllipsePolygon`, `RectanglePolygon`, or custom paths when the geometry is reused for fill, stroke, clipping, measurement, or composition.
 
 System.Drawing:
 
@@ -135,7 +141,7 @@ image.Mutate(context => context.Paint(canvas =>
 }));
 ```
 
-For common geometry, use shape types directly:
+For common one-off geometry, use the canvas helpers that match the `Graphics` method you are replacing:
 
 System.Drawing:
 
@@ -157,14 +163,18 @@ using SixLabors.ImageSharp.Processing;
 
 image.Mutate(context => context.Paint(canvas =>
 {
-    // EllipsePolygon takes center and size; this matches the System.Drawing bounds above.
-    canvas.Fill(Brushes.Solid(Color.MediumSeaGreen), new EllipsePolygon(180, 120, 220, 96));
+    // ImageSharp.Drawing ellipse helpers take center and size, not top-left bounds.
+    canvas.FillEllipse(Brushes.Solid(Color.MediumSeaGreen), new(180, 120), new(220, 96));
 }));
 ```
+
+Use an explicit polygon when the ellipse is part of the drawing model rather than a one-off command. For example, clipping needs an `IPath`, so `new EllipsePolygon(...)` is the right shape for the clipping example below.
 
 ## Transforms and Canvas State
 
 `System.Drawing.Graphics` stores transform state on the `Graphics` object. ImageSharp.Drawing stores transform state in [`DrawingOptions`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingOptions), which can be saved onto the canvas state stack.
+
+Translate transform code by preserving operation order. The transformed coordinate system affects subsequent fills, strokes, text, clips, and image placement until the saved state is restored. ImageSharp.Drawing uses `Matrix4x4` for canvas state so the same model can represent 2D affine and projective transforms across CPU and GPU backends; for normal migration work, build the value from `Matrix3x2` so the six affine numbers stay familiar.
 
 System.Drawing:
 
@@ -201,8 +211,8 @@ image.Mutate(context => context.Paint(canvas =>
     };
 
     _ = canvas.Save(options);
-    canvas.Fill(Brushes.Solid(Color.HotPink), new RectangleF(-70, -24, 140, 48));
-    canvas.Draw(Pens.Solid(Color.White, 3), new RectangleF(-70, -24, 140, 48));
+    canvas.Fill(Brushes.Solid(Color.HotPink), new Rectangle(-70, -24, 140, 48));
+    canvas.Draw(Pens.Solid(Color.White, 3), new Rectangle(-70, -24, 140, 48));
 
     canvas.Restore();
 }));
@@ -213,6 +223,8 @@ ImageSharp.Drawing uses `Matrix4x4` for canvas transforms so the same drawing st
 ## Image Composition
 
 If your `System.Drawing` code uses `Graphics.DrawImage(...)`, use `DrawImage(...)` inside `Paint(...)` when the image placement belongs with the rest of the drawing commands.
+
+Keep source and destination rectangles explicit. The source rectangle selects pixels from the input image; the destination rectangle defines where those pixels land on the canvas. If you do not pass a resampler, ImageSharp.Drawing uses the drawing API default, which is the right choice for ordinary image placement. Choose a specific resampler only when the migration requires a known sampling policy.
 
 System.Drawing:
 
@@ -244,15 +256,17 @@ using Image<Rgba32> output = new(640, 360, Color.White.ToPixel<Rgba32>());
 output.Mutate(context => context.Paint(canvas =>
 {
     canvas.DrawImage(source, source.Bounds, new RectangleF(32, 32, 320, 220));
-    canvas.Draw(Pens.Solid(Color.White, 4), new RectangleF(32, 32, 320, 220));
+    canvas.Draw(Pens.Solid(Color.White, 4), new Rectangle(32, 32, 320, 220));
 }));
 ```
 
-Keep source images alive until the canvas has replayed. Inside `Paint(...)`, replay is owned by the processing operation. If you create and manage a canvas yourself, dispose or flush it before disposing source images used by drawing commands.
+Keep source images alive until the canvas has replayed. Inside `Paint(...)`, replay is owned by the processing operation. If you create and manage a canvas yourself, dispose it before disposing source images used by drawing commands.
 
 ## Clipping
 
 `Graphics.SetClip(...)` maps to saving canvas state with clip paths. Restore the state when the clipped drawing is complete.
+
+For equivalent `SetClip(...)` behavior, use `BooleanOperation.Intersection`. ImageSharp.Drawing clip paths are combined through [`ShapeOptions.BooleanOperation`](xref:SixLabors.ImageSharp.Drawing.Processing.ShapeOptions.BooleanOperation), and the default operation is not the same as intersecting the current drawing area with the supplied clip.
 
 System.Drawing:
 
@@ -279,7 +293,16 @@ using SixLabors.ImageSharp.Processing;
 
 image.Mutate(context => context.Paint(canvas =>
 {
-    _ = canvas.Save(new DrawingOptions(), new EllipsePolygon(190, 120, 260, 160));
+    DrawingOptions clipInside = new()
+    {
+        ShapeOptions = new()
+        {
+            BooleanOperation = BooleanOperation.Intersection
+        }
+    };
+
+    // SetClip-style behavior keeps only the intersection with the ellipse.
+    _ = canvas.Save(clipInside, new EllipsePolygon(190, 120, 260, 160));
     canvas.Fill(Brushes.Solid(Color.CornflowerBlue), new Rectangle(20, 20, 360, 200));
 
     canvas.Restore();
@@ -289,6 +312,8 @@ image.Mutate(context => context.Paint(canvas =>
 ## Text
 
 `Graphics.DrawString(...)` handles simple text drawing. ImageSharp.Drawing uses SixLabors.Fonts through `DrawText(...)`, so wrapping, alignment, shaping, fallback, and rich text options are part of the normal text pipeline.
+
+Use the same font file and layout rectangle when checking output parity. `RichTextOptions.Origin` is the anchor used by the layout options, `WrappingLength` defines the available line width, `TextAlignment` aligns lines within that wrapping width, and `HorizontalAlignment` / `VerticalAlignment` place the laid-out block relative to the origin. This keeps text positioning declarative instead of relying on manual string measurement.
 
 System.Drawing:
 
@@ -353,3 +378,11 @@ For most `System.Drawing` drawing migrations:
 8. Replace `DrawString(...)` with [`DrawText(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.DrawText*), [`RichTextOptions`](xref:SixLabors.ImageSharp.Drawing.Processing.RichTextOptions), and the Fonts layout APIs when wrapping or shaping matters.
 
 You do not have to migrate all drawing code at once. Start with one rendering workflow, match the output, then simplify the code once the ImageSharp.Drawing model is in place.
+
+## Practical Guidance
+
+- Keep source and destination geometry equivalent while translating examples.
+- Replace `Graphics` state with explicit canvas `Save(...)` and `Restore()` scopes.
+- Use ImageSharp.Drawing brushes and pens instead of carrying `System.Drawing` object lifetimes across.
+- Move text layout decisions into `RichTextOptions` and Fonts APIs rather than manually positioning strings.
+- Validate output on non-Windows environments if the migration goal is cross-platform rendering.

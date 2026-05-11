@@ -87,3 +87,11 @@ Negative widths are supported for advanced scenarios. They flip the emitted side
 ## Used by ImageSharp.Drawing
 
 ImageSharp.Drawing also uses PolygonClipper for stroke geometry generation. Its higher-level stroke options are mapped down to PolygonClipper's `LineJoin`, `LineCap`, miter, and normalization settings before outline polygons are generated.
+
+## Practical Guidance
+
+Use stroking when a path or polyline needs to become filled outline geometry. The result is a polygon region, not a rendering command, so it can be inspected, clipped, exported, or rendered by another system.
+
+Decide whether the input is open or closed before choosing caps. Open inputs emit end caps; closed inputs do not. Stroke width is expressed in the same coordinate units as the source geometry, so scaling source coordinates without scaling stroke width changes the visual result.
+
+Join, cap, miter, and cleanup options should match the renderer or exporter that will consume the outline. Inspect the returned polygon as geometry: complex strokes can produce multiple contours and holes, especially around self-overlap, sharp joins, or closed paths.

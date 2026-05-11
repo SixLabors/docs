@@ -87,3 +87,10 @@ In the first case, `HmacTokenTagHelper` signs your handwritten command URL. In t
 - [Processing Commands](processingcommands.md)
 - [Securing Requests](security.md)
 - [Extensibility](extensibility.md)
+
+## Practical Guidance
+
+- Use tag helpers when Razor should generate command URLs instead of hand-built query strings.
+- Let the HMAC tag helper sign generated URLs when request signing is enabled.
+- Keep custom tag helper commands aligned with custom processors.
+- Inspect the emitted `src` during troubleshooting so command order and token generation are visible.

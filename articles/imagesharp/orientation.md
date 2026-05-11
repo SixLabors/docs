@@ -86,3 +86,10 @@ That keeps downstream dimensions and crop coordinates aligned with the final vis
 - [Processing Images](processing.md)
 - [Crop, Pad, and Canvas](cropandcanvas.md)
 - [Working with Metadata](metadata.md)
+
+## Practical Guidance
+
+- Call `AutoOrient()` early for user-uploaded photos unless preserving raw pixel orientation is intentional.
+- Normalize orientation before crop and resize operations based on what a person sees.
+- Strip or update orientation metadata only after the pixel data reflects the intended display orientation.
+- Test orientation workflows with real phone images, not only images already stored upright.

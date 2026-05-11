@@ -154,3 +154,10 @@ Keep all row work inside the callback that received the accessor.
 - [Interop and Raw Memory](interop.md)
 - [Memory Management](memorymanagement.md)
 - [Migrating from System.Drawing](migratingfromsystemdrawing.md)
+
+## Practical Guidance
+
+- Prefer row access over per-pixel indexers for non-trivial work.
+- Keep span usage inside the callback that supplied the row accessor.
+- Use `ProcessPixelRowsAsVector4(...)` when logic should be pixel-format agnostic.
+- Convert to a known working pixel format when the algorithm benefits from simpler direct access.

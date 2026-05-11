@@ -216,3 +216,10 @@ That is often the right move if the wrapped buffer has awkward lifetime rules, i
 - [Memory Management](memorymanagement.md)
 - [Troubleshooting](troubleshooting.md)
 - [Migrating from System.Drawing](migratingfromsystemdrawing.md)
+
+## Practical Guidance
+
+- Use `LoadPixelData(...)` when ImageSharp should own a copy of the pixels.
+- Use `WrapMemory(...)` only when the external buffer lifetime is clearly controlled.
+- Respect stride when importing or exporting foreign buffers.
+- Clone wrapped images before operations that may require a different buffer shape or ownership model.

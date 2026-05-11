@@ -121,6 +121,13 @@ Font font = family.CreateFont(
 
 The active variation values become part of the [`Font`](xref:SixLabors.Fonts.Font) instance, so the same family can be reused to create multiple design-space instances.
 
+### Practical guidance
+
+- Use a private `FontCollection` when output must be stable across machines.
+- Use `SystemFonts` for host-dependent behavior such as diagnostics, user font pickers, or "use what is installed here" workflows.
+- Create `Font` instances for the size, style, culture, and variation values you actually intend to measure or render.
+- Keep font loading separate from per-request or per-frame layout work when the same files are reused.
+
 ### Next steps
 
 - Use [Measuring Text](measuringtext.md) when you need layout metrics before rendering.

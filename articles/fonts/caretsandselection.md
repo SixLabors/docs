@@ -144,3 +144,10 @@ Use the full [`TextMetrics`](xref:SixLabors.Fonts.TextMetrics) overloads for sel
 Per-line selection uses the line-box height rather than per-glyph height, which matches normal text editor and browser behavior: selecting mixed font sizes on the same line paints a consistent line-height rectangle rather than one rectangle per glyph height. The selection geometry stays visually stable across mixed fonts and font sizes.
 
 For a wider tour of the measurement model and how line metrics are derived, see [Measuring Text](measuringtext.md).
+
+### Practical guidance
+
+- Paint the selection rectangles returned by the API instead of reconstructing selection geometry yourself.
+- Keep anchor and focus as logical text positions; let the metrics map them into visual rectangles.
+- Use editor interaction mode when selections must include terminal blank lines.
+- Test mixed LTR/RTL selections with real strings, not only simple Latin text.

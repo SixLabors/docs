@@ -120,3 +120,10 @@ When enabled, ImageSharp adds implicit `global using` directives for:
 - `SixLabors.ImageSharp.Processing`
 
 You can turn this off by removing the property or setting it to `false`.
+
+## How to Use These Docs
+
+- Start with loading, identifying, processing, and saving if you are new to ImageSharp.
+- Move to formats, metadata, color profiles, and security before accepting untrusted images in production.
+- Use pixel-buffer and interop pages when you need direct memory access rather than normal processors.
+- Read the migration pages when replacing APIs whose image model differs from ImageSharp's typed pixel model.

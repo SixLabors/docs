@@ -22,9 +22,13 @@ image.Mutate(ctx => ctx.Paint(canvas =>
 
 The callback receives a canvas for the current frame. Use the canvas for all drawing work that should happen together.
 
-## Deferred Drawing and Replay
+## Ordered Calls and Replay
 
-[`DrawingCanvas`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas) looks immediate, but most drawing commands are recorded first and replayed later. Calls such as [`Fill(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.Fill*), [`Draw(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.Draw*), [`DrawText(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.DrawText*), and [`SaveLayer(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.SaveLayer*) append drawing intent to a command buffer. Calls that must happen at a specific point, such as [`Apply(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.Apply*) and [`RenderScene(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.RenderScene*) are stored as entries in the canvas replay timeline.
+[`DrawingCanvas`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas) is an ordered drawing API backed by a replay timeline. The calls look familiar if you have used immediate-mode drawing APIs: [`Fill(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.Fill*), [`Draw(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.Draw*), [`DrawText(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.DrawText*), [`Save(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.Save*), and [`Restore()`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.Restore) are made in the order you want drawing to happen. The canvas does not, however, promise that each call immediately writes pixels to the destination.
+
+It is also not a retained object tree. The canvas does not keep editable shape objects that automatically redraw when their properties change. It records ordered drawing intent, seals that intent into timeline entries, and replays the timeline into the active backend.
+
+Most drawing calls append drawing intent to a command buffer. Calls that must happen at a specific point, such as [`Apply(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.Apply*) and [`RenderScene(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.RenderScene*) are stored as entries in the canvas replay timeline. [`SaveLayer(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.SaveLayer*) is also timeline-sensitive: it records an isolated group that is later composited back into the parent.
 
 The root canvas replays the timeline when it is disposed. During replay, command ranges are prepared into backend command batches, and the backend creates and renders scenes for those ranges. This is why a manually-created canvas must be disposed: disposal is the point where recorded work is actually rendered into the target.
 
@@ -32,9 +36,9 @@ The replay timeline can contain three kinds of entry:
 
 - command ranges for normal drawing commands
 - apply barriers for `Apply(...)` operations
-- retained scene references inserted by `RenderScene(...)`
+- retained backend scene references inserted by `RenderScene(...)`
 
-This deferred model lets ImageSharp.Drawing use one public canvas API for CPU images, WebGPU surfaces, and retained backend scenes. The canvas records drawing intent once, performs shared preparation once, and then hands a stable command batch to the active backend.
+This model keeps drawing code straightforward while still allowing ImageSharp.Drawing to prepare command batches, insert replay barriers, reuse retained backend scenes, and target CPU images or WebGPU surfaces through the same public canvas API.
 
 [`Flush()`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.Flush) seals the commands recorded so far into a command-range timeline entry. It does not render immediately by itself. Most code does not need it; replay barriers such as [`Apply(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.Apply*) already seal earlier commands before they run.
 
@@ -76,6 +80,8 @@ Use [`Fill(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.Fil
 
 [`Clear(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.Clear*) can target the full canvas, a rectangle, or any [`IPath`](xref:SixLabors.ImageSharp.Drawing.IPath). It also honors the active clip state created by [`Save(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.Save*), so clears can be scoped by both the supplied clear shape and the current canvas state.
 
+The difference is compositing intent. `Fill(...)` draws a brush through the active `GraphicsOptions`, so source alpha and blend modes affect the destination. `Clear(...)` uses clear-style composition for the covered region, so it is the right API when the drawing command should replace or erase what was there before. Use transparent clear for cutouts, masks, and punched holes. Use an opaque brush with `Clear(...)` when the area should be reset to a known color regardless of the pixels already underneath.
+
 ```csharp
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Drawing;
@@ -97,13 +103,13 @@ image.Mutate(ctx => ctx.Paint(canvas =>
     canvas.Fill(Brushes.Solid(Color.MidnightBlue.WithAlpha(0.95F)));
     canvas.Fill(Brushes.Solid(Color.Crimson.WithAlpha(0.8F)), new Rectangle(26, 18, 268, 164));
 
-    EllipsePolygon clip = new(new PointF(160, 100), new SizeF(214, 126));
+    EllipsePolygon clip = new(160, 100, 214, 126);
     _ = canvas.Save(clipToEllipse, clip);
 
     canvas.Clear(Brushes.Solid(Color.LightYellow.WithAlpha(0.85F)));
 
     // Transparent clear removes content inside the supplied path and active clip.
-    EllipsePolygon cutout = new(new PointF(164, 98), new SizeF(74, 48));
+    EllipsePolygon cutout = new(164, 98, 74, 48);
     canvas.Clear(Brushes.Solid(Color.Transparent), cutout);
     canvas.Restore();
 
@@ -118,6 +124,8 @@ image.Mutate(ctx => ctx.Paint(canvas =>
 The overload [`Save(DrawingOptions, params IPath[])`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.Save*) stores the supplied [`DrawingOptions`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingOptions) instance by reference. Treat options passed to [`Save(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.Save*) as owned by the active canvas state until that state has been restored.
 
 The active state reference is captured when each command is recorded. Later [`Save(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.Save*) or [`Restore()`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.Restore) calls do not replace the state for commands already in the command buffer, but mutating a referenced [`DrawingOptions`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingOptions) instance can still affect commands that captured that same instance.
+
+In normal application code, create the options you want before saving them and avoid mutating the same instance while it is active. That keeps the recorded timeline easy to reason about: save a state, record commands under that state, then restore it. If different groups need different transforms, clips, or blending, use separate `DrawingOptions` instances.
 
 The state captured for drawing includes:
 
@@ -151,7 +159,7 @@ DrawingOptions clipInside = new()
 
 image.Mutate(ctx => ctx.Paint(canvas =>
 {
-    EllipsePolygon clipPath = new(new PointF(180, 110), new SizeF(260, 140));
+    EllipsePolygon clipPath = new(180, 110, 260, 140);
 
     _ = canvas.Save(clipInside, clipPath);
     canvas.Fill(Brushes.Solid(Color.MidnightBlue), new Rectangle(0, 0, 360, 220));
@@ -228,7 +236,7 @@ image.Mutate(ctx => ctx.Paint(canvas =>
     _ = canvas.SaveLayer(layerOptions, new Rectangle(70, 46, 220, 128));
 
     // The layer bounds isolate composition; these coordinates are still parent-canvas coordinates.
-    canvas.Fill(Brushes.Solid(Color.OrangeRed), new EllipsePolygon(new PointF(180, 110), new SizeF(170, 96)));
+    canvas.FillEllipse(Brushes.Solid(Color.OrangeRed), new(180, 110), new(170, 96));
     canvas.Draw(Pens.Solid(Color.White, 8), new Rectangle(96, 74, 168, 72));
     canvas.Restore();
 
@@ -246,7 +254,9 @@ Use bounded layers deliberately. A smaller layer bounds can reduce the isolated 
 
 The source rectangle is sampled from the source image and scaled into the destination rectangle. The current transform and clip state apply to the destination drawing. Source rectangles that extend outside the source image are clipped to the available pixels.
 
-Because canvas drawing is deferred, the source image must remain alive until the canvas has replayed the command. With `Paint(...)`, that means keeping the source image alive for the duration of the `Mutate(...)` call. With a manually-created canvas, keep it alive until the canvas is disposed.
+Because canvas drawing is replayed later, the source image must remain alive until the canvas has replayed the command. With `Paint(...)`, that means keeping the source image alive for the duration of the `Mutate(...)` call. With a manually-created canvas, keep it alive until the canvas is disposed.
+
+Treat source and destination rectangles as two different coordinate systems. The source rectangle selects pixels from the input image. The destination rectangle places those selected pixels on the canvas. That separation lets you crop, zoom, or letterbox an image without changing the source file.
 
 ```csharp
 using SixLabors.ImageSharp;
@@ -265,7 +275,7 @@ DrawingOptions clipInside = new()
     }
 };
 
-EllipsePolygon clip = new(new PointF(210, 130), new SizeF(300, 170));
+EllipsePolygon clip = new(210, 130, 300, 170);
 Rectangle sourceRect = new(20, 12, 240, 180);
 RectangleF destination = new(60, 45, 300, 170);
 
@@ -323,9 +333,11 @@ Use the pen's `StrokeOptions` for stroke shape:
 
 ## Retained Scene Replay
 
-Use `CreateScene()` when the same recorded drawing should be replayed into more than one canvas target. It seals and prepares the recorded drawing commands into a retained backend scene. `RenderScene(...)` inserts that retained scene into the receiving canvas timeline at the point where it is called.
+Use `CreateScene()` when the same recorded drawing should be replayed into more than one canvas target. It seals and prepares the recorded drawing commands into a retained backend scene. `RenderScene(...)` inserts that retained backend scene into the receiving canvas timeline at the point where it is called.
 
 The scene is backend-owned state, so keep it alive until every canvas that records it has been disposed. A canvas that receives `RenderScene(...)` still replays on disposal like any other canvas.
+
+Retained backend scenes are useful when preparation is the repeated cost: logos, icons, map overlays, decorative vector art, or other drawing that is reused across many targets. They are not editable scene graphs. If the geometry, brushes, text, or image resources need to change, record a new scene.
 
 ```csharp
 using SixLabors.ImageSharp;
@@ -337,7 +349,7 @@ using SixLabors.ImageSharp.PixelFormats;
 using Image<Rgba32> source = new(160, 120, Color.Transparent.ToPixel<Rgba32>());
 using DrawingCanvas sourceCanvas = source.Frames.RootFrame.CreateCanvas(source.Configuration, new());
 
-sourceCanvas.Fill(Brushes.Solid(Color.Gold), new EllipsePolygon(new PointF(80, 60), new SizeF(116, 72)));
+sourceCanvas.FillEllipse(Brushes.Solid(Color.Gold), new(80, 60), new(116, 72));
 sourceCanvas.Draw(Pens.Solid(Color.Black, 3), new Rectangle(12, 12, 136, 96));
 
 using DrawingBackendScene scene = sourceCanvas.CreateScene();
@@ -353,7 +365,7 @@ secondCanvas.RenderScene(scene);
 secondCanvas.Dispose();
 ```
 
-`RenderScene(...)` preserves timeline order. Commands recorded before it replay before the retained scene; commands recorded after it replay after the retained scene.
+`RenderScene(...)` preserves timeline order. Commands recorded before it replay before the retained backend scene; commands recorded after it replay after the retained backend scene.
 
 ## Apply Image Processing to a Region
 
@@ -375,7 +387,7 @@ image.Mutate(ctx => ctx.Paint(canvas =>
     canvas.Fill(Brushes.Solid(Color.LightGray));
     canvas.Draw(Pens.Solid(Color.Black, 4), new Rectangle(24, 24, 312, 172));
 
-    EllipsePolygon blurPath = new(new PointF(180, 110), new SizeF(220, 120));
+    EllipsePolygon blurPath = new(180, 110, 220, 120);
 
     // The blur is clipped to the supplied path region.
     canvas.Apply(blurPath, region => region.GaussianBlur(8));
@@ -383,3 +395,11 @@ image.Mutate(ctx => ctx.Paint(canvas =>
 ```
 
 Because `Apply(...)` reads pixels at its replay point, commands before the barrier affect the processed image, and commands after the barrier do not.
+
+## Practical Guidance
+
+Use `Paint(...)` for ordinary ImageSharp processing pipelines. It gives you a canvas at the right point in `Mutate(...)` or `Clone(...)` and owns the replay lifetime for you. Use `CreateCanvas(...)` when you already have an image frame or backend target and need explicit lifetime control. In that case disposal is part of correctness: it is the point where the recorded work is replayed.
+
+Because canvas drawing is replayed later, anything referenced by recorded commands must stay alive until replay has completed. That includes source images for `DrawImage(...)`, image brushes, fonts, paths, and retained backend scenes. This is the important difference from strictly immediate pixel-writing APIs: the call records drawing intent, but the referenced objects may still be needed later.
+
+Scope state narrowly. `Save(...)` and `Restore()` are the right model for transforms, clipping, and graphics options that affect a limited part of the drawing. Use `SaveLayer(...)` when several commands should first render into an isolated group and then composite back as one result. Use `Apply(...)` when ImageSharp processors need to observe the timeline at a specific point, and keep those regions tight so CPU work and GPU readback stay bounded.

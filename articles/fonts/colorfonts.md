@@ -103,3 +103,10 @@ Color-font support is part of text layout, not just final painting. If you measu
 Use the same [`TextOptions`](xref:SixLabors.Fonts.TextOptions) instance for both [`TextMeasurer`](xref:SixLabors.Fonts.TextMeasurer) and [`TextRenderer`](xref:SixLabors.Fonts.Rendering.TextRenderer) when you want a guaranteed match.
 
 For renderer implementation details, see [Custom Rendering](customrendering.md). For fallback across multiple families, see [Fallback Fonts and Multilingual Text](fallbackfonts.md).
+
+### Practical guidance
+
+- Use the same `ColorFontSupport` setting when measuring and rendering.
+- Test the actual emoji or color glyph set you intend to support; technologies vary by font.
+- Decide fallback order deliberately when both monochrome and color families can cover the same text.
+- Custom renderers should handle painted glyph callbacks even if most text is outline-based.

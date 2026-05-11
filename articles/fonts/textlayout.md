@@ -104,7 +104,7 @@ Fonts exposes several knobs that directly affect glyph layout:
 - [`LineSpacing`](xref:SixLabors.Fonts.TextOptions.LineSpacing) multiplies the line height.
 - [`TabWidth`](xref:SixLabors.Fonts.TextOptions.TabWidth) controls tab stops in space units.
 - [`KerningMode`](xref:SixLabors.Fonts.TextOptions.KerningMode) enables, disables, or lets the engine decide about font-provided kerning during shaping.
-- [`Tracking`](xref:SixLabors.Fonts.TextOptions.Tracking) applies uniform letter-spacing and is measured in em.
+- [`Tracking`](xref:SixLabors.Fonts.TextOptions.Tracking) adds uniform spacing after each rendered grapheme. It is measured in em, so `0.02F` adds 2% of the current em size; it is not a multiplier like `LineSpacing`.
 - [`HintingMode`](xref:SixLabors.Fonts.TextOptions.HintingMode) is separate from shaping and controls TrueType grid fitting for the current size and DPI.
 
 ```csharp
@@ -242,3 +242,11 @@ FontRectangle bounds = TextMeasurer.MeasureAdvance(text, options);
 ```
 
 [`TextPlaceholderAlignment`](xref:SixLabors.Fonts.TextPlaceholderAlignment) controls how the placeholder box aligns with the surrounding line. `Baseline` uses the supplied baseline offset directly, while `AboveBaseline`, `BelowBaseline`, `Top`, `Bottom`, and `Middle` align the placeholder against the surrounding line box.
+
+### Practical guidance
+
+Treat `TextOptions` as the complete layout contract for a string. Font, culture, DPI, wrapping length, line spacing, direction, layout mode, fallback families, feature tags, text runs, and placeholders all participate in shaping and measurement. If you measure with one set of options and render with another, the result can move, wrap, or shape differently.
+
+Use grapheme indexes for `TextRun` ranges and placeholder insertion points. A placeholder is an insertion into the layout flow, not a replacement for characters in the source string, so its run is zero-length: `[Start, End)` with the same value for both ends. That keeps source text ranges stable while still reserving inline space for an object that your renderer draws separately.
+
+When text must fit inside a known region, set wrapping and alignment explicitly. Avoid measuring a string manually and then adjusting coordinates by hand; that bypasses the layout engine exactly where shaping, fallback, bidi order, and line metrics matter most.

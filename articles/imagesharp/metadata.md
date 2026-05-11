@@ -34,6 +34,10 @@ Depending on the source format, `ImageMetadata` can expose several common profil
 
 These profile properties are nullable because not every image carries every kind of metadata.
 
+Those profiles serve different purposes. EXIF often contains camera settings, timestamps, orientation, thumbnails, and sometimes GPS data. ICC profiles describe how color values should be interpreted. CICP metadata can carry color coding information used by some modern image and video workflows. IPTC and XMP often contain editorial, rights, authoring, and workflow data.
+
+That means metadata policy is not simply "keep" or "strip." A public thumbnail service may want to apply orientation and remove personal data. A print or archival pipeline may need to preserve color profiles and selected descriptive metadata. A conversion tool may need to translate what the destination format can represent and drop what it cannot.
+
 ## Work with Format-Specific Metadata
 
 In addition to the common profiles, ImageSharp exposes format-specific metadata helpers:
@@ -65,6 +69,8 @@ Console.WriteLine($"Frame count: {imageInfo.FrameMetadataCollection.Count}");
 
 This is useful when inspecting animated formats without decoding every frame into pixel memory.
 
+Frame metadata matters for animation. Delay, blend mode, disposal mode, frame dimensions, and format-specific values can change how a multi-frame image plays even when the decoded pixels look reasonable in isolation.
+
 ## Strip Metadata Before Saving
 
 If you do not want to preserve the original metadata, clear the profiles before saving:
@@ -94,3 +100,7 @@ ImageSharp preserves metadata by default when the decoder and encoder both suppo
 - Saving to a different format may change which metadata can be represented in the output.
 
 For deeper guidance on loading and saving workflows, see [Loading, Identifying, and Saving](loadingandsaving.md). For ICC and CICP-specific guidance, see [Color Profiles and Color Conversion](colorprofiles.md).
+
+## Practical Guidance
+
+Inspect metadata before decoding pixels when routing or validation only needs headers and profiles. Preserve ICC or CICP data when color interpretation matters, or convert to a known output profile before stripping it. Apply `AutoOrient()` before removing EXIF orientation if the visual orientation must remain correct. Treat metadata as user data in privacy-sensitive workflows; EXIF, IPTC, and XMP can contain identifying information.

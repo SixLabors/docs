@@ -1,14 +1,16 @@
 # Primitive Drawing Helpers
 
-Primitive helpers are convenience methods on [`DrawingCanvas`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas) for common geometry. Use them when the shape is simple and you do not need to keep an [`IPath`](xref:SixLabors.ImageSharp.Drawing.IPath) instance around.
+Primitive helpers are convenience methods on [`DrawingCanvas`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas) for common one-off geometry. They let you draw rectangles, ellipses, lines, Beziers, arcs, and pies without first creating a reusable [`IPath`](xref:SixLabors.ImageSharp.Drawing.IPath) object.
 
 The helpers still follow the same rules as path drawing: fills use brushes, strokes use pens, [`DrawingOptions`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingOptions) controls antialiasing and transforms, and active canvas state applies to the recorded command.
 
-Primitive calls record a drawing command immediately. They are a good fit for marks, guides, simple badges, outlines, and other geometry that is only used once. If the same geometry must be filled, stroked, clipped, transformed, measured, or shared between commands, create a path or polygon object instead.
+Primitive calls append drawing intent to the canvas as soon as you call them. They are a good fit for marks, guides, simple badges, outlines, and other geometry that is only used once. If the same geometry must be filled, stroked, clipped, transformed, measured, passed to text layout, or shared between commands, create a path or polygon object instead so the geometry becomes explicit.
 
 ## Rectangles, Ellipses, Lines, and Beziers
 
-Rectangle helpers use a top-left coordinate plus width and height. Ellipse helpers use a center point plus size, matching [`EllipsePolygon`](xref:SixLabors.ImageSharp.Drawing.EllipsePolygon). Lines and Beziers use explicit points in canvas coordinates, so they are easy to combine with image-space measurements.
+Rectangle drawing is handled by rectangle-specific overloads: `Fill(brush, Rectangle)`, `Draw(pen, Rectangle)`, and `Clear(brush, Rectangle)`. There are no `FillRectangle(...)`, `DrawRectangle(...)`, or `ClearRectangle(...)` methods on `DrawingCanvas`. Ellipse helpers use `FillEllipse(...)` and `DrawEllipse(...)` with a center point plus size, matching [`EllipsePolygon`](xref:SixLabors.ImageSharp.Drawing.EllipsePolygon). Lines and Beziers use explicit points in canvas coordinates, so they are easy to combine with image-space measurements.
+
+Those coordinate conventions matter when translating from other libraries. Rectangle APIs usually describe a box from its top-left corner; ellipse, arc, and pie helpers describe an ellipse frame from its center. If the values look visually shifted, check whether the source API used top-left ellipse bounds while the Drawing helper expects a center.
 
 ```csharp
 using SixLabors.ImageSharp;
@@ -47,7 +49,7 @@ Use the rectangle and ellipse helpers when the geometry exists only for that com
 
 Arc and pie helpers take a center point, a size, a rotation angle, a start angle, and a sweep angle. Positive and negative sweeps are both valid, which makes clockwise and counter-clockwise segments easy to express.
 
-Arc helpers draw or fill the curved segment of an ellipse. Pie helpers close the segment back to the center, creating a wedge. Use [`PiePolygon`](xref:SixLabors.ImageSharp.Drawing.PiePolygon) when the wedge is part of reusable geometry.
+Arc helpers describe the curved segment of an ellipse. Pie helpers close the segment back to the center, creating a wedge. Use arcs for gauges, rings, callouts, and curved marks. Use pies for chart slices, radial badges, and wedge-shaped fills. Use [`PiePolygon`](xref:SixLabors.ImageSharp.Drawing.PiePolygon) when the wedge is part of reusable geometry.
 
 ```csharp
 using SixLabors.ImageSharp;
@@ -92,3 +94,10 @@ Use [`PathBuilder`](xref:SixLabors.ImageSharp.Drawing.PathBuilder), [`Polygon`](
 - measure bounds, length, or area before drawing.
 
 The primitive helpers are best for direct one-off drawing. Paths are better when the geometry is part of the model.
+
+## Practical Guidance
+
+- Use primitive helpers for direct marks, guides, and simple one-off geometry.
+- Switch to paths or polygons when the same geometry is filled, stroked, clipped, measured, or transformed.
+- Remember that rectangle helpers use top-left coordinates while ellipse, arc, and pie helpers use center and size.
+- Use built-in shape types when the geometry becomes part of your application model.

@@ -183,3 +183,10 @@ For most SkiaSharp image migrations:
 - [Working with Pixel Buffers](pixelbuffers.md)
 - [Interop and Raw Memory](interop.md)
 - [Migrating from SkiaSharp in ImageSharp.Drawing](../imagesharp.drawing/migratingfromskiasharp.md)
+
+## Practical Guidance
+
+- Keep image load/save behavior equivalent before changing processing behavior.
+- Replace pixel storage decisions with explicit `Image<TPixel>` choices.
+- Use row processing instead of per-pixel object-style APIs.
+- Move canvas drawing concerns to ImageSharp.Drawing rather than forcing them into core ImageSharp processors.

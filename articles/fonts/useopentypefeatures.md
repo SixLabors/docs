@@ -60,3 +60,10 @@ Use the same `TextOptions` for both `TextMeasurer` and `TextRenderer` so the mea
 OpenType features can change glyph choice, advance widths, ligature formation, and mark placement. That means they are layout inputs, not just visual decoration applied after measuring.
 
 For the fuller feature model, see [OpenType Features](opentypefeatures.md).
+
+### Practical guidance
+
+- Verify that the production font actually exposes the requested feature tags.
+- Use the same feature tags for measurement and rendering.
+- Be careful combining mutually exclusive numeric features such as figure styles.
+- Prefer `KnownFeatureTags` for standard features and `Tag.Parse(...)` for font-specific stylistic sets.

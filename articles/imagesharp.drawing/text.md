@@ -8,6 +8,8 @@ At the simple end, text is one call. At the advanced end, the same model can dra
 
 ## Draw Simple Text
 
+Simple text drawing still uses the full Fonts shaping pipeline. The text is shaped, positioned from `RichTextOptions.Origin`, and then painted through the same brush and pen model as other canvas drawing. Pass a brush to fill glyphs, a pen to outline glyphs, or both when the text needs a filled face and a stroked edge.
+
 ```csharp
 using SixLabors.Fonts;
 using SixLabors.ImageSharp;
@@ -30,7 +32,7 @@ image.Mutate(ctx => ctx.Paint(canvas =>
 }));
 ```
 
-Pass a brush to fill glyphs, a pen to outline glyphs, or both.
+Even in simple examples, treat `RichTextOptions` as part of the drawing contract. If you later measure the same string, use the same font, wrapping, alignment, culture, fallback, and feature settings so the measured layout matches the rendered pixels.
 
 ## Draw Rich Text
 
@@ -128,7 +130,7 @@ RichTextOptions options = new(font)
 
 TextBlock block = new("Prepared text can be measured and drawn with the same shaping.", options);
 TextMetrics metrics = block.Measure(wrappingLength: 520);
-RectanglePolygon layoutBox = new(60, 48, 520, metrics.Advance.Height + 24);
+Rectangle layoutBox = new(60, 48, 520, (int)MathF.Ceiling(metrics.Advance.Height + 24));
 
 image.Mutate(ctx => ctx.Paint(canvas =>
 {
@@ -149,6 +151,8 @@ The line-local enumerator is the right fit for text that flows through different
 ## Wrap and Align Text
 
 [`RichTextOptions`](xref:SixLabors.ImageSharp.Drawing.Processing.RichTextOptions) inherits the core Fonts text options and adds ImageSharp.Drawing-specific rich text behavior.
+
+Wrapping and alignment happen before pixels are drawn. `WrappingLength` determines where line breaking can happen. `TextAlignment` aligns lines within the paragraph. `HorizontalAlignment` and `VerticalAlignment` position the laid-out paragraph relative to `Origin`. Keeping those roles separate avoids the common mistake of manually subtracting measured widths and then fighting wrapped or fallback text.
 
 ```csharp
 using SixLabors.Fonts;
@@ -219,7 +223,9 @@ image.Mutate(ctx => ctx.Paint(canvas =>
 
 ## Draw Text Along a Path
 
-Text can also follow an [`IPath`](xref:SixLabors.ImageSharp.Drawing.IPath).
+Text can also follow an [`IPath`](xref:SixLabors.ImageSharp.Drawing.IPath). In this mode the path acts as the text baseline, so path direction matters: reversing the path reverses the flow direction. Use open paths for natural baselines. Closed shapes can work, but they should be chosen deliberately because the baseline continues around the contour.
+
+Path text is still shaped text. The font, runs, fallback, culture, and decoration options come from the text options; the path only changes where the shaped glyphs are placed.
 
 ```csharp
 using SixLabors.Fonts;
@@ -256,6 +262,8 @@ image.Mutate(ctx => ctx.Paint(canvas =>
 ## Use Text as Geometry
 
 Use `TextBuilder.GeneratePaths(...)` when the glyph outlines themselves should become drawing geometry. The returned paths can be filled, stroked, used as clips, or combined with image drawing.
+
+Generating paths changes the problem from text layout to geometry. Once glyph outlines become paths, they can be clipped, filled with image brushes, stroked with pens, transformed, or combined with other paths. Use this when text is part of a graphic effect or mask. Use `DrawText(...)` when you simply want text rendered as text.
 
 ```csharp
 using SixLabors.Fonts;
@@ -298,3 +306,11 @@ image.Mutate(ctx => ctx.Paint(canvas =>
     canvas.Draw(Pens.Solid(Color.White, 2), letters);
 }));
 ```
+
+## Practical Guidance
+
+Use `RichTextOptions` as the drawing contract for canvas text. If text is measured before it is drawn, the measurement and drawing passes should use the same font, origin model, wrapping length, alignment, culture, fallback, feature tags, and text runs. Otherwise the final pixels can differ from the measured result even when the string is identical.
+
+Prefer the layout options over manual coordinate math. Centering text in a region is a layout problem: set the origin to the region anchor, specify wrapping, and use horizontal, vertical, and text alignment so the layout engine accounts for line height, wrapping, shaping, and fallback metrics. Manual width subtraction is fragile as soon as the string localizes, wraps, or uses a fallback face.
+
+Style ranges and placeholders use grapheme-indexed `[start, end)` ranges. This matters for emoji, combining marks, complex scripts, and any text where one visible unit is not one UTF-16 `char`. Use `TextBlock` when the same shaped text needs to be measured, inspected, hit-tested, or rendered repeatedly. Use generated text paths when text becomes geometry for fills, clips, strokes, or masks.

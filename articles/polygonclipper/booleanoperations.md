@@ -11,6 +11,8 @@ The public entry points are the static methods on [`PolygonClipper`](xref:SixLab
 
 These are also the recommended entry points in the source, because they route work through internal reusable instances.
 
+Boolean operations answer region questions. They do not preserve the input contour list as a drawing history. After an operation, the returned polygon describes the resulting filled area, and that may require new contours, fewer contours, or a different hierarchy.
+
 ## Choose the Right Operation
 
 The four operations have different semantics:
@@ -79,6 +81,14 @@ for (int i = 0; i < result.Count; i++)
 ```
 
 If you care about preserving hole structure or exporting contours to another renderer, inspect that hierarchy instead of assuming every returned contour is a top-level exterior ring.
+
+## Practical Guidance
+
+Boolean operations combine regions. They are not a promise to preserve input contour order, input contour count, or drawing history. The result may contain several disjoint islands, holes, or a hierarchy that neither input had in exactly the same form. Production code should iterate the returned polygon and inspect hierarchy rather than assuming the first contour is the only contour that matters.
+
+Keep both inputs in the same coordinate system and units. `Difference(subject, clip)` is especially sensitive to naming because argument order changes the result: the clip is removed from the subject, not the other way around. Clear variable names make call sites much easier to audit.
+
+Use normalization when the problem is "clean this one messy region" rather than "combine these two regions." Imported or user-authored self-overlapping geometry is often easier to reason about after normalization, but there is no need to normalize every polygon before every boolean operation. Preserve hierarchy metadata when exporting to renderers or file formats that distinguish exterior rings from holes.
 
 ## Used by ImageSharp.Drawing
 
