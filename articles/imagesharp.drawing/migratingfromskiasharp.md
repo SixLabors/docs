@@ -13,7 +13,7 @@ That difference is useful. The same drawing code can target normal CPU-backed im
 | `SKPaint` fill | [`Brush`](xref:SixLabors.ImageSharp.Drawing.Processing.Brush), usually [`Brushes.Solid(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.Brushes.Solid*), gradient brushes, image brushes, or pattern brushes |
 | `SKPaint` stroke | [`Pen`](xref:SixLabors.ImageSharp.Drawing.Processing.Pen), usually [`Pens.Solid(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.Pens.Solid*) or a custom `Pen` with stroke options |
 | `SKColor` | `Color`, or a concrete pixel type such as `Rgba32` when working directly with pixels |
-| `SKRect` / `SKRoundRect` | `Rectangle`, `RectangleF`, and shape types such as [`RectangularPolygon`](xref:SixLabors.ImageSharp.Drawing.RectangularPolygon) |
+| `SKRect` / `SKRoundRect` | `Rectangle`, `RectangleF`, and shape types such as [`RectanglePolygon`](xref:SixLabors.ImageSharp.Drawing.RectanglePolygon) |
 | `SKPath` | [`PathBuilder`](xref:SixLabors.ImageSharp.Drawing.PathBuilder), [`Path`](xref:SixLabors.ImageSharp.Drawing.Path), [`IPath`](xref:SixLabors.ImageSharp.Drawing.IPath), and built-in shapes such as [`EllipsePolygon`](xref:SixLabors.ImageSharp.Drawing.EllipsePolygon) |
 | `SKMatrix` | `Matrix4x4` transforms, commonly constructed from `Matrix3x2` |
 | `SKImageFilter` / `SKMaskFilter` | `Apply(...)` with ImageSharp processors for region-scoped effects |

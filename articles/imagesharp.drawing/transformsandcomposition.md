@@ -33,7 +33,7 @@ DrawingOptions rotated = new()
     Transform = new(Matrix3x2.CreateRotation(0.32F, new Vector2(210, 130)))
 };
 
-RectangularPolygon panel = new(92, 70, 236, 120);
+RectanglePolygon panel = new(92, 70, 236, 120);
 
 image.Mutate(ctx => ctx.Paint(canvas =>
 {

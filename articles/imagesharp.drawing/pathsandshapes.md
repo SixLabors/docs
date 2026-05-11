@@ -8,7 +8,7 @@ The core geometry types are:
 - [`Path`](xref:SixLabors.ImageSharp.Drawing.Path) for an open path made from line segments, arcs, and curves.
 - [`Polygon`](xref:SixLabors.ImageSharp.Drawing.Polygon) for a closed path.
 - [`ComplexPolygon`](xref:SixLabors.ImageSharp.Drawing.ComplexPolygon) for a shape made from multiple paths, such as an outer contour with holes.
-- [`Polygon`](xref:SixLabors.ImageSharp.Drawing.Polygon), [`RectangularPolygon`](xref:SixLabors.ImageSharp.Drawing.RectangularPolygon), [`EllipsePolygon`](xref:SixLabors.ImageSharp.Drawing.EllipsePolygon), [`RegularPolygon`](xref:SixLabors.ImageSharp.Drawing.RegularPolygon), [`Star`](xref:SixLabors.ImageSharp.Drawing.Star), and [`Pie`](xref:SixLabors.ImageSharp.Drawing.Pie) for common shapes.
+- [`Polygon`](xref:SixLabors.ImageSharp.Drawing.Polygon), [`RectanglePolygon`](xref:SixLabors.ImageSharp.Drawing.RectanglePolygon), [`EllipsePolygon`](xref:SixLabors.ImageSharp.Drawing.EllipsePolygon), [`RegularPolygon`](xref:SixLabors.ImageSharp.Drawing.RegularPolygon), [`StarPolygon`](xref:SixLabors.ImageSharp.Drawing.StarPolygon), and [`PiePolygon`](xref:SixLabors.ImageSharp.Drawing.PiePolygon) for common shapes.
 - [`PathBuilder`](xref:SixLabors.ImageSharp.Drawing.PathBuilder) when you want to construct a custom path from line and curve commands.
 - [`PathCollection`](xref:SixLabors.ImageSharp.Drawing.PathCollection) when one operation should cover several paths.
 
@@ -28,8 +28,8 @@ using SixLabors.ImageSharp.Processing;
 using Image<Rgba32> image = new(420, 260, Color.White.ToPixel<Rgba32>());
 
 EllipsePolygon ellipse = new(new PointF(120, 110), new SizeF(160, 96));
-Star star = new(x: 292, y: 128, prongs: 7, innerRadii: 34, outerRadii: 72);
-Pie pie = new(new PointF(120, 202), new SizeF(120, 86), startAngle: -30, sweepAngle: 245);
+StarPolygon star = new(x: 292, y: 128, prongs: 7, innerRadii: 34, outerRadii: 72);
+PiePolygon pie = new(new PointF(120, 202), new SizeF(120, 86), startAngle: -30, sweepAngle: 245);
 
 image.Mutate(ctx => ctx.Paint(canvas =>
 {
@@ -230,7 +230,7 @@ using SixLabors.ImageSharp.Processing;
 using Image<Rgba32> image = new(420, 240, Color.White.ToPixel<Rgba32>());
 
 EllipsePolygon subject = new(new PointF(190, 120), new SizeF(260, 154));
-Star cutout = new(x: 226, y: 120, prongs: 6, innerRadii: 38, outerRadii: 82);
+StarPolygon cutout = new(x: 226, y: 120, prongs: 6, innerRadii: 38, outerRadii: 82);
 
 ShapeOptions clipOptions = new()
 {
@@ -271,7 +271,7 @@ IPath shiftedPath = closedPath.Translate(0, 24);
 float length = openPath.ComputeLength();
 float area = closedPath.ComputeArea();
 RectangleF bounds = shiftedPath.Bounds;
-RectangularPolygon boundsPath = new(bounds.X, bounds.Y, bounds.Width, bounds.Height);
+RectanglePolygon boundsPath = new(bounds.X, bounds.Y, bounds.Width, bounds.Height);
 
 image.Mutate(ctx => ctx.Paint(canvas =>
 {

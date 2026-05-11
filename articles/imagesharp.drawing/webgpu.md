@@ -194,7 +194,7 @@ using WebGPUWindow window = new(options);
 window.Run((WebGPUSurfaceFrame frame) =>
 {
     DrawingCanvas canvas = frame.Canvas;
-    RectangularPolygon panel = new(64, 72, 320, 180);
+    RectanglePolygon panel = new(64, 72, 320, 180);
     EllipsePolygon marker = new(new PointF(224, 162), new SizeF(120, 82));
 
     // Run supplies a frame canvas and presents it after the callback completes.
@@ -256,7 +256,7 @@ while (!window.IsClosing)
     {
         DrawingCanvas canvas = frame.Canvas;
         canvas.Clear(Brushes.Solid(Color.White));
-        canvas.Fill(Brushes.Solid(Color.CornflowerBlue), new RectangularPolygon(40, 40, 180, 120));
+        canvas.Fill(Brushes.Solid(Color.CornflowerBlue), new RectanglePolygon(40, 40, 180, 120));
     }
 }
 ```
@@ -289,7 +289,7 @@ void RunWin32Surface(nint hwnd, nint hinstance)
 
         using (frame)
         {
-            RectangularPolygon content = new(48, 48, 320, 160);
+            RectanglePolygon content = new(48, 48, 320, 160);
 
             // The external UI loop owns when Render is called; the frame owns presentation.
             frame.Canvas.Clear(Brushes.Solid(Color.White));
@@ -327,7 +327,7 @@ using WebGPURenderTarget target = new(640, 360);
 
 using (DrawingCanvas canvas = target.CreateCanvas())
 {
-    RectangularPolygon background = new(0, 0, target.Width, target.Height);
+    RectanglePolygon background = new(0, 0, target.Width, target.Height);
     EllipsePolygon highlight = new(new PointF(320, 180), new SizeF(260, 140));
 
     // Disposing the canvas flushes the recorded drawing commands to the GPU target.

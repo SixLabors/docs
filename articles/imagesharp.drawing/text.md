@@ -128,7 +128,7 @@ RichTextOptions options = new(font)
 
 TextBlock block = new("Prepared text can be measured and drawn with the same shaping.", options);
 TextMetrics metrics = block.Measure(wrappingLength: 520);
-RectangularPolygon layoutBox = new(60, 48, 520, metrics.Advance.Height + 24);
+RectanglePolygon layoutBox = new(60, 48, 520, metrics.Advance.Height + 24);
 
 image.Mutate(ctx => ctx.Paint(canvas =>
 {

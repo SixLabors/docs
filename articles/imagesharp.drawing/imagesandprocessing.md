@@ -54,7 +54,7 @@ using SixLabors.ImageSharp.Processing;
 using Image<Rgba32> source = Image.Load<Rgba32>("photo.jpg");
 using Image<Rgba32> image = new(420, 260, Color.White.ToPixel<Rgba32>());
 
-Star star = new(x: 210, y: 130, prongs: 5, innerRadii: 62, outerRadii: 118);
+StarPolygon star = new(x: 210, y: 130, prongs: 5, innerRadii: 62, outerRadii: 118);
 RectangleF sourceRegion = new(0, 0, source.Width, source.Height);
 ImageBrush<Rgba32> brush = new(source, sourceRegion, new Point(-120, -70));
 

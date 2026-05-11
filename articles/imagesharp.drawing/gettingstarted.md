@@ -23,7 +23,7 @@ using SixLabors.ImageSharp.Processing;
 
 using Image<Rgba32> image = new(320, 200, Color.White.ToPixel<Rgba32>());
 
-Star star = new(x: 160, y: 100, prongs: 5, innerRadii: 42, outerRadii: 86);
+StarPolygon star = new(x: 160, y: 100, prongs: 5, innerRadii: 42, outerRadii: 86);
 Pen outline = Pens.DashDot(Color.MidnightBlue, 4);
 
 image.Mutate(ctx => ctx.Paint(canvas =>

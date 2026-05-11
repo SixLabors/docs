@@ -12,7 +12,7 @@ using SixLabors.ImageSharp.Processing;
 
 using Image<Rgba32> image = new(420, 180, Color.Transparent.ToPixel<Rgba32>());
 
-RectangularPolygon badge = new(24, 36, 372, 108);
+RectanglePolygon badge = new(24, 36, 372, 108);
 Font font = SystemFonts.CreateFont("Arial", 38, FontStyle.Bold);
 PointF gradientStart = new(24, 36);
 PointF gradientEnd = new(396, 144);
@@ -44,7 +44,7 @@ image.Mutate(ctx => ctx.Paint(canvas =>
 image.Save("badge.png");
 ```
 
-Use a path type that matches the badge geometry you want. [`RectangularPolygon`](xref:SixLabors.ImageSharp.Drawing.RectangularPolygon), [`EllipsePolygon`](xref:SixLabors.ImageSharp.Drawing.EllipsePolygon), [`RegularPolygon`](xref:SixLabors.ImageSharp.Drawing.RegularPolygon), [`Star`](xref:SixLabors.ImageSharp.Drawing.Star), and custom [`PathBuilder`](xref:SixLabors.ImageSharp.Drawing.PathBuilder) paths can all be filled and stroked through the same canvas calls.
+Use a path type that matches the badge geometry you want. [`RectanglePolygon`](xref:SixLabors.ImageSharp.Drawing.RectanglePolygon), [`EllipsePolygon`](xref:SixLabors.ImageSharp.Drawing.EllipsePolygon), [`RegularPolygon`](xref:SixLabors.ImageSharp.Drawing.RegularPolygon), [`StarPolygon`](xref:SixLabors.ImageSharp.Drawing.StarPolygon), and custom [`PathBuilder`](xref:SixLabors.ImageSharp.Drawing.PathBuilder) paths can all be filled and stroked through the same canvas calls.
 
 ## Related Topics
 
