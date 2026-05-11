@@ -20,15 +20,29 @@ Once that shift lands, most everyday workflows map over cleanly.
 
 A typical `System.Drawing` workflow translates to:
 
+System.Drawing:
+
+```csharp
+using System.Drawing;
+using System.Drawing.Imaging;
+
+using Bitmap source = new("input.jpg");
+using Bitmap output = new(400, 300);
+using Graphics graphics = Graphics.FromImage(output);
+
+graphics.DrawImage(source, 0, 0, 400, 300);
+output.Save("output.png", ImageFormat.Png);
+```
+
+ImageSharp:
+
 ```csharp
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Processing;
 
 using Image image = Image.Load("input.jpg");
 
-image.Mutate(context => context
-    .AutoOrient()
-    .Resize(400, 300));
+image.Mutate(context => context.Resize(400, 300));
 
 image.SaveAsPng("output.png");
 ```
@@ -39,6 +53,17 @@ Instead of mutating through a separate `Graphics` object, ImageSharp uses proces
 
 If you used `Bitmap.GetPixel()` or `Bitmap.SetPixel()` heavily, the closest ImageSharp equivalent is the indexer:
 
+System.Drawing:
+
+```csharp
+using System.Drawing;
+
+Color pixel = bitmap.GetPixel(10, 20);
+bitmap.SetPixel(10, 20, Color.White);
+```
+
+ImageSharp:
+
 ```csharp
 using SixLabors.ImageSharp.PixelFormats;
 
@@ -47,6 +72,53 @@ image[10, 20] = Rgba32.White;
 ```
 
 For real throughput, move to `ProcessPixelRows(...)` instead. That is the ImageSharp replacement for most `LockBits`-driven loops:
+
+System.Drawing:
+
+```csharp
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.Runtime.InteropServices;
+
+BitmapData data = bitmap.LockBits(
+    new Rectangle(0, 0, bitmap.Width, bitmap.Height),
+    ImageLockMode.ReadWrite,
+    PixelFormat.Format32bppArgb);
+
+try
+{
+    int stride = Math.Abs(data.Stride);
+    int byteCount = stride * data.Height;
+    byte[] pixels = new byte[byteCount];
+
+    Marshal.Copy(data.Scan0, pixels, 0, pixels.Length);
+
+    for (int y = 0; y < data.Height; y++)
+    {
+        int rowStart = y * stride;
+
+        // Format32bppArgb stores one pixel in four bytes, so reverse pixels rather than individual bytes.
+        for (int x = 0; x < data.Width / 2; x++)
+        {
+            int left = rowStart + (x * 4);
+            int right = rowStart + ((data.Width - x - 1) * 4);
+
+            for (int b = 0; b < 4; b++)
+            {
+                (pixels[left + b], pixels[right + b]) = (pixels[right + b], pixels[left + b]);
+            }
+        }
+    }
+
+    Marshal.Copy(pixels, 0, data.Scan0, pixels.Length);
+}
+finally
+{
+    bitmap.UnlockBits(data);
+}
+```
+
+ImageSharp:
 
 ```csharp
 using SixLabors.ImageSharp;
@@ -78,6 +150,19 @@ That means:
 ## Replace `PixelFormat` with `TPixel`
 
 Instead of storing a runtime `PixelFormat` enum and branching on it later, ImageSharp encourages you to choose a generic working type:
+
+System.Drawing:
+
+```csharp
+using System.Drawing;
+using System.Drawing.Imaging;
+
+using Bitmap bitmap = new("input.tiff");
+
+bool isArgb = bitmap.PixelFormat == PixelFormat.Format32bppArgb;
+```
+
+ImageSharp:
 
 ```csharp
 using SixLabors.ImageSharp;

@@ -14,7 +14,7 @@ Fonts is often used underneath [ImageSharp.Drawing](../imagesharp.drawing/index.
 Fonts is licensed under the terms of the [Six Labors Split License, Version 1.0](https://github.com/SixLabors/Fonts/blob/main/LICENSE). See https://sixlabors.com/pricing for commercial licensing details.
 
 >[!IMPORTANT]
->Starting with Fonts 3.0.0, projects that directly depend on SixLabors.Fonts require a `sixlabors.lic` file to compile. By default, place the file next to your project file, or set `SixLaborsLicenseFile` in your project or shared props file to point to a central location. This enforcement applies to direct dependencies only. See [License Enforcement Changes and a New Subscription Tier](https://sixlabors.com/posts/licence-enforcement-changes/) for details.
+>Starting with Fonts 3.0.0, projects that directly depend on SixLabors.Fonts require a valid Six Labors license at build time. Add `sixlabors.lic` to your repository root, set `SixLaborsLicenseFile`, or set `SixLaborsLicenseKey`. This enforcement applies to direct dependencies only. See [License Enforcement Changes and a New Subscription Tier](https://sixlabors.com/posts/licence-enforcement-changes/) for details.
 
 ### Installation
 
@@ -48,6 +48,44 @@ paket add SixLabors.Fonts --version VERSION_NUMBER
 
 >[!WARNING]
 >Prerelease versions installed via the [Visual Studio NuGet Package Manager](https://docs.microsoft.com/en-us/nuget/consume-packages/install-use-packages-visual-studio) require the "include prerelease" checkbox to be checked.
+
+### How to use the license file
+
+Add the supplied `sixlabors.lic` file to your repository root. Use the file as supplied; it already contains the complete license string required by the build.
+
+If you want to keep the file somewhere else, set `SixLaborsLicenseFile` in your project file or a shared props file:
+
+```xml
+<PropertyGroup>
+  <SixLaborsLicenseFile>path/to/sixlabors.lic</SixLaborsLicenseFile>
+</PropertyGroup>
+```
+
+If you do not want to store the license on disk, pass the license string directly from an environment variable or secret store. When extracting the value from `sixlabors.lic`, use the full file contents, not only the `Key` field:
+
+```xml
+<PropertyGroup>
+  <SixLaborsLicenseKey>$(SIXLABORS_LICENSE_KEY)</SixLaborsLicenseKey>
+</PropertyGroup>
+```
+
+You can also pass the key to common .NET CLI commands.
+
+PowerShell:
+
+```powershell
+dotnet build -p:SixLaborsLicenseKey="$env:SIXLABORS_LICENSE_KEY"
+dotnet publish -p:SixLaborsLicenseKey="$env:SIXLABORS_LICENSE_KEY"
+```
+
+Bash and other shells that expand environment variables with `$NAME`:
+
+```bash
+dotnet build -p:SixLaborsLicenseKey="$SIXLABORS_LICENSE_KEY"
+dotnet publish -p:SixLaborsLicenseKey="$SIXLABORS_LICENSE_KEY"
+```
+
+Build as normal after the file or property is configured. If the license is missing or invalid, the build fails with a clear error. You do not need to reference the licensing package directly; it is carried by Six Labors libraries.
 
 ### Start Here
 

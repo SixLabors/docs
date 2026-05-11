@@ -83,13 +83,12 @@ This matters for emoji, combining marks, flags, and other user-perceived charact
 
 ## Processors Run Before Earlier Drawing
 
-Canvas operations are ordered, but image processors operate at replay barriers. If you need a processor such as blur, opacity, or a mask operation to include drawing that has already been recorded, flush the canvas before applying the processor.
+Canvas operations are ordered, but image processors operate at replay barriers. A processor such as blur, opacity, or a mask operation includes drawing that was recorded before the `Apply(...)` call.
 
 ```csharp
 canvas.Fill(Color.Black, shadowShape);
 
-// Flush seals the shadow geometry before the blur processor is applied.
-canvas.Flush();
+// Apply seals the shadow geometry before the blur processor is applied.
 canvas.Apply(x => x.GaussianBlur(8));
 ```
 
@@ -123,7 +122,7 @@ using (frame)
 }
 ```
 
-Resize the `WebGPUExternalSurface` when the framebuffer size changes. If you need to read pixels back to the CPU, use a pixel type that matches the target texture format, for example `Rgba32` with an `Rgba8Unorm` target.
+Resize the [`WebGPUExternalSurface`](xref:SixLabors.ImageSharp.Drawing.Processing.Backends.WebGPUExternalSurface) when the framebuffer size changes. If you need to read pixels back to the CPU, use a pixel type that matches the target texture format, for example `Rgba32` with an `Rgba8Unorm` target.
 
 ## A Good Debugging Order
 

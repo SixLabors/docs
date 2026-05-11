@@ -1,6 +1,6 @@
 # WebGPU
 
-ImageSharp.Drawing.WebGPU provides a GPU-backed drawing target for the same `DrawingCanvas` API used by the CPU image pipeline.
+ImageSharp.Drawing.WebGPU provides a GPU-backed drawing target for the same [`DrawingCanvas`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas) API used by the CPU image pipeline.
 
 Use the WebGPU package when you want ImageSharp.Drawing to render into a native WebGPU surface or an offscreen GPU texture. Use the regular ImageSharp.Drawing package when you want to draw directly into an `Image<TPixel>` on the CPU.
 
@@ -8,7 +8,7 @@ Use the WebGPU package when you want ImageSharp.Drawing to render into a native 
 
 WebGPU is a modern, explicit GPU API. It gives an application access to a graphics adapter, a device, command queues, textures, buffers, shaders, and presentation surfaces. It is conceptually similar to modern native graphics APIs such as Vulkan, Metal, and Direct3D 12, but it exposes a portable WebGPU programming model.
 
-In ImageSharp.Drawing, WebGPU is not a browser feature. It is a native rendering backend used by .NET applications through the `SixLabors.ImageSharp.Drawing.WebGPU` package. The package creates or attaches to native WebGPU surfaces, records `DrawingCanvas` commands, lowers those commands into GPU work, and renders them into a WebGPU texture.
+In ImageSharp.Drawing, WebGPU is not a browser feature. It is a native rendering backend used by .NET applications through the `SixLabors.ImageSharp.Drawing.WebGPU` package. The package creates or attaches to native WebGPU surfaces, records [`DrawingCanvas`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas) commands, lowers those commands into GPU work, and renders them into a WebGPU texture.
 
 The most important difference from normal ImageSharp drawing is the destination:
 
@@ -19,7 +19,7 @@ Use WebGPU when the destination is interactive, GPU-owned, or repeatedly redrawn
 
 ## How ImageSharp.Drawing Uses WebGPU
 
-The WebGPU backend keeps the public drawing model the same. You still draw with `DrawingCanvas`, `Brush`, `Pen`, `IPath`, `RichTextOptions`, layers, clips, and retained scenes.
+The WebGPU backend keeps the public drawing model the same. You still draw with [`DrawingCanvas`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas), [`Brush`](xref:SixLabors.ImageSharp.Drawing.Processing.Brush), [`Pen`](xref:SixLabors.ImageSharp.Drawing.Processing.Pen), [`IPath`](xref:SixLabors.ImageSharp.Drawing.IPath), [`RichTextOptions`](xref:SixLabors.ImageSharp.Drawing.Processing.RichTextOptions), layers, clips, and retained scenes.
 
 The difference is what happens when the canvas flushes or is disposed:
 
@@ -35,11 +35,11 @@ That means WebGPU drawing is still deferred like the rest of the canvas API. The
 
 The public WebGPU API is target-first.
 
-- `WebGPUEnvironment` probes support and configures the library-managed WebGPU environment before first use.
-- `WebGPUWindow` owns a native window, WebGPU surface, device resources, and render loop.
-- `WebGPUExternalSurface` attaches to a native drawable owned by another toolkit or host application.
-- `WebGPURenderTarget` owns an offscreen GPU texture and can read it back into an ImageSharp image.
-- `WebGPUSurfaceFrame` represents one acquired presentable frame. Dispose it to render and present the frame.
+- [`WebGPUEnvironment`](xref:SixLabors.ImageSharp.Drawing.Processing.Backends.WebGPUEnvironment) probes support and configures the library-managed WebGPU environment before first use.
+- [`WebGPUWindow`](xref:SixLabors.ImageSharp.Drawing.Processing.Backends.WebGPUWindow) owns a native window, WebGPU surface, device resources, and render loop.
+- [`WebGPUExternalSurface`](xref:SixLabors.ImageSharp.Drawing.Processing.Backends.WebGPUExternalSurface) attaches to a native drawable owned by another toolkit or host application.
+- [`WebGPURenderTarget`](xref:SixLabors.ImageSharp.Drawing.Processing.Backends.WebGPURenderTarget) owns an offscreen GPU texture and can read it back into an ImageSharp image.
+- [`WebGPUSurfaceFrame`](xref:SixLabors.ImageSharp.Drawing.Processing.Backends.WebGPUSurfaceFrame) represents one acquired presentable frame. Dispose it to render and present the frame.
 
 Most application code should start by choosing the target type. You do not normally create devices, queues, or command encoders yourself.
 
@@ -77,7 +77,7 @@ paket add SixLabors.ImageSharp.Drawing.WebGPU --version VERSION_NUMBER
 
 ## Check WebGPU Support
 
-Use `WebGPUEnvironment` when an application needs to check support before constructing a WebGPU window, external surface, or render target.
+Use [`WebGPUEnvironment`](xref:SixLabors.ImageSharp.Drawing.Processing.Backends.WebGPUEnvironment) when an application needs to check support before constructing a WebGPU window, external surface, or render target.
 
 ```csharp
 using SixLabors.ImageSharp.Drawing.Processing.Backends;
@@ -100,11 +100,11 @@ if (compute != WebGPUEnvironmentError.Success)
 }
 ```
 
-Assign `WebGPUEnvironment.Options` before any other WebGPU object is created. The library-managed WebGPU environment is initialized on first use.
+Assign [`WebGPUEnvironment.Options`](xref:SixLabors.ImageSharp.Drawing.Processing.Backends.WebGPUEnvironment.Options) before any other WebGPU object is created. The library-managed WebGPU environment is initialized on first use.
 
 `ProbeAvailability()` checks whether the package can initialize the WebGPU API, create an instance, acquire an adapter, acquire a device, and get the default queue. `ProbeComputePipelineSupport()` checks whether the acquired device can create a trivial compute pipeline. The compute-pipeline probe is useful because the drawing backend depends on compute work for the staged raster pipeline.
 
-The result is a `WebGPUEnvironmentError`. `Success` is the only successful value. Other values tell you which step failed, such as API initialization, adapter acquisition, device acquisition, queue acquisition, or compute-pipeline creation.
+The result is a [`WebGPUEnvironmentError`](xref:SixLabors.ImageSharp.Drawing.Processing.Backends.WebGPUEnvironmentError). `Success` is the only successful value. Other values tell you which step failed, such as API initialization, adapter acquisition, device acquisition, queue acquisition, or compute-pipeline creation.
 
 ```csharp
 using SixLabors.ImageSharp.Drawing.Processing.Backends;
@@ -174,7 +174,7 @@ Use `Fifo` for most applications. Use `Immediate` or `Mailbox` only when latency
 
 ## Draw to a Window
 
-`WebGPUWindow` owns the platform window, WebGPU device resources, and frame acquisition. The render callback receives a `WebGPUSurfaceFrame`, and the frame exposes the `DrawingCanvas` for that render.
+[`WebGPUWindow`](xref:SixLabors.ImageSharp.Drawing.Processing.Backends.WebGPUWindow) owns the platform window, WebGPU device resources, and frame acquisition. The render callback receives a [`WebGPUSurfaceFrame`](xref:SixLabors.ImageSharp.Drawing.Processing.Backends.WebGPUSurfaceFrame), and the frame exposes the [`DrawingCanvas`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas) for that render.
 
 ```csharp
 using SixLabors.ImageSharp;
@@ -207,7 +207,7 @@ window.Run((WebGPUSurfaceFrame frame) =>
 
 `Run(Action<WebGPUSurfaceFrame>)` is the simplest model. The window acquires a frame, gives you the frame and its canvas, disposes the frame after the callback, and presents the result.
 
-Use the `WebGPUSurfaceFrame` overload when you need frame lifetime control or the elapsed render time.
+Use the [`WebGPUSurfaceFrame`](xref:SixLabors.ImageSharp.Drawing.Processing.Backends.WebGPUSurfaceFrame) overload when you need frame lifetime control or the elapsed render time.
 
 ```csharp
 using SixLabors.ImageSharp;
@@ -229,7 +229,7 @@ window.Run((frame, elapsed) =>
 });
 ```
 
-`WebGPUWindow` also exposes window events and properties such as title, size, framebuffer size, render scale, position, visibility, focus, state, border, frame rate limits, and present mode. `FramebufferSize` is the size that matters for the WebGPU surface. `ClientSize` is the window coordinate size.
+[`WebGPUWindow`](xref:SixLabors.ImageSharp.Drawing.Processing.Backends.WebGPUWindow) also exposes window events and properties such as title, size, framebuffer size, render scale, position, visibility, focus, state, border, frame rate limits, and present mode. `FramebufferSize` is the size that matters for the WebGPU surface. `ClientSize` is the window coordinate size.
 
 ## Manual Frame Acquisition
 
@@ -265,7 +265,7 @@ while (!window.IsClosing)
 
 ## Draw to an Existing Surface
 
-Use `WebGPUExternalSurface` when another toolkit owns the window or native drawable. Create a `WebGPUSurfaceHost` for the platform handle, notify the surface when the drawable framebuffer changes size, and acquire one `WebGPUSurfaceFrame` for each render.
+Use [`WebGPUExternalSurface`](xref:SixLabors.ImageSharp.Drawing.Processing.Backends.WebGPUExternalSurface) when another toolkit owns the window or native drawable. Create a [`WebGPUSurfaceHost`](xref:SixLabors.ImageSharp.Drawing.Processing.Backends.WebGPUSurfaceHost) for the platform handle, notify the surface when the drawable framebuffer changes size, and acquire one [`WebGPUSurfaceFrame`](xref:SixLabors.ImageSharp.Drawing.Processing.Backends.WebGPUSurfaceFrame) for each render.
 
 ```csharp
 using SixLabors.ImageSharp;
@@ -299,22 +299,22 @@ void RunWin32Surface(nint hwnd, nint hinstance)
 }
 ```
 
-`WebGPUSurfaceHost` includes factory methods for GLFW, SDL, Win32, X11, Cocoa, UIKit, Wayland, WinRT, Android, Vivante, and EGL hosts.
+[`WebGPUSurfaceHost`](xref:SixLabors.ImageSharp.Drawing.Processing.Backends.WebGPUSurfaceHost) includes factory methods for GLFW, SDL, Win32, X11, Cocoa, UIKit, Wayland, WinRT, Android, Vivante, and EGL hosts.
 
 The host application remains responsible for:
 
 - creating and owning the native window or drawable
-- providing the correct native handles to `WebGPUSurfaceHost`
+- providing the correct native handles to [`WebGPUSurfaceHost`](xref:SixLabors.ImageSharp.Drawing.Processing.Backends.WebGPUSurfaceHost)
 - calling `Resize(...)` when the drawable framebuffer size changes
 - calling `TryAcquireFrame(...)` from its render loop
-- disposing each acquired `WebGPUSurfaceFrame`
+- disposing each acquired [`WebGPUSurfaceFrame`](xref:SixLabors.ImageSharp.Drawing.Processing.Backends.WebGPUSurfaceFrame)
 - keeping native handles valid for the lifetime of the external surface
 
-Use `WebGPUExternalSurface` when ImageSharp.Drawing should render into an existing UI framework or native application instead of creating its own window.
+Use [`WebGPUExternalSurface`](xref:SixLabors.ImageSharp.Drawing.Processing.Backends.WebGPUExternalSurface) when ImageSharp.Drawing should render into an existing UI framework or native application instead of creating its own window.
 
 ## Draw Offscreen
 
-`WebGPURenderTarget` renders into an offscreen GPU texture. Create a canvas, draw into it, dispose the canvas to flush the drawing work, then read the result back when CPU image access is needed.
+[`WebGPURenderTarget`](xref:SixLabors.ImageSharp.Drawing.Processing.Backends.WebGPURenderTarget) renders into an offscreen GPU texture. Create a canvas, draw into it, dispose the canvas to flush the drawing work, then read the result back when CPU image access is needed.
 
 ```csharp
 using SixLabors.ImageSharp;
@@ -346,11 +346,11 @@ Readback copies GPU texture data into CPU memory. It is useful when you need an 
 
 ## Choosing a Target
 
-Use `WebGPUWindow` when ImageSharp.Drawing should own the application window and render loop.
+Use [`WebGPUWindow`](xref:SixLabors.ImageSharp.Drawing.Processing.Backends.WebGPUWindow) when ImageSharp.Drawing should own the application window and render loop.
 
-Use `WebGPUExternalSurface` when an existing application, UI framework, or native toolkit owns the window and event loop.
+Use [`WebGPUExternalSurface`](xref:SixLabors.ImageSharp.Drawing.Processing.Backends.WebGPUExternalSurface) when an existing application, UI framework, or native toolkit owns the window and event loop.
 
-Use `WebGPURenderTarget` when you want GPU rendering without a visible window, or when the output needs to be read back into an ImageSharp image.
+Use [`WebGPURenderTarget`](xref:SixLabors.ImageSharp.Drawing.Processing.Backends.WebGPURenderTarget) when you want GPU rendering without a visible window, or when the output needs to be read back into an ImageSharp image.
 
 ## When Not to Use WebGPU
 
@@ -374,8 +374,8 @@ Prefer WebGPU when:
 
 The important lifetime rules are:
 
-- Dispose a `DrawingCanvas` created from `WebGPURenderTarget.CreateCanvas()` to submit its recorded work.
-- Dispose a `WebGPUSurfaceFrame` to submit and present the frame.
+- Dispose a [`DrawingCanvas`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas) created from [`WebGPURenderTarget.CreateCanvas()`](xref:SixLabors.ImageSharp.Drawing.Processing.Backends.WebGPURenderTarget.CreateCanvas*) to submit its recorded work.
+- Dispose a [`WebGPUSurfaceFrame`](xref:SixLabors.ImageSharp.Drawing.Processing.Backends.WebGPUSurfaceFrame) to submit and present the frame.
 - Keep retained scenes alive until every canvas or frame that recorded them has been disposed.
 - Keep source images used by image brushes alive until the WebGPU canvas has replayed.
 - Call `Resize(...)` on external surfaces before acquiring the next frame after a framebuffer resize.

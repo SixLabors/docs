@@ -1,6 +1,6 @@
 # Canvas Drawing
 
-`DrawingCanvas` is the central drawing surface in ImageSharp.Drawing. You normally use it through `Paint(...)` inside an ImageSharp processing pipeline:
+[`DrawingCanvas`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas) is the central drawing surface in ImageSharp.Drawing. You normally use it through [`Paint(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.PaintExtensions) inside an ImageSharp processing pipeline:
 
 ```csharp
 using SixLabors.ImageSharp;
@@ -24,7 +24,7 @@ The callback receives a canvas for the current frame. Use the canvas for all dra
 
 ## Deferred Drawing and Replay
 
-`DrawingCanvas` looks immediate, but most drawing commands are recorded first and replayed later. Calls such as `Fill(...)`, `Draw(...)`, `DrawText(...)`, and `SaveLayer(...)` append drawing intent to a command buffer. Calls that must happen at a specific point, such as `Apply(...)` and `RenderScene(...)`, are stored as entries in the canvas replay timeline.
+[`DrawingCanvas`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas) looks immediate, but most drawing commands are recorded first and replayed later. Calls such as [`Fill(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.Fill*), [`Draw(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.Draw*), [`DrawText(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.DrawText*), and [`SaveLayer(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.SaveLayer*) append drawing intent to a command buffer. Calls that must happen at a specific point, such as [`Apply(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.Apply*) and [`RenderScene(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.RenderScene*) are stored as entries in the canvas replay timeline.
 
 The root canvas replays the timeline when it is disposed. During replay, command ranges are prepared into backend command batches, and the backend creates and renders scenes for those ranges. This is why a manually-created canvas must be disposed: disposal is the point where recorded work is actually rendered into the target.
 
@@ -36,28 +36,27 @@ The replay timeline can contain three kinds of entry:
 
 This deferred model lets ImageSharp.Drawing use one public canvas API for CPU images, WebGPU surfaces, and retained backend scenes. The canvas records drawing intent once, performs shared preparation once, and then hands a stable command batch to the active backend.
 
-`Flush()` seals the commands recorded so far into a command-range timeline entry. It does not render immediately by itself. Most code does not need it; use it when a later operation must appear after the current commands in replay order.
+[`Flush()`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.Flush) seals the commands recorded so far into a command-range timeline entry. It does not render immediately by itself. Most code does not need it; replay barriers such as [`Apply(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.Apply*) already seal earlier commands before they run.
 
 ```csharp
 image.Mutate(ctx => ctx.Paint(canvas =>
 {
     canvas.Fill(Brushes.Solid(Color.LightGray));
 
-    // Seal the fill before the blur barrier so the blur sees the filled pixels.
-    canvas.Flush();
+    // Apply is a replay barrier, so the blur sees the earlier fill.
     canvas.Apply(new Rectangle(40, 40, 180, 120), region => region.GaussianBlur(6));
 
     canvas.Draw(Pens.Solid(Color.Black, 3), new Rectangle(40, 40, 180, 120));
 }));
 ```
 
-Inside `Paint(...)`, ImageSharp.Drawing owns the canvas lifetime. When you call `CreateCanvas(...)` yourself, your `using` statement is what triggers replay.
+Inside [`Paint(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.PaintExtensions), ImageSharp.Drawing owns the canvas lifetime. When you call [`CreateCanvas(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvasFactoryExtensions.CreateCanvas*) yourself, your `using` statement is what triggers replay.
 
 ## Paint Versus CreateCanvas
 
-Use `Paint(...)` for normal `Mutate(...)` and `Clone(...)` pipelines. It follows ImageSharp's processor model and handles each frame for you.
+Use [`Paint(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.PaintExtensions) for normal `Mutate(...)` and `Clone(...)` pipelines. It follows ImageSharp's processor model and handles each frame for you.
 
-Use `CreateCanvas(...)` when you already have an image frame and want to manage the canvas lifetime yourself. Disposing the canvas replays the recorded work into the target frame.
+Use [`CreateCanvas(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvasFactoryExtensions.CreateCanvas*) when you already have an image frame and want to manage the canvas lifetime yourself. Disposing the canvas replays the recorded work into the target frame.
 
 ```csharp
 using SixLabors.ImageSharp;
@@ -73,9 +72,9 @@ canvas.Draw(Pens.Dash(Color.Navy, 3), new Rectangle(18, 18, 284, 144));
 
 ## Clear and Fill
 
-Use `Fill(...)` when you want normal brush compositing. Use `Clear(...)` when you want to replace pixels in the covered area, including replacing them with transparent pixels.
+Use [`Fill(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.Fill*) when you want normal brush compositing. Use [`Clear(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.Clear*) when you want to replace pixels in the covered area, including replacing them with transparent pixels.
 
-`Clear(...)` can target the full canvas, a rectangle, or any `IPath`. It also honors the active clip state created by `Save(...)`, so clears can be scoped by both the supplied clear shape and the current canvas state.
+[`Clear(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.Clear*) can target the full canvas, a rectangle, or any [`IPath`](xref:SixLabors.ImageSharp.Drawing.IPath). It also honors the active clip state created by [`Save(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.Save*), so clears can be scoped by both the supplied clear shape and the current canvas state.
 
 ```csharp
 using SixLabors.ImageSharp;
@@ -114,25 +113,25 @@ image.Mutate(ctx => ctx.Paint(canvas =>
 
 ## State and Storage
 
-`Save()` stores the current drawing state on a stack and `Restore()` returns to the previous state. The state includes drawing options, clip paths, target bounds, and layer information for later commands.
+[`Save()`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.Save) stores the current drawing state on a stack and [`Restore()`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.Restore) returns to the previous state. The state includes drawing options, clip paths, target bounds, and layer information for later commands.
 
-The overload `Save(DrawingOptions, params IPath[])` stores the supplied `DrawingOptions` instance by reference. Treat options passed to `Save(...)` as owned by the active canvas state until that state has been restored.
+The overload [`Save(DrawingOptions, params IPath[])`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.Save*) stores the supplied [`DrawingOptions`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingOptions) instance by reference. Treat options passed to [`Save(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.Save*) as owned by the active canvas state until that state has been restored.
 
-The active state reference is captured when each command is recorded. Later `Save(...)` or `Restore()` calls do not replace the state for commands already in the command buffer, but mutating a referenced `DrawingOptions` instance can still affect commands that captured that same instance.
+The active state reference is captured when each command is recorded. Later [`Save(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.Save*) or [`Restore()`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.Restore) calls do not replace the state for commands already in the command buffer, but mutating a referenced [`DrawingOptions`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingOptions) instance can still affect commands that captured that same instance.
 
 The state captured for drawing includes:
 
-- `DrawingOptions`, including graphics options, shape options, and transform
-- clip paths supplied to `Save(DrawingOptions, params IPath[])`
+- [`DrawingOptions`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingOptions), including graphics options, shape options, and transform
+- clip paths supplied to [`Save(DrawingOptions, params IPath[])`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.Save*)
 - target bounds for the active canvas or region
 - destination offset for region canvases
 - whether the command is being recorded inside a layer
 
-`Save()` pushes a normal state frame. `SaveLayer(...)` pushes a layer state frame. Only layer state frames create layer boundary commands when restored.
+[`Save()`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.Save) pushes a normal state frame. [`SaveLayer(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.SaveLayer*) pushes a layer state frame. Only layer state frames create layer boundary commands when restored.
 
 ## Save and Restore State
 
-`Save(...)` pushes the current drawing state. The overload that accepts `DrawingOptions` and clip paths replaces the active state until you call `Restore()`.
+[`Save(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.Save*) pushes the current drawing state. The overload that accepts [`DrawingOptions`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingOptions) and clip paths replaces the active state until you call [`Restore()`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.Restore).
 
 ```csharp
 using SixLabors.ImageSharp;

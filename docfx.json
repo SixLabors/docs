@@ -21,6 +21,9 @@
         {
           "files": [
             "ext/ImageSharp.Drawing/src/**.csproj"
+          ],
+          "exclude": [
+            "ext/ImageSharp.Drawing/src/ImageSharp.Drawing.WebGPU.ShaderGen/**.csproj"
           ]
         }
       ],

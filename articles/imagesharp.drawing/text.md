@@ -106,7 +106,7 @@ Run indices are counted in grapheme clusters, not UTF-16 code units. `Start` is 
 
 ## Draw Prepared Text
 
-Use [TextBlock](../fonts/textblock.md) when the same text will be measured, wrapped, inspected, or drawn more than once. `TextBlock` keeps the prepared text layout work in the Fonts layer, and `DrawingCanvas.DrawText(...)` places that prepared block onto the canvas.
+Use [TextBlock](../fonts/textblock.md) when the same text will be measured, wrapped, inspected, or drawn more than once. [`TextBlock`](xref:SixLabors.Fonts.TextBlock) keeps the prepared text layout work in the Fonts layer, and [`DrawingCanvas.DrawText(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.DrawText*) places that prepared block onto the canvas.
 
 ```csharp
 using SixLabors.Fonts;
@@ -139,7 +139,7 @@ image.Mutate(ctx => ctx.Paint(canvas =>
 }));
 ```
 
-For manual line flow, choose the `TextBlock` API based on the coordinate space you want to draw from:
+For manual line flow, choose the [`TextBlock`](xref:SixLabors.Fonts.TextBlock) API based on the coordinate space you want to draw from:
 
 - Use `TextBlock.GetLineLayouts(...)` when the text still behaves as one stacked block. Each returned `LineLayout` is positioned in block coordinates, including the cumulative advance of the lines before it, so it is ready to draw relative to the block origin.
 - Use `TextBlock.EnumerateLineLayouts()` when each line is placed independently. Each `LineLayout` is line-local, as if it were the first line in the block, and the caller supplies the final canvas position or path when calling `DrawingCanvas.DrawText(...)`.
@@ -148,7 +148,7 @@ The line-local enumerator is the right fit for text that flows through different
 
 ## Wrap and Align Text
 
-`RichTextOptions` inherits the core Fonts text options and adds ImageSharp.Drawing-specific rich text behavior.
+[`RichTextOptions`](xref:SixLabors.ImageSharp.Drawing.Processing.RichTextOptions) inherits the core Fonts text options and adds ImageSharp.Drawing-specific rich text behavior.
 
 ```csharp
 using SixLabors.Fonts;
@@ -219,7 +219,7 @@ image.Mutate(ctx => ctx.Paint(canvas =>
 
 ## Draw Text Along a Path
 
-Text can also follow an `IPath`.
+Text can also follow an [`IPath`](xref:SixLabors.ImageSharp.Drawing.IPath).
 
 ```csharp
 using SixLabors.Fonts;

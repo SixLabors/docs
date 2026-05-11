@@ -1,6 +1,6 @@
 # Transforms and Composition
 
-`DrawingOptions` carries the transform, graphics options, and shape options used by canvas commands. Use it when drawing state should change for a group of operations.
+[`DrawingOptions`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingOptions) carries the transform, graphics options, and shape options used by canvas commands. Use it when drawing state should change for a group of operations.
 
 ## Transform Drawing
 
@@ -30,7 +30,7 @@ using Image<Rgba32> image = new(420, 260, Color.White.ToPixel<Rgba32>());
 
 DrawingOptions rotated = new()
 {
-    Transform = new Matrix4x4(Matrix3x2.CreateRotation(0.32F, new Vector2(210, 130)))
+    Transform = new(Matrix3x2.CreateRotation(0.32F, new Vector2(210, 130)))
 };
 
 RectangularPolygon panel = new(92, 70, 236, 120);

@@ -1,8 +1,8 @@
 # Primitive Drawing Helpers
 
-Primitive helpers are convenience methods on `DrawingCanvas` for common geometry. Use them when the shape is simple and you do not need to keep an `IPath` instance around.
+Primitive helpers are convenience methods on [`DrawingCanvas`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas) for common geometry. Use them when the shape is simple and you do not need to keep an [`IPath`](xref:SixLabors.ImageSharp.Drawing.IPath) instance around.
 
-The helpers still follow the same rules as path drawing: fills use brushes, strokes use pens, `DrawingOptions` controls antialiasing and transforms, and active canvas state applies to the recorded command.
+The helpers still follow the same rules as path drawing: fills use brushes, strokes use pens, [`DrawingOptions`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingOptions) controls antialiasing and transforms, and active canvas state applies to the recorded command.
 
 ## Rectangles, Ellipses, Lines, and Beziers
 
@@ -75,7 +75,7 @@ image.Mutate(ctx => ctx.Paint(canvas =>
 
 ## When to Use Paths Instead
 
-Use `PathBuilder`, `Polygon`, `ComplexPolygon`, or a built-in shape type when you need to:
+Use [`PathBuilder`](xref:SixLabors.ImageSharp.Drawing.PathBuilder), [`Polygon`](xref:SixLabors.ImageSharp.Drawing.Polygon), [`ComplexPolygon`](xref:SixLabors.ImageSharp.Drawing.ComplexPolygon), or a built-in shape type when you need to:
 
 - reuse or transform the same geometry;
 - combine multiple figures into one shape;

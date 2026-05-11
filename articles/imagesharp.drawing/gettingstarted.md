@@ -7,7 +7,7 @@ ImageSharp.Drawing adds vector drawing, brush and pen styling, and text renderin
 
 1. Create or load an `Image`.
 2. Call `Mutate(...)`.
-3. Use `Paint(...)` to receive a `DrawingCanvas`.
+3. Use [`Paint(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.PaintExtensions) to receive a [`DrawingCanvas`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas).
 4. Draw onto the canvas with brushes, pens, paths, shapes, images, or text.
 
 The same canvas can mix all of those operations. This model scales from small badges to poster-style artwork, route maps, typography sheets, image masking, and WebGPU scenes.
@@ -35,7 +35,7 @@ image.Mutate(ctx => ctx.Paint(canvas =>
 image.Save("star.png");
 ```
 
-`Paint(...)` creates a canvas for each frame being processed. Drawing is recorded through that canvas and applied when the paint operation runs.
+[`Paint(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.PaintExtensions) creates a canvas for each frame being processed. Drawing is recorded through that canvas and applied when the paint operation runs.
 
 ## Combine Drawing Operations
 
@@ -90,7 +90,7 @@ image.Save("composition.png");
 
 ## Use Drawing Options
 
-`DrawingOptions` controls the shared drawing state used by the canvas. The most common settings are graphics options for blending and antialiasing, shape options for fill behavior, and transforms for vector output.
+[`DrawingOptions`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingOptions) controls the shared drawing state used by the canvas. The most common settings are graphics options for blending and antialiasing, shape options for fill behavior, and transforms for vector output.
 
 ```csharp
 using System.Numerics;
@@ -126,7 +126,7 @@ image.Mutate(ctx => ctx.Paint(options, canvas =>
 
 ## Draw Text
 
-Text drawing uses SixLabors.Fonts for font discovery, shaping, measurement, and layout. Use `RichTextOptions` when you draw directly to a canvas.
+Text drawing uses SixLabors.Fonts for font discovery, shaping, measurement, and layout. Use [`RichTextOptions`](xref:SixLabors.ImageSharp.Drawing.Processing.RichTextOptions) when you draw directly to a canvas.
 
 ```csharp
 using SixLabors.Fonts;

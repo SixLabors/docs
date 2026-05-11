@@ -4,15 +4,15 @@ ImageSharp.Drawing separates geometry from painting. Shapes and paths describe w
 
 The core geometry types are:
 
-- `IPath` for any path-like shape that can be filled or stroked.
-- `Path` for an open path made from line segments, arcs, and curves.
-- `Polygon` for a closed path.
-- `ComplexPolygon` for a shape made from multiple paths, such as an outer contour with holes.
-- `Polygon`, `RectangularPolygon`, `EllipsePolygon`, `RegularPolygon`, `Star`, and `Pie` for common shapes.
-- `PathBuilder` when you want to construct a custom path from line and curve commands.
-- `PathCollection` when one operation should cover several paths.
+- [`IPath`](xref:SixLabors.ImageSharp.Drawing.IPath) for any path-like shape that can be filled or stroked.
+- [`Path`](xref:SixLabors.ImageSharp.Drawing.Path) for an open path made from line segments, arcs, and curves.
+- [`Polygon`](xref:SixLabors.ImageSharp.Drawing.Polygon) for a closed path.
+- [`ComplexPolygon`](xref:SixLabors.ImageSharp.Drawing.ComplexPolygon) for a shape made from multiple paths, such as an outer contour with holes.
+- [`Polygon`](xref:SixLabors.ImageSharp.Drawing.Polygon), [`RectangularPolygon`](xref:SixLabors.ImageSharp.Drawing.RectangularPolygon), [`EllipsePolygon`](xref:SixLabors.ImageSharp.Drawing.EllipsePolygon), [`RegularPolygon`](xref:SixLabors.ImageSharp.Drawing.RegularPolygon), [`Star`](xref:SixLabors.ImageSharp.Drawing.Star), and [`Pie`](xref:SixLabors.ImageSharp.Drawing.Pie) for common shapes.
+- [`PathBuilder`](xref:SixLabors.ImageSharp.Drawing.PathBuilder) when you want to construct a custom path from line and curve commands.
+- [`PathCollection`](xref:SixLabors.ImageSharp.Drawing.PathCollection) when one operation should cover several paths.
 
-`IPath.PathType` tells you whether a path is open, closed, or mixed. A mixed path is a composite path containing both open and closed figures.
+[`IPath.PathType`](xref:SixLabors.ImageSharp.Drawing.IPath.PathType) tells you whether a path is open, closed, or mixed. A mixed path is a composite path containing both open and closed figures.
 
 ## Built-In Shapes
 
@@ -48,7 +48,7 @@ image.Mutate(ctx => ctx.Paint(canvas =>
 
 Open paths are useful for strokes, polylines, and curved baselines. Closed paths enclose an area and are the normal input for fills.
 
-`Path` is open by default. `Polygon` is closed. `PathBuilder.CloseFigure()` closes the current figure before starting the next one.
+[`Path`](xref:SixLabors.ImageSharp.Drawing.Path) is open by default. [`Polygon`](xref:SixLabors.ImageSharp.Drawing.Polygon) is closed. [`PathBuilder.CloseFigure()`](xref:SixLabors.ImageSharp.Drawing.PathBuilder.CloseFigure) closes the current figure before starting the next one.
 
 ```csharp
 using SixLabors.ImageSharp;
@@ -88,7 +88,7 @@ When you fill an open path, ImageSharp.Drawing closes it for fill processing. Pr
 
 ## Custom Paths and Figures
 
-Use `PathBuilder` for custom geometry. Build the path once, then reuse it for fill and stroke operations.
+Use [`PathBuilder`](xref:SixLabors.ImageSharp.Drawing.PathBuilder) for custom geometry. Build the path once, then reuse it for fill and stroke operations.
 
 ```csharp
 using SixLabors.ImageSharp;
@@ -116,7 +116,7 @@ image.Mutate(ctx => ctx.Paint(canvas =>
 }));
 ```
 
-`PathBuilder` supports multiple figures. If the builder contains more than one figure, `Build()` returns a `ComplexPolygon`. Each figure keeps its own open or closed state.
+[`PathBuilder`](xref:SixLabors.ImageSharp.Drawing.PathBuilder) supports multiple figures. If the builder contains more than one figure, [`Build()`](xref:SixLabors.ImageSharp.Drawing.PathBuilder.Build*) returns a [`ComplexPolygon`](xref:SixLabors.ImageSharp.Drawing.ComplexPolygon). Each figure keeps its own open or closed state.
 
 ```csharp
 using SixLabors.ImageSharp;
@@ -146,11 +146,11 @@ image.Mutate(ctx => ctx.Paint(canvas =>
 }));
 ```
 
-Use `PathBuilder.StartFigure()` when you want to begin a new figure without closing the previous one. Use `CloseAllFigures()` when every current figure should be closed.
+Use [`PathBuilder.StartFigure()`](xref:SixLabors.ImageSharp.Drawing.PathBuilder.StartFigure) when you want to begin a new figure without closing the previous one. Use [`CloseAllFigures()`](xref:SixLabors.ImageSharp.Drawing.PathBuilder.CloseAllFigures) when every current figure should be closed.
 
 ## Complex Polygons and Holes
 
-`ComplexPolygon` represents multiple paths as one path. It is useful when a shape has multiple contours, or when you want to model an outer contour and one or more holes.
+[`ComplexPolygon`](xref:SixLabors.ImageSharp.Drawing.ComplexPolygon) represents multiple paths as one path. It is useful when a shape has multiple contours, or when you want to model an outer contour and one or more holes.
 
 ```csharp
 using SixLabors.ImageSharp;
@@ -191,7 +191,7 @@ The fill rule decides how overlapping contours inside a complex polygon are inte
 
 ## Path Collections
 
-`PathCollection` groups paths so one draw or fill call can apply the same brush, pen, and drawing state to all of them.
+[`PathCollection`](xref:SixLabors.ImageSharp.Drawing.PathCollection) groups paths so one draw or fill call can apply the same brush, pen, and drawing state to all of them.
 
 ```csharp
 using SixLabors.ImageSharp;
@@ -214,11 +214,11 @@ image.Mutate(ctx => ctx.Paint(canvas =>
 }));
 ```
 
-Use a `PathCollection` when paths remain independent. Use `ComplexPolygon` or `Clip(...)` when the contours need to be interpreted together as one shape.
+Use a [`PathCollection`](xref:SixLabors.ImageSharp.Drawing.PathCollection) when paths remain independent. Use [`ComplexPolygon`](xref:SixLabors.ImageSharp.Drawing.ComplexPolygon) or [`Clip(...)`](xref:SixLabors.ImageSharp.Drawing.ClipPathExtensions.Clip*) when the contours need to be interpreted together as one shape.
 
 ## Clipping and Boolean Operations
 
-`Clip(...)` creates a new path from a subject path and one or more clipping paths. The operation comes from `ShapeOptions.BooleanOperation`. The default boolean operation is `Difference`, which subtracts the clipping paths from the subject.
+[`Clip(...)`](xref:SixLabors.ImageSharp.Drawing.ClipPathExtensions.Clip*) creates a new path from a subject path and one or more clipping paths. The operation comes from [`ShapeOptions.BooleanOperation`](xref:SixLabors.ImageSharp.Drawing.Processing.ShapeOptions.BooleanOperation). The default boolean operation is [`Difference`](xref:SixLabors.ImageSharp.Drawing.BooleanOperation.Difference), which subtracts the clipping paths from the subject.
 
 ```csharp
 using SixLabors.ImageSharp;

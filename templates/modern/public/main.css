@@ -189,3 +189,110 @@ header .navbar {
   max-width: 20px;
   margin-right: 0.5rem;
 }
+
+/* ###################
+ * #### CODE BLOCKS ##
+ * ###################
+ */
+
+.frame {
+  position: relative;
+  margin: 2rem 1rem;
+}
+
+.frame::before,
+.frame::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  border-radius: 0.75rem;
+}
+
+.frame::before {
+  transform: rotate(-2.5deg);
+  background-color: #efefef;
+}
+
+.frame::after {
+  transform: rotate(2.5deg);
+  background-image: linear-gradient(45deg, #e4d101 0%, #e30183 100%);
+}
+
+.frame > pre {
+  border-radius: 0.75rem;
+  position: relative;
+  z-index: 1;
+  overflow-x: hidden;
+}
+
+.frame > pre::before,
+.frame > pre::after,
+.frame > pre code::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  top: 1rem;
+  left: 0.75rem;
+  border-radius: 100%;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.frame > pre::before {
+  background-color: #ef4444;
+}
+
+.frame > pre::after {
+  left: 1.75rem;
+  background-color: #fbbf24;
+}
+
+.frame > pre code::before {
+  left: 2.75rem;
+  background-color: #4ade80;
+}
+
+.frame > pre code::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  top: 2.5rem;
+  left: 0.75rem;
+  right: 0.75rem;
+  height: 1px;
+  background-color: #e30183;
+  opacity: 0.25;
+}
+
+.frame > pre code {
+  padding: 3.5rem 0.75rem 0.75rem 0.75rem !important;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+@media (min-width: 1200px) {
+  .frame::before,
+  .frame::after {
+    left: -0.5rem;
+    right: -0.5rem;
+  }
+
+  .frame::before {
+    transform: rotate(2deg);
+  }
+
+  .frame::after {
+    transform: rotate(-2deg);
+  }
+}
+
+/* Fixes for code action disapearring due to the dark-mode hack for pre */
+pre>.code-action{
+  color: #fff!important;
+}

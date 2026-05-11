@@ -27,7 +27,7 @@ image.Mutate(ctx => ctx.Paint(canvas =>
 
 ## Pattern Brushes and Pattern Pens
 
-The `Brushes` and `Pens` factories include common hatch and dash styles.
+The [`Brushes`](xref:SixLabors.ImageSharp.Drawing.Processing.Brushes) and [`Pens`](xref:SixLabors.ImageSharp.Drawing.Processing.Pens) factories include common hatch and dash styles.
 
 ```csharp
 using SixLabors.ImageSharp;
@@ -128,7 +128,7 @@ image.Mutate(ctx => ctx.Paint(canvas =>
 
 ## Image and Matrix Pattern Brushes
 
-`PatternBrush` repeats a matrix of foreground/background values across the target. Use the `Brushes` helpers for common hatch styles, or construct a `PatternBrush` when you need a custom repeating matrix.
+[`PatternBrush`](xref:SixLabors.ImageSharp.Drawing.Processing.PatternBrush) repeats a matrix of foreground/background values across the target. Use the [`Brushes`](xref:SixLabors.ImageSharp.Drawing.Processing.Brushes) helpers for common hatch styles, or construct a [`PatternBrush`](xref:SixLabors.ImageSharp.Drawing.Processing.PatternBrush) when you need a custom repeating matrix.
 
 `ImageBrush<TPixel>` uses an image as the brush source. The source image is not disposed by the brush, so keep it alive for as long as the canvas might replay commands that reference it.
 

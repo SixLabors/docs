@@ -1,6 +1,6 @@
 # Create a Soft Shadow
 
-Draw the shadow shape first, flush it, then apply a blur to the shadow region before drawing the foreground object. `Apply(...)` is a replay barrier, so only commands recorded before the barrier are processed.
+Draw the shadow shape first, then apply a blur to the shadow region before drawing the foreground object. `Apply(...)` is a replay barrier, so only commands recorded before the barrier are processed.
 
 ```csharp
 using SixLabors.ImageSharp;
@@ -18,8 +18,7 @@ image.Mutate(ctx => ctx.Paint(canvas =>
 {
     canvas.Fill(Brushes.Solid(Color.Black.WithAlpha(0.35F)), shadowBounds);
 
-    // Flush makes the shadow pixels available to the blur barrier before the panel is drawn.
-    canvas.Flush();
+    // Apply seals earlier drawing commands before the blur is replayed.
     canvas.Apply(shadowBounds, region => region.GaussianBlur(10));
 
     canvas.Fill(Brushes.Solid(Color.White), panelBounds);

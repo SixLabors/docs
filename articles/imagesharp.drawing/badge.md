@@ -44,7 +44,7 @@ image.Mutate(ctx => ctx.Paint(canvas =>
 image.Save("badge.png");
 ```
 
-Use a path type that matches the badge geometry you want. `RectangularPolygon`, `EllipsePolygon`, `RegularPolygon`, `Star`, and custom `PathBuilder` paths can all be filled and stroked through the same canvas calls.
+Use a path type that matches the badge geometry you want. [`RectangularPolygon`](xref:SixLabors.ImageSharp.Drawing.RectangularPolygon), [`EllipsePolygon`](xref:SixLabors.ImageSharp.Drawing.EllipsePolygon), [`RegularPolygon`](xref:SixLabors.ImageSharp.Drawing.RegularPolygon), [`Star`](xref:SixLabors.ImageSharp.Drawing.Star), and custom [`PathBuilder`](xref:SixLabors.ImageSharp.Drawing.PathBuilder) paths can all be filled and stroked through the same canvas calls.
 
 ## Related Topics
 
