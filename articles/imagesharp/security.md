@@ -89,13 +89,15 @@ using SixLabors.ImageSharp.Memory;
 Configuration config = Configuration.Default.Clone();
 config.MemoryAllocator = MemoryAllocator.Create(new MemoryAllocatorOptions
 {
-
     // Roughly limits the workload to about 64 megapixels of Rgba32 data.
-    AllocationLimitMegabytes = 256
+    AllocationLimitMegabytes = 256,
+
+    // Limits the combined size of all active allocations made through this allocator.
+    AccumulativeAllocationLimitMegabytes = 512
 });
 ```
 
-[`AllocationLimitMegabytes`](xref:SixLabors.ImageSharp.Memory.MemoryAllocatorOptions.AllocationLimitMegabytes) limits the size of any one live allocation group.
+[`AllocationLimitMegabytes`](xref:SixLabors.ImageSharp.Memory.MemoryAllocatorOptions.AllocationLimitMegabytes) limits the size of any one live allocation group. When it is unset, ImageSharp uses the platform default: 1 GB on 32-bit processes and 4 GB on 64-bit processes. [`AccumulativeAllocationLimitMegabytes`](xref:SixLabors.ImageSharp.Memory.MemoryAllocatorOptions.AccumulativeAllocationLimitMegabytes) limits the combined size of all active allocations made through the allocator instance. It is unset by default, which means there is no accumulative cap unless you configure one. Use both limits together when a service can process several images or several intermediate buffers at the same time.
 
 This is one of the most important safeguards for services that handle arbitrary uploads. For broader guidance on allocator behavior and tradeoffs, see [Memory Management](memorymanagement.md).
 
@@ -120,4 +122,4 @@ For ImageSharp.Web command signing, see [Securing Requests in ImageSharp.Web](..
 - Use `TargetSize`, `MaxFrames`, and `SkipMetadata` to shrink decode cost up front.
 - Prefer [`Strict`](xref:SixLabors.ImageSharp.Formats.SegmentIntegrityHandling.Strict) or the default [`IgnoreAncillary`](xref:SixLabors.ImageSharp.Formats.SegmentIntegrityHandling.IgnoreAncillary) over broader error ignoring on untrusted inputs.
 - Restrict the enabled format modules when your workload only needs a few codecs.
-- Use allocator limits and host-level request limits together rather than relying on only one layer.
+- Use per-allocation, accumulative allocator, and host-level request limits together rather than relying on only one layer.

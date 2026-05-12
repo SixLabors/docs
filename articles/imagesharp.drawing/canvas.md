@@ -22,11 +22,23 @@ image.Mutate(ctx => ctx.Paint(canvas =>
 
 The callback receives a canvas for the current frame. Use the canvas for all drawing work that should happen together.
 
+## Immediate Mode, Retained Mode, and Canvas
+
+Graphics APIs are often described as either immediate mode or retained mode.
+
+In an immediate-mode API, the application issues the drawing commands needed for the current output. The graphics library does not own an editable scene graph for the application. If the output needs to be drawn again, the application normally issues those commands again.
+
+In a retained-mode API, the graphics library owns a persistent object model of the scene. Application calls usually update that model rather than directly describing the drawing for one output pass. The library can then decide when and how to render the retained scene.
+
+`DrawingCanvas` is closest to immediate-mode drawing at the public API level: application code calls `Fill(...)`, `Draw(...)`, `DrawText(...)`, `DrawImage(...)`, `Save(...)`, and `Restore()` in the order the output should be produced. The canvas is not a retained scene graph. You do not create editable rectangle, path, text, or image nodes and then change their properties later.
+
+The important difference from a strictly immediate pixel-writing API is replay. Canvas calls record ordered drawing intent into a timeline. That timeline is replayed into the active backend when the canvas is disposed, or sealed into a reusable backend scene when you call `CreateScene()`. This lets ImageSharp.Drawing keep an immediate-style authoring model while still batching work, inserting barriers, supporting layers, and reusing backend-prepared scenes where that is useful.
+
 ## Ordered Calls and Replay
 
 [`DrawingCanvas`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas) is an ordered drawing API backed by a replay timeline. The calls look familiar if you have used immediate-mode drawing APIs: [`Fill(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.Fill*), [`Draw(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.Draw*), [`DrawText(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.DrawText*), [`Save(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.Save*), and [`Restore()`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.Restore) are made in the order you want drawing to happen. The canvas does not, however, promise that each call immediately writes pixels to the destination.
 
-It is also not a retained object tree. The canvas does not keep editable shape objects that automatically redraw when their properties change. It records ordered drawing intent, seals that intent into timeline entries, and replays the timeline into the active backend.
+The timeline is the core of the model. The canvas records drawing intent, seals that intent into timeline entries, and replays the timeline into the active backend.
 
 Most drawing calls append drawing intent to a command buffer. Calls that must happen at a specific point, such as [`Apply(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.Apply*) and [`RenderScene(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.RenderScene*) are stored as entries in the canvas replay timeline. [`SaveLayer(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas.SaveLayer*) is also timeline-sensitive: it records an isolated group that is later composited back into the parent.
 

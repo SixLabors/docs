@@ -11,6 +11,12 @@ The main workflow is:
 
 The same canvas can mix all of those operations. The important idea is that drawing is recorded through [`DrawingCanvas`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas) in the order you call it, then replayed into the current frame. That replay model lets the library share the same public drawing code across CPU images, retained backend scenes, and WebGPU targets.
 
+## Vector Geometry, Raster Output
+
+ImageSharp.Drawing lets you describe vector geometry, but the final target is still an ImageSharp raster image unless you are using a retained or GPU backend explicitly. Paths, shapes, strokes, text glyphs, clips, and brushes are converted into pixel coverage during replay. Antialiasing, transforms, blend modes, alpha composition, and layer boundaries all affect that rasterization step.
+
+Keep geometry, styling, and canvas state separate in your code. Geometry answers where drawing can occur. Brushes and pens answer how covered pixels are shaded. Canvas state answers how later commands are transformed, clipped, blended, grouped, or processed.
+
 ## Draw a Shape
 
 Start with geometry, then choose how it is painted. Built-in shapes such as [`StarPolygon`](xref:SixLabors.ImageSharp.Drawing.StarPolygon), [`RectanglePolygon`](xref:SixLabors.ImageSharp.Drawing.RectanglePolygon), and [`EllipsePolygon`](xref:SixLabors.ImageSharp.Drawing.EllipsePolygon) are reusable geometry objects. A brush fills the area covered by the shape, and a pen generates and fills the stroke outline.

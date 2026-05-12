@@ -121,7 +121,7 @@ TextOptions options = new(font)
 };
 ```
 
-For a deeper explanation of how Fonts applies GSUB/GPOS shaping, bidi analysis, fallback runs, and TrueType hinting, see [Hinting and Shaping](hintingandshaping.md).
+For a deeper explanation of GSUB/GPOS shaping, bidi analysis, fallback runs, and TrueType hinting, see [Text Shaping](shaping.md) and [TrueType Hinting](hinting.md).
 
 ### Fallback fonts and color fonts
 

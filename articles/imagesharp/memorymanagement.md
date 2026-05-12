@@ -4,6 +4,12 @@ ImageSharp is designed so large images are practical to process without forcing 
 
 This page explains the parts most developers eventually need: the default pooled allocator, when to customize it, and how those choices affect lower-level interop code.
 
+## Compressed Size Is Not Memory Size
+
+An encoded file can be much smaller than the image memory needed to process it. A 20 MB JPEG may decode into hundreds of megabytes of pixel data, and a multi-frame image can require far more when all frames are loaded. Memory planning should therefore start from decoded dimensions, pixel format, and frame count rather than the source file size alone.
+
+Use [`Image.Identify()`](xref:SixLabors.ImageSharp.Image.Identify*) and [`ImageInfo.GetPixelMemorySize()`](xref:SixLabors.ImageSharp.ImageInfo.GetPixelMemorySize) when you need to estimate decoded memory before loading pixels. Use [`DecoderOptions.MaxFrames`](xref:SixLabors.ImageSharp.Formats.DecoderOptions.MaxFrames) and [`DecoderOptions.TargetSize`](xref:SixLabors.ImageSharp.Formats.DecoderOptions.TargetSize) when the workload can deliberately load less data.
+
 ## Default Behavior
 
 [`Configuration.MemoryAllocator`](xref:SixLabors.ImageSharp.Configuration.MemoryAllocator) defaults to [`MemoryAllocator.Default`](xref:SixLabors.ImageSharp.Memory.MemoryAllocator.Default). For most applications, that default allocator is the right choice.
@@ -22,11 +28,12 @@ Configuration config = Configuration.Default.Clone();
 config.MemoryAllocator = MemoryAllocator.Create(new MemoryAllocatorOptions
 {
     MaximumPoolSizeMegabytes = 128,
-    AllocationLimitMegabytes = 1024
+    AllocationLimitMegabytes = 1024,
+    AccumulativeAllocationLimitMegabytes = 2048
 });
 ```
 
-[`MaximumPoolSizeMegabytes`](xref:SixLabors.ImageSharp.Memory.MemoryAllocatorOptions.MaximumPoolSizeMegabytes) controls retained pool size. [`AllocationLimitMegabytes`](xref:SixLabors.ImageSharp.Memory.MemoryAllocatorOptions.AllocationLimitMegabytes) controls the maximum discontiguous buffer size the allocator will allow for one live allocation group.
+[`MaximumPoolSizeMegabytes`](xref:SixLabors.ImageSharp.Memory.MemoryAllocatorOptions.MaximumPoolSizeMegabytes) controls retained pool size. [`AllocationLimitMegabytes`](xref:SixLabors.ImageSharp.Memory.MemoryAllocatorOptions.AllocationLimitMegabytes) controls the maximum discontiguous buffer size the allocator will allow for one live allocation group. When it is unset, the platform default is 1 GB on 32-bit processes and 4 GB on 64-bit processes. [`AccumulativeAllocationLimitMegabytes`](xref:SixLabors.ImageSharp.Memory.MemoryAllocatorOptions.AccumulativeAllocationLimitMegabytes) controls the maximum combined size of all active allocations made through that allocator instance. It is unset by default, so the allocator does not impose an accumulative cap unless you configure one.
 
 ## Prefer Contiguous Buffers Only When You Need Them
 
@@ -90,6 +97,7 @@ That tells the allocator to drop retained pooled buffers that are no longer need
 
 - Keep [`MemoryAllocator.Default`](xref:SixLabors.ImageSharp.Memory.MemoryAllocator.Default) unless profiling shows a real need to customize it.
 - Use one shared allocator per process rather than many temporary allocators.
+- Use [`AccumulativeAllocationLimitMegabytes`](xref:SixLabors.ImageSharp.Memory.MemoryAllocatorOptions.AccumulativeAllocationLimitMegabytes) when the total amount of live ImageSharp allocation should be capped, not only the size of one image allocation group.
 - Avoid forcing contiguous buffers unless you truly need a single `Memory<T>` or pointer.
 - Use [`DecoderOptions.TargetSize`](xref:SixLabors.ImageSharp.Formats.DecoderOptions.TargetSize) and [`DecoderOptions.MaxFrames`](xref:SixLabors.ImageSharp.Formats.DecoderOptions.MaxFrames) when you want to limit decode cost up front.
 - Track leaked images with [`MemoryDiagnostics`](xref:SixLabors.ImageSharp.Diagnostics.MemoryDiagnostics) if disposal bugs are suspected.

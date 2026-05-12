@@ -4,6 +4,12 @@ When you first start with ImageSharp, the indexer is often enough. As soon as pe
 
 This page is the map for that lower-level work.
 
+## Pixel Buffers Are Decoded Image Data
+
+Pixel-buffer APIs expose the decoded raster grid in memory. They do not expose the original file bytes and they do not preserve format-specific packing such as JPEG blocks, PNG filters, GIF color-table indexes, or TIFF strip layout. By the time you are working with row spans, ImageSharp has decoded the source into the chosen `TPixel` representation.
+
+Rows are addressed by image coordinates: `y` selects a row and `x` selects a pixel within that row. The APIs are row-oriented because image memory is optimized for scanning contiguous rows, even when a large image is backed by several internal buffers instead of one single allocation.
+
 ## Choose the Right Access Pattern
 
 Use:

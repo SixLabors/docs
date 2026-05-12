@@ -9,6 +9,12 @@ The main entry points are [`Mutate`](xref:SixLabors.ImageSharp.Processing.Proces
 
 Processors are deliberately composable. Each call in the pipeline receives the result of the previous call, so the code order is also the image-processing order. That makes pipelines easy to read, but it also means a misplaced operation can change the result significantly.
 
+## The Raster Processing Model
+
+ImageSharp processes raster images: a rectangular grid of pixels with a width, height, pixel type, and optional frame collection. Processing changes that in-memory image model. It does not work on encoded JPEG blocks, PNG chunks, file extensions, or metadata records unless a processor is specifically about those concerns.
+
+That distinction matters when designing a pipeline. A crop removes pixel regions from the decoded image. A resize resamples pixels into a new grid. A color effect changes pixel values. An encoder later decides how those processed pixels become JPEG, PNG, WebP, TIFF, or another file format. Metadata such as EXIF orientation and ICC profiles can influence the right processing choices, but they are not the same thing as pixel processing.
+
 ## Mutate the Current Image
 
 Use `Mutate()` when you want to transform the current image in place:

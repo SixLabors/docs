@@ -2,6 +2,17 @@
 
 ImageSharp.Web is assembled through `AddImageSharp()` and the returned [`IImageSharpBuilder`](xref:SixLabors.ImageSharp.Web.IImageSharpBuilder). Most applications never need to replace every piece, but it helps to know what is there so you can change the correct layer without over-customizing the whole pipeline.
 
+## Request Pipeline Model
+
+For a processed image request, the middleware does four separate jobs:
+
+- parse and normalize the requested commands;
+- resolve the source image through a provider;
+- look up or write the processed result through a cache;
+- decode, process, and encode the image when the cache does not already contain a valid result.
+
+Those layers are intentionally separate. Providers are source-of-truth readers, caches store derived output, processors transform the decoded image, and encoders decide the response format. Most customization should replace one layer at a time instead of rebuilding the whole middleware configuration.
+
 ## What `AddImageSharp()` Registers
 
 The default registration wires up:

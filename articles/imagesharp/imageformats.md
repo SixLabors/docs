@@ -4,6 +4,49 @@ ImageSharp keeps the in-memory image model separate from the file format on disk
 
 This page is the format map for the library: which built-in formats ship by default, what each one is good at, and where to go next for format-specific guidance.
 
+## Format, Codec, and Pixel Type
+
+These terms refer to different parts of the imaging pipeline:
+
+- A file format is the encoded representation on disk or in a stream, such as JPEG, PNG, WebP, or TIFF.
+- A decoder reads encoded data from a file format and produces an [`Image`](xref:SixLabors.ImageSharp.Image) or [`Image<TPixel>`](xref:SixLabors.ImageSharp.Image`1).
+- An encoder writes an image back to a chosen file format.
+- A pixel type, such as [`Rgba32`](xref:SixLabors.ImageSharp.PixelFormats.Rgba32), describes the in-memory representation used while the image is loaded and processed.
+- Metadata describes information carried alongside the pixels, such as orientation, ICC profiles, frame timing, comments, and format-specific tags.
+
+Changing the file format is not the same operation as changing the in-memory pixel type. Saving an `Image<Rgba32>` as JPEG writes JPEG-encoded data from RGBA pixels; loading a PNG as `Image<L8>` converts decoded image samples into an 8-bit luminance pixel buffer. Metadata handling is a separate concern again, controlled by decoder and encoder options.
+
+## What a Format Decides
+
+An image file format is not only a filename extension. It defines which image information can be represented and how that information is stored. The important questions are:
+
+- Is the encoded pixel data compressed, and is that compression lossy or lossless?
+- Which color models, bit depths, and component precisions can the format represent?
+- Can the format store alpha transparency, and if so is it full alpha or index-based transparency?
+- Can the format store multiple frames, animation timing, blending, and disposal behavior?
+- Which metadata can be represented, such as EXIF, ICC profiles, text chunks, frame metadata, or format-specific tags?
+- Which applications, browsers, operating systems, and asset pipelines need to read the output?
+
+These questions are why there is no universal "best" image format. JPEG, PNG, GIF, WebP, TIFF, and OpenEXR are not interchangeable containers with different extensions; they preserve and discard different parts of the image model.
+
+## Delivery, Interchange, and Working Formats
+
+Many format decisions become clearer when you separate the job the file has to do:
+
+- Delivery formats prioritize compatibility, size, and decode behavior for the consuming client. JPEG, PNG, GIF, and WebP are common examples.
+- Interchange formats preserve information for another tool or workflow. TIFF, OpenEXR, TGA, BMP, QOI, and Netpbm-style formats can be useful here depending on the pipeline.
+- Working formats are the files you keep before final export. They may be larger or richer than the public output because they need to preserve editability, metadata, precision, layers in another application, or a lossless source for later conversions.
+
+ImageSharp works with raster images. Vector artwork, document formats, and application-native design files are outside the built-in codec set, although you can render or import them through other tools before handing raster pixels to ImageSharp.
+
+## Compression and Re-encoding
+
+Lossless formats preserve the decoded pixel values exactly, subject to the color and pixel representation chosen by the encoder. PNG, QOI, lossless WebP, and many TIFF configurations fall into this category.
+
+Lossy formats intentionally discard information to reduce file size. JPEG and lossy WebP are useful because the loss is often acceptable for photographs, but re-encoding lossy inputs can compound artifacts. Converting a JPEG to PNG does not restore detail that the JPEG encoder already removed; it only stores the current decoded pixels losslessly.
+
+Some formats can be either lossy or lossless depending on encoder settings. WebP and TIFF are format families with multiple encoding modes, so the encoder configuration matters as much as the extension.
+
 ## Built-In Formats
 
 The source of truth for the built-in format list is [`Configuration`](xref:SixLabors.ImageSharp.Configuration): the default ImageSharp configuration preregisters encoder, decoder, and detector modules for the following public [`IImageFormat`](xref:SixLabors.ImageSharp.Formats.IImageFormat) types:
@@ -45,6 +88,8 @@ Another way to think about it:
 - Animation-friendly formats: GIF, animated PNG workflows through [`PngEncoder`](xref:SixLabors.ImageSharp.Formats.Png.PngEncoder), and animated WebP.
 
 No single format is best everywhere. The right choice depends on whether your priority is fidelity, file size, transparency, animation, compatibility, or workflow metadata.
+
+When the output crosses a boundary you do not control, compatibility usually outranks theoretical capability. A format can support a feature and still be a poor choice if the receiving client, CDN, print tool, browser, or asset pipeline handles that feature inconsistently.
 
 ## Load, Detect, and Preserve Formats
 

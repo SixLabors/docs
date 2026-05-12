@@ -1,10 +1,22 @@
 # Convert Between Formats
 
-Format conversion is one of the most common reasons people adopt ImageSharp in the first place. The nice part is that you usually do not have to think in terms of format-to-format adapters; you load into ImageSharp's common image model, make any changes you need, and then save to the destination path, stream, or encoder.
+Format conversion is one of the most common reasons people adopt ImageSharp. In ImageSharp, conversion is a decode-and-encode workflow: load into the common image model, make any changes the output requires, then save to the destination path, stream, or encoder.
 
 That decode-and-re-encode flow is not a blind one. Once an image is loaded, the processing pipeline works with format-agnostic pixel data, while the metadata layer still carries enough information for the destination format to choose the best representation it supports.
 
 For common conversions, saving to a destination path or format is intentionally useful. ImageSharp combines the decoded image, bridged metadata, pixel information, and registered encoder defaults to produce strong automated output. Use explicit encoders when your application has a specific output policy to express, not because the default conversion path is something to avoid.
+
+## What Conversion Changes
+
+Format conversion has three separate parts:
+
+- Decode the source format into ImageSharp's image model.
+- Optionally process or transform the image.
+- Encode the result into the destination format.
+
+The destination encoder decides what can be represented in the output file. If the target format cannot store something from the source, that information must be transformed, approximated, or dropped. Common examples are alpha transparency when writing JPEG, high bit depth when writing an 8-bit output, rich TIFF metadata when writing a simpler web format, or animation timing when writing a single-frame format.
+
+Changing the file format does not automatically choose a better working pixel type, repair lossy compression damage, apply EXIF orientation, flatten transparency, or convert color profiles into a preferred output space. Those are separate policy decisions. ImageSharp gives you APIs for each step, but the conversion boundary is where your application decides what the destination file is allowed to mean.
 
 ## How ImageSharp Bridges Formats
 
@@ -15,7 +27,7 @@ ImageSharp's built-in codec metadata translates through [`FormatConnectingMetada
 - Indexed-color settings such as shared color table mode.
 - Animation settings such as background color, repeat count, frame duration, blend mode, and disposal mode.
 
-That is why ImageSharp's conversion story is more comprehensive than simply decoding everything to one in-memory layout and forgetting how the source was encoded. For example, PNG metadata can derive palette, grayscale, RGB, or RGBA output and choose 1, 2, 4, 8, or 16-bit encoding from bridged pixel information, while GIF metadata can carry indexed color-table mode and repeat-count behavior forward when the target format supports them. These bridges are what make the automatic conversion APIs useful for real application workflows rather than only toy examples.
+That is why ImageSharp's conversion model carries more information than a raw pixel buffer alone. For example, PNG metadata can derive palette, grayscale, RGB, or RGBA output and choose 1, 2, 4, 8, or 16-bit encoding from bridged pixel information, while GIF metadata can carry indexed color-table mode and repeat-count behavior forward when the target format supports them. These bridges make the automatic conversion APIs useful for real application workflows where pixel data, metadata, and target format capabilities all matter.
 
 ## Use Identify to Plan the Conversion
 
@@ -119,6 +131,8 @@ else
 
 - Converting from a lossy format to a lossless format does not restore discarded detail.
 - Converting a transparent image to JPEG requires flattening or compositing first.
+- Converting to a palette or lower-bit-depth format is a color-reduction step.
+- Converting an animated image to a single-frame format requires choosing which frame or composited result you want.
 - ImageSharp uses bridged metadata, pixel-type information, and encoder defaults to pick good destination settings when the target format can represent them.
 - Save-by-extension is the simplest and recommended path for ordinary conversions. Pass an explicit encoder when you want to override defaults for quality, compression, bit depth, palette behavior, metadata handling, or another application policy.
 - Format conversion is also a metadata decision. Decide whether orientation, color profiles, animation timing, and authoring metadata should be preserved, transformed, or stripped.

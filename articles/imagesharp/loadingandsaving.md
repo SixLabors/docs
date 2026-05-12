@@ -4,6 +4,16 @@ Most ImageSharp applications start here. Whether images come from disk, streams,
 
 The core idea is straightforward: use `Image.Load()` when you need pixels, `Image.Identify()` when you only need dimensions or metadata, and `Image.DetectFormat()` when you only need to know what kind of file you were given.
 
+## The Three Questions
+
+Loading APIs answer different questions:
+
+- `DetectFormat(...)` asks which registered detector recognizes the encoded bytes.
+- `Identify(...)` asks what the decoder can learn from the headers and metadata without allocating the full pixel buffer.
+- `Load(...)` asks the decoder to materialize pixel data into an `Image` or `Image<TPixel>`.
+
+Those operations are intentionally separate. A file extension can be wrong, a header can be recognizable while the image data is still corrupt, and a small compressed file can decode into a large pixel buffer. Production code should choose the cheapest operation that answers the current question, then still handle failure at the later decode boundary.
+
 ## Load Images
 
 You can load images from a file path, a stream, or an in-memory byte buffer:

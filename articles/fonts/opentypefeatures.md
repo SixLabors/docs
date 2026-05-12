@@ -126,7 +126,7 @@ Some OpenType features are especially relevant in vertical layout, such as [`Kno
 
 Those work alongside [`LayoutMode`](xref:SixLabors.Fonts.TextOptions.LayoutMode); they do not replace it.
 
-For the surrounding layout controls, see [Text Layout and Options](textlayout.md). For the broader shaping pipeline, see [Hinting and Shaping](hintingandshaping.md).
+For the surrounding layout controls, see [Text Layout and Options](textlayout.md). For the broader shaping pipeline, see [Text Shaping](shaping.md).
 
 ### Practical guidance
 

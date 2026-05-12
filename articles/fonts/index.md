@@ -18,7 +18,7 @@ The Unicode pages are part of the practical API story, not a side topic. Most re
 Fonts is licensed under the terms of the [Six Labors Split License, Version 1.0](https://github.com/SixLabors/Fonts/blob/main/LICENSE). See https://sixlabors.com/pricing for commercial licensing details.
 
 >[!IMPORTANT]
->Starting with Fonts 3.0.0, projects that directly depend on SixLabors.Fonts require a valid Six Labors license at build time. Add `sixlabors.lic` to your repository root, set `SixLaborsLicenseFile`, or set `SixLaborsLicenseKey`. This enforcement applies to direct dependencies only. See [License Enforcement Changes and a New Subscription Tier](https://sixlabors.com/posts/licence-enforcement-changes/) for details.
+>Starting with Fonts 3.0.0, projects that directly depend on SixLabors.Fonts require a valid Six Labors license at build time. This enforcement applies to direct dependencies only. See [License Enforcement Changes and a New Subscription Tier](https://sixlabors.com/posts/licence-enforcement-changes/) for details.
 
 ### Installation
 
@@ -55,9 +55,9 @@ paket add SixLabors.Fonts --version VERSION_NUMBER
 
 ### How to use the license file
 
-Add the supplied `sixlabors.lic` file to your repository root. Use the file as supplied; it already contains the complete license string required by the build.
+By default, the build searches from each project directory for `sixlabors.lic`. Place the supplied file in the directory that contains the project file, or in a subdirectory below it. Use the file as supplied; it already contains the complete license string required by the build.
 
-If you want to keep the file somewhere else, set `SixLaborsLicenseFile` in your project file or a shared props file:
+If you want to keep the file somewhere else, including a repository root that sits above the project directory, set `SixLaborsLicenseFile` in your project file or a shared props file:
 
 ```xml
 <PropertyGroup>
@@ -104,7 +104,8 @@ If you are new to Fonts, start with [Loading Fonts and Collections](gettingstart
 - [Selection and Bidi Drag](caretsandselection.md)
 - [Text Layout and Options](textlayout.md)
 - [OpenType Features](opentypefeatures.md)
-- [Hinting and Shaping](hintingandshaping.md)
+- [Text Shaping](shaping.md)
+- [TrueType Hinting](hinting.md)
 - [Color Fonts](colorfonts.md)
 - [Unicode, Code Points, and Graphemes](unicode.md)
 - [Fallback Fonts and Multilingual Text](fallbackfonts.md)

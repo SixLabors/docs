@@ -10,6 +10,12 @@ That small model is enough to describe simple shapes, complex multi-contour shap
 
 The important mental model is that contours are topology, not styling. PolygonClipper does not know about brushes, pens, fill colors, or pixels. It returns geometry that another layer can render, serialize, hit-test, or combine with more geometry.
 
+## Regions, Not Drawing Commands
+
+PolygonClipper treats polygons as filled regions bounded by contours. It is not a path recorder and it does not preserve the original drawing commands that produced the contour data. After normalization, clipping, or boolean operations, the output may contain different contours because the library is describing the resulting region, not the editing history.
+
+This is the same distinction that matters in rendering systems: a path is a set of geometric edges, while a filled region is the area those edges enclose under a fill rule. PolygonClipper operates on the region model.
+
 ## A `Contour` Is One Ring
 
 A [`Contour`](xref:SixLabors.PolygonClipper.Contour) is a sequence of vertices. For clipping and normalization, it is treated as implicitly closed, so the library always considers an edge between the last vertex and the first vertex.

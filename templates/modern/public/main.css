@@ -12,11 +12,16 @@ body {
 h1,
 h2,
 h3 {
-  font-weight: 800;
+  font-weight: 800!important;
   text-decoration: none;
   line-height: 1.15;
   word-wrap: none !important;
   word-break: normal !important;
+}
+
+h4,
+h5 {
+  font-weight: 600 !important;
 }
 
 h1 {
@@ -223,6 +228,10 @@ code {
 .frame::before {
   transform: rotate(-2.5deg);
   background-color: #efefef;
+}
+
+html[data-bs-theme="dark"] .frame::before {
+  background-color: #333;
 }
 
 .frame::after {

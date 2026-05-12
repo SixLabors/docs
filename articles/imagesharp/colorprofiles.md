@@ -1,23 +1,60 @@
 # Color Profiles and Color Conversion
 
-Color management can feel intimidating at first because there are really two related topics hiding under one name: the profiles attached to image files, and the value-level color conversions you may apply in your own code. This page separates those concerns so it is easier to decide when you need metadata preservation, when you need actual color conversion, and when you need both.
+Color management in ImageSharp has two related but separate parts:
 
-ImageSharp exposes color management in two different layers:
+- Embedded color metadata, such as [`IccProfile`](xref:SixLabors.ImageSharp.Metadata.Profiles.Icc.IccProfile) and [`CicpProfile`](xref:SixLabors.ImageSharp.Metadata.Profiles.Cicp.CicpProfile), which describes how encoded color values should be interpreted.
+- Color conversion APIs in [`SixLabors.ImageSharp.ColorProfiles`](xref:SixLabors.ImageSharp.ColorProfiles), which convert color values between supported color spaces and profiles.
 
-- Embedded color metadata on decoded images, such as [`IccProfile`](xref:SixLabors.ImageSharp.Metadata.Profiles.Icc.IccProfile) and [`CicpProfile`](xref:SixLabors.ImageSharp.Metadata.Profiles.Cicp.CicpProfile).
-- Value-level conversion APIs in [`SixLabors.ImageSharp.ColorProfiles`](xref:SixLabors.ImageSharp.ColorProfiles).
+Preserving a profile is not the same thing as converting pixels. A profile can remain attached to an image as metadata without changing the decoded pixel values, and a conversion can change pixel values without preserving the original profile in the output file.
 
-Those layers are related, but they are not the same thing. Preserving an embedded ICC profile does not automatically mean pixels were converted, and converting pixels does not automatically mean every output format can store the same profile metadata.
+Most applications only need the first part: let ImageSharp decode the image and choose whether to preserve, compact, or convert embedded ICC profile data at the decode boundary. [`ColorProfileConverter`](xref:SixLabors.ImageSharp.ColorProfiles.ColorProfileConverter) is a lower-level API for code that is explicitly working with color values or custom color pipelines.
+
+## What ICC Profiles Do
+
+An ICC profile describes the color space of encoded image data. The same numeric pixel value can represent different visible colors depending on the profile attached to the file. A pixel value that looks correct as sRGB may look too saturated, too dull, or shifted if it is interpreted as Adobe RGB, ProPhoto RGB, a display profile, or a printer profile without conversion.
+
+That means an ICC profile is not just descriptive trivia. It tells color-managed software how to interpret the numbers in the file and, when needed, how to convert those numbers into another color space while preserving the intended appearance.
+
+There are two common outcomes:
+
+- Preserve the profile and pixel values so another color-managed tool can interpret the image later.
+- Convert the pixels into a known working space, usually sRGB, so the rest of your pipeline can treat loaded images consistently.
+
+## What ImageSharp Does
+
+By default, [`DecoderOptions`](xref:SixLabors.ImageSharp.Formats.DecoderOptions) preserves embedded ICC profiles in metadata and does not transform the decoded pixels.
+
+Use [`DecoderOptions.ColorProfileHandling`](xref:SixLabors.ImageSharp.Formats.DecoderOptions.ColorProfileHandling) when your decode boundary needs a different policy:
+
+- [`Preserve`](xref:SixLabors.ImageSharp.Formats.ColorProfileHandling.Preserve) leaves embedded ICC profiles intact.
+- [`Compact`](xref:SixLabors.ImageSharp.Formats.ColorProfileHandling.Compact) removes embedded standard sRGB ICC profiles without transforming pixels.
+- [`Convert`](xref:SixLabors.ImageSharp.Formats.ColorProfileHandling.Convert) transforms pixels from the embedded ICC profile to the sRGB v4 profile and removes the original profile.
+
+```csharp
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.Formats;
+
+DecoderOptions options = new()
+{
+    // Convert embedded ICC color data to sRGB during decode.
+    ColorProfileHandling = ColorProfileHandling.Convert
+};
+
+using Image image = Image.Load(options, "input-with-icc.jpg");
+```
+
+`Convert` is useful when you want the rest of your pipeline to operate on normalized sRGB pixel values. `Preserve` is useful when the original profile should stay attached for round-tripping or later export. `Compact` is useful when you want to remove redundant standard sRGB profile data without changing pixel values.
 
 ## Inspect Embedded Color Metadata
 
-Embedded color metadata is available through [`ImageMetadata`](xref:SixLabors.ImageSharp.Metadata.ImageMetadata):
+Embedded color metadata is exposed through [`ImageMetadata`](xref:SixLabors.ImageSharp.Metadata.ImageMetadata):
 
 ```csharp
 using SixLabors.ImageSharp;
 
 using Image image = Image.Load("input.jpg");
 
+// ICC and CICP are metadata profiles; reading them does not convert pixels.
 if (image.Metadata.IccProfile is not null)
 {
     Console.WriteLine(image.Metadata.IccProfile.Header.ProfileConnectionSpace);
@@ -33,49 +70,41 @@ if (image.Metadata.CicpProfile is not null)
 }
 ```
 
-[`IccProfile`](xref:SixLabors.ImageSharp.Metadata.Profiles.Icc.IccProfile) is the richer general-purpose color profile mechanism. [`CicpProfile`](xref:SixLabors.ImageSharp.Metadata.Profiles.Cicp.CicpProfile) carries standardized color signaling values such as primaries, transfer characteristics, matrix coefficients, and range information.
+[`IccProfile`](xref:SixLabors.ImageSharp.Metadata.Profiles.Icc.IccProfile) is the richer general-purpose profile format used by many image workflows. [`CicpProfile`](xref:SixLabors.ImageSharp.Metadata.Profiles.Cicp.CicpProfile) stores coding-independent color signaling values such as primaries, transfer characteristics, matrix coefficients, and range.
 
-## Control ICC Handling During Decode
+## Color Profile Types Are Not Pixel Formats
 
-By default, [`DecoderOptions`](xref:SixLabors.ImageSharp.Formats.DecoderOptions) preserves embedded ICC profiles in metadata and does not transform the decoded pixels.
+The value types used by [`ColorProfileConverter`](xref:SixLabors.ImageSharp.ColorProfiles.ColorProfileConverter) are not [`Image<TPixel>`](xref:SixLabors.ImageSharp.Image`1) storage formats.
 
-If you need different behavior, use [`DecoderOptions.ColorProfileHandling`](xref:SixLabors.ImageSharp.Formats.DecoderOptions.ColorProfileHandling):
-
-- [`Preserve`](xref:SixLabors.ImageSharp.Formats.ColorProfileHandling.Preserve) keeps embedded ICC profiles intact.
-- [`Compact`](xref:SixLabors.ImageSharp.Formats.ColorProfileHandling.Compact) removes canonical sRGB ICC profiles without changing the pixels.
-- [`Convert`](xref:SixLabors.ImageSharp.Formats.ColorProfileHandling.Convert) converts decoded pixels to sRGB v4 and removes the original ICC profile.
-
-```csharp
-using SixLabors.ImageSharp;
-using SixLabors.ImageSharp.Formats;
-
-DecoderOptions options = new()
-{
-    ColorProfileHandling = ColorProfileHandling.Convert
-};
-
-using Image image = Image.Load(options, "input-with-icc.jpg");
-```
-
-This is useful when you want a decode pipeline that normalizes images into a predictable sRGB output space up front.
-
-## Color Profile Values Are Not `TPixel` Formats
-
-The value types used by [`ColorProfileConverter`](xref:SixLabors.ImageSharp.ColorProfiles.ColorProfileConverter) are not the same thing as ImageSharp pixel formats.
-
-Types such as [`Rgb`](xref:SixLabors.ImageSharp.ColorProfiles.Rgb), [`Cmyk`](xref:SixLabors.ImageSharp.ColorProfiles.Cmyk), [`Hsl`](xref:SixLabors.ImageSharp.ColorProfiles.Hsl), [`YCbCr`](xref:SixLabors.ImageSharp.ColorProfiles.YCbCr), [`CieLab`](xref:SixLabors.ImageSharp.ColorProfiles.CieLab), and [`CieXyz`](xref:SixLabors.ImageSharp.ColorProfiles.CieXyz) are value types used for color-space conversion. They participate in the [`ColorProfileConverter`](xref:SixLabors.ImageSharp.ColorProfiles.ColorProfileConverter) pipeline, but they are not [`Image<TPixel>`](xref:SixLabors.ImageSharp.Image`1) storage formats and do not implement [`IPixel<TSelf>`](xref:SixLabors.ImageSharp.PixelFormats.IPixel`1).
+Types such as [`Rgb`](xref:SixLabors.ImageSharp.ColorProfiles.Rgb), [`Cmyk`](xref:SixLabors.ImageSharp.ColorProfiles.Cmyk), [`Hsl`](xref:SixLabors.ImageSharp.ColorProfiles.Hsl), [`YCbCr`](xref:SixLabors.ImageSharp.ColorProfiles.YCbCr), [`CieLab`](xref:SixLabors.ImageSharp.ColorProfiles.CieLab), and [`CieXyz`](xref:SixLabors.ImageSharp.ColorProfiles.CieXyz) model color values for conversion. They are not general-purpose pixel formats and do not implement [`IPixel<TSelf>`](xref:SixLabors.ImageSharp.PixelFormats.IPixel`1).
 
 That distinction matters because ImageSharp image processing is built around pixel formats that can move efficiently through RGBA-oriented [`Vector4`](xref:System.Numerics.Vector4) conversion paths. Color profile types model color spaces and profile connection spaces instead.
 
-## Convert Between Working Spaces
+## Convert Color Values
 
-[`ColorProfileConverter`](xref:SixLabors.ImageSharp.ColorProfiles.ColorProfileConverter) converts color values and spans between supported profile types. For RGB-to-RGB conversions, the working spaces come from [`ColorConversionOptions`](xref:SixLabors.ImageSharp.ColorProfiles.ColorConversionOptions):
+Use [`ColorProfileConverter`](xref:SixLabors.ImageSharp.ColorProfiles.ColorProfileConverter) to convert individual color values or spans of values:
+
+```csharp
+using SixLabors.ImageSharp.ColorProfiles;
+
+ColorProfileConverter converter = new();
+
+Rgb rgb = new(0.25F, 0.5F, 0.75F);
+CieLab lab = converter.Convert<Rgb, CieLab>(rgb);
+```
+
+The converter works with color-profile value types, not whole images. This is appropriate when your own code is calculating, sampling, comparing, or exporting color values directly.
+
+## Convert Between RGB Working Spaces
+
+RGB-to-RGB conversion can still change values when the source and destination working spaces are different. Set the working spaces through [`ColorConversionOptions`](xref:SixLabors.ImageSharp.ColorProfiles.ColorConversionOptions):
 
 ```csharp
 using SixLabors.ImageSharp.ColorProfiles;
 
 ColorProfileConverter converter = new(new ColorConversionOptions
 {
+    // The same Rgb value type can represent different RGB working spaces.
     SourceRgbWorkingSpace = KnownRgbWorkingSpaces.SRgb,
     TargetRgbWorkingSpace = KnownRgbWorkingSpaces.AdobeRgb1998
 });
@@ -84,11 +113,9 @@ Rgb source = new(0.25F, 0.5F, 0.75F);
 Rgb converted = converter.Convert<Rgb, Rgb>(source);
 ```
 
-The source and target value types are both [`Rgb`](xref:SixLabors.ImageSharp.ColorProfiles.Rgb) here, but the conversion still changes because the working-space definitions are different. This is value-level color conversion, not a change to the in-memory `TPixel` type of an [`Image<TPixel>`](xref:SixLabors.ImageSharp.Image`1).
+The source and target value types are both [`Rgb`](xref:SixLabors.ImageSharp.ColorProfiles.Rgb), but the working-space definitions are different. This is value-level color conversion, not a change to the in-memory `TPixel` type of an image.
 
-## Choose Working Spaces Explicitly
-
-[`KnownRgbWorkingSpaces`](xref:SixLabors.ImageSharp.ColorProfiles.KnownRgbWorkingSpaces) exposes the built-in RGB working spaces, including:
+[`KnownRgbWorkingSpaces`](xref:SixLabors.ImageSharp.ColorProfiles.KnownRgbWorkingSpaces) includes common built-in working spaces such as:
 
 - [`SRgb`](xref:SixLabors.ImageSharp.ColorProfiles.KnownRgbWorkingSpaces.SRgb)
 - [`Rec709`](xref:SixLabors.ImageSharp.ColorProfiles.KnownRgbWorkingSpaces.Rec709)
@@ -97,31 +124,50 @@ The source and target value types are both [`Rgb`](xref:SixLabors.ImageSharp.Col
 - [`ProPhotoRgb`](xref:SixLabors.ImageSharp.ColorProfiles.KnownRgbWorkingSpaces.ProPhotoRgb)
 - [`WideGamutRgb`](xref:SixLabors.ImageSharp.ColorProfiles.KnownRgbWorkingSpaces.WideGamutRgb)
 
-Choose the working spaces explicitly when you are doing color conversion outside the normal decode pipeline and need to be clear about the source and destination assumptions.
+Choose the source and target working spaces explicitly when color values come from a known space outside the normal image decode path.
 
-## Use ICC Profiles for Explicit Conversion
+## Convert Using ICC Profiles
 
-If you have actual ICC profiles for the source and destination, set [`ColorConversionOptions.SourceIccProfile`](xref:SixLabors.ImageSharp.ColorProfiles.ColorConversionOptions.SourceIccProfile) and [`ColorConversionOptions.TargetIccProfile`](xref:SixLabors.ImageSharp.ColorProfiles.ColorConversionOptions.TargetIccProfile). The same [`ColorProfileConverter`](xref:SixLabors.ImageSharp.ColorProfiles.ColorProfileConverter) API will then use the ICC-based conversion path instead of only the working-space defaults.
+When you have actual source and destination ICC profiles, set [`SourceIccProfile`](xref:SixLabors.ImageSharp.ColorProfiles.ColorConversionOptions.SourceIccProfile) and [`TargetIccProfile`](xref:SixLabors.ImageSharp.ColorProfiles.ColorConversionOptions.TargetIccProfile):
 
-This is the right choice when the embedded or device-specific ICC data matters more than a generic named working space.
+```csharp
+using System.IO;
+using SixLabors.ImageSharp.ColorProfiles;
+using SixLabors.ImageSharp.Metadata.Profiles.Icc;
+
+IccProfile sourceProfile = new(File.ReadAllBytes("source.icc"));
+IccProfile targetProfile = new(File.ReadAllBytes("target.icc"));
+
+ColorProfileConverter converter = new(new ColorConversionOptions
+{
+    // Supplying both ICC profiles selects the ICC-based conversion path.
+    SourceIccProfile = sourceProfile,
+    TargetIccProfile = targetProfile
+});
+
+Rgb source = new(0.25F, 0.5F, 0.75F);
+Rgb converted = converter.Convert<Rgb, Rgb>(source);
+```
+
+When both ICC profiles are supplied, the converter uses the ICC conversion path for supported source and destination color value types. Use this path when device-specific or embedded profile data matters more than a generic named working space.
 
 ## Advanced Conversion Options
 
-[`ColorConversionOptions`](xref:SixLabors.ImageSharp.ColorProfiles.ColorConversionOptions) also lets you tune lower-level conversion details:
+[`ColorConversionOptions`](xref:SixLabors.ImageSharp.ColorProfiles.ColorConversionOptions) also exposes lower-level settings for specialized workflows:
 
 - [`SourceWhitePoint`](xref:SixLabors.ImageSharp.ColorProfiles.ColorConversionOptions.SourceWhitePoint) and [`TargetWhitePoint`](xref:SixLabors.ImageSharp.ColorProfiles.ColorConversionOptions.TargetWhitePoint)
 - [`AdaptationMatrix`](xref:SixLabors.ImageSharp.ColorProfiles.ColorConversionOptions.AdaptationMatrix), which defaults to [`KnownChromaticAdaptationMatrices.Bradford`](xref:SixLabors.ImageSharp.ColorProfiles.KnownChromaticAdaptationMatrices.Bradford)
 - [`YCbCrTransform`](xref:SixLabors.ImageSharp.ColorProfiles.ColorConversionOptions.YCbCrTransform), which defaults to [`KnownYCbCrMatrices.BT601`](xref:SixLabors.ImageSharp.ColorProfiles.KnownYCbCrMatrices.BT601)
 
-Most applications do not need to override those defaults, but they are available when you need tighter control over conversion behavior.
+Most application code should leave these defaults alone. Change them only when your color pipeline has an explicit requirement for a different white point, chromatic adaptation matrix, or YCbCr transform.
 
 ## Practical Guidance
 
-- Preserve embedded ICC metadata when you need round-tripping or want the original profile to stay attached to the image.
-- Use decode-time `ColorProfileHandling.Convert` when you want pixels normalized to sRGB as soon as the image is loaded.
-- Use `Compact` when you want to remove redundant canonical sRGB ICC profiles without changing pixel values.
-- Do not confuse metadata preservation with pixel conversion. They solve different problems.
-- Do not confuse color profile value types with ImageSharp pixel formats. `ColorProfileConverter` works on color-space values, while `Image<TPixel>` works with `IPixel<TPixel>` storage types.
+- Preserve embedded ICC metadata when the original profile should remain attached to the image.
+- Use decode-time `ColorProfileHandling.Convert` when you want loaded images normalized to sRGB pixel values.
+- Use `ColorProfileHandling.Compact` when you want to remove redundant standard sRGB profile data without changing pixels.
+- Use `ColorProfileConverter` when you are converting color values in your own code rather than changing file metadata.
+- Keep pixel format decisions separate from color profile decisions. `Image<Rgba32>` describes memory layout; ICC and CICP data describe color interpretation.
 
 ## Related Topics
 

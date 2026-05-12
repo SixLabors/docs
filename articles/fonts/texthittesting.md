@@ -1,8 +1,16 @@
 # Hit Testing and Caret Movement
 
+Hit testing resolves a point in laid-out text back to a text position. In Fonts, hit testing is not a yes/no collision test against visible pixels. [`HitTest(...)`](xref:SixLabors.Fonts.TextMetrics.HitTest*) returns a [`TextHit`](xref:SixLabors.Fonts.TextHit) describing the nearest grapheme, the line it belongs to, the source string index, and whether the point resolved to the leading or trailing side of that grapheme.
+
 Once text has been laid out, applications usually need to translate between pixels, character positions, and editor commands. Fonts exposes a small set of types that own the bidi, grapheme, and hard-break rules so callers do not need to reimplement them: [`TextHit`](xref:SixLabors.Fonts.TextHit), [`CaretPosition`](xref:SixLabors.Fonts.CaretPosition), [`CaretPlacement`](xref:SixLabors.Fonts.CaretPlacement), and [`CaretMovement`](xref:SixLabors.Fonts.CaretMovement).
 
 All positional values returned by these APIs are in pixel units.
+
+### How this differs from graphics hit testing
+
+In general graphics APIs, hit testing usually means checking whether a cursor point intersects a shape, path, bounding box, or visual object. Text interaction has a different goal. A text editor must answer "where would the caret go?" even when the point is over whitespace, outside the ink, above the first line, or beyond the end of a wrapped line.
+
+Fonts therefore resolves the point to a text position rather than returning a collision result. The returned `TextHit` is an input to caret placement, selection, word lookup, and movement. If you need geometric picking against custom rendered glyph outlines, use the geometry produced by your renderer for that purpose; do not substitute ink bounds for caret hit testing.
 
 ### Get a measurement object
 
@@ -22,6 +30,16 @@ TextOptions options = new(font)
 
 TextMetrics metrics = TextMeasurer.Measure("Hello, world!", options);
 ```
+
+### Coordinate space and hit targets
+
+The point passed to `HitTest(...)` is in the same pixel coordinate space as the measured layout. That includes the [`TextOptions.Origin`](xref:SixLabors.Fonts.TextOptions.Origin), wrapping length, layout mode, text direction, fallback fonts, and interaction mode that were used when the `TextMetrics` or `LineLayout` was produced.
+
+Fonts uses the logical advance rectangle of each laid-out grapheme as the hit target. It does not hit-test rendered ink bounds. Ink bounds are unsuitable for text interaction because whitespace can have no ink, accents and glyph overhangs can extend outside the advance, and some glyphs draw less than the area users expect to click or select.
+
+For whole-block hit testing, `TextMetrics` first chooses the nearest laid-out line on the cross axis. It then resolves the nearest grapheme on that line's primary axis. In horizontal layout the primary axis is X; in vertical layout the primary axis is Y.
+
+Points outside the text block clamp to the nearest line and grapheme instead of returning no hit. This is intentional for editor-style behavior: clicking to the left, right, above, or below the text can still place a caret at the nearest valid text position.
 
 ### Choose paragraph or editor mode
 
@@ -49,6 +67,8 @@ int grapheme = hit.GraphemeIndex;
 int stringIndex = hit.StringIndex;
 bool trailing = hit.IsTrailing;
 ```
+
+`IsTrailing` records which side of the grapheme was hit. For left-to-right text, a point after the grapheme midpoint on the primary axis resolves to the trailing side. For right-to-left text, the visual side is reversed. Prefer [`GetCaretPosition(hit)`](xref:SixLabors.Fonts.TextMetrics.GetCaretPosition*) when you need caret geometry; it applies the side and direction rules for the resolved layout.
 
 [`TextHit`](xref:SixLabors.Fonts.TextHit) is meant to be passed straight back into the interaction APIs — [`GetCaretPosition(hit)`](xref:SixLabors.Fonts.TextMetrics.GetCaretPosition*), [`GetSelectionBounds(anchor, focus)`](xref:SixLabors.Fonts.TextMetrics.GetSelectionBounds*), [`GetWordMetrics(hit)`](xref:SixLabors.Fonts.TextMetrics.GetWordMetrics*). Those overloads consume the hit directly and apply the trailing-side and bidi rules internally, so callers do not need to compute the visual side themselves.
 
@@ -166,3 +186,6 @@ For more on the underlying measurement model and the `TextMetrics` shape, see [M
 - Use `LineLayout` only when the caller already knows the interaction is line-local.
 - Choose `TextInteractionMode.Editor` for editable text and `Paragraph` for display layout.
 - Keep hit testing, caret movement, and selection tied to the same measured layout.
+- Hit-test the measured layout, not rendered glyph ink bounds.
+- Treat `TextHit` as a resolved text interaction position, not proof that the pointer was inside visible ink.
+- Expect clamping for points outside the text block.
