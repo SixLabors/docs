@@ -1,4 +1,5 @@
 {
+  "$schema": "https://raw.githubusercontent.com/dotnet/docfx/main/schemas/docfx.schema.json",
   "metadata": [
     {
       "src": [
@@ -8,7 +9,7 @@
           ]
         }
       ],
-      "dest": "api/ImageSharp",
+      "output": "api/ImageSharp",
       "disableGitFeatures": false,
       "disableDefaultFilter": false,
       "properties": {
@@ -20,10 +21,13 @@
         {
           "files": [
             "ext/ImageSharp.Drawing/src/**.csproj"
+          ],
+          "exclude": [
+            "ext/ImageSharp.Drawing/src/ImageSharp.Drawing.WebGPU.ShaderGen/**.csproj"
           ]
         }
       ],
-      "dest": "api/ImageSharp.Drawing",
+      "output": "api/ImageSharp.Drawing",
       "disableGitFeatures": false,
       "disableDefaultFilter": false,
       "properties": {
@@ -38,11 +42,11 @@
           ]
         }
       ],
-      "dest": "api/Fonts",
+      "output": "api/Fonts",
       "disableGitFeatures": false,
       "disableDefaultFilter": false,
       "properties": {
-        
+
       }
     },
     {
@@ -53,7 +57,7 @@
           ]
         }
       ],
-      "dest": "api/ImageSharp.Web",
+      "output": "api/ImageSharp.Web",
       "disableGitFeatures": false,
       "disableDefaultFilter": false,
       "properties": {
@@ -68,7 +72,7 @@
           ]
         }
       ],
-      "dest": "api/ImageSharp.Web.Providers.Azure",
+      "output": "api/ImageSharp.Web.Providers.Azure",
       "disableGitFeatures": false,
       "disableDefaultFilter": false,
       "properties": {
@@ -83,7 +87,22 @@
           ]
         }
       ],
-      "dest": "api/ImageSharp.Web.Providers.AWS",
+      "output": "api/ImageSharp.Web.Providers.AWS",
+      "disableGitFeatures": false,
+      "disableDefaultFilter": false,
+      "properties": {
+        
+      }
+    },
+    {
+      "src": [
+        {
+          "files": [
+            "ext/PolygonClipper/src/PolygonClipper/**.csproj"
+          ]
+        }
+      ],
+      "output": "api/PolygonClipper",
       "disableGitFeatures": false,
       "disableDefaultFilter": false,
       "properties": {
@@ -95,25 +114,15 @@
     "xref": [
       "xrefmap.yml"
     ],
-    "xrefService": [
-      "https://xref.docs.microsoft.com/query?uid={uid}"
-    ],
     "content": [
       {
         "files": [
-          "api/**.yml",
-          "api/index.md"
-        ]
-      },
-      {
-        "files": [
-          "articles/**.md",
-          "articles/**/toc.yml",
-          "toc.yml",
-          "*.md"
+          "**/*.{md,yml}"
         ],
         "exclude": [
-          "README.md"
+          "README.md",
+          "_site/**",
+          "**/codecov.yml"
         ]
       }
     ],
@@ -126,37 +135,20 @@
         ]
       }
     ],
-    "overwrite": [
-      {
-        "files": [
-          "apidoc/**.md"
-        ],
-        "exclude": [
-          "obj/**",
-          "_site/**"
-        ]
-      }
+    "output": "_site",
+    "template": [
+      "default",
+      "modern",
+      "templates/modern"
     ],
-    "dest": "_site",
-    "globalMetadataFiles": [],
-    "fileMetadataFiles": [],
-    "fileMetadata": {},
     "globalMetadata": {
-      "_enableSearch": true,
       "_gitContribute": {
         "branch": "main"
-      }
-    },
-    "template": [
-      "statictoc",
-      "templates"
-    ],
-    "postProcessors": [
-      "ExtractSearchIndex"
-    ],
-    "noLangKeyword": false,
-    "keepFileLink": false,
-    "cleanupCacheHistory": false,
-    "disableGitFeatures": false
+      },
+      "_enableSearch": true,
+      "pdf": true,
+       "_appLogoPath": "public/logo.svg",
+       "_appFaviconPath": "public/favicon.ico"
+    }
   }
 }

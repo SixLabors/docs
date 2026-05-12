@@ -1,0 +1,316 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swaps");
+
+/* ##################
+ * ### TYPOGRAPHY ###
+ * ##################
+ */
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 800!important;
+  text-decoration: none;
+  line-height: 1.15;
+  word-wrap: none !important;
+  word-break: normal !important;
+}
+
+h4,
+h5 {
+  font-weight: 600 !important;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin: 1rem 0;
+}
+
+h1[data-uid] {
+  text-transform: none;
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 1.34rem 0;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin: 1.245rem 0;
+}
+
+h4,
+h5 {
+  font-weight: 600;
+}
+
+a {
+  color: #e35052;
+  text-decoration: none;
+}
+
+a:hover,
+a:hover .a,
+a:focus,
+a:focus .a {
+  color: #0a58ca;
+  text-decoration: underline;
+}
+
+.a {
+  text-transform: uppercase;
+}
+
+h1 a,
+h2 a,
+h3 a {
+  color: inherit;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  color: #fff;
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+}
+
+.btn-primary:active,
+.btn-primary:active:focus {
+  color: #fff;
+  background-color: #0a58ca;
+  border-color: #0a53be;
+}
+
+.btn-primary:active:focus {
+  box-shadow: 0 0 0 0.25rem rgb(49 132 253 / 50%);
+}
+
+/* #######################
+ * ### MAIN NAVIGATION ###
+ * #######################
+ */
+
+#logo {
+  width: 160px;
+  height: 50px;
+  margin-right: 1rem;
+}
+
+[data-bs-theme="dark"] #logo {
+  fill: #fff;
+}
+
+body>header,
+body[data-layout=landing]>header {
+  box-shadow: 0 0 8px rgb(0 0 0 / 12%);
+  border-bottom: 0;
+}
+
+[data-bs-theme="dark"] body>header,
+html[data-bs-theme="dark"] body[data-layout=landing]>header {
+  box-shadow: 0 0 8px rgb(0 0 0 / 48%);
+  border-bottom: 0;
+}
+
+header .navbar {
+  text-transform: uppercase;
+}
+
+/* ###################
+ * ##### PRODUCTS ####
+ * ###################
+ */
+
+.products {
+  margin-top: 2rem;
+}
+
+.product {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-clip: border-box;
+  text-align: center;
+  height: 100%;
+  padding-bottom: 2.3667rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 992px) {
+  .products {
+    display: flex;
+  }
+
+  .product {
+    padding-bottom: 0;
+  }
+}
+
+.product img {
+  max-height: 150px;
+  margin-bottom: .5rem;
+}
+
+.product h5 {
+  font-size: 1.25rem;
+}
+
+.product h5 a {
+  text-decoration: none;
+}
+
+.product h5 a::after {
+  display: none;
+}
+
+.product .btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+@media (min-width: 1200px) {
+  .product .btn {
+    max-width: 50%;
+  }
+}
+
+.icon {
+  max-width: 20px;
+  margin-right: 0.5rem;
+}
+
+/* ###################
+ * #### CODE BLOCKS ##
+ * ###################
+ */
+
+code {
+  background-color: #ebebeb;
+}
+
+[data-bs-theme="dark"] code {
+  background-color: #333;
+}
+
+.frame {
+  position: relative;
+  margin: 2rem 1rem;
+}
+
+.frame::before,
+.frame::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  border-radius: 0.75rem;
+}
+
+.frame::before {
+  transform: rotate(-2.5deg);
+  background-color: #efefef;
+}
+
+html[data-bs-theme="dark"] .frame::before {
+  background-color: #333;
+}
+
+.frame::after {
+  transform: rotate(2.5deg);
+  background-image: linear-gradient(45deg, #e4d101 0%, #e30183 100%);
+}
+
+.frame>pre {
+  border-radius: 0.75rem;
+  position: relative;
+  z-index: 1;
+  overflow-x: hidden;
+}
+
+.frame>pre::before,
+.frame>pre::after,
+.frame>pre code::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  top: 1rem;
+  left: 0.75rem;
+  border-radius: 100%;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.frame>pre::before {
+  background-color: #ef4444;
+}
+
+.frame>pre::after {
+  left: 1.75rem;
+  background-color: #fbbf24;
+}
+
+.frame>pre code::before {
+  left: 2.75rem;
+  background-color: #4ade80;
+}
+
+.frame>pre code::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  top: 2.5rem;
+  left: 0.75rem;
+  right: 0.75rem;
+  height: 1px;
+  background-color: #e30183;
+  opacity: 0.25;
+}
+
+.frame>pre code {
+  padding: 3.5rem 0.75rem 0.75rem 0.75rem !important;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+@media (min-width: 1200px) {
+
+  .frame::before,
+  .frame::after {
+    left: -0.5rem;
+    right: -0.5rem;
+  }
+
+  .frame::before {
+    transform: rotate(2deg);
+  }
+
+  .frame::after {
+    transform: rotate(-2deg);
+  }
+}
+
+/* Fixes for code action disapearring due to the dark-mode hack for pre */
+pre>.code-action {
+  color: #fff !important;
+}

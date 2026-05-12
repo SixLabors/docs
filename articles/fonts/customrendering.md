@@ -1,134 +1,152 @@
 # Custom Rendering
 
->[!WARNING]
->Fonts is still considered BETA quality and we still reserve the rights to change the API shapes.
-
 >[!NOTE]
->ImageSharp.Drawing already implements the glyph rendering for you unless you are rendering on other platforms we would recommend using the version provided by that library.. This is a more advanced topic.
+>If you want to draw text onto images, [ImageSharp.Drawing](../imagesharp.drawing/index.md) already provides the rendering layer for you. This page is for cases where you want to render glyphs to your own surface or extract geometry for another system.
 
-### Implementing a glyph renderer
+Most developers meet Fonts through [ImageSharp.Drawing](../imagesharp.drawing/index.md), where the rendering surface is already handled for you. This page is for the next step down: when you want Fonts to do the shaping and glyph decomposition, but you want to decide how those glyphs are painted or exported.
 
-The abstraction used by `Fonts` to allow implementing glyph rendering is the `IGlyphRenderer` and its brother `IColoredGlypheRenderer` (for colored emoji support).
+Custom rendering in Fonts is built around [`IGlyphRenderer`](xref:SixLabors.Fonts.Rendering.IGlyphRenderer). [`TextRenderer.RenderTextTo(...)`](xref:SixLabors.Fonts.Rendering.TextRenderer.RenderTextTo*) performs layout and shaping, then sends the result to your renderer as glyphs, layers, figures, and path commands.
 
+### When to use it
 
-```c#
- // `IColoredGlyphRenderer` implements `IGlyphRenderer` so if you don't want colored font support just implement `IGlyphRenderer`.
-public class CustomGlyphRenderer : IColoredGlyphRenderer 
+Custom rendering is useful when you want to:
+
+- draw text into a game engine or UI toolkit
+- export outlines to SVG, PDF, or another vector format
+- capture glyph geometry for hit testing or diagnostics
+- consume color-font layers and paints yourself
+
+### Rendering flow
+
+For monochrome outline glyphs, the path callbacks are delivered inside [`BeginGlyph(...)`](xref:SixLabors.Fonts.Rendering.IGlyphRenderer.BeginGlyph*) / [`EndGlyph()`](xref:SixLabors.Fonts.Rendering.IGlyphRenderer.EndGlyph*):
+
+1. `BeginText(...)`
+2. `BeginGlyph(...)`
+3. `BeginFigure()`, `MoveTo(...)`, `LineTo(...)`, `QuadraticBezierTo(...)`, `CubicBezierTo(...)`, `ArcTo(...)`, `EndFigure()`
+4. `EndGlyph()`
+5. `SetDecoration(...)` for any decorations requested by `EnabledDecorations()`
+6. `EndText()`
+
+Painted color glyphs add [`BeginLayer(...)`](xref:SixLabors.Fonts.Rendering.IGlyphRenderer.BeginLayer*) / [`EndLayer()`](xref:SixLabors.Fonts.Rendering.IGlyphRenderer.EndLayer*) around each painted layer between [`BeginGlyph(...)`](xref:SixLabors.Fonts.Rendering.IGlyphRenderer.BeginGlyph*) and [`EndGlyph()`](xref:SixLabors.Fonts.Rendering.IGlyphRenderer.EndGlyph*).
+
+[`BeginGlyph(...)`](xref:SixLabors.Fonts.Rendering.IGlyphRenderer.BeginGlyph*) receives [`GlyphRendererParameters`](xref:SixLabors.Fonts.Rendering.GlyphRendererParameters), which identify the glyph instance being rendered, including the glyph ID, the glyph's [`CodePoint`](xref:SixLabors.Fonts.Unicode.CodePoint) value, font style, point size, DPI, layout mode, and active [`TextRun`](xref:SixLabors.Fonts.TextRun). Return `false` from `BeginGlyph(...)` if you want to skip rendering that glyph.
+
+### A minimal renderer
+
+```csharp
+using System.Collections.Generic;
+using System.Numerics;
+using SixLabors.Fonts;
+using SixLabors.Fonts.Rendering;
+
+public sealed class RecordingGlyphRenderer : IGlyphRenderer
 {
+    public List<Vector2> Points { get; } = new();
 
-    /// <summary>
-    /// Called before any glyphs have been rendered.
-    /// </summary>
-    /// <param name="bounds">The bounds the text will be rendered at and at whats size.</param>
-    void IGlyphRenderer.BeginText(FontRectangle bounds)
+    public void BeginText(in FontRectangle bounds)
     {
-        // called before any thing else to provide access to the total required size to redner the text
     }
 
-    /// <summary>
-    /// Begins the glyph.
-    /// </summary>
-    /// <param name="bounds">The bounds the glyph will be rendered at and at what size.</param>
-    /// <param name="paramaters">The set of paramaters that uniquely represents a version of a glyph in at particular font size, font family, font style and DPI.</param>
-    /// <returns>Returns true if the glyph should be rendered othersie it returns false.</returns>
-    bool IGlyphRenderer.BeginGlyph(FontRectangle bounds, GlyphRendererParameters paramaters)
+    public void EndText()
     {
-        // called before each glyph/glyph layer is rendered.
-        // The paramaters can be used to detect the exact details
-        // of the glyph so that duplicate glyphs could optionally 
-        // be cached to reduce processing.
-
-        // You can return false to skip all the figures within the glyph (if you return false EndGlyph will still be called)
     }
 
-    /// <summary>
-    /// Sets the color to use for the current glyph.
-    /// </summary>
-    /// <param name="color">The color to override the renders brush with.</param>
-    void IColorGlyphRenderer.SetColor(GlyphColor color)
+    public bool BeginGlyph(in FontRectangle bounds, in GlyphRendererParameters parameters) => true;
+
+    public void EndGlyph()
     {
-        // from the IColorGlyphRenderer version, onlt called if the current glyph should override the forgound color of current glyph/layer        
     }
 
-    /// <summary>
-    /// Begins the figure.
-    /// </summary>
-    void IGlyphRenderer.BeginFigure()
+    public void BeginLayer(Paint? paint, FillRule fillRule, ClipQuad? clipBounds)
     {
-        // called at the start of the figure within the single glyph/layer
-        // glyphs are rendered as a serise of arcs, lines and movements 
-        // which together describe a complex shape.
     }
 
-    /// <summary>
-    /// Sets a new start point to draw lines from
-    /// </summary>
-    /// <param name="point">The point.</param>
-    void IGlyphRenderer.MoveTo(Vector2 point)
+    public void EndLayer()
     {
-        // move current point to location marked by point without describing a line;
     }
 
-    /// <summary>
-    /// Draw a quadratic bezier curve connecting the previous point to <paramref name="point"/>.
-    /// </summary>
-    /// <param name="secondControlPoint">The second control point.</param>
-    /// <param name="point">The point.</param>
-    void IGlyphRenderer.QuadraticBezierTo(Vector2 secondControlPoint, Vector2 point)
+    public void BeginFigure()
     {
-        // describes Quadratic Bezier curve from the 'current point' using the 
-        // 'second control point' and final 'point' leaving the 'current point'
-        // at 'point'
     }
 
-    /// <summary>
-    /// Draw a Cubics bezier curve connecting the previous point to <paramref name="point"/>.
-    /// </summary>
-    /// <param name="secondControlPoint">The second control point.</param>
-    /// <param name="thirdControlPoint">The third control point.</param>
-    /// <param name="point">The point.</param>
-    void IGlyphRenderer.CubicBezierTo(Vector2 secondControlPoint, Vector2 thirdControlPoint, Vector2 point)
+    public void MoveTo(Vector2 point) => this.Points.Add(point);
+
+    public void LineTo(Vector2 point) => this.Points.Add(point);
+
+    public void QuadraticBezierTo(Vector2 secondControlPoint, Vector2 point)
     {
-        // describes Cubic Bezier curve from the 'current point' using the 
-        // 'second control point', 'third control point' and final 'point' 
-        // leaving the 'current point' at 'point'
+        this.Points.Add(secondControlPoint);
+        this.Points.Add(point);
     }
 
-    /// <summary>
-    /// Draw a straight line connecting the previous point to <paramref name="point"/>.
-    /// </summary>
-    /// <param name="point">The point.</param>
-    void IGlyphRenderer.LineTo(Vector2 point)
+    public void CubicBezierTo(Vector2 secondControlPoint, Vector2 thirdControlPoint, Vector2 point)
     {
-        // describes straight line from the 'current point' to the final 'point' 
-        // leaving the 'current point' at 'point'
+        this.Points.Add(secondControlPoint);
+        this.Points.Add(thirdControlPoint);
+        this.Points.Add(point);
     }
 
-    /// <summary>
-    /// Ends the figure.
-    /// </summary>
-    void IGlyphRenderer.EndFigure()
+    public void ArcTo(float radiusX, float radiusY, float rotation, bool largeArc, bool sweep, Vector2 point)
+        => this.Points.Add(point);
+
+    public void EndFigure()
     {
-        // Called after the figure has completed denoting a straight line should 
-        // be drawn from the current point to the first point
     }
 
-    /// <summary>
-    /// Ends the glyph.
-    /// </summary>
-    void IGlyphRenderer.EndGlyph()
-    {
-        // says the all figures have completed for the current glyph/layer.
-        // NOTE this will be called even if BeginGlyph return false.
-    }
+    public TextDecorations EnabledDecorations() => TextDecorations.None;
 
-
-    /// <summary>
-    /// Called once all glyphs have completed rendering
-    /// </summary>
-    void IGlyphRenderer.EndText()
+    public void SetDecoration(TextDecorations textDecorations, Vector2 start, Vector2 end, float thickness)
     {
-        //once all glyphs/layers have been drawn this is called.
     }
 }
 ```
+
+Render text to that surface with `TextRenderer`.
+
+```csharp
+using SixLabors.Fonts;
+using SixLabors.Fonts.Rendering;
+
+Font font = SystemFonts.CreateFont("Segoe UI", 18);
+TextOptions options = new(font)
+{
+    ColorFontSupport = ColorFontSupport.ColrV1 | ColorFontSupport.Svg
+};
+
+RecordingGlyphRenderer renderer = new();
+TextRenderer.RenderTextTo(renderer, "Hello world", options);
+```
+
+Replace `"Segoe UI"` with any installed family that exists on your machine.
+
+### Layers, paints, and color fonts
+
+[`BeginLayer(...)`](xref:SixLabors.Fonts.Rendering.IGlyphRenderer.BeginLayer*) is where Fonts communicates how the current glyph layer should be filled:
+
+- `paint` may be `null` when a painted layer does not specify paint information
+- [`SolidPaint`](xref:SixLabors.Fonts.Rendering.SolidPaint) represents a single color
+- [`LinearGradientPaint`](xref:SixLabors.Fonts.Rendering.LinearGradientPaint), [`RadialGradientPaint`](xref:SixLabors.Fonts.Rendering.RadialGradientPaint), and [`SweepGradientPaint`](xref:SixLabors.Fonts.Rendering.SweepGradientPaint) are used for richer color-font layers
+- `fillRule` tells you how the path should be filled
+- `clipBounds` provides an optional clip quad for the layer
+
+If your renderer only supports monochrome output, you can ignore `paint` when a painted layer is delivered and fill that layer with your own brush. If you want color-font output, honor both [`ColorFontSupport`](xref:SixLabors.Fonts.TextOptions.ColorFontSupport) in [`TextOptions`](xref:SixLabors.Fonts.TextOptions) and the [`Paint`](xref:SixLabors.Fonts.Rendering.Paint) information delivered to [`BeginLayer(...)`](xref:SixLabors.Fonts.Rendering.IGlyphRenderer.BeginLayer*).
+
+See [Color Fonts](colorfonts.md) for a fuller guide to `ColorFontSupport`, painted glyphs, and the different color-font technologies that Fonts can surface.
+
+### Decorations
+
+Decorations are opt-in. Return the decorations you care about from [`EnabledDecorations()`](xref:SixLabors.Fonts.Rendering.IGlyphRenderer.EnabledDecorations*) and Fonts will call [`SetDecoration(...)`](xref:SixLabors.Fonts.Rendering.IGlyphRenderer.SetDecoration*) after the glyph geometry has been emitted.
+
+```csharp
+public TextDecorations EnabledDecorations()
+    => TextDecorations.Underline | TextDecorations.Strikeout;
+```
+
+This makes it possible to render underline, overline, or strikeout using the same backend as the glyph outlines.
+
+### Practical guidance
+
+- Implement only the renderer callbacks your backend can honor correctly.
+- Keep layout in Fonts and rendering in your backend; do not recompute shaping inside the renderer.
+- Honor layer and paint callbacks when color-font output matters.
+- Use decoration callbacks instead of drawing underlines from guessed metrics.

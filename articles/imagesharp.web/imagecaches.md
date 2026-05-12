@@ -1,122 +1,164 @@
 # Image Caches
 
-ImageSharp.Web caches the result of any valid processing operation to allow the fast retrieval of future identical requests. The cache is smart, storing additional metadata to allow the detection of updated source images and can be configured to a fine degree to determine the duration a processed image should be cached for.
-  
->[!NOTE]
->It is possible to configure your own image cache by implementing and registering your own version of the @"SixLabors.ImageSharp.Web.Caching.IImageCache" interface.
+ImageSharp.Web caches processed output so that identical requests do not repeatedly decode, process, and re-encode the source image. The cache stores both the encoded bytes and metadata about the source and response so the middleware can detect stale entries and serve correct headers.
 
-The following caches are available for the middleware.
+Think of the cache as derived output, not source-of-truth storage. It should be safe to clear and rebuild, but it must be configured carefully enough that all application instances agree on keys, freshness, and storage location.
 
-### PhysicalFileSystemCache
+## How the Cache Works
 
-The @"SixLabors.ImageSharp.Web.Caching.PhysicalFileSystemCache", by default, stores processed image files in the [web root](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/?view=aspnetcore-3.1&tabs=macos#web-root) folder. This is the default cache installed when configuring the middleware.    
-  
-Images are cached in separate folders based upon a hash of the request URL. this allows the caching of millions of image files without slowing down the file system.
-  
-### AzureBlobStorageImageCache  
-  
-This cache allows the caching of image files using [Azure Blob Storage](https://docs.microsoft.com/en-us/azure/storage/blobs/) and is available as an external package installable via [NuGet](https://www.nuget.org/packages/SixLabors.ImageSharp.Web.Providers.Azure)
+For each processed request, the middleware:
 
-# [Package Manager](#tab/tabid-1)
+- builds a cache key from the request path plus the sanitized command collection;
+- hashes that key into a filesystem-safe cache name;
+- stores the encoded image plus metadata such as source last-write time, cache write time, content type, browser max-age, and content length;
+- reuses the cached result until the source changes or the cache entry ages beyond [`ImageSharpMiddlewareOptions.CacheMaxAge`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.CacheMaxAge).
 
-```bash
-PM > Install-Package SixLabors.ImageSharp.Web.Providers.Azure -Version VERSION_NUMBER
+## Default Physical Cache
+
+[`PhysicalFileSystemCache`](xref:SixLabors.ImageSharp.Web.Caching.PhysicalFileSystemCache) is the default backend registered by [`AddImageSharp()`](xref:SixLabors.ImageSharp.Web.ServiceCollectionExtensions.AddImageSharp*).
+
+- It stores cached files under the web root by default.
+- [`PhysicalFileSystemCacheOptions.CacheFolder`](xref:SixLabors.ImageSharp.Web.Caching.PhysicalFileSystemCacheOptions.CacheFolder) defaults to `is-cache`.
+- [`PhysicalFileSystemCacheOptions.CacheFolderDepth`](xref:SixLabors.ImageSharp.Web.Caching.PhysicalFileSystemCacheOptions.CacheFolderDepth) defaults to `8`, which spreads cached files across nested folders.
+
+```csharp
+using SixLabors.ImageSharp.Web;
+using SixLabors.ImageSharp.Web.Caching;
+
+builder.Services.AddImageSharp()
+    .Configure<PhysicalFileSystemCacheOptions>(options =>
+    {
+        options.CacheRootPath = "cache";
+        options.CacheFolder = "imagesharp";
+        options.CacheFolderDepth = 8;
+    });
 ```
 
-# [.NET CLI](#tab/tabid-2)
+If your app does not define a web root, set [`CacheRootPath`](xref:SixLabors.ImageSharp.Web.Caching.PhysicalFileSystemCacheOptions.CacheRootPath) explicitly. Relative paths are resolved against the application content root.
 
-```bash
-dotnet add package SixLabors.ImageSharp.Web.Providers.Azure --version VERSION_NUMBER
-```
+## Browser Lifetime Versus Backend Lifetime
 
-# [PackageReference](#tab/tabid-3)
+ImageSharp.Web tracks two different lifetimes:
 
-```xml
-<PackageReference Include="SixLabors.ImageSharp.Web.Providers.Azure" Version="VERSION_NUMBER" />
-```
+- [`ImageSharpMiddlewareOptions.BrowserMaxAge`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.BrowserMaxAge) controls the `Cache-Control` lifetime sent to clients.
+- [`ImageSharpMiddlewareOptions.CacheMaxAge`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.CacheMaxAge) controls how long the processed result stays valid in the backend cache.
 
-# [Paket CLI](#tab/tabid-4)
+If the source provider supplies a source `Cache-Control` max-age, that value overrides `BrowserMaxAge` for the response.
 
-```bash
-paket add SixLabors.ImageSharp.Web.Providers.Azure --version VERSION_NUMBER
-```
+Set browser lifetime based on how long clients may keep a response without revalidation. Set backend cache lifetime based on how long your server-side derived output should be trusted before checking the source again. Those are related, but they are not the same operational decision.
 
-***
+## Cache Keys and Hashes
 
-Once installed the cache @SixLabors.ImageSharp.Web.Caching.Azure.AzureBlobStorageCacheOptions can be configured as follows:
+By default, ImageSharp.Web uses:
 
+- [`UriRelativeLowerInvariantCacheKey`](xref:SixLabors.ImageSharp.Web.Caching.UriRelativeLowerInvariantCacheKey) to turn the request path and command collection into a canonical cache key.
+- [`SHA256CacheHash`](xref:SixLabors.ImageSharp.Web.Caching.SHA256CacheHash) to hash that key into the stored filename.
+- [`ImageSharpMiddlewareOptions.CacheHashLength`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.CacheHashLength) to control how many hash characters are kept.
 
-```c#  
-// Configure and register the container.  
-// Alteratively use `appsettings.json` to represent the class and bind those settings.
-.Configure<AzureBlobStorageCacheOptions>(options =>
+If you need cache entries to vary by host or some other request detail, swap the key implementation with [`SetCacheKey<T>()`](xref:SixLabors.ImageSharp.Web.ImageSharpBuilderExtensions.SetCacheKey*) or [`SetCacheHash<T>()`](xref:SixLabors.ImageSharp.Web.ImageSharpBuilderExtensions.SetCacheHash*):
+
+```csharp
+using SixLabors.ImageSharp.Web;
+using SixLabors.ImageSharp.Web.Caching;
+
+builder.Services.AddImageSharp(options =>
 {
-    options.ConnectionString = {AZURE_CONNECTION_STRING};
-    options.ContainerName = {AZURE_CONTAINER_NAME};
-
-    // Optionally use a cache folder under the container.
-    options.CacheFolder = {AZURE_CACHE_FOLDER};
-    
-    // Optionally create the cache container on startup if not already created.
-    AzureBlobStorageCache.CreateIfNotExists(options, PublicAccessType.None);
+    options.CacheHashLength = 16;
 })
-.SetCache<AzureBlobStorageCache>()
+.SetCacheKey<UriAbsoluteLowerInvariantCacheKey>()
+.SetCacheHash<SHA256CacheHash>();
 ```
 
-Images are cached using a hash of the request URL as the blob name. All appropriate metadata is stored in the blob properties to correctly serve the blob with the correct response headers.
+## Preserve the v1 Cache Layout
 
+If you are migrating an older installation and want new requests to keep using the v1 cache naming layout, switch to [`LegacyV1CacheKey`](xref:SixLabors.ImageSharp.Web.Caching.LegacyV1CacheKey) and keep the folder depth aligned with the hash length:
 
-### AWSS3StorageCache  
-  
-This cache allows the caching of image files using [Amazon Simple Storage Service (Amazon S3)](https://aws.amazon.com/s3/) and is available as an external package installable via [NuGet](https://www.nuget.org/packages/SixLabors.ImageSharp.Web.Providers.AWS)
+```csharp
+using SixLabors.ImageSharp.Web;
+using SixLabors.ImageSharp.Web.Caching;
 
-# [Package Manager](#tab/tabid-1a)
-
-```bash
-PM > Install-Package SixLabors.ImageSharp.Web.Providers.AWS -Version VERSION_NUMBER
-```
-
-# [.NET CLI](#tab/tabid-2a)
-
-```bash
-dotnet add package SixLabors.ImageSharp.Web.Providers.AWS --version VERSION_NUMBER
-```
-
-# [PackageReference](#tab/tabid-3a)
-
-```xml
-<PackageReference Include="SixLabors.ImageSharp.Web.Providers.AWS" Version="VERSION_NUMBER" />
-```
-
-# [Paket CLI](#tab/tabid-4a)
-
-```bash
-paket add SixLabors.ImageSharp.Web.Providers.AWS --version VERSION_NUMBER
-```
-
-***
-
-Once installed the cache @SixLabors.ImageSharp.Web.Caching.AWS.AWSS3StorageCacheOptions can be configured as follows:
-
-
-```c#  
-// Configure and register the bucket.  
-// Alteratively use `appsettings.json` to represent the class and bind those settings.
-.Configure<AWSS3StorageCacheOptions>(options =>
+builder.Services.AddImageSharp(options =>
 {
-    options.Endpoint = {AWS_ENDPOINT};
-    options.BucketName = {AWS_BUCKET_NAME};
-    options.AccessKey = {AWS_ACCESS_KEY};
-    options.AccessSecret = {AWS_ACCESS_SECRET};
-    options.Region = {AWS_REGION};
-
-    // Optionally use a cache folder under the bucket.
-    options.CacheFolder = {AWS_CACHE_FOLDER};
-    
-    // Optionally create the cache bucket on startup if not already created.
-    AWSS3StorageCache.CreateIfNotExists(options, S3CannedACL.Private);
+    options.CacheHashLength = 12;
 })
-.SetCache<AWSS3StorageCache>()
+.Configure<PhysicalFileSystemCacheOptions>(options =>
+{
+    options.CacheFolderDepth = 12;
+})
+.SetCacheKey<LegacyV1CacheKey>();
 ```
 
-Images are cached using a hash of the request URL as the object name. All appropriate metadata is stored in the object properties to correctly serve the object with the correct response headers.
+## Azure Blob Storage Cache
+
+Install the Azure provider package:
+
+```bash
+dotnet add package SixLabors.ImageSharp.Web.Providers.Azure
+```
+
+Then replace the default cache backend with [`SetCache<T>()`](xref:SixLabors.ImageSharp.Web.ImageSharpBuilderExtensions.SetCache*):
+
+```csharp
+using Azure.Storage.Blobs.Models;
+using SixLabors.ImageSharp.Web;
+using SixLabors.ImageSharp.Web.Azure.Caching;
+
+builder.Services.AddImageSharp()
+    .Configure<AzureBlobStorageCacheOptions>(options =>
+    {
+        options.ConnectionString = builder.Configuration["Azure:ConnectionString"]!;
+        options.ContainerName = "imagesharp-cache";
+        options.CacheFolder = "processed";
+
+        AzureBlobStorageCache.CreateIfNotExists(options, PublicAccessType.None);
+    })
+    .SetCache<AzureBlobStorageCache>();
+```
+
+Cached objects use the hashed request key as the blob name, and the cache metadata is stored in blob properties alongside the object.
+
+## AWS S3 Cache
+
+Install the AWS provider package:
+
+```bash
+dotnet add package SixLabors.ImageSharp.Web.Providers.AWS
+```
+
+Then replace the default cache backend with [`SetCache<T>()`](xref:SixLabors.ImageSharp.Web.ImageSharpBuilderExtensions.SetCache*):
+
+```csharp
+using Amazon.S3;
+using SixLabors.ImageSharp.Web;
+using SixLabors.ImageSharp.Web.AWS.Caching;
+
+builder.Services.AddImageSharp()
+    .Configure<AWSS3StorageCacheOptions>(options =>
+    {
+        options.BucketName = "imagesharp-cache";
+        options.Region = "us-east-1";
+        options.AccessKey = builder.Configuration["AWS:AccessKey"];
+        options.AccessSecret = builder.Configuration["AWS:SecretKey"];
+        options.CacheFolder = "processed";
+
+        AWSS3StorageCache.CreateIfNotExists(options, S3CannedACL.Private);
+    })
+    .SetCache<AWSS3StorageCache>();
+```
+
+Cached objects use the hashed request key as the object key, and the response metadata needed by the middleware is stored with the object.
+
+## Practical Guidance
+
+Treat the cache as derived output. It should be safe to clear and rebuild, but it must be separate from source storage so cleanup jobs cannot delete originals. In single-instance deployments a physical cache may be enough; in multi-instance deployments, use shared storage when all instances should reuse the same processed variants.
+
+Cache lifetime has two audiences. Browser lifetime controls how long clients may reuse a response without coming back. Backend cache lifetime controls how long the server trusts a generated variant before checking source freshness. Those values should match source update frequency, CDN behavior, and the cost of regeneration.
+
+If you customize cache keys, include every output-affecting request detail. Host, tenant, preset expansion, command values, and source path can all matter depending on the application. Monitor cache growth when public URLs expose many dimensions or quality values, because variant counts can grow faster than source image counts.
+
+## Related Topics
+
+- [Getting Started](gettingstarted.md)
+- [Image Providers](imageproviders.md)
+- [Securing Requests](security.md)
+- [Extensibility](extensibility.md)

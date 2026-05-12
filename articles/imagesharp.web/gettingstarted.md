@@ -1,123 +1,110 @@
 # Getting Started
 
->[!NOTE]
->The official guide assumes intermediate level knowledge of C# and .NET. If you are totally new to .NET development, it might not be the best idea to jump right into a framework as your first step - grasp the basics then come back. Prior experience with other languages and frameworks helps, but is not required.
+ImageSharp.Web is easiest to understand as a request pipeline: match a source image, parse commands, process with ImageSharp, cache the result, then serve the cached bytes on later requests. This page shows the smallest setup first and then explains what the default registration gives you.
 
-### Setup and Configuration
+## Minimal ASP.NET Core Setup
 
-Once installed you will need to add the following code  to `ConfigureServices` and `Configure` in your `Startup.cs` file.
+```csharp
+using SixLabors.ImageSharp.Web;
 
-This installs the the default service and options.
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
-``` c#
-public void ConfigureServices(IServiceCollection services) {
-    // Add the default service and options.
-    services.AddImageSharp();
-}
+builder.Services.AddImageSharp();
 
-public void Configure(IApplicationBuilder app, IWebHostEnvironment env) {
+WebApplication app = builder.Build();
 
-    // Add the image processing middleware. Make sure this appears BEFORE app.UseStaticFiles(),
-    // otherwise images will be served by ASP.NET's static file middleware before ImageSharp can process them.
-    app.UseImageSharp();
+app.UseImageSharp();
+app.UseStaticFiles();
 
-    app.UseStaticFiles();
-}
+app.Run();
 ```
 
-The fluent configuration is flexible allowing you to configure a multitude of different options. For example you can add the default service and custom options.
+`app.UseImageSharp()` must appear before `app.UseStaticFiles()`. If static files run first, requests such as `/images/photo.jpg` or `/images/photo.jpg?width=400` will be served directly from disk and ImageSharp.Web will never see them.
 
-``` c#
-// Add the default service and custom options.
-services.AddImageSharp(
-    options =>
-        {
-            // You only need to set the options you want to change here
-            // All properties have been listed for demonstration purposes
-            // only.
-            options.Configuration = Configuration.Default;
-            options.MemoryStreamManager = new RecyclableMemoryStreamManager();
-            options.BrowserMaxAge = TimeSpan.FromDays(7);
-            options.CacheMaxAge = TimeSpan.FromDays(365);
-            options.CacheHashLength = 8;
-            options.OnParseCommandsAsync = _ => Task.CompletedTask;
-            options.OnBeforeSaveAsync = _ => Task.CompletedTask;
-            options.OnProcessedAsync = _ => Task.CompletedTask;
-            options.OnPrepareResponseAsync = _ => Task.CompletedTask;
-        });
+Treat the middleware order as part of the image contract for your application. Anything registered before ImageSharp.Web can short-circuit the request before image processing happens. Anything registered after it will normally see the processed response only when ImageSharp.Web chooses not to handle the request.
+
+## What the Default Registration Includes
+
+`AddImageSharp()` wires up the core middleware services plus a sensible default pipeline:
+
+- [`QueryCollectionRequestParser`](xref:SixLabors.ImageSharp.Web.Commands.QueryCollectionRequestParser) reads commands from the query string.
+- [`PhysicalFileSystemProvider`](xref:SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider) resolves source images from the web root by default.
+- [`PhysicalFileSystemCache`](xref:SixLabors.ImageSharp.Web.Caching.PhysicalFileSystemCache) stores processed output under `wwwroot/is-cache` by default.
+- [`UriRelativeLowerInvariantCacheKey`](xref:SixLabors.ImageSharp.Web.Caching.UriRelativeLowerInvariantCacheKey) and [`SHA256CacheHash`](xref:SixLabors.ImageSharp.Web.Caching.SHA256CacheHash) create hashed cache filenames.
+- [`ResizeWebProcessor`](xref:SixLabors.ImageSharp.Web.Processors.ResizeWebProcessor), [`FormatWebProcessor`](xref:SixLabors.ImageSharp.Web.Processors.FormatWebProcessor), [`BackgroundColorWebProcessor`](xref:SixLabors.ImageSharp.Web.Processors.BackgroundColorWebProcessor), [`QualityWebProcessor`](xref:SixLabors.ImageSharp.Web.Processors.QualityWebProcessor), and [`AutoOrientWebProcessor`](xref:SixLabors.ImageSharp.Web.Processors.AutoOrientWebProcessor) provide the built-in command set.
+- A default [`OnParseCommandsAsync`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.OnParseCommandsAsync) callback that inserts `autoorient=true` when the request does not already specify `autoorient`.
+- A middleware-specific ImageSharp [`Configuration`](xref:SixLabors.ImageSharp.Configuration) with web-oriented [`JpegEncoder`](xref:SixLabors.ImageSharp.Formats.Jpeg.JpegEncoder), [`PngEncoder`](xref:SixLabors.ImageSharp.Formats.Png.PngEncoder), and [`WebpEncoder`](xref:SixLabors.ImageSharp.Formats.Webp.WebpEncoder) defaults.
+
+With that setup in place, requests like these are processed automatically:
+
+```text
+/images/photo.jpg?width=400
+/images/photo.jpg?width=400&height=250&rmode=crop
+/images/logo.png?bgcolor=white&format=jpg&quality=85
 ```
 
-Or you can fine-grain control adding the default options and configure other services.
+That default configuration is intentionally opinionated for web output. Processed JPEGs use quality `75` with progressive, interleaved `YCbCrRatio420` encoding, processed PNGs use `BestCompression` with adaptive filtering, and processed WebP output uses quality `75` with `BestQuality` encoding method.
 
-``` c#
-// Fine-grain control adding the default options and configure other services.
-services.AddImageSharp()
-        .RemoveProcessor<FormatWebProcessor>()
-        .RemoveProcessor<BackgroundColorWebProcessor>();
-```
+The default command path is opinionated too: ImageSharp.Web transparently adds `autoorient=true` unless the request already contains an `autoorient` value. That means processed output is EXIF-normalized by default, which is especially important for WebP delivery where browser orientation support is inconsistent.
 
-There are also factory methods for each builder that will allow building from configuration files.
+When you keep the default middleware configuration and do not return custom [`DecoderOptions`](xref:SixLabors.ImageSharp.Formats.DecoderOptions) from [`OnBeforeLoadAsync`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.OnBeforeLoadAsync), the middleware also decodes with [`ColorProfileHandling.Convert`](xref:SixLabors.ImageSharp.Formats.ColorProfileHandling.Convert). That normalizes embedded ICC profiles for web-oriented re-encoding instead of blindly carrying source color encodings through the pipeline.
 
-``` c#
-// Use the factory methods to configure the PhysicalFileSystemCacheOptions
-services.AddImageSharp()
-    .Configure<PhysicalFileSystemCacheOptions>(options =>
-    {
-        options.CacheFolder = "different-cache";
-    });
-```  
+If you later replace [`ImageSharpMiddlewareOptions.Configuration`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.Configuration), you also replace those encoder defaults. If you replace [`OnParseCommandsAsync`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.OnParseCommandsAsync), you replace the default auto-orientation injection unless you explicitly preserve it. See [Configuration and Pipeline](configuration.md) for both patterns.
 
->[!IMPORTANT]
->ImageSharp.Web v2.0.0 and above contains breaking changes to caching which require additional configuration when migrating from v1.x installs.
+## A Useful Default Mental Model
 
-With ImageSharp.Web v2.0.0 a new concept @SixLabors.ImageSharp.Web.Caching.ICacheKey was introduced to allow greater flexibility when generating cached file names. To preserve the v1.x cache format users must configure two settings:
+With the default [`PhysicalFileSystemProvider`](xref:SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider), the provider itself still uses [`ProcessingBehavior.CommandOnly`](xref:SixLabors.ImageSharp.Web.Providers.ProcessingBehavior.CommandOnly), but the default middleware callback inserts `autoorient=true` when no `autoorient` command is present. In practice that means:
 
-1. @SixLabors.ImageSharp.Web.Caching.ICacheKey should be configured to use @SixLabors.ImageSharp.Web.Caching.LegacyV1CacheKey
-2. @SixLabors.ImageSharp.Web.Caching.PhysicalFileSystemCacheOptions.CacheFolderDepth should be configured to use the same value as @SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.CacheHashLength - Default `12`.
+- `/images/photo.jpg` is intercepted, auto-oriented, cached, and served by ImageSharp.Web.
+- `/images/photo.jpg?width=400` is also intercepted and processed by ImageSharp.Web.
 
-A complete configuration sample allowing the replication of legacy v1.x behavior can be found below:
+That default favors display correctness over passthrough behavior, especially for formats such as WebP where browser EXIF-orientation support is unreliable.
 
-```c#
-services.AddImageSharp(options =>
+If you want passthrough behavior that only processes URLs that already contain commands, you must replace [`OnParseCommandsAsync`](xref:SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.OnParseCommandsAsync) or otherwise bypass the middleware for those paths. `ProcessingBehavior.CommandOnly` by itself is not enough while the default auto-orientation callback is active.
+
+## Configure the Physical Provider and Cache
+
+If your source images or cache should live somewhere other than the default web root locations, configure the provider and cache options explicitly:
+
+```csharp
+using SixLabors.ImageSharp.Web;
+using SixLabors.ImageSharp.Web.Caching;
+using SixLabors.ImageSharp.Web.Providers;
+
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddImageSharp(options =>
 {
-    // Set to previous default value of CachedNameLength
-    options.CacheHashLength = 12;
-
-    // Use the same command parsing as v1.x
-    options.OnParseCommandsAsync = c =>
-    {
-        if (c.Commands.Count == 0)
-        {
-            return Task.CompletedTask;
-        }
-
-        // It's a good idea to have this to provide very basic security.
-        // We can safely use the static resize processor properties.
-        uint width = c.Parser.ParseValue<uint>(
-            c.Commands.GetValueOrDefault(ResizeWebProcessor.Width),
-            c.Culture);
-
-        uint height = c.Parser.ParseValue<uint>(
-            c.Commands.GetValueOrDefault(ResizeWebProcessor.Height),
-            c.Culture);
-
-        if (width > 4000 && height > 4000)
-        {
-            c.Commands.Remove(ResizeWebProcessor.Width);
-            c.Commands.Remove(ResizeWebProcessor.Height);
-        }
-
-        return Task.CompletedTask;
-    });
+    options.BrowserMaxAge = TimeSpan.FromDays(7);
+    options.CacheMaxAge = TimeSpan.FromDays(30);
+})
+.Configure<PhysicalFileSystemProviderOptions>(options =>
+{
+    options.ProviderRootPath = "assets";
 })
 .Configure<PhysicalFileSystemCacheOptions>(options =>
 {
-    // Ensure this value is the same as CacheHashLength to generate a backwards-compatible cache folder structure
-    options.CacheFolderDepth = 12;
-})
-.SetCacheKey<LegacyV1CacheKey>()
-.ClearProviders()
-.AddProvider<WebRootImageProvider>();
+    options.CacheRootPath = "cache";
+    options.CacheFolder = "imagesharp";
+    options.CacheFolderDepth = 8;
+});
 ```
 
-Full Configuration API options are available [here](xref:SixLabors.ImageSharp.Web.DependencyInjection.ImageSharpBuilderExtensions).
+Relative paths are resolved against the application content root. If your app does not define a web root, set both `ProviderRootPath` and `CacheRootPath` explicitly.
+
+Keep source storage and cache storage conceptually separate. The provider root is where original images come from. The cache root is disposable derived output and can usually be cleared, rebuilt, or moved to cheaper storage without losing source assets. In clustered deployments, choose cache storage that matches your invalidation and sharing requirements.
+
+## Next Steps
+
+- [Configuration and Pipeline](configuration.md)
+- [Processing Commands](processingcommands.md)
+- [Image Providers](imageproviders.md)
+- [Image Caches](imagecaches.md)
+- [Securing Requests](security.md)
+
+## Practical Guidance
+
+- Put `UseImageSharp()` before middleware that would otherwise serve source image files directly.
+- Keep source storage separate from derived cache storage.
+- Configure provider and cache roots explicitly when the app has no web root or runs in a container.
+- Read the security page before exposing free-form transformation URLs publicly.

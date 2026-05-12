@@ -1,114 +1,180 @@
 # Getting Started
 
->[!NOTE]
->The official guide assumes intermediate level knowledge of C# and .NET. If you are totally new to .NET development, it might not be the best idea to jump right into a framework as your first step - grasp the basics then come back. Prior experience with other languages and frameworks helps, but is not required.
+ImageSharp.Drawing adds high-performance vector drawing, brush and pen styling, image composition, and text rendering to ImageSharp. It is designed for generated graphics where the image pipeline and drawing pipeline need to work together: badges, charts, thumbnails, watermarks, annotations, documents, server-side render output, and GPU-backed drawing targets.
 
-### ImageSharp.Drawing - Paths and Polygons
+The main workflow is:
 
-ImageSharp.Drawing provides several classes for building and manipulating various shapes and paths.
+1. Create or load an `Image`.
+2. Call `Mutate(...)`.
+3. Use [`Paint(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.PaintExtensions) to receive a [`DrawingCanvas`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas).
+4. Draw onto the canvas with brushes, pens, paths, shapes, images, or text.
 
-- @"SixLabors.ImageSharp.Drawing.IPath" Root interface defining a path/polygon and the type that the rasterizer uses to generate pixel output.
-- This `SixLabors.ImageSharp.Drawing` namespace contains a variety of available polygons to speed up your drawing process.
+The same canvas can mix all of those operations. The important idea is that drawing is recorded through [`DrawingCanvas`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingCanvas) in the order you call it, then replayed into the current frame. That replay model lets the library share the same public drawing code across CPU images, retained backend scenes, and WebGPU targets.
 
-In addition to the vector manipulation APIs the library also contains rasterization APIs that can convert your @"SixLabors.ImageSharp.Drawing.IPath"s to pixels.
+## Vector Geometry, Raster Output
 
-### Drawing Polygons
+ImageSharp.Drawing lets you describe vector geometry, but the final target is still an ImageSharp raster image unless you are using a retained or GPU backend explicitly. Paths, shapes, strokes, text glyphs, clips, and brushes are converted into pixel coverage during replay. Antialiasing, transforms, blend modes, alpha composition, and layer boundaries all affect that rasterization step.
 
-ImageSharp provides several options for drawing polygons whether you want to draw outlines or fill shapes.
+Keep geometry, styling, and canvas state separate in your code. Geometry answers where drawing can occur. Brushes and pens answer how covered pixels are shaded. Canvas state answers how later commands are transformed, clipped, blended, grouped, or processed.
 
-#### Minimal Example
+## Draw a Shape
 
-```c#
+Start with geometry, then choose how it is painted. Built-in shapes such as [`StarPolygon`](xref:SixLabors.ImageSharp.Drawing.StarPolygon), [`RectanglePolygon`](xref:SixLabors.ImageSharp.Drawing.RectanglePolygon), and [`EllipsePolygon`](xref:SixLabors.ImageSharp.Drawing.EllipsePolygon) are reusable geometry objects. A brush fills the area covered by the shape, and a pen generates and fills the stroke outline.
+
+```csharp
 using SixLabors.ImageSharp;
-using SixLabors.ImageSharp.Processing;
-using SixLabors.ImageSharp.Drawing.Processing;
-
-Image image = ...; // create any way you like.
-
-Star star = new(x: 100.0f, y: 100.0f, prongs: 5, innerRadii: 20.0f, outerRadii:30.0f);
-
-image.Mutate( x=> x.Fill(Color.Red, star)); // fill the star with red
-
-```
-
-#### Expanded Example
-
-```c#
-using SixLabors.ImageSharp;
-using SixLabors.ImageSharp.Processing;
+using SixLabors.ImageSharp.Drawing;
 using SixLabors.ImageSharp.Drawing.Processing;
 using SixLabors.ImageSharp.PixelFormats;
+using SixLabors.ImageSharp.Processing;
 
-Image image = ...; // Create any way you like.
+using Image<Rgba32> image = new(320, 200, Color.White.ToPixel<Rgba32>());
 
-// The options are optional
+StarPolygon star = new(x: 160, y: 100, prongs: 5, innerRadii: 42, outerRadii: 86);
+Pen outline = Pens.DashDot(Color.MidnightBlue, 4);
+
+image.Mutate(ctx => ctx.Paint(canvas =>
+{
+    canvas.Fill(Brushes.Solid(Color.Gold), star);
+    canvas.Draw(outline, star);
+}));
+
+image.Save("star.png");
+```
+
+[`Paint(...)`](xref:SixLabors.ImageSharp.Drawing.Processing.PaintExtensions) creates a canvas for each frame being processed. Drawing is recorded through that canvas, and the canvas is disposed by the paint processor after your callback returns. That disposal step replays the recorded timeline into the frame.
+
+## Combine Drawing Operations
+
+Most real compositions combine background fills, path drawing, text, image drawing, clipping, and image processors. Keep those concerns separate in the code: geometry decides where drawing can happen, brushes and pens decide how pixels are produced, text options decide layout, and canvas state decides which later commands are clipped, transformed, blended, or processed.
+
+Keep source images, image brushes, fonts, and reusable paths alive until the `Paint(...)` call has completed because the canvas records commands first and replays them later. The `Apply(...)` call in this example is also a replay barrier: it processes the pixels produced by earlier commands and does not include drawing that happens later.
+
+```csharp
+using SixLabors.Fonts;
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.Drawing;
+using SixLabors.ImageSharp.Drawing.Processing;
+using SixLabors.ImageSharp.PixelFormats;
+using SixLabors.ImageSharp.Processing;
+
+using Image<Rgba32> source = Image.Load<Rgba32>("photo.jpg");
+using Image<Rgba32> image = new(640, 360, Color.White.ToPixel<Rgba32>());
+
+Font font = SystemFonts.CreateFont("Arial", 34);
+RichTextOptions titleOptions = new(font)
+{
+    Origin = new(40, 42),
+    WrappingLength = 560,
+    HorizontalAlignment = HorizontalAlignment.Center
+};
+
+EllipsePolygon focus = new(320, 195, 360, 190);
+RectangleF photoArea = new(80, 92, 480, 230);
+DrawingOptions clipToFocus = new()
+{
+    ShapeOptions = new()
+    {
+        BooleanOperation = BooleanOperation.Intersection
+    }
+};
+
+image.Mutate(ctx => ctx.Paint(canvas =>
+{
+    canvas.Fill(Brushes.Solid(Color.AliceBlue));
+    canvas.DrawText(titleOptions, "Clipped photo with local processing", Brushes.Solid(Color.MidnightBlue), pen: null);
+
+    _ = canvas.Save(clipToFocus, focus);
+
+    // DrawImage scales the selected source rectangle into the destination rectangle.
+    canvas.DrawImage(source, source.Bounds, photoArea, KnownResamplers.Bicubic);
+    canvas.Apply(focus, region => region.GaussianBlur(3));
+    canvas.Restore();
+
+    canvas.Draw(Pens.Solid(Color.DarkSlateBlue, 3), focus);
+}));
+
+image.Save("composition.png");
+```
+
+## Use Drawing Options
+
+[`DrawingOptions`](xref:SixLabors.ImageSharp.Drawing.Processing.DrawingOptions) controls the shared drawing state used by the canvas. It is not a brush, pen, or shape; it is the context used to interpret later commands. `GraphicsOptions` controls edge coverage and pixel composition, `ShapeOptions` controls fill and clip behavior, and `Transform` moves vector output from local coordinates into final canvas coordinates.
+
+Pass options to `Paint(...)` when the whole callback should use that state. Use `Save(options)` and `Restore()` when only part of the drawing should use it.
+
+```csharp
+using System.Numerics;
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.Drawing;
+using SixLabors.ImageSharp.Drawing.Processing;
+using SixLabors.ImageSharp.PixelFormats;
+using SixLabors.ImageSharp.Processing;
+
+using Image<Rgba32> image = new(320, 200, Color.White.ToPixel<Rgba32>());
+
 DrawingOptions options = new()
 {
     GraphicsOptions = new()
     {
-        ColorBlendingMode  = PixelColorBlendingMode.Multiply
-    }
+        Antialias = true,
+        BlendPercentage = 0.85F
+    },
+
+    // Transform is applied to vector output before rasterization.
+    Transform = new(Matrix3x2.CreateRotation(-0.18F, new(160, 100)))
 };
 
-PatternBrush brush = Brushes.Horizontal(Color.Red, Color.Blue);
-PatternPen pen = Pens.DashDot(Color.Green, 5);
-Star star = new(x: 100.0f, y: 100.0f, prongs: 5, innerRadii: 20.0f, outerRadii:30.0f);
+Brush brush = Brushes.Horizontal(Color.DeepSkyBlue, Color.Navy);
 
-// Draws a star with horizontal red and blue hatching with a dash-dot pattern outline.
-image.Mutate(x=> x.Fill(options, brush, star)
-                   .Draw(option, pen, star));
+image.Mutate(ctx => ctx.Paint(options, canvas =>
+{
+    canvas.FillEllipse(brush, new(160, 100), new(210, 96));
+    canvas.DrawEllipse(Pens.Solid(Color.Black, 3), new(160, 100), new(210, 96));
+}));
 ```
 
-### API Cornerstones for Polygon Rasterization
-Our `Fill` APIs always work off a `Brush` (some helpers create the brush for you) and will take your provided set of paths and polygons filling in all the pixels inside the vector with the color the brush provides.
+## Draw Text
 
-Our `Draw` APIs always work off the `Pen` where we processes your vector to create an outline with a certain pattern and fill in the outline with an internal brush inside the pen.
+Text drawing uses SixLabors.Fonts for font discovery, shaping, measurement, and layout. Use [`RichTextOptions`](xref:SixLabors.ImageSharp.Drawing.Processing.RichTextOptions) when you draw directly to a canvas. The options are the text layout contract: font, origin, wrapping, alignment, fallback, culture, and rich runs should be the same when measuring and drawing.
 
+Prefer layout options over manual width subtraction. Wrapping and alignment let the text engine account for line height, glyph metrics, shaping, and fallback fonts, which manual coordinate guesses cannot do reliably.
 
-### Drawing Text
-
-ImageSharp.Drawing provides several options for drawing text all overloads of a single `DrawText` API. Our text drawing infrastructure is build on top of our [Fonts](../fonts/index.md) library. (See [SixLabors.Fonts](../fonts/index.md) for details on handling fonts.)
-
-#### Minimal Example
-
-```c#
+```csharp
 using SixLabors.Fonts;
 using SixLabors.ImageSharp;
-using SixLabors.ImageSharp.Processing;
-using SixLabors.ImageSharp.Drawing.Processing;
-
-Image image = ...; // Create any way you like.
-Font font = ...; // See our Fonts library for best practices on retrieving one of these.
-string yourText = "this is some sample text";
-
-image.Mutate(x=> x.DrawText(yourText, font, Color.Black, new PointF(10, 10)));
-```
-
-#### Expanded Example
-
-```c#
-using SixLabors.Fonts;
-using SixLabors.ImageSharp;
-using SixLabors.ImageSharp.Processing;
 using SixLabors.ImageSharp.Drawing.Processing;
 using SixLabors.ImageSharp.PixelFormats;
+using SixLabors.ImageSharp.Processing;
 
-Image image = ...; // Create any way you like.
-Font font = ...; // See our Fonts library for best practices on retrieving one of these.
+using Image<Rgba32> image = new(640, 240, Color.White.ToPixel<Rgba32>());
 
-// The options are optional
-RichTextOptions options = new(font)
+Font font = SystemFonts.CreateFont("Arial", 42);
+RichTextOptions textOptions = new(font)
 {
-    Origin = new PointF(100, 100), // Set the rendering origin.
-    TabWidth = 8, // A tab renders as 8 spaces wide
-    WrappingLength = 100, // Greater than zero so we will word wrap at 100 pixels wide
-    HorizontalAlignment = HorizontalAlignment.Right // Right align
+    Origin = new(48, 70),
+    WrappingLength = 540,
+    HorizontalAlignment = HorizontalAlignment.Center
 };
 
-PatternBrush brush = Brushes.Horizontal(Color.Red, Color.Blue);
-PatternPen pen = Pens.DashDot(Color.Green, 5);
-string text = "sample text";
-
-// Draws the text with horizontal red and blue hatching with a dash-dot pattern outline.
-image.Mutate(x=> x.DrawText(options, text, brush, pen));
+image.Mutate(ctx => ctx.Paint(canvas =>
+{
+    canvas.DrawText(textOptions, "Drawing text with ImageSharp", Brushes.Solid(Color.Black), pen: null);
+}));
 ```
+
+For deeper text guidance, see the [Fonts](../fonts/index.md) docs.
+
+## Next Steps
+
+- [Canvas Drawing](canvas.md)
+- [Paths and Shapes](pathsandshapes.md)
+- [Brushes and Pens](brushesandpens.md)
+- [Drawing Text](text.md)
+
+## Practical Guidance
+
+- Keep reusable geometry, pens, brushes, fonts, and source images alive until `Paint(...)` completes.
+- Create drawing options for the state you want to scope, then use `Save(...)` and `Restore()` around that scope.
+- Use `Apply(...)` after the commands whose pixels should be processed.
+- Move from primitive helpers to reusable paths when the same geometry drives more than one command.

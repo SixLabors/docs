@@ -1,0 +1,117 @@
+# Fallback Fonts and Multilingual Text
+
+Real text rarely stays inside one script or one font. User names, emoji, CJK text, math, and symbols all show up in the same application, so fallback is what turns a nice Latin-only demo into a text stack that survives real-world input.
+
+Fonts handles that through [`TextOptions.FallbackFontFamilies`](xref:SixLabors.Fonts.TextOptions.FallbackFontFamilies).
+
+When the primary [`Font`](xref:SixLabors.Fonts.Font) does not contain a glyph for part of the text, the layout engine searches the fallback families in order and uses the first family that can supply the missing glyphs.
+
+### Use families, not fonts
+
+Fallback is configured with [`FontFamily`](xref:SixLabors.Fonts.FontFamily) instances, not [`Font`](xref:SixLabors.Fonts.Font) instances.
+
+```csharp
+using SixLabors.Fonts;
+
+FontCollection collection = new();
+FontFamily latin = collection.Add("fonts/NotoSans-Regular.ttf");
+FontFamily arabic = collection.Add("fonts/NotoSansArabic-Regular.ttf");
+FontFamily emoji = collection.Add("fonts/NotoColorEmoji-Regular.ttf");
+
+TextOptions options = new(latin.CreateFont(16))
+{
+    FallbackFontFamilies = [arabic, emoji]
+};
+```
+
+The primary font still controls the default point size and layout options. When a fallback family is selected, Fonts creates the matching font instance for that run automatically.
+
+### Order matters
+
+Fallback families are searched in the order you provide them.
+
+- Put script-specific fonts before more general fallback fonts.
+- Put emoji fonts after your normal text families unless you explicitly want them to win earlier.
+- Keep the fallback list as small and intentional as possible so the selection stays predictable.
+
+### Mixed-script example
+
+This pattern works well for text that mixes Latin, Arabic, and emoji:
+
+```csharp
+using SixLabors.Fonts;
+
+FontCollection collection = new();
+FontFamily latin = collection.Add("fonts/NotoSans-Regular.ttf");
+FontFamily arabic = collection.Add("fonts/NotoSansArabic-Regular.ttf");
+FontFamily emoji = collection.Add("fonts/NotoColorEmoji-Regular.ttf");
+
+string text = "Status: ready 😀 مرحبا";
+
+TextOptions options = new(latin.CreateFont(18))
+{
+    FallbackFontFamilies = [arabic, emoji],
+    TextDirection = TextDirection.Auto,
+    ColorFontSupport = ColorFontSupport.ColrV1 | ColorFontSupport.Svg
+};
+```
+
+[`TextDirection.Auto`](xref:SixLabors.Fonts.TextDirection.Auto) lets the layout engine determine whether a run should flow left-to-right or right-to-left. [`ColorFontSupport`](xref:SixLabors.Fonts.TextOptions.ColorFontSupport) matters when one of your fallback families is a color emoji font.
+
+### Fallback is not the same as explicit styling
+
+Use fallback fonts when the goal is "use another family if the current one cannot render this text".
+
+Use [`TextRuns`](xref:SixLabors.Fonts.TextOptions.TextRuns) when the goal is "this specific range should use a different font even if the base font could render it".
+
+```csharp
+using SixLabors.Fonts;
+
+const string text = "Latin title العربية";
+
+FontCollection collection = new();
+FontFamily latin = collection.Add("fonts/NotoSans-Regular.ttf");
+FontFamily arabic = collection.Add("fonts/NotoSansArabic-Regular.ttf");
+
+TextOptions options = new(latin.CreateFont(18))
+{
+    FallbackFontFamilies = [arabic],
+    TextRuns =
+    [
+        new TextRun
+        {
+            Start = 12,
+            End = 19,
+            Font = arabic.CreateFont(18)
+        }
+    ]
+};
+```
+
+The fallback list helps with missing glyphs. [`TextRuns`](xref:SixLabors.Fonts.TextOptions.TextRuns) gives you deliberate control over which grapheme ranges use which fonts.
+
+### Wrapping and script behavior
+
+Multilingual text often benefits from layout settings beyond just fallback families:
+
+- [`TextDirection.Auto`](xref:SixLabors.Fonts.TextDirection.Auto) for mixed LTR and RTL content
+- [`WordBreaking.KeepAll`](xref:SixLabors.Fonts.WordBreaking.KeepAll) or [`WordBreaking.BreakWord`](xref:SixLabors.Fonts.WordBreaking.BreakWord) for CJK-heavy text
+- [`LayoutMode`](xref:SixLabors.Fonts.TextOptions.LayoutMode) for vertical scripts or mixed vertical presentation
+
+If a script needs shaping support, make sure the selected font actually supports that script. Fallback can only help if one of the supplied families contains the needed glyphs and shaping data.
+
+### Common pitfalls
+
+- A fallback family will not be used if the primary font already has a glyph for that Unicode scalar value, even if you would prefer the fallback font's design.
+- [`TextRuns`](xref:SixLabors.Fonts.TextOptions.TextRuns) use grapheme indices, not UTF-16 code-unit indices.
+- Emoji color layers are only used if [`ColorFontSupport`](xref:SixLabors.Fonts.TextOptions.ColorFontSupport) allows them.
+- Mixing many broad-coverage fonts can make fallback order hard to reason about.
+
+If layout still looks wrong after fallback is configured, see [Troubleshooting](troubleshooting.md).
+
+### Practical guidance
+
+- Put the preferred design family first, then add fallbacks in the order you want missing glyphs to be searched.
+- Use `TextRuns` when a specific grapheme range must use a specific font rather than normal fallback.
+- Validate fallback with real content, especially emoji, RTL text, CJK text, and combining marks.
+- Remember that fallback solves missing glyphs; it does not guarantee matching style, metrics, or shaping behavior.

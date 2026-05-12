@@ -1,82 +1,233 @@
 # Image Formats
 
-Out of the box ImageSharp supports the following image formats:
+ImageSharp keeps the in-memory image model separate from the file format on disk. That means the same processing code can work across JPEG, PNG, WebP, TIFF, OpenEXR, GIF, and the other built-in codecs, while the encoder and metadata layers handle the format-specific details at the edges.
 
-- Bmp
-- Gif
-- Jpeg
-- Pbm
-- Png
-- Tiff
-- Tga
-- WebP
-- Qoi
+This page is the format map for the library: which built-in formats ship by default, what each one is good at, and where to go next for format-specific guidance.
 
-ImageSharp's API however, is designed to support extension by the registration of additional [`IImageFormat`](xref:SixLabors.ImageSharp.Formats.IImageFormat) implementations.
+## Format, Codec, and Pixel Type
 
-### Loading and Saving Specific Image Formats
+These terms refer to different parts of the imaging pipeline:
 
-[`Image<TPixel>`](xref:SixLabors.ImageSharp.Image`1) represents raw pixel data, stored in a contiguous memory block. It does not "remember" the original image format.
+- A file format is the encoded representation on disk or in a stream, such as JPEG, PNG, WebP, or TIFF.
+- A decoder reads encoded data from a file format and produces an [`Image`](xref:SixLabors.ImageSharp.Image) or [`Image<TPixel>`](xref:SixLabors.ImageSharp.Image`1).
+- An encoder writes an image back to a chosen file format.
+- A pixel type, such as [`Rgba32`](xref:SixLabors.ImageSharp.PixelFormats.Rgba32), describes the in-memory representation used while the image is loaded and processed.
+- Metadata describes information carried alongside the pixels, such as orientation, ICC profiles, frame timing, comments, and format-specific tags.
 
-ImageSharp identifies image formats (Jpeg, Png, Gif etc.) by [`IImageFormat`](xref:SixLabors.ImageSharp.Formats.IImageFormat) instances. Decoded images store the format in the [DecodedImageFormat](xref:SixLabors.ImageSharp.Metadata.ImageMetadata.DecodedImageFormat) within the image metadata. It is possible to pass that value to `image.Save` after performing the operation:
+Changing the file format is not the same operation as changing the in-memory pixel type. Saving an `Image<Rgba32>` as JPEG writes JPEG-encoded data from RGBA pixels; loading a PNG as `Image<L8>` converts decoded image samples into an 8-bit luminance pixel buffer. Metadata handling is a separate concern again, controlled by decoder and encoder options.
 
-```C#
-using (var image = Image.Load(inputStream))
+## What a Format Decides
+
+An image file format is not only a filename extension. It defines which image information can be represented and how that information is stored. The important questions are:
+
+- Is the encoded pixel data compressed, and is that compression lossy or lossless?
+- Which color models, bit depths, and component precisions can the format represent?
+- Can the format store alpha transparency, and if so is it full alpha or index-based transparency?
+- Can the format store multiple frames, animation timing, blending, and disposal behavior?
+- Which metadata can be represented, such as EXIF, ICC profiles, text chunks, frame metadata, or format-specific tags?
+- Which applications, browsers, operating systems, and asset pipelines need to read the output?
+
+These questions are why there is no universal "best" image format. JPEG, PNG, GIF, WebP, TIFF, and OpenEXR are not interchangeable containers with different extensions; they preserve and discard different parts of the image model.
+
+## Delivery, Interchange, and Working Formats
+
+Many format decisions become clearer when you separate the job the file has to do:
+
+- Delivery formats prioritize compatibility, size, and decode behavior for the consuming client. JPEG, PNG, GIF, and WebP are common examples.
+- Interchange formats preserve information for another tool or workflow. TIFF, OpenEXR, TGA, BMP, QOI, and Netpbm-style formats can be useful here depending on the pipeline.
+- Working formats are the files you keep before final export. They may be larger or richer than the public output because they need to preserve editability, metadata, precision, layers in another application, or a lossless source for later conversions.
+
+ImageSharp works with raster images. Vector artwork, document formats, and application-native design files are outside the built-in codec set, although you can render or import them through other tools before handing raster pixels to ImageSharp.
+
+## Compression and Re-encoding
+
+Lossless formats preserve the decoded pixel values exactly, subject to the color and pixel representation chosen by the encoder. PNG, QOI, lossless WebP, and many TIFF configurations fall into this category.
+
+Lossy formats intentionally discard information to reduce file size. JPEG and lossy WebP are useful because the loss is often acceptable for photographs, but re-encoding lossy inputs can compound artifacts. Converting a JPEG to PNG does not restore detail that the JPEG encoder already removed; it only stores the current decoded pixels losslessly.
+
+Some formats can be either lossy or lossless depending on encoder settings. WebP and TIFF are format families with multiple encoding modes, so the encoder configuration matters as much as the extension.
+
+## Built-In Formats
+
+The source of truth for the built-in format list is [`Configuration`](xref:SixLabors.ImageSharp.Configuration): the default ImageSharp configuration preregisters encoder, decoder, and detector modules for the following public [`IImageFormat`](xref:SixLabors.ImageSharp.Formats.IImageFormat) types:
+
+| Format | Public API type | Built in by default |
+| --- | --- | --- |
+| BMP | [`BmpFormat`](xref:SixLabors.ImageSharp.Formats.Bmp.BmpFormat) | Read and write |
+| CUR | [`CurFormat`](xref:SixLabors.ImageSharp.Formats.Cur.CurFormat) | Read and write |
+| EXR | [`ExrFormat`](xref:SixLabors.ImageSharp.Formats.Exr.ExrFormat) | Read and write |
+| GIF | [`GifFormat`](xref:SixLabors.ImageSharp.Formats.Gif.GifFormat) | Read and write |
+| ICO | [`IcoFormat`](xref:SixLabors.ImageSharp.Formats.Ico.IcoFormat) | Read and write |
+| JPEG | [`JpegFormat`](xref:SixLabors.ImageSharp.Formats.Jpeg.JpegFormat) | Read and write |
+| PBM | [`PbmFormat`](xref:SixLabors.ImageSharp.Formats.Pbm.PbmFormat) | Read and write |
+| PNG | [`PngFormat`](xref:SixLabors.ImageSharp.Formats.Png.PngFormat) | Read and write |
+| QOI | [`QoiFormat`](xref:SixLabors.ImageSharp.Formats.Qoi.QoiFormat) | Read and write |
+| TGA | [`TgaFormat`](xref:SixLabors.ImageSharp.Formats.Tga.TgaFormat) | Read and write |
+| TIFF | [`TiffFormat`](xref:SixLabors.ImageSharp.Formats.Tiff.TiffFormat) | Read and write |
+| WebP | [`WebpFormat`](xref:SixLabors.ImageSharp.Formats.Webp.WebpFormat) | Read and write |
+
+ICO and CUR are distinct built-in formats even though detection is handled by a shared icon detector internally.
+
+## At a Glance
+
+If you only need a quick rule of thumb:
+
+- JPEG is the usual choice for photos when small files matter and transparency does not.
+- PNG is the usual choice for lossless graphics, screenshots, and transparency.
+- GIF is mainly useful for simple palette-based animation and legacy compatibility.
+- WebP covers lossy, lossless, transparency, and animation in one format family.
+- TIFF is primarily for archival, print, interchange, and imaging-pipeline workflows.
+- OpenEXR is the format to consider for HDR and higher-precision imaging pipelines.
+
+Another way to think about it:
+
+- Lossy formats: JPEG, lossy WebP.
+- Lossless formats: PNG, lossless WebP, TIFF, QOI, BMP.
+- Higher-precision and HDR workflows: OpenEXR and TIFF.
+- Transparency-friendly formats: PNG, WebP, TIFF, TGA, QOI.
+- Animation-friendly formats: GIF, animated PNG workflows through [`PngEncoder`](xref:SixLabors.ImageSharp.Formats.Png.PngEncoder), and animated WebP.
+
+No single format is best everywhere. The right choice depends on whether your priority is fidelity, file size, transparency, animation, compatibility, or workflow metadata.
+
+When the output crosses a boundary you do not control, compatibility usually outranks theoretical capability. A format can support a feature and still be a poor choice if the receiving client, CDN, print tool, browser, or asset pipeline handles that feature inconsistently.
+
+## Load, Detect, and Preserve Formats
+
+[`Image<TPixel>`](xref:SixLabors.ImageSharp.Image`1) represents decoded pixel data. Once an image is loaded into memory, it is no longer tied to a specific file format unless you explicitly inspect or preserve that information.
+
+ImageSharp can detect the encoded format of a source before loading it with [`Image.DetectFormat()`](xref:SixLabors.ImageSharp.Image.DetectFormat*):
+
+```csharp
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.Formats;
+
+IImageFormat format = Image.DetectFormat("input.bin");
+
+Console.WriteLine(format.Name);
+```
+
+Decoded images also keep the original format in [`ImageMetadata.DecodedImageFormat`](xref:SixLabors.ImageSharp.Metadata.ImageMetadata.DecodedImageFormat).
+
+That metadata is useful when you want to explicitly save back to the originally decoded format, especially when writing to a stream where there is no file extension to select an encoder for you:
+
+```csharp
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.Processing;
+
+using Image image = Image.Load("input.jpg");
+
+image.Mutate(x => x.Resize(1200, 800));
+
+if (image.Metadata.DecodedImageFormat is not null)
 {
-    image.Mutate(c => c.Resize(30, 30));
+    using FileStream outputStream = File.Create("output.jpg");
     image.Save(outputStream, image.Metadata.DecodedImageFormat);
 }
 ```
 
-> [!NOTE]
-> ImageSharp provides common extension methods to save an image into a stream using a specific format.
+When you save by path, [`image.Save("output.jpg")`](xref:SixLabors.ImageSharp.ImageExtensions.Save*) or `image.Save("output.png")` selects the encoder from the destination file extension.
 
-- `image.SaveAsBmp()` (shortcut for `image.Save(new BmpEncoder())`)
-- `image.SaveAsGif()` (shortcut for `image.Save(new GifEncoder())`)
-- `image.SaveAsJpeg()` (shortcut for `image.Save(new JpegEncoder())`)
-- `image.SaveAsPbm()` (shortcut for `image.Save(new PbmEncoder())`)
-- `image.SaveAsPng()` (shortcut for `image.Save(new PngEncoder())`)
-- `image.SaveAsTga()` (shortcut for `image.Save(new TgaEncoder())`)
-- `image.SaveAsTiff()` (shortcut for `image.Save(new TiffEncoder())`)
-- `image.SaveAsWebp()` (shortcut for `image.Save(new WebpEncoder())`)
-- `image.SaveAsQoi()` (shortcut for `image.Save(new QoiEncoder())`)
+You can also choose a format explicitly by passing an encoder or by using the `SaveAs...()` helpers.
 
-### A Deeper Overview of ImageSharp Format Management
+## Save with Explicit Encoders
 
-Real life image streams are usually stored / transferred in standardized formats like Jpeg, Png, Bmp, Gif etc. An image format is represented by an [`IImageFormat`](xref:SixLabors.ImageSharp.Formats.IImageFormat) implementation.
+[`ImageEncoder`](xref:SixLabors.ImageSharp.Formats.ImageEncoder) implementations are lightweight configuration objects. Create one when you want to control how a format is written:
 
-- [`ImageDecoder`](xref:SixLabors.ImageSharp.Formats.ImageDecoder) is responsible for decoding streams (and files) in into [`Image<TPixel>`](xref:SixLabors.ImageSharp.Image`1). ImageSharp can **auto-detect** the image formats of streams/files based on their headers, selecting the correct [`IImageFormat`](xref:SixLabors.ImageSharp.Formats.IImageFormat) (and thus [`ImageDecoder`](xref:SixLabors.ImageSharp.Formats.ImageDecoder)). This logic is implemented by [`IImageFormatDetector`](xref:SixLabors.ImageSharp.Formats.IImageFormatDetector)'s.
-- [`ImageEncoder`](xref:SixLabors.ImageSharp.Formats.ImageEncoder) is responsible for writing [`Image<TPixel>`](xref:SixLabors.ImageSharp.Image`1) into a stream using a given format.
-- Decoders/encoders and [`IImageFormatDetector`](xref:SixLabors.ImageSharp.Formats.IImageFormatDetector)'s are mapped to image formats in [`ImageFormatsManager`](xref:SixLabors.ImageSharp.Configuration.ImageFormatsManager). It's possible to register new formats, or drop existing ones. See [Configuration](configuration.md) for more details.
+```csharp
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.Formats.Jpeg;
+using SixLabors.ImageSharp.Formats.Png;
 
-### Working with Decoders
+using Image image = Image.Load("input.png");
 
-The behavior of the various decoders during the decoding process can be controlled by passing [`DecoderOptions`](xref:SixLabors.ImageSharp.Formats.DecoderOptions) instances to our general `Load` APIs. These options contain means to control metadata handling, the decoded frame count, and properties to allow directly decoding the encoded image to a given target size.
-
-### Specialized Decoding
-
-In addition to the general decoding API we offer additional specialized decoding options [`ISpecializedDecoderOptions`](xref:SixLabors.ImageSharp.Formats.ISpecializedDecoderOptions) that can be accessed directly against [`ISpecializedDecoder<T>`](xref:SixLabors.ImageSharp.Formats.ISpecializedImageDecoder`1) instances which provide further options for decoding.
-
-### Metadata-only Decoding
-
-Sometimes it's worth to efficiently decode image metadata ignoring the memory and CPU heavy pixel information inside the stream. ImageSharp allows this by using one of the several [Image.Identify](xref:SixLabors.ImageSharp.Image) overloads:
-
-```C#
-ImageInfo imageInfo = Image.Identify(inputStream);
-Console.WriteLine($"{imageInfo.Width}x{imageInfo.Height} | BPP: {imageInfo.PixelType.BitsPerPixel}");
+image.Save("output.jpg", new JpegEncoder { Quality = 85 });
+image.Save("output.png", new PngEncoder());
 ```
 
-See [`ImageInfo`](xref:SixLabors.ImageSharp.ImageInfo) for more details about the identification result.
+ImageSharp also provides format-specific helpers:
 
-### Working with Encoders
+- `image.SaveAsBmp()` uses [`BmpEncoder`](xref:SixLabors.ImageSharp.Formats.Bmp.BmpEncoder).
+- `image.SaveAsCur()` uses [`CurEncoder`](xref:SixLabors.ImageSharp.Formats.Cur.CurEncoder).
+- `image.SaveAsExr()` uses [`ExrEncoder`](xref:SixLabors.ImageSharp.Formats.Exr.ExrEncoder).
+- `image.SaveAsGif()` uses [`GifEncoder`](xref:SixLabors.ImageSharp.Formats.Gif.GifEncoder).
+- `image.SaveAsIco()` uses [`IcoEncoder`](xref:SixLabors.ImageSharp.Formats.Ico.IcoEncoder).
+- `image.SaveAsJpeg()` uses [`JpegEncoder`](xref:SixLabors.ImageSharp.Formats.Jpeg.JpegEncoder).
+- `image.SaveAsPbm()` uses [`PbmEncoder`](xref:SixLabors.ImageSharp.Formats.Pbm.PbmEncoder).
+- `image.SaveAsPng()` uses [`PngEncoder`](xref:SixLabors.ImageSharp.Formats.Png.PngEncoder).
+- `image.SaveAsQoi()` uses [`QoiEncoder`](xref:SixLabors.ImageSharp.Formats.Qoi.QoiEncoder).
+- `image.SaveAsTga()` uses [`TgaEncoder`](xref:SixLabors.ImageSharp.Formats.Tga.TgaEncoder).
+- `image.SaveAsTiff()` uses [`TiffEncoder`](xref:SixLabors.ImageSharp.Formats.Tiff.TiffEncoder).
+- `image.SaveAsWebp()` uses [`WebpEncoder`](xref:SixLabors.ImageSharp.Formats.Webp.WebpEncoder).
 
-Image formats are usually defined by complex standards allowing multiple representations for the same image. ImageSharp allows parameterizing the encoding process:
-[`ImageEncoder`](xref:SixLabors.ImageSharp.Formats.ImageEncoder) implementations are stateless, lightweight **parametric** objects. This means that if you want to encode a Png in a specific way (eg. changing the compression level), you need to new-up a custom [`PngEncoder`](xref:SixLabors.ImageSharp.Formats.Png.PngEncoder) instance.
+## General Decoder Options
 
-Choosing the right encoder parameters allows to balance between conflicting tradeoffs:
+Use [`DecoderOptions`](xref:SixLabors.ImageSharp.Formats.DecoderOptions) with the general [`Load()`](xref:SixLabors.ImageSharp.Image.Load*) APIs when you want to control metadata handling, frame limits, or decode-to-size behavior:
+
+```csharp
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.Formats;
+
+DecoderOptions options = new()
+{
+    MaxFrames = 1,
+    SkipMetadata = false,
+    TargetSize = new Size(1600, 1600)
+};
+
+using Image image = Image.Load(options, "input.webp");
+```
+
+Format-specific decoder option types also exist for specialized scenarios such as JPEG and PNG.
+
+## Common Encoder Families
+
+Several formats share useful option sets through common encoder base types:
+
+- [`ImageEncoder`](xref:SixLabors.ImageSharp.Formats.ImageEncoder) exposes [`SkipMetadata`](xref:SixLabors.ImageSharp.Formats.ImageEncoder.SkipMetadata).
+- [`AlphaAwareImageEncoder`](xref:SixLabors.ImageSharp.Formats.AlphaAwareImageEncoder) adds [`TransparentColorMode`](xref:SixLabors.ImageSharp.Formats.AlphaAwareImageEncoder.TransparentColorMode).
+- [`QuantizingImageEncoder`](xref:SixLabors.ImageSharp.Formats.QuantizingImageEncoder) adds [`Quantizer`](xref:SixLabors.ImageSharp.Formats.QuantizingImageEncoder.Quantizer) and [`PixelSamplingStrategy`](xref:SixLabors.ImageSharp.Formats.QuantizingImageEncoder.PixelSamplingStrategy).
+- [`AnimatedImageEncoder`](xref:SixLabors.ImageSharp.Formats.AnimatedImageEncoder) adds [`RepeatCount`](xref:SixLabors.ImageSharp.Formats.AnimatedImageEncoder.RepeatCount), [`BackgroundColor`](xref:SixLabors.ImageSharp.Formats.AnimatedImageEncoder.BackgroundColor), and [`AnimateRootFrame`](xref:SixLabors.ImageSharp.Formats.AnimatedImageEncoder.AnimateRootFrame).
+
+Those inherited options are especially useful when working with GIF, APNG, and animated WebP.
+For a format-agnostic guide to palettes and dithered output, see [Quantization, Palettes, and Dithering](quantization.md).
+
+## Format Guides
+
+Use the format-specific guides for the common cases and specialized workflows:
+
+- [JPEG](jpeg.md) for photographic output and quality-focused lossy compression.
+- [PNG](png.md) for lossless output, transparency, and APNG metadata.
+- [GIF](gif.md) for palette-based animation workflows.
+- [WebP](webp.md) for lossy, lossless, transparent, and animated WebP output.
+- [TIFF](tiff.md) for workflows where compression mode, pixel layout, and TIFF metadata matter.
+- [OpenEXR](exr.md) for HDR and higher-precision imaging workflows.
+
+The less commonly used built-in formats still have valid niches:
+
+- [BMP](bmp.md) is simple and broadly understood, but usually much larger than modern alternatives.
+- [ICO](ico.md) stores Windows icon files, often with one or more embedded icon images.
+- [CUR](cur.md) stores Windows cursor files and hotspot metadata.
+- [PBM](pbm.md) covers PBM/PGM/PPM-style Netpbm-family workflows and simple interchange scenarios.
+- [TGA](tga.md) appears most often in graphics and content-pipeline tooling.
+- [QOI](qoi.md) is a fast, simple lossless format with a much smaller ecosystem than PNG or WebP.
+
+## Custom Format Registration
+
+Format detectors, decoders, and encoders are registered through ImageSharp configuration. See [Configuration](configuration.md) if you need to customize the set of supported formats for your application.
+
+## Choosing the Right Encoder
+
+The right encoder settings depend on the tradeoff you want to make between:
 
 - Image file size
 - Encoder speed
 - Image quality
-  
-Each encoder offers options specific to the image format it represents.
+
+The format-specific pages below are the best place to start when you need to tune those tradeoffs.
+
+## Practical Guidance
+
+- Use explicit encoders when output behavior matters; file extensions are convenient but hide important defaults.
+- Inspect the source with `Identify(...)` before conversion when alpha, animation, bit depth, or metadata changes the output decision.
+- Treat metadata as part of format conversion: orientation, ICC profiles, animation timing, and comments may or may not survive a target format.
+- Register only the formats your application needs when you want a smaller or more controlled decoding surface.

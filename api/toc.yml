@@ -5,8 +5,10 @@
 - name: ImageSharp.Web
   href: ImageSharp.Web/SixLabors.ImageSharp.Web.yml
 - name: ImageSharp.Web.Providers.Azure
-  href: ImageSharp.Web.Providers.Azure/SixLabors.ImageSharp.Web.Providers.Azure.yml
+  href: ImageSharp.Web.Providers.Azure/SixLabors.ImageSharp.Web.Azure.Resolvers.yml
 - name: ImageSharp.Web.Providers.AWS
-  href: ImageSharp.Web.Providers.AWS/SixLabors.ImageSharp.Web.Providers.AWS.yml
+  href: ImageSharp.Web.Providers.AWS/SixLabors.ImageSharp.Web.AWS.yml
 - name: Fonts
   href: Fonts/SixLabors.Fonts.yml
+- name: PolygonClipper
+  href: PolygonClipper/SixLabors.PolygonClipper.yml
