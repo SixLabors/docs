@@ -46,14 +46,14 @@ paket add SixLabors.PolygonClipper --version VERSION_NUMBER
 
 ***
 
->[!WARNING]
->Prerelease versions installed via the [Visual Studio NuGet Package Manager](https://docs.microsoft.com/en-us/nuget/consume-packages/install-use-packages-visual-studio) require the "include prerelease" checkbox to be checked.
+Prerelease versions installed via the [Visual Studio NuGet Package Manager](https://docs.microsoft.com/en-us/nuget/consume-packages/install-use-packages-visual-studio) require the "include prerelease" checkbox to be checked.
 
 ### How to use the license file
 
 By default, the build searches from each project directory for `sixlabors.lic`. Place the supplied file in the directory that contains the project file, or in a subdirectory below it. Use the file as supplied; it already contains the complete license string required by the build.
 
-Do not commit `sixlabors.lic` or a license key to public repositories such as open source projects. Use environment variables or repository secrets instead, and let contributors apply for their own independent keys at https://licensing.sixlabors.com/.
+>[!IMPORTANT]
+>Do not commit `sixlabors.lic` or a license key to public repositories such as open source projects. Use environment variables or repository secrets instead, and let contributors apply for their own independent keys at https://licensing.sixlabors.com/.
 
 If you want to keep the file somewhere else, including a repository root that sits above the project directory, set `SixLaborsLicenseFile` in your project file or a shared props file:
 
