@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>DefaultRasterizer </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="DefaultRasterizer ">
+      
+      
+      <link rel="icon" href="../../../../../../public/favicon.ico">
+      <link rel="stylesheet" href="../../../../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../../../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/SixLabors/ImageSharp.Drawing/blob/main/src/ImageSharp.Drawing/Processing/Backends/DEFAULT_RASTERIZER.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../../../../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../../../../index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 4000 1024" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" id="logo" class="svg replaced-svg">
+             <path d="M101.664 126.506c11.274-19.548 22.527-39.11 33.803-58.658-5.312-9.375-10.765-18.655-16.09-28.008-22.438-.233-44.867.187-67.3-.22-5.908 9.12-10.942 18.802-16.49 28.161 5.734 9.697 11.157 19.57 16.168 27.872 10.65.109 21.81.214 32.461-.085 4.4-8.459 9.244-16.711 13.993-24.926-5.826-.03-11.679-.096-17.499-.075-1.79 3.143-3.544 6.298-5.308 9.458-4.778.112-9.888.213-14.82.247-2.394-4.108-4.724-8.265-7.177-12.34 2.318-4.41 4.735-8.759 7.458-12.927 16.588.454 33.185-.082 49.779.29 2.27 4.192 4.706 8.28 7.104 12.396-6.08 10.413-20.621 35.18-25.183 42.946-16.675.211-35.01.363-49.625.492-8.383-14.434-16.639-28.942-25.035-43.37 8.173-14.447 16.721-28.677 24.738-43.207 22.591-.368 45.21.029 67.803-.223-2.98-5.157-5.97-10.367-8.861-15.384-24.482.03-46.52.039-67.814 0C22.739 28.23 11.133 48.177 0 67.335c11.717 20.361 24.039 41.742 34.001 59.188 22.553-.137 45.106-.023 67.663-.017z" fill="url(#_Linear1)" fill-rule="nonzero" transform="translate(12 11.996) scale(7.38187)"></path><path d="M1184.275 676.955v-48.5c5.5 5 12 9.5 20 13 7.5 4 16 7.5 24.5 10 8.5 3 17 5 25.5 6.5s16.5 2 24 2c25.5 0 44-4.5 56.5-14s18.5-23 18.5-40.5c0-9.5-2-17.5-6-24.5s-10-13.5-17-19.5c-7.5-5.5-16-11-26-16.5-10-5-21-10.5-32.5-16.5-12.5-6.5-23.5-12.5-34-19-11-6-20-13-28-21-7.5-7.5-14-16-18.5-26-4-9.5-6.5-21-6.5-34 0-16 3.5-30 10.5-41.5 7-12 16-21.5 27.5-29.5 11.5-7.5 24.5-13 39-17 14.5-3.5 29.5-5.5 44.5-5.5 34.5 0 60 4 75.5 12.5v46c-20.5-14-47-21.5-79.5-21.5-9 0-18 1-27 3s-17 5-24 9c-7 4.5-12.5 10-17 16.5s-6.5 15-6.5 24.5c0 9 1.5 16.5 5 23s8.5 12.5 15 18 14 10.5 23.5 15.5 20 10.5 32.5 16.5c12.5 6.5 24.5 13 35.5 19.5 11.5 7 21 14.5 29.5 23 8.5 8 15.5 17.5 20.5 27.5 4.5 10 7 21.5 7 34.5 0 17.5-3 32-10 44-6.5 12-16 21.5-27.5 29s-24.5 13-39.5 16.5c-15 3-30.5 5-47.5 5-5.5 0-12-.5-20.5-1.5-8-1-16.5-2-24.5-4-8.5-1.5-16.5-3.5-24.5-6-7.5-3-13.5-5.5-18-8.5zM1466.404 340.955h41v350h-41zM1840.954 690.955h-50l-80.5-134c-2.5-4-5-10-8-17.5h-1c-1.5 4-4.5 9.5-8.5 17.5l-83 134h-50l117-176-108-174h50.5l71.5 123c4.5 8 9 16 12.5 24.5h1c5-11 9.5-19.5 13.5-25.5l74.5-122h47l-110 173.5 111.5 176.5zM2212.844 690.955h-181.5v-350h41v313h140.5v37zM2552.344 690.955h-45.5l-37-98h-148.5l-35 98h-45.5l134-350h42.5l135 350zm-96-135l-55-149c-2-5-3.5-13-5.5-23.5h-1c-1.5 10-3.5 17.5-5.5 23.5l-54.5 149h121.5zM2603.854 690.955v-350h99.5c30.5 0 54.5 7.5 72 22 18 15 26.5 34 26.5 58 0 20-5 37-16 51.5-10.5 15-25.5 25.5-44.5 31.5v1c23.5 2.5 42.5 11.5 56.5 26.5 14.5 15.5 21.5 35 21.5 59 0 30-11 54-32.5 72.5-21 18.5-48.5 28-81 28h-102zm41-313v113h42c22.5 0 40-5.5 53-16 12.5-11 19-26.5 19-46 0-34-22-51-67-51h-47zm0 150v126h55.5c24 0 43-6 56-17 13.5-11.5 20-27 20-47 0-41.5-28-62-84.5-62h-47zM3031.474 696.955c-49.5 0-89.5-16.5-119.5-49-29.5-33-44.5-75.5-44.5-128 0-56 15-101 45.5-134.5s72-50.5 124.5-50.5c48 0 87 16.5 116.5 49s44.5 75 44.5 127.5c0 57-15 102.5-45.5 135.5-30 33.5-70.5 50-121.5 50zm3-325c-37 0-66.5 13.5-89.5 40s-34.5 61.5-34.5 104.5 11 78 33.5 104c22.5 26.5 51.5 39.5 87.5 39.5 38.5 0 68.5-12.5 91-37.5 22-25 33-60 33-105.5 0-46-10.5-82-32-107s-51.5-38-89-38zM3518.424 690.955h-49l-58.5-98c-5.5-9.5-10.5-17-15.5-23.5s-10.5-11.5-15.5-15.5c-5.5-4.5-11-7-17.5-9-6-2-12.5-3-20.5-3h-33.5v149h-41v-350h104.5c15 0 29.5 2 42 5.5 13 4 24.5 10 34 17.5 9.5 8 17 17.5 22.5 29.5 5 11.5 8 25 8 40.5 0 12.5-2 23.5-5.5 33.5-4 10.5-9 19.5-16 27.5-6.5 8-14.5 14.5-24 20.5-9.5 5.5-20.5 10-32.5 13v1c6 2.5 11 5.5 15.5 9 4.5 3 8.5 7 12.5 11.5 3.5 4.5 7.5 10 11.5 15.5 3.5 6 8 12.5 12.5 20.5l66 105zm-210-313v127h55.5c10.5 0 20-1.5 28.5-4.5 8.5-3.5 16.5-7.5 22.5-13.5 6.5-6 11.5-13 15-21 3.5-8.5 5.5-18 5.5-28.5 0-18.5-6-33-18.5-43.5-12-10.5-29.5-16-52.5-16h-56zM3549.994 676.955v-48.5c5.5 5 12 9.5 20 13 7.5 4 16 7.5 24.5 10 8.5 3 17 5 25.5 6.5s16.5 2 24 2c25.5 0 44-4.5 56.5-14s18.5-23 18.5-40.5c0-9.5-2-17.5-6-24.5s-10-13.5-17-19.5c-7.5-5.5-16-11-26-16.5-10-5-21-10.5-32.5-16.5-12.5-6.5-23.5-12.5-34-19-11-6-20-13-28-21-7.5-7.5-14-16-18.5-26-4-9.5-6.5-21-6.5-34 0-16 3.5-30 10.5-41.5 7-12 16-21.5 27.5-29.5 11.5-7.5 24.5-13 39-17 14.5-3.5 29.5-5.5 44.5-5.5 34.5 0 60 4 75.5 12.5v46c-20.5-14-47-21.5-79.5-21.5-9 0-18 1-27 3s-17 5-24 9c-7 4.5-12.5 10-17 16.5s-6.5 15-6.5 24.5c0 9 1.5 16.5 5 23s8.5 12.5 15 18 14 10.5 23.5 15.5 20 10.5 32.5 16.5c12.5 6.5 24.5 13 35.5 19.5 11.5 7 21 14.5 29.5 23 8.5 8 15.5 17.5 20.5 27.5 4.5 10 7 21.5 7 34.5 0 17.5-3 32-10 44-6.5 12-16 21.5-27.5 29s-24.5 13-39.5 16.5c-15 3-30.5 5-47.5 5-5.5 0-12-.5-20.5-1.5-8-1-16.5-2-24.5-4-8.5-1.5-16.5-3.5-24.5-6-7.5-3-13.5-5.5-18-8.5z" fill-rule="nonzero"></path><defs><lineargradient id="_Linear1" x1="0" y1="0" x2="1" y2="0" gradientunits="userSpaceOnUse" gradienttransform="rotate(-44.975 163.14 67.262) scale(190.278)"><stop offset="0" stop-color="#9f1923"></stop><stop offset="1" stop-color="#e30183"></stop></lineargradient></defs>
+             </svg>
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="defaultrasterizer">DefaultRasterizer</h1>
+
+<p><code>DefaultRasterizer</code> is the CPU polygon scanner used by the retained fill path in ImageSharp.Drawing. Its job is narrow but central: take already-prepared geometry, convert that geometry into fixed-point edge contributions, and emit coverage rows that the CPU backend can turn into pixels.</p>
+<p>This rasterizer is based on ideas and implementation techniques from the Blaze project:</p>
+<ul>
+<li><a href="https://github.com/aurimasg/blaze">https://github.com/aurimasg/blaze</a></li>
+</ul>
+<p>This document explains the rasterizer as a newcomer needs to understand it:</p>
+<ul>
+<li>where the rasterizer fits relative to <code>DrawingCanvas</code> and <code>DefaultDrawingBackend</code></li>
+<li>what problem the rasterizer is solving inside the CPU backend</li>
+<li>why the rasterizer is split into retained geometry building and band execution</li>
+<li>what retained geometry, bands, and coverage mean in this architecture</li>
+<li>how scan conversion stays separate from brush shading and frame ownership</li>
+</ul>
+<h2 id="where-the-rasterizer-fits">Where The Rasterizer Fits</h2>
+<p><code>DefaultRasterizer</code> sits below <code>DrawingCanvas</code>, the typed canvas implementation, and <code>DefaultDrawingBackend</code>.</p>
+<p>The canvas records commands, the batcher prepares them into <code>DrawingCommandBatch</code> ranges, and <code>DefaultDrawingBackend</code> chooses the row-oriented execution plan for each retained CPU scene. <code>DefaultRasterizer</code> then handles the narrower geometry-to-coverage problem inside that CPU execution path.</p>
+<p>That means the rasterizer does not select the backend, own the destination frame, or interpret the public drawing API directly. It receives already-prepared geometry through the CPU backend pipeline, and the backend later routes its coverage into whichever frame exposes the CPU region for the flush.</p>
+<h2 id="the-main-problem">The Main Problem</h2>
+<p>The CPU backend does not want to rediscover shape geometry every time it touches a destination row.</p>
+<p>If row execution had to start from raw prepared paths every time, the backend would repeatedly need to:</p>
+<ul>
+<li>walk contours</li>
+<li>split segments against row-band boundaries</li>
+<li>compute left-of-band winding influence</li>
+<li>rebuild scan-conversion state for the same shape over and over</li>
+</ul>
+<p>That would push expensive geometry work into the hottest part of CPU rendering.</p>
+<p>So the rasterizer solves a different problem:</p>
+<p>it builds retained rasterizable geometry once, then executes compact band-local scanning work many times, cheaply.</p>
+<p>That two-phase design is the core idea behind <code>DefaultRasterizer</code>.</p>
+<h2 id="the-core-idea">The Core Idea</h2>
+<p>The rasterizer is a retained fixed-point polygon scanner.</p>
+<p>Its central idea is:</p>
+<blockquote>
+<p>build band-local retained line data once, then execute fixed-point scan conversion from that retained data</p>
+</blockquote>
+<p>This is why the rasterizer has two very different modes of work:</p>
+<ol>
+<li>retained geometry building</li>
+<li>band execution</li>
+</ol>
+<p>The first phase is a preparation phase. The second is the hot execution phase.</p>
+<p>If that distinction is clear, the code becomes much easier to follow.</p>
+<h2 id="the-most-important-terms">The Most Important Terms</h2>
+<h3 id="rasterizer">Rasterizer</h3>
+<p><code>DefaultRasterizer</code> is the geometry-to-coverage engine.</p>
+<p>It is responsible for:</p>
+<ul>
+<li>converting prepared geometry into retained scan-conversion data</li>
+<li>rasterizing retained band data with fixed-point arithmetic</li>
+<li>emitting coverage rows</li>
+</ul>
+<p>It is not responsible for:</p>
+<ul>
+<li>brush color generation</li>
+<li>destination frame ownership</li>
+<li>layer composition</li>
+<li>deciding which scene items should execute</li>
+</ul>
+<p>Those problems belong to the CPU backend and <code>FlushScene</code>.</p>
+<h3 id="retained-geometry">Retained Geometry</h3>
+<p>Retained geometry is the rasterizer's prepared execution payload.</p>
+<p>In this codebase, retained geometry means:</p>
+<p>&quot;the fixed-point, band-local line data and start-cover seeds needed to rasterize one prepared shape later without revisiting its original contour data&quot;</p>
+<p>That retained form is stored in <code>RasterizableGeometry</code>.</p>
+<h3 id="band">Band</h3>
+<p>A band is one small vertical slice of a shape's retained geometry.</p>
+<p>The rasterizer does not keep one giant scene-wide edge table. It stores data in row bands so execution can stay local and bounded.</p>
+<h3 id="rasterizable-geometry">Rasterizable Geometry</h3>
+<p><code>RasterizableGeometry</code> is the retained representation of one prepared shape.</p>
+<p>It stores:</p>
+<ul>
+<li>clipped local bounds</li>
+<li>band-local metadata</li>
+<li>retained line arrays</li>
+<li>optional start-cover seeds for bands that need carry-in winding</li>
+</ul>
+<p>This is the retained object that the CPU backend keeps in <code>FlushScene</code>.</p>
+<h3 id="rasterizable-band">Rasterizable Band</h3>
+<p>A <code>RasterizableBand</code> is the execution-time view over one retained band of one retained shape.</p>
+<p>It is the immediate input to <code>ExecuteRasterizableBand(...)</code>.</p>
+<h3 id="context">Context</h3>
+<p><code>DefaultRasterizer.Context</code> is the mutable fixed-point scanning state used during band execution.</p>
+<p>It is a <code>ref struct</code> because it is tied directly to worker-owned scratch spans and should not escape the execution scope.</p>
+<h3 id="coverage">Coverage</h3>
+<p>Coverage is the rasterizer's output.</p>
+<p>The rasterizer does not decide final pixel colors. It decides how much geometric coverage each pixel receives. The backend later passes that coverage to a <code>BrushRenderer&lt;TPixel&gt;</code>, which decides how the destination pixels should be shaded.</p>
+<h2 id="pipeline-placement">Pipeline Placement</h2>
+<p>The rasterizer sits in the middle of the CPU backend pipeline.</p>
+<p>Upstream:</p>
+<ul>
+<li><code>CompositionCommand</code> preparation produces prepared geometry</li>
+<li>the typed canvas implementation and <code>DrawingCanvasBatcher&lt;TPixel&gt;</code> have already selected and called the CPU backend</li>
+<li><code>FlushScene</code> decides which items are visible and when they execute</li>
+</ul>
+<p>Downstream:</p>
+<ul>
+<li>the rasterizer emits row coverage</li>
+<li><code>DefaultDrawingBackend</code> routes that coverage into <code>BrushRenderer&lt;TPixel&gt;.Apply(...)</code></li>
+</ul>
+<pre><code class="lang-mermaid">flowchart TD
+    A[Prepared geometry] --&gt; B[DefaultRasterizer.CreateRasterizableGeometry]
+    B --&gt; C[RasterizableGeometry]
+    C --&gt; D[Build RasterizableBand view]
+    D --&gt; E[ExecuteRasterizableBand]
+    E --&gt; F[Coverage rows]
+    F --&gt; G[Brush renderer]
+</code></pre>
+<p>That placement is important. The rasterizer is neither the public drawing model nor the final shading model. It is the geometry-to-coverage step between them.</p>
+<h2 id="why-the-rasterizer-has-two-phases">Why The Rasterizer Has Two Phases</h2>
+<p>The rasterizer separates:</p>
+<ol>
+<li>building retained geometry</li>
+<li>executing retained geometry</li>
+</ol>
+<h3 id="phase-1-retained-geometry-building">Phase 1: retained geometry building</h3>
+<p><code>CreateRasterizableGeometry(...)</code> converts prepared geometry into a retained representation that is cheap to execute later.</p>
+<p>This phase:</p>
+<ul>
+<li>walks prepared contours</li>
+<li>converts coordinates into fixed-point</li>
+<li>clips or splits segments as needed for band boundaries</li>
+<li>records visible line pieces into retained line storage</li>
+<li>records left-of-band winding influence into start-cover tables</li>
+</ul>
+<p>The output is <code>RasterizableGeometry</code>.</p>
+<h3 id="phase-2-band-execution">Phase 2: band execution</h3>
+<p><code>ExecuteRasterizableBand(...)</code> is the hot execution entry point.</p>
+<p>It does not revisit the original contour data. It receives a <code>RasterizableBand</code> view over retained data and performs the minimum work needed to emit coverage rows for that band.</p>
+<pre><code class="lang-mermaid">sequenceDiagram
+    participant Exec as ExecuteRasterizableBand
+    participant Ctx as Context
+    participant Emit as Coverage Row Handler
+
+    Exec-&gt;&gt;Ctx: Reconfigure(...)
+    Exec-&gt;&gt;Ctx: SeedStartCovers(...)
+    Exec-&gt;&gt;Ctx: Rasterize retained lines
+    Exec-&gt;&gt;Ctx: EmitCoverageRows(...)
+    Ctx--&gt;&gt;Emit: coverage rows
+    Exec-&gt;&gt;Ctx: ResetTouchedRows()
+</code></pre>
+<p>That separation is one of the key reasons the retained fill path performs well. Expensive geometry work happens once; execution consumes compact band-local data.</p>
+<h2 id="fixed-point-precision">Fixed-Point Precision</h2>
+<p>The rasterizer works in 24.8 fixed-point coordinates.</p>
+<p>That means:</p>
+<ul>
+<li><code>1</code> pixel = <code>256</code> fixed-point units</li>
+<li><code>FixedShift = 8</code></li>
+<li><code>FixedOne = 256</code></li>
+</ul>
+<p>This gives the scanner subpixel precision while keeping the hot execution path integer-based. Geometry may begin as floating-point path data, but once a retained line reaches the scan-conversion core it is treated as fixed-point state.</p>
+<p>Coverage is converted back into normalized <code>float</code> values only at the emission boundary.</p>
+<h2 id="why-bands-exist">Why Bands Exist</h2>
+<p>The rasterizer does not retain one monolithic edge table. It retains geometry in vertical row bands.</p>
+<p>That matters because it keeps execution local and bounded.</p>
+<p>When a segment crosses multiple bands, the linearizer splits it so each band receives only the portion it must scan. If a segment influences winding inside the visible band from the left side, that influence is folded into a start-cover seed rather than keeping an invisible off-screen line around forever.</p>
+<p>This gives the backend several important properties:</p>
+<ul>
+<li>execution only touches the band it is currently composing</li>
+<li>left-of-band winding can be precomputed</li>
+<li>scratch requirements stay bounded</li>
+<li>row-oriented execution consumes compact band-local payloads</li>
+</ul>
+<pre><code class="lang-mermaid">flowchart TD
+    A[Contour segment] --&gt; B{Touches one band?}
+    B -- Yes --&gt; C[Store visible line in that band]
+    B -- No --&gt; D[Split across band boundaries]
+    D --&gt; E[Store band-local visible pieces]
+    D --&gt; F[Accumulate start-cover seeds where needed]
+</code></pre>
+<h2 id="retained-geometry-what-gets-stored">Retained Geometry: What Gets Stored</h2>
+<p><code>RasterizableGeometry</code> stores the retained data needed to rasterize a prepared shape later.</p>
+<p>That includes:</p>
+<ul>
+<li>the local bounds of the prepared shape</li>
+<li>band count and band-local metadata</li>
+<li>retained line arrays for each band</li>
+<li>optional start-cover arrays for bands that need carry-in winding</li>
+</ul>
+<p>The retained line arrays use specialized storage formats such as:</p>
+<ul>
+<li><code>LineArrayX16Y16</code></li>
+<li><code>LineArrayX32Y16</code></li>
+</ul>
+<p>These are storage-oriented types. They exist to retain compact fixed-point line segments so execution does not need to revisit contour data.</p>
+<h2 id="the-linearizer">The Linearizer</h2>
+<p>The linearizer is the retained-geometry builder. It is generic over line-array storage, but the conceptual work is the same across variants.</p>
+<p>Its responsibilities are:</p>
+<ul>
+<li>traverse prepared contours</li>
+<li>apply the residual transform per-point as contours are read</li>
+<li>clip work to retained bounds</li>
+<li>convert coordinates into fixed-point</li>
+<li>decide whether a segment is contained or must be split</li>
+<li>store visible line pieces</li>
+<li>accumulate start covers for left-of-band influence</li>
+</ul>
+<p>For a newcomer, the most important thing to understand is that the linearizer is not the hot coverage emitter. It is the preparation step that turns arbitrary contour geometry into a stable retained scanning payload.</p>
+<h3 id="residual-transform-application">Residual transform application</h3>
+<p>The prepared <code>LinearGeometry</code> passed to <code>CreateRasterizableGeometry(...)</code> carries scale-baked points — the effective X/Y scale of the drawing matrix has already been absorbed into the flattened contour, so curve subdivision happens at device-scale precision. The remaining rotation, shear, translation, and perspective is handed to the rasterizer as a separate <code>Matrix4x4 residual</code>, which the linearizer applies per-point where the contour is read: at segment emission time in <code>ProcessContained</code> / <code>ProcessUncontained</code> for fills, and at bounds / closure / contour-segment construction sites in the stroke linearizer.</p>
+<p>This split keeps the scale-baked geometry cacheable across frames (text and panning workloads reuse the same bake at a fixed zoom) while letting per-frame rotation or translation ride through the rasterizer without re-subdividing curves.</p>
+<h3 id="contained-lines">Contained lines</h3>
+<p>A contained line is one whose fixed-point endpoints already fit the assumptions of the current retained band representation. Those lines can be pushed directly into retained storage after the required fixed-point and band-boundary handling.</p>
+<h3 id="split-lines">Split lines</h3>
+<p>When a line crosses band boundaries, the linearizer splits it so each band receives only the contribution it needs to scan.</p>
+<h3 id="start-cover-seeding">Start-cover seeding</h3>
+<p>When a line contributes winding inside the visible band but lies partially to the left of the visible X range, the retained geometry stores that influence in a start-cover array instead of retaining an off-screen line.</p>
+<p>This is one of the most important ideas in the retained design:</p>
+<ul>
+<li>visible geometry becomes retained lines</li>
+<li>invisible left-of-band winding becomes retained start-cover seeds</li>
+</ul>
+<h2 id="the-execution-context">The Execution Context</h2>
+<p><code>DefaultRasterizer.Context</code> is the mutable fixed-point scanning state used during band execution.</p>
+<p>It owns per-band mutable state such as:</p>
+<ul>
+<li><code>bitVectors</code></li>
+<li><code>coverArea</code></li>
+<li><code>startCover</code></li>
+<li><code>rowMinTouchedColumn</code></li>
+<li><code>rowMaxTouchedColumn</code></li>
+<li><code>rowHasBits</code></li>
+<li><code>rowTouched</code></li>
+<li><code>touchedRows</code></li>
+</ul>
+<p>This state is reused across bands by reconfiguration, not by reallocation.</p>
+<pre><code class="lang-mermaid">flowchart LR
+    A[WorkerScratch] --&gt; B[Context]
+    B --&gt; C[Rasterize retained lines]
+    C --&gt; D[Mutate coverArea and bit vectors]
+    D --&gt; E[Emit coverage rows]
+    E --&gt; F[Reset touched rows]
+</code></pre>
+<p>The <code>Context</code> bridges retained geometry and emitted coverage.</p>
+<h2 id="how-coverage-accumulation-works">How Coverage Accumulation Works</h2>
+<p>The rasterizer uses the classic area-and-cover formulation.</p>
+<p>When a fixed-point line is rasterized, it is broken into cell contributions. Those contributions eventually reach <code>AddCell(...)</code>, which updates:</p>
+<ul>
+<li>delta cover</li>
+<li>delta area</li>
+</ul>
+<p>Rows also track sparse touched-column information through bit vectors, so the emitter can avoid scanning the full width of empty rows.</p>
+<pre><code class="lang-mermaid">flowchart TD
+    A[Rasterize fixed-point line] --&gt; B[Decompose into touched cells]
+    B --&gt; C[&quot;AddCell(row, column, deltaCover, deltaArea)&quot;]
+    C --&gt; D[Update coverArea]
+    C --&gt; E[Mark bitVectors]
+    C --&gt; F[Track touched rows and bounds]
+    C --&gt; G{column &lt; 0?}
+    G -- Yes --&gt; H[Fold into startCover]
+    G -- No --&gt; I[Keep visible cell contribution]
+</code></pre>
+<p>This is why the rasterizer can honor fill rules later. It accumulates signed contributions first and applies the fill rule during coverage emission.</p>
+<h2 id="coverage-emission">Coverage Emission</h2>
+<p><code>EmitCoverageRows(...)</code> converts the accumulated fixed-point state into row spans.</p>
+<p>For each touched row, the emitter:</p>
+<ol>
+<li>starts from the seeded <code>startCover</code></li>
+<li>walks the row's touched columns using the bit vectors</li>
+<li>updates the running cover from <code>deltaCover</code></li>
+<li>combines running cover and <code>deltaArea</code> into signed area</li>
+<li>converts signed area into normalized coverage using the selected fill rule</li>
+<li>coalesces equal-coverage spans</li>
+<li>writes only non-zero spans into the reusable scanline buffer</li>
+<li>invokes the row callback</li>
+</ol>
+<pre><code class="lang-mermaid">flowchart LR
+    A[Touched row] --&gt; B[Walk set bits]
+    B --&gt; C[Reconstruct cover and area]
+    C --&gt; D[Apply fill rule]
+    D --&gt; E[Coalesce equal coverage]
+    E --&gt; F[Write compact scanline spans]
+    F --&gt; G[Invoke row handler]
+</code></pre>
+<p>The rasterizer therefore emits only rows that actually received contributions and only the non-zero spans within those rows.</p>
+<h2 id="fill-rules">Fill Rules</h2>
+<p>The rasterizer supports both <code>NonZero</code> and <code>EvenOdd</code>.</p>
+<h3 id="nonzero">NonZero</h3>
+<p>The accumulated signed area is treated as winding magnitude. Coverage is the clamped absolute value of that area.</p>
+<h3 id="evenodd">EvenOdd</h3>
+<p>The accumulated area is wrapped into the even-odd domain before coverage is produced. This gives parity-based behavior without changing the earlier scan-conversion logic.</p>
+<p>The fill rule is therefore an emission-time decision, not a geometry-preprocessing decision.</p>
+<h2 id="antialiased-and-aliased-modes">Antialiased And Aliased Modes</h2>
+<p>The rasterizer can emit either continuous or thresholded coverage.</p>
+<ul>
+<li><code>Antialiased</code> mode keeps the continuous coverage produced by the area-and-cover math</li>
+<li><code>Aliased</code> mode thresholds that continuous coverage using <code>AntialiasThreshold</code></li>
+</ul>
+<p>The scan-conversion core stays the same in both modes. Only the final conversion from area to emitted coverage changes.</p>
+<h2 id="why-self-intersections-work">Why Self-Intersections Work</h2>
+<p>The rasterizer can handle self-intersections because it does not require geometric boolean normalization before rasterization. It accumulates signed contributions and then applies the selected fill rule during emission.</p>
+<p>That means overlapping or self-crossing contours are resolved by:</p>
+<ul>
+<li>area-and-cover integration</li>
+<li>winding or parity mapping</li>
+</ul>
+<p>instead of by an earlier polygon-boolean pass.</p>
+<h2 id="how-the-rasterizer-stays-separate-from-the-backend">How The Rasterizer Stays Separate From The Backend</h2>
+<p>The rasterizer and the backend solve different problems.</p>
+<p>The rasterizer decides:</p>
+<ul>
+<li>how geometry contributes coverage</li>
+<li>which rows and columns within a band are touched</li>
+<li>how much coverage each emitted span has</li>
+</ul>
+<p>The backend decides:</p>
+<ul>
+<li>which scene items execute</li>
+<li>which retained band is being scanned</li>
+<li>which destination slice receives the coverage</li>
+<li>which brush renderer consumes the emitted spans</li>
+</ul>
+<p>That separation is one of the main architectural advantages of the current CPU path.</p>
+<h2 id="reading-guide">Reading Guide</h2>
+<p>If you are new to this part of the library, read the rasterizer in this order:</p>
+<ol>
+<li><code>DrawingCanvas.cs</code></li>
+<li><code>DrawingCanvas{TPixel}.cs</code></li>
+<li><code>DrawingCanvasBatcher{TPixel}.cs</code></li>
+<li><code>DefaultDrawingBackend.cs</code></li>
+<li><code>FlushScene.cs</code></li>
+<li><code>CreateRasterizableGeometry(...)</code> in <code>DefaultRasterizer.cs</code></li>
+<li><code>Linearizer&lt;TL&gt;</code> and the concrete linearizers in <code>DefaultRasterizer.Linearizer.cs</code></li>
+<li>retained line types in <code>DefaultRasterizer.RetainedTypes.cs</code></li>
+<li><code>ExecuteRasterizableBand(...)</code> in <code>DefaultRasterizer.cs</code></li>
+<li><code>Context</code> in <code>DefaultRasterizer.cs</code></li>
+</ol>
+<p>That order mirrors the data lifecycle:</p>
+<p>canvas intent -&gt; prepared geometry -&gt; retained storage -&gt; band execution -&gt; coverage emission</p>
+<h2 id="the-mental-model-to-keep">The Mental Model To Keep</h2>
+<p>The easiest way to reason about <code>DefaultRasterizer</code> is this:</p>
+<p>it is a retained fixed-point polygon scanner that transforms prepared geometry into compact band-local line payloads, then turns those payloads into row coverage spans.</p>
+<p>If that model stays clear, the rest of the code becomes easier to read:</p>
+<ul>
+<li>the canvas and backend docs explain how execution reaches the CPU path</li>
+<li>the linearizer explains where retained line data comes from</li>
+<li><code>RasterizableGeometry</code> explains what is stored</li>
+<li>the <code>Context</code> explains how retained data becomes coverage</li>
+<li>the backend explains how coverage becomes pixels</li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/main/src/ImageSharp.Drawing/Processing/Backends/DEFAULT_RASTERIZER.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

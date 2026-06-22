@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Enum IccProfileTag </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Enum IccProfileTag ">
+      
+      <meta name="description" content="Enumerates the ICC Profile Tags as defined in ICC.1:2010 version 4.3.0.0 http://www.color.org/specification/ICC1v43_2010-12.pdf Section 9  Each tag value represent the size of the tag in the profile.">
+      <link rel="icon" href="../../public/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/SixLabors/ImageSharp/new/main/apiSpec/new?filename=SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag.md&amp;value=---%0Auid%3A%20SixLabors.ImageSharp.Metadata.Profiles.Icc.IccProfileTag%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 4000 1024" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" id="logo" class="svg replaced-svg">
+             <path d="M101.664 126.506c11.274-19.548 22.527-39.11 33.803-58.658-5.312-9.375-10.765-18.655-16.09-28.008-22.438-.233-44.867.187-67.3-.22-5.908 9.12-10.942 18.802-16.49 28.161 5.734 9.697 11.157 19.57 16.168 27.872 10.65.109 21.81.214 32.461-.085 4.4-8.459 9.244-16.711 13.993-24.926-5.826-.03-11.679-.096-17.499-.075-1.79 3.143-3.544 6.298-5.308 9.458-4.778.112-9.888.213-14.82.247-2.394-4.108-4.724-8.265-7.177-12.34 2.318-4.41 4.735-8.759 7.458-12.927 16.588.454 33.185-.082 49.779.29 2.27 4.192 4.706 8.28 7.104 12.396-6.08 10.413-20.621 35.18-25.183 42.946-16.675.211-35.01.363-49.625.492-8.383-14.434-16.639-28.942-25.035-43.37 8.173-14.447 16.721-28.677 24.738-43.207 22.591-.368 45.21.029 67.803-.223-2.98-5.157-5.97-10.367-8.861-15.384-24.482.03-46.52.039-67.814 0C22.739 28.23 11.133 48.177 0 67.335c11.717 20.361 24.039 41.742 34.001 59.188 22.553-.137 45.106-.023 67.663-.017z" fill="url(#_Linear1)" fill-rule="nonzero" transform="translate(12 11.996) scale(7.38187)"></path><path d="M1184.275 676.955v-48.5c5.5 5 12 9.5 20 13 7.5 4 16 7.5 24.5 10 8.5 3 17 5 25.5 6.5s16.5 2 24 2c25.5 0 44-4.5 56.5-14s18.5-23 18.5-40.5c0-9.5-2-17.5-6-24.5s-10-13.5-17-19.5c-7.5-5.5-16-11-26-16.5-10-5-21-10.5-32.5-16.5-12.5-6.5-23.5-12.5-34-19-11-6-20-13-28-21-7.5-7.5-14-16-18.5-26-4-9.5-6.5-21-6.5-34 0-16 3.5-30 10.5-41.5 7-12 16-21.5 27.5-29.5 11.5-7.5 24.5-13 39-17 14.5-3.5 29.5-5.5 44.5-5.5 34.5 0 60 4 75.5 12.5v46c-20.5-14-47-21.5-79.5-21.5-9 0-18 1-27 3s-17 5-24 9c-7 4.5-12.5 10-17 16.5s-6.5 15-6.5 24.5c0 9 1.5 16.5 5 23s8.5 12.5 15 18 14 10.5 23.5 15.5 20 10.5 32.5 16.5c12.5 6.5 24.5 13 35.5 19.5 11.5 7 21 14.5 29.5 23 8.5 8 15.5 17.5 20.5 27.5 4.5 10 7 21.5 7 34.5 0 17.5-3 32-10 44-6.5 12-16 21.5-27.5 29s-24.5 13-39.5 16.5c-15 3-30.5 5-47.5 5-5.5 0-12-.5-20.5-1.5-8-1-16.5-2-24.5-4-8.5-1.5-16.5-3.5-24.5-6-7.5-3-13.5-5.5-18-8.5zM1466.404 340.955h41v350h-41zM1840.954 690.955h-50l-80.5-134c-2.5-4-5-10-8-17.5h-1c-1.5 4-4.5 9.5-8.5 17.5l-83 134h-50l117-176-108-174h50.5l71.5 123c4.5 8 9 16 12.5 24.5h1c5-11 9.5-19.5 13.5-25.5l74.5-122h47l-110 173.5 111.5 176.5zM2212.844 690.955h-181.5v-350h41v313h140.5v37zM2552.344 690.955h-45.5l-37-98h-148.5l-35 98h-45.5l134-350h42.5l135 350zm-96-135l-55-149c-2-5-3.5-13-5.5-23.5h-1c-1.5 10-3.5 17.5-5.5 23.5l-54.5 149h121.5zM2603.854 690.955v-350h99.5c30.5 0 54.5 7.5 72 22 18 15 26.5 34 26.5 58 0 20-5 37-16 51.5-10.5 15-25.5 25.5-44.5 31.5v1c23.5 2.5 42.5 11.5 56.5 26.5 14.5 15.5 21.5 35 21.5 59 0 30-11 54-32.5 72.5-21 18.5-48.5 28-81 28h-102zm41-313v113h42c22.5 0 40-5.5 53-16 12.5-11 19-26.5 19-46 0-34-22-51-67-51h-47zm0 150v126h55.5c24 0 43-6 56-17 13.5-11.5 20-27 20-47 0-41.5-28-62-84.5-62h-47zM3031.474 696.955c-49.5 0-89.5-16.5-119.5-49-29.5-33-44.5-75.5-44.5-128 0-56 15-101 45.5-134.5s72-50.5 124.5-50.5c48 0 87 16.5 116.5 49s44.5 75 44.5 127.5c0 57-15 102.5-45.5 135.5-30 33.5-70.5 50-121.5 50zm3-325c-37 0-66.5 13.5-89.5 40s-34.5 61.5-34.5 104.5 11 78 33.5 104c22.5 26.5 51.5 39.5 87.5 39.5 38.5 0 68.5-12.5 91-37.5 22-25 33-60 33-105.5 0-46-10.5-82-32-107s-51.5-38-89-38zM3518.424 690.955h-49l-58.5-98c-5.5-9.5-10.5-17-15.5-23.5s-10.5-11.5-15.5-15.5c-5.5-4.5-11-7-17.5-9-6-2-12.5-3-20.5-3h-33.5v149h-41v-350h104.5c15 0 29.5 2 42 5.5 13 4 24.5 10 34 17.5 9.5 8 17 17.5 22.5 29.5 5 11.5 8 25 8 40.5 0 12.5-2 23.5-5.5 33.5-4 10.5-9 19.5-16 27.5-6.5 8-14.5 14.5-24 20.5-9.5 5.5-20.5 10-32.5 13v1c6 2.5 11 5.5 15.5 9 4.5 3 8.5 7 12.5 11.5 3.5 4.5 7.5 10 11.5 15.5 3.5 6 8 12.5 12.5 20.5l66 105zm-210-313v127h55.5c10.5 0 20-1.5 28.5-4.5 8.5-3.5 16.5-7.5 22.5-13.5 6.5-6 11.5-13 15-21 3.5-8.5 5.5-18 5.5-28.5 0-18.5-6-33-18.5-43.5-12-10.5-29.5-16-52.5-16h-56zM3549.994 676.955v-48.5c5.5 5 12 9.5 20 13 7.5 4 16 7.5 24.5 10 8.5 3 17 5 25.5 6.5s16.5 2 24 2c25.5 0 44-4.5 56.5-14s18.5-23 18.5-40.5c0-9.5-2-17.5-6-24.5s-10-13.5-17-19.5c-7.5-5.5-16-11-26-16.5-10-5-21-10.5-32.5-16.5-12.5-6.5-23.5-12.5-34-19-11-6-20-13-28-21-7.5-7.5-14-16-18.5-26-4-9.5-6.5-21-6.5-34 0-16 3.5-30 10.5-41.5 7-12 16-21.5 27.5-29.5 11.5-7.5 24.5-13 39-17 14.5-3.5 29.5-5.5 44.5-5.5 34.5 0 60 4 75.5 12.5v46c-20.5-14-47-21.5-79.5-21.5-9 0-18 1-27 3s-17 5-24 9c-7 4.5-12.5 10-17 16.5s-6.5 15-6.5 24.5c0 9 1.5 16.5 5 23s8.5 12.5 15 18 14 10.5 23.5 15.5 20 10.5 32.5 16.5c12.5 6.5 24.5 13 35.5 19.5 11.5 7 21 14.5 29.5 23 8.5 8 15.5 17.5 20.5 27.5 4.5 10 7 21.5 7 34.5 0 17.5-3 32-10 44-6.5 12-16 21.5-27.5 29s-24.5 13-39.5 16.5c-15 3-30.5 5-47.5 5-5.5 0-12-.5-20.5-1.5-8-1-16.5-2-24.5-4-8.5-1.5-16.5-3.5-24.5-6-7.5-3-13.5-5.5-18-8.5z" fill-rule="nonzero"></path><defs><lineargradient id="_Linear1" x1="0" y1="0" x2="1" y2="0" gradientunits="userSpaceOnUse" gradienttransform="rotate(-44.975 163.14 67.262) scale(190.278)"><stop offset="0" stop-color="#9f1923"></stop><stop offset="1" stop-color="#e30183"></stop></lineargradient></defs>
+             </svg>
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="SixLabors.ImageSharp.Metadata.Profiles.Icc.IccProfileTag">
+
+
+
+
+  <h1 id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag" data-uid="SixLabors.ImageSharp.Metadata.Profiles.Icc.IccProfileTag" class="text-break">
+Enum IccProfileTag  <a class="header-action link-secondary" title="View source" href="https://github.com/SixLabors/ImageSharp/blob/main/src/ImageSharp/Metadata/Profiles/ICC/Enums/IccProfileTag.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="SixLabors.html">SixLabors</a>.<a class="xref" href="SixLabors.ImageSharp.html">ImageSharp</a>.<a class="xref" href="SixLabors.ImageSharp.Metadata.html">Metadata</a>.<a class="xref" href="SixLabors.ImageSharp.Metadata.Profiles.html">Profiles</a>.<a class="xref" href="SixLabors.ImageSharp.Metadata.Profiles.Icc.html">Icc</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>SixLabors.ImageSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Enumerates the ICC Profile Tags as defined in ICC.1:2010 version 4.3.0.0
+<a href="http://www.color.org/specification/ICC1v43_2010-12.pdf">http://www.color.org/specification/ICC1v43_2010-12.pdf</a> Section 9
+<remarks>
+Each tag value represent the size of the tag in the profile.
+</remarks></p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public enum IccProfileTag : uint</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h2 id="fields">Fields
+</h2>
+  <dl class="parameters">
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_AToB0"><code>AToB0 = 1093812784</code></dt>
+  
+  <dd><p>A2B0 - This tag defines a color transform from Device, Color Encoding or PCS, to PCS, or a color transform
+from Device 1 to Device 2, using lookup table tag element structures</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_AToB1"><code>AToB1 = 1093812785</code></dt>
+  
+  <dd><p>A2B2 - This tag describes the color transform from Device or Color Encoding to PCS using lookup table tag element structures</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_AToB2"><code>AToB2 = 1093812786</code></dt>
+  
+  <dd><p>A2B2 - This tag describes the color transform from Device or Color Encoding to PCS using lookup table tag element structures</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_BToA0"><code>BToA0 = 1110589744</code></dt>
+  
+  <dd><p>B2A0 - This tag defines a color transform from PCS to Device or Color Encoding using the lookup table tag element structures</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_BToA1"><code>BToA1 = 1110589745</code></dt>
+  
+  <dd><p>B2A1 - This tag defines a color transform from PCS to Device or Color Encoding using the lookup table tag element structures.</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_BToA2"><code>BToA2 = 1110589746</code></dt>
+  
+  <dd><p>B2A2 - This tag defines a color transform from PCS to Device or Color Encoding using the lookup table tag element structures.</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_BToD0"><code>BToD0 = 1110590512</code></dt>
+  
+  <dd><p>B2D0 - This tag defines a color transform from PCS to Device. It supports float32Number-encoded input range, output range and transform, and
+provides a means to override the BToA0 tag.</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_BToD1"><code>BToD1 = 1110590513</code></dt>
+  
+  <dd><p>B2D1 - This tag defines a color transform from PCS to Device. It supports float32Number-encoded input range, output range and transform, and
+provides a means to override the BToA1 tag.</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_BToD2"><code>BToD2 = 1110590514</code></dt>
+  
+  <dd><p>B2D2 - This tag defines a color transform from PCS to Device. It supports float32Number-encoded input range, output range and transform, and
+provides a means to override the BToA2 tag.</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_BToD3"><code>BToD3 = 1110590515</code></dt>
+  
+  <dd><p>B2D3 - This tag defines a color transform from PCS to Device. It supports float32Number-encoded input range, output range and transform, and
+provides a means to override the BToA1 tag.</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_BlueMatrixColumn"><code>BlueMatrixColumn = 1649957210</code></dt>
+  
+  <dd><p>bXYZ - This tag contains the third column in the matrix used in matrix/TRC transforms.</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_BlueTrc"><code>BlueTrc = 1649693251</code></dt>
+  
+  <dd><p>bTRC - This tag contains the blue channel tone reproduction curve. The first element represents no colorant (white) or
+phosphor (black) and the last element represents 100 % colorant (blue) or 100 % phosphor (blue).</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_CalibrationDateTime"><code>CalibrationDateTime = 1667329140</code></dt>
+  
+  <dd><p>calt - This tag contains the profile calibration date and time. This allows applications and utilities to verify if this profile matches a
+vendor's profile and how recently calibration has been performed.</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_CharTarget"><code>CharTarget = 1952543335</code></dt>
+  
+  <dd><p>targ - This tag contains the name of the registered characterization data set, or it contains the measurement
+data for a characterization target.</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_ChromaticAdaptation"><code>ChromaticAdaptation = 1667785060</code></dt>
+  
+  <dd><p>chad - This tag contains a matrix, which shall be invertible, and which converts an nCIEXYZ color, measured using the actual illumination
+conditions and relative to the actual adopted white, to an nCIEXYZ color relative to the PCS adopted white</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_Chromaticity"><code>Chromaticity = 1667789421</code></dt>
+  
+  <dd><p>chrm - This tag contains the type and the data of the phosphor/colorant chromaticity set used.</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_ColorantOrder"><code>ColorantOrder = 1668051567</code></dt>
+  
+  <dd><p>clro - This tag specifies the laydown order of colorants.</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_ColorantTable"><code>ColorantTable = 1668051572</code></dt>
+  
+  <dd><p>clrt</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_ColorantTableOut"><code>ColorantTableOut = 1668050804</code></dt>
+  
+  <dd><p>clot - This tag identifies the colorants used in the profile by a unique name and set of PCSXYZ or PCSLAB values.
+When used in DeviceLink profiles only the PCSLAB values shall be permitted.</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_ColorimetricIntentImageStat"><code>ColorimetricIntentImageStat = 1667852659</code></dt>
+  
+  <dd><p>ciis - This tag indicates the image state of PCS colorimetry produced using the colorimetric intent transforms.</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_Copyright"><code>Copyright = 1668313716</code></dt>
+  
+  <dd><p>cprt - This tag contains the text copyright information for the profile.</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_CrdInfo"><code>CrdInfo = 1668441193</code></dt>
+  
+  <dd><p>crdi  - Removed in V4</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_DToB0"><code>DToB0 = 1144144432</code></dt>
+  
+  <dd><p>D2B0 - This tag defines a color transform from Device to PCS. It supports float32Number-encoded
+input range, output range and transform, and provides a means to override the AToB0 tag</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_DToB1"><code>DToB1 = 1144144432</code></dt>
+  
+  <dd><p>D2B1 - This tag defines a color transform from Device to PCS. It supports float32Number-encoded
+input range, output range and transform, and provides a means to override the AToB1 tag</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_DToB2"><code>DToB2 = 1144144432</code></dt>
+  
+  <dd><p>D2B2 - This tag defines a color transform from Device to PCS. It supports float32Number-encoded
+input range, output range and transform, and provides a means to override the AToB1 tag</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_DToB3"><code>DToB3 = 1144144432</code></dt>
+  
+  <dd><p>D2B3 - This tag defines a color transform from Device to PCS. It supports float32Number-encoded
+input range, output range and transform, and provides a means to override the AToB1 tag</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_Data"><code>Data = 1684108385</code></dt>
+  
+  <dd><p>data - Removed in V4</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_DateTime"><code>DateTime = 1685350765</code></dt>
+  
+  <dd><p>dtim - Removed in V4</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_DeviceManufacturerDescription"><code>DeviceManufacturerDescription = 1684893284</code></dt>
+  
+  <dd><p>dmnd - This tag describes the structure containing invariant and localizable
+versions of the device manufacturer for display</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_DeviceModelDescription"><code>DeviceModelDescription = 1684890724</code></dt>
+  
+  <dd><p>dmdd - This tag describes the structure containing invariant and localizable
+versions of the device model for display.</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_DeviceSettings"><code>DeviceSettings = 1684371059</code></dt>
+  
+  <dd><p>devs - Removed in V4</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_Gamut"><code>Gamut = 1734438260</code></dt>
+  
+  <dd><p>gamt - This tag provides a table in which PCS values are the input and a single
+output value for each input value is the output. If the output value is 0, the PCS color is in-gamut.
+If the output is non-zero, the PCS color is out-of-gamut</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_GrayTrc"><code>GrayTrc = 1800688195</code></dt>
+  
+  <dd><p>kTRC - This tag contains the grey tone reproduction curve. The tone reproduction curve provides the necessary
+information to convert between a single device channel and the PCSXYZ or PCSLAB encoding.</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_GreenMatrixColumn"><code>GreenMatrixColumn = 1733843290</code></dt>
+  
+  <dd><p>gXYZ - This tag contains the second column in the matrix, which is used in matrix/TRC transforms.</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_GreenTrc"><code>GreenTrc = 1733579331</code></dt>
+  
+  <dd><p>gTRC - This tag contains the green channel tone reproduction curve. The first element represents no
+colorant (white) or phosphor (black) and the last element represents 100 % colorant (green) or 100 % phosphor (green).</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_Luminance"><code>Luminance = 1819635049</code></dt>
+  
+  <dd><p>lumi - This tag contains the absolute luminance of emissive devices in candelas per square meter as described by the Y channel.</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_Measurement"><code>Measurement = 1835360627</code></dt>
+  
+  <dd><p>meas - This tag describes the alternative measurement specification, such as a D65 illuminant instead of the default D50.</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_MediaBlackPoint"><code>MediaBlackPoint = 1651208308</code></dt>
+  
+  <dd><p>bkpt - Removed in V4</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_MediaWhitePoint"><code>MediaWhitePoint = 2004119668</code></dt>
+  
+  <dd><p>wtpt - This tag, which is used for generating the ICC-absolute colorimetric intent, specifies the chromatically
+adapted nCIEXYZ tristimulus values of the media white point.</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_NamedColor"><code>NamedColor = 1852010348</code></dt>
+  
+  <dd><p>ncol - OBSOLETE, use <a class="xref" href="SixLabors.ImageSharp.Metadata.Profiles.Icc.IccProfileTag.html#SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_NamedColor2">NamedColor2</a></p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_NamedColor2"><code>NamedColor2 = 1852009522</code></dt>
+  
+  <dd><p>ncl2 - This tag contains the named color information providing a PCS and optional device representation
+for a list of named colors.</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_OutputResponse"><code>OutputResponse = 1919251312</code></dt>
+  
+  <dd><p>resp - This tag describes the structure containing a description of the device response for which the profile is intended.</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_PerceptualRenderingIntentGamut"><code>PerceptualRenderingIntentGamut = 1919510320</code></dt>
+  
+  <dd><p>rig0 - There is only one standard reference medium gamut, as defined in ISO 12640-3</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_PostScript2Crd0"><code>PostScript2Crd0 = 1886610480</code></dt>
+  
+  <dd><p>psd0 - Removed in V4</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_PostScript2Crd1"><code>PostScript2Crd1 = 1886610481</code></dt>
+  
+  <dd><p>psd1 - Removed in V4</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_PostScript2Crd2"><code>PostScript2Crd2 = 1886610482</code></dt>
+  
+  <dd><p>psd2 - Removed in V4</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_PostScript2Crd3"><code>PostScript2Crd3 = 1886610483</code></dt>
+  
+  <dd><p>psd3 - Removed in V4</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_PostScript2Csa"><code>PostScript2Csa = 1886597747</code></dt>
+  
+  <dd><p>ps2s - Removed in V4</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_PostScript2RenderingIntent"><code>PostScript2RenderingIntent = 1886597737</code></dt>
+  
+  <dd><p>psd2i- Removed in V4</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_Preview0"><code>Preview0 = 1886545200</code></dt>
+  
+  <dd><p>pre0 - This tag contains the preview transformation from PCS to device space and back to the PCS.</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_Preview1"><code>Preview1 = 1886545201</code></dt>
+  
+  <dd><p>pre1 - This tag defines the preview transformation from PCS to device space and back to the PCS.</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_Preview2"><code>Preview2 = 1886545202</code></dt>
+  
+  <dd><p>pre2 - This tag contains the preview transformation from PCS to device space and back to the PCS.</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_ProfileDescription"><code>ProfileDescription = 1684370275</code></dt>
+  
+  <dd><p>desc - This tag describes the structure containing invariant and localizable versions of the profile
+description for display.</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_ProfileSequenceDescription"><code>ProfileSequenceDescription = 1886610801</code></dt>
+  
+  <dd><p>pseq - This tag describes the structure containing a description of the profile sequence from source to
+destination, typically used with the DeviceLink profile.</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_RedMatrixColumn"><code>RedMatrixColumn = 1918392666</code></dt>
+  
+  <dd><p>rXYZ - This tag contains the first column in the matrix, which is used in matrix/TRC transforms.</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_RedTrc"><code>RedTrc = 1918128707</code></dt>
+  
+  <dd><p>This tag contains the red channel tone reproduction curve. The first element represents no colorant
+(white) or phosphor (black) and the last element represents 100 % colorant (red) or 100 % phosphor (red).</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_SaturationRenderingIntentGamut"><code>SaturationRenderingIntentGamut = 1919510322</code></dt>
+  
+  <dd><p>rig2 - There is only one standard reference medium gamut, as defined in ISO 12640-3.</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_Screening"><code>Screening = 1935897198</code></dt>
+  
+  <dd><p>scrn - Removed in V4</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_ScreeningDescription"><code>ScreeningDescription = 1935897188</code></dt>
+  
+  <dd><p>scrd - Removed in V4</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_Technology"><code>Technology = 1952801640</code></dt>
+  
+  <dd><p>tech - The device technology signature</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_UcrBgSpecification"><code>UcrBgSpecification = 1650877472</code></dt>
+  
+  <dd><p>bfd - Removed in V4</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_Unknown"><code>Unknown = 0</code></dt>
+  
+  <dd><p>Unknown tag</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_ViewingCondDescription"><code>ViewingCondDescription = 1987405156</code></dt>
+  
+  <dd><p>vued - This tag describes the structure containing invariant and localizable
+versions of the viewing conditions.</p>
+</dd>
+    <dt id="SixLabors_ImageSharp_Metadata_Profiles_Icc_IccProfileTag_ViewingConditions"><code>ViewingConditions = 1986618743</code></dt>
+  
+  <dd><p>view - This tag defines the viewing conditions parameters</p>
+</dd>
+  </dl>
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/SixLabors/ImageSharp/blob/main/src/ImageSharp/Metadata/Profiles/ICC/Enums/IccProfileTag.cs/#L14" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

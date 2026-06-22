@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>DrawingCanvas </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="DrawingCanvas ">
+      
+      
+      <link rel="icon" href="../../../../../public/favicon.ico">
+      <link rel="stylesheet" href="../../../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/SixLabors/ImageSharp.Drawing/blob/main/src/ImageSharp.Drawing/Processing/DRAWING_CANVAS.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../../../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../../../index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 4000 1024" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" id="logo" class="svg replaced-svg">
+             <path d="M101.664 126.506c11.274-19.548 22.527-39.11 33.803-58.658-5.312-9.375-10.765-18.655-16.09-28.008-22.438-.233-44.867.187-67.3-.22-5.908 9.12-10.942 18.802-16.49 28.161 5.734 9.697 11.157 19.57 16.168 27.872 10.65.109 21.81.214 32.461-.085 4.4-8.459 9.244-16.711 13.993-24.926-5.826-.03-11.679-.096-17.499-.075-1.79 3.143-3.544 6.298-5.308 9.458-4.778.112-9.888.213-14.82.247-2.394-4.108-4.724-8.265-7.177-12.34 2.318-4.41 4.735-8.759 7.458-12.927 16.588.454 33.185-.082 49.779.29 2.27 4.192 4.706 8.28 7.104 12.396-6.08 10.413-20.621 35.18-25.183 42.946-16.675.211-35.01.363-49.625.492-8.383-14.434-16.639-28.942-25.035-43.37 8.173-14.447 16.721-28.677 24.738-43.207 22.591-.368 45.21.029 67.803-.223-2.98-5.157-5.97-10.367-8.861-15.384-24.482.03-46.52.039-67.814 0C22.739 28.23 11.133 48.177 0 67.335c11.717 20.361 24.039 41.742 34.001 59.188 22.553-.137 45.106-.023 67.663-.017z" fill="url(#_Linear1)" fill-rule="nonzero" transform="translate(12 11.996) scale(7.38187)"></path><path d="M1184.275 676.955v-48.5c5.5 5 12 9.5 20 13 7.5 4 16 7.5 24.5 10 8.5 3 17 5 25.5 6.5s16.5 2 24 2c25.5 0 44-4.5 56.5-14s18.5-23 18.5-40.5c0-9.5-2-17.5-6-24.5s-10-13.5-17-19.5c-7.5-5.5-16-11-26-16.5-10-5-21-10.5-32.5-16.5-12.5-6.5-23.5-12.5-34-19-11-6-20-13-28-21-7.5-7.5-14-16-18.5-26-4-9.5-6.5-21-6.5-34 0-16 3.5-30 10.5-41.5 7-12 16-21.5 27.5-29.5 11.5-7.5 24.5-13 39-17 14.5-3.5 29.5-5.5 44.5-5.5 34.5 0 60 4 75.5 12.5v46c-20.5-14-47-21.5-79.5-21.5-9 0-18 1-27 3s-17 5-24 9c-7 4.5-12.5 10-17 16.5s-6.5 15-6.5 24.5c0 9 1.5 16.5 5 23s8.5 12.5 15 18 14 10.5 23.5 15.5 20 10.5 32.5 16.5c12.5 6.5 24.5 13 35.5 19.5 11.5 7 21 14.5 29.5 23 8.5 8 15.5 17.5 20.5 27.5 4.5 10 7 21.5 7 34.5 0 17.5-3 32-10 44-6.5 12-16 21.5-27.5 29s-24.5 13-39.5 16.5c-15 3-30.5 5-47.5 5-5.5 0-12-.5-20.5-1.5-8-1-16.5-2-24.5-4-8.5-1.5-16.5-3.5-24.5-6-7.5-3-13.5-5.5-18-8.5zM1466.404 340.955h41v350h-41zM1840.954 690.955h-50l-80.5-134c-2.5-4-5-10-8-17.5h-1c-1.5 4-4.5 9.5-8.5 17.5l-83 134h-50l117-176-108-174h50.5l71.5 123c4.5 8 9 16 12.5 24.5h1c5-11 9.5-19.5 13.5-25.5l74.5-122h47l-110 173.5 111.5 176.5zM2212.844 690.955h-181.5v-350h41v313h140.5v37zM2552.344 690.955h-45.5l-37-98h-148.5l-35 98h-45.5l134-350h42.5l135 350zm-96-135l-55-149c-2-5-3.5-13-5.5-23.5h-1c-1.5 10-3.5 17.5-5.5 23.5l-54.5 149h121.5zM2603.854 690.955v-350h99.5c30.5 0 54.5 7.5 72 22 18 15 26.5 34 26.5 58 0 20-5 37-16 51.5-10.5 15-25.5 25.5-44.5 31.5v1c23.5 2.5 42.5 11.5 56.5 26.5 14.5 15.5 21.5 35 21.5 59 0 30-11 54-32.5 72.5-21 18.5-48.5 28-81 28h-102zm41-313v113h42c22.5 0 40-5.5 53-16 12.5-11 19-26.5 19-46 0-34-22-51-67-51h-47zm0 150v126h55.5c24 0 43-6 56-17 13.5-11.5 20-27 20-47 0-41.5-28-62-84.5-62h-47zM3031.474 696.955c-49.5 0-89.5-16.5-119.5-49-29.5-33-44.5-75.5-44.5-128 0-56 15-101 45.5-134.5s72-50.5 124.5-50.5c48 0 87 16.5 116.5 49s44.5 75 44.5 127.5c0 57-15 102.5-45.5 135.5-30 33.5-70.5 50-121.5 50zm3-325c-37 0-66.5 13.5-89.5 40s-34.5 61.5-34.5 104.5 11 78 33.5 104c22.5 26.5 51.5 39.5 87.5 39.5 38.5 0 68.5-12.5 91-37.5 22-25 33-60 33-105.5 0-46-10.5-82-32-107s-51.5-38-89-38zM3518.424 690.955h-49l-58.5-98c-5.5-9.5-10.5-17-15.5-23.5s-10.5-11.5-15.5-15.5c-5.5-4.5-11-7-17.5-9-6-2-12.5-3-20.5-3h-33.5v149h-41v-350h104.5c15 0 29.5 2 42 5.5 13 4 24.5 10 34 17.5 9.5 8 17 17.5 22.5 29.5 5 11.5 8 25 8 40.5 0 12.5-2 23.5-5.5 33.5-4 10.5-9 19.5-16 27.5-6.5 8-14.5 14.5-24 20.5-9.5 5.5-20.5 10-32.5 13v1c6 2.5 11 5.5 15.5 9 4.5 3 8.5 7 12.5 11.5 3.5 4.5 7.5 10 11.5 15.5 3.5 6 8 12.5 12.5 20.5l66 105zm-210-313v127h55.5c10.5 0 20-1.5 28.5-4.5 8.5-3.5 16.5-7.5 22.5-13.5 6.5-6 11.5-13 15-21 3.5-8.5 5.5-18 5.5-28.5 0-18.5-6-33-18.5-43.5-12-10.5-29.5-16-52.5-16h-56zM3549.994 676.955v-48.5c5.5 5 12 9.5 20 13 7.5 4 16 7.5 24.5 10 8.5 3 17 5 25.5 6.5s16.5 2 24 2c25.5 0 44-4.5 56.5-14s18.5-23 18.5-40.5c0-9.5-2-17.5-6-24.5s-10-13.5-17-19.5c-7.5-5.5-16-11-26-16.5-10-5-21-10.5-32.5-16.5-12.5-6.5-23.5-12.5-34-19-11-6-20-13-28-21-7.5-7.5-14-16-18.5-26-4-9.5-6.5-21-6.5-34 0-16 3.5-30 10.5-41.5 7-12 16-21.5 27.5-29.5 11.5-7.5 24.5-13 39-17 14.5-3.5 29.5-5.5 44.5-5.5 34.5 0 60 4 75.5 12.5v46c-20.5-14-47-21.5-79.5-21.5-9 0-18 1-27 3s-17 5-24 9c-7 4.5-12.5 10-17 16.5s-6.5 15-6.5 24.5c0 9 1.5 16.5 5 23s8.5 12.5 15 18 14 10.5 23.5 15.5 20 10.5 32.5 16.5c12.5 6.5 24.5 13 35.5 19.5 11.5 7 21 14.5 29.5 23 8.5 8 15.5 17.5 20.5 27.5 4.5 10 7 21.5 7 34.5 0 17.5-3 32-10 44-6.5 12-16 21.5-27.5 29s-24.5 13-39.5 16.5c-15 3-30.5 5-47.5 5-5.5 0-12-.5-20.5-1.5-8-1-16.5-2-24.5-4-8.5-1.5-16.5-3.5-24.5-6-7.5-3-13.5-5.5-18-8.5z" fill-rule="nonzero"></path><defs><lineargradient id="_Linear1" x1="0" y1="0" x2="1" y2="0" gradientunits="userSpaceOnUse" gradienttransform="rotate(-44.975 163.14 67.262) scale(190.278)"><stop offset="0" stop-color="#9f1923"></stop><stop offset="1" stop-color="#e30183"></stop></lineargradient></defs>
+             </svg>
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="drawingcanvas">DrawingCanvas</h1>
+
+<p><code>DrawingCanvas</code> is the high-level drawing surface used by ImageSharp.Drawing. It lets the library expose one drawing model while supporting very different execution targets:</p>
+<ul>
+<li>CPU rasterization into memory</li>
+<li>GPU execution through native surfaces</li>
+<li>backends that prefer their own internal representation, such as vector export</li>
+</ul>
+<p>That unification is the hard part. The public API wants to feel immediate and simple: fill a path, draw text, save state, restore state, draw into a region, maybe draw into a layer. The backends, however, do not all want the same kind of work. A CPU rasterizer wants rows, spans, and direct pixel access. A GPU backend wants compact command data, stable batching, and a single handoff point. A vector exporter would want semantic geometry rather than already-rasterized pixels.</p>
+<p>The architecture around <code>DrawingCanvas</code> and its typed implementation exists to absorb that mismatch.</p>
+<p>This document explains that architecture from the outside in. The goal is to help a newcomer understand what problem each piece solves before diving into methods and types.</p>
+<h2 id="the-main-problem">The Main Problem</h2>
+<p>If the canvas executed every public call immediately, each backend would have to implement the entire public drawing model directly:</p>
+<ul>
+<li>save and restore state</li>
+<li>clip stacking</li>
+<li>layers and isolated composition</li>
+<li>text drawing</li>
+<li>image drawing with transforms</li>
+<li>region drawing</li>
+<li>brush and pen handling</li>
+<li>transform handling</li>
+</ul>
+<p>That sounds straightforward until the differences between backends become obvious.</p>
+<p>The CPU backend can cheaply mutate a memory buffer row by row. The GPU backend wants a larger batch of work so it can amortize setup, upload, and dispatch costs. A vector-style backend would ideally preserve geometry and draw intent for as long as possible. If each backend solved all of that from scratch, they would drift apart quickly and correctness bugs would multiply.</p>
+<p>So the architecture chooses a different approach:</p>
+<p><code>DrawingCanvas</code> records drawing intent first, normalizes that intent when replaying or creating a retained scene, and only then hands the work to the backend.</p>
+<p>That one decision explains most of the surrounding design.</p>
+<h2 id="the-core-idea">The Core Idea</h2>
+<p>The canvas is a deferred renderer.</p>
+<p>Drawing calls do not rasterize immediately. They create <code>CompositionCommand</code> records and queue them into <code>DrawingCanvasBatcher&lt;TPixel&gt;</code>. The expensive normalization work happens later, during replay, when the batcher prepares those commands and hands <code>DrawingCommandBatch</code> ranges to the backend.</p>
+<p>That gives the architecture three important benefits.</p>
+<p>First, the public API stays backend-agnostic. A fill is a fill, whether the target is CPU memory or a GPU surface.</p>
+<p>Second, the expensive shared command work can happen once, in one shared place. Transform application, stroke expansion, clip application, and dash expansion are not reimplemented independently by every backend.</p>
+<p>Third, the backend receives a much more stable handoff. Instead of reacting to a long stream of public API calls, it receives prepared command batches with consistent semantics.</p>
+<h2 id="the-most-important-terms">The Most Important Terms</h2>
+<p>Before looking at the flow, it helps to define the major terms in the sense used by this codebase.</p>
+<h3 id="canvas">Canvas</h3>
+<p><code>DrawingCanvas</code> is the public drawing facade. It owns the current drawing state, accepts commands, and decides when to flush.</p>
+<p>It is not the rasterizer. It is the object that makes the public drawing model coherent.</p>
+<p>Callers usually reach that model through <code>IImageProcessingContext.Paint(...)</code>.</p>
+<p>When callers already have an <code>ImageFrame</code> or <code>ImageFrame&lt;TPixel&gt;</code>, the public <code>CreateCanvas(...)</code> frame extensions create a canvas directly over that frame. The caller owns the returned canvas and must dispose it to replay recorded work into the frame.</p>
+<p><code>DrawingCanvas&lt;TPixel&gt;</code> is the typed implementation that carries the target pixel format for brush normalization,
+readback, and backend execution. Factory methods return <code>DrawingCanvas</code> so CPU and GPU entry points expose the same
+canvas-facing API while still constructing the typed implementation internally.</p>
+<h3 id="batcher">Batcher</h3>
+<p><code>DrawingCanvasBatcher&lt;TPixel&gt;</code> is the deferred command queue. It stores pending <code>CompositionCommand</code> values, records the canvas replay timeline, prepares commands during replay, and creates <code>DrawingCommandBatch</code> values for command-range entries.</p>
+<p>It is the bridge between the immediate-looking public API and the deferred backend handoff.</p>
+<h3 id="command">Command</h3>
+<p><code>CompositionCommand</code> is the recorded unit of drawing intent. In the common case it means &quot;fill this path with this brush under this state&quot;. The command stream also carries explicit layer boundaries through <code>BeginLayer</code> and <code>EndLayer</code>.</p>
+<p>The command remains relatively close to the original user request. It may hold the original path, pen, brush, transform, and clip paths.</p>
+<h3 id="preparation">Preparation</h3>
+<p>Preparation is the normalization step that turns recorded intent into backend-ready commands.</p>
+<p><code>DrawingCanvasBatcher&lt;TPixel&gt;.PrepareCommands(...)</code> runs only when needed. It applies command transforms, expands strokes to fill paths, applies clip paths so clipped commands reach the backend as ordinary fills, and expands dashed strokes when a stroke pattern is present.</p>
+<p>Preparation stops at <code>DrawingCommandBatch</code>. Backend-specific lowering happens after that, inside <code>IDrawingBackend.CreateScene(...)</code>.</p>
+<h3 id="command-batch">Command Batch</h3>
+<p><code>DrawingCommandBatch</code> is the prepared command range handed to the backend. It contains the command stream for one contiguous range and scene-level facts such as whether that range contains layer boundaries.</p>
+<p>It is the backend handoff boundary.</p>
+<h3 id="backend">Backend</h3>
+<p><code>IDrawingBackend</code> is the execution engine behind the canvas. The important implementations are:</p>
+<ul>
+<li><code>DefaultDrawingBackend</code> for CPU rendering</li>
+<li><code>WebGPUDrawingBackend</code> for GPU rendering through native surfaces</li>
+</ul>
+<p>The backend creates retained scenes from command batches and renders retained scenes into typed target frames.</p>
+<p>There are two backend-selection paths in the architecture:</p>
+<ul>
+<li>direct <code>DrawingCanvas&lt;TPixel&gt;</code> construction resolves the backend from <code>Configuration</code></li>
+<li>specialized infrastructure can construct a canvas with an explicit backend</li>
+</ul>
+<p>The ordinary CPU entry point is <code>Paint(...)</code> on <code>IImageProcessingContext</code>, which routes into the typed
+implementation internally. Public <code>ImageFrame</code> canvas extensions provide the lower-level frame entry point for callers that want to own the canvas lifetime directly.</p>
+<p>That explicit-backend path matters for the WebGPU helpers. <code>WebGPUWindow</code>, <code>WebGPUExternalSurface</code>, and <code>WebGPURenderTarget</code> create canvases that point directly at their owned <code>WebGPUDrawingBackend</code> instance instead of storing that backend on the caller's <code>Configuration</code>.</p>
+<h3 id="frame">Frame</h3>
+<p><code>ICanvasFrame&lt;TPixel&gt;</code> is the target abstraction that the backend renders into.</p>
+<p>This is one of the terms that can be ambiguous without context, so it is worth being explicit. In this architecture, a canvas frame is not &quot;a UI frame&quot; or &quot;one animation frame&quot;. It means &quot;the destination surface for one canvas instance&quot;.</p>
+<p>The important properties of a frame are:</p>
+<ul>
+<li><code>Bounds</code></li>
+<li>whether it exposes a CPU region through <code>TryGetCpuRegion(...)</code></li>
+<li>whether it exposes a native surface through <code>TryGetNativeSurface(...)</code></li>
+</ul>
+<p>That abstraction lets the same canvas target:</p>
+<ul>
+<li>pure CPU memory with <code>MemoryCanvasFrame&lt;TPixel&gt;</code></li>
+<li>a native or GPU surface with <code>NativeCanvasFrame&lt;TPixel&gt;</code></li>
+<li>a combined CPU plus native target</li>
+<li>a clipped view over another frame with <code>CanvasRegionFrame&lt;TPixel&gt;</code></li>
+</ul>
+<p>The point is not to hide all differences. The point is to express the minimum target contract the backends need.</p>
+<h3 id="layer">Layer</h3>
+<p>A layer is isolated group rendering. In public API terms, it is created with <code>SaveLayer(...)</code> and later closed by <code>Restore()</code> or <code>RestoreTo(...)</code>.</p>
+<p>In this architecture, a layer is recorded inline in the command stream as:</p>
+<ul>
+<li><code>BeginLayer</code></li>
+<li>commands inside the layer</li>
+<li><code>EndLayer</code></li>
+</ul>
+<p>The backend is responsible for lowering those layer boundaries into the execution model it needs.</p>
+<p>Layer semantics stay in the shared command model so every backend receives the same layer structure at the handoff boundary.</p>
+<h2 id="the-big-picture-flow">The Big Picture Flow</h2>
+<p>The easiest way to understand the system is to follow one normal draw call all the way through.</p>
+<h3 id="step-1-the-canvas-records-intent">Step 1: The canvas records intent</h3>
+<p>A public method such as <code>Fill(...)</code>, <code>Draw(...)</code>, or <code>DrawText(...)</code> resolves the active state and creates one or more <code>CompositionCommand</code> values.</p>
+<p>At this point the canvas is mostly recording:</p>
+<ul>
+<li>geometry references</li>
+<li>brushes or pens</li>
+<li>active transform</li>
+<li>clip paths</li>
+<li>graphics options</li>
+<li>target bounds relevant to this command</li>
+</ul>
+<p>The canvas does not try to fully rasterize anything here.</p>
+<h3 id="step-2-the-batcher-owns-the-pending-work">Step 2: The batcher owns the pending work</h3>
+<p>Commands go into <code>DrawingCanvasBatcher&lt;TPixel&gt;</code>.</p>
+<p>The batcher exists so the canvas does not need to talk to the backend for every single API call. It accumulates work until a timeline boundary is reached.</p>
+<p>The replay boundary usually comes from:</p>
+<ul>
+<li>explicit <code>Flush()</code>, which seals the current command range</li>
+<li><code>Apply(...)</code>, which needs read-modify-write behavior</li>
+<li><code>RenderScene(...)</code>, which inserts an existing retained scene into the timeline</li>
+<li>disposal of the owning canvas</li>
+</ul>
+<h3 id="step-3-the-batcher-prepares-commands">Step 3: The batcher prepares commands</h3>
+<p>When the root canvas is disposed, or when the caller creates a retained scene, the batcher seals any pending commands and prepares the command buffer. This is where the architecture does the heavy shared work that would otherwise be duplicated across backends.</p>
+<p>For a typical path-based command, canvas preparation does the following in concept:</p>
+<ol>
+<li>transform the source path into its final geometry space</li>
+<li>if a pen is present, expand the stroke to fill geometry</li>
+<li>apply clip paths</li>
+<li>transform the brush into the same command space</li>
+<li>leave backend-specific retained geometry construction to <code>CreateScene(...)</code></li>
+</ol>
+<p>This is the architectural center of gravity. It is the shared normalization stage that makes the backends simpler.</p>
+<h3 id="step-4-the-backend-creates-and-renders-scenes">Step 4: The backend creates and renders scenes</h3>
+<p>After preparation, disposal replay walks the canvas timeline in order. Command-range entries become short-lived retained scenes through <code>backend.CreateScene(...)</code>, and those scenes are then rendered through <code>backend.RenderScene(...)</code>.</p>
+<p>From that point the CPU and GPU paths diverge.</p>
+<p>The CPU backend lowers each command batch into a row-oriented retained representation through <code>FlushScene</code> during <code>CreateScene(...)</code> and then composites into memory during <code>RenderScene(...)</code>.</p>
+<p>The WebGPU backend encodes each command batch into its retained GPU representation during <code>CreateScene(...)</code>, then uploads render-scoped resources and dispatches GPU work during <code>RenderScene(...)</code>.</p>
+<p>The architecture is successful if both backends can differ dramatically here without needing the public canvas model itself to fork.</p>
+<h2 id="why-state-is-snapshotted">Why State Is Snapshotted</h2>
+<p>Drawing APIs look stateful because they are stateful. The active transform, clips, graphics options, and layer information all affect future commands.</p>
+<p><code>DrawingCanvasState</code> exists so that state changes are cheap to reason about and cheap to attach to commands.</p>
+<p>The state snapshot contains the active options and target information for subsequent commands, including:</p>
+<ul>
+<li><code>Options</code></li>
+<li><code>ClipPaths</code></li>
+<li><code>IsLayer</code></li>
+<li>layer-related graphics options and bounds</li>
+<li>current target bounds</li>
+</ul>
+<p>The canvas treats this state as immutable snapshots on a stack. <code>Save()</code> pushes a copy. <code>Restore()</code> pops one. Drawing calls always read the current top-of-stack state.</p>
+<p>That makes save and restore semantics predictable and backend-independent.</p>
+<h2 id="how-layers-work-in-this-architecture">How Layers Work In This Architecture</h2>
+<p>Layer terminology often causes confusion because different systems use it differently. In this codebase, the most useful mental model is:</p>
+<p>&quot;A layer is a nested composition scope recorded inline in the command stream.&quot;</p>
+<p>When <code>SaveLayer(...)</code> is called, the canvas:</p>
+<ol>
+<li>clamps the requested layer bounds to the canvas</li>
+<li>converts them into absolute target bounds</li>
+<li>records <code>BeginLayer</code></li>
+<li>pushes a state snapshot that marks the new layer scope</li>
+</ol>
+<p>The layer bounds are expressed in the active local coordinate system, so the canvas
+transform in effect at <code>SaveLayer(...)</code> time is applied when resolving the layer's
+absolute target bounds. The resolved bounds limit isolation, allocation, and final
+composition. They do not shift the canvas coordinate system; draw commands inside a
+bounded layer still use the same local coordinates as the parent canvas.</p>
+<p>When the layer is later closed through <code>Restore()</code> or <code>RestoreTo(...)</code>, the canvas records <code>EndLayer</code>.</p>
+<p>The actual isolation is implemented later by the backend.</p>
+<p>On the CPU backend, layer boundaries become temporary backing buffers during scene execution.</p>
+<p>On the WebGPU backend, layer boundaries become explicit staged-scene operations inside the GPU-oriented pipeline.</p>
+<p>The key architectural point is that the public canvas records one shared layer model and lets the backend lower it.</p>
+<h2 id="why-frames-exist">Why Frames Exist</h2>
+<p>The frame abstraction solves another unification problem.</p>
+<p>The canvas should be able to target a plain in-memory image, but that should not force the GPU backend to pretend everything is CPU memory. Likewise, GPU-native targets should not force the CPU path to know about native surfaces directly.</p>
+<p><code>ICanvasFrame&lt;TPixel&gt;</code> is the contract that keeps those concerns separated.</p>
+<p>In this architecture, a frame means &quot;the destination surface and its capabilities&quot;. That is why the interface exposes both:</p>
+<ul>
+<li>geometric bounds</li>
+<li>optional CPU access</li>
+<li>optional native-surface access</li>
+</ul>
+<p>This lets the same canvas code target different kinds of surfaces without rewriting the command model.</p>
+<p><code>CanvasRegionFrame&lt;TPixel&gt;</code> extends that idea one step further by saying &quot;treat this clipped rectangle inside another frame as the target&quot;. That is how region canvases can share the same backend and batcher model while still drawing into a sub-rectangle.</p>
+<h2 id="what-createregion-really-means">What <code>CreateRegion(...)</code> Really Means</h2>
+<p><code>CreateRegion(...)</code> does not create a new independent rendering universe. It creates a child canvas that views a clipped sub-region of the parent target.</p>
+<p>The child:</p>
+<ul>
+<li>wraps the parent target in <code>CanvasRegionFrame&lt;TPixel&gt;</code></li>
+<li>keeps using the same backend</li>
+<li>keeps using the same shared batcher</li>
+<li>keeps participating in the same deferred replay model</li>
+</ul>
+<p>The child canvas has local coordinates starting at <code>(0, 0)</code>, but its frame bounds resolve to the correct absolute position inside the parent target.</p>
+<p>That distinction matters. It means the region API is a coordinate-system convenience, not a request to fork rendering into a totally separate backend pipeline.</p>
+<h2 id="why-drawimage-is-special">Why <code>DrawImage(...)</code> Is Special</h2>
+<p>Most draw calls record intent and defer the heavy work.</p>
+<p><code>DrawImage(...)</code> is the notable exception.</p>
+<p>Images behave differently from paths because the canvas cannot simply attach a transform and let the backend &quot;figure it out later&quot; in the same way. The code performs eager image work before the final command is queued.</p>
+<p>The rough flow is:</p>
+<ol>
+<li>crop and scale the source image if needed</li>
+<li>if a canvas transform is active, bake that transform into the image pixels</li>
+<li>align the transformed bitmap to integer canvas bounds</li>
+<li>create an <code>ImageBrush</code></li>
+<li>queue the final fill command using that brush</li>
+</ol>
+<p>This design avoids applying the canvas transform twice and keeps the later command model consistent with brush-based filling.</p>
+<p>That is why <code>DrawImage(...)</code> should be understood as &quot;prepare an image-backed brush, then queue a normal fill&quot;, not as a completely separate rasterization pipeline.</p>
+<h2 id="what-the-cpu-backend-receives">What The CPU Backend Receives</h2>
+<p>Once a command batch reaches <code>DefaultDrawingBackend.CreateScene(...)</code>, the public drawing model is already normalized.</p>
+<p>The CPU backend does not need to understand every public API call individually. It works with:</p>
+<ul>
+<li>prepared commands</li>
+<li>layer boundaries</li>
+<li>target bounds during <code>CreateScene(...)</code></li>
+<li>the destination frame during <code>RenderScene&lt;TPixel&gt;(...)</code></li>
+</ul>
+<p>It lowers each command batch into a retained row-oriented structure through <code>FlushScene</code>. Later, <code>RenderScene&lt;TPixel&gt;(...)</code> acquires the CPU destination frame, allocates temporary backing buffers for layers when needed, and composites the final result into the target frame.</p>
+<p>That is the payoff of the architecture: the CPU backend is solving a rendering problem, not a public-API interpretation problem.</p>
+<h2 id="what-the-webgpu-backend-receives">What The WebGPU Backend Receives</h2>
+<p>The WebGPU backend receives the same command batch shape, but it splits retained scene creation from render-scoped GPU work.</p>
+<p><code>CreateScene(...)</code> handles:</p>
+<ul>
+<li>encoding prepared command data</li>
+</ul>
+<p><code>RenderScene&lt;TPixel&gt;(...)</code> handles:</p>
+<ul>
+<li>creating render-scoped native resources</li>
+<li>planning dispatches</li>
+<li>executing the GPU pipeline</li>
+</ul>
+<p>It benefits from the same canvas-level decisions:</p>
+<ul>
+<li>commands are already normalized</li>
+<li>layers already exist as explicit boundaries</li>
+<li>the frame already describes whether a native surface is available</li>
+</ul>
+<p>The WebGPU public helpers reach this point in a target-first way:</p>
+<ul>
+<li><code>WebGPUWindow</code> acquires a presentable native target per frame</li>
+<li><code>WebGPURenderTarget</code> owns an offscreen native target for GPU drawing and readback</li>
+<li><code>WebGPUExternalSurface</code> attaches WebGPU drawing to a caller-owned native host</li>
+</ul>
+<p>Those helpers all create typed canvas instances with an explicit <code>WebGPUDrawingBackend</code>, so GPU execution stays attached to the WebGPU object that owns the native target and backend lifetime while callers work through <code>DrawingCanvas</code>.</p>
+<p>The backend is free to choose a very different execution model because the canvas has already solved the shared semantics problem.</p>
+<h2 id="the-practical-mental-model">The Practical Mental Model</h2>
+<p>If you are new to this code, the most useful mental model is:</p>
+<p><code>DrawingCanvas</code> is the stateful front end that records drawing intent, <code>DrawingCanvas&lt;TPixel&gt;</code> is the typed implementation, <code>DrawingCanvasBatcher&lt;TPixel&gt;</code> is the deferred handoff boundary, and the backend creates and renders retained scenes from prepared command batches.</p>
+<p>Everything else serves that flow.</p>
+<p>State snapshots exist so save and restore are precise.</p>
+<p>Commands exist so public API calls can be deferred.</p>
+<p>Preparation exists so backend-agnostic normalization happens once.</p>
+<p>Frames exist so the same canvas can target memory, native surfaces, or sub-regions.</p>
+<p>Layers exist as inline composition scopes in the command stream.</p>
+<p>Once those ideas are clear, the code stops looking like a random collection of types and starts looking like one system with a clear division of responsibility.</p>
+<h2 id="reading-guide">Reading Guide</h2>
+<p>If you want to move from the architecture into the code, this is the best order.</p>
+<ol>
+<li><code>DrawingCanvas.cs</code></li>
+<li><code>DrawingCanvas{TPixel}.cs</code></li>
+<li><code>DrawingCanvasFactoryExtensions.cs</code> and <code>DrawingCanvas.Shapes.cs</code></li>
+<li><code>DrawingCanvasBatcher{TPixel}.cs</code></li>
+<li><code>CompositionCommand.cs</code></li>
+<li><code>DefaultDrawingBackend.cs</code></li>
+<li><code>FlushScene.cs</code></li>
+<li><code>WebGPUEnvironment.cs</code></li>
+<li><code>WebGPUWindow.cs</code>, <code>WebGPUExternalSurface.cs</code>, and <code>WebGPURenderTarget.cs</code></li>
+<li><code>WebGPUDrawingBackend</code> and its scene/dispatch types</li>
+</ol>
+<p>That path follows the real runtime flow:</p>
+<p>public API -&gt; recorded command -&gt; prepared command batch -&gt; backend scene creation -&gt; backend scene rendering</p>
+<p>Following the code in that order is much easier than starting from the backend internals first.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/main/src/ImageSharp.Drawing/Processing/DRAWING_CANVAS.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

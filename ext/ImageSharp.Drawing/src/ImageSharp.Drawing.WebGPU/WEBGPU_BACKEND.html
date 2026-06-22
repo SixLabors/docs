@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>WebGPU Backend </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="WebGPU Backend ">
+      
+      
+      <link rel="icon" href="../../../../public/favicon.ico">
+      <link rel="stylesheet" href="../../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/SixLabors/ImageSharp.Drawing/blob/main/src/ImageSharp.Drawing.WebGPU/WEBGPU_BACKEND.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../../index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 4000 1024" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" id="logo" class="svg replaced-svg">
+             <path d="M101.664 126.506c11.274-19.548 22.527-39.11 33.803-58.658-5.312-9.375-10.765-18.655-16.09-28.008-22.438-.233-44.867.187-67.3-.22-5.908 9.12-10.942 18.802-16.49 28.161 5.734 9.697 11.157 19.57 16.168 27.872 10.65.109 21.81.214 32.461-.085 4.4-8.459 9.244-16.711 13.993-24.926-5.826-.03-11.679-.096-17.499-.075-1.79 3.143-3.544 6.298-5.308 9.458-4.778.112-9.888.213-14.82.247-2.394-4.108-4.724-8.265-7.177-12.34 2.318-4.41 4.735-8.759 7.458-12.927 16.588.454 33.185-.082 49.779.29 2.27 4.192 4.706 8.28 7.104 12.396-6.08 10.413-20.621 35.18-25.183 42.946-16.675.211-35.01.363-49.625.492-8.383-14.434-16.639-28.942-25.035-43.37 8.173-14.447 16.721-28.677 24.738-43.207 22.591-.368 45.21.029 67.803-.223-2.98-5.157-5.97-10.367-8.861-15.384-24.482.03-46.52.039-67.814 0C22.739 28.23 11.133 48.177 0 67.335c11.717 20.361 24.039 41.742 34.001 59.188 22.553-.137 45.106-.023 67.663-.017z" fill="url(#_Linear1)" fill-rule="nonzero" transform="translate(12 11.996) scale(7.38187)"></path><path d="M1184.275 676.955v-48.5c5.5 5 12 9.5 20 13 7.5 4 16 7.5 24.5 10 8.5 3 17 5 25.5 6.5s16.5 2 24 2c25.5 0 44-4.5 56.5-14s18.5-23 18.5-40.5c0-9.5-2-17.5-6-24.5s-10-13.5-17-19.5c-7.5-5.5-16-11-26-16.5-10-5-21-10.5-32.5-16.5-12.5-6.5-23.5-12.5-34-19-11-6-20-13-28-21-7.5-7.5-14-16-18.5-26-4-9.5-6.5-21-6.5-34 0-16 3.5-30 10.5-41.5 7-12 16-21.5 27.5-29.5 11.5-7.5 24.5-13 39-17 14.5-3.5 29.5-5.5 44.5-5.5 34.5 0 60 4 75.5 12.5v46c-20.5-14-47-21.5-79.5-21.5-9 0-18 1-27 3s-17 5-24 9c-7 4.5-12.5 10-17 16.5s-6.5 15-6.5 24.5c0 9 1.5 16.5 5 23s8.5 12.5 15 18 14 10.5 23.5 15.5 20 10.5 32.5 16.5c12.5 6.5 24.5 13 35.5 19.5 11.5 7 21 14.5 29.5 23 8.5 8 15.5 17.5 20.5 27.5 4.5 10 7 21.5 7 34.5 0 17.5-3 32-10 44-6.5 12-16 21.5-27.5 29s-24.5 13-39.5 16.5c-15 3-30.5 5-47.5 5-5.5 0-12-.5-20.5-1.5-8-1-16.5-2-24.5-4-8.5-1.5-16.5-3.5-24.5-6-7.5-3-13.5-5.5-18-8.5zM1466.404 340.955h41v350h-41zM1840.954 690.955h-50l-80.5-134c-2.5-4-5-10-8-17.5h-1c-1.5 4-4.5 9.5-8.5 17.5l-83 134h-50l117-176-108-174h50.5l71.5 123c4.5 8 9 16 12.5 24.5h1c5-11 9.5-19.5 13.5-25.5l74.5-122h47l-110 173.5 111.5 176.5zM2212.844 690.955h-181.5v-350h41v313h140.5v37zM2552.344 690.955h-45.5l-37-98h-148.5l-35 98h-45.5l134-350h42.5l135 350zm-96-135l-55-149c-2-5-3.5-13-5.5-23.5h-1c-1.5 10-3.5 17.5-5.5 23.5l-54.5 149h121.5zM2603.854 690.955v-350h99.5c30.5 0 54.5 7.5 72 22 18 15 26.5 34 26.5 58 0 20-5 37-16 51.5-10.5 15-25.5 25.5-44.5 31.5v1c23.5 2.5 42.5 11.5 56.5 26.5 14.5 15.5 21.5 35 21.5 59 0 30-11 54-32.5 72.5-21 18.5-48.5 28-81 28h-102zm41-313v113h42c22.5 0 40-5.5 53-16 12.5-11 19-26.5 19-46 0-34-22-51-67-51h-47zm0 150v126h55.5c24 0 43-6 56-17 13.5-11.5 20-27 20-47 0-41.5-28-62-84.5-62h-47zM3031.474 696.955c-49.5 0-89.5-16.5-119.5-49-29.5-33-44.5-75.5-44.5-128 0-56 15-101 45.5-134.5s72-50.5 124.5-50.5c48 0 87 16.5 116.5 49s44.5 75 44.5 127.5c0 57-15 102.5-45.5 135.5-30 33.5-70.5 50-121.5 50zm3-325c-37 0-66.5 13.5-89.5 40s-34.5 61.5-34.5 104.5 11 78 33.5 104c22.5 26.5 51.5 39.5 87.5 39.5 38.5 0 68.5-12.5 91-37.5 22-25 33-60 33-105.5 0-46-10.5-82-32-107s-51.5-38-89-38zM3518.424 690.955h-49l-58.5-98c-5.5-9.5-10.5-17-15.5-23.5s-10.5-11.5-15.5-15.5c-5.5-4.5-11-7-17.5-9-6-2-12.5-3-20.5-3h-33.5v149h-41v-350h104.5c15 0 29.5 2 42 5.5 13 4 24.5 10 34 17.5 9.5 8 17 17.5 22.5 29.5 5 11.5 8 25 8 40.5 0 12.5-2 23.5-5.5 33.5-4 10.5-9 19.5-16 27.5-6.5 8-14.5 14.5-24 20.5-9.5 5.5-20.5 10-32.5 13v1c6 2.5 11 5.5 15.5 9 4.5 3 8.5 7 12.5 11.5 3.5 4.5 7.5 10 11.5 15.5 3.5 6 8 12.5 12.5 20.5l66 105zm-210-313v127h55.5c10.5 0 20-1.5 28.5-4.5 8.5-3.5 16.5-7.5 22.5-13.5 6.5-6 11.5-13 15-21 3.5-8.5 5.5-18 5.5-28.5 0-18.5-6-33-18.5-43.5-12-10.5-29.5-16-52.5-16h-56zM3549.994 676.955v-48.5c5.5 5 12 9.5 20 13 7.5 4 16 7.5 24.5 10 8.5 3 17 5 25.5 6.5s16.5 2 24 2c25.5 0 44-4.5 56.5-14s18.5-23 18.5-40.5c0-9.5-2-17.5-6-24.5s-10-13.5-17-19.5c-7.5-5.5-16-11-26-16.5-10-5-21-10.5-32.5-16.5-12.5-6.5-23.5-12.5-34-19-11-6-20-13-28-21-7.5-7.5-14-16-18.5-26-4-9.5-6.5-21-6.5-34 0-16 3.5-30 10.5-41.5 7-12 16-21.5 27.5-29.5 11.5-7.5 24.5-13 39-17 14.5-3.5 29.5-5.5 44.5-5.5 34.5 0 60 4 75.5 12.5v46c-20.5-14-47-21.5-79.5-21.5-9 0-18 1-27 3s-17 5-24 9c-7 4.5-12.5 10-17 16.5s-6.5 15-6.5 24.5c0 9 1.5 16.5 5 23s8.5 12.5 15 18 14 10.5 23.5 15.5 20 10.5 32.5 16.5c12.5 6.5 24.5 13 35.5 19.5 11.5 7 21 14.5 29.5 23 8.5 8 15.5 17.5 20.5 27.5 4.5 10 7 21.5 7 34.5 0 17.5-3 32-10 44-6.5 12-16 21.5-27.5 29s-24.5 13-39.5 16.5c-15 3-30.5 5-47.5 5-5.5 0-12-.5-20.5-1.5-8-1-16.5-2-24.5-4-8.5-1.5-16.5-3.5-24.5-6-7.5-3-13.5-5.5-18-8.5z" fill-rule="nonzero"></path><defs><lineargradient id="_Linear1" x1="0" y1="0" x2="1" y2="0" gradientunits="userSpaceOnUse" gradienttransform="rotate(-44.975 163.14 67.262) scale(190.278)"><stop offset="0" stop-color="#9f1923"></stop><stop offset="1" stop-color="#e30183"></stop></lineargradient></defs>
+             </svg>
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="webgpu-backend">WebGPU Backend</h1>
+
+<p><code>WebGPUDrawingBackend</code> is the GPU execution backend for ImageSharp.Drawing. It creates retained GPU scenes from prepared drawing command batches, then renders those scenes through the staged GPU pipeline against a native WebGPU target.</p>
+<p>The WebGPU backend and staged scene pipeline are based on ideas and implementation techniques from Vello, but the current ImageSharp.Drawing implementation is heavily adapted and no longer mirrors Vello one-for-one:</p>
+<ul>
+<li><a href="https://github.com/linebender/vello">https://github.com/linebender/vello</a></li>
+</ul>
+<p>This document explains the backend as a newcomer would need to understand it:</p>
+<ul>
+<li>where the public WebGPU entry points fit</li>
+<li>what problem the WebGPU backend is solving</li>
+<li>what <code>WebGPUDrawingBackend</code> actually owns</li>
+<li>how one command batch moves through the backend boundary</li>
+<li>where explicit layer handling and runtime caching fit into the design</li>
+</ul>
+<h2 id="where-the-public-webgpu-types-fit">Where The Public WebGPU Types Fit</h2>
+<p>The public WebGPU surface area around this backend is small and target-first.</p>
+<p><strong>Public types</strong> — the entry points applications should use:</p>
+<ul>
+<li><code>WebGPUEnvironment</code> exposes explicit support probes for the library-managed WebGPU environment</li>
+<li><code>WebGPUWindow</code> owns a native window and either runs a render loop or returns <code>WebGPUSurfaceFrame</code> instances through <code>TryAcquireFrame(...)</code></li>
+<li><code>WebGPUExternalSurface</code> attaches to a caller-owned native host via <code>WebGPUSurfaceHost</code>; the host application owns the UI object and tells the external surface when the drawable framebuffer resizes</li>
+<li><code>WebGPURenderTarget</code> owns an offscreen native target for GPU rendering and readback</li>
+</ul>
+<p><code>WebGPUDeviceContext</code> is internal infrastructure used by targets and surfaces. It is not part of the public WebGPU entry-point model.</p>
+<p><code>WebGPUEnvironment.Options</code> configures the library-managed WebGPU environment before first use. Set it before
+constructing WebGPU objects or calling support probes; the shared runtime reads the current options during first
+initialization and does not reconfigure an existing device after that point.</p>
+<p>Those types all exist to get a <code>DrawingCanvas</code> over a native WebGPU target. Once the canvas flushes, <code>WebGPUDrawingBackend</code> becomes the execution boundary.</p>
+<p>The support probes also live outside the backend:</p>
+<ul>
+<li><code>WebGPUEnvironment.ProbeAvailability()</code> checks whether the library-managed WebGPU device and queue can be acquired</li>
+<li><code>WebGPUEnvironment.ProbeComputePipelineSupport()</code> runs the crash-isolated trivial compute-pipeline probe</li>
+</ul>
+<p>That split keeps support probing separate from flush execution. <code>WebGPUDrawingBackend</code> is the flush executor, not the public support API. The WebGPU constructors create their objects directly; callers use <code>WebGPUEnvironment</code> when they want explicit preflight checks.</p>
+<h2 id="the-main-problem">The Main Problem</h2>
+<p>The canvas hands the backend a prepared command batch. That is already a big simplification, but it does not mean the GPU can render that batch directly.</p>
+<p>The backend still has to decide:</p>
+<ul>
+<li>whether the typed target can accept the retained WebGPU scene</li>
+<li>whether the staged scene can be created safely and legally on the current device</li>
+<li>how GPU-only concerns such as native targets, flush-scoped resources, and device-scoped caches fit around the staged raster pipeline</li>
+</ul>
+<p>That is why the backend layer exists separately from the staged scene pipeline itself.</p>
+<p>The raster pipeline solves &quot;how to rasterize this encoded scene on the GPU&quot;.
+<code>WebGPUDrawingBackend</code> solves &quot;how does this retained scene bind to the current typed target and render cleanly&quot;.</p>
+<h2 id="the-core-idea">The Core Idea</h2>
+<p>The WebGPU backend is a policy and orchestration layer around a staged GPU rasterizer.</p>
+<p>Its central idea is:</p>
+<blockquote>
+<p>create a retained encoded scene from prepared commands, then render that scene as one staged GPU unit of work</p>
+</blockquote>
+<p>That means <code>WebGPUDrawingBackend</code> is responsible for entry-point orchestration, not for every low-level GPU detail.</p>
+<h2 id="the-most-important-terms">The Most Important Terms</h2>
+<h3 id="backend">Backend</h3>
+<p><code>WebGPUDrawingBackend</code> is the top-level GPU executor. It owns:</p>
+<ul>
+<li>per-flush diagnostic state</li>
+<li>staged-scene creation attempts during render</li>
+<li>lowering explicit layer boundaries into the staged scene path</li>
+</ul>
+<p>It is the policy boundary of the GPU path.</p>
+<p>It does not own:</p>
+<ul>
+<li>public support probing</li>
+<li>window creation</li>
+<li>render-target allocation APIs</li>
+<li>caller-device or caller-surface interop setup</li>
+</ul>
+<h3 id="flush-context">Flush Context</h3>
+<p><code>WebGPUFlushContext</code> is the flush-scoped execution context for one GPU flush.</p>
+<p>It owns:</p>
+<ul>
+<li>the runtime lease</li>
+<li>device and queue access</li>
+<li>the target texture and target view</li>
+<li>the command encoder and optional compute pass encoder</li>
+<li>the native resources created during the flush</li>
+</ul>
+<p>The important lifetime rule is:</p>
+<p>most GPU state is flush-scoped, but two cache layers intentionally outlive one flush:</p>
+<ul>
+<li><code>WebGPURuntime.DeviceSharedState</code> keeps device-scoped pipelines and support state</li>
+<li><code>WebGPUDrawingBackend</code> keeps reusable resource arenas and retained scratch capacities for later flushes on the same backend instance</li>
+</ul>
+<h3 id="staged-scene">Staged Scene</h3>
+<p>A staged scene is the GPU-oriented render-time representation of one retained encoded scene.</p>
+<p>It is produced from the retained encoded scene and then consumed by the staged raster pipeline. The staged scene itself is explained in the rasterizer document; from the backend point of view, it is the render-scoped unit of GPU work.</p>
+<h2 id="the-big-picture-flow">The Big Picture Flow</h2>
+<p>The easiest way to understand the backend is to follow one command-range timeline entry from canvas disposal to GPU submission.</p>
+<pre><code class="lang-mermaid">flowchart TD
+    A[DrawingCanvas disposal replay] --&gt; B[WebGPUDrawingBackend.CreateScene]
+    B --&gt; C[Encode WebGPU scene]
+    C --&gt; D[WebGPUDrawingBackend.RenderScene]
+    D --&gt; E[Create WebGPU flush context]
+    E --&gt; F[Create staged scene resources]
+    F --&gt; G[Run staged scene pipeline]
+    G --&gt; H[GPU target updated]
+</code></pre>
+<p>The staged scene pipeline itself is described in <a href="d:/GitHub/SixLabors/ImageSharp.Drawing/src/ImageSharp.Drawing.WebGPU/WEBGPU_RASTERIZER.md"><code>WEBGPU_RASTERIZER.md</code></a>. The important backend point is that scene creation is retained and untyped, while rendering is target-bound and typed.</p>
+<h2 id="what-webgpudrawingbackend-owns">What <code>WebGPUDrawingBackend</code> Owns</h2>
+<p><code>WebGPUDrawingBackend</code> is deliberately smaller than the total amount of GPU code around it. It owns orchestration and policy, not the full details of scene encoding or dispatch.</p>
+<p>Its responsibilities are:</p>
+<ul>
+<li>clear per-render diagnostics</li>
+<li>encode retained WebGPU scenes from prepared command batches</li>
+<li>create render-scoped staged scene resources</li>
+<li>run the staged path</li>
+<li>keep explicit layer boundaries in the shared flush model until the staged scene encoder lowers them</li>
+<li>retain the last successful scratch capacities and reuse backend-local GPU arenas across renders when possible</li>
+</ul>
+<p>The expensive staged work is delegated:</p>
+<ul>
+<li><code>WebGPUSceneEncoder</code> owns scene encoding</li>
+<li><code>WebGPUSceneConfig</code> owns planning data</li>
+<li><code>WebGPUSceneResources</code> owns flush-scoped GPU resources</li>
+<li><code>WebGPUSceneDispatch</code> owns the staged compute pipeline</li>
+</ul>
+<p>The public object graph around those responsibilities is also separate:</p>
+<ul>
+<li><code>WebGPUEnvironment</code> handles explicit support probes</li>
+<li><code>WebGPUWindow</code>, <code>WebGPUExternalSurface</code>, and <code>WebGPURenderTarget</code> are the public target constructors</li>
+<li><code>DrawingCanvas</code> hands prepared <code>DrawingCommandBatch</code> ranges to the backend</li>
+</ul>
+<h2 id="the-backend-boundary">The Backend Boundary</h2>
+<p><code>CreateScene(...)</code> and <code>RenderScene&lt;TPixel&gt;(...)</code> split retained scene creation from typed target rendering.</p>
+<p><code>CreateScene(...)</code>:</p>
+<ul>
+<li>receives target bounds and a prepared command batch</li>
+<li>encodes the retained <code>WebGPUEncodedScene</code></li>
+<li>stores retained scratch-size state and reusable arena slots with the scene</li>
+<li>does not need <code>TPixel</code>, the target frame, or a <code>WebGPUFlushContext</code></li>
+</ul>
+<p><code>RenderScene&lt;TPixel&gt;(...)</code>:</p>
+<ul>
+<li>validates the retained scene type and target bounds</li>
+<li>resolves <code>TPixel</code> to the WebGPU texture format and required feature</li>
+<li>creates the render-scoped <code>WebGPUFlushContext</code></li>
+<li>creates staged resources and dispatches the GPU pipeline</li>
+</ul>
+<p>Keeping those lifetimes separate avoids duplicate target setup when the same retained scene is rendered repeatedly.</p>
+<h2 id="scene-encoding">Scene Encoding</h2>
+<p>Before render-scoped GPU work begins, <code>CreateScene(...)</code> encodes the prepared command batch.</p>
+<p>That step answers the first important question:</p>
+<p>&quot;can these prepared commands become WebGPU encoded scene data&quot;</p>
+<p>This is distinct from later GPU planning checks. Scene encoding uses target bounds and the allocator, but not the typed target frame.</p>
+<h2 id="flush-context-creation">Flush Context Creation</h2>
+<p>When the retained scene is rendered, the backend creates a <code>WebGPUFlushContext</code>.</p>
+<p>This is the point where the retained encoded scene becomes tied to:</p>
+<ul>
+<li>a concrete device</li>
+<li>a concrete queue</li>
+<li>a concrete native target</li>
+<li>a concrete command encoder</li>
+</ul>
+<p>The flush context is also the ownership boundary for flush-scoped GPU resources. When the flush ends, those resources leave with the context unless they are part of device-shared runtime state.</p>
+<h2 id="explicit-layers">Explicit Layers</h2>
+<p>Explicit layers are not a separate compose pass in this backend.</p>
+<p>They stay in the shared composition command stream as <code>BeginLayer</code> and <code>EndLayer</code>, then the staged scene encoder lowers those boundaries into <code>BeginClip</code> and <code>EndClip</code> records inside the encoded scene. The fine shader interprets those records directly: it pushes the current tile color to its clip stack at <code>BeginClip</code>, renders the isolated layer contents, and then blends that isolated result back into the saved backdrop at <code>EndClip</code>.</p>
+<pre><code class="lang-mermaid">flowchart TD
+    A[SaveLayer / Restore] --&gt; B[BeginLayer / EndLayer in command stream]
+    B --&gt; C[WebGPUSceneEncoder lowers to BeginClip / EndClip]
+    C --&gt; D[Fine shader isolates and blends the layer inline]
+</code></pre>
+<p>That means layer semantics are part of the main staged scene pipeline rather than a second GPU composition subsystem.</p>
+<h2 id="runtime-and-caching">Runtime And Caching</h2>
+<p><code>WebGPURuntime</code> and <code>WebGPURuntime.DeviceSharedState</code> hold the device-scoped resources that outlive a single flush.</p>
+<p>They cache things such as:</p>
+<ul>
+<li>device access</li>
+<li>compute pipelines</li>
+<li>composite pipelines</li>
+<li>a small amount of reusable device-scoped support state</li>
+</ul>
+<p><code>WebGPURuntime</code> also backs the explicit support probes surfaced by <code>WebGPUEnvironment</code>. The probe and runtime layer is where the library-managed device/queue availability and crash-isolated compute-pipeline test are cached.</p>
+<p><code>WebGPUDrawingBackend</code> adds one more cache layer above that device-scoped runtime state. It retains:</p>
+<ul>
+<li>the last successful staged-scene scratch capacities</li>
+<li>reusable scheduling and resource arenas whose buffers can be leased by later flushes on the same backend instance</li>
+</ul>
+<p>The arena contents are still per-flush; only the underlying allocations are reused.</p>
+<p>That split keeps flushes isolated while still allowing both device-scoped state and backend-local buffer allocations to be reused.</p>
+<h2 id="relationship-to-the-rasterizer-doc">Relationship To The Rasterizer Doc</h2>
+<p>This document stops at the backend boundary and the high-level flush flow.</p>
+<p>The staged scene pipeline itself is described in <a href="d:/GitHub/SixLabors/ImageSharp.Drawing/src/ImageSharp.Drawing.WebGPU/WEBGPU_RASTERIZER.md"><code>WEBGPU_RASTERIZER.md</code></a>, including:</p>
+<ul>
+<li>scene encoding</li>
+<li>planning</li>
+<li>resource creation</li>
+<li>scheduling passes</li>
+<li>fine rasterization</li>
+<li>chunked oversized-scene execution</li>
+<li>copy and submission</li>
+</ul>
+<h2 id="reading-guide">Reading Guide</h2>
+<p>If you want to understand the backend first, read the code in this order:</p>
+<ol>
+<li><code>WebGPUEnvironment.cs</code></li>
+<li><code>WebGPUWindow.cs</code>, <code>WebGPUSurfaceFrame.cs</code>, <code>WebGPUExternalSurface.cs</code>, <code>WebGPUSurfaceHost.cs</code>, <code>WebGPURenderTarget.cs</code>, and <code>WebGPUDeviceContext.cs</code></li>
+<li><code>WebGPUDrawingBackend.cs</code></li>
+<li><code>WebGPUFlushContext.cs</code></li>
+<li><code>WebGPURuntime.cs</code></li>
+<li><code>WebGPURuntime.DeviceSharedState.cs</code></li>
+<li><code>WEBGPU_RASTERIZER.md</code></li>
+</ol>
+<p>That order mirrors the newcomer view of the system:</p>
+<p>support and target setup -&gt; backend policy -&gt; flush context -&gt; runtime lifetime -&gt; staged raster pipeline</p>
+<h2 id="the-mental-model-to-keep">The Mental Model To Keep</h2>
+<p>The easiest way to keep this backend straight is to remember that it is not the rasterizer itself. It is the orchestration layer around a staged GPU rasterizer. It creates retained encoded scenes from prepared command batches, then renders those scenes as flush-scoped GPU work when a typed native target is available.</p>
+<p>If that model is clear, the major types fall into place:</p>
+<ul>
+<li><code>WebGPUEnvironment</code> exposes explicit support probes</li>
+<li><code>WebGPUWindow</code>, <code>WebGPUExternalSurface</code>, and <code>WebGPURenderTarget</code> are the public target types</li>
+<li><code>WebGPUDrawingBackend</code> orchestrates and decides policy</li>
+<li><code>WebGPUFlushContext</code> owns one flush's execution state</li>
+<li><code>WebGPURuntime</code> owns longer-lived device state</li>
+<li>the staged scene pipeline is a separate subsystem described in the rasterizer doc</li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/SixLabors/ImageSharp.Drawing/blob/main/src/ImageSharp.Drawing.WebGPU/WEBGPU_BACKEND.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

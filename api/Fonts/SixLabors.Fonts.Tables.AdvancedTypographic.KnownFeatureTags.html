@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Enum KnownFeatureTags </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Enum KnownFeatureTags ">
+      
+      <meta name="description" content="Provides enumeration for the different font features. https://docs.microsoft.com/en-us/typography/opentype/spec/featuretags">
+      <link rel="icon" href="../../public/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/SixLabors/Fonts/new/main/apiSpec/new?filename=SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags.md&amp;value=---%0Auid%3A%20SixLabors.Fonts.Tables.AdvancedTypographic.KnownFeatureTags%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 4000 1024" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" id="logo" class="svg replaced-svg">
+             <path d="M101.664 126.506c11.274-19.548 22.527-39.11 33.803-58.658-5.312-9.375-10.765-18.655-16.09-28.008-22.438-.233-44.867.187-67.3-.22-5.908 9.12-10.942 18.802-16.49 28.161 5.734 9.697 11.157 19.57 16.168 27.872 10.65.109 21.81.214 32.461-.085 4.4-8.459 9.244-16.711 13.993-24.926-5.826-.03-11.679-.096-17.499-.075-1.79 3.143-3.544 6.298-5.308 9.458-4.778.112-9.888.213-14.82.247-2.394-4.108-4.724-8.265-7.177-12.34 2.318-4.41 4.735-8.759 7.458-12.927 16.588.454 33.185-.082 49.779.29 2.27 4.192 4.706 8.28 7.104 12.396-6.08 10.413-20.621 35.18-25.183 42.946-16.675.211-35.01.363-49.625.492-8.383-14.434-16.639-28.942-25.035-43.37 8.173-14.447 16.721-28.677 24.738-43.207 22.591-.368 45.21.029 67.803-.223-2.98-5.157-5.97-10.367-8.861-15.384-24.482.03-46.52.039-67.814 0C22.739 28.23 11.133 48.177 0 67.335c11.717 20.361 24.039 41.742 34.001 59.188 22.553-.137 45.106-.023 67.663-.017z" fill="url(#_Linear1)" fill-rule="nonzero" transform="translate(12 11.996) scale(7.38187)"></path><path d="M1184.275 676.955v-48.5c5.5 5 12 9.5 20 13 7.5 4 16 7.5 24.5 10 8.5 3 17 5 25.5 6.5s16.5 2 24 2c25.5 0 44-4.5 56.5-14s18.5-23 18.5-40.5c0-9.5-2-17.5-6-24.5s-10-13.5-17-19.5c-7.5-5.5-16-11-26-16.5-10-5-21-10.5-32.5-16.5-12.5-6.5-23.5-12.5-34-19-11-6-20-13-28-21-7.5-7.5-14-16-18.5-26-4-9.5-6.5-21-6.5-34 0-16 3.5-30 10.5-41.5 7-12 16-21.5 27.5-29.5 11.5-7.5 24.5-13 39-17 14.5-3.5 29.5-5.5 44.5-5.5 34.5 0 60 4 75.5 12.5v46c-20.5-14-47-21.5-79.5-21.5-9 0-18 1-27 3s-17 5-24 9c-7 4.5-12.5 10-17 16.5s-6.5 15-6.5 24.5c0 9 1.5 16.5 5 23s8.5 12.5 15 18 14 10.5 23.5 15.5 20 10.5 32.5 16.5c12.5 6.5 24.5 13 35.5 19.5 11.5 7 21 14.5 29.5 23 8.5 8 15.5 17.5 20.5 27.5 4.5 10 7 21.5 7 34.5 0 17.5-3 32-10 44-6.5 12-16 21.5-27.5 29s-24.5 13-39.5 16.5c-15 3-30.5 5-47.5 5-5.5 0-12-.5-20.5-1.5-8-1-16.5-2-24.5-4-8.5-1.5-16.5-3.5-24.5-6-7.5-3-13.5-5.5-18-8.5zM1466.404 340.955h41v350h-41zM1840.954 690.955h-50l-80.5-134c-2.5-4-5-10-8-17.5h-1c-1.5 4-4.5 9.5-8.5 17.5l-83 134h-50l117-176-108-174h50.5l71.5 123c4.5 8 9 16 12.5 24.5h1c5-11 9.5-19.5 13.5-25.5l74.5-122h47l-110 173.5 111.5 176.5zM2212.844 690.955h-181.5v-350h41v313h140.5v37zM2552.344 690.955h-45.5l-37-98h-148.5l-35 98h-45.5l134-350h42.5l135 350zm-96-135l-55-149c-2-5-3.5-13-5.5-23.5h-1c-1.5 10-3.5 17.5-5.5 23.5l-54.5 149h121.5zM2603.854 690.955v-350h99.5c30.5 0 54.5 7.5 72 22 18 15 26.5 34 26.5 58 0 20-5 37-16 51.5-10.5 15-25.5 25.5-44.5 31.5v1c23.5 2.5 42.5 11.5 56.5 26.5 14.5 15.5 21.5 35 21.5 59 0 30-11 54-32.5 72.5-21 18.5-48.5 28-81 28h-102zm41-313v113h42c22.5 0 40-5.5 53-16 12.5-11 19-26.5 19-46 0-34-22-51-67-51h-47zm0 150v126h55.5c24 0 43-6 56-17 13.5-11.5 20-27 20-47 0-41.5-28-62-84.5-62h-47zM3031.474 696.955c-49.5 0-89.5-16.5-119.5-49-29.5-33-44.5-75.5-44.5-128 0-56 15-101 45.5-134.5s72-50.5 124.5-50.5c48 0 87 16.5 116.5 49s44.5 75 44.5 127.5c0 57-15 102.5-45.5 135.5-30 33.5-70.5 50-121.5 50zm3-325c-37 0-66.5 13.5-89.5 40s-34.5 61.5-34.5 104.5 11 78 33.5 104c22.5 26.5 51.5 39.5 87.5 39.5 38.5 0 68.5-12.5 91-37.5 22-25 33-60 33-105.5 0-46-10.5-82-32-107s-51.5-38-89-38zM3518.424 690.955h-49l-58.5-98c-5.5-9.5-10.5-17-15.5-23.5s-10.5-11.5-15.5-15.5c-5.5-4.5-11-7-17.5-9-6-2-12.5-3-20.5-3h-33.5v149h-41v-350h104.5c15 0 29.5 2 42 5.5 13 4 24.5 10 34 17.5 9.5 8 17 17.5 22.5 29.5 5 11.5 8 25 8 40.5 0 12.5-2 23.5-5.5 33.5-4 10.5-9 19.5-16 27.5-6.5 8-14.5 14.5-24 20.5-9.5 5.5-20.5 10-32.5 13v1c6 2.5 11 5.5 15.5 9 4.5 3 8.5 7 12.5 11.5 3.5 4.5 7.5 10 11.5 15.5 3.5 6 8 12.5 12.5 20.5l66 105zm-210-313v127h55.5c10.5 0 20-1.5 28.5-4.5 8.5-3.5 16.5-7.5 22.5-13.5 6.5-6 11.5-13 15-21 3.5-8.5 5.5-18 5.5-28.5 0-18.5-6-33-18.5-43.5-12-10.5-29.5-16-52.5-16h-56zM3549.994 676.955v-48.5c5.5 5 12 9.5 20 13 7.5 4 16 7.5 24.5 10 8.5 3 17 5 25.5 6.5s16.5 2 24 2c25.5 0 44-4.5 56.5-14s18.5-23 18.5-40.5c0-9.5-2-17.5-6-24.5s-10-13.5-17-19.5c-7.5-5.5-16-11-26-16.5-10-5-21-10.5-32.5-16.5-12.5-6.5-23.5-12.5-34-19-11-6-20-13-28-21-7.5-7.5-14-16-18.5-26-4-9.5-6.5-21-6.5-34 0-16 3.5-30 10.5-41.5 7-12 16-21.5 27.5-29.5 11.5-7.5 24.5-13 39-17 14.5-3.5 29.5-5.5 44.5-5.5 34.5 0 60 4 75.5 12.5v46c-20.5-14-47-21.5-79.5-21.5-9 0-18 1-27 3s-17 5-24 9c-7 4.5-12.5 10-17 16.5s-6.5 15-6.5 24.5c0 9 1.5 16.5 5 23s8.5 12.5 15 18 14 10.5 23.5 15.5 20 10.5 32.5 16.5c12.5 6.5 24.5 13 35.5 19.5 11.5 7 21 14.5 29.5 23 8.5 8 15.5 17.5 20.5 27.5 4.5 10 7 21.5 7 34.5 0 17.5-3 32-10 44-6.5 12-16 21.5-27.5 29s-24.5 13-39.5 16.5c-15 3-30.5 5-47.5 5-5.5 0-12-.5-20.5-1.5-8-1-16.5-2-24.5-4-8.5-1.5-16.5-3.5-24.5-6-7.5-3-13.5-5.5-18-8.5z" fill-rule="nonzero"></path><defs><lineargradient id="_Linear1" x1="0" y1="0" x2="1" y2="0" gradientunits="userSpaceOnUse" gradienttransform="rotate(-44.975 163.14 67.262) scale(190.278)"><stop offset="0" stop-color="#9f1923"></stop><stop offset="1" stop-color="#e30183"></stop></lineargradient></defs>
+             </svg>
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="SixLabors.Fonts.Tables.AdvancedTypographic.KnownFeatureTags">
+
+
+
+
+  <h1 id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags" data-uid="SixLabors.Fonts.Tables.AdvancedTypographic.KnownFeatureTags" class="text-break">
+Enum KnownFeatureTags  <a class="header-action link-secondary" title="View source" href="https://github.com/SixLabors/Fonts/blob/main/src/SixLabors.Fonts/Tables/AdvancedTypographic/KnownFeatureTags.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="SixLabors.html">SixLabors</a>.<a class="xref" href="SixLabors.Fonts.html">Fonts</a>.<a class="xref" href="SixLabors.Fonts.Tables.html">Tables</a>.<a class="xref" href="SixLabors.Fonts.Tables.AdvancedTypographic.html">AdvancedTypographic</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>SixLabors.Fonts.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Provides enumeration for the different font features.
+<a href="https://docs.microsoft.com/en-us/typography/opentype/spec/featuretags">https://docs.microsoft.com/en-us/typography/opentype/spec/featuretags</a></p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public enum KnownFeatureTags : uint</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h2 id="fields">Fields
+</h2>
+  <dl class="parameters">
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_AboveBaseForms"><code>AboveBaseForms = 1633842790</code></dt>
+  
+  <dd><p>Above-base Forms. Shortcode: abvf.
+Substitutes the above-base form of a vowel.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_AboveBaseMarkPositioning"><code>AboveBaseMarkPositioning = 1633842797</code></dt>
+  
+  <dd><p>Above-base Mark Positioning. Shortcode: abvm.
+Positions marks above base glyphs.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_AboveBaseSubstitutions"><code>AboveBaseSubstitutions = 1633842803</code></dt>
+  
+  <dd><p>Above-base Substitutions. Shortcode: abvs.
+Substitutes a ligature for a base glyph and mark that’s above it.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_AccessAllAlternates"><code>AccessAllAlternates = 1633774708</code></dt>
+  
+  <dd><p>Access All Alternates. Shortcode: aalt.
+This feature makes all variations of a selected character accessible. This serves several purposes: An application may not support the feature by which the desired glyph would normally be accessed;
+the user may need a glyph outside the context supported by the normal substitution, or the user may not know what feature produces the desired glyph.
+Since many-to-one substitutions are not covered, ligatures would not appear in this table unless they were variant forms of another ligature.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_Akhand"><code>Akhand = 1634429038</code></dt>
+  
+  <dd><p>Akhand. Shortcode: akhn.
+Preferentially substitutes a sequence of characters with a ligature. This substitution is done irrespective of any characters that may precede or follow the sequence.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_AlternateAnnotationForms"><code>AlternateAnnotationForms = 1851878516</code></dt>
+  
+  <dd><p>Alternate Annotation Forms. Shortcode: nalt.
+Replaces default glyphs with various notational forms (e.g. glyphs placed in open or solid circles, squares, parentheses, diamonds or rounded boxes).
+In some cases an annotation form may already be present, but the user may want a different one.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_AlternateHalfWidths"><code>AlternateHalfWidths = 1751215220</code></dt>
+  
+  <dd><p>Alternate Half Widths. Shortcode: halt.
+Respaces glyphs designed to be set on full-em widths, fitting them onto half-em widths. This differs from 'hwid' in that it does not substitute new glyphs.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_AlternateVerticalHalfMetrics"><code>AlternateVerticalHalfMetrics = 1986552172</code></dt>
+  
+  <dd><p>Alternate Vertical Half Metrics. Shortcode: vhal.
+Respaces glyphs designed to be set on full-em heights, fitting them onto half-em heights.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_AlternateVerticalMetrics"><code>AlternateVerticalMetrics = 1986096244</code></dt>
+  
+  <dd><p>Alternate Vertical Metrics. Shortcode: valt.
+Repositions glyphs to visually center them within full-height metrics, for use in vertical setting. Typically applies to full-width Latin glyphs,
+which are aligned on a common horizontal baseline and not rotated when set vertically in CJKV fonts.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_AlternativeFractions"><code>AlternativeFractions = 1634103907</code></dt>
+  
+  <dd><p>Alternative Fractions. Shortccde: afrc.
+Replaces figures separated by a slash with an alternative form.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_BelowBaseForms"><code>BelowBaseForms = 1651275622</code></dt>
+  
+  <dd><p>Below-base Forms. Shortcode: blwf.
+Substitutes the below-base form of a consonant in conjuncts.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_BelowBaseMarkPositioning"><code>BelowBaseMarkPositioning = 1651275629</code></dt>
+  
+  <dd><p>Below-base Mark Positioning. Shortcode: blwm.
+Positions marks below base glyphs.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_BelowBaseSubstitutions"><code>BelowBaseSubstitutions = 1651275635</code></dt>
+  
+  <dd><p>Below-base Substitutions. Shortcode: blws.
+Produces ligatures that comprise of base glyph and below-base forms.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_CapitalSpacing"><code>CapitalSpacing = 1668313968</code></dt>
+  
+  <dd><p>Capital Spacing. Shortcode: cpsp.
+Globally adjusts inter-glyph spacing for all-capital text. Most typefaces contain capitals and lowercase characters, and the capitals are positioned to work with the lowercase.
+When capitals are used for words, they need more space between them for legibility and esthetics.
+This feature would not apply to monospaced designs. Of course the user may want to override this behavior in order to do more pronounced letterspacing for esthetic reasons.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_CaseSensitiveForms"><code>CaseSensitiveForms = 1667330917</code></dt>
+  
+  <dd><p>Case-Sensitive Forms. Shortcode: case.
+Shifts various punctuation marks up to a position that works better with all-capital sequences or sets of lining figures;
+also changes oldstyle figures to lining figures. By default, glyphs in a text face are designed to work with lowercase characters.
+Some characters should be shifted vertically to fit the higher visual center of all-capital or lining text.
+Also, lining figures are the same height (or close to it) as capitals, and fit much better with all-capital text.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_CenteredCjkPunctuation"><code>CenteredCjkPunctuation = 1668309876</code></dt>
+  
+  <dd><p>Centered CJK Punctuation. Shortcode: cpct.
+Centers specific punctuation marks for those fonts that do not include centered and non-centered forms.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_ConjunctFormAfterRo"><code>ConjunctFormAfterRo = 1667654002</code></dt>
+  
+  <dd><p>Conjunct Form After Ro. Shortcode: cfar.
+Substitutes alternate below-base or post-base forms in Khmer script when occurring after conjoined Ro (&quot;Coeng Ra&quot;).</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_ConjunctForms"><code>ConjunctForms = 1667916660</code></dt>
+  
+  <dd><p>Conjunct Forms. Shortcode: cjct.
+Produces conjunct forms of consonants in Indic scripts. This is similar to the Akhands feature, but is applied at a different sequential point in the process of shaping an Indic syllable.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_ContextualAlternates"><code>ContextualAlternates = 1667329140</code></dt>
+  
+  <dd><p>Contextual Alternates. Shortcode: calt.
+In specified situations, replaces default glyphs with alternate forms which provide better joining behavior.
+Used in script typefaces which are designed to have some or all of their glyphs join.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_ContextualLigatures"><code>ContextualLigatures = 1668049255</code></dt>
+  
+  <dd><p>Contextual Ligatures. Shortcode: clig.
+Replaces a sequence of glyphs with a single glyph which is preferred for typographic purposes. Unlike other ligature features, 'clig' specifies the context in which the ligature is recommended.
+This capability is important in some script designs and for swash ligatures.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_ContextualSwash"><code>ContextualSwash = 1668511592</code></dt>
+  
+  <dd><p>Contextual Swash. Shortcode: cswh.
+This feature replaces default character glyphs with corresponding swash glyphs in a specified context. Note that there may be more than one swash alternate for a given character.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_CursivePositioning"><code>CursivePositioning = 1668641395</code></dt>
+  
+  <dd><p>Cursive Positioning. Shortcode: curs.
+In cursive scripts like Arabic, this feature cursively positions adjacent glyphs.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_Denominators"><code>Denominators = 1684959085</code></dt>
+  
+  <dd><p>Denominators. Shortcode: dnom.
+Replaces selected figures which follow a slash with denominator figures.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_DiscretionaryLigatures"><code>DiscretionaryLigatures = 1684826471</code></dt>
+  
+  <dd><p>Discretionary Ligatures. Shortcode: dlig.
+Replaces a sequence of glyphs with a single glyph which is preferred for typographic purposes.
+This feature covers those ligatures which may be used for special effect, at the user’s preference.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_Distances"><code>Distances = 1684632436</code></dt>
+  
+  <dd><p>Distances. Shortcode: dist.
+Provides a means to control distance between glyphs.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_DotlessForms"><code>DotlessForms = 1685351539</code></dt>
+  
+  <dd><p>Dotless Forms. Shortcode: dtls.
+This feature provides dotless forms for Math Alphanumeric characters, such as U+1D422 MATHEMATICAL BOLD SMALL I, U+1D423 MATHEMATICAL BOLD SMALL J,
+U+1D456 U+MATHEMATICAL ITALIC SMALL I, U+1D457 MATHEMATICAL ITALIC SMALL J, and so on. The dotless forms are to be used as base forms for placing mathematical accents over them.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_ExpertForms"><code>ExpertForms = 1702391924</code></dt>
+  
+  <dd><p>Expert Forms. Shortcode: expt.
+Like the JIS78 Forms feature, this feature replaces standard forms in Japanese fonts with corresponding forms preferred by typographers.
+Although most of the JIS78 substitutions are included, the expert substitution goes on to handle many more characters.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_FinalGlyphOnLineAlternates"><code>FinalGlyphOnLineAlternates = 1717660788</code></dt>
+  
+  <dd><p>Final Glyph on Line Alternates. Shortcode: falt.
+Replaces line final glyphs with alternate forms specifically designed for this purpose (they would have less or more advance width as need may be), to help justification of text.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_FlattenedAscentForms"><code>FlattenedAscentForms = 1718378851</code></dt>
+  
+  <dd><p>Flattened ascent forms. Shortcode: flac.
+This feature provides flattened forms of accents to be used over high-rise bases such as capitals.
+This feature should only change the shape of the accent and should not move it in the vertical or horizontal direction.
+Moving of the accents is done by the math handling client. Accents are flattened by the Math engine if their base is higher than MATH.MathConstants.FlattenedAccentBaseHeight.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_Fractions"><code>Fractions = 1718772067</code></dt>
+  
+  <dd><p>Fractions. Shortcode: frac.
+Replaces figures separated by a slash with &quot;common&quot; (diagonal) fractions.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_FullWidths"><code>FullWidths = 1719101796</code></dt>
+  
+  <dd><p>Full Widths. Shortcode: fwid.
+Replaces glyphs set on other widths with glyphs set on full (usually em) widths. In a CJKV font, this may include &quot;lower ASCII&quot; Latin characters and various symbols.
+In a European font, this feature replaces proportionally-spaced glyphs with monospaced glyphs, which are generally set on widths of 0.6 em.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_GlyphCompositionDecomposition"><code>GlyphCompositionDecomposition = 1667460464</code></dt>
+  
+  <dd><p>Glyph Composition/Decomposition. Shortcode: ccmp.
+To minimize the number of glyph alternates, it is sometimes desirable to decompose the default glyph for a character into two or more glyphs.
+Additionally, it may be preferable to compose default glyphs for two or more characters into a single glyph for better glyph processing.
+This feature permits such composition/decomposition. The feature should be processed as the first feature processed, and should be processed only when it is called.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_HalantForms"><code>HalantForms = 1751215214</code></dt>
+  
+  <dd><p>Halant Forms. Shortcode: haln.
+Produces the halant forms of consonants in Indic scripts.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_HalfForms"><code>HalfForms = 1751215206</code></dt>
+  
+  <dd><p>Half Forms. Shortcode: half.
+Produces the half forms of consonants in Indic scripts.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_HalfWidths"><code>HalfWidths = 1752656228</code></dt>
+  
+  <dd><p>Half Widths. Shortcode: hwid.
+Replaces glyphs on proportional widths, or fixed widths other than half an em, with glyphs on half-em (en) widths. Many CJKV fonts have glyphs which are set on multiple widths; this feature selects the half-em version.
+There are various contexts in which this is the preferred behavior, including compatibility with older desktop documents.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_Hangul"><code>Hangul = 1752065900</code></dt>
+  
+  <dd><p>Hangul. Shortcode: hngl.
+Replaces hanja (Chinese-style) Korean characters with the corresponding hangul (syllabic) characters. This effectively reverses the standard input method,
+in which hangul are entered and replaced by hanja. Many of these substitutions are one-to-one (GSUB lookup type 1),
+but hanja substitution often requires the user to choose from several possible hangul characters (GSUB lookup type 3).</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_HistoricalForms"><code>HistoricalForms = 1751741300</code></dt>
+  
+  <dd><p>Historical Forms. Shortcode: hist.
+Some letterforms were in common use in the past, but appear anachronistic today. The best-known example is the long form of s; others would include the old Fraktur k.
+Some fonts include the historical forms as alternates, so they can be used for a &quot;period&quot; effect. This feature replaces the default (current) forms with the historical alternates.
+While some ligatures are also used for historical effect, this feature deals only with single characters.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_HistoricalLigatures"><code>HistoricalLigatures = 1751935335</code></dt>
+  
+  <dd><p>Historical Ligatures. Shortcode: hlig.
+Some ligatures were in common use in the past, but appear anachronistic today. Some fonts include the historical forms as alternates, so they can be used for a &quot;period&quot; effect.
+This feature replaces the default (current) forms with the historical alternates.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_HojoKanjiForms"><code>HojoKanjiForms = 1752132207</code></dt>
+  
+  <dd><p>Hojo Kanji Forms (JIS X 0212-1990 Kanji Forms). Shortcode: hojo.
+The JIS X 0212-1990 (aka, &quot;Hojo Kanji&quot;) and JIS X 0213:2004 character sets overlap significantly.
+In some cases their prototypical glyphs differ. When building fonts that support both JIS X 0212-1990 and JIS X 0213:2004 (such as those supporting the Adobe-Japan 1-6 character collection),
+it is recommended that JIS X 0213:2004 forms be preferred as the encoded form. The 'hojo' feature is used to access the JIS X 0212-1990 glyphs for the cases when the JIS X 0213:2004 form is encoded.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_HorizontalKanaAlternates"><code>HorizontalKanaAlternates = 1751871073</code></dt>
+  
+  <dd><p>Horizontal Kana Alternates. Shortcode: hkna.
+Replaces standard kana with forms that have been specially designed for only horizontal writing. This is a typographic optimization for improved fit and more even color. Also see 'vkna'.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_InitialForms"><code>InitialForms = 1768843636</code></dt>
+  
+  <dd><p>Initial Forms. Shortcode: init.
+Replaces glyphs for characters that have applicable joining properties with an alternate form when occurring in an initial context.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_IsolatedForms"><code>IsolatedForms = 1769172844</code></dt>
+  
+  <dd><p>Isolated Forms. Shortcode: isol.
+Replaces glyphs for characters that have applicable joining properties with an alternate form when occurring in a isolate (non-joining) context.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_Italics"><code>Italics = 1769234796</code></dt>
+  
+  <dd><p>Italics. Shortcode: ital.
+Some fonts (such as Adobe’s Pro Japanese fonts) will have both Roman and Italic forms of some characters in a single font.
+This feature replaces the Roman glyphs with the corresponding Italic glyphs.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_Jis2004"><code>Jis2004 = 1785737268</code></dt>
+  
+  <dd><p>JIS2004 Forms. Shortcode: jp04.
+The National Language Council (NLC) of Japan has defined new glyph shapes for a number of JIS characters, which were incorporated into JIS X 0213:2004 as new prototypical forms.
+The 'jp04' feature is a subset of the 'nlck' feature, and is used to access these prototypical glyphs in a manner that maintains the integrity of JIS X 0213:2004.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_Jis78Forms"><code>Jis78Forms = 1785739064</code></dt>
+  
+  <dd><p>JIS78 Forms. Shortcode: jp78.
+This feature replaces default (JIS90) Japanese glyphs with the corresponding forms from the JIS C 6226-1978 (JIS78) specification.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_Jis83Forms"><code>Jis83Forms = 1785739315</code></dt>
+  
+  <dd><p>JIS83 Forms. Shortcode: jp83.
+This feature replaces default (JIS90) Japanese glyphs with the corresponding forms from the JIS X 0208-1983 (JIS83) specification.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_Jis90Forms"><code>Jis90Forms = 1785739568</code></dt>
+  
+  <dd><p>JIS90 Forms. Shortcode: jp90.
+This feature replaces Japanese glyphs from the JIS78 or JIS83 specifications with the corresponding forms from the JIS X 0208-1990 (JIS90) specification.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_JustificationAlternates"><code>JustificationAlternates = 1784769652</code></dt>
+  
+  <dd><p>Justification Alternates. Shortcode: jalt.
+Improves justification of text by replacing glyphs with alternate forms specifically designed for this purpose (they would have less or more advance width as need may be).</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_Kerning"><code>Kerning = 1801810542</code></dt>
+  
+  <dd><p>Kerning. Shortcode: kern.
+Adjusts amount of space between glyphs, generally to provide optically consistent spacing between glyphs.
+Although a well-designed typeface has consistent inter-glyph spacing overall, some glyph combinations require adjustment for improved legibility.
+Besides standard adjustment in the horizontal direction, this feature can supply size-dependent kerning data via device tables, &quot;cross-stream&quot; kerning in the Y text direction,
+and adjustment of glyph placement independent of the advance adjustment. Note that this feature may apply to runs of more than two glyphs, and would not be used in monospaced fonts.
+Also note that this feature does not apply to text set vertically.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_LeadingJamoForms"><code>LeadingJamoForms = 1818914159</code></dt>
+  
+  <dd><p>Leading Jamo Forms. Shortcode: ljmo.
+Substitutes the leading jamo form of a cluster.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_LeftBounds"><code>LeftBounds = 1818649188</code></dt>
+  
+  <dd><p>Left Bounds. Shortcode: lfbd.
+Aligns glyphs by their apparent left extents at the left ends of horizontal lines of text, replacing the default behavior of aligning glyphs by their origins.
+This feature is called by the Optical Bounds ('opbd') feature.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_LeftToRightGlyphAlternates"><code>LeftToRightGlyphAlternates = 1819570785</code></dt>
+  
+  <dd><p>Left-to-right glyph alternates. Shortcode: ltra.
+This feature applies glyphic variants (other than mirrored forms) appropriate for left-to-right text (for mirrored forms, see 'ltrm').</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_LeftToRightMirroredForms"><code>LeftToRightMirroredForms = 1819570797</code></dt>
+  
+  <dd><p>Left-to-right mirrored forms. Shortcode: ltrm.
+This feature applies mirrored forms appropriate for left-to-right text. (For left-to-right glyph alternates, see 'ltra').</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_Ligatures"><code>Ligatures = 1818847073</code></dt>
+  
+  <dd><p>Standard Ligatures. Shortcode: liga.
+Replaces a sequence of glyphs with a single glyph which is preferred for typographic purposes. This feature covers the ligatures which the designer/manufacturer judges should be used in normal conditions.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_LiningFigures"><code>LiningFigures = 1819178349</code></dt>
+  
+  <dd><p>Lining Figures. Shortcode: lnum.
+This feature changes selected non-lining figures to lining figures.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_LocalizedForms"><code>LocalizedForms = 1819239276</code></dt>
+  
+  <dd><p>Localized Forms. Shortcode: locl.
+Many scripts used to write multiple languages over wide geographical areas have developed localized variant forms of specific letters,
+which are used by individual literary communities. For example, a number of letters in the Bulgarian and Serbian alphabets have forms distinct from their Russian counterparts and from each other.
+In some cases the localized form differs only subtly from the script &quot;norm&quot;, in others the forms are radically distinct. This feature enables localized forms of glyphs to be substituted for default forms.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_MarkPositioning"><code>MarkPositioning = 1835102827</code></dt>
+  
+  <dd><p>Mark Positioning. Shortcode: mark.
+Positions mark glyphs with respect to base glyphs.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_MarkToMarkPositioning"><code>MarkToMarkPositioning = 1835756907</code></dt>
+  
+  <dd><p>Mark to Mark Positioning. Shortcode: mkmk.
+Positions marks with respect to other marks. Required in various non-Latin scripts like Arabic.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_MathScriptStyleAlternates"><code>MathScriptStyleAlternates = 1936946297</code></dt>
+  
+  <dd><p>Math script style alternates. Shortcode: ssty.
+This feature provides glyph variants adjusted to be more suitable for use in subscripts and superscripts.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_MathematicalGreek"><code>MathematicalGreek = 1835496043</code></dt>
+  
+  <dd><p>Mathematical Greek. Shortcode: mgrk.
+Replaces standard typographic forms of Greek glyphs with corresponding forms commonly used in mathematical notation (which are a subset of the Greek alphabet).</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_MedialForms"><code>MedialForms = 1835361385</code></dt>
+  
+  <dd><p>Medial Forms. Shortcode: medi
+Replaces glyphs for characters that have applicable joining properties with an alternate form when occurring in a medial context.
+This applies to characters that have the Unicode Joining_Type property value Dual_Joining.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_MedialForms2"><code>MedialForms2 = 1835361330</code></dt>
+  
+  <dd><p>Medial Forms #2. Shortcode: med2.
+Replaces Alaph glyphs in the middle of Syriac words when the preceding base character can be joined to.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_Mset"><code>Mset = 1836279156</code></dt>
+  
+  <dd><p>Shortcode: mset.
+Positions Arabic combining marks in fonts for Windows 95 using glyph substitution.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_NlcKanjiForms"><code>NlcKanjiForms = 1852597099</code></dt>
+  
+  <dd><p>NLC Kanji Forms. Shortcode: nlck.
+The National Language Council (NLC) of Japan has defined new glyph shapes for a number of JIS characters in 2000. The 'nlck' feature is used to access those glyphs.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_NuktaForms"><code>NuktaForms = 1853188980</code></dt>
+  
+  <dd><p>Nukta Forms. Shortcode: nukt.
+Produces Nukta forms in Indic scripts.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_Numerators"><code>Numerators = 1853189490</code></dt>
+  
+  <dd><p>Numerators. Shortcode: numr.
+Replaces selected figures which precede a slash with numerator figures, and replaces the typographic slash with the fraction slash.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_OldstyleFigures"><code>OldstyleFigures = 1869509997</code></dt>
+  
+  <dd><p>Oldstyle Figures. Shortcode: onum.
+This feature changes selected figures from the default or lining style to oldstyle form.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_OpticalBounds"><code>OpticalBounds = 1869636196</code></dt>
+  
+  <dd><p>Optical Bounds. Shortcode: opbd.
+Aligns glyphs by their apparent left or right extents in horizontal setting, or apparent top or bottom extents in vertical setting,
+replacing the default behavior of aligning glyphs by their origins. Another name for this behavior would be visual justification.
+The optical edge of a given glyph is only indirectly related to its advance width or bounding box; this feature provides a means for getting true visual alignment.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_OpticalSize"><code>OpticalSize = 1936292453</code></dt>
+  
+  <dd><p>Optical size. Shortcode: size.
+This feature stores two kinds of information about the optical size of the font: design size
+(the point size for which the font is optimized) and size range (the range of point sizes which the font can serve well),
+as well as other information which helps applications use the size range. The design size is useful for determining proper tracking behavior.
+The size range is useful in families which have fonts covering several ranges. Additional values serve to identify the set of fonts which share related size ranges,
+and to identify their shared name. Note that sizes refer to nominal final output size, and are independent of viewing magnification or resolution.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_Ordinals"><code>Ordinals = 1869767790</code></dt>
+  
+  <dd><p>Ordinals. Shortcode: ordn.
+Replaces default alphabetic glyphs with the corresponding ordinal forms for use after figures. One exception to the follows-a-figure rule is the numero character (U+2116),
+which is actually a ligature substitution, but is best accessed through this feature.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_Ornaments"><code>Ornaments = 1869770349</code></dt>
+  
+  <dd><p>Ornaments. Shortcode: ornm.
+This is a dual-function feature, which uses two input methods to give the user access to ornament glyphs (e.g. fleurons, dingbats and border elements) in the font.
+One method replaces the bullet character with a selection from the full set of available ornaments;
+the other replaces specific &quot;lower ASCII&quot; characters with ornaments assigned to them. The first approach supports the general or browsing user;
+the second supports the power user.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_PetiteCapitals"><code>PetiteCapitals = 1885561200</code></dt>
+  
+  <dd><p>Petite Capitals. Shortcode: pcap.
+Some fonts contain an additional size of capital letters, shorter than the regular smallcaps and whimsically referred to as petite caps.
+Such forms are most likely to be found in designs with a small lowercase x-height, where they better harmonise with lowercase text than
+the taller smallcaps (for examples of petite caps, see the Emigre type families Mrs Eaves and Filosofia). This feature turns lowercase characters into petite capitals.
+Forms related to petite capitals, such as specially designed figures, may be included.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_PetiteCapitalsFromCapitals"><code>PetiteCapitalsFromCapitals = 1664249955</code></dt>
+  
+  <dd><p>Petite Capitals From Capitals. Shortcode: c2pc.
+This feature turns capital characters into petite capitals. It is generally used for words which would otherwise be set in all caps, such as acronyms,
+but which are desired in petite-cap form to avoid disrupting the flow of text. See the 'pcap' feature description for notes on the relationship of caps,
+smallcaps and petite caps.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_PostBaseForms"><code>PostBaseForms = 1886614630</code></dt>
+  
+  <dd><p>Post-base Forms. Shortcode: pstf.
+Substitutes the post-base form of a consonant.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_PostBaseSubstitutions"><code>PostBaseSubstitutions = 1886614643</code></dt>
+  
+  <dd><p>Post-base Substitutions. Shortcode: psts.
+Substitutes a sequence of a base glyph and post-base glyph, with its ligaturised form.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_PreBaseForms"><code>PreBaseForms = 1886545254</code></dt>
+  
+  <dd><p>Pre-base Forms. Shortcode: pref.
+Substitutes the pre-base form of a consonant.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_PreBaseSubstitutions"><code>PreBaseSubstitutions = 1886545267</code></dt>
+  
+  <dd><p>Pre-base Substitutions. Shortcode: pres.
+Produces the pre-base forms of conjuncts in Indic scripts. It can also be used to substitute the appropriate glyph variant for pre-base vowel signs.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_ProportionalAlternateVerticalMetrics"><code>ProportionalAlternateVerticalMetrics = 1987076460</code></dt>
+  
+  <dd><p>Proportional Alternate Vertical Metrics. Shortcode: vpal.
+Respaces glyphs designed to be set on full-em heights, fitting them onto individual (more or less proportional) vertical heights. This differs from 'valt' in that it does not substitute new glyphs (GPOS, not GSUB feature).
+The user may prefer the monospaced form, or may simply want to ensure that the glyph is well-fit.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_ProportionalAlternateWidths"><code>ProportionalAlternateWidths = 1885432948</code></dt>
+  
+  <dd><p>Proportional Alternate Widths. Shortcode: palt.
+Respaces glyphs designed to be set on full-em widths, fitting them onto individual (more or less proportional) horizontal widths.
+This differs from 'pwid' in that it does not substitute new glyphs (GPOS, not GSUB feature). The user may prefer the monospaced form,
+or may simply want to ensure that the glyph is well-fit and not rotated in vertical setting (Latin forms designed for proportional spacing would be rotated).</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_ProportionalFigures"><code>ProportionalFigures = 1886287213</code></dt>
+  
+  <dd><p>Proportional Figures. Shortcode: pnum.
+Replaces figure glyphs set on uniform (tabular) widths with corresponding glyphs set on glyph-specific (proportional) widths.
+Tabular widths will generally be the default, but this cannot be safely assumed. Of course this feature would not be present in monospaced designs.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_ProportionalKana"><code>ProportionalKana = 1886088801</code></dt>
+  
+  <dd><p>Proportional Kana. Shortcode: pkna.
+Replaces glyphs, kana and kana-related, set on uniform widths (half or full-width) with proportional glyphs.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_ProportionalWidths"><code>ProportionalWidths = 1886873956</code></dt>
+  
+  <dd><p>Proportional Widths. Shortcode: pwid.
+Replaces glyphs set on uniform widths (typically full or half-em) with proportionally spaced glyphs.
+The proportional variants are often used for the Latin characters in CJKV fonts, but may also be used for Kana in Japanese fonts.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_QuarterWidths"><code>QuarterWidths = 1903651172</code></dt>
+  
+  <dd><p>Quarter Widths. Shortcode: qwid.
+Replaces glyphs on other widths with glyphs set on widths of one quarter of an em (half an en). The characters involved are normally figures and some forms of punctuation.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_RakarForms"><code>RakarForms = 1919644262</code></dt>
+  
+  <dd><p>Rakar Forms. Shortcode: rkrf.
+Produces conjoined forms for consonants with rakar in Devanagari and Gujarati scripts.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_Randomize"><code>Randomize = 1918987876</code></dt>
+  
+  <dd><p>Randomize. Shortcode: rand.
+In order to emulate the irregularity and variety of handwritten text, this feature allows multiple alternate forms to be used.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_RephForm"><code>RephForm = 1919969382</code></dt>
+  
+  <dd><p>Reph Form. Shortcode: rphf.
+Substitutes the Reph form for a consonant and halant sequence.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_RequiredContextualAlternates"><code>RequiredContextualAlternates = 1919118452</code></dt>
+  
+  <dd><p>Required Contextual Alternates. Shortcode: rclt.
+In specified situations, replaces default glyphs with alternate forms which provide for better joining behavior or other glyph relationships.
+Especially important in script typefaces which are designed to have some or all of their glyphs join, but applicable also to e.g. variants to improve spacing.
+This feature is similar to 'calt', but with the difference that it should not be possible to turn off 'rclt' substitutions: they are considered essential to correct layout of the font.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_RequiredLigatures"><code>RequiredLigatures = 1919707495</code></dt>
+  
+  <dd><p>Required Ligatures. Shortcode: rlig.
+Replaces a sequence of glyphs with a single glyph which is preferred for typographic purposes. This feature covers those ligatures, which the script determines as required to be used in normal conditions.
+This feature is important for some scripts to insure correct glyph formation.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_RequiredVariationAlternates"><code>RequiredVariationAlternates = 1920365166</code></dt>
+  
+  <dd><p>Required Variation Alternates. Shortcode: rvrn.
+his feature is used in fonts that support OpenType Font Variations in order to select alternate glyphs for particular variation instances.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_RightBounds"><code>RightBounds = 1920229988</code></dt>
+  
+  <dd><p>Right Bounds. Shortcode: rtbd.
+Aligns glyphs by their apparent right extents at the right ends of horizontal lines of text, replacing the default behavior of aligning glyphs by their origins.
+This feature is called by the Optical Bounds ('opbd') feature.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_RightToLeftAlternates"><code>RightToLeftAlternates = 1920232545</code></dt>
+  
+  <dd><p>Right-to-left alternates. Shortcode: rtla.
+This feature applies glyphic variants (other than mirrored forms) appropriate for right-to-left text. (For mirrored forms, see 'rtlm'.)</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_RightToLeftMirroredForms"><code>RightToLeftMirroredForms = 1920232557</code></dt>
+  
+  <dd><p>Right-to-left mirrored forms. Shortcode: rtlm.
+This feature applies mirrored forms appropriate for right-to-left text other than for those characters that would be covered by the character-level mirroring step performed by an OpenType layout engine.
+(For right-to-left glyph alternates, see 'rtla'.)</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_RubyNotationForms"><code>RubyNotationForms = 1920295545</code></dt>
+  
+  <dd><p>Ruby Notation Forms. Shortcode: ruby.
+Japanese typesetting often uses smaller kana glyphs, generally in superscripted form, to clarify the meaning of kanji which may be unfamiliar to the reader.
+These are called &quot;ruby&quot;, from the old typesetting term for four-point-sized type. This feature identifies glyphs in the font which have been designed for this use,
+substituting them for the default designs.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_ScientificInferiors"><code>ScientificInferiors = 1936289382</code></dt>
+  
+  <dd><p>Scientific Inferiors. Shortcode: sinf.
+Replaces lining or oldstyle figures with inferior figures (smaller glyphs which sit lower than the standard baseline, primarily for chemical or mathematical notation).
+May also replace lowercase characters with alphabetic inferiors.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_SimplifiedForms"><code>SimplifiedForms = 1936552044</code></dt>
+  
+  <dd><p>Simplified Forms. Shortcode: smpl.
+Replaces &quot;traditional&quot; Chinese or Japanese forms with the corresponding &quot;simplified&quot; forms.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_SlashedZero"><code>SlashedZero = 2053468783</code></dt>
+  
+  <dd><p>Slashed Zero. Shortcode: zero.
+Some fonts contain both a default form of zero, and an alternative form which uses a diagonal slash through the counter. Especially in condensed designs, it can be difficult to distinguish between 0 and O (zero and capital O) in any situation where capitals and lining figures may be arbitrarily mixed.
+This feature allows the user to change from the default 0 to a slashed form.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_SmallCapitals"><code>SmallCapitals = 1936548720</code></dt>
+  
+  <dd><p>Small Capitals. Shortcode: smcp.
+This feature turns lowercase characters into small capitals. This corresponds to the common SC font layout. It is generally used for display lines set in Large and small caps, such as titles.
+Forms related to small capitals, such as oldstyle figures, may be included.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_SmallCapitalsFromCapitals"><code>SmallCapitalsFromCapitals = 1664250723</code></dt>
+  
+  <dd><p>Small Capitals From Capitals. Shortcode: c2sc.
+This feature turns capital characters into small capitals. It is generally used for words which would otherwise be set in all caps,
+such as acronyms, but which are desired in small-cap form to avoid disrupting the flow of text.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_StretchingGlyphDecomposition"><code>StretchingGlyphDecomposition = 1937007464</code></dt>
+  
+  <dd><p>Stretching Glyph Decomposition. Shortcode: stch.
+Unicode characters, such as the Syriac Abbreviation Mark (U+070F), that enclose other characters need to be able
+to stretch in order to dynamically adapt to the width of the enclosed text. This feature defines a decomposition set
+consisting of an odd number of glyphs which describe the stretching glyph. The odd numbered glyphs in the decomposition are
+fixed reference points which are distributed evenly from the start to the end of the enclosed text. The even numbered glyphs may
+be repeated as necessary to fill the space between the fixed glyphs. The first and last glyphs may either be simple glyphs with width at the baseline,
+or mark glyphs. All other decomposition glyphs should have width, but must be defined as mark glyphs.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_StylisticAlternates"><code>StylisticAlternates = 1935764596</code></dt>
+  
+  <dd><p>Stylistic Alternates. Shortcode: salt.
+Many fonts contain alternate glyph designs for a purely esthetic effect; these don’t always fit into a clear category like swash or historical.
+As in the case of swash glyphs, there may be more than one alternate form. This feature replaces the default forms with the stylistic alternates.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_Subscript"><code>Subscript = 1937072755</code></dt>
+  
+  <dd><p>Subscript. Shortcode: subs.
+The 'subs' feature may replace a default glyph with a subscript glyph, or it may combine a glyph substitution with positioning adjustments for proper placement.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_Superscript"><code>Superscript = 1937076339</code></dt>
+  
+  <dd><p>Superscript. Shortcode: sups.
+Replaces lining or oldstyle figures with superior figures (primarily for footnote indication), and replaces lowercase letters with superior letters (primarily for abbreviated French titles).</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_Swash"><code>Swash = 1937208168</code></dt>
+  
+  <dd><p>Swash. Shortcode: swsh.
+This feature replaces default character glyphs with corresponding swash glyphs. Note that there may be more than one swash alternate for a given character.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_TabularFigures"><code>TabularFigures = 1953396077</code></dt>
+  
+  <dd><p>Tabular Figures. Shortcode: tnum.
+Replaces figure glyphs set on proportional widths with corresponding glyphs set on uniform (tabular) widths.
+Tabular widths will generally be the default, but this cannot be safely assumed. Of course this feature would not be present in monospaced designs.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_TerminalForm2"><code>TerminalForm2 = 1718185522</code></dt>
+  
+  <dd><p>Terminal Form #2. Shortcode: fin2.
+Replaces the Alaph glyph at the end of Syriac words with its appropriate form, when the preceding base character cannot be joined to,
+and that preceding base character is not a Dalath, Rish, or dotless Dalath-Rish.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_TerminalForm3"><code>TerminalForm3 = 1718185523</code></dt>
+  
+  <dd><p>Terminal Form #3.  Shortcode: fin3.
+Replaces Alaph glyphs at the end of Syriac words when the preceding base character is a Dalath, Rish, or dotless Dalath-Rish.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_TerminalForms"><code>TerminalForms = 1718185569</code></dt>
+  
+  <dd><p>Terminal Forms. Shortcode: fina.
+Replaces glyphs for characters that have applicable joining properties with an alternate form when occurring in a final context.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_ThirdWidths"><code>ThirdWidths = 1953982820</code></dt>
+  
+  <dd><p>Third Widths. Shortcode: twid.
+Replaces glyphs on other widths with glyphs set on widths of one third of an em. The characters involved are normally figures and some forms of punctuation.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_Titling"><code>Titling = 1953068140</code></dt>
+  
+  <dd><p>Titling. Shortcode: titl.
+This feature replaces the default glyphs with corresponding forms designed specifically for titling.
+These may be all-capital and/or larger on the body, and adjusted for viewing at larger sizes.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_TraditionalForms"><code>TraditionalForms = 1953653092</code></dt>
+  
+  <dd><p>Traditional Forms. Shortcode: trad.
+Replaces 'simplified' Chinese hanzi or Japanese kanji forms with the corresponding 'traditional' forms.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_TraditionalNameForms"><code>TraditionalNameForms = 1953390957</code></dt>
+  
+  <dd><p>Traditional Name Forms. Shortcode: tnam.
+Replaces &quot;simplified&quot; Japanese kanji forms with the corresponding &quot;traditional&quot; forms. This is equivalent to the Traditional Forms feature,
+but explicitly limited to the traditional forms considered proper for use in personal names (as many as 205 glyphs in some fonts).</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_TrailingJamoForms"><code>TrailingJamoForms = 1953131887</code></dt>
+  
+  <dd><p>Trailing Jamo Forms. Shortcode: tjmo.
+Substitutes the trailing jamo form of a cluster.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_Unicase"><code>Unicase = 1970170211</code></dt>
+  
+  <dd><p>Unicase. Shortcode: unic.
+This feature maps upper- and lowercase letters to a mixed set of lowercase and small capital forms, resulting in a single case alphabet
+(for an example of unicase, see the Emigre type family Filosofia). The letters substituted may vary from font to font, as appropriate to the design.
+If aligning to the x-height, smallcap glyphs may be substituted, or specially designed unicase forms might be used. Substitutions might also include specially designed figures.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_VattuVariants"><code>VattuVariants = 1986098293</code></dt>
+  
+  <dd><p>Vattu Variants. Shortcode: vatu.
+In an Indic consonant conjunct, substitutes a ligature glyph for a base consonant and a following vattu (below-base) form of a conjoining consonant, or for a half form of a consonant and a following vattu form.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_VerticalAlternates"><code>VerticalAlternates = 1986359924</code></dt>
+  
+  <dd><p>Vertical Alternates. Shortcode: vert.
+Transforms default glyphs into glyphs that are appropriate for upright presentation in vertical writing mode.While the glyphs for most
+characters in East Asian writing systems remain upright when set in vertical writing mode, some must be transformed —
+usually by rotation, shifting, or different component ordering — for vertical writing mode.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_VerticalAlternatesAndRotation"><code>VerticalAlternatesAndRotation = 1987212338</code></dt>
+  
+  <dd><p>Vertical Alternates and Rotation. Shortcode: vrt2.
+Replaces some fixed-width (half-, third- or quarter-width) or proportional-width glyphs (mostly Latin or katakana) with forms suitable for vertical writing (that is, rotated 90 degrees clockwise).
+Note that these are a superset of the glyphs covered in the 'vert' table.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_VerticalAlternatesForRotation"><code>VerticalAlternatesForRotation = 1987212402</code></dt>
+  
+  <dd><p>Vertical Alternates for Rotation. Shortcode: vrtr.
+Transforms default glyphs into glyphs that are appropriate for sideways presentation in vertical writing mode.
+While the glyphs for most characters in East Asian writing systems remain upright when set in vertical writing mode, glyphs for other characters —
+such as those of other scripts or for particular Western-style punctuation — are expected to be presented sideways in vertical writing.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_VerticalKanaAlternates"><code>VerticalKanaAlternates = 1986752097</code></dt>
+  
+  <dd><p>Vertical Kana Alternates. Shortcode: vkna.
+Replaces standard kana with forms that have been specially designed for only vertical writing. This is a typographic optimization for improved fit and more even color. Also see 'hkna'.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_VerticalKerning"><code>VerticalKerning = 1986753134</code></dt>
+  
+  <dd><p>Vertical Kerning. Shortcode: vkrn
+Adjusts amount of space between glyphs, generally to provide optically consistent spacing between glyphs.
+Although a well-designed typeface has consistent inter-glyph spacing overall, some glyph combinations require adjustment for improved legibility.
+Besides standard adjustment in the vertical direction, this feature can supply size-dependent kerning data via device tables,
+&quot;cross-stream&quot; kerning in the X text direction, and adjustment of glyph placement independent of the advance adjustment.
+Note that this feature may apply to runs of more than two glyphs, and would not be used in monospaced fonts. Also note that this feature applies only to text set vertically.</p>
+</dd>
+    <dt id="SixLabors_Fonts_Tables_AdvancedTypographic_KnownFeatureTags_VowelJamoForms"><code>VowelJamoForms = 1986686319</code></dt>
+  
+  <dd><p>Vowel Jamo Forms. Shortcode: vjmo.
+Substitutes the vowel jamo form of a cluster.</p>
+</dd>
+  </dl>
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/SixLabors/Fonts/blob/main/src/SixLabors.Fonts/Tables/AdvancedTypographic/KnownFeatureTags.cs/#L10" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

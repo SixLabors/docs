@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Configuration and Pipeline </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Configuration and Pipeline ">
+      
+      
+      <link rel="icon" href="../../public/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/SixLabors/docs/blob/main/articles/imagesharp.web/configuration.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 4000 1024" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" id="logo" class="svg replaced-svg">
+             <path d="M101.664 126.506c11.274-19.548 22.527-39.11 33.803-58.658-5.312-9.375-10.765-18.655-16.09-28.008-22.438-.233-44.867.187-67.3-.22-5.908 9.12-10.942 18.802-16.49 28.161 5.734 9.697 11.157 19.57 16.168 27.872 10.65.109 21.81.214 32.461-.085 4.4-8.459 9.244-16.711 13.993-24.926-5.826-.03-11.679-.096-17.499-.075-1.79 3.143-3.544 6.298-5.308 9.458-4.778.112-9.888.213-14.82.247-2.394-4.108-4.724-8.265-7.177-12.34 2.318-4.41 4.735-8.759 7.458-12.927 16.588.454 33.185-.082 49.779.29 2.27 4.192 4.706 8.28 7.104 12.396-6.08 10.413-20.621 35.18-25.183 42.946-16.675.211-35.01.363-49.625.492-8.383-14.434-16.639-28.942-25.035-43.37 8.173-14.447 16.721-28.677 24.738-43.207 22.591-.368 45.21.029 67.803-.223-2.98-5.157-5.97-10.367-8.861-15.384-24.482.03-46.52.039-67.814 0C22.739 28.23 11.133 48.177 0 67.335c11.717 20.361 24.039 41.742 34.001 59.188 22.553-.137 45.106-.023 67.663-.017z" fill="url(#_Linear1)" fill-rule="nonzero" transform="translate(12 11.996) scale(7.38187)"></path><path d="M1184.275 676.955v-48.5c5.5 5 12 9.5 20 13 7.5 4 16 7.5 24.5 10 8.5 3 17 5 25.5 6.5s16.5 2 24 2c25.5 0 44-4.5 56.5-14s18.5-23 18.5-40.5c0-9.5-2-17.5-6-24.5s-10-13.5-17-19.5c-7.5-5.5-16-11-26-16.5-10-5-21-10.5-32.5-16.5-12.5-6.5-23.5-12.5-34-19-11-6-20-13-28-21-7.5-7.5-14-16-18.5-26-4-9.5-6.5-21-6.5-34 0-16 3.5-30 10.5-41.5 7-12 16-21.5 27.5-29.5 11.5-7.5 24.5-13 39-17 14.5-3.5 29.5-5.5 44.5-5.5 34.5 0 60 4 75.5 12.5v46c-20.5-14-47-21.5-79.5-21.5-9 0-18 1-27 3s-17 5-24 9c-7 4.5-12.5 10-17 16.5s-6.5 15-6.5 24.5c0 9 1.5 16.5 5 23s8.5 12.5 15 18 14 10.5 23.5 15.5 20 10.5 32.5 16.5c12.5 6.5 24.5 13 35.5 19.5 11.5 7 21 14.5 29.5 23 8.5 8 15.5 17.5 20.5 27.5 4.5 10 7 21.5 7 34.5 0 17.5-3 32-10 44-6.5 12-16 21.5-27.5 29s-24.5 13-39.5 16.5c-15 3-30.5 5-47.5 5-5.5 0-12-.5-20.5-1.5-8-1-16.5-2-24.5-4-8.5-1.5-16.5-3.5-24.5-6-7.5-3-13.5-5.5-18-8.5zM1466.404 340.955h41v350h-41zM1840.954 690.955h-50l-80.5-134c-2.5-4-5-10-8-17.5h-1c-1.5 4-4.5 9.5-8.5 17.5l-83 134h-50l117-176-108-174h50.5l71.5 123c4.5 8 9 16 12.5 24.5h1c5-11 9.5-19.5 13.5-25.5l74.5-122h47l-110 173.5 111.5 176.5zM2212.844 690.955h-181.5v-350h41v313h140.5v37zM2552.344 690.955h-45.5l-37-98h-148.5l-35 98h-45.5l134-350h42.5l135 350zm-96-135l-55-149c-2-5-3.5-13-5.5-23.5h-1c-1.5 10-3.5 17.5-5.5 23.5l-54.5 149h121.5zM2603.854 690.955v-350h99.5c30.5 0 54.5 7.5 72 22 18 15 26.5 34 26.5 58 0 20-5 37-16 51.5-10.5 15-25.5 25.5-44.5 31.5v1c23.5 2.5 42.5 11.5 56.5 26.5 14.5 15.5 21.5 35 21.5 59 0 30-11 54-32.5 72.5-21 18.5-48.5 28-81 28h-102zm41-313v113h42c22.5 0 40-5.5 53-16 12.5-11 19-26.5 19-46 0-34-22-51-67-51h-47zm0 150v126h55.5c24 0 43-6 56-17 13.5-11.5 20-27 20-47 0-41.5-28-62-84.5-62h-47zM3031.474 696.955c-49.5 0-89.5-16.5-119.5-49-29.5-33-44.5-75.5-44.5-128 0-56 15-101 45.5-134.5s72-50.5 124.5-50.5c48 0 87 16.5 116.5 49s44.5 75 44.5 127.5c0 57-15 102.5-45.5 135.5-30 33.5-70.5 50-121.5 50zm3-325c-37 0-66.5 13.5-89.5 40s-34.5 61.5-34.5 104.5 11 78 33.5 104c22.5 26.5 51.5 39.5 87.5 39.5 38.5 0 68.5-12.5 91-37.5 22-25 33-60 33-105.5 0-46-10.5-82-32-107s-51.5-38-89-38zM3518.424 690.955h-49l-58.5-98c-5.5-9.5-10.5-17-15.5-23.5s-10.5-11.5-15.5-15.5c-5.5-4.5-11-7-17.5-9-6-2-12.5-3-20.5-3h-33.5v149h-41v-350h104.5c15 0 29.5 2 42 5.5 13 4 24.5 10 34 17.5 9.5 8 17 17.5 22.5 29.5 5 11.5 8 25 8 40.5 0 12.5-2 23.5-5.5 33.5-4 10.5-9 19.5-16 27.5-6.5 8-14.5 14.5-24 20.5-9.5 5.5-20.5 10-32.5 13v1c6 2.5 11 5.5 15.5 9 4.5 3 8.5 7 12.5 11.5 3.5 4.5 7.5 10 11.5 15.5 3.5 6 8 12.5 12.5 20.5l66 105zm-210-313v127h55.5c10.5 0 20-1.5 28.5-4.5 8.5-3.5 16.5-7.5 22.5-13.5 6.5-6 11.5-13 15-21 3.5-8.5 5.5-18 5.5-28.5 0-18.5-6-33-18.5-43.5-12-10.5-29.5-16-52.5-16h-56zM3549.994 676.955v-48.5c5.5 5 12 9.5 20 13 7.5 4 16 7.5 24.5 10 8.5 3 17 5 25.5 6.5s16.5 2 24 2c25.5 0 44-4.5 56.5-14s18.5-23 18.5-40.5c0-9.5-2-17.5-6-24.5s-10-13.5-17-19.5c-7.5-5.5-16-11-26-16.5-10-5-21-10.5-32.5-16.5-12.5-6.5-23.5-12.5-34-19-11-6-20-13-28-21-7.5-7.5-14-16-18.5-26-4-9.5-6.5-21-6.5-34 0-16 3.5-30 10.5-41.5 7-12 16-21.5 27.5-29.5 11.5-7.5 24.5-13 39-17 14.5-3.5 29.5-5.5 44.5-5.5 34.5 0 60 4 75.5 12.5v46c-20.5-14-47-21.5-79.5-21.5-9 0-18 1-27 3s-17 5-24 9c-7 4.5-12.5 10-17 16.5s-6.5 15-6.5 24.5c0 9 1.5 16.5 5 23s8.5 12.5 15 18 14 10.5 23.5 15.5 20 10.5 32.5 16.5c12.5 6.5 24.5 13 35.5 19.5 11.5 7 21 14.5 29.5 23 8.5 8 15.5 17.5 20.5 27.5 4.5 10 7 21.5 7 34.5 0 17.5-3 32-10 44-6.5 12-16 21.5-27.5 29s-24.5 13-39.5 16.5c-15 3-30.5 5-47.5 5-5.5 0-12-.5-20.5-1.5-8-1-16.5-2-24.5-4-8.5-1.5-16.5-3.5-24.5-6-7.5-3-13.5-5.5-18-8.5z" fill-rule="nonzero"></path><defs><lineargradient id="_Linear1" x1="0" y1="0" x2="1" y2="0" gradientunits="userSpaceOnUse" gradienttransform="rotate(-44.975 163.14 67.262) scale(190.278)"><stop offset="0" stop-color="#9f1923"></stop><stop offset="1" stop-color="#e30183"></stop></lineargradient></defs>
+             </svg>
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="configuration-and-pipeline">Configuration and Pipeline</h1>
+
+<p>ImageSharp.Web is assembled through <code>AddImageSharp()</code> and the returned <a class="xref" href="../../api/ImageSharp.Web/SixLabors.ImageSharp.Web.IImageSharpBuilder.html"><code>IImageSharpBuilder</code></a>. Most applications never need to replace every piece, but it helps to know what is there so you can change the correct layer without over-customizing the whole pipeline.</p>
+<h2 id="request-pipeline-model">Request Pipeline Model</h2>
+<p>For a processed image request, the middleware does four separate jobs:</p>
+<ul>
+<li>parse and normalize the requested commands;</li>
+<li>resolve the source image through a provider;</li>
+<li>look up or write the processed result through a cache;</li>
+<li>decode, process, and encode the image when the cache does not already contain a valid result.</li>
+</ul>
+<p>Those layers are intentionally separate. Providers are source-of-truth readers, caches store derived output, processors transform the decoded image, and encoders decide the response format. Most customization should replace one layer at a time instead of rebuilding the whole middleware configuration.</p>
+<h2 id="what-addimagesharp-registers">What <code>AddImageSharp()</code> Registers</h2>
+<p>The default registration wires up:</p>
+<ul>
+<li><a class="xref" href="../../api/ImageSharp.Web/SixLabors.ImageSharp.Web.Commands.QueryCollectionRequestParser.html"><code>QueryCollectionRequestParser</code></a> for query-string command parsing.</li>
+<li><a class="xref" href="../../api/ImageSharp.Web/SixLabors.ImageSharp.Web.Caching.PhysicalFileSystemCache.html"><code>PhysicalFileSystemCache</code></a> for processed-output storage.</li>
+<li><a class="xref" href="../../api/ImageSharp.Web/SixLabors.ImageSharp.Web.Caching.UriRelativeLowerInvariantCacheKey.html"><code>UriRelativeLowerInvariantCacheKey</code></a> and <a class="xref" href="../../api/ImageSharp.Web/SixLabors.ImageSharp.Web.Caching.SHA256CacheHash.html"><code>SHA256CacheHash</code></a> for cache naming.</li>
+<li><a class="xref" href="../../api/ImageSharp.Web/SixLabors.ImageSharp.Web.Providers.PhysicalFileSystemProvider.html"><code>PhysicalFileSystemProvider</code></a> for source image resolution.</li>
+<li>The built-in resize, format, quality, background-color, and auto-orient processors.</li>
+<li>The built-in command converters for numbers, booleans, strings, arrays, lists, colors, and enums.</li>
+</ul>
+<p>That gives you a fully working middleware out of the box, but every one of those pieces can be swapped or extended.</p>
+<h2 id="configure-middleware-options">Configure Middleware Options</h2>
+<p><a class="xref" href="../../api/ImageSharp.Web/SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.html"><code>ImageSharpMiddlewareOptions</code></a> controls the shared middleware behavior:</p>
+<ul>
+<li><a class="xref" href="../../api/ImageSharp.Web/SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.html#SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddlewareOptions_Configuration"><code>Configuration</code></a> is the underlying ImageSharp <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Configuration.html"><code>Configuration</code></a>.</li>
+<li>By default, that <code>Configuration</code> is not raw <code>Configuration.Default</code>; ImageSharp.Web installs web-oriented JPEG, PNG, and WebP encoders into it.</li>
+<li><a class="xref" href="../../api/ImageSharp.Web/SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.html#SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddlewareOptions_OnParseCommandsAsync"><code>OnParseCommandsAsync</code></a> defaults to a callback that injects <code>autoorient=true</code> when the request does not already contain <code>autoorient</code>.</li>
+<li><a class="xref" href="../../api/ImageSharp.Web/SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.html#SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddlewareOptions_MemoryStreamManager"><code>MemoryStreamManager</code></a> controls pooled response streams.</li>
+<li><a class="xref" href="../../api/ImageSharp.Web/SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.html#SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddlewareOptions_UseInvariantParsingCulture"><code>UseInvariantParsingCulture</code></a> controls whether command parsing is culture-invariant.</li>
+<li><a class="xref" href="../../api/ImageSharp.Web/SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.html#SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddlewareOptions_BrowserMaxAge"><code>BrowserMaxAge</code></a>, <a class="xref" href="../../api/ImageSharp.Web/SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.html#SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddlewareOptions_CacheMaxAge"><code>CacheMaxAge</code></a>, and <a class="xref" href="../../api/ImageSharp.Web/SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.html#SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddlewareOptions_CacheHashLength"><code>CacheHashLength</code></a> control cache behavior.</li>
+</ul>
+<pre><code class="lang-csharp">using SixLabors.ImageSharp.Web;
+using SixLabors.ImageSharp.Web.Caching;
+using SixLabors.ImageSharp.Web.Providers;
+
+builder.Services.AddImageSharp(options =&gt;
+{
+    options.UseInvariantParsingCulture = true;
+    options.BrowserMaxAge = TimeSpan.FromDays(7);
+    options.CacheMaxAge = TimeSpan.FromDays(30);
+    options.CacheHashLength = 16;
+})
+.Configure&lt;PhysicalFileSystemProviderOptions&gt;(options =&gt;
+{
+    options.ProviderRootPath = &quot;assets&quot;;
+    options.ProcessingBehavior = ProcessingBehavior.CommandOnly;
+})
+.Configure&lt;PhysicalFileSystemCacheOptions&gt;(options =&gt;
+{
+    options.CacheRootPath = &quot;cache&quot;;
+    options.CacheFolder = &quot;imagesharp&quot;;
+    options.CacheFolderDepth = 8;
+});
+</code></pre>
+<p>If you do not need to change format registrations or encoder defaults, leave <a class="xref" href="../../api/ImageSharp.Web/SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.html#SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddlewareOptions_Configuration"><code>ImageSharpMiddlewareOptions.Configuration</code></a> alone. Replacing it opts you out of the middleware's built-in web defaults.</p>
+<p>Likewise, if you do not need custom command augmentation, leave <a class="xref" href="../../api/ImageSharp.Web/SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.html#SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddlewareOptions_OnParseCommandsAsync"><code>OnParseCommandsAsync</code></a> alone. Replacing it opts you out of the default EXIF-normalization behavior unless you chain the existing callback yourself.</p>
+<h2 id="default-orientation-behavior">Default Orientation Behavior</h2>
+<p>The default <a class="xref" href="../../api/ImageSharp.Web/SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.html#SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddlewareOptions_OnParseCommandsAsync"><code>OnParseCommandsAsync</code></a> callback inserts <code>autoorient=true</code> when the request does not already specify <code>autoorient</code>.</p>
+<p>That makes EXIF normalization part of the default middleware behavior rather than an opt-in query-string feature. The main reason is web delivery: some browsers still ignore EXIF orientation in formats such as WebP, so relying on the encoded metadata alone does not produce consistent display results.</p>
+<p>Two details matter in practice:</p>
+<ul>
+<li><code>autoorient=false</code> still disables the behavior for that request because the middleware only inserts the command when it is absent.</li>
+<li>Replacing <code>OnParseCommandsAsync</code> with your own delegate removes the built-in insertion unless you invoke the previous delegate.</li>
+</ul>
+<p>With the out-of-the-box local filesystem setup, that also means commandless image URLs are usually processed and cached instead of falling through to static files unchanged.</p>
+<h2 id="default-encoder-and-icc-behavior">Default Encoder and ICC Behavior</h2>
+<p>The default middleware <a class="xref" href="../../api/ImageSharp.Web/SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.html#SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddlewareOptions_Configuration"><code>Configuration</code></a> is a cloned ImageSharp configuration with web-oriented encoder registrations:</p>
+<ul>
+<li><a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Formats.Jpeg.JpegEncoder.html"><code>JpegEncoder</code></a> uses <code>Quality = 75</code>, <code>Progressive = true</code>, <code>Interleaved = true</code>, and <code>ColorType = YCbCrRatio420</code>.</li>
+<li><a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Formats.Png.PngEncoder.html"><code>PngEncoder</code></a> uses <code>CompressionLevel = BestCompression</code> and <code>FilterMethod = Adaptive</code>.</li>
+<li><a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Formats.Webp.WebpEncoder.html"><code>WebpEncoder</code></a> uses <code>Quality = 75</code> and <code>Method = BestQuality</code>.</li>
+</ul>
+<p>Those registrations are used whenever the middleware saves processed output in JPEG, PNG, or WebP format, whether the format came from the source image or from the <code>format</code> command.</p>
+<p>If <a class="xref" href="../../api/ImageSharp.Web/SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.html#SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddlewareOptions_OnBeforeLoadAsync"><code>OnBeforeLoadAsync</code></a> returns <code>null</code>, the middleware also creates fallback <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Formats.DecoderOptions.html"><code>DecoderOptions</code></a> for you. The ICC-profile behavior depends on whether you kept the default configuration:</p>
+<ul>
+<li>With the default middleware configuration, <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Formats.DecoderOptions.html#SixLabors_ImageSharp_Formats_DecoderOptions_ColorProfileHandling"><code>DecoderOptions.ColorProfileHandling</code></a> is <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Formats.ColorProfileHandling.html#SixLabors_ImageSharp_Formats_ColorProfileHandling_Convert"><code>ColorProfileHandling.Convert</code></a>.</li>
+<li>If you replace <code>options.Configuration</code>, the fallback changes to <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Formats.ColorProfileHandling.html#SixLabors_ImageSharp_Formats_ColorProfileHandling_Compact"><code>ColorProfileHandling.Compact</code></a>.</li>
+</ul>
+<p><code>Compact</code> only removes canonical sRGB ICC profile data. It does not convert non-sRGB source images. That distinction matters most when you transcode or resize JPEGs that arrive with CMYK or other non-sRGB profiles.</p>
+<h2 id="customize-encoders-without-losing-icc-conversion">Customize Encoders Without Losing ICC Conversion</h2>
+<p>If you want your own encoder registrations but still want the middleware to decode with <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Formats.ColorProfileHandling.html#SixLabors_ImageSharp_Formats_ColorProfileHandling_Convert"><code>ColorProfileHandling.Convert</code></a>, clone the current configuration, replace the encoders you care about, then return explicit decoder options:</p>
+<pre><code class="lang-csharp">using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.Formats;
+using SixLabors.ImageSharp.Formats.Jpeg;
+using SixLabors.ImageSharp.Web;
+
+builder.Services.AddImageSharp(options =&gt;
+{
+    Configuration configuration = options.Configuration.Clone();
+
+    configuration.ImageFormatsManager.SetEncoder(JpegFormat.Instance, new JpegEncoder
+    {
+        Quality = 82,
+        Progressive = true,
+        Interleaved = true,
+        ColorType = JpegColorType.YCbCrRatio420
+    });
+
+    options.Configuration = configuration;
+
+    options.OnBeforeLoadAsync = (_, _) =&gt; Task.FromResult&lt;DecoderOptions?&gt;(new()
+    {
+        Configuration = configuration,
+        ColorProfileHandling = ColorProfileHandling.Convert
+    });
+});
+</code></pre>
+<p>Use this pattern when you want to keep ImageSharp.Web's ICC-conversion behavior but need different encoder quality, chroma subsampling, format registrations, allocator settings, or other base ImageSharp customization.</p>
+<h2 id="change-individual-pipeline-pieces">Change Individual Pipeline Pieces</h2>
+<p>The builder methods let you replace only the layer you actually need to change:</p>
+<ul>
+<li><a class="xref" href="../../api/ImageSharp.Web/SixLabors.ImageSharp.Web.ImageSharpBuilderExtensions.html#SixLabors_ImageSharp_Web_ImageSharpBuilderExtensions_SetRequestParser_"><code>SetRequestParser&lt;TParser&gt;()</code></a> replaces the request parser.</li>
+<li><a class="xref" href="../../api/ImageSharp.Web/SixLabors.ImageSharp.Web.ImageSharpBuilderExtensions.html#SixLabors_ImageSharp_Web_ImageSharpBuilderExtensions_SetCache_"><code>SetCache&lt;TCache&gt;()</code></a> replaces the backend cache.</li>
+<li><a class="xref" href="../../api/ImageSharp.Web/SixLabors.ImageSharp.Web.ImageSharpBuilderExtensions.html#SixLabors_ImageSharp_Web_ImageSharpBuilderExtensions_SetCacheKey_"><code>SetCacheKey&lt;TCacheKey&gt;()</code></a> and <a class="xref" href="../../api/ImageSharp.Web/SixLabors.ImageSharp.Web.ImageSharpBuilderExtensions.html#SixLabors_ImageSharp_Web_ImageSharpBuilderExtensions_SetCacheHash_"><code>SetCacheHash&lt;TCacheHash&gt;()</code></a> change cache naming.</li>
+<li><a class="xref" href="../../api/ImageSharp.Web/SixLabors.ImageSharp.Web.ImageSharpBuilderExtensions.html#SixLabors_ImageSharp_Web_ImageSharpBuilderExtensions_AddProvider_"><code>AddProvider&lt;TProvider&gt;()</code></a>, <a class="xref" href="../../api/ImageSharp.Web/SixLabors.ImageSharp.Web.ImageSharpBuilderExtensions.html#SixLabors_ImageSharp_Web_ImageSharpBuilderExtensions_InsertProvider_"><code>InsertProvider&lt;TProvider&gt;()</code></a>, <a class="xref" href="../../api/ImageSharp.Web/SixLabors.ImageSharp.Web.ImageSharpBuilderExtensions.html#SixLabors_ImageSharp_Web_ImageSharpBuilderExtensions_RemoveProvider_"><code>RemoveProvider&lt;TProvider&gt;()</code></a>, and <a class="xref" href="../../api/ImageSharp.Web/SixLabors.ImageSharp.Web.ImageSharpBuilderExtensions.html#SixLabors_ImageSharp_Web_ImageSharpBuilderExtensions_ClearProviders_"><code>ClearProviders()</code></a> manage source providers.</li>
+<li><a class="xref" href="../../api/ImageSharp.Web/SixLabors.ImageSharp.Web.ImageSharpBuilderExtensions.html#SixLabors_ImageSharp_Web_ImageSharpBuilderExtensions_AddProcessor_"><code>AddProcessor&lt;TProcessor&gt;()</code></a>, <a class="xref" href="../../api/ImageSharp.Web/SixLabors.ImageSharp.Web.ImageSharpBuilderExtensions.html#SixLabors_ImageSharp_Web_ImageSharpBuilderExtensions_RemoveProcessor_"><code>RemoveProcessor&lt;TProcessor&gt;()</code></a>, and <a class="xref" href="../../api/ImageSharp.Web/SixLabors.ImageSharp.Web.ImageSharpBuilderExtensions.html#SixLabors_ImageSharp_Web_ImageSharpBuilderExtensions_ClearProcessors_"><code>ClearProcessors()</code></a> manage the processing command set.</li>
+<li><a class="xref" href="../../api/ImageSharp.Web/SixLabors.ImageSharp.Web.ImageSharpBuilderExtensions.html#SixLabors_ImageSharp_Web_ImageSharpBuilderExtensions_AddConverter_"><code>AddConverter&lt;TConverter&gt;()</code></a>, <a class="xref" href="../../api/ImageSharp.Web/SixLabors.ImageSharp.Web.ImageSharpBuilderExtensions.html#SixLabors_ImageSharp_Web_ImageSharpBuilderExtensions_RemoveConverter_"><code>RemoveConverter&lt;TConverter&gt;()</code></a>, and <a class="xref" href="../../api/ImageSharp.Web/SixLabors.ImageSharp.Web.ImageSharpBuilderExtensions.html#SixLabors_ImageSharp_Web_ImageSharpBuilderExtensions_ClearConverters_"><code>ClearConverters()</code></a> manage typed command parsing.</li>
+<li><a class="xref" href="../../api/ImageSharp.Web/SixLabors.ImageSharp.Web.ImageSharpBuilderExtensions.html#SixLabors_ImageSharp_Web_ImageSharpBuilderExtensions_Configure_"><code>Configure&lt;TOptions&gt;(...)</code></a> binds or mutates option objects for any registered provider, cache, or parser.</li>
+</ul>
+<p>For example, if you want to keep the default middleware but remove format conversion:</p>
+<pre><code class="lang-csharp">using SixLabors.ImageSharp.Web;
+using SixLabors.ImageSharp.Web.Processors;
+
+builder.Services.AddImageSharp()
+    .RemoveProcessor&lt;FormatWebProcessor&gt;();
+</code></pre>
+<h2 id="use-presets-instead-of-free-form-query-strings">Use Presets Instead of Free-Form Query Strings</h2>
+<p><a class="xref" href="../../api/ImageSharp.Web/SixLabors.ImageSharp.Web.Commands.PresetOnlyQueryCollectionRequestParser.html"><code>PresetOnlyQueryCollectionRequestParser</code></a> is the built-in alternative to the normal query parser. Instead of reading every query-string command, it reads a single <code>preset</code> key and expands that to a predefined command set.</p>
+<pre><code class="lang-csharp">using SixLabors.ImageSharp.Web;
+using SixLabors.ImageSharp.Web.Commands;
+
+builder.Services.AddImageSharp()
+    .SetRequestParser&lt;PresetOnlyQueryCollectionRequestParser&gt;()
+    .Configure&lt;PresetOnlyQueryCollectionRequestParserOptions&gt;(options =&gt;
+    {
+        options.Presets[&quot;thumb&quot;] = &quot;width=160&amp;height=160&amp;rmode=crop&quot;;
+        options.Presets[&quot;card&quot;] = &quot;width=640&amp;height=360&amp;rmode=crop&amp;format=webp&amp;quality=75&quot;;
+    });
+</code></pre>
+<p>That turns requests like <code>/images/photo.jpg?preset=thumb</code> into a controlled, named command set without exposing arbitrary query-string processing.</p>
+<h2 id="middleware-callbacks">Middleware Callbacks</h2>
+<p><a class="xref" href="../../api/ImageSharp.Web/SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.html"><code>ImageSharpMiddlewareOptions</code></a> also exposes targeted callbacks for app-specific customization:</p>
+<ul>
+<li><a class="xref" href="../../api/ImageSharp.Web/SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.html#SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddlewareOptions_OnParseCommandsAsync"><code>OnParseCommandsAsync</code></a> runs after a provider has matched the request and after the command set has been sanitized, but before the source image is resolved.</li>
+<li><a class="xref" href="../../api/ImageSharp.Web/SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.html#SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddlewareOptions_OnBeforeLoadAsync"><code>OnBeforeLoadAsync</code></a> can return custom <a class="xref" href="../../api/ImageSharp/SixLabors.ImageSharp.Formats.DecoderOptions.html"><code>DecoderOptions</code></a> before the source image is decoded. If it returns <code>null</code>, the middleware supplies defaults based on the current <code>Configuration</code>.</li>
+<li><a class="xref" href="../../api/ImageSharp.Web/SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.html#SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddlewareOptions_OnBeforeSaveAsync"><code>OnBeforeSaveAsync</code></a> can adjust the <a class="xref" href="../../api/ImageSharp.Web/SixLabors.ImageSharp.Web.FormattedImage.html"><code>FormattedImage</code></a> after processing but before encoding.</li>
+<li><a class="xref" href="../../api/ImageSharp.Web/SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.html#SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddlewareOptions_OnProcessedAsync"><code>OnProcessedAsync</code></a> receives an <a class="xref" href="../../api/ImageSharp.Web/SixLabors.ImageSharp.Web.Middleware.ImageProcessingContext.html"><code>ImageProcessingContext</code></a> after encoding but before the result is cached.</li>
+<li><a class="xref" href="../../api/ImageSharp.Web/SixLabors.ImageSharp.Web.Middleware.ImageSharpMiddlewareOptions.html#SixLabors_ImageSharp_Web_Middleware_ImageSharpMiddlewareOptions_OnPrepareResponseAsync"><code>OnPrepareResponseAsync</code></a> runs after status code and headers are set but before the body is written.</li>
+</ul>
+<pre><code class="lang-csharp">using SixLabors.ImageSharp.Web;
+using SixLabors.ImageSharp.Web.Middleware;
+
+builder.Services.AddImageSharp(options =&gt;
+{
+    Func&lt;ImageCommandContext, Task&gt; defaultParse = options.OnParseCommandsAsync;
+
+    options.OnParseCommandsAsync = async context =&gt;
+    {
+        await defaultParse(context);
+
+        if (!context.Commands.Contains(&quot;format&quot;))
+        {
+            context.Commands[&quot;format&quot;] = &quot;webp&quot;;
+        }
+
+    };
+
+    options.OnPrepareResponseAsync = context =&gt;
+    {
+        context.Response.Headers[&quot;X-ImageSharp&quot;] = &quot;true&quot;;
+        return Task.CompletedTask;
+    };
+});
+</code></pre>
+<p>These callbacks are often the right tool when you need small workflow adjustments without inventing a custom provider, parser, or processor. If you override <code>OnParseCommandsAsync</code>, preserve the existing delegate unless you intentionally want to remove the middleware's default <code>autoorient=true</code> insertion.</p>
+<h2 id="related-topics">Related Topics</h2>
+<ul>
+<li><a href="gettingstarted.html">Getting Started</a></li>
+<li><a href="processingcommands.html">Processing Commands</a></li>
+<li><a href="security.html">Securing Requests</a></li>
+<li><a href="extensibility.html">Extensibility</a></li>
+</ul>
+<h2 id="practical-guidance">Practical Guidance</h2>
+<p>Most ImageSharp.Web configuration changes affect one stage of the request pipeline: command parsing, source resolution, image processing, encoding, caching, or response behavior. Change the stage that owns the behavior you need, and keep the others boring. For example, a provider should resolve source images; it should not also reinterpret resize commands. A parser should shape the command collection; it should not open streams.</p>
+<p>Be careful when replacing callbacks. The default <code>OnParseCommandsAsync</code> inserts <code>autoorient=true</code> when the request does not specify orientation behavior, so replacing it without preserving the existing delegate also changes default output. That can be correct for passthrough scenarios, but it should be a deliberate compatibility decision.</p>
+<p>For public URLs, presets are often a better product surface than arbitrary query strings. They limit the transformation vocabulary, simplify HMAC signing, reduce cache explosion, and make generated variants easier to reason about. When you do allow free-form commands, keep the middleware ImageSharp configuration aligned with your encoder and ICC expectations so a URL means the same thing across deployments.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/SixLabors/docs/blob/main/articles/imagesharp.web/configuration.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
