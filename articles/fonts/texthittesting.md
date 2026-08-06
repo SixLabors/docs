@@ -6,13 +6,13 @@ Once text has been laid out, applications usually need to translate between pixe
 
 All positional values returned by these APIs are in pixel units.
 
-### How this differs from graphics hit testing
+## How this differs from graphics hit testing
 
 In general graphics APIs, hit testing usually means checking whether a cursor point intersects a shape, path, bounding box, or visual object. Text interaction has a different goal. A text editor must answer "where would the caret go?" even when the point is over whitespace, outside the ink, above the first line, or beyond the end of a wrapped line.
 
 Fonts therefore resolves the point to a text position rather than returning a collision result. The returned `TextHit` is an input to caret placement, selection, word lookup, and movement. If you need geometric picking against custom rendered glyph outlines, use the geometry produced by your renderer for that purpose; do not substitute ink bounds for caret hit testing.
 
-### Get a measurement object
+## Get a measurement object
 
 Hit testing, caret positioning, and caret movement all operate on a [`TextMetrics`](xref:SixLabors.Fonts.TextMetrics) (whole-block) or [`LineLayout`](xref:SixLabors.Fonts.LineLayout) (single line). Either come from [`TextMeasurer`](xref:SixLabors.Fonts.TextMeasurer) or from a prepared [`TextBlock`](xref:SixLabors.Fonts.TextBlock). See [Prepared Text with TextBlock](textblock.md) for when to prefer one over the other.
 
@@ -31,7 +31,7 @@ TextOptions options = new(font)
 TextMetrics metrics = TextMeasurer.Measure("Hello, world!", options);
 ```
 
-### Coordinate space and hit targets
+## Coordinate space and hit targets
 
 The point passed to `HitTest(...)` is in the same pixel coordinate space as the measured layout. That includes the [`TextOptions.Origin`](xref:SixLabors.Fonts.TextOptions.Origin), wrapping length, layout mode, text direction, fallback fonts, and interaction mode that were used when the `TextMetrics` or `LineLayout` was produced.
 
@@ -41,7 +41,7 @@ For whole-block hit testing, `TextMetrics` first chooses the nearest laid-out li
 
 Points outside the text block clamp to the nearest line and grapheme instead of returning no hit. This is intentional for editor-style behavior: clicking to the left, right, above, or below the text can still place a caret at the nearest valid text position.
 
-### Choose paragraph or editor mode
+## Choose paragraph or editor mode
 
 [`TextOptions.TextInteractionMode`](xref:SixLabors.Fonts.TextOptions.TextInteractionMode) controls how trailing whitespace and terminal hard breaks behave for hit testing, caret movement, and selection.
 
@@ -52,7 +52,7 @@ Set this once on the `TextOptions` you measure with. Every interaction API on th
 
 If your application has both rendered paragraph regions and editable regions, use a different `TextOptions` instance for each, with the matching `TextInteractionMode` set on it.
 
-### Hit-test a point
+## Hit-test a point
 
 [`HitTest(point)`](xref:SixLabors.Fonts.TextMetrics.HitTest*) maps a pointer position to the nearest grapheme and returns a [`TextHit`](xref:SixLabors.Fonts.TextHit).
 
@@ -74,7 +74,7 @@ bool trailing = hit.IsTrailing;
 
 The properties are exposed for diagnostics and for cases where you need to point back into your own text — for example, mapping the hit to a position in your source string. `GraphemeInsertionIndex` is the insertion position within the laid-out grapheme array; you rarely need to read it yourself.
 
-### Position a caret
+## Position a caret
 
 A [`CaretPosition`](xref:SixLabors.Fonts.CaretPosition) is both a drawable line and the navigation token used by the movement APIs.
 
@@ -102,7 +102,7 @@ CaretPosition start = metrics.GetCaret(CaretPlacement.Start);
 CaretPosition end = metrics.GetCaret(CaretPlacement.End);
 ```
 
-### Move a caret
+## Move a caret
 
 [`MoveCaret(...)`](xref:SixLabors.Fonts.TextMetrics.MoveCaret*) applies an editor-style movement to a caret and returns the new caret. The library owns the grapheme, line, and hard-break rules; callers should not perform their own grapheme arithmetic.
 
@@ -142,7 +142,7 @@ CaretPosition after = metrics.MoveCaret(next, CaretMovement.LineDown);
 
 This matches normal rich-text editor behavior: moving down through a short line does not permanently lose the user's original horizontal or vertical line position.
 
-### Look up a word
+## Look up a word
 
 For double-click or word-based selection, pass the hit (or caret) directly to [`GetWordMetrics(...)`](xref:SixLabors.Fonts.TextMetrics.GetWordMetrics*). This uses the grapheme that was hit, so clicking the trailing side of the final grapheme of a word still selects that word rather than the following separator segment.
 
@@ -155,7 +155,7 @@ WordMetrics word = metrics.GetWordMetrics(hit);
 
 A Unicode word-boundary segment includes its separators. `can't stop` produces three segments: `can't`, the space, and `stop`. Higher-level editor commands can decide whether to stop on separator boundaries or skip over them.
 
-### Per-line interaction
+## Per-line interaction
 
 [`LineLayout`](xref:SixLabors.Fonts.LineLayout) mirrors the interaction surface for a single line. Use it when the caller already knows interaction is line-local; otherwise prefer [`TextMetrics`](xref:SixLabors.Fonts.TextMetrics) so cross-line behavior (such as `LineDown` or wrapping selection) works correctly.
 
@@ -172,7 +172,7 @@ foreach (LineLayout line in layouts.Span)
 }
 ```
 
-### Hard line breaks
+## Hard line breaks
 
 Hard line breaks at the end of non-empty lines are trimmed with other trailing breaking whitespace. Hard line breaks that own a blank line remain in the metrics so source ranges, hit testing, caret movement, and selection painting still cover that line. Consumers that inspect graphemes individually can use `GraphemeMetrics.IsLineBreak` to identify these cases.
 
@@ -180,7 +180,7 @@ In `TextInteractionMode.Editor`, a terminal hard break also produces a blank lin
 
 For more on the underlying measurement model and the `TextMetrics` shape, see [Measuring Text](measuringtext.md). For the full selection API, see [Selection and Bidi Drag](caretsandselection.md).
 
-### Practical guidance
+## Practical guidance
 
 - Use `TextMetrics` for interaction that can cross line boundaries.
 - Use `LineLayout` only when the caller already knows the interaction is line-local.

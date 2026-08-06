@@ -8,7 +8,7 @@ Fonts has comprehensive support for the major OpenType color-font technologies i
 - `ColorFontSupport.ColrV1` for paint-graph glyphs with gradients, transforms, and richer composition
 - `ColorFontSupport.Svg` for color glyphs stored in the OpenType SVG table
 
-### Enable or restrict color-font support
+## Enable or restrict color-font support
 
 [`TextOptions.ColorFontSupport`](xref:SixLabors.Fonts.TextOptions.ColorFontSupport) controls which color-font technologies are honored during layout and rendering.
 
@@ -27,7 +27,7 @@ TextOptions options = new(font)
 
 [`TextOptions`](xref:SixLabors.Fonts.TextOptions) enables all three by default, so you usually only need to set this property when you want to disable color glyphs or restrict the allowed formats.
 
-### Force monochrome output
+## Force monochrome output
 
 Set [`ColorFontSupport.None`](xref:SixLabors.Fonts.ColorFontSupport.None) when you want color-font-capable text to fall back to monochrome outline rendering.
 
@@ -44,7 +44,7 @@ TextOptions options = new(font)
 };
 ```
 
-### What happens in custom renderers
+## What happens in custom renderers
 
 When a resolved glyph is a painted color glyph, Fonts streams it through [`IGlyphRenderer`](xref:SixLabors.Fonts.Rendering.IGlyphRenderer) as one or more layers.
 
@@ -65,7 +65,7 @@ Depending on the font technology in use, the `Paint` passed to `BeginLayer(...)`
 
 If your renderer ignores paint information, the glyph can still be drawn, but it will no longer preserve the font's intended color presentation.
 
-### Inspect color glyphs directly
+## Inspect color glyphs directly
 
 If you need to inspect a glyph without running full text layout, use [`Font.TryGetGlyphs(...)`](xref:SixLabors.Fonts.Font.TryGetGlyphs*) with explicit color support.
 
@@ -86,7 +86,7 @@ if (font.TryGetGlyphs(
 }
 ```
 
-### COLR vs SVG in practice
+## COLR vs SVG in practice
 
 At a high level:
 
@@ -96,7 +96,7 @@ At a high level:
 
 Fonts resolves those technologies into a common painted-glyph rendering flow, which is why custom renderers can consume them through the same layer and paint callbacks.
 
-### Measurement and rendering stay aligned
+## Measurement and rendering stay aligned
 
 Color-font support is part of text layout, not just final painting. If you measure text with one `ColorFontSupport` configuration and render with another, you can create drift between the measured and rendered result.
 
@@ -104,7 +104,7 @@ Use the same [`TextOptions`](xref:SixLabors.Fonts.TextOptions) instance for both
 
 For renderer implementation details, see [Custom Rendering](customrendering.md). For fallback across multiple families, see [Fallback Fonts and Multilingual Text](fallbackfonts.md).
 
-### Practical guidance
+## Practical guidance
 
 - Use the same `ColorFontSupport` setting when measuring and rendering.
 - Test the actual emoji or color glyph set you intend to support; technologies vary by font.

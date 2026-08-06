@@ -4,7 +4,7 @@
 
 Use it when you want to work with platform fonts directly instead of loading files into your own [`FontCollection`](xref:SixLabors.Fonts.FontCollection).
 
-### What `SystemFonts` exposes
+## What `SystemFonts` exposes
 
 The main entry points are:
 
@@ -22,7 +22,7 @@ Font heading = SystemFonts.CreateFont("Segoe UI", 24, FontStyle.Bold);
 
 Replace `"Segoe UI"` with any installed family that exists on your machine.
 
-### Enumerate available families
+## Enumerate available families
 
 Use [`SystemFonts.Families`](xref:SixLabors.Fonts.SystemFonts.Families) when you want to inspect what the current environment actually exposes.
 
@@ -36,7 +36,7 @@ foreach (FontFamily family in SystemFonts.Families)
 }
 ```
 
-### Use culture-aware lookup
+## Use culture-aware lookup
 
 Font family names can vary by culture, so [`SystemFonts`](xref:SixLabors.Fonts.SystemFonts) also exposes the same culture-aware lookup helpers as [`FontCollection`](xref:SixLabors.Fonts.FontCollection).
 
@@ -54,7 +54,7 @@ if (SystemFonts.TryGetByCulture("Yu Gothic", japanese, out FontFamily family))
 
 You can also create a font directly with the culture-aware [`CreateFont(...)`](xref:SixLabors.Fonts.SystemFonts.CreateFont*) overloads.
 
-### Merge system fonts into your own collection
+## Merge system fonts into your own collection
 
 If you want your own custom fonts and the machine fonts in one lookup surface, copy the system font set into a [`FontCollection`](xref:SixLabors.Fonts.FontCollection).
 
@@ -77,7 +77,7 @@ collection.AddSystemFonts(metric =>
     metric.Description.FontFamilyInvariantCulture.Contains("Noto", StringComparison.OrdinalIgnoreCase));
 ```
 
-### Search directories
+## Search directories
 
 [`SystemFonts.Collection`](xref:SixLabors.Fonts.SystemFonts.Collection) implements [`IReadOnlySystemFontCollection`](xref:SixLabors.Fonts.IReadOnlySystemFontCollection), which exposes [`SearchDirectories`](xref:SixLabors.Fonts.IReadOnlySystemFontCollection.SearchDirectories).
 
@@ -93,7 +93,7 @@ foreach (string directory in SystemFonts.Collection.SearchDirectories)
 }
 ```
 
-### Portability considerations
+## Portability considerations
 
 The available system fonts are environment-specific.
 
@@ -103,7 +103,7 @@ The available system fonts are environment-specific.
 
 For file-based loading, see [Loading Fonts and Collections](gettingstarted.md). For metadata-only inspection, see [Font Metadata and Inspection](fontmetadata.md).
 
-### Practical guidance
+## Practical guidance
 
 - Use `SystemFonts` for host-specific behavior and diagnostics.
 - Use a private `FontCollection` for deterministic rendering.

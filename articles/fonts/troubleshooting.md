@@ -2,7 +2,7 @@
 
 When text does not measure or render the way you expect, the underlying cause is usually one of a few things: family resolution, font-file validity, fallback, shaping assumptions, or misunderstanding the different measurement APIs. This page starts with those common failure modes.
 
-### A font family cannot be found
+## A font family cannot be found
 
 If [`Get(...)`](xref:SixLabors.Fonts.FontCollection.Get*) or [`SystemFonts.CreateFont(...)`](xref:SixLabors.Fonts.SystemFonts.CreateFont*) fails, you may see [`FontFamilyNotFoundException`](xref:SixLabors.Fonts.FontFamilyNotFoundException).
 
@@ -19,7 +19,7 @@ Safer patterns are:
 - inspect [`FontDescription`](xref:SixLabors.Fonts.FontDescription) after loading a file
 - prefer application-owned font files over machine-specific [`SystemFonts`](xref:SixLabors.Fonts.SystemFonts) when portability matters
 
-### A font file loads poorly or throws
+## A font file loads poorly or throws
 
 Invalid or unsupported font data can surface as:
 
@@ -33,7 +33,7 @@ If you hit one of these:
 - prefer loading from a stable local file or stream
 - if the font is a collection, use [`AddCollection(...)`](xref:SixLabors.Fonts.FontCollection.AddCollection*) or [`LoadFontCollectionDescriptions(...)`](xref:SixLabors.Fonts.FontDescription.LoadFontCollectionDescriptions*)
 
-### Text renders with missing glyphs
+## Text renders with missing glyphs
 
 If some characters do not render as expected:
 
@@ -44,7 +44,7 @@ If some characters do not render as expected:
 
 Fallback can only help if one of the supplied families actually contains the required glyphs.
 
-### Fallback fonts are not being used
+## Fallback fonts are not being used
 
 The most common reason is that the primary font already contains a glyph for that Unicode scalar value, so fallback never activates.
 
@@ -52,7 +52,7 @@ If you want a specific range to use a different font even when the primary font 
 
 Fallback order also matters. Fonts searches `FallbackFontFamilies` in order and uses the first suitable family it finds.
 
-### RTL or complex-script text looks wrong
+## RTL or complex-script text looks wrong
 
 Check these first:
 
@@ -63,7 +63,7 @@ Check these first:
 
 Arabic, Indic, Thai, Hebrew, and similar scripts depend on shaping, not just raw Unicode coverage.
 
-### Measurements look larger or smaller than expected
+## Measurements look larger or smaller than expected
 
 This is usually a measurement-choice issue:
 
@@ -73,7 +73,7 @@ This is usually a measurement-choice issue:
 
 It is normal for these values to differ. Italics, accents, and decorative forms often extend outside the advance box, while line height can add space that no glyph pixels occupy.
 
-### Text run indices look wrong
+## Text run indices look wrong
 
 [`TextRun.Start`](xref:SixLabors.Fonts.TextRun.Start) and [`TextRun.End`](xref:SixLabors.Fonts.TextRun.End) are grapheme indices, not UTF-16 code-unit indices.
 
@@ -88,7 +88,7 @@ If a text run seems offset or slices the wrong part of the string, re-check the 
 
 See [Unicode, Code Points, and Graphemes](unicode.md) for the distinction between raw `char` positions, `CodePoint` values, and grapheme indices.
 
-### Variable font changes do nothing
+## Variable font changes do nothing
 
 Usually one of these is true:
 
@@ -98,13 +98,13 @@ Usually one of these is true:
 
 Use [`font.FontMetrics.TryGetVariationAxes(...)`](xref:SixLabors.Fonts.FontMetrics.TryGetVariationAxes*) to inspect the actual axes and ranges exposed by the font. [`FontVariation`](xref:SixLabors.Fonts.FontVariation) tags must be exactly four characters.
 
-### System font behavior differs by machine
+## System font behavior differs by machine
 
 [`SystemFonts`](xref:SixLabors.Fonts.SystemFonts) is convenient, but it is not deterministic across environments. Different machines can have different installed families, versions, and script coverage.
 
 If you need repeatable output across CI, servers, containers, and user machines, ship your own fonts and load them through `FontCollection`.
 
-### Debugging checklist
+## Debugging checklist
 
 - Confirm the font file or system family is actually available in the current environment.
 - Confirm measurement and rendering use the same `TextOptions`.

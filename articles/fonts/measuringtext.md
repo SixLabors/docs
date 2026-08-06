@@ -8,7 +8,7 @@ The measurement APIs come in three layers:
 - [`TextBlock`](xref:SixLabors.Fonts.TextBlock): prepares a string once, then measures or renders it repeatedly at different wrapping lengths. See [Prepared Text with TextBlock](textblock.md).
 - [`TextMetrics`](xref:SixLabors.Fonts.TextMetrics): the full measurement object returned by [`TextMeasurer.Measure(...)`](xref:SixLabors.Fonts.TextMeasurer.Measure*) or [`TextBlock.Measure(...)`](xref:SixLabors.Fonts.TextBlock.Measure*). Keep this when callers need several measurements, hit testing, carets, or selection geometry from the same laid-out text.
 
-### Choose the right measurement
+## Choose the right measurement
 
 - [`MeasureAdvance(...)`](xref:SixLabors.Fonts.TextMeasurer.MeasureAdvance*) returns the logical advance rectangle from layout, including line height and advance.
 - [`MeasureBounds(...)`](xref:SixLabors.Fonts.TextMeasurer.MeasureBounds*) returns only the tight rendered glyph ink bounds.
@@ -16,7 +16,7 @@ The measurement APIs come in three layers:
 
 The important distinction is that glyph geometry and layout geometry are not the same thing. Glyphs can overshoot the logical advance box, and the logical advance box can also include space that no glyph pixels occupy.
 
-### Measure a block of text
+## Measure a block of text
 
 ```csharp
 using SixLabors.Fonts;
@@ -40,7 +40,7 @@ Use `MeasureBounds(...)` when you want the pure glyph bounds only.
 
 Use `MeasureRenderableBounds(...)` when you need the full rendered area that combines layout space and glyph overshoot.
 
-### Understand bounds and origin
+## Understand bounds and origin
 
 `MeasureBounds(...)` returns absolute glyph bounds only, so the returned `X` and `Y` can be non-zero, and the width and height reflect only where glyph ink exists.
 
@@ -48,7 +48,7 @@ Use `MeasureRenderableBounds(...)` when you need the full rendered area that com
 
 If you need a rectangle that can safely contain both the typographic layout box and any glyph overshoot, prefer `MeasureRenderableBounds(...)`.
 
-### Measure per-entry data
+## Measure per-entry data
 
 `TextMeasurer` exposes three per-entry collections. Each answers a different layout question and is independent of the others.
 
@@ -75,7 +75,7 @@ These APIs measure laid-out output, not raw UTF-16 code units, so do not assume 
 
 If you need a refresher on the difference between UTF-16 code units, `CodePoint` values, and graphemes, see [Unicode, Code Points, and Graphemes](unicode.md).
 
-### Measure lines
+## Measure lines
 
 When you care about wrapped text, use [`CountLines(...)`](xref:SixLabors.Fonts.TextMeasurer.CountLines*) and [`GetLineMetrics(...)`](xref:SixLabors.Fonts.TextMeasurer.GetLineMetrics*).
 
@@ -105,7 +105,7 @@ Each [`LineMetrics`](xref:SixLabors.Fonts.LineMetrics) entry includes:
 
 `Start` and `Extent` are full `Vector2` values. Selection and caret APIs use the line box for the cross-axis size, which matches normal text editor and browser behavior: selecting mixed font sizes on the same line paints a consistent line-height rectangle rather than one rectangle per glyph height.
 
-### Capture the full measurement with `TextMetrics`
+## Capture the full measurement with `TextMetrics`
 
 When a single layout pass needs to feed several questions — overall size, per-line metrics, per-grapheme positions, hit testing, carets, and selection — measure once and keep the returned [`TextMetrics`](xref:SixLabors.Fonts.TextMetrics).
 
@@ -144,13 +144,13 @@ ReadOnlyMemory<FontRectangle> selection = metrics.GetSelectionBounds(anchor, foc
 
 See [Hit Testing and Caret Movement](texthittesting.md) and [Selection and Bidi Drag](caretsandselection.md) for the full editor-style interaction surface.
 
-### Keep measurement and rendering aligned
+## Keep measurement and rendering aligned
 
 Always measure with the same `TextOptions` that you intend to render with. `Dpi`, `LineSpacing`, `WrappingLength`, `TextDirection`, `LayoutMode`, `KerningMode`, `Tracking`, `FeatureTags`, `TextRuns`, and fallback fonts all affect the final layout.
 
 For repeated measurement of the same string at different wrapping lengths, prefer [`TextBlock`](xref:SixLabors.Fonts.TextBlock) over calling [`TextMeasurer`](xref:SixLabors.Fonts.TextMeasurer) multiple times — it shapes the text once and varies wrapping per call.
 
-### Practical guidance
+## Practical guidance
 
 - Measure advance when you need layout flow; measure bounds when you need ink or selection geometry.
 - Keep the same `TextOptions` for measuring, rendering, hit testing, and selection.

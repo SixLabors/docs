@@ -4,7 +4,7 @@ This recipe is useful when you want a quick picture of what the current machine 
 
 System fonts are environment-dependent. A font that exists on a developer workstation may be missing from a container, CI agent, Linux server, or customer machine. For predictable rendering, ship the fonts you require and load them into a private [`FontCollection`](xref:SixLabors.Fonts.FontCollection). Use `SystemFonts` when the goal is to use what the host operating system already provides.
 
-### List installed families
+## List installed families
 
 ```csharp
 using System;
@@ -16,7 +16,7 @@ foreach (FontFamily family in SystemFonts.Families)
 }
 ```
 
-### Show the searched directories
+## Show the searched directories
 
 ```csharp
 using System;
@@ -28,7 +28,7 @@ foreach (string directory in SystemFonts.Collection.SearchDirectories)
 }
 ```
 
-### Resolve a family by culture-aware name
+## Resolve a family by culture-aware name
 
 ```csharp
 using System.Globalization;
@@ -48,7 +48,7 @@ Culture-aware lookup is about names, not shaping. After you resolve a family, st
 
 For the fuller system-font API surface, see [System Fonts](systemfonts.md).
 
-### Practical guidance
+## Practical guidance
 
 - Use system font enumeration for diagnostics, not for deterministic rendering guarantees.
 - Log search directories when investigating missing fonts in production.

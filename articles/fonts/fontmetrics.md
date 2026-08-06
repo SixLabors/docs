@@ -4,7 +4,7 @@
 
 Once you know what a font is, the next question is usually how it behaves. [`FontMetrics`](xref:SixLabors.Fonts.FontMetrics) is where you inspect the measurements and coverage data that explain line spacing, decoration placement, variation support, and glyph availability.
 
-### How to get `FontMetrics`
+## How to get `FontMetrics`
 
 The most direct route is through a resolved `Font` instance:
 
@@ -34,7 +34,7 @@ if (family.TryGetMetrics(FontStyle.Regular, out FontMetrics? metrics))
 }
 ```
 
-### Description, units, and scale
+## Description, units, and scale
 
 The core identity and scaling properties are:
 
@@ -44,7 +44,7 @@ The core identity and scaling properties are:
 
 `UnitsPerEm` is the important anchor for understanding almost every other metric on the typeface. Values like ascenders, underline positions, or glyph advances are stored in font units and should be interpreted relative to that em square.
 
-### Horizontal and vertical metrics
+## Horizontal and vertical metrics
 
 [`FontMetrics`](xref:SixLabors.Fonts.FontMetrics) exposes both [`HorizontalMetrics`](xref:SixLabors.Fonts.FontMetrics.HorizontalMetrics) and [`VerticalMetrics`](xref:SixLabors.Fonts.FontMetrics.VerticalMetrics).
 
@@ -67,7 +67,7 @@ In practical terms:
 - use `HorizontalMetrics` for normal Latin-style line layout, UI text, paragraphs, and most measurement scenarios
 - use `VerticalMetrics` for vertical text layout, especially CJK-oriented column flow and vertical glyph advance
 
-### What the fields mean
+## What the fields mean
 
 `Ascender` and `Descender` define the font's recommended extents above and below the baseline for the layout direction you are inspecting.
 
@@ -79,7 +79,7 @@ In practical terms:
 
 `AdvanceHeightMax` is the maximum glyph advance height in that face. This matters most for vertical layout. For fonts that do not provide dedicated vertical metrics, this value falls back to the line height.
 
-### When to use `HorizontalMetrics`
+## When to use `HorizontalMetrics`
 
 Reach for `HorizontalMetrics` when you need:
 
@@ -100,7 +100,7 @@ short lineHeight = metrics.HorizontalMetrics.LineHeight;
 short maxAdvanceWidth = metrics.HorizontalMetrics.AdvanceWidthMax;
 ```
 
-### When to use `VerticalMetrics`
+## When to use `VerticalMetrics`
 
 Reach for `VerticalMetrics` when you need:
 
@@ -122,7 +122,7 @@ short maxAdvanceHeight = metrics.VerticalMetrics.AdvanceHeightMax;
 
 These values are expressed in font units, not pixels.
 
-### Decoration and script-positioning metrics
+## Decoration and script-positioning metrics
 
 [`FontMetrics`](xref:SixLabors.Fonts.FontMetrics) also exposes the face-level metrics that support decoration and typographic adjustments:
 
@@ -142,7 +142,7 @@ These values are expressed in font units, not pixels.
 
 These are useful when you are building your own renderer, diagnostics, or typography tools and want the font's own recommendations rather than hard-coded values.
 
-### Variable-font support
+## Variable-font support
 
 [`FontMetrics.TryGetVariationAxes(...)`](xref:SixLabors.Fonts.FontMetrics.TryGetVariationAxes*) lets you inspect the variation axes that the resolved face supports.
 
@@ -174,7 +174,7 @@ Each [`VariationAxis`](xref:SixLabors.Fonts.Tables.AdvancedTypographic.Variation
 
 The registered tags in [`KnownVariationAxes`](xref:SixLabors.Fonts.KnownVariationAxes) such as `wght`, `wdth`, `opsz`, `slnt`, and `ital` are useful when you want to relate those exposed axes back to font creation with [`FontVariation`](xref:SixLabors.Fonts.FontVariation).
 
-### Code-point coverage
+## Code-point coverage
 
 Use [`GetAvailableCodePoints()`](xref:SixLabors.Fonts.FontMetrics.GetAvailableCodePoints*) when you need to know which Unicode scalar values the face can map directly.
 
@@ -189,7 +189,7 @@ ReadOnlyMemory<CodePoint> codePoints = font.FontMetrics.GetAvailableCodePoints()
 
 This is useful for diagnostics, glyph coverage tooling, fallback decisions, and script-support inspection.
 
-### Inspect glyph metrics directly
+## Inspect glyph metrics directly
 
 If you need glyph-level inspection without going through full text layout, use [`TryGetGlyphMetrics(...)`](xref:SixLabors.Fonts.FontMetrics.TryGetGlyphMetrics*).
 
@@ -215,7 +215,7 @@ if (font.FontMetrics.TryGetGlyphMetrics(
 
 This is the lower-level face inspection API behind the higher-level [`Font.TryGetGlyphs(...)`](xref:SixLabors.Fonts.Font.TryGetGlyphs*) helpers.
 
-### When to use `FontMetrics` vs `FontDescription`
+## When to use `FontMetrics` vs `FontDescription`
 
 Use [`FontDescription`](xref:SixLabors.Fonts.FontDescription) when you care about names and face identity.
 
@@ -230,7 +230,7 @@ Use [`FontMetrics`](xref:SixLabors.Fonts.FontMetrics) when you care about:
 
 For face names and other descriptive metadata, see [Font Metadata and Inspection](fontmetadata.md). For variable-font usage, see [Variable Fonts](variablefonts.md).
 
-### Practical guidance
+## Practical guidance
 
 - Use font metrics when layout, decoration, glyph coverage, or variation axes matter.
 - Use font descriptions when the question is identity, naming, style, or version metadata.

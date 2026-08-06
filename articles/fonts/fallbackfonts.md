@@ -6,7 +6,7 @@ Fonts handles that through [`TextOptions.FallbackFontFamilies`](xref:SixLabors.F
 
 When the primary [`Font`](xref:SixLabors.Fonts.Font) does not contain a glyph for part of the text, the layout engine searches the fallback families in order and uses the first family that can supply the missing glyphs.
 
-### Use families, not fonts
+## Use families, not fonts
 
 Fallback is configured with [`FontFamily`](xref:SixLabors.Fonts.FontFamily) instances, not [`Font`](xref:SixLabors.Fonts.Font) instances.
 
@@ -26,7 +26,7 @@ TextOptions options = new(latin.CreateFont(16))
 
 The primary font still controls the default point size and layout options. When a fallback family is selected, Fonts creates the matching font instance for that run automatically.
 
-### Order matters
+## Order matters
 
 Fallback families are searched in the order you provide them.
 
@@ -34,7 +34,7 @@ Fallback families are searched in the order you provide them.
 - Put emoji fonts after your normal text families unless you explicitly want them to win earlier.
 - Keep the fallback list as small and intentional as possible so the selection stays predictable.
 
-### Mixed-script example
+## Mixed-script example
 
 This pattern works well for text that mixes Latin, Arabic, and emoji:
 
@@ -58,7 +58,7 @@ TextOptions options = new(latin.CreateFont(18))
 
 [`TextDirection.Auto`](xref:SixLabors.Fonts.TextDirection.Auto) lets the layout engine determine whether a run should flow left-to-right or right-to-left. [`ColorFontSupport`](xref:SixLabors.Fonts.TextOptions.ColorFontSupport) matters when one of your fallback families is a color emoji font.
 
-### Fallback is not the same as explicit styling
+## Fallback is not the same as explicit styling
 
 Use fallback fonts when the goal is "use another family if the current one cannot render this text".
 
@@ -90,7 +90,7 @@ TextOptions options = new(latin.CreateFont(18))
 
 The fallback list helps with missing glyphs. [`TextRuns`](xref:SixLabors.Fonts.TextOptions.TextRuns) gives you deliberate control over which grapheme ranges use which fonts.
 
-### Wrapping and script behavior
+## Wrapping and script behavior
 
 Multilingual text often benefits from layout settings beyond just fallback families:
 
@@ -100,7 +100,7 @@ Multilingual text often benefits from layout settings beyond just fallback famil
 
 If a script needs shaping support, make sure the selected font actually supports that script. Fallback can only help if one of the supplied families contains the needed glyphs and shaping data.
 
-### Common pitfalls
+## Common pitfalls
 
 - A fallback family will not be used if the primary font already has a glyph for that Unicode scalar value, even if you would prefer the fallback font's design.
 - [`TextRuns`](xref:SixLabors.Fonts.TextOptions.TextRuns) use grapheme indices, not UTF-16 code-unit indices.
@@ -109,7 +109,7 @@ If a script needs shaping support, make sure the selected font actually supports
 
 If layout still looks wrong after fallback is configured, see [Troubleshooting](troubleshooting.md).
 
-### Practical guidance
+## Practical guidance
 
 - Put the preferred design family first, then add fallbacks in the order you want missing glyphs to be searched.
 - Use `TextRuns` when a specific grapheme range must use a specific font rather than normal fallback.

@@ -2,7 +2,7 @@
 
 Sometimes you need to inspect a font long before you care about laying text out with it. Maybe you are building an importer, a picker, or a diagnostics tool. [`FontDescription`](xref:SixLabors.Fonts.FontDescription) is the lightweight part of the API for that job.
 
-### Read metadata without loading the font for layout
+## Read metadata without loading the font for layout
 
 Use [`FontDescription.LoadDescription(...)`](xref:SixLabors.Fonts.FontDescription.LoadDescription*) when you only need descriptive information from a single font file or stream.
 
@@ -21,7 +21,7 @@ string version = description.GetNameById(CultureInfo.InvariantCulture, KnownName
 
 This is a better fit than `FontCollection.Add(...)` when you are building font pickers, diagnostics, import tools, or metadata listings.
 
-### Work with localized names
+## Work with localized names
 
 [`FontDescription`](xref:SixLabors.Fonts.FontDescription) exposes both invariant and culture-aware name accessors:
 
@@ -42,7 +42,7 @@ CultureInfo english = CultureInfo.GetCultureInfo("en-US");
 string familyName = description.FontFamily(english);
 ```
 
-### Read additional name-table entries
+## Read additional name-table entries
 
 Use [`GetNameById(...)`](xref:SixLabors.Fonts.FontDescription.GetNameById*) with [`KnownNameIds`](xref:SixLabors.Fonts.WellKnownIds.KnownNameIds) when you need more than the basic family and subfamily fields.
 
@@ -67,7 +67,7 @@ string designer = description.GetNameById(CultureInfo.InvariantCulture, KnownNam
 string sample = description.GetNameById(CultureInfo.InvariantCulture, KnownNameIds.SampleText);
 ```
 
-### Inspect font collections
+## Inspect font collections
 
 Use [`FontDescription.LoadFontCollectionDescriptions(...)`](xref:SixLabors.Fonts.FontDescription.LoadFontCollectionDescriptions*) when a file contains multiple faces, such as a `.ttc` collection.
 
@@ -81,7 +81,7 @@ ReadOnlyMemory<FontDescription> descriptions =
 
 If you are loading a collection into a [`FontCollection`](xref:SixLabors.Fonts.FontCollection), the [`AddCollection(...)`](xref:SixLabors.Fonts.FontCollection.AddCollection*) overloads can also return the descriptions that were discovered during the load.
 
-### Inspect loaded families and fonts
+## Inspect loaded families and fonts
 
 Once a family has been loaded, there are a few additional inspection helpers worth knowing about:
 
@@ -106,7 +106,7 @@ Font font = family.CreateFont(16);
 FontDescription description = font.FontMetrics.Description;
 ```
 
-### What `Style` means
+## What `Style` means
 
 [`FontDescription.Style`](xref:SixLabors.Fonts.FontDescription.Style) is the resolved [`FontStyle`](xref:SixLabors.Fonts.FontStyle) for that face. Fonts derives it from the face metadata in the font tables, so it is a useful quick check when you want to know whether a face is marked as bold, italic, or both.
 
@@ -114,7 +114,7 @@ For loading fonts into collections, see [Loading Fonts and Collections](gettings
 
 If you want the face-level metrics that drive layout and glyph inspection rather than just the descriptive metadata, see [Font Metrics](fontmetrics.md).
 
-### Practical guidance
+## Practical guidance
 
 - Use metadata inspection before loading untrusted or user-supplied font files into normal collections.
 - Store invariant names for stable configuration and localized names for UI.

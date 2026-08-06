@@ -4,7 +4,7 @@ Fonts already applies the OpenType features that are required for correct shapin
 
 That makes it a typography control, not a substitute for the shaping engine.
 
-### How `FeatureTags` works
+## How `FeatureTags` works
 
 [`TextOptions.FeatureTags`](xref:SixLabors.Fonts.TextOptions.FeatureTags) is an `IReadOnlyList<Tag>`.
 
@@ -34,7 +34,7 @@ TextOptions options = new(font)
 
 A requested feature only has an effect if the font actually supports it.
 
-### When to use feature tags
+## When to use feature tags
 
 Use explicit feature tags for discretionary typographic behavior such as:
 
@@ -49,7 +49,7 @@ Use explicit feature tags for discretionary typographic behavior such as:
 
 Do not think of [`FeatureTags`](xref:SixLabors.Fonts.TextOptions.FeatureTags) as a way to manually replace the shaping engine. Core script shaping, bidi handling, and other required layout behavior are already handled by Fonts.
 
-### Common feature examples
+## Common feature examples
 
 Fractions:
 
@@ -110,17 +110,17 @@ TextOptions options = new(font)
 };
 ```
 
-### Named tags vs raw tags
+## Named tags vs raw tags
 
 Prefer the [`KnownFeatureTags`](xref:SixLabors.Fonts.Tables.AdvancedTypographic.KnownFeatureTags) enum when the feature already has a named constant in the library. Use [`Tag.Parse(...)`](xref:SixLabors.Fonts.Tables.AdvancedTypographic.Tag.Parse*) for raw feature tags that you know exist in the target font but that you want to specify directly in your code.
 
 [`Tag.Parse(...)`](xref:SixLabors.Fonts.Tables.AdvancedTypographic.Tag.Parse*) expects a four-character tag such as `"liga"`, `"frac"`, or `"ss01"`.
 
-### Feature tags and layout
+## Feature tags and layout
 
 Feature requests participate in shaping, so they affect both measurement and rendering. If you want the measured result to match the rendered result, use the same `TextOptions` instance for both `TextMeasurer` and `TextRenderer`.
 
-### Vertical layout
+## Vertical layout
 
 Some OpenType features are especially relevant in vertical layout, such as [`KnownFeatureTags.VerticalAlternates`](xref:SixLabors.Fonts.Tables.AdvancedTypographic.KnownFeatureTags.VerticalAlternates), [`KnownFeatureTags.VerticalAlternatesAndRotation`](xref:SixLabors.Fonts.Tables.AdvancedTypographic.KnownFeatureTags.VerticalAlternatesAndRotation), and [`KnownFeatureTags.VerticalAlternatesForRotation`](xref:SixLabors.Fonts.Tables.AdvancedTypographic.KnownFeatureTags.VerticalAlternatesForRotation).
 
@@ -128,7 +128,7 @@ Those work alongside [`LayoutMode`](xref:SixLabors.Fonts.TextOptions.LayoutMode)
 
 For the surrounding layout controls, see [Text Layout and Options](textlayout.md). For the broader shaping pipeline, see [Text Shaping](shaping.md).
 
-### Practical guidance
+## Practical guidance
 
 - Treat feature tags as shaping inputs that affect both measurement and rendering.
 - Prefer known feature tags where available and raw four-character tags for font-specific features.

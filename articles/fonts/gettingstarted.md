@@ -9,7 +9,7 @@ The main types you will meet first are:
 - [`Font`](xref:SixLabors.Fonts.Font) represents a concrete instance of a family at a given point size, style, and optional variation settings.
 - [`SystemFonts`](xref:SixLabors.Fonts.SystemFonts) gives you access to the fonts installed on the current machine.
 
-### Load a single font
+## Load a single font
 
 Use [`FontCollection.Add(...)`](xref:SixLabors.Fonts.FontCollection.Add*) when you want to register an individual font file such as a `.ttf`, `.otf`, `.woff`, or `.woff2`.
 
@@ -23,7 +23,7 @@ Font font = family.CreateFont(16, FontStyle.Regular);
 
 [`Font.Size`](xref:SixLabors.Fonts.Font.Size) is expressed in points. Measurement and rendering are then converted to pixels using [`TextOptions.Dpi`](xref:SixLabors.Fonts.TextOptions.Dpi).
 
-### Load from a stream and inspect metadata
+## Load from a stream and inspect metadata
 
 The `Add(...)` overloads can also return a `FontDescription`, which is useful when you want to inspect what was loaded.
 
@@ -42,7 +42,7 @@ Font font = family.CreateFont(16);
 
 If you only need metadata, use [`FontDescription.LoadDescription(...)`](xref:SixLabors.Fonts.FontDescription.LoadDescription*) or [`FontDescription.LoadFontCollectionDescriptions(...)`](xref:SixLabors.Fonts.FontDescription.LoadFontCollectionDescriptions*) instead of adding the font to a collection. See [Font Metadata and Inspection](fontmetadata.md) for more detail.
 
-### Load a font collection
+## Load a font collection
 
 Use [`AddCollection(...)`](xref:SixLabors.Fonts.FontCollection.AddCollection*) for files that contain multiple faces, such as `.ttc` collections.
 
@@ -53,7 +53,7 @@ FontCollection collection = new();
 var families = collection.AddCollection("fonts/NotoSansCJK-Regular.ttc");
 ```
 
-### Resolve families by name
+## Resolve families by name
 
 Once fonts are loaded, resolve a family with [`Get(...)`](xref:SixLabors.Fonts.FontCollection.Get*) or [`TryGet(...)`](xref:SixLabors.Fonts.FontCollection.TryGet*).
 
@@ -76,7 +76,7 @@ if (collection.TryGet("Source Sans 3", out FontFamily textFamily) &&
 
 [`FallbackFontFamilies`](xref:SixLabors.Fonts.TextOptions.FallbackFontFamilies) is a list of [`FontFamily`](xref:SixLabors.Fonts.FontFamily) instances, not [`Font`](xref:SixLabors.Fonts.Font) instances. Fonts are created after the fallback family is selected for a run.
 
-### Use system fonts
+## Use system fonts
 
 If you want to work with fonts installed on the current machine, use [`SystemFonts`](xref:SixLabors.Fonts.SystemFonts).
 
@@ -103,7 +103,7 @@ When you need localized family-name lookup, use [`AddWithCulture(...)`](xref:Six
 
 See [System Fonts](systemfonts.md) for the fuller system-font API surface, including enumeration, culture-aware lookup, and `SearchDirectories`.
 
-### Create variable-font instances
+## Create variable-font instances
 
 Variable fonts are exposed through [`FontVariation`](xref:SixLabors.Fonts.FontVariation) and [`KnownVariationAxes`](xref:SixLabors.Fonts.KnownVariationAxes).
 
@@ -121,14 +121,14 @@ Font font = family.CreateFont(
 
 The active variation values become part of the [`Font`](xref:SixLabors.Fonts.Font) instance, so the same family can be reused to create multiple design-space instances.
 
-### Practical guidance
+## Practical guidance
 
 - Use a private `FontCollection` when output must be stable across machines.
 - Use `SystemFonts` for host-dependent behavior such as diagnostics, user font pickers, or "use what is installed here" workflows.
 - Create `Font` instances for the size, style, culture, and variation values you actually intend to measure or render.
 - Keep font loading separate from per-request or per-frame layout work when the same files are reused.
 
-### Next steps
+## Next steps
 
 - Use [Measuring Text](measuringtext.md) when you need layout metrics before rendering.
 - Use [System Fonts](systemfonts.md) when you want to inspect or consume the fonts installed on the current machine.

@@ -1,6 +1,6 @@
 # Introduction
 
-### What is Fonts?
+## What is Fonts?
 Fonts is the high-performance part of the Six Labors stack that handles font loading, text measurement, layout, shaping, and custom text rendering.
 
 If you are new to the library, the easiest way to think about it is in layers: load families, create concrete `Font` instances, then measure or render text with `TextOptions`. The rest of this section is organized around that path so you can start simple and move into shaping, Unicode, fallback, and custom rendering only when you need them.
@@ -13,14 +13,14 @@ The main thing to learn early is the difference between font assets, font instan
 
 The Unicode pages are part of the practical API story, not a side topic. Most real text is not one UTF-16 code unit per visible character, and indexes used for rich text, placeholders, selection, and hit testing need to be understood in terms of graphemes and shaped layout rather than raw `char` positions.
 
-### License
+## License
 
 Fonts is licensed under the terms of the [Six Labors Split License, Version 1.0](https://github.com/SixLabors/Fonts/blob/main/LICENSE). See https://sixlabors.com/pricing for commercial licensing details.
 
 >[!IMPORTANT]
 >Starting with Fonts 3.0.0, projects that directly depend on SixLabors.Fonts require a valid Six Labors license at build time. This enforcement applies to direct dependencies only. See [License Enforcement Changes and a New Subscription Tier](https://sixlabors.com/posts/licence-enforcement-changes/) for details.
 
-### Installation
+## Installation
 
 Fonts is installed via [NuGet](https://www.nuget.org/packages/SixLabors.Fonts) with nightly builds available on [Feedz](https://f.feedz.io/sixlabors/sixlabors/nuget/index.json).
 
@@ -52,7 +52,7 @@ paket add SixLabors.Fonts --version VERSION_NUMBER
 
 Prerelease versions installed via the [Visual Studio NuGet Package Manager](https://docs.microsoft.com/en-us/nuget/consume-packages/install-use-packages-visual-studio) require the "include prerelease" checkbox to be checked.
 
-### How to use the license file
+## How to use the license file
 
 By default, the build searches from each project directory for `sixlabors.lic`. Place the supplied file in the directory that contains the project file, or in a subdirectory below it. Use the file as supplied; it already contains the complete license string required by the build.
 
@@ -93,7 +93,7 @@ dotnet publish -p:SixLaborsLicenseKey="$SIXLABORS_LICENSE_KEY"
 
 Build as normal after the file or property is configured. If the license is missing or invalid, the build fails with a clear error. You do not need to reference the licensing package directly; it is carried by Six Labors libraries.
 
-### Start Here
+## Start Here
 
 If you are new to Fonts, start with [Loading Fonts and Collections](gettingstarted.md) and then use the pages below to branch into the topics your application needs.
 
@@ -116,7 +116,7 @@ If you are new to Fonts, start with [Loading Fonts and Collections](gettingstart
 - [Recipes](recipes.md)
 - [Troubleshooting](troubleshooting.md)
 
-### How to Use These Docs
+## How to Use These Docs
 
 - Start with font loading and measurement before moving into shaping, fallback, and rendering.
 - Use the Unicode pages whenever text ranges, caret movement, styling, or placeholders are involved.

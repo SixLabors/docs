@@ -4,7 +4,7 @@ Once you have a [`Font`](xref:SixLabors.Fonts.Font), [`TextOptions`](xref:SixLab
 
 The same options type is used by both [`TextMeasurer`](xref:SixLabors.Fonts.TextMeasurer) and [`TextRenderer`](xref:SixLabors.Fonts.Rendering.TextRenderer), which makes it easy to keep measurement and rendering in sync.
 
-### Core units
+## Core units
 
 [`Font.Size`](xref:SixLabors.Fonts.Font.Size) is expressed in points. [`TextOptions.Dpi`](xref:SixLabors.Fonts.TextOptions.Dpi) controls how that size is converted into pixels for measurement and rendering. The default DPI is `72`.
 
@@ -25,7 +25,7 @@ TextOptions options = new(font)
 
 Replace `"Segoe UI"` with any installed family that exists on your machine in the `SystemFonts` examples on this page.
 
-### Wrapping, flow, and direction
+## Wrapping, flow, and direction
 
 These properties control how text is broken into lines and laid out:
 
@@ -52,7 +52,7 @@ TextOptions options = new(font)
 };
 ```
 
-### Ellipsis and hyphenation markers
+## Ellipsis and hyphenation markers
 
 [`TextEllipsis`](xref:SixLabors.Fonts.TextOptions.TextEllipsis) controls whether a marker is inserted when [`MaxLines`](xref:SixLabors.Fonts.TextOptions.MaxLines) hides remaining text. `TextEllipsis.Standard` inserts the standard ellipsis marker, `TextEllipsis.Custom` uses [`CustomEllipsis`](xref:SixLabors.Fonts.TextOptions.CustomEllipsis), and `TextEllipsis.None` clips to the line limit without adding a marker.
 
@@ -77,7 +77,7 @@ TextOptions options = new(font)
 
 Set `CustomEllipsis` or `CustomHyphen` only when the matching option is `Custom`. Standard markers still depend on glyph coverage in the selected font or fallback families.
 
-### Alignment and justification
+## Alignment and justification
 
 [`TextAlignment`](xref:SixLabors.Fonts.TextOptions.TextAlignment) expresses logical alignment within the text box using `Start`, `End`, and `Center`, and it respects the active text direction. [`TextJustification`](xref:SixLabors.Fonts.TextOptions.TextJustification) controls whether additional spacing is distributed between words or between characters.
 
@@ -97,7 +97,7 @@ TextOptions options = new(font)
 };
 ```
 
-### Spacing, hinting, and shaping controls
+## Spacing, hinting, and shaping controls
 
 Fonts exposes several knobs that directly affect glyph layout:
 
@@ -123,7 +123,7 @@ TextOptions options = new(font)
 
 For a deeper explanation of GSUB/GPOS shaping, bidi analysis, fallback runs, and TrueType hinting, see [Text Shaping](shaping.md) and [TrueType Hinting](hinting.md).
 
-### Fallback fonts and color fonts
+## Fallback fonts and color fonts
 
 Use [`FallbackFontFamilies`](xref:SixLabors.Fonts.TextOptions.FallbackFontFamilies) when a single font cannot cover every glyph you need.
 
@@ -146,7 +146,7 @@ TextOptions options = new(textFamily.CreateFont(16))
 
 For a fuller discussion of multilingual text, fallback ordering, and script coverage, see [Fallback Fonts and Multilingual Text](fallbackfonts.md).
 
-### OpenType feature tags
+## OpenType feature tags
 
 [`FeatureTags`](xref:SixLabors.Fonts.TextOptions.FeatureTags) lets you request additional OpenType features during shaping. The property type is `IReadOnlyList<Tag>`, which means you can use either [`KnownFeatureTags`](xref:SixLabors.Fonts.Tables.AdvancedTypographic.KnownFeatureTags) enum values or parse raw four-character tags with [`Tag.Parse(...)`](xref:SixLabors.Fonts.Tables.AdvancedTypographic.Tag.Parse*).
 
@@ -173,7 +173,7 @@ Use `KnownFeatureTags` values when the feature already has a named constant. Use
 
 See [OpenType Features](opentypefeatures.md) for a fuller guide to common feature tags and when to request them explicitly.
 
-### Text runs
+## Text runs
 
 [`TextRuns`](xref:SixLabors.Fonts.TextOptions.TextRuns) lets you override layout attributes for subranges of text. A [`TextRun`](xref:SixLabors.Fonts.TextRun) can replace the font and apply `TextAttributes` or `TextDecorations`.
 
@@ -206,7 +206,7 @@ For plain ASCII text, grapheme indices often line up with character positions. F
 
 See [Unicode, Code Points, and Graphemes](unicode.md) for a fuller explanation of `char`, `CodePoint`, and grapheme units.
 
-### Inline placeholders
+## Inline placeholders
 
 Use [`TextPlaceholder`](xref:SixLabors.Fonts.TextPlaceholder) when the text layout must reserve space for an inline object that your renderer will draw separately, such as an icon, emoji image, inline control, or attachment. Placeholders participate in measurement, wrapping, bidi ordering, and line-height calculation, but they do not consume text from the source string.
 
@@ -243,7 +243,7 @@ FontRectangle bounds = TextMeasurer.MeasureAdvance(text, options);
 
 [`TextPlaceholderAlignment`](xref:SixLabors.Fonts.TextPlaceholderAlignment) controls how the placeholder box aligns with the surrounding line. `Baseline` uses the supplied baseline offset directly, while `AboveBaseline`, `BelowBaseline`, `Top`, `Bottom`, and `Middle` align the placeholder against the surrounding line box.
 
-### Practical guidance
+## Practical guidance
 
 Treat `TextOptions` as the complete layout contract for a string. Font, culture, DPI, wrapping length, line spacing, direction, layout mode, fallback families, feature tags, text runs, and placeholders all participate in shaping and measurement. If you measure with one set of options and render with another, the result can move, wrap, or shape differently.
 

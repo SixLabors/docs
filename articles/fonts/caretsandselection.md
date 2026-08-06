@@ -4,7 +4,7 @@ Once you can hit-test a point and place a caret, the next step is painting selec
 
 For the underlying types — [`TextHit`](xref:SixLabors.Fonts.TextHit), [`CaretPosition`](xref:SixLabors.Fonts.CaretPosition), [`CaretPlacement`](xref:SixLabors.Fonts.CaretPlacement), and [`CaretMovement`](xref:SixLabors.Fonts.CaretMovement) — see [Hit Testing and Caret Movement](texthittesting.md).
 
-### The shape of a selection
+## The shape of a selection
 
 [`GetSelectionBounds(...)`](xref:SixLabors.Fonts.TextMetrics.GetSelectionBounds*) returns `ReadOnlyMemory<FontRectangle>`. Use `.Span` when drawing, and store the memory itself if the selection needs to be retained alongside other layout state.
 
@@ -24,7 +24,7 @@ A single logical selection can be visually discontinuous inside one line when it
 
 Do not sort, union, or merge the returned rectangles unless the UI explicitly wants a different visual.
 
-### Pointer selection
+## Pointer selection
 
 For pointer drags, hit-test both endpoints and pass the hits to the selection API. The [`TextHit`](xref:SixLabors.Fonts.TextHit) overload converts both endpoints to logical insertion indices for you.
 
@@ -40,7 +40,7 @@ ReadOnlyMemory<FontRectangle> selection = metrics.GetSelectionBounds(anchor, foc
 
 This keeps trailing-edge and bidi handling inside the library.
 
-### Keyboard selection
+## Keyboard selection
 
 For keyboard selection, keep an anchor caret fixed and move the focus caret. Shift+Right-style behavior updates only the focus caret.
 
@@ -57,7 +57,7 @@ ReadOnlyMemory<FontRectangle> selection = metrics.GetSelectionBounds(anchor, foc
 
 Selecting whole words via keyboard is the same shape: move the focus by `NextWord` or `PreviousWord`.
 
-### Word selection
+## Word selection
 
 For double-click word selection, find the word containing the hit and ask for its selection bounds.
 
@@ -79,7 +79,7 @@ GraphemeMetrics grapheme = metrics.GraphemeMetrics[index];
 ReadOnlyMemory<FontRectangle> selection = metrics.GetSelectionBounds(grapheme);
 ```
 
-### Bidi drag selection
+## Bidi drag selection
 
 Consider a left-to-right paragraph whose source text is:
 
@@ -106,7 +106,7 @@ ReadOnlyMemory<FontRectangle> rectangles = metrics.GetSelectionBounds(anchor, fo
 
 Just paint every rectangle. The library produces the correct visual gaps.
 
-### Hard line breaks
+## Hard line breaks
 
 Hard line breaks that end non-empty lines are trimmed with trailing breaking whitespace. Hard line breaks that own a blank line remain in the metrics and contribute their own selection rectangle so the blank line still highlights when the selection crosses it.
 
@@ -124,7 +124,7 @@ Consumers that inspect individual graphemes can use [`GraphemeMetrics.IsLineBrea
 
 In `TextInteractionMode.Editor`, a hard break that ends the text produces an additional blank line so a selection can extend past the final newline; `TextInteractionMode.Paragraph` omits that trailing blank line. See [Hit Testing and Caret Movement](texthittesting.md) for the full mode comparison.
 
-### Per-line selection
+## Per-line selection
 
 [`LineLayout`](xref:SixLabors.Fonts.LineLayout) exposes the same selection overloads when the caller knows the selection is line-local:
 
@@ -139,13 +139,13 @@ ReadOnlyMemory<FontRectangle> wordSelection = line.GetSelectionBounds(word);
 
 Use the full [`TextMetrics`](xref:SixLabors.Fonts.TextMetrics) overloads for selections that can cross line boundaries; use [`LineLayout`](xref:SixLabors.Fonts.LineLayout) only when interaction is bounded to one line.
 
-### Stable line-box geometry
+## Stable line-box geometry
 
 Per-line selection uses the line-box height rather than per-glyph height, which matches normal text editor and browser behavior: selecting mixed font sizes on the same line paints a consistent line-height rectangle rather than one rectangle per glyph height. The selection geometry stays visually stable across mixed fonts and font sizes.
 
 For a wider tour of the measurement model and how line metrics are derived, see [Measuring Text](measuringtext.md).
 
-### Practical guidance
+## Practical guidance
 
 - Paint the selection rectangles returned by the API instead of reconstructing selection geometry yourself.
 - Keep anchor and focus as logical text positions; let the metrics map them into visual rectangles.

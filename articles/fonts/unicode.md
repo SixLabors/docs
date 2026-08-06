@@ -2,7 +2,7 @@
 
 Text handling gets easier once you stop treating every `char` as a whole character. Fonts exposes the text-unit levels it actually uses during layout so you can reason about indexing, fallback, shaping, and glyph coverage with the same vocabulary as the library.
 
-### The text-unit levels
+## The text-unit levels
 
 - `char`: a single UTF-16 code unit in a .NET `string`
 - [`CodePoint`](xref:SixLabors.Fonts.Unicode.CodePoint): a Unicode scalar value
@@ -10,7 +10,7 @@ Text handling gets easier once you stop treating every `char` as a whole charact
 
 In everyday text, those levels often line up for simple ASCII. Once you move beyond that, they diverge quickly.
 
-### What is a `char`?
+## What is a `char`?
 
 In .NET, `string` is UTF-16. That means a single `char` is just one UTF-16 code unit.
 
@@ -22,7 +22,7 @@ A `char` is not always a full Unicode character:
 
 So if you index raw `char` positions, you are working at the storage level, not the text-semantics level.
 
-### What is a `CodePoint`?
+## What is a `CodePoint`?
 
 In strict Unicode terminology:
 
@@ -45,7 +45,7 @@ Useful [`CodePoint`](xref:SixLabors.Fonts.Unicode.CodePoint) members include:
 
 This is also the unit used by glyph-probing APIs such as [`Font.TryGetGlyphs(...)`](xref:SixLabors.Fonts.Font.TryGetGlyphs*).
 
-### What is a grapheme?
+## What is a grapheme?
 
 A grapheme cluster is the closest thing to a user-perceived text element.
 
@@ -60,7 +60,7 @@ Fonts exposes grapheme enumeration through [`SpanGraphemeEnumerator`](xref:SixLa
 
 This is why [`TextRun.Start`](xref:SixLabors.Fonts.TextRun.Start) and [`TextRun.End`](xref:SixLabors.Fonts.TextRun.End) are grapheme indices rather than raw `char` indices.
 
-### Enumerate `CodePoint` values
+## Enumerate `CodePoint` values
 
 The Unicode enumeration helpers live in `SixLabors.Fonts.Unicode`.
 
@@ -91,7 +91,7 @@ using SixLabors.Fonts.Unicode;
 int count = "Á 😀".GetCodePointCount();
 ```
 
-### Enumerate graphemes
+## Enumerate graphemes
 
 Use grapheme enumeration when you need units that better match what a reader sees.
 
@@ -120,7 +120,7 @@ using SixLabors.Fonts.Unicode;
 int count = "Á 😀".GetGraphemeCount();
 ```
 
-### Enumerate word-boundary segments
+## Enumerate word-boundary segments
 
 Use word enumeration when the surface needs to reason about whole words — caret movement that jumps a word at a time, double-click word selection, search-as-you-type tokenization. Word segmentation follows the Unicode Word Boundary Algorithm in UAX #29.
 
@@ -156,7 +156,7 @@ UAX #29 segments include separators — the space between `Don't` and `stop` is 
 
 This is the same Unicode word-boundary model used by [`TextMetrics.WordMetrics`](xref:SixLabors.Fonts.TextMetrics.WordMetrics), [`MoveCaret(CaretMovement.NextWord)`](xref:SixLabors.Fonts.TextMetrics.MoveCaret*), and [`GetWordMetrics(hit)`](xref:SixLabors.Fonts.TextMetrics.GetWordMetrics*). Use the enumerator when you need word boundaries against raw text without going through a full layout pass; use the metrics APIs when you need positioned word geometry as well. See [Hit Testing and Caret Movement](texthittesting.md) for the layout-aware side.
 
-### Which unit should you use?
+## Which unit should you use?
 
 Use `char` when:
 
@@ -175,7 +175,7 @@ Use graphemes when:
 - you are working with [`TextRun.Start`](xref:SixLabors.Fonts.TextRun.Start) and [`TextRun.End`](xref:SixLabors.Fonts.TextRun.End)
 - you want indices that align better with user-visible text elements
 
-### Relation to layout
+## Relation to layout
 
 Fonts uses additional Unicode logic internally during layout, including line-breaking and script/shaping data. But the public text-unit APIs you will use most often are:
 
@@ -187,7 +187,7 @@ Fonts uses additional Unicode logic internally during layout, including line-bre
 
 If you are debugging a `TextRun` range, a missing glyph, or a mismatch between visible text and string indices, start by checking whether you are reasoning in `char`, `CodePoint`, or grapheme units.
 
-### Practical guidance
+## Practical guidance
 
 Use grapheme indexes for user-visible ranges: styling, selection, caret movement, placeholder insertion, and rich text runs. That is the unit closest to what a person thinks of as one visible text element, even when it is made from multiple code points.
 

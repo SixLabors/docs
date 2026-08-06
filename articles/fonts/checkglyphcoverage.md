@@ -2,7 +2,7 @@
 
 Before you wire up fallback families, it helps to know what your primary font can already cover. This recipe shows a quick way to probe individual scalar values with [`Font.TryGetGlyphs(...)`](xref:SixLabors.Fonts.Font.TryGetGlyphs*) or scan a string so you can make fallback decisions based on actual glyph coverage instead of guesswork.
 
-### Check individual code points
+## Check individual code points
 
 ```csharp
 using SixLabors.Fonts;
@@ -15,7 +15,7 @@ bool hasOmega = font.TryGetGlyphs(new CodePoint(0x03A9), out _); // Ω GREEK CAP
 bool hasEmoji = font.TryGetGlyphs(new CodePoint(0x1F600), out _); // 😀 GRINNING FACE
 ```
 
-### Scan a whole string for missing glyphs
+## Scan a whole string for missing glyphs
 
 ```csharp
 using System.Collections.Generic;
@@ -45,7 +45,7 @@ Emoji and complex scripts are the usual cases where this distinction matters. A 
 
 For the conceptual fallback guidance, see [Fallback Fonts and Multilingual Text](fallbackfonts.md). For face-level coverage inspection, see [Font Metrics](fontmetrics.md).
 
-### Practical guidance
+## Practical guidance
 
 - Use coverage checks to choose fallback candidates, not to prove final rendered quality.
 - Test grapheme clusters such as emoji sequences as whole strings with production layout options.

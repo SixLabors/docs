@@ -2,7 +2,7 @@
 
 This recipe is a good starting point when you have a font file in hand and want to learn what it contains before you add it to your app's normal font collection with [`FontDescription`](xref:SixLabors.Fonts.FontDescription).
 
-### Read a single font file
+## Read a single font file
 
 ```csharp
 using System.Globalization;
@@ -21,7 +21,7 @@ This is useful for import tools, font pickers, diagnostics, and file-inspection 
 
 Use invariant names when you need stable storage, configuration, or logs. Use culture-specific names when presenting font choices to people, because many families expose localized names that are more useful in UI than the invariant English metadata.
 
-### Inspect a font collection such as a `.ttc`
+## Inspect a font collection such as a `.ttc`
 
 ```csharp
 using System;
@@ -42,7 +42,7 @@ Inspection does not add the font to a collection. That separation is useful for 
 
 For the broader metadata API, see [Font Metadata and Inspection](fontmetadata.md).
 
-### Practical guidance
+## Practical guidance
 
 - Inspect uploaded font files before adding them to an application collection.
 - Use collection inspection for `.ttc` and `.otc` files because one file can contain multiple faces.

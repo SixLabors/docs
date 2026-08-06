@@ -7,7 +7,7 @@ Most developers meet Fonts through [ImageSharp.Drawing](../imagesharp.drawing/in
 
 Custom rendering in Fonts is built around [`IGlyphRenderer`](xref:SixLabors.Fonts.Rendering.IGlyphRenderer). [`TextRenderer.RenderTextTo(...)`](xref:SixLabors.Fonts.Rendering.TextRenderer.RenderTextTo*) performs layout and shaping, then sends the result to your renderer as glyphs, layers, figures, and path commands.
 
-### When to use it
+## When to use it
 
 Custom rendering is useful when you want to:
 
@@ -16,7 +16,7 @@ Custom rendering is useful when you want to:
 - capture glyph geometry for hit testing or diagnostics
 - consume color-font layers and paints yourself
 
-### Rendering flow
+## Rendering flow
 
 For monochrome outline glyphs, the path callbacks are delivered inside [`BeginGlyph(...)`](xref:SixLabors.Fonts.Rendering.IGlyphRenderer.BeginGlyph*) / [`EndGlyph()`](xref:SixLabors.Fonts.Rendering.IGlyphRenderer.EndGlyph*):
 
@@ -31,7 +31,7 @@ Painted color glyphs add [`BeginLayer(...)`](xref:SixLabors.Fonts.Rendering.IGly
 
 [`BeginGlyph(...)`](xref:SixLabors.Fonts.Rendering.IGlyphRenderer.BeginGlyph*) receives [`GlyphRendererParameters`](xref:SixLabors.Fonts.Rendering.GlyphRendererParameters), which identify the glyph instance being rendered, including the glyph ID, the glyph's [`CodePoint`](xref:SixLabors.Fonts.Unicode.CodePoint) value, font style, point size, DPI, layout mode, and active [`TextRun`](xref:SixLabors.Fonts.TextRun). Return `false` from `BeginGlyph(...)` if you want to skip rendering that glyph.
 
-### A minimal renderer
+## A minimal renderer
 
 ```csharp
 using System.Collections.Generic;
@@ -119,7 +119,7 @@ TextRenderer.RenderTextTo(renderer, "Hello world", options);
 
 Replace `"Segoe UI"` with any installed family that exists on your machine.
 
-### Layers, paints, and color fonts
+## Layers, paints, and color fonts
 
 [`BeginLayer(...)`](xref:SixLabors.Fonts.Rendering.IGlyphRenderer.BeginLayer*) is where Fonts communicates how the current glyph layer should be filled:
 
@@ -133,7 +133,7 @@ If your renderer only supports monochrome output, you can ignore `paint` when a 
 
 See [Color Fonts](colorfonts.md) for a fuller guide to `ColorFontSupport`, painted glyphs, and the different color-font technologies that Fonts can surface.
 
-### Decorations
+## Decorations
 
 Decorations are opt-in. Return the decorations you care about from [`EnabledDecorations()`](xref:SixLabors.Fonts.Rendering.IGlyphRenderer.EnabledDecorations*) and Fonts will call [`SetDecoration(...)`](xref:SixLabors.Fonts.Rendering.IGlyphRenderer.SetDecoration*) after the glyph geometry has been emitted.
 
@@ -144,7 +144,7 @@ public TextDecorations EnabledDecorations()
 
 This makes it possible to render underline, overline, or strikeout using the same backend as the glyph outlines.
 
-### Practical guidance
+## Practical guidance
 
 - Implement only the renderer callbacks your backend can honor correctly.
 - Keep layout in Fonts and rendering in your backend; do not recompute shaping inside the renderer.

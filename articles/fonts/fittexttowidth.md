@@ -51,7 +51,7 @@ For interactive systems, consider a two-stage search: probe coarse sizes first, 
 
 See [Measuring Text](measuringtext.md) and [Text Layout and Options](textlayout.md) for the fuller discussion.
 
-### Practical guidance
+## Practical guidance
 
 - Fit with the same options you will use to render.
 - Define a minimum readable size before starting the search.
