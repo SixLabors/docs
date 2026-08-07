@@ -81,7 +81,7 @@ CUR is usually a poor fit when:
 - You are storing a normal image rather than a cursor asset.
 - You want broad compatibility outside Windows cursor workflows.
 
-For Windows icon assets without cursor hotspots, see [ICO](ico.md).
+For Windows icon assets without cursor hotspots, see [ICO](ico.md). For animated cursors, see [ANI](ani.md).
 
 ## Practical Guidance
 

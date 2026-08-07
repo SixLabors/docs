@@ -62,10 +62,10 @@ Transforms also apply to clipped drawing. When you save transformed options with
 
 `GraphicsOptions` answers four separate questions for each command:
 
-- `Antialias` controls coverage at geometry edges. When enabled, edge pixels can receive fractional coverage for smoother vector output. When disabled, coverage is thresholded to fully covered or not covered using `AntialiasThreshold`.
+- `Antialias` controls coverage at geometry edges. When enabled, edge pixels can receive fractional coverage for smoother vector output. When disabled, each pixel is fully covered or not covered, decided at the pixel center.
 - `BlendPercentage` scales the strength of the drawing operation. `1F` applies the command at full strength, `0F` makes it invisible, and values in between behave like operation opacity.
-- `ColorBlendingMode` controls how source and destination color channels are combined where the command draws. `Normal` uses ordinary alpha blending. Modes such as `Multiply`, `Screen`, `Overlay`, `Darken`, and `Lighten` are useful for tinting, shadows, highlights, and visual effects.
-- `AlphaCompositionMode` controls how source and destination alpha are combined using Porter-Duff composition rules. The default `SrcOver` draws the new source over existing pixels. Modes such as `Src`, `Clear`, `DestIn`, and `DestOut` are useful for replacement, erasing, masks, and cutouts.
+- `ColorBlendingMode` controls how source and destination color channels are combined where the command draws. `Normal` uses ordinary alpha blending. The full W3C blend mode set is supported: separable modes such as `Multiply`, `Screen`, `Overlay`, `SoftLight`, `ColorDodge`, and `Difference`, and the non-separable `Hue`, `Saturation`, `Color`, and `Luminosity` modes. `Add` and `Subtract` are also available.
+- `AlphaCompositionMode` controls how source and destination alpha are combined using Porter-Duff composition rules. The default `SrcOver` draws the new source over existing pixels. Modes such as `Src`, `Clear`, `DestIn`, and `DestOut` are useful for replacement, erasing, masks, and cutouts. `Plus` adds source and destination, clamped to the supported range, which is useful for additive light effects.
 
 Those settings are per-command canvas state when you use `Save(...)`. If two shapes are drawn under a saved `GraphicsOptions`, each one blends independently with the destination. Use `SaveLayer(...)` when several commands should first render together into an isolated layer and then blend back as one group.
 
@@ -107,9 +107,9 @@ Use `SaveLayer(...)` when the blend should apply to a group as a single composit
 
 ## Antialiasing
 
-Antialiasing is about edge coverage, not color choice. With antialiasing enabled, partially covered edge pixels receive partial coverage so diagonal and curved edges look smooth. With antialiasing disabled, those fractional coverage values are compared with `AntialiasThreshold`; pixels above the threshold are kept, and pixels below it are discarded.
+Antialiasing is about edge coverage, not color choice. With antialiasing enabled, partially covered edge pixels receive partial coverage so diagonal and curved edges look smooth. With antialiasing disabled, each pixel is either fully covered or not covered. Coverage is decided by sampling the geometry at the pixel center, matching classic aliased rasterizers. Thin fill features that would otherwise fall between pixel centers are recovered, so hairline geometry does not disappear.
 
-Turn antialiasing off when exact binary coverage matters, such as low-resolution masks, hit-test masks, generated sprite masks, or pixel-art-style output. Leave it on for normal vector graphics, text, badges, diagrams, and annotations. Lowering `AntialiasThreshold` can preserve thin features when antialiasing is disabled, while raising it makes binary output more conservative.
+Turn antialiasing off when exact binary coverage matters, such as low-resolution masks, hit-test masks, generated sprite masks, or pixel-art-style output. Leave it on for normal vector graphics, text, badges, diagrams, and annotations.
 
 ```csharp
 using SixLabors.ImageSharp;

@@ -41,6 +41,7 @@ The core identity and scaling properties are:
 - [`Description`](xref:SixLabors.Fonts.FontMetrics.Description) for the face metadata
 - [`UnitsPerEm`](xref:SixLabors.Fonts.FontMetrics.UnitsPerEm) for the design-space resolution of the font
 - [`ScaleFactor`](xref:SixLabors.Fonts.FontMetrics.ScaleFactor) for the face-level unit-to-point scaling used by glyph metrics
+- [`XHeight`](xref:SixLabors.Fonts.FontMetrics.XHeight) and [`CapHeight`](xref:SixLabors.Fonts.FontMetrics.CapHeight) for the lowercase and capital letter heights in design units, or `0` when the font does not provide them
 
 `UnitsPerEm` is the important anchor for understanding almost every other metric on the typeface. Values like ascenders, underline positions, or glyph advances are stored in font units and should be interpreted relative to that em square.
 

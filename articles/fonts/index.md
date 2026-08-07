@@ -107,7 +107,7 @@ If you are new to Fonts, start with [Loading Fonts and Collections](gettingstart
 - [Text Layout and Options](textlayout.md)
 - [OpenType Features](opentypefeatures.md)
 - [Text Shaping](shaping.md)
-- [TrueType Hinting](hinting.md)
+- [Font Hinting](hinting.md)
 - [Color Fonts](colorfonts.md)
 - [Unicode, Code Points, and Graphemes](unicode.md)
 - [Fallback Fonts and Multilingual Text](fallbackfonts.md)

@@ -39,6 +39,8 @@ These properties control how text is broken into lines and laid out:
 
 [`WordBreaking`](xref:SixLabors.Fonts.TextOptions.WordBreaking) supports `Standard`, `BreakAll`, `KeepAll`, and `BreakWord`. [`MaxLines`](xref:SixLabors.Fonts.TextOptions.MaxLines) limits how many lines are laid out; use `-1` for unlimited lines. [`TextDirection`](xref:SixLabors.Fonts.TextOptions.TextDirection) supports left-to-right, right-to-left, and automatic detection. [`LayoutMode`](xref:SixLabors.Fonts.TextOptions.LayoutMode) supports horizontal and vertical layouts, including mixed vertical modes that rotate horizontal glyphs.
 
+[`VisibleBounds`](xref:SixLabors.Fonts.TextOptions.VisibleBounds) culls rendering to a visible region in pixel units. Whole lines that fall outside the region are skipped, and the remaining lines are positioned as if every line had been rendered. This is useful for scrolling views and large virtualized text. Leave the value `null` to disable culling.
+
 ```csharp
 using SixLabors.Fonts;
 
@@ -105,7 +107,7 @@ Fonts exposes several knobs that directly affect glyph layout:
 - [`TabWidth`](xref:SixLabors.Fonts.TextOptions.TabWidth) controls tab stops in space units.
 - [`KerningMode`](xref:SixLabors.Fonts.TextOptions.KerningMode) enables, disables, or lets the engine decide about font-provided kerning during shaping.
 - [`Tracking`](xref:SixLabors.Fonts.TextOptions.Tracking) adds uniform spacing after each rendered grapheme. It is measured in em, so `0.02F` adds 2% of the current em size; it is not a multiplier like `LineSpacing`.
-- [`HintingMode`](xref:SixLabors.Fonts.TextOptions.HintingMode) is separate from shaping and controls TrueType grid fitting for the current size and DPI.
+- [`HintingMode`](xref:SixLabors.Fonts.TextOptions.HintingMode) is separate from shaping and controls grid fitting of TrueType and CFF outlines for the current size and DPI.
 
 ```csharp
 using SixLabors.Fonts;
@@ -121,7 +123,29 @@ TextOptions options = new(font)
 };
 ```
 
-For a deeper explanation of GSUB/GPOS shaping, bidi analysis, fallback runs, and TrueType hinting, see [Text Shaping](shaping.md) and [TrueType Hinting](hinting.md).
+For a deeper explanation of GSUB/GPOS shaping, bidi analysis, fallback runs, and font hinting, see [Text Shaping](shaping.md) and [Font Hinting](hinting.md).
+
+## Font weight and style synthesis
+
+[`TextOptions.FontWeight`](xref:SixLabors.Fonts.TextOptions.FontWeight) requests a visual weight on the OpenType and CSS scale, from [`FontWeight.Thin`](xref:SixLabors.Fonts.FontWeight.Thin) (100) to [`FontWeight.Black`](xref:SixLabors.Fonts.FontWeight.Black) (900). [`TextRun.FontWeight`](xref:SixLabors.Fonts.TextRun.FontWeight) overrides the request for a range of text. Leave the value `null` to use the weight implied by the font.
+
+```csharp
+using SixLabors.Fonts;
+
+Font font = SystemFonts.CreateFont("Segoe UI", 18);
+TextOptions options = new(font)
+{
+    FontWeight = FontWeight.SemiBold
+};
+```
+
+How the request is satisfied depends on the font:
+
+- A variable font with a registered `wght` axis is instanced at the requested weight. Other configured axes are preserved.
+- A static font keeps its own outlines. If the request is `SemiBold` (600) or heavier and the face weight is lighter than 600, Fonts thickens the outlines with a synthetic bold operation. This mirrors browser behavior, where 600 is the boundary between regular and bold weights.
+- Color glyphs keep their authored weight, because thickening independently colored layers would distort them.
+
+Fonts also synthesizes an oblique slant. If a run requests an italic style that the resolved face does not provide, glyph outlines are sheared horizontally. This mirrors the CSS `font-synthesis: style` behavior in web browsers.
 
 ## Fallback fonts and color fonts
 

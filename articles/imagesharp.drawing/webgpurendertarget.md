@@ -22,7 +22,20 @@ using SixLabors.ImageSharp.Drawing.Processing.Backends;
 using WebGPURenderTarget target = new(WebGPUTextureFormat.Bgra8Unorm, 640, 360);
 ```
 
-The target exposes `Width`, `Height`, `Bounds`, and `Format`. The bounds are always rooted at `(0, 0)` in target pixel coordinates.
+Pass a [`PixelAlphaRepresentation`](xref:SixLabors.ImageSharp.PixelFormats.PixelAlphaRepresentation) when the target must store associated (premultiplied) alpha, which is the working representation of most GPU pipelines:
+
+```csharp
+using SixLabors.ImageSharp.Drawing.Processing.Backends;
+using SixLabors.ImageSharp.PixelFormats;
+
+using WebGPURenderTarget target = new(
+    WebGPUTextureFormat.Rgba8Unorm,
+    PixelAlphaRepresentation.Associated,
+    640,
+    360);
+```
+
+The target exposes `Width`, `Height`, `Bounds`, `Format`, and `AlphaRepresentation`. The bounds are always rooted at `(0, 0)` in target pixel coordinates.
 
 ## Draw Offscreen
 
@@ -67,9 +80,9 @@ The typed readback pixel type must match the target format:
 | `Rgba8Unorm` | `ReadbackImage<Rgba32>()` |
 | `Bgra8Unorm` | `ReadbackImage<Bgra32>()` |
 | `Rgba8Snorm` | `ReadbackImage<NormalizedByte4>()` |
-| `Rgba16Float` | `ReadbackImage<HalfVector4>()` |
+| `Rgba16Float` | `ReadbackImage<RgbaHalf>()` |
 
-The non-generic `ReadbackImage()` chooses the natural ImageSharp pixel type from the render target format.
+The non-generic `ReadbackImage()` chooses the natural ImageSharp pixel type from the render target format and alpha representation. A target created with `PixelAlphaRepresentation.Associated` reads back into the matching associated-alpha pixel type instead: `Rgba32P`, `Bgra32P`, `NormalizedByte4P`, or `RgbaHalfP`.
 
 ## Read Back Into an Existing Buffer
 

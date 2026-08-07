@@ -105,6 +105,8 @@ That means:
 - out-of-range values are constrained by the font
 - different fonts can expose different axis sets and ranges
 
+The registered weight axis also has a higher-level entry point. Setting [`TextOptions.FontWeight`](xref:SixLabors.Fonts.TextOptions.FontWeight) instances a variable font at the requested weight through its `wght` axis, while preserving every other configured axis. See [Text Layout and Options](textlayout.md) for the weight and style synthesis rules.
+
 ## Non-variable fonts
 
 Applying [`FontVariation`](xref:SixLabors.Fonts.FontVariation) values to a non-variable font is harmless but has no effect. If you need to know whether a font is actually variable, check [`TryGetVariationAxes(...)`](xref:SixLabors.Fonts.FontMetrics.TryGetVariationAxes*) before building variation-driven UI or configuration.
