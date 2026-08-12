@@ -46,6 +46,7 @@
 ## [Paths and Shapes](imagesharp.drawing/pathsandshapes.md)
 ## [Brushes and Pens](imagesharp.drawing/brushesandpens.md)
 ## [Clipping, Regions, and Layers](imagesharp.drawing/clippingregionslayers.md)
+## [Layer and Backdrop Effects](imagesharp.drawing/layereffects.md)
 ## [Images, Masks, and Processing](imagesharp.drawing/imagesandprocessing.md)
 ## [Transforms and Composition](imagesharp.drawing/transformsandcomposition.md)
 ## [Drawing Text](imagesharp.drawing/text.md)

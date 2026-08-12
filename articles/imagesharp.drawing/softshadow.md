@@ -1,6 +1,6 @@
 # Create a Soft Shadow
 
-For the common case, pass a [`DropShadowLayerEffect`](xref:SixLabors.ImageSharp.Drawing.Processing.DropShadowLayerEffect) to `SaveLayer(...)`. The effect slots a blurred, offset shadow beneath the layer content when the layer is restored, and the layer bounds expand automatically to keep the soft edge. See [Clipping, Regions, and Layers](clippingregionslayers.md) for the layer effect model.
+For the common case, pass a [`DropShadowLayerEffect`](xref:SixLabors.ImageSharp.Drawing.Processing.DropShadowLayerEffect) to `SaveLayer(...)`. The effect slots a blurred, offset shadow beneath the layer content when the layer is restored, and the layer bounds expand automatically to keep the soft edge. See [Layer and Backdrop Effects](layereffects.md) for the layer effect model.
 
 This recipe shows the manual pattern instead. It is useful when you need full control over the shadow geometry and processing region, or when the shadow must come from a normal ImageSharp processor.
 

@@ -44,6 +44,34 @@ TextOptions options = new(font)
 };
 ```
 
+## Font palettes
+
+COLR glyphs take their colors from the font's CPAL palette table. Many color fonts ship more than one palette, such as a default and a dark-background variant. [`TextOptions.FontPalette`](xref:SixLabors.Fonts.TextOptions.FontPalette) selects the palette that resolves the colors. Leave the value `null` to keep the font's default palette.
+
+```csharp
+using SixLabors.Fonts;
+
+Font font = SystemFonts.CreateFont("Segoe UI Emoji", 32);
+TextOptions options = new(font)
+{
+    // Resolve COLR glyph colors with the font's second palette.
+    // Palette indexes are zero-based; null keeps the font's default.
+    FontPalette = new FontPalette(1)
+};
+```
+
+A palette selection can also override individual entries. Each [`FontPaletteOverride`](xref:SixLabors.Fonts.FontPaletteOverride) replaces the palette color at one index:
+
+```csharp
+// Start from the default palette, then replace entry 2 with opaque red.
+FontPalette palette = new(0,
+[
+    new FontPaletteOverride(2, new GlyphColor(255, 0, 0, 255))
+]);
+```
+
+[`TextRun.FontPalette`](xref:SixLabors.Fonts.TextRun.FontPalette) replaces the selection over a range of text. [`GlyphOptions.FontPalette`](xref:SixLabors.Fonts.GlyphOptions.FontPalette) applies the same selection when rendering or measuring by glyph ID.
+
 ## What happens in custom renderers
 
 When a resolved glyph is a painted color glyph, Fonts streams it through [`IGlyphRenderer`](xref:SixLabors.Fonts.Rendering.IGlyphRenderer) as one or more layers.
@@ -52,9 +80,10 @@ That means custom renderers should pay attention to:
 
 - [`GlyphRendererParameters.GlyphType`](xref:SixLabors.Fonts.Rendering.GlyphRendererParameters.GlyphType)
 - [`BeginLayer(...)`](xref:SixLabors.Fonts.Rendering.IGlyphRenderer.BeginLayer*)
+- [`BeginGroup(...)`](xref:SixLabors.Fonts.Rendering.IGlyphRenderer.BeginGroup*) and [`EndGroup()`](xref:SixLabors.Fonts.Rendering.IGlyphRenderer.EndGroup*)
 - [`Paint`](xref:SixLabors.Fonts.Rendering.Paint)
 - [`FillRule`](xref:SixLabors.Fonts.Rendering.FillRule)
-- [`ClipQuad`](xref:SixLabors.Fonts.ClipQuad)
+- [`ClipBounds`](xref:SixLabors.Fonts.ClipBounds)
 
 Depending on the font technology in use, the `Paint` passed to `BeginLayer(...)` may be:
 
@@ -62,6 +91,8 @@ Depending on the font technology in use, the `Paint` passed to `BeginLayer(...)`
 - [`LinearGradientPaint`](xref:SixLabors.Fonts.Rendering.LinearGradientPaint)
 - [`RadialGradientPaint`](xref:SixLabors.Fonts.Rendering.RadialGradientPaint)
 - [`SweepGradientPaint`](xref:SixLabors.Fonts.Rendering.SweepGradientPaint)
+
+COLR v1 paint graphs can also form composite groups. Fonts wraps such content in [`BeginGroup(...)`](xref:SixLabors.Fonts.Rendering.IGlyphRenderer.BeginGroup*) and [`EndGroup()`](xref:SixLabors.Fonts.Rendering.IGlyphRenderer.EndGroup*) calls. Layers inside a group compose as one isolated unit. The finished group then blends onto the content below it with the [`CompositeMode`](xref:SixLabors.Fonts.Rendering.CompositeMode) given to `BeginGroup(...)`. A clip for the glyph arrives through [`GlyphRendererParameters.ClipBounds`](xref:SixLabors.Fonts.Rendering.GlyphRendererParameters.ClipBounds).
 
 If your renderer ignores paint information, the glyph can still be drawn, but it will no longer preserve the font's intended color presentation.
 

@@ -34,6 +34,28 @@ Fallback families are searched in the order you provide them.
 - Put emoji fonts after your normal text families unless you explicitly want them to win earlier.
 - Keep the fallback list as small and intentional as possible so the selection stays predictable.
 
+## Resolver-based fallback
+
+[`FallbackFontFamilies`](xref:SixLabors.Fonts.TextOptions.FallbackFontFamilies) is a fixed list. [`TextOptions.FontFallbackResolver`](xref:SixLabors.Fonts.TextOptions.FontFallbackResolver) adds a dynamic last step behind it. Shaping consults the resolver only for code points that neither the primary font nor any fallback family can shape. It asks at most once per distinct unresolved code point per shaping operation. Leave the value `null` to render such code points as the missing-glyph outline.
+
+[`SystemFonts.FallbackResolver`](xref:SixLabors.Fonts.SystemFonts.FallbackResolver) is a built-in resolver that selects from the fonts installed on the current machine:
+
+```csharp
+using SixLabors.Fonts;
+
+Font font = SystemFonts.CreateFont("Segoe UI", 18);
+TextOptions options = new(font)
+{
+    // Ask the operating system for a family when no configured font
+    // can shape a code point.
+    FontFallbackResolver = SystemFonts.FallbackResolver
+};
+```
+
+Installed fonts differ between machines, so output rendered with the system resolver can differ too. Pin `FallbackFontFamilies` for output that must stay identical everywhere, and use the resolver as a safety net behind them.
+
+Implement [`IFontFallbackResolver`](xref:SixLabors.Fonts.IFontFallbackResolver) for a custom policy. The resolver receives the code point, the requested family, the style, and the culture. It returns the family that contains a glyph for the code point.
+
 ## Mixed-script example
 
 This pattern works well for text that mixes Latin, Arabic, and emoji:

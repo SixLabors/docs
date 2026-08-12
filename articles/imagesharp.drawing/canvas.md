@@ -220,7 +220,7 @@ Layer bounds limit the isolated target and final composition area. They do not m
 
 A layer is useful when a group of commands must be blended as one result. Without a layer, each command is blended into the parent independently. With a layer, commands first render into an isolated target, then that whole target is composited back once.
 
-`SaveLayer(...)` overloads also accept a [`LayerEffect`](xref:SixLabors.ImageSharp.Drawing.Processing.LayerEffect), such as blur, drop shadow, glow, or a backdrop filter, that transforms the layer when it is restored. See [Clipping, Regions, and Layers](clippingregionslayers.md) for the effect model.
+`SaveLayer(...)` overloads also accept a [`LayerEffect`](xref:SixLabors.ImageSharp.Drawing.Processing.LayerEffect), such as blur, drop shadow, glow, or a backdrop filter, that transforms the layer when it is restored. See [Layer and Backdrop Effects](layereffects.md) for the effect model.
 
 The layer lifecycle is:
 

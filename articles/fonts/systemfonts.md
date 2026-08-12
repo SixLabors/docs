@@ -12,6 +12,8 @@ The main entry points are:
 - [`SystemFonts.Get(...)`](xref:SixLabors.Fonts.SystemFonts.Get*) and [`SystemFonts.TryGet(...)`](xref:SixLabors.Fonts.SystemFonts.TryGet*) to resolve a family by invariant name
 - [`SystemFonts.CreateFont(...)`](xref:SixLabors.Fonts.SystemFonts.CreateFont*) to create a [`Font`](xref:SixLabors.Fonts.Font) directly
 - [`SystemFonts.Collection`](xref:SixLabors.Fonts.SystemFonts.Collection) when you also need access to the searched directories
+- [`SystemFonts.TryMatchCharacter(...)`](xref:SixLabors.Fonts.SystemFonts.TryMatchCharacter*) to ask the operating system which installed font covers a code point
+- [`SystemFonts.FallbackResolver`](xref:SixLabors.Fonts.SystemFonts.FallbackResolver) to let text shaping consult the system for unresolved code points; see [Fallback Fonts and Multilingual Text](fallbackfonts.md)
 
 ```csharp
 using SixLabors.Fonts;

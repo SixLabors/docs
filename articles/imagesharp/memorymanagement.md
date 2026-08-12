@@ -29,11 +29,16 @@ config.MemoryAllocator = MemoryAllocator.Create(new MemoryAllocatorOptions
 {
     MaximumPoolSizeMegabytes = 128,
     AllocationLimitMegabytes = 1024,
-    AccumulativeAllocationLimitMegabytes = 2048
+    AccumulativeAllocationLimitMegabytes = 2048,
+    SingleBufferAllocationLimitMegabytes = 512
 });
 ```
 
 [`MaximumPoolSizeMegabytes`](xref:SixLabors.ImageSharp.Memory.MemoryAllocatorOptions.MaximumPoolSizeMegabytes) controls retained pool size. [`AllocationLimitMegabytes`](xref:SixLabors.ImageSharp.Memory.MemoryAllocatorOptions.AllocationLimitMegabytes) controls the maximum discontiguous buffer size the allocator will allow for one live allocation group. When it is unset, the platform default is 1 GB on 32-bit processes and 4 GB on 64-bit processes. [`AccumulativeAllocationLimitMegabytes`](xref:SixLabors.ImageSharp.Memory.MemoryAllocatorOptions.AccumulativeAllocationLimitMegabytes) controls the maximum combined size of all active allocations made through that allocator instance. It is unset by default, so the allocator does not impose an accumulative cap unless you configure one.
+
+[`SingleBufferAllocationLimitMegabytes`](xref:SixLabors.ImageSharp.Memory.MemoryAllocatorOptions.SingleBufferAllocationLimitMegabytes) controls the maximum size of one contiguous buffer, with a default of 1 GB when unset. The limit applies to contiguous image buffers requested through [`PreferContiguousImageBuffers`](xref:SixLabors.ImageSharp.Configuration.PreferContiguousImageBuffers). The largest accepted value is 2047, because a single buffer can never exceed `int.MaxValue` bytes. The applied value is also capped to `AllocationLimitMegabytes`, because one buffer can never be larger than its allocation group.
+
+Custom allocator implementations can read the resolved limits through [`MemoryAllocator.MemoryGroupAllocationLimitBytes`](xref:SixLabors.ImageSharp.Memory.MemoryAllocator.MemoryGroupAllocationLimitBytes), [`AccumulativeAllocationLimitBytes`](xref:SixLabors.ImageSharp.Memory.MemoryAllocator.AccumulativeAllocationLimitBytes), and [`SingleBufferAllocationLimitBytes`](xref:SixLabors.ImageSharp.Memory.MemoryAllocator.SingleBufferAllocationLimitBytes), and apply an options value with the protected `ApplyOptions(...)` method.
 
 ## Prefer Contiguous Buffers Only When You Need Them
 

@@ -53,7 +53,7 @@ At a high level, Fonts does the following:
 5. Applies right-to-left mirrored forms and vertical alternates where the layout requires them.
 6. Applies OpenType GSUB substitutions through the appropriate script shaper.
 7. Applies GPOS positioning for kerning, marks, cursive attachment, and related placement behavior.
-8. Retries unmapped code points with the configured fallback font families.
+8. Retries unmapped code points with the configured fallback font families, then with families from [`FontFallbackResolver`](xref:SixLabors.Fonts.TextOptions.FontFallbackResolver) when one is set.
 9. Updates final glyph positions for every font involved in the shaped result.
 
 The first shaping result is independent of wrapping width. Line composition and alignment happen after shaping, so the same shaped text can be measured, wrapped, rendered, or inspected without changing which glyphs were chosen.
@@ -127,7 +127,7 @@ Mirrored forms, such as paired punctuation in right-to-left runs, are part of th
 
 Fallback is not just a missing-glyph replacement step at the end of rendering. It participates in shaping because each font has its own glyph coverage, metrics, OpenType tables, script tags, and mark positioning behavior.
 
-When the primary text-run font cannot map every code point, Fonts retries unresolved text against [`FallbackFontFamilies`](xref:SixLabors.Fonts.TextOptions.FallbackFontFamilies). The fallback font supplies the glyphs and positions for the code points it covers.
+When the primary text-run font cannot map every code point, Fonts retries unresolved text against [`FallbackFontFamilies`](xref:SixLabors.Fonts.TextOptions.FallbackFontFamilies). The fallback font supplies the glyphs and positions for the code points it covers. A configured [`FontFallbackResolver`](xref:SixLabors.Fonts.TextOptions.FontFallbackResolver) is consulted last, for code points that no listed family can shape. See [Fallback Fonts and Multilingual Text](fallbackfonts.md).
 
 For multilingual text, emoji, and complex scripts, validate fallback with real production strings. A font can contain the individual code points but still lack the OpenType data needed for correct shaping.
 
