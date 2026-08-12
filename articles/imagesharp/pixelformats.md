@@ -37,13 +37,27 @@ Choose a `TPixel` based on the kind of in-memory work you need to do:
 
 - Use [`Rgba32`](xref:SixLabors.ImageSharp.PixelFormats.Rgba32) as the general-purpose default.
 - Use lower-memory formats such as [`Rgb24`](xref:SixLabors.ImageSharp.PixelFormats.Rgb24) or [`L8`](xref:SixLabors.ImageSharp.PixelFormats.L8) when you know you do not need the extra channels or precision.
-- Use higher-precision formats such as [`Rgb48`](xref:SixLabors.ImageSharp.PixelFormats.Rgb48), [`Rgba64`](xref:SixLabors.ImageSharp.PixelFormats.Rgba64), or [`RgbaVector`](xref:SixLabors.ImageSharp.PixelFormats.RgbaVector) when your pipeline benefits from more precision.
+- Use higher-precision formats such as [`Rgb48`](xref:SixLabors.ImageSharp.PixelFormats.Rgb48), [`Rgba64`](xref:SixLabors.ImageSharp.PixelFormats.Rgba64), [`RgbaHalf`](xref:SixLabors.ImageSharp.PixelFormats.RgbaHalf), or [`RgbaVector`](xref:SixLabors.ImageSharp.PixelFormats.RgbaVector) when your pipeline benefits from more precision.
 
 For application code, a good default rule is to decode into the format you plan to process in, not necessarily the format the file used on disk. A JPEG may decode naturally into RGB-like data, but `Image<Rgba32>` can still be the right working type if the next step composites with alpha, draws overlays, or passes pixels to an API that expects RGBA. Conversely, `Image<L8>` can be the right type for masks, analysis, and grayscale-only processing where carrying color channels would just waste memory.
 
 Do not use a higher-precision format only because the source file is high quality. Use it when the operations you run benefit from the extra range or precision, such as repeated color transforms, scientific-style image data, high-bit-depth exports, or workflows where banding from 8-bit intermediate values would be visible.
 
 If you want to inspect pixel characteristics before a full decode, [`ImageInfo.PixelType`](xref:SixLabors.ImageSharp.ImageInfo.PixelType) exposes [`PixelTypeInfo`](xref:SixLabors.ImageSharp.PixelFormats.PixelTypeInfo). See [Read Image Info Without Decoding](identify.md) for more on that workflow.
+
+## Associated Alpha Pixel Formats
+
+Most built-in pixel formats store straight alpha, where the color components are independent of the alpha value. ImageSharp also provides formats that store associated alpha, often called premultiplied alpha, where each color component is already multiplied by its alpha value.
+
+The associated formats carry a `P` suffix:
+
+- [`Rgba32P`](xref:SixLabors.ImageSharp.PixelFormats.Rgba32P), [`Bgra32P`](xref:SixLabors.ImageSharp.PixelFormats.Bgra32P), [`Argb32P`](xref:SixLabors.ImageSharp.PixelFormats.Argb32P), and [`Abgr32P`](xref:SixLabors.ImageSharp.PixelFormats.Abgr32P) mirror their straight-alpha counterparts with 8-bit components.
+- [`RgbaHalfP`](xref:SixLabors.ImageSharp.PixelFormats.RgbaHalfP) and [`HalfVector4P`](xref:SixLabors.ImageSharp.PixelFormats.HalfVector4P) store associated 16-bit floating-point components.
+- [`NormalizedByte4P`](xref:SixLabors.ImageSharp.PixelFormats.NormalizedByte4P) stores associated 8-bit signed normalized components.
+
+Associated alpha is the working representation of most GPU pipelines and compositors. Use these formats when you exchange pixel memory with such an API, so the data crosses the boundary without a conversion pass. [`RgbaHalf`](xref:SixLabors.ImageSharp.PixelFormats.RgbaHalf) and [`RgbaHalfP`](xref:SixLabors.ImageSharp.PixelFormats.RgbaHalfP) are binary-compatible with the `DXGI_FORMAT_R16G16B16A16_FLOAT` GPU format.
+
+Pixel blending understands both alpha representations. When an operation blends pixels of an associated format, ImageSharp uses dedicated associated-alpha blend functions instead of converting through straight alpha.
 
 ## Defining Custom Pixel Formats
 

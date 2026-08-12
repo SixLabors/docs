@@ -122,6 +122,10 @@ For animated PNGs, frame-level metadata is available through [`PngFrameMetadata`
 
 [`PngDecoderOptions`](xref:SixLabors.ImageSharp.Formats.Png.PngDecoderOptions) exposes `MaxUncompressedAncillaryChunkSizeBytes`, which can be useful when controlling how much memory decompressed ancillary chunks are allowed to occupy.
 
+## Apple CgBI PNGs
+
+The decoder reads Apple CgBI PNG files, the iOS-optimized variant that `pngcrush -iphone` produces. These files store raw DEFLATE image data, swap the channel order, and premultiply color by alpha. ImageSharp detects the `CgBI` chunk and reverses those changes automatically, so no decoder option is required. This support is decode only: the encoder always writes standard PNG output.
+
 ## When to Use PNG
 
 PNG is usually a good fit when:

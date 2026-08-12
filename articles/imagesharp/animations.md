@@ -4,7 +4,7 @@ ImageSharp treats animation as a multi-frame [`Image<TPixel>`](xref:SixLabors.Im
 
 You still work with full-size frames in memory, but ImageSharp's animated encoders optimize the output by de-duplicating unchanged pixels between frames and writing only the differing region for later frames where the format supports it.
 
-For format-specific background, palette, and compression tradeoffs, see [GIF](gif.md), [PNG](png.md), and [WebP](webp.md). This page focuses on the shared multi-frame workflow.
+For format-specific background, palette, and compression tradeoffs, see [GIF](gif.md), [PNG](png.md), and [WebP](webp.md). Windows animated cursors use their own container and metadata model; see [ANI](ani.md). This page focuses on the shared multi-frame workflow.
 
 ## Build a Multi-Frame Animation
 

@@ -112,10 +112,16 @@ image.Mutate(ctx => ctx.Paint(canvas =>
 
 Use layers when a group of commands should blend back as one result. Without a layer, each command blends into the parent independently.
 
+## Layer Effects
+
+`SaveLayer(...)` overloads accept effects that transform the layer when it is restored: blur, drop shadow, glow, inner shadow, color matrix, and CSS-style backdrop filters. The built-in set, the GPU shader implementations, and custom effect authoring have a dedicated page. See [Layer and Backdrop Effects](layereffects.md).
+
 ## Practical Guidance
 
 - Use clips when geometry should constrain later commands in the current coordinate space.
 - Use regions when a child layout should have its own local origin.
 - Use layers when several commands should blend back as one grouped result.
+- Use a `LayerEffect` when the layer content needs blur, shadow, glow, or color treatment as a group. See [Layer and Backdrop Effects](layereffects.md).
+- Use a `BackdropLayerEffect` when the pixels behind a region need treatment while the content on top stays sharp.
 - Remember that layer bounds constrain composition but do not move the coordinate system.
 - Restore saved state as soon as the scoped work is complete.

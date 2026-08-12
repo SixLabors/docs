@@ -54,13 +54,16 @@ using SixLabors.ImageSharp.Drawing.Processing.Backends;
 WebGPUExternalSurfaceOptions options = new()
 {
     PresentMode = WebGPUPresentMode.Fifo,
-    Format = WebGPUTextureFormat.Rgba8Unorm
+    Format = WebGPUTextureFormat.Rgba8Unorm,
+    AlphaMode = WebGPUCompositeAlphaMode.Auto
 };
 
 using WebGPUExternalSurface surface = new(host, new Size(1280, 720), options);
 ```
 
 Use a custom `Configuration` overload when the drawing backend should be bound to a specific ImageSharp configuration.
+
+[`AlphaMode`](xref:SixLabors.ImageSharp.Drawing.Processing.Backends.WebGPUExternalSurfaceOptions.AlphaMode) controls how the native compositor interprets alpha in the presented surface. `Auto` lets WebGPU select the composition mode. `Opaque` ignores the alpha channel and presents every pixel as opaque. `Premultiplied` presents color components that have already been multiplied by alpha, which allows the surface to blend over other native content.
 
 ## Handle Resizes
 

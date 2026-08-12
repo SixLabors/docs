@@ -96,7 +96,9 @@ Texture format controls the GPU target and, for readback, the matching ImageShar
 | `Rgba8Unorm` | `Rgba32` |
 | `Bgra8Unorm` | `Bgra32` |
 | `Rgba8Snorm` | `NormalizedByte4` |
-| `Rgba16Float` | `HalfVector4` |
+| `Rgba16Float` | `RgbaHalf` |
+
+Targets that store associated (premultiplied) alpha map to the `P`-suffixed pixel types instead, such as `Rgba32P` and `RgbaHalfP`. See [Pixel Formats](../imagesharp/pixelformats.md) for the associated-alpha family.
 
 Present mode controls how visible frames wait for the display:
 
@@ -105,6 +107,8 @@ Present mode controls how visible frames wait for the display:
 - `Mailbox` keeps newer frames over older queued frames when supported.
 
 CPU/GPU synchronization is the expensive boundary. Reading a render target back into an `Image<TPixel>` copies GPU texture data into CPU memory. Running normal ImageSharp processors through `Apply(...)` on a GPU-backed canvas can require GPU readback, CPU processing, and upload before drawing continues.
+
+Layer effects are the GPU-friendly alternative for common treatments. The WebGPU package ships shader-backed versions of the built-in [`LayerEffect`](xref:SixLabors.ImageSharp.Drawing.Processing.LayerEffect) and [`BackdropLayerEffect`](xref:SixLabors.ImageSharp.Drawing.Processing.BackdropLayerEffect) set, such as [`WebGPUGaussianBlurLayerEffect`](xref:SixLabors.ImageSharp.Drawing.Processing.Backends.WebGPUGaussianBlurLayerEffect) and [`WebGPUBackdropAcrylicLayerEffect`](xref:SixLabors.ImageSharp.Drawing.Processing.Backends.WebGPUBackdropAcrylicLayerEffect). These execute as shader passes, so a `SaveLayer(...)` effect stays on the GPU. An equivalent `Apply(...)` processor round-trips through CPU memory instead. Each carries its CPU equivalent as a fallback, so the same instance renders correctly on a CPU canvas. The effect model, the shader authoring contract, and a complete dual-backend example are on the dedicated page. See [Layer and Backdrop Effects](layereffects.md).
 
 ## When Not to Use WebGPU
 

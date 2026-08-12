@@ -5,7 +5,7 @@
 
 Most developers meet Fonts through [ImageSharp.Drawing](../imagesharp.drawing/index.md), where the rendering surface is already handled for you. This page is for the next step down: when you want Fonts to do the shaping and glyph decomposition, but you want to decide how those glyphs are painted or exported.
 
-Custom rendering in Fonts is built around [`IGlyphRenderer`](xref:SixLabors.Fonts.Rendering.IGlyphRenderer). [`TextRenderer.RenderTextTo(...)`](xref:SixLabors.Fonts.Rendering.TextRenderer.RenderTextTo*) performs layout and shaping, then sends the result to your renderer as glyphs, layers, figures, and path commands.
+Custom rendering in Fonts is built around [`IGlyphRenderer`](xref:SixLabors.Fonts.Rendering.IGlyphRenderer). [`TextRenderer.RenderTo(...)`](xref:SixLabors.Fonts.Rendering.TextRenderer.RenderTo*) performs layout and shaping, then sends the result to your renderer as glyphs, layers, figures, and path commands.
 
 ## When to use it
 
@@ -27,9 +27,9 @@ For monochrome outline glyphs, the path callbacks are delivered inside [`BeginGl
 5. `SetDecoration(...)` for any decorations requested by `EnabledDecorations()`
 6. `EndText()`
 
-Painted color glyphs add [`BeginLayer(...)`](xref:SixLabors.Fonts.Rendering.IGlyphRenderer.BeginLayer*) / [`EndLayer()`](xref:SixLabors.Fonts.Rendering.IGlyphRenderer.EndLayer*) around each painted layer between [`BeginGlyph(...)`](xref:SixLabors.Fonts.Rendering.IGlyphRenderer.BeginGlyph*) and [`EndGlyph()`](xref:SixLabors.Fonts.Rendering.IGlyphRenderer.EndGlyph*).
+Painted color glyphs add [`BeginLayer(...)`](xref:SixLabors.Fonts.Rendering.IGlyphRenderer.BeginLayer*) / [`EndLayer()`](xref:SixLabors.Fonts.Rendering.IGlyphRenderer.EndLayer*) around each painted layer between [`BeginGlyph(...)`](xref:SixLabors.Fonts.Rendering.IGlyphRenderer.BeginGlyph*) and [`EndGlyph()`](xref:SixLabors.Fonts.Rendering.IGlyphRenderer.EndGlyph*). COLR v1 composite content adds [`BeginGroup(...)`](xref:SixLabors.Fonts.Rendering.IGlyphRenderer.BeginGroup*) / [`EndGroup()`](xref:SixLabors.Fonts.Rendering.IGlyphRenderer.EndGroup*) around layers that must compose as one isolated unit before they blend onto the content below.
 
-[`BeginGlyph(...)`](xref:SixLabors.Fonts.Rendering.IGlyphRenderer.BeginGlyph*) receives [`GlyphRendererParameters`](xref:SixLabors.Fonts.Rendering.GlyphRendererParameters), which identify the glyph instance being rendered, including the glyph ID, the glyph's [`CodePoint`](xref:SixLabors.Fonts.Unicode.CodePoint) value, font style, point size, DPI, layout mode, and active [`TextRun`](xref:SixLabors.Fonts.TextRun). Return `false` from `BeginGlyph(...)` if you want to skip rendering that glyph.
+[`BeginGlyph(...)`](xref:SixLabors.Fonts.Rendering.IGlyphRenderer.BeginGlyph*) receives [`GlyphRendererParameters`](xref:SixLabors.Fonts.Rendering.GlyphRendererParameters), which identify the glyph instance being rendered, including the glyph ID, the glyph's [`CodePoint`](xref:SixLabors.Fonts.Unicode.CodePoint) value, font style, point size, DPI, layout mode, hinting mode, and active [`TextRun`](xref:SixLabors.Fonts.TextRun). Return `false` from `BeginGlyph(...)` if you want to skip rendering that glyph. The parameters include everything that changes glyph geometry, so a renderer can use them as a cache key.
 
 ## A minimal renderer
 
@@ -57,11 +57,19 @@ public sealed class RecordingGlyphRenderer : IGlyphRenderer
     {
     }
 
-    public void BeginLayer(Paint? paint, FillRule fillRule, ClipQuad? clipBounds)
+    public void BeginLayer(Paint? paint, FillRule fillRule)
     {
     }
 
     public void EndLayer()
+    {
+    }
+
+    public void BeginGroup(CompositeMode mode)
+    {
+    }
+
+    public void EndGroup()
     {
     }
 
@@ -114,7 +122,7 @@ TextOptions options = new(font)
 };
 
 RecordingGlyphRenderer renderer = new();
-TextRenderer.RenderTextTo(renderer, "Hello world", options);
+TextRenderer.RenderTo(renderer, "Hello world", options);
 ```
 
 Replace `"Segoe UI"` with any installed family that exists on your machine.

@@ -53,7 +53,7 @@ At a high level, Fonts does the following:
 5. Applies right-to-left mirrored forms and vertical alternates where the layout requires them.
 6. Applies OpenType GSUB substitutions through the appropriate script shaper.
 7. Applies GPOS positioning for kerning, marks, cursive attachment, and related placement behavior.
-8. Retries unmapped code points with the configured fallback font families.
+8. Retries unmapped code points with the configured fallback font families, then with families from [`FontFallbackResolver`](xref:SixLabors.Fonts.TextOptions.FontFallbackResolver) when one is set.
 9. Updates final glyph positions for every font involved in the shaped result.
 
 The first shaping result is independent of wrapping width. Line composition and alignment happen after shaping, so the same shaped text can be measured, wrapped, rendered, or inspected without changing which glyphs were chosen.
@@ -127,7 +127,7 @@ Mirrored forms, such as paired punctuation in right-to-left runs, are part of th
 
 Fallback is not just a missing-glyph replacement step at the end of rendering. It participates in shaping because each font has its own glyph coverage, metrics, OpenType tables, script tags, and mark positioning behavior.
 
-When the primary text-run font cannot map every code point, Fonts retries unresolved text against [`FallbackFontFamilies`](xref:SixLabors.Fonts.TextOptions.FallbackFontFamilies). The fallback font supplies the glyphs and positions for the code points it covers.
+When the primary text-run font cannot map every code point, Fonts retries unresolved text against [`FallbackFontFamilies`](xref:SixLabors.Fonts.TextOptions.FallbackFontFamilies). The fallback font supplies the glyphs and positions for the code points it covers. A configured [`FontFallbackResolver`](xref:SixLabors.Fonts.TextOptions.FontFallbackResolver) is consulted last, for code points that no listed family can shape. See [Fallback Fonts and Multilingual Text](fallbackfonts.md).
 
 For multilingual text, emoji, and complex scripts, validate fallback with real production strings. A font can contain the individual code points but still lack the OpenType data needed for correct shaping.
 
@@ -144,6 +144,74 @@ Placeholder runs are inserted into the layout stream without consuming source te
 Shaping changes advance widths and glyph positions, so measurement and rendering must use the same options. Do not measure with one font, direction, feature set, fallback list, or wrapping policy and render with another.
 
 For one-off layout, use [`TextMeasurer`](xref:SixLabors.Fonts.TextMeasurer). Use [`TextBlock`](xref:SixLabors.Fonts.TextBlock) when the shaped result becomes state: you need to measure it more than once, render it later, inspect its lines, hit-test it, or support caret and selection behavior.
+
+## Shaping Text Directly
+
+Fonts exposes the shaper as a public API. Use [`TextShaper`](xref:SixLabors.Fonts.TextShaper) with a [`TextShapingBuffer`](xref:SixLabors.Fonts.TextShapingBuffer) when you need glyph IDs and positions without line wrapping. This is the path for building your own line layout, caching shaped runs, or feeding glyphs to an external renderer.
+
+The buffer is caller-owned and reusable. You set the text and its properties on the buffer, shape the buffer against a font, then read the glyphs back. Each shaping call replaces the glyphs. A buffer instance is not thread safe.
+
+[`TextShaper.Shape(...)`](xref:SixLabors.Fonts.TextShaper.Shape*) treats the text as unwrapped logical lines separated by hard breaks. It resolves mixed-direction text within each line and produces each line's glyphs in visual order. [`TextShapingBuffer.LineEnds`](xref:SixLabors.Fonts.TextShapingBuffer.LineEnds) records where each hard-delimited line ends.
+
+[`TextShaper.ShapeRun(...)`](xref:SixLabors.Fonts.TextShaper.ShapeRun*) shapes one directional run that you have already selected. The glyphs come back in reading order.
+
+```csharp
+using SixLabors.Fonts;
+
+Font font = SystemFonts.CreateFont("Segoe UI", 16);
+
+TextShapingBuffer buffer = new()
+{
+    TextDirection = TextDirection.Auto
+};
+buffer.Add("Hello world");
+
+TextShaper.Shape(font, buffer);
+
+float penX = 0;
+foreach (ShapedGlyph glyph in buffer.Glyphs)
+{
+    // Draw the glyph at penX + glyph.Offset.X, then advance the pen.
+    penX += glyph.AdvanceWidth;
+}
+```
+
+Each [`ShapedGlyph`](xref:SixLabors.Fonts.ShapedGlyph) records:
+
+- [`GlyphId`](xref:SixLabors.Fonts.ShapedGlyph.GlyphId): the glyph identifier within the font. Glyph ID 0 is the font's missing glyph.
+- [`StringIndex`](xref:SixLabors.Fonts.ShapedGlyph.StringIndex): the index of the first input `char` the glyph represents. Glyphs produced from the same input chars share this value.
+- [`GraphemeIndex`](xref:SixLabors.Fonts.ShapedGlyph.GraphemeIndex): the zero-based grapheme index in the input text.
+- [`AdvanceWidth`](xref:SixLabors.Fonts.ShapedGlyph.AdvanceWidth) and [`AdvanceHeight`](xref:SixLabors.Fonts.ShapedGlyph.AdvanceHeight): the scaled advances after positioning features have been applied.
+- [`Offset`](xref:SixLabors.Fonts.ShapedGlyph.Offset): the scaled placement offset relative to the pen position. The offset does not contribute to the advance.
+
+Advances and offsets are scaled to the size of the font used for shaping, in a Y-up coordinate system. DPI and device coordinates are renderer concerns and do not enter shaping.
+
+Both methods accept optional feature tags:
+
+```csharp
+using SixLabors.Fonts;
+using SixLabors.Fonts.Tables.AdvancedTypographic;
+
+TextShaper.Shape(font, buffer, [KnownFeatureTags.DiscretionaryLigatures]);
+```
+
+### Measuring and Rendering Shaped Glyphs
+
+Glyph IDs and positions are specific to the font and layout mode used while shaping. Pass that same font and layout mode in the [`GlyphOptions`](xref:SixLabors.Fonts.GlyphOptions) used to measure or render the shaped buffer.
+
+[`TextMeasurer`](xref:SixLabors.Fonts.TextMeasurer) and [`TextRenderer`](xref:SixLabors.Fonts.Rendering.TextRenderer) accept a shaped buffer directly. They also accept raw glyph IDs with explicit positions for callers that manage their own layout.
+
+```csharp
+GlyphOptions glyphOptions = new()
+{
+    Font = font,
+    Dpi = 96
+};
+
+FontRectangle advance = TextMeasurer.MeasureAdvance(buffer, glyphOptions);
+```
+
+Use the shaper API when you need control over line composition. Use `TextMeasurer`, `TextRenderer`, or `TextBlock` when you want Fonts to handle wrapping and alignment for you.
 
 ## Practical Guidance
 

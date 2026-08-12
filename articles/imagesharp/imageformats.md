@@ -53,6 +53,7 @@ The source of truth for the built-in format list is [`Configuration`](xref:SixLa
 
 | Format | Public API type | Built in by default |
 | --- | --- | --- |
+| ANI | [`AniFormat`](xref:SixLabors.ImageSharp.Formats.Ani.AniFormat) | Read and write |
 | BMP | [`BmpFormat`](xref:SixLabors.ImageSharp.Formats.Bmp.BmpFormat) | Read and write |
 | CUR | [`CurFormat`](xref:SixLabors.ImageSharp.Formats.Cur.CurFormat) | Read and write |
 | EXR | [`ExrFormat`](xref:SixLabors.ImageSharp.Formats.Exr.ExrFormat) | Read and write |
@@ -85,7 +86,7 @@ Another way to think about it:
 - Lossless formats: PNG, lossless WebP, TIFF, QOI, BMP.
 - Higher-precision and HDR workflows: OpenEXR and TIFF.
 - Transparency-friendly formats: PNG, WebP, TIFF, TGA, QOI.
-- Animation-friendly formats: GIF, animated PNG workflows through [`PngEncoder`](xref:SixLabors.ImageSharp.Formats.Png.PngEncoder), and animated WebP.
+- Animation-friendly formats: GIF, animated PNG workflows through [`PngEncoder`](xref:SixLabors.ImageSharp.Formats.Png.PngEncoder), animated WebP, and ANI for Windows animated cursors.
 
 No single format is best everywhere. The right choice depends on whether your priority is fidelity, file size, transparency, animation, compatibility, or workflow metadata.
 
@@ -146,6 +147,7 @@ image.Save("output.png", new PngEncoder());
 
 ImageSharp also provides format-specific helpers:
 
+- `image.SaveAsAni()` uses [`AniEncoder`](xref:SixLabors.ImageSharp.Formats.Ani.AniEncoder).
 - `image.SaveAsBmp()` uses [`BmpEncoder`](xref:SixLabors.ImageSharp.Formats.Bmp.BmpEncoder).
 - `image.SaveAsCur()` uses [`CurEncoder`](xref:SixLabors.ImageSharp.Formats.Cur.CurEncoder).
 - `image.SaveAsExr()` uses [`ExrEncoder`](xref:SixLabors.ImageSharp.Formats.Exr.ExrEncoder).
@@ -207,6 +209,7 @@ The less commonly used built-in formats still have valid niches:
 - [BMP](bmp.md) is simple and broadly understood, but usually much larger than modern alternatives.
 - [ICO](ico.md) stores Windows icon files, often with one or more embedded icon images.
 - [CUR](cur.md) stores Windows cursor files and hotspot metadata.
+- [ANI](ani.md) stores Windows animated cursors with per-step timing and hotspot metadata.
 - [PBM](pbm.md) covers PBM/PGM/PPM-style Netpbm-family workflows and simple interchange scenarios.
 - [TGA](tga.md) appears most often in graphics and content-pipeline tooling.
 - [QOI](qoi.md) is a fast, simple lossless format with a much smaller ecosystem than PNG or WebP.
